@@ -1,0 +1,52 @@
+body {
+    padding-top: "60px";
+    overflow-x: "hidden";
+    width: "100vw";
+    background-color: #ffffff;
+    font-family: "Old Standard TT", serif;
+}
+:root {
+    --aura-pink: #ff63b6;
+}
+.navbar {
+    border-bottom: 2px solid var(--aura-pink);
+    font-size: 13px !important;
+}
+
+.text-aura {
+    color: var(--aura-pink);
+}
+
+.bg-aura {
+    color: var(--aura-pink);
+}
+.carousel-indicators .active {
+    background-color: var(--aura-pink) !important;
+}
+
+.top-stories {
+    margin-left: 12%;
+}
+
+.home-ads-container {
+    -webkit-box-shadow: 3px 3px 5px 6px #ccc; /* Safari 3-4, iOS 4.0.2 - 4.2, Android 2.3+ */
+    -moz-box-shadow: 3px 3px 5px 6px #ccc; /* Firefox 3.5 - 3.6 */
+    box-shadow: 0px 1px 2px 1px #ccc;
+    height: 10%;
+    padding: 25px;
+}
+.aura-shadow {
+    box-shadow: 0px 1px 1px 0px #ccc;
+}
+
+.card-hr {
+    background-color: #ff63b6;
+    width: 40%;
+    margin-left: 0;
+    height: 2px;
+}
+
+.headline-font {
+    font-family: "Old Standard TT", serif;
+    font-weight: bold;
+}
