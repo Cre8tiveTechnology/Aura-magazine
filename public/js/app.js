@@ -1899,6 +1899,488 @@ module.exports = {
 
 /***/ }),
 
+/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/Home.vue?vue&type=script&lang=js&":
+/*!***************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/Home.vue?vue&type=script&lang=js& ***!
+  \***************************************************************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+/* harmony default export */ __webpack_exports__["default"] = ({});
+$(".carousel").carousel({
+  interval: 1000
+});
+
+/***/ }),
+
 /***/ "./node_modules/bootstrap/dist/js/bootstrap.js":
 /*!*****************************************************!*\
   !*** ./node_modules/bootstrap/dist/js/bootstrap.js ***!
@@ -38892,287 +39374,652 @@ var staticRenderFns = [
       _c(
         "div",
         {
-          staticClass: "container-fluid bg-dark p-5",
+          staticClass:
+            "container-fluid p-2  d-md-none d-lg-none  d-xl-none d-sm-block border-0",
           staticStyle: { "background-color": "#676465 !important" }
         },
         [
-          _c("h5", { staticClass: "top-stories text-white" }, [
-            _vm._v("Top Stories >>")
-          ]),
+          _c(
+            "h5",
+            { staticClass: "aura-font  font-weight-bold ml-0 mt-4 text-white" },
+            [
+              _vm._v("\n            Top Stories\n            "),
+              _c("i", { staticClass: "fa fa-angle-right text-aura" })
+            ]
+          ),
           _vm._v(" "),
           _c(
             "div",
             {
-              staticClass: "carousel slide w-75 mx-auto rounded",
+              staticClass: "carousel slide border-bottom-0",
               attrs: {
-                id: "carouselExampleIndicators",
+                id: "carouselExampleSlidesOnly",
                 "data-ride": "carousel"
               }
             },
             [
-              _c("ol", { staticClass: "carousel-indicators" }, [
-                _c("li", {
-                  staticClass: "active",
-                  attrs: {
-                    "data-target": "#carouselExampleIndicators",
-                    "data-slide-to": "0"
-                  }
-                }),
-                _vm._v(" "),
-                _c("li", {
-                  attrs: {
-                    "data-target": "#carouselExampleIndicators",
-                    "data-slide-to": "1"
-                  }
-                }),
-                _vm._v(" "),
-                _c("li", {
-                  attrs: {
-                    "data-target": "#carouselExampleIndicators",
-                    "data-slide-to": "2"
-                  }
-                })
-              ]),
-              _vm._v(" "),
-              _c("div", { staticClass: "carousel-inner rounded" }, [
+              _c("div", { staticClass: "carousel-inner" }, [
                 _c("div", { staticClass: "carousel-item active" }, [
-                  _c("img", {
-                    staticClass: "d-block w-100",
-                    attrs: {
-                      src:
-                        "https://images.unsplash.com/photo-1483985988355-763728e1935b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80",
-                      alt: "First slide"
-                    }
-                  })
-                ]),
-                _vm._v(" "),
-                _c(
-                  "div",
-                  { staticClass: "carousel-caption d-none d-md-block" },
-                  [
-                    _c("h5", { staticClass: "headline-font" }, [
-                      _vm._v("Lorem Ipsum")
-                    ]),
+                  _c("div", { staticClass: "card w-100 border-0" }, [
+                    _c("img", {
+                      staticClass: "card-img-top rounded",
+                      attrs: {
+                        src:
+                          "https://images.unsplash.com/photo-1483985988355-763728e1935b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80",
+                        alt: "Card image cap"
+                      }
+                    }),
                     _vm._v(" "),
-                    _c("p", [
-                      _vm._v(
-                        "\n                        Lorem ipsum dolor sit amet, consectetur adipisicing\n                        elit. Pariatur asperiores sunt rerum, quidem\n                        accusantium deserunt? Itaque, sint! Cumque, amet\n                        corporis voluptates earum odio nam perspiciatis aut\n                        distinctio itaque ut illo?\n                    "
-                      )
-                    ])
-                  ]
-                ),
+                    _c(
+                      "div",
+                      {
+                        staticClass:
+                          "card-body text-white border-right-0 text-center",
+                        staticStyle: {
+                          "background-color": "#676465 !important"
+                        }
+                      },
+                      [
+                        _c(
+                          "h4",
+                          {
+                            staticClass: "card-title aura-font ",
+                            staticStyle: { "font-size": "30px" }
+                          },
+                          [
+                            _vm._v(
+                              "\n                                Being Everywoman Is Katie Porter's\n                                Superpower\n                            "
+                            )
+                          ]
+                        ),
+                        _vm._v(" "),
+                        _c("hr", {
+                          staticClass:
+                            "\n                            top-story-hr"
+                        }),
+                        _vm._v(" "),
+                        _c("p", { staticClass: "card-text mt-2" }, [
+                          _vm._v(
+                            "\n                                This is a wider card with supporting text\n                                below as a natural lead-in to additional\n                                content. This content is a little bit\n                                longer.\n                            "
+                          )
+                        ])
+                      ]
+                    )
+                  ])
+                ]),
                 _vm._v(" "),
                 _c("div", { staticClass: "carousel-item" }, [
-                  _c("img", {
-                    staticClass: "d-block w-100",
-                    attrs: {
-                      src:
-                        "https://images.unsplash.com/photo-1496747611176-843222e1e57c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1352&q=80",
-                      alt: "Second slide"
-                    }
-                  })
+                  _c("div", { staticClass: "card w-100 border-0" }, [
+                    _c("img", {
+                      staticClass: "card-img-top rounded",
+                      attrs: {
+                        src:
+                          "https://images.unsplash.com/photo-1483985988355-763728e1935b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80",
+                        alt: "Card image cap"
+                      }
+                    }),
+                    _vm._v(" "),
+                    _c(
+                      "div",
+                      {
+                        staticClass:
+                          "card-body border-0 text-white text-center ",
+                        staticStyle: {
+                          "background-color": "#676465 !important"
+                        }
+                      },
+                      [
+                        _c(
+                          "h4",
+                          {
+                            staticClass: "card-title aura-font ",
+                            staticStyle: { "font-size": "30px" }
+                          },
+                          [
+                            _vm._v(
+                              "\n                                Being Everywoman Is Katie Porter's\n                                Superpower\n                            "
+                            )
+                          ]
+                        ),
+                        _vm._v(" "),
+                        _c("hr", {
+                          staticClass:
+                            "\n                            top-story-hr"
+                        }),
+                        _vm._v(" "),
+                        _c("p", { staticClass: "card-text mt-2 " }, [
+                          _vm._v(
+                            "\n                                This is a wider card with supporting text\n                                below as a natural lead-in to additional\n                                content. This content is a little bit\n                                longer.\n                            "
+                          )
+                        ])
+                      ]
+                    )
+                  ])
                 ]),
                 _vm._v(" "),
-                _c(
-                  "div",
-                  { staticClass: "carousel-caption d-none d-md-block" },
-                  [
-                    _c("h5", { staticClass: "headline-font" }, [
-                      _vm._v("Lorem Ipsum")
-                    ]),
+                _c("div", { staticClass: "carousel-item" }, [
+                  _c("div", { staticClass: "card w-100 border-0" }, [
+                    _c("img", {
+                      staticClass: "card-img-top rounded",
+                      attrs: {
+                        src:
+                          "https://images.unsplash.com/photo-1483985988355-763728e1935b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80",
+                        alt: "Card image cap"
+                      }
+                    }),
                     _vm._v(" "),
-                    _c("p", [
-                      _vm._v(
-                        "\n                        Lorem ipsum dolor sit amet, consectetur adipisicing\n                        elit. Pariatur asperiores sunt rerum, quidem\n                        accusantium deserunt? Itaque, sint! Cumque, amet\n                        corporis voluptates earum odio nam perspiciatis aut\n                        distinctio itaque ut illo?\n                    "
-                      )
-                    ])
-                  ]
-                )
-              ]),
-              _vm._v(" "),
-              _c(
-                "a",
-                {
-                  staticClass: "carousel-control-prev text-aura",
-                  attrs: {
-                    href: "#carouselExampleIndicators",
-                    role: "button",
-                    "data-slide": "prev"
-                  }
-                },
-                [
-                  _c("span", {
-                    staticClass: "carousel-control-prev-icon",
-                    attrs: { "aria-hidden": "true" }
-                  }),
-                  _vm._v(" "),
-                  _c("span", { staticClass: "sr-only" }, [_vm._v("Previous")])
-                ]
-              ),
-              _vm._v(" "),
-              _c(
-                "a",
-                {
-                  staticClass: "carousel-control-next text-aura",
-                  attrs: {
-                    href: "#carouselExampleIndicators",
-                    role: "button",
-                    "data-slide": "next"
-                  }
-                },
-                [
-                  _c("span", {
-                    staticClass: "carousel-control-next-ico",
-                    attrs: { "aria-hidden": "true" }
-                  }),
-                  _vm._v(" "),
-                  _c("span", { staticClass: "sr-only" }, [_vm._v("Next")])
-                ]
-              )
+                    _c(
+                      "div",
+                      {
+                        staticClass: "card-body text-white text-center",
+                        staticStyle: {
+                          "background-color": "#676465 !important"
+                        }
+                      },
+                      [
+                        _c(
+                          "h4",
+                          {
+                            staticClass: "card-title aura-font",
+                            staticStyle: { "font-size": "30px" }
+                          },
+                          [
+                            _vm._v(
+                              "\n                                Being Everywoman Is Katie Porter's\n                                Superpower\n                            "
+                            )
+                          ]
+                        ),
+                        _vm._v(" "),
+                        _c("hr", {
+                          staticClass:
+                            "\n                            top-story-hr"
+                        }),
+                        _vm._v(" "),
+                        _c("p", { staticClass: "card-text mt-2" }, [
+                          _vm._v(
+                            "\n                                This is a wider card with supporting text\n                                below as a natural lead-in to additional\n                                content. This content is a little bit\n                                longer.\n                            "
+                          )
+                        ])
+                      ]
+                    )
+                  ])
+                ])
+              ])
             ]
           )
         ]
       ),
       _vm._v(" "),
-      _c("div", { staticClass: "container mt-4" }, [
-        _c("div", { staticClass: "card-deck" }, [
+      _c(
+        "div",
+        {
+          staticClass: "container-fluid p-5",
+          staticStyle: { "background-color": "#676465 !important" }
+        },
+        [
           _c(
             "div",
             {
-              staticClass: "card aura-shadow ",
-              staticStyle: { width: "18rem" }
+              staticClass:
+                "carousel slide w-75 mx-auto rounded  d-none d-md-block d-lg-block  d-xl-block",
+              attrs: {
+                id: "carouselExampleSlidesOnly",
+                "data-ride": "carousel"
+              }
             },
             [
-              _c("img", {
-                staticClass: "card-img-top",
-                attrs: {
-                  src:
-                    "https://images.unsplash.com/photo-1483985988355-763728e1935b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80",
-                  alt: "Card image cap"
-                }
-              }),
+              _c(
+                "h5",
+                {
+                  staticClass:
+                    "aura-font  font-weight-bold ml-0 mt-4 text-white"
+                },
+                [
+                  _vm._v("\n                Top Stories\n                "),
+                  _c("i", { staticClass: "fa fa-angle-right text-aura" })
+                ]
+              ),
               _vm._v(" "),
-              _c("div", { staticClass: "card-body" }, [
-                _c("p", { staticClass: "card-text" }, [
-                  _vm._v(
-                    "\n                        Some quick example text to build on the card title\n                        and make up the bulk of the card's content.\n                    "
-                  )
+              _c("div", { staticClass: "carousel-inner" }, [
+                _c("div", { staticClass: "carousel-item active" }, [
+                  _c("div", { staticClass: "card w-100 border-0" }, [
+                    _c("img", {
+                      staticClass: "card-img-top rounded border-0",
+                      attrs: {
+                        src:
+                          "https://images.unsplash.com/photo-1483985988355-763728e1935b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80",
+                        alt: "Card image cap"
+                      }
+                    }),
+                    _vm._v(" "),
+                    _c(
+                      "div",
+                      {
+                        staticClass:
+                          "card-body text-white text-center border-0",
+                        staticStyle: {
+                          "background-color": "#676465 !important"
+                        }
+                      },
+                      [
+                        _c(
+                          "h4",
+                          {
+                            staticClass: "card-title aura-font ",
+                            staticStyle: { "font-size": "30px" }
+                          },
+                          [
+                            _vm._v(
+                              "\n                                Being Everywoman Is Katie Porter's\n                                Superpower\n                            "
+                            )
+                          ]
+                        ),
+                        _vm._v(" "),
+                        _c("hr", {
+                          staticClass:
+                            "\n                                top-story-hr"
+                        }),
+                        _vm._v(" "),
+                        _c("p", { staticClass: "card-text mt-2" }, [
+                          _vm._v(
+                            "\n                                This is a wider card with supporting text\n                                below as a natural lead-in to additional\n                                content. This content is a little bit\n                                longer.\n                            "
+                          )
+                        ])
+                      ]
+                    )
+                  ])
                 ]),
                 _vm._v(" "),
-                _c("hr", { staticClass: "card-hr" }),
-                _vm._v(" "),
-                _c("h5", { staticClass: "card-title headline-font" }, [
-                  _vm._v(
-                    "\n                        Some quick example text to build on the card title\n                        and make up the bulk of the card's content.\n                    "
-                  )
-                ])
-              ])
-            ]
-          ),
-          _vm._v(" "),
-          _c(
-            "div",
-            {
-              staticClass: "card aura-shadow border-none",
-              staticStyle: { width: "18rem" }
-            },
-            [
-              _c("img", {
-                staticClass: "card-img-top",
-                attrs: {
-                  src:
-                    "https://images.unsplash.com/photo-1483985988355-763728e1935b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80",
-                  alt: "Card image cap"
-                }
-              }),
-              _vm._v(" "),
-              _c("div", { staticClass: "card-body" }, [
-                _c("p", { staticClass: "card-text" }, [
-                  _vm._v(
-                    "\n                        Some quick example text to build on the card title\n                        and make up the bulk of the card's content.\n                    "
-                  )
+                _c("div", { staticClass: "carousel-item active" }, [
+                  _c("div", { staticClass: "card w-100 border-0" }, [
+                    _c("img", {
+                      staticClass: "card-img-top rounded border-0",
+                      attrs: {
+                        src:
+                          "https://images.unsplash.com/photo-1483985988355-763728e1935b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80",
+                        alt: "Card image cap"
+                      }
+                    }),
+                    _vm._v(" "),
+                    _c(
+                      "div",
+                      {
+                        staticClass:
+                          "card-body text-white text-center border-0",
+                        staticStyle: {
+                          "background-color": "#676465 !important"
+                        }
+                      },
+                      [
+                        _c(
+                          "h4",
+                          {
+                            staticClass: "card-title aura-font ",
+                            staticStyle: { "font-size": "30px" }
+                          },
+                          [
+                            _vm._v(
+                              "\n                                Being Everywoman Is Katie Porter's\n                                Superpower\n                            "
+                            )
+                          ]
+                        ),
+                        _vm._v(" "),
+                        _c("hr", { staticClass: "top-story-hr" }),
+                        _vm._v(" "),
+                        _c("p", { staticClass: "card-text mt-2" }, [
+                          _vm._v(
+                            "\n                                This is a wider card with supporting text\n                                below as a natural lead-in to additional\n                                content. This content is a little bit\n                                longer.\n                            "
+                          )
+                        ])
+                      ]
+                    )
+                  ])
                 ]),
                 _vm._v(" "),
-                _c("hr", { staticClass: "card-hr" }),
-                _vm._v(" "),
-                _c("h5", { staticClass: "card-title headline-font" }, [
-                  _vm._v(
-                    "\n                        Some quick example text to build on the card title\n                        and make up the bulk of the card's content.\n                    "
-                  )
-                ])
-              ])
-            ]
-          ),
-          _vm._v(" "),
-          _c(
-            "div",
-            {
-              staticClass: "card aura-shadow border-none",
-              staticStyle: { width: "18rem" }
-            },
-            [
-              _c("img", {
-                staticClass: "card-img-top",
-                attrs: {
-                  src:
-                    "https://images.unsplash.com/photo-1483985988355-763728e1935b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80",
-                  alt: "Card image cap"
-                }
-              }),
-              _vm._v(" "),
-              _c("div", { staticClass: "card-body" }, [
-                _c("p", { staticClass: "card-text" }, [
-                  _vm._v(
-                    "\n                        Some quick example text to build on the card title\n                        and make up the bulk of the card's content.\n                    "
-                  )
-                ]),
-                _vm._v(" "),
-                _c("hr", { staticClass: "card-hr" }),
-                _vm._v(" "),
-                _c("h5", { staticClass: "card-title headline-font" }, [
-                  _vm._v(
-                    "\n                        Some quick example text to build on the card title\n                        and make up the bulk of the card's content.\n                    "
-                  )
-                ])
-              ])
-            ]
-          ),
-          _vm._v(" "),
-          _c(
-            "div",
-            {
-              staticClass: "card aura-shadow border-none",
-              staticStyle: { width: "18rem" }
-            },
-            [
-              _c("img", {
-                staticClass: "card-img-top",
-                attrs: {
-                  src:
-                    "https://images.unsplash.com/photo-1483985988355-763728e1935b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80",
-                  alt: "Card image cap"
-                }
-              }),
-              _vm._v(" "),
-              _c("div", { staticClass: "card-body" }, [
-                _c("p", { staticClass: "card-text" }, [
-                  _vm._v(
-                    "\n                        Some quick example text to build on the card title\n                        and make up the bulk of the card's content.\n                    "
-                  )
-                ]),
-                _vm._v(" "),
-                _c("hr", { staticClass: "card-hr" }),
-                _vm._v(" "),
-                _c("h5", { staticClass: "card-title headline-font" }, [
-                  _vm._v(
-                    "\n                        Some quick example text to build on the card title\n                        and make up the bulk of the card's content.\n                    "
-                  )
+                _c("div", { staticClass: "carousel-item active" }, [
+                  _c("div", { staticClass: "card w-100 border-0" }, [
+                    _c("img", {
+                      staticClass: "card-img-top rounded border-0",
+                      attrs: {
+                        src:
+                          "https://images.unsplash.com/photo-1483985988355-763728e1935b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80",
+                        alt: "Card image cap"
+                      }
+                    }),
+                    _vm._v(" "),
+                    _c(
+                      "div",
+                      {
+                        staticClass:
+                          "card-body text-white text-center border-0",
+                        staticStyle: {
+                          "background-color": "#676465 !important"
+                        }
+                      },
+                      [
+                        _c(
+                          "h4",
+                          {
+                            staticClass: "card-title aura-font ",
+                            staticStyle: { "font-size": "30px" }
+                          },
+                          [
+                            _vm._v(
+                              "\n                                Being Everywoman Is Katie Porter's\n                                Superpower\n                            "
+                            )
+                          ]
+                        ),
+                        _vm._v(" "),
+                        _c("hr", {
+                          staticClass:
+                            "\n                                top-story-hr"
+                        }),
+                        _vm._v(" "),
+                        _c("p", { staticClass: "card-text mt-2" }, [
+                          _vm._v(
+                            "\n                                This is a wider card with supporting text\n                                below as a natural lead-in to additional\n                                content. This content is a little bit\n                                longer.\n                            "
+                          )
+                        ])
+                      ]
+                    )
+                  ])
                 ])
               ])
             ]
           )
+        ]
+      ),
+      _vm._v(" "),
+      _c("div", { staticClass: "container  w-75 mx-auto  mt-4" }, [
+        _c("div", { staticClass: "card-deck " }, [
+          _c("div", { staticClass: "card aura-cards-shadow border-0" }, [
+            _c("img", {
+              staticClass: "card-img-top",
+              attrs: {
+                src:
+                  "https://images.unsplash.com/photo-1483985988355-763728e1935b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80",
+                alt: "Card image cap"
+              }
+            }),
+            _vm._v(" "),
+            _c("div", { staticClass: "card-body" }, [
+              _c("p", { staticClass: "card-text" }, [
+                _vm._v(
+                  "\n                        Some quick example text to build on the card title\n                        and make up the bulk of the card's content.\n                    "
+                )
+              ]),
+              _vm._v(" "),
+              _c("hr", { staticClass: "card-hr" }),
+              _vm._v(" "),
+              _c("h5", { staticClass: "card-title aura-font" }, [
+                _vm._v(
+                  "\n                        Some quick example text to build on the card title\n                        and make up the bulk of the card's content.\n                    "
+                )
+              ])
+            ])
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "card aura-cards-shadow border-0" }, [
+            _c("img", {
+              staticClass: "card-img-top",
+              attrs: {
+                src:
+                  "https://images.unsplash.com/photo-1483985988355-763728e1935b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80",
+                alt: "Card image cap"
+              }
+            }),
+            _vm._v(" "),
+            _c("div", { staticClass: "card-body" }, [
+              _c("p", { staticClass: "card-text" }, [
+                _vm._v(
+                  "\n                        Some quick example text to build on the card title\n                        and make up the bulk of the card's content.\n                    "
+                )
+              ]),
+              _vm._v(" "),
+              _c("hr", { staticClass: "card-hr" }),
+              _vm._v(" "),
+              _c("h5", { staticClass: "card-title aura-font" }, [
+                _vm._v(
+                  "\n                        Some quick example text to build on the card title\n                        and make up the bulk of the card's content.\n                    "
+                )
+              ])
+            ])
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "card aura-cards-shadow border-0" }, [
+            _c("img", {
+              staticClass: "card-img-top",
+              attrs: {
+                src:
+                  "https://images.unsplash.com/photo-1483985988355-763728e1935b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80",
+                alt: "Card image cap"
+              }
+            }),
+            _vm._v(" "),
+            _c("div", { staticClass: "card-body" }, [
+              _c("p", { staticClass: "card-text" }, [
+                _vm._v(
+                  "\n                        Some quick example text to build on the card title\n                        and make up the bulk of the card's content.\n                    "
+                )
+              ]),
+              _vm._v(" "),
+              _c("hr", { staticClass: "card-hr" }),
+              _vm._v(" "),
+              _c("h5", { staticClass: "card-title aura-font" }, [
+                _vm._v(
+                  "\n                        Some quick example text to build on the card title\n                        and make up the bulk of the card's content.\n                    "
+                )
+              ])
+            ])
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "card aura-cards-shadow border-0" }, [
+            _c("img", {
+              staticClass: "card-img-top",
+              attrs: {
+                src:
+                  "https://images.unsplash.com/photo-1483985988355-763728e1935b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80",
+                alt: "Card image cap"
+              }
+            }),
+            _vm._v(" "),
+            _c("div", { staticClass: "card-body" }, [
+              _c("p", { staticClass: "card-text" }, [
+                _vm._v(
+                  "\n                        Some quick example text to build on the card title\n                        and make up the bulk of the card's content.\n                    "
+                )
+              ]),
+              _vm._v(" "),
+              _c("hr", { staticClass: "card-hr" }),
+              _vm._v(" "),
+              _c("h5", { staticClass: "card-title aura-font" }, [
+                _vm._v(
+                  "\n                        Some quick example text to build on the card title\n                        and make up the bulk of the card's content.\n                    "
+                )
+              ])
+            ])
+          ])
         ])
       ]),
+      _vm._v(" "),
+      _c(
+        "div",
+        { staticClass: "home-ads-container  mt-3 mb-3 w-50 mx-auto h-100" },
+        [
+          _c("div", { staticClass: "container text-center" }, [
+            _c("p", [_vm._v("ADS BANNER")])
+          ])
+        ]
+      ),
+      _vm._v(" "),
+      _c("div", { staticClass: "container w-75 mx-auto" }, [
+        _c(
+          "h5",
+          { staticClass: "news headline-font   font-weight-bolder ml-0" },
+          [
+            _c(
+              "span",
+              {
+                staticClass: "text-aura",
+                staticStyle: { "font-size": "30px" }
+              },
+              [_vm._v("+")]
+            ),
+            _vm._v(" NEWS\n        ")
+          ]
+        ),
+        _vm._v(" "),
+        _c("div", { staticClass: "row no-gutters justify-content-center" }, [
+          _c("div", { staticClass: "col-sm-7 col-md-7 col-lg-7 col-xl-7" }, [
+            _c("div", { staticClass: "card mb-3 border-0 rounded-0" }, [
+              _c("img", {
+                staticClass: "card-img-top rounded-0 ",
+                attrs: {
+                  src:
+                    "https://images.unsplash.com/photo-1483985988355-763728e1935b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80",
+                  alt: "Card image cap"
+                }
+              }),
+              _vm._v(" "),
+              _c("div", { staticClass: "card-body" }, [
+                _c(
+                  "h4",
+                  {
+                    staticClass: "card-title aura-font font-weight-bold",
+                    staticStyle: { "font-size": "30px" }
+                  },
+                  [
+                    _vm._v(
+                      "\n                            Being Everywoman Is Katie Porter's Superpower\n                        "
+                    )
+                  ]
+                ),
+                _vm._v(" "),
+                _c("hr", { staticClass: "card-hr" })
+              ])
+            ])
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "col-sm-5 col-md-5 col-lg-5 col-xl-5" }, [
+            _c("ul", { staticClass: "list-unstyled" }, [
+              _c("li", { staticClass: "media" }, [
+                _c("img", {
+                  staticClass: "mr-3 news-side-cards",
+                  attrs: {
+                    src:
+                      "https://images.unsplash.com/photo-1496747611176-843222e1e57c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1352&q=80",
+                    alt: "Generic placeholder image"
+                  }
+                }),
+                _vm._v(" "),
+                _c("div", { staticClass: "media-body" }, [
+                  _c("h5", { staticClass: "mt-0 mb-1 aura-font" }, [
+                    _vm._v(
+                      "\n                                The Wing Still Has a Long Way To Go\n                            "
+                    )
+                  ])
+                ])
+              ]),
+              _vm._v(" "),
+              _c("li", { staticClass: "media my-1" }, [
+                _c("img", {
+                  staticClass: "mr-3 news-side-cards ",
+                  attrs: {
+                    src:
+                      "https://images.unsplash.com/photo-1496747611176-843222e1e57c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1352&q=80",
+                    alt: "Generic placeholder image"
+                  }
+                }),
+                _vm._v(" "),
+                _c("div", { staticClass: "media-body" }, [
+                  _c("h5", { staticClass: "mt-0 mb-1 aura-font " }, [
+                    _vm._v(
+                      "\n                                The Wing Still Has a Long Way To Go\n                            "
+                    )
+                  ])
+                ])
+              ]),
+              _vm._v(" "),
+              _c("li", { staticClass: "media my-1" }, [
+                _c("img", {
+                  staticClass: "mr-3 news-side-cards ",
+                  attrs: {
+                    src:
+                      "https://images.unsplash.com/photo-1496747611176-843222e1e57c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1352&q=80",
+                    alt: "Generic placeholder image"
+                  }
+                }),
+                _vm._v(" "),
+                _c("div", { staticClass: "media-body" }, [
+                  _c("h5", { staticClass: "mt-0 mb-1 aura-font " }, [
+                    _vm._v(
+                      "\n                                The Wing Still Has a Long Way To Go\n                            "
+                    )
+                  ])
+                ])
+              ]),
+              _vm._v(" "),
+              _c("li", { staticClass: "media my-1" }, [
+                _c("img", {
+                  staticClass: "mr-3 news-side-cards ",
+                  attrs: {
+                    src:
+                      "https://images.unsplash.com/photo-1496747611176-843222e1e57c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1352&q=80",
+                    alt: "Generic placeholder image"
+                  }
+                }),
+                _vm._v(" "),
+                _c("div", { staticClass: "media-body" }, [
+                  _c("h5", { staticClass: "mt-0 mb-1 aura-font " }, [
+                    _vm._v(
+                      "\n                                The Wing Still Has a Long Way To Go\n                            "
+                    )
+                  ])
+                ])
+              ]),
+              _vm._v(" "),
+              _c("li", { staticClass: "media" }, [
+                _c("img", {
+                  staticClass: "mr-3 news-side-cards ",
+                  attrs: {
+                    src:
+                      "https://images.unsplash.com/photo-1496747611176-843222e1e57c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1352&q=80",
+                    alt: "Generic placeholder image"
+                  }
+                }),
+                _vm._v(" "),
+                _c("div", { staticClass: "media-body" }, [
+                  _c("h5", { staticClass: "mt-0 mb-1 aura-font " }, [
+                    _vm._v(
+                      "\n                                The Wing Still Has a Long Way To Go\n                            "
+                    )
+                  ])
+                ])
+              ])
+            ])
+          ])
+        ])
+      ]),
+      _vm._v(" "),
+      _c(
+        "div",
+        { staticClass: "home-ads-container  mt-3 mb-3 w-50 mx-auto h-100" },
+        [
+          _c("div", { staticClass: "container text-center" }, [
+            _c("p", [_vm._v("ADS BANNER")])
+          ])
+        ]
+      ),
+      _vm._v(" "),
+      _c(
+        "div",
+        { staticClass: "home-ads-container  mt-3 mb-3 w-50 mx-auto h-100" },
+        [
+          _c("div", { staticClass: "container text-center" }, [
+            _c("p", [_vm._v("ADS BANNER")])
+          ])
+        ]
+      ),
       _vm._v(" "),
       _c(
         "div",
@@ -54629,15 +55476,17 @@ window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _Home_vue_vue_type_template_id_f2b6376c___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Home.vue?vue&type=template&id=f2b6376c& */ "./resources/js/components/Home.vue?vue&type=template&id=f2b6376c&");
-/* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+/* harmony import */ var _Home_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Home.vue?vue&type=script&lang=js& */ "./resources/js/components/Home.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport *//* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
 
-var script = {}
+
+
 
 
 /* normalize component */
 
-var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_1__["default"])(
-  script,
+var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
+  _Home_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
   _Home_vue_vue_type_template_id_f2b6376c___WEBPACK_IMPORTED_MODULE_0__["render"],
   _Home_vue_vue_type_template_id_f2b6376c___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
   false,
@@ -54651,6 +55500,20 @@ var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_
 if (false) { var api; }
 component.options.__file = "resources/js/components/Home.vue"
 /* harmony default export */ __webpack_exports__["default"] = (component.exports);
+
+/***/ }),
+
+/***/ "./resources/js/components/Home.vue?vue&type=script&lang=js&":
+/*!*******************************************************************!*\
+  !*** ./resources/js/components/Home.vue?vue&type=script&lang=js& ***!
+  \*******************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_Home_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/babel-loader/lib??ref--4-0!../../../node_modules/vue-loader/lib??vue-loader-options!./Home.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/Home.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_Home_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
 
 /***/ }),
 
