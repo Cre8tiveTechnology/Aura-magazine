@@ -2337,43 +2337,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
 /* harmony default export */ __webpack_exports__["default"] = ({});
 $(".carousel").carousel({
   interval: 1000
@@ -6813,7 +6776,7 @@ exports = module.exports = __webpack_require__(/*! ../../node_modules/css-loader
 
 
 // module
-exports.push([module.i, "\n.fade-enter-active[data-v-f348271a],\n.fade-leave-active[data-v-f348271a] {\n    transition-duration: 0.3s;\n    transition-property: opacity;\n    transition-timing-function: ease;\n}\n.fade-enter[data-v-f348271a],\n.fade-leave-active[data-v-f348271a] {\n    opacity: 0;\n}\n", ""]);
+exports.push([module.i, "\n.fade-enter-active[data-v-f348271a],\n.fade-leave-active[data-v-f348271a] {\n  transition-duration: 0.3s;\n  transition-property: opacity;\n  transition-timing-function: ease;\n}\n.fade-enter[data-v-f348271a],\n.fade-leave-active[data-v-f348271a] {\n  opacity: 0;\n}\n", ""]);
 
 // exports
 
@@ -39132,7 +39095,7 @@ var staticRenderFns = [
       "nav",
       {
         staticClass:
-          "navbar navbar-expand-lg navbar-light bg-transparent text-small"
+          "navbar navbar-expand-lg navbar-light bg-transparent text-small py-4"
       },
       [
         _c("div", { staticClass: "container" }, [
@@ -39158,7 +39121,12 @@ var staticRenderFns = [
                 "aria-label": "Toggle navigation"
               }
             },
-            [_c("span", { staticClass: "navbar-toggler-icon" })]
+            [
+              _c("span", {
+                staticClass: "nav-ico fa fa-ellipsis-h mt-1",
+                staticStyle: { "font-size": "30px" }
+              })
+            ]
           ),
           _vm._v(" "),
           _c(
@@ -39169,7 +39137,7 @@ var staticRenderFns = [
             },
             [
               _c("ul", { staticClass: "navbar-nav mx-auto" }, [
-                _c("li", { staticClass: "nav-item" }, [
+                _c("li", { staticClass: "nav-item mr-1" }, [
                   _c(
                     "a",
                     {
@@ -39180,7 +39148,7 @@ var staticRenderFns = [
                   )
                 ]),
                 _vm._v(" "),
-                _c("li", { staticClass: "nav-item" }, [
+                _c("li", { staticClass: "nav-item mr-1" }, [
                   _c(
                     "a",
                     {
@@ -39191,7 +39159,7 @@ var staticRenderFns = [
                   )
                 ]),
                 _vm._v(" "),
-                _c("li", { staticClass: "nav-item" }, [
+                _c("li", { staticClass: "nav-item mr-1" }, [
                   _c(
                     "a",
                     {
@@ -39202,7 +39170,7 @@ var staticRenderFns = [
                   )
                 ]),
                 _vm._v(" "),
-                _c("li", { staticClass: "nav-item" }, [
+                _c("li", { staticClass: "nav-item mr-1" }, [
                   _c(
                     "a",
                     {
@@ -39213,7 +39181,7 @@ var staticRenderFns = [
                   )
                 ]),
                 _vm._v(" "),
-                _c("li", { staticClass: "nav-item" }, [
+                _c("li", { staticClass: "nav-item mr-1" }, [
                   _c(
                     "a",
                     {
@@ -39224,7 +39192,7 @@ var staticRenderFns = [
                   )
                 ]),
                 _vm._v(" "),
-                _c("li", { staticClass: "nav-item" }, [
+                _c("li", { staticClass: "nav-item mr-1" }, [
                   _c(
                     "a",
                     {
@@ -39235,15 +39203,19 @@ var staticRenderFns = [
                   )
                 ]),
                 _vm._v(" "),
-                _c("li", { staticClass: "nav-item d-lg-none d-xl-block" }, [
-                  _c(
-                    "a",
-                    { staticClass: "nav-link", attrs: { href: "/magazine" } },
-                    [_vm._v("MAGAZINE")]
-                  )
-                ]),
+                _c(
+                  "li",
+                  { staticClass: "nav-item d-lg-none d-xl-block mr-1" },
+                  [
+                    _c(
+                      "a",
+                      { staticClass: "nav-link", attrs: { href: "/magazine" } },
+                      [_vm._v("MAGAZINE")]
+                    )
+                  ]
+                ),
                 _vm._v(" "),
-                _c("li", { staticClass: "nav-item dropdown" }, [
+                _c("li", { staticClass: "nav-item dropdown mr-1" }, [
                   _c(
                     "a",
                     {
@@ -39257,11 +39229,7 @@ var staticRenderFns = [
                         "aria-expanded": "false"
                       }
                     },
-                    [
-                      _vm._v(
-                        "\n                            MORE\n                        "
-                      )
-                    ]
+                    [_vm._v("MORE")]
                   ),
                   _vm._v(" "),
                   _c(
@@ -39306,27 +39274,32 @@ var staticRenderFns = [
                     ]
                   )
                 ])
-              ]),
-              _vm._v(" "),
-              _c("ul", { staticClass: "navbar-nav" }, [
-                _c("li", { staticClass: "mr-2" }, [
-                  _c(
-                    "span",
-                    { staticClass: "badge badge-pill badge-light p-2" },
-                    [_vm._v("Subscribe")]
-                  )
-                ]),
-                _vm._v(" "),
-                _c("li", [
-                  _c(
-                    "span",
-                    { staticClass: "badge badge-pill badge-light p-2" },
-                    [_vm._v("Sign In")]
-                  )
-                ])
               ])
             ]
-          )
+          ),
+          _vm._v(" "),
+          _c("div", { staticClass: "d-none d-lg-block" }, [
+            _c("a", { staticClass: "mr-3", attrs: { href: "#" } }, [
+              _c(
+                "span",
+                {
+                  staticClass:
+                    "badge badge-pill badge-light py-2 px-3 shadow-sm"
+                },
+                [_vm._v("SUBSCRIBE")]
+              )
+            ]),
+            _vm._v(" "),
+            _c("a", { attrs: { href: "#" } }, [
+              _c(
+                "span",
+                {
+                  staticClass: "badge badge-pill badge-dark py-2 px-3 shadow-sm"
+                },
+                [_vm._v("SIGN IN")]
+              )
+            ])
+          ])
         ])
       ]
     )
@@ -39363,7 +39336,7 @@ var staticRenderFns = [
     return _c("div", [
       _c(
         "div",
-        { staticClass: "home-ads-container  mt-3 mb-3 w-50 mx-auto h-100" },
+        { staticClass: "home-ads-container mt-3 mb-3 w-50 mx-auto h-100" },
         [
           _c("div", { staticClass: "container text-center" }, [
             _c("p", [_vm._v("ADS BANNER")])
@@ -39375,15 +39348,15 @@ var staticRenderFns = [
         "div",
         {
           staticClass:
-            "container-fluid p-2  d-md-none d-lg-none  d-xl-none d-sm-block border-0",
+            "container-fluid p-2 d-md-none d-lg-none d-xl-none d-sm-block border-0",
           staticStyle: { "background-color": "#676465 !important" }
         },
         [
           _c(
             "h5",
-            { staticClass: "aura-font  font-weight-bold ml-0 mt-4 text-white" },
+            { staticClass: "aura-font font-weight-bold ml-0 mt-4 text-white" },
             [
-              _vm._v("\n            Top Stories\n            "),
+              _vm._v("\n      Top Stories\n      "),
               _c("i", { staticClass: "fa fa-angle-right text-aura" })
             ]
           ),
@@ -39423,24 +39396,21 @@ var staticRenderFns = [
                         _c(
                           "h4",
                           {
-                            staticClass: "card-title aura-font ",
+                            staticClass: "card-title aura-font",
                             staticStyle: { "font-size": "30px" }
                           },
                           [
                             _vm._v(
-                              "\n                                Being Everywoman Is Katie Porter's\n                                Superpower\n                            "
+                              "\n                Being Everywoman Is Katie Porter's\n                Superpower\n              "
                             )
                           ]
                         ),
                         _vm._v(" "),
-                        _c("hr", {
-                          staticClass:
-                            "\n                            top-story-hr"
-                        }),
+                        _c("hr", { staticClass: "top-story-hr" }),
                         _vm._v(" "),
                         _c("p", { staticClass: "card-text mt-2" }, [
                           _vm._v(
-                            "\n                                This is a wider card with supporting text\n                                below as a natural lead-in to additional\n                                content. This content is a little bit\n                                longer.\n                            "
+                            "\n                This is a wider card with supporting text\n                below as a natural lead-in to additional\n                content. This content is a little bit\n                longer.\n              "
                           )
                         ])
                       ]
@@ -39463,7 +39433,7 @@ var staticRenderFns = [
                       "div",
                       {
                         staticClass:
-                          "card-body border-0 text-white text-center ",
+                          "card-body border-0 text-white text-center",
                         staticStyle: {
                           "background-color": "#676465 !important"
                         }
@@ -39472,24 +39442,21 @@ var staticRenderFns = [
                         _c(
                           "h4",
                           {
-                            staticClass: "card-title aura-font ",
+                            staticClass: "card-title aura-font",
                             staticStyle: { "font-size": "30px" }
                           },
                           [
                             _vm._v(
-                              "\n                                Being Everywoman Is Katie Porter's\n                                Superpower\n                            "
+                              "\n                Being Everywoman Is Katie Porter's\n                Superpower\n              "
                             )
                           ]
                         ),
                         _vm._v(" "),
-                        _c("hr", {
-                          staticClass:
-                            "\n                            top-story-hr"
-                        }),
+                        _c("hr", { staticClass: "top-story-hr" }),
                         _vm._v(" "),
-                        _c("p", { staticClass: "card-text mt-2 " }, [
+                        _c("p", { staticClass: "card-text mt-2" }, [
                           _vm._v(
-                            "\n                                This is a wider card with supporting text\n                                below as a natural lead-in to additional\n                                content. This content is a little bit\n                                longer.\n                            "
+                            "\n                This is a wider card with supporting text\n                below as a natural lead-in to additional\n                content. This content is a little bit\n                longer.\n              "
                           )
                         ])
                       ]
@@ -39525,19 +39492,16 @@ var staticRenderFns = [
                           },
                           [
                             _vm._v(
-                              "\n                                Being Everywoman Is Katie Porter's\n                                Superpower\n                            "
+                              "\n                Being Everywoman Is Katie Porter's\n                Superpower\n              "
                             )
                           ]
                         ),
                         _vm._v(" "),
-                        _c("hr", {
-                          staticClass:
-                            "\n                            top-story-hr"
-                        }),
+                        _c("hr", { staticClass: "top-story-hr" }),
                         _vm._v(" "),
                         _c("p", { staticClass: "card-text mt-2" }, [
                           _vm._v(
-                            "\n                                This is a wider card with supporting text\n                                below as a natural lead-in to additional\n                                content. This content is a little bit\n                                longer.\n                            "
+                            "\n                This is a wider card with supporting text\n                below as a natural lead-in to additional\n                content. This content is a little bit\n                longer.\n              "
                           )
                         ])
                       ]
@@ -39561,7 +39525,7 @@ var staticRenderFns = [
             "div",
             {
               staticClass:
-                "carousel slide w-75 mx-auto rounded  d-none d-md-block d-lg-block  d-xl-block",
+                "carousel slide w-75 mx-auto rounded d-none d-md-block d-lg-block d-xl-block",
               attrs: {
                 id: "carouselExampleSlidesOnly",
                 "data-ride": "carousel"
@@ -39571,11 +39535,10 @@ var staticRenderFns = [
               _c(
                 "h5",
                 {
-                  staticClass:
-                    "aura-font  font-weight-bold ml-0 mt-4 text-white"
+                  staticClass: "aura-font font-weight-bold ml-0 mt-4 text-white"
                 },
                 [
-                  _vm._v("\n                Top Stories\n                "),
+                  _vm._v("\n        Top Stories\n        "),
                   _c("i", { staticClass: "fa fa-angle-right text-aura" })
                 ]
               ),
@@ -39605,61 +39568,12 @@ var staticRenderFns = [
                         _c(
                           "h4",
                           {
-                            staticClass: "card-title aura-font ",
+                            staticClass: "card-title aura-font",
                             staticStyle: { "font-size": "30px" }
                           },
                           [
                             _vm._v(
-                              "\n                                Being Everywoman Is Katie Porter's\n                                Superpower\n                            "
-                            )
-                          ]
-                        ),
-                        _vm._v(" "),
-                        _c("hr", {
-                          staticClass:
-                            "\n                                top-story-hr"
-                        }),
-                        _vm._v(" "),
-                        _c("p", { staticClass: "card-text mt-2" }, [
-                          _vm._v(
-                            "\n                                This is a wider card with supporting text\n                                below as a natural lead-in to additional\n                                content. This content is a little bit\n                                longer.\n                            "
-                          )
-                        ])
-                      ]
-                    )
-                  ])
-                ]),
-                _vm._v(" "),
-                _c("div", { staticClass: "carousel-item active" }, [
-                  _c("div", { staticClass: "card w-100 border-0" }, [
-                    _c("img", {
-                      staticClass: "card-img-top rounded border-0",
-                      attrs: {
-                        src:
-                          "https://images.unsplash.com/photo-1483985988355-763728e1935b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80",
-                        alt: "Card image cap"
-                      }
-                    }),
-                    _vm._v(" "),
-                    _c(
-                      "div",
-                      {
-                        staticClass:
-                          "card-body text-white text-center border-0",
-                        staticStyle: {
-                          "background-color": "#676465 !important"
-                        }
-                      },
-                      [
-                        _c(
-                          "h4",
-                          {
-                            staticClass: "card-title aura-font ",
-                            staticStyle: { "font-size": "30px" }
-                          },
-                          [
-                            _vm._v(
-                              "\n                                Being Everywoman Is Katie Porter's\n                                Superpower\n                            "
+                              "\n                Being Everywoman Is Katie Porter's\n                Superpower\n              "
                             )
                           ]
                         ),
@@ -39668,7 +39582,7 @@ var staticRenderFns = [
                         _vm._v(" "),
                         _c("p", { staticClass: "card-text mt-2" }, [
                           _vm._v(
-                            "\n                                This is a wider card with supporting text\n                                below as a natural lead-in to additional\n                                content. This content is a little bit\n                                longer.\n                            "
+                            "\n                This is a wider card with supporting text\n                below as a natural lead-in to additional\n                content. This content is a little bit\n                longer.\n              "
                           )
                         ])
                       ]
@@ -39700,24 +39614,67 @@ var staticRenderFns = [
                         _c(
                           "h4",
                           {
-                            staticClass: "card-title aura-font ",
+                            staticClass: "card-title aura-font",
                             staticStyle: { "font-size": "30px" }
                           },
                           [
                             _vm._v(
-                              "\n                                Being Everywoman Is Katie Porter's\n                                Superpower\n                            "
+                              "\n                Being Everywoman Is Katie Porter's\n                Superpower\n              "
                             )
                           ]
                         ),
                         _vm._v(" "),
-                        _c("hr", {
-                          staticClass:
-                            "\n                                top-story-hr"
-                        }),
+                        _c("hr", { staticClass: "top-story-hr" }),
                         _vm._v(" "),
                         _c("p", { staticClass: "card-text mt-2" }, [
                           _vm._v(
-                            "\n                                This is a wider card with supporting text\n                                below as a natural lead-in to additional\n                                content. This content is a little bit\n                                longer.\n                            "
+                            "\n                This is a wider card with supporting text\n                below as a natural lead-in to additional\n                content. This content is a little bit\n                longer.\n              "
+                          )
+                        ])
+                      ]
+                    )
+                  ])
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "carousel-item active" }, [
+                  _c("div", { staticClass: "card w-100 border-0" }, [
+                    _c("img", {
+                      staticClass: "card-img-top rounded border-0",
+                      attrs: {
+                        src:
+                          "https://images.unsplash.com/photo-1483985988355-763728e1935b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80",
+                        alt: "Card image cap"
+                      }
+                    }),
+                    _vm._v(" "),
+                    _c(
+                      "div",
+                      {
+                        staticClass:
+                          "card-body text-white text-center border-0",
+                        staticStyle: {
+                          "background-color": "#676465 !important"
+                        }
+                      },
+                      [
+                        _c(
+                          "h4",
+                          {
+                            staticClass: "card-title aura-font",
+                            staticStyle: { "font-size": "30px" }
+                          },
+                          [
+                            _vm._v(
+                              "\n                Being Everywoman Is Katie Porter's\n                Superpower\n              "
+                            )
+                          ]
+                        ),
+                        _vm._v(" "),
+                        _c("hr", { staticClass: "top-story-hr" }),
+                        _vm._v(" "),
+                        _c("p", { staticClass: "card-text mt-2" }, [
+                          _vm._v(
+                            "\n                This is a wider card with supporting text\n                below as a natural lead-in to additional\n                content. This content is a little bit\n                longer.\n              "
                           )
                         ])
                       ]
@@ -39730,121 +39687,148 @@ var staticRenderFns = [
         ]
       ),
       _vm._v(" "),
-      _c("div", { staticClass: "container  w-75 mx-auto  mt-4" }, [
-        _c("div", { staticClass: "card-deck " }, [
-          _c("div", { staticClass: "card aura-cards-shadow border-0" }, [
-            _c("img", {
-              staticClass: "card-img-top",
-              attrs: {
-                src:
-                  "https://images.unsplash.com/photo-1483985988355-763728e1935b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80",
-                alt: "Card image cap"
-              }
-            }),
-            _vm._v(" "),
-            _c("div", { staticClass: "card-body" }, [
-              _c("p", { staticClass: "card-text" }, [
-                _vm._v(
-                  "\n                        Some quick example text to build on the card title\n                        and make up the bulk of the card's content.\n                    "
-                )
+      _c(
+        "div",
+        { staticClass: "container mb-5", staticStyle: { "margin-top": "10%" } },
+        [
+          _c(
+            "div",
+            {
+              staticClass:
+                "row justify-content-lg-between justify-content-md-around justify-content-sm-center justify-content-center"
+            },
+            [
+              _c("div", { staticClass: "col-12 col-sm-10 col-md-6 col-lg-3" }, [
+                _c("div", { staticClass: "card p-3" }, [
+                  _c("div", { staticClass: "inner" }, [
+                    _c("img", {
+                      staticClass: "card-img-top p-1",
+                      attrs: {
+                        src:
+                          "https://images.unsplash.com/photo-1483985988355-763728e1935b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80",
+                        alt: "Card Image"
+                      }
+                    })
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "card-body px-0" }, [
+                    _c("p", { staticClass: "story-card-font-1" }, [
+                      _vm._v(
+                        "Excepteur sint occaecat cupidatatnon proident, sunt in culpa qui ocial deserunt mollit anim tujln.kaeei do."
+                      )
+                    ]),
+                    _vm._v(" "),
+                    _c("hr", { staticClass: "story-card-hr" }),
+                    _vm._v(" "),
+                    _c("p", { staticClass: "story-card-font-2" }, [
+                      _vm._v(
+                        "Money to many is very thig wufr ubneuid nqhfioef aeuaean qoi4ii JOECAER UJCUIW"
+                      )
+                    ])
+                  ])
+                ])
               ]),
               _vm._v(" "),
-              _c("hr", { staticClass: "card-hr" }),
-              _vm._v(" "),
-              _c("h5", { staticClass: "card-title aura-font" }, [
-                _vm._v(
-                  "\n                        Some quick example text to build on the card title\n                        and make up the bulk of the card's content.\n                    "
-                )
-              ])
-            ])
-          ]),
-          _vm._v(" "),
-          _c("div", { staticClass: "card aura-cards-shadow border-0" }, [
-            _c("img", {
-              staticClass: "card-img-top",
-              attrs: {
-                src:
-                  "https://images.unsplash.com/photo-1483985988355-763728e1935b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80",
-                alt: "Card image cap"
-              }
-            }),
-            _vm._v(" "),
-            _c("div", { staticClass: "card-body" }, [
-              _c("p", { staticClass: "card-text" }, [
-                _vm._v(
-                  "\n                        Some quick example text to build on the card title\n                        and make up the bulk of the card's content.\n                    "
-                )
+              _c("div", { staticClass: "col-12 col-sm-10 col-md-6 col-lg-3" }, [
+                _c("div", { staticClass: "card p-3" }, [
+                  _c("div", { staticClass: "inner" }, [
+                    _c("img", {
+                      staticClass: "card-img-top p-1",
+                      attrs: {
+                        src:
+                          "https://images.unsplash.com/photo-1483985988355-763728e1935b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80",
+                        alt: "Card Image"
+                      }
+                    })
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "card-body px-0" }, [
+                    _c("p", { staticClass: "story-card-font-1" }, [
+                      _vm._v(
+                        "Excepteur sint occaecat cupidatatnon proident, sunt in culpa qui ocial deserunt mollit anim tujln.kaeei do."
+                      )
+                    ]),
+                    _vm._v(" "),
+                    _c("hr", { staticClass: "story-card-hr" }),
+                    _vm._v(" "),
+                    _c("p", { staticClass: "story-card-font-2" }, [
+                      _vm._v(
+                        "Money to many is very thig wufr ubneuid nqhfioef aeuaean qoi4ii JOECAER UJCUIW"
+                      )
+                    ])
+                  ])
+                ])
               ]),
               _vm._v(" "),
-              _c("hr", { staticClass: "card-hr" }),
-              _vm._v(" "),
-              _c("h5", { staticClass: "card-title aura-font" }, [
-                _vm._v(
-                  "\n                        Some quick example text to build on the card title\n                        and make up the bulk of the card's content.\n                    "
-                )
-              ])
-            ])
-          ]),
-          _vm._v(" "),
-          _c("div", { staticClass: "card aura-cards-shadow border-0" }, [
-            _c("img", {
-              staticClass: "card-img-top",
-              attrs: {
-                src:
-                  "https://images.unsplash.com/photo-1483985988355-763728e1935b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80",
-                alt: "Card image cap"
-              }
-            }),
-            _vm._v(" "),
-            _c("div", { staticClass: "card-body" }, [
-              _c("p", { staticClass: "card-text" }, [
-                _vm._v(
-                  "\n                        Some quick example text to build on the card title\n                        and make up the bulk of the card's content.\n                    "
-                )
+              _c("div", { staticClass: "col-12 col-sm-10 col-md-6 col-lg-3" }, [
+                _c("div", { staticClass: "card p-3" }, [
+                  _c("div", { staticClass: "inner" }, [
+                    _c("img", {
+                      staticClass: "card-img-top p-1",
+                      attrs: {
+                        src:
+                          "https://images.unsplash.com/photo-1483985988355-763728e1935b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80",
+                        alt: "Card Image"
+                      }
+                    })
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "card-body px-0" }, [
+                    _c("p", { staticClass: "story-card-font-1" }, [
+                      _vm._v(
+                        "Excepteur sint occaecat cupidatatnon proident, sunt in culpa qui ocial deserunt mollit anim tujln.kaeei do."
+                      )
+                    ]),
+                    _vm._v(" "),
+                    _c("hr", { staticClass: "story-card-hr" }),
+                    _vm._v(" "),
+                    _c("p", { staticClass: "story-card-font-2" }, [
+                      _vm._v(
+                        "Money to many is very thig wufr ubneuid nqhfioef aeuaean qoi4ii JOECAER UJCUIW"
+                      )
+                    ])
+                  ])
+                ])
               ]),
               _vm._v(" "),
-              _c("hr", { staticClass: "card-hr" }),
-              _vm._v(" "),
-              _c("h5", { staticClass: "card-title aura-font" }, [
-                _vm._v(
-                  "\n                        Some quick example text to build on the card title\n                        and make up the bulk of the card's content.\n                    "
-                )
+              _c("div", { staticClass: "col-12 col-sm-10 col-md-6 col-lg-3" }, [
+                _c("div", { staticClass: "card p-3" }, [
+                  _c("div", { staticClass: "inner" }, [
+                    _c("img", {
+                      staticClass: "card-img-top p-1",
+                      attrs: {
+                        src:
+                          "https://images.unsplash.com/photo-1483985988355-763728e1935b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80",
+                        alt: "Card Image"
+                      }
+                    })
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "card-body px-0" }, [
+                    _c("p", { staticClass: "story-card-font-1" }, [
+                      _vm._v(
+                        "Excepteur sint occaecat cupidatatnon proident, sunt in culpa qui ocial deserunt mollit anim tujln.kaeei do."
+                      )
+                    ]),
+                    _vm._v(" "),
+                    _c("hr", { staticClass: "story-card-hr" }),
+                    _vm._v(" "),
+                    _c("p", { staticClass: "story-card-font-2" }, [
+                      _vm._v(
+                        "Money to many is very thig wufr ubneuid nqhfioef aeuaean qoi4ii JOECAER UJCUIW"
+                      )
+                    ])
+                  ])
+                ])
               ])
-            ])
-          ]),
-          _vm._v(" "),
-          _c("div", { staticClass: "card aura-cards-shadow border-0" }, [
-            _c("img", {
-              staticClass: "card-img-top",
-              attrs: {
-                src:
-                  "https://images.unsplash.com/photo-1483985988355-763728e1935b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80",
-                alt: "Card image cap"
-              }
-            }),
-            _vm._v(" "),
-            _c("div", { staticClass: "card-body" }, [
-              _c("p", { staticClass: "card-text" }, [
-                _vm._v(
-                  "\n                        Some quick example text to build on the card title\n                        and make up the bulk of the card's content.\n                    "
-                )
-              ]),
-              _vm._v(" "),
-              _c("hr", { staticClass: "card-hr" }),
-              _vm._v(" "),
-              _c("h5", { staticClass: "card-title aura-font" }, [
-                _vm._v(
-                  "\n                        Some quick example text to build on the card title\n                        and make up the bulk of the card's content.\n                    "
-                )
-              ])
-            ])
-          ])
-        ])
-      ]),
+            ]
+          )
+        ]
+      ),
       _vm._v(" "),
       _c(
         "div",
-        { staticClass: "home-ads-container  mt-3 mb-3 w-50 mx-auto h-100" },
+        { staticClass: "home-ads-container mt-3 mb-3 w-50 mx-auto h-100" },
         [
           _c("div", { staticClass: "container text-center" }, [
             _c("p", [_vm._v("ADS BANNER")])
@@ -39855,7 +39839,7 @@ var staticRenderFns = [
       _c("div", { staticClass: "container w-75 mx-auto" }, [
         _c(
           "h5",
-          { staticClass: "news headline-font   font-weight-bolder ml-0" },
+          { staticClass: "news headline-font font-weight-bolder ml-0" },
           [
             _c(
               "span",
@@ -39865,7 +39849,7 @@ var staticRenderFns = [
               },
               [_vm._v("+")]
             ),
-            _vm._v(" NEWS\n        ")
+            _vm._v(" NEWS\n    ")
           ]
         ),
         _vm._v(" "),
@@ -39873,7 +39857,7 @@ var staticRenderFns = [
           _c("div", { staticClass: "col-sm-7 col-md-7 col-lg-7 col-xl-7" }, [
             _c("div", { staticClass: "card mb-3 border-0 rounded-0" }, [
               _c("img", {
-                staticClass: "card-img-top rounded-0 ",
+                staticClass: "card-img-top rounded-0",
                 attrs: {
                   src:
                     "https://images.unsplash.com/photo-1483985988355-763728e1935b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80",
@@ -39888,11 +39872,7 @@ var staticRenderFns = [
                     staticClass: "card-title aura-font font-weight-bold",
                     staticStyle: { "font-size": "30px" }
                   },
-                  [
-                    _vm._v(
-                      "\n                            Being Everywoman Is Katie Porter's Superpower\n                        "
-                    )
-                  ]
+                  [_vm._v("Being Everywoman Is Katie Porter's Superpower")]
                 ),
                 _vm._v(" "),
                 _c("hr", { staticClass: "card-hr" })
@@ -39914,16 +39894,14 @@ var staticRenderFns = [
                 _vm._v(" "),
                 _c("div", { staticClass: "media-body" }, [
                   _c("h5", { staticClass: "mt-0 mb-1 aura-font" }, [
-                    _vm._v(
-                      "\n                                The Wing Still Has a Long Way To Go\n                            "
-                    )
+                    _vm._v("The Wing Still Has a Long Way To Go")
                   ])
                 ])
               ]),
               _vm._v(" "),
               _c("li", { staticClass: "media my-1" }, [
                 _c("img", {
-                  staticClass: "mr-3 news-side-cards ",
+                  staticClass: "mr-3 news-side-cards",
                   attrs: {
                     src:
                       "https://images.unsplash.com/photo-1496747611176-843222e1e57c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1352&q=80",
@@ -39932,17 +39910,15 @@ var staticRenderFns = [
                 }),
                 _vm._v(" "),
                 _c("div", { staticClass: "media-body" }, [
-                  _c("h5", { staticClass: "mt-0 mb-1 aura-font " }, [
-                    _vm._v(
-                      "\n                                The Wing Still Has a Long Way To Go\n                            "
-                    )
+                  _c("h5", { staticClass: "mt-0 mb-1 aura-font" }, [
+                    _vm._v("The Wing Still Has a Long Way To Go")
                   ])
                 ])
               ]),
               _vm._v(" "),
               _c("li", { staticClass: "media my-1" }, [
                 _c("img", {
-                  staticClass: "mr-3 news-side-cards ",
+                  staticClass: "mr-3 news-side-cards",
                   attrs: {
                     src:
                       "https://images.unsplash.com/photo-1496747611176-843222e1e57c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1352&q=80",
@@ -39951,17 +39927,15 @@ var staticRenderFns = [
                 }),
                 _vm._v(" "),
                 _c("div", { staticClass: "media-body" }, [
-                  _c("h5", { staticClass: "mt-0 mb-1 aura-font " }, [
-                    _vm._v(
-                      "\n                                The Wing Still Has a Long Way To Go\n                            "
-                    )
+                  _c("h5", { staticClass: "mt-0 mb-1 aura-font" }, [
+                    _vm._v("The Wing Still Has a Long Way To Go")
                   ])
                 ])
               ]),
               _vm._v(" "),
               _c("li", { staticClass: "media my-1" }, [
                 _c("img", {
-                  staticClass: "mr-3 news-side-cards ",
+                  staticClass: "mr-3 news-side-cards",
                   attrs: {
                     src:
                       "https://images.unsplash.com/photo-1496747611176-843222e1e57c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1352&q=80",
@@ -39970,17 +39944,15 @@ var staticRenderFns = [
                 }),
                 _vm._v(" "),
                 _c("div", { staticClass: "media-body" }, [
-                  _c("h5", { staticClass: "mt-0 mb-1 aura-font " }, [
-                    _vm._v(
-                      "\n                                The Wing Still Has a Long Way To Go\n                            "
-                    )
+                  _c("h5", { staticClass: "mt-0 mb-1 aura-font" }, [
+                    _vm._v("The Wing Still Has a Long Way To Go")
                   ])
                 ])
               ]),
               _vm._v(" "),
               _c("li", { staticClass: "media" }, [
                 _c("img", {
-                  staticClass: "mr-3 news-side-cards ",
+                  staticClass: "mr-3 news-side-cards",
                   attrs: {
                     src:
                       "https://images.unsplash.com/photo-1496747611176-843222e1e57c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1352&q=80",
@@ -39989,10 +39961,8 @@ var staticRenderFns = [
                 }),
                 _vm._v(" "),
                 _c("div", { staticClass: "media-body" }, [
-                  _c("h5", { staticClass: "mt-0 mb-1 aura-font " }, [
-                    _vm._v(
-                      "\n                                The Wing Still Has a Long Way To Go\n                            "
-                    )
+                  _c("h5", { staticClass: "mt-0 mb-1 aura-font" }, [
+                    _vm._v("The Wing Still Has a Long Way To Go")
                   ])
                 ])
               ])
@@ -40003,7 +39973,7 @@ var staticRenderFns = [
       _vm._v(" "),
       _c(
         "div",
-        { staticClass: "home-ads-container  mt-3 mb-3 w-50 mx-auto h-100" },
+        { staticClass: "home-ads-container mt-3 mb-3 w-50 mx-auto h-100" },
         [
           _c("div", { staticClass: "container text-center" }, [
             _c("p", [_vm._v("ADS BANNER")])
@@ -40013,7 +39983,7 @@ var staticRenderFns = [
       _vm._v(" "),
       _c(
         "div",
-        { staticClass: "home-ads-container  mt-3 mb-3 w-50 mx-auto h-100" },
+        { staticClass: "home-ads-container mt-3 mb-3 w-50 mx-auto h-100" },
         [
           _c("div", { staticClass: "container text-center" }, [
             _c("p", [_vm._v("ADS BANNER")])
@@ -40023,7 +39993,7 @@ var staticRenderFns = [
       _vm._v(" "),
       _c(
         "div",
-        { staticClass: "home-ads-container  mt-3 mb-3 w-50 mx-auto h-100" },
+        { staticClass: "home-ads-container mt-3 mb-3 w-50 mx-auto h-100" },
         [
           _c("div", { staticClass: "container text-center" }, [
             _c("p", [_vm._v("ADS BANNER")])
@@ -55574,8 +55544,8 @@ var routes = [{
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! /Users/mac/Documents/Projects/Laravel/Aura/resources/js/app.js */"./resources/js/app.js");
-module.exports = __webpack_require__(/*! /Users/mac/Documents/Projects/Laravel/Aura/resources/sass/app.scss */"./resources/sass/app.scss");
+__webpack_require__(/*! /Users/mac/Documents/Laravel/Aura-magazine/resources/js/app.js */"./resources/js/app.js");
+module.exports = __webpack_require__(/*! /Users/mac/Documents/Laravel/Aura-magazine/resources/sass/app.scss */"./resources/sass/app.scss");
 
 
 /***/ })
