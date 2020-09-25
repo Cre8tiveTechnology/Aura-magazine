@@ -4,15 +4,15 @@
  * building robust, powerful web applications using Vue and Laravel.
  */
 
-require('./bootstrap');
+require('./bootstrap')
 
-window.Vue = require('vue');
-import App from './App.vue';
-import VueRouter from 'vue-router';
-import VueAxios from 'vue-axios';
-import axios from 'axios';
-import {routes} from './routes';
-import NProgress from 'nprogress';
+window.Vue = require('vue')
+import App from './App.vue'
+import VueRouter from 'vue-router'
+import VueAxios from 'vue-axios'
+import axios from 'axios'
+import { routes } from './routes'
+import NProgress from 'nprogress'
 
 /**
  * The following block of code may be used to automatically register your
@@ -25,11 +25,11 @@ import NProgress from 'nprogress';
 // const files = require.context('./', true, /\.vue$/i)
 // files.keys().map(key => Vue.component(key.split('/').pop().split('.')[0], files(key).default))
 
-NProgress.configure({easing: 'ease',speed: 500,showSpinner: false});
+NProgress.configure({ easing: 'ease', speed: 500, showSpinner: false })
 
-Vue.use(VueRouter);
-Vue.use(NProgress);
-Vue.use(VueAxios,axios);
+Vue.use(VueRouter)
+Vue.use(NProgress)
+Vue.use(VueAxios, axios)
 
 /**
  * Next, we will create a fresh Vue application instance and attach it to
@@ -38,31 +38,26 @@ Vue.use(VueAxios,axios);
  */
 
 const router = new VueRouter({
-    mode: 'history',
-    routes: routes
-});
-
-router.beforeResolve((to,from,next) =>
-{
-    // If this isn't an initial page load.
-    if (to.name) {
-        // Start the route progress bar.
-        NProgress.start()
-    }
-    next()
+  mode: 'history',
+  routes: routes,
 })
 
-router.afterEach((to,from) =>
-{
-    // Complete the animation of the route progress bar.
-    NProgress.done()
+router.beforeResolve((to, from, next) => {
+  // If this isn't an initial page load.
+  if (to.name) {
+    // Start the route progress bar.
+    NProgress.start()
+  }
+  next()
+})
+
+router.afterEach((to, from) => {
+  // Complete the animation of the route progress bar.
+  NProgress.done()
 })
 
 const app = new Vue({
-    el: '#app',
-    router: router,
-    render: h => h(App),
-});
-
-
-
+  el: '#app',
+  router: router,
+  render: (h) => h(App),
+})

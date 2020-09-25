@@ -68,6 +68,23 @@
   left: 15px;
 }
 
+.news-date {
+  font-size: 12px !important;
+  color: red !important;
+}
+
+.see-more {
+  color: #ff63b6 !important;
+}
+
+.see-more-icon {
+  font-size: 20px;
+}
+
+.bg-mag {
+  background: #d8d5d5;
+}
+
 /*!
  * Bootstrap v4.5.2 (https://getbootstrap.com/)
  * Copyright 2011-2020 The Bootstrap Authors

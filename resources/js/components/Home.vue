@@ -428,7 +428,9 @@
   </div>
 </template>
 <script>
-export default {};
+export default {
+  name: "Home",
+};
 $(".carousel").carousel({
   interval: 1000,
 });
