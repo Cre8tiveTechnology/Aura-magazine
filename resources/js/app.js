@@ -22,6 +22,10 @@ import NProgress from 'nprogress'
  * Eg. ./components/ExampleComponent.vue -> <example-component></example-component>
  */
 
+import Navbar from './components/Navbar'
+
+Vue.component('navbar', Navbar)
+
 // const files = require.context('./', true, /\.vue$/i)
 // files.keys().map(key => Vue.component(key.split('/').pop().split('.')[0], files(key).default))
 

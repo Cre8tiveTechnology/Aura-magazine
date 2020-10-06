@@ -69,6 +69,11 @@
 <script>
 export default {
   name: "Magazine",
+  data() {
+    return {
+      name: "Oluwatobi",
+    };
+  },
 };
 </script>
 

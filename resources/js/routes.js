@@ -1,7 +1,7 @@
 //Route files for  Vue App
-import Home from './components/Home.vue'
-import News from './components/News.vue'
-import Magazine from './components/Magazine.vue'
+import Home from './pages/Home.vue'
+import News from './pages/News.vue'
+import Magazine from './pages/Magazine.vue'
 
 export const routes = [
   {
