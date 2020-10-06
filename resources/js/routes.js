@@ -17,6 +17,30 @@ export const routes = [
   },
 
   {
+    name: 'beauty',
+    path: '/category/beauty',
+    component: News,
+  },
+
+  {
+    name: 'fashion',
+    path: '/category/fashion',
+    component: News,
+  },
+
+  {
+    name: 'lifestyle',
+    path: '/category/lifestyle',
+    component: News,
+  },
+
+  {
+    name: 'arts-and-culture',
+    path: '/category/arts-and-culture',
+    component: News,
+  },
+
+  {
     name: 'magazine',
     path: '/magazine',
     component: Magazine,

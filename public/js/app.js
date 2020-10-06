@@ -2397,6 +2397,32 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: "Magazine"
 });
@@ -40412,7 +40438,11 @@ var staticRenderFns = [
               [
                 _c("img", {
                   staticClass: "p-0 img-fluid",
-                  attrs: { src: "/image/magazine/mag-1.png", alt: "Mag One" }
+                  attrs: {
+                    src: "/image/magazine/mag-1.png",
+                    height: "100",
+                    alt: "Mag One"
+                  }
                 })
               ]
             ),
@@ -40425,7 +40455,7 @@ var staticRenderFns = [
                 _vm._v(" "),
                 _c("p", { staticClass: "text-left mt-3" }, [
                   _vm._v(
-                    "\n          Get your copy of VOGUE delivered FREE to your door before it hits the shops + FREE digital editions on Apple and Android devices! Alternatively, choose from one of our\n          fantastic digital-only offers.\n        "
+                    "\n          Get your copy of VOGUE delivered FREE to your door before it hits\n          the shops + FREE digital editions on Apple and Android devices!\n          Alternatively, choose from one of our fantastic digital-only offers.\n        "
                   )
                 ])
               ]
@@ -40433,28 +40463,41 @@ var staticRenderFns = [
           ]
         ),
         _vm._v(" "),
-        _c("div", { staticClass: "row justify-content-around mt-5" }, [
+        _c("div", { staticClass: "row justify-content-around mt-3 mb-5" }, [
           _c(
             "div",
             {
               staticClass:
-                "p-3 col-lg-5 col-md-5 col-12 col-sm-12 text-center bg-mag"
+                "px-3 py-4 col-lg-5 col-md-5 col-12 col-sm-12 mt-5 text-center bg-mag"
             },
             [
               _c("h5", [_vm._v("Print Only")]),
               _vm._v(" "),
               _c("img", {
-                staticClass: "p-0 img-fluid",
-                attrs: { src: "/image/magazine/mag-2.png", alt: "Mag Two" }
+                staticClass: "p-0 add-img-fluid",
+                attrs: {
+                  src: "/image/magazine/mag-2.png",
+                  height: "300px",
+                  alt: "Mag Two"
+                }
               }),
               _vm._v(" "),
-              _c("ul", [
+              _c("ul", { staticClass: "text-left mt-3" }, [
                 _c("li", [_vm._v("Subscribe and save up to 33%")]),
                 _vm._v(" "),
                 _c("li", [_vm._v("Plus start with a FREE trial!")]),
                 _vm._v(" "),
                 _c("li", [_vm._v("Also available on Google Play and Amazon")])
-              ])
+              ]),
+              _vm._v(" "),
+              _c(
+                "a",
+                {
+                  staticClass: "btn btn-outline-aura btn-sm mt-2",
+                  attrs: { href: "#" }
+                },
+                [_vm._v("Get a digital copy for $2.00\n        ")]
+              )
             ]
           ),
           _vm._v(" "),
@@ -40462,23 +40505,36 @@ var staticRenderFns = [
             "div",
             {
               staticClass:
-                "col-lg-5 col-md-5 col-12 col-sm-12 text-center bg-mag"
+                "px-3 py-4 col-lg-5 col-md-5 col-12 col-sm-12 mt-5 text-center bg-mag"
             },
             [
               _c("h5", [_vm._v("Print + Digital")]),
               _vm._v(" "),
               _c("img", {
-                staticClass: "p-0 img-fluid",
-                attrs: { src: "/image/magazine/mag-3.png", alt: "Mag Three" }
+                staticClass: "p-0 add-img-fluid",
+                attrs: {
+                  src: "/image/magazine/mag-3.png",
+                  height: "300px",
+                  alt: "Mag Three"
+                }
               }),
               _vm._v(" "),
-              _c("ul", [
+              _c("ul", { staticClass: "text-left mt-3" }, [
                 _c("li", [_vm._v("Subscribe and save up to 33%")]),
                 _vm._v(" "),
                 _c("li", [_vm._v("Plus start with a FREE trial!")]),
                 _vm._v(" "),
                 _c("li", [_vm._v("Also available on Google Play and Amazon")])
-              ])
+              ]),
+              _vm._v(" "),
+              _c(
+                "a",
+                {
+                  staticClass: "btn btn-outline-aura btn-sm mt-2",
+                  attrs: { href: "#" }
+                },
+                [_vm._v("Subscribe from only $5.29 per month")]
+              )
             ]
           )
         ])
@@ -56697,7 +56753,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "routes", function() { return routes; });
 /* harmony import */ var _components_Home_vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./components/Home.vue */ "./resources/js/components/Home.vue");
 /* harmony import */ var _components_News_vue__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./components/News.vue */ "./resources/js/components/News.vue");
-/* harmony import */ var _components_Magazine_vue__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./components/Magazine.vue */ "./resources/js/components/Magazine.vue");
+/* harmony import */ var _components_Magazine_vue__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./components/Magazine.vue */ "./resources/js/components/Magazine.vue");
 //Route files for  Vue App
 
 
@@ -56711,9 +56767,25 @@ var routes = [{
   path: '/category/news',
   component: _components_News_vue__WEBPACK_IMPORTED_MODULE_1__["default"]
 }, {
+  name: 'beauty',
+  path: '/category/beauty',
+  component: _components_News_vue__WEBPACK_IMPORTED_MODULE_1__["default"]
+}, {
+  name: 'fashion',
+  path: '/category/fashion',
+  component: _components_News_vue__WEBPACK_IMPORTED_MODULE_1__["default"]
+}, {
+  name: 'lifestyle',
+  path: '/category/lifestyle',
+  component: _components_News_vue__WEBPACK_IMPORTED_MODULE_1__["default"]
+}, {
+  name: 'arts-and-culture',
+  path: '/category/arts-and-culture',
+  component: _components_News_vue__WEBPACK_IMPORTED_MODULE_1__["default"]
+}, {
   name: 'magazine',
   path: '/magazine',
-  component: _components_Magazine_vue__WEBPACK_IMPORTED_MODULE_3__["default"]
+  component: _components_Magazine_vue__WEBPACK_IMPORTED_MODULE_2__["default"]
 }];
 
 /***/ }),
