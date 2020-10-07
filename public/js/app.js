@@ -2939,8 +2939,244 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: "News"
+});
+
+/***/ }),
+
+/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/pages/Post.vue?vue&type=script&lang=js&":
+/*!**********************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/pages/Post.vue?vue&type=script&lang=js& ***!
+  \**********************************************************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+/* harmony default export */ __webpack_exports__["default"] = ({
+  name: "Post",
+  computed: {
+    imagesLenght: function imagesLenght() {
+      return this.post.images.length;
+    }
+  },
+  data: function data() {
+    return {
+      post: {
+        title: 'Yomi Adegoke: "Lockdown Revolutionised The Respect Your Elders Dynamic With My Parents"',
+        image: "/image/article/portrait.png",
+        author: {
+          name: "Omoh eli"
+        },
+        intro: "When Yomi Adegoke’s mother moved in with her during lockdown, she was forced to confront an uncomfortable dynamic many diaspora kids will recognise: the notion that disagreeing with your elders is inherently insubordinate.",
+        body: "It’s a landmark moment in anyone’s life, that irreversible realisation that your parents don’t know everything. Watching your dad fumble a maths question whilst helping you with your Year 7 homework is a bombshell akin to learning that he is also Father Christmas, because Father Christmas isn't real. Everyone, regardless of background, learns this truth at some point. Childre n never truly grow up in the eyes of their parents, but for many adult children n of African, Caribbean and Asian immigrants, this is less a figure of speech and more a lifestyle. At any age, attempts at correcting our parents can be in terpreted as akin to a declaration of war. Respecting your elders is of param ount importance, and respecting tends to mean “agreeing with at all time. How right you are is dependent on how old you are, a game rigged so that even when you hit adulthood, your parents still win, because they are still older than you. It leaves many of us perpetually suspended in eternal infancy by the dungaree straps.\n It’s a landmark moment in anyone’s life, that irreversible realisation that your parents don’t know everything. Watching your dad fumble a maths question whilst helping you with your Year 7 homework is a bombshell akin to learning that he is also Father Christmas, because Father Christmas isn't real. Everyone, regardless of background, learns this truth at some point. Childre n never truly grow up in the eyes of their parents, but for many adult children n of African, Caribbean and Asian immigrants, this is less a figure of speech and more a lifestyle. At any age, attempts at correcting our parents can be in terpreted as akin to a declaration of war. Respecting your elders is of param ount importance, and respecting tends to mean “agreeing with at all time. How right you are is dependent on how old you are, a game rigged so that even when you hit adulthood, your parents still win, because they are still older than you. It leaves many of us perpetually suspended in eternal infancy by the dungaree straps.",
+        // isProtrait: false,
+        isProtrait: true,
+        hasImages: true,
+        images: ["https://images.unsplash.com/photo-1483985988355-763728e1935b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80", "https://images.unsplash.com/photo-1483985988355-763728e1935b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80", "https://images.unsplash.com/photo-1483985988355-763728e1935b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80", "https://images.unsplash.com/photo-1483985988355-763728e1935b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80"]
+      },
+      recommendations: [{
+        image: "https://images.unsplash.com/photo-1483985988355-763728e1935b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80",
+        title: "It’s a landmark moment in anyone’s life"
+      }, {
+        image: "https://images.unsplash.com/photo-1483985988355-763728e1935b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80",
+        title: "It’s a landmark moment in anyone’s life"
+      }, {
+        image: "https://images.unsplash.com/photo-1483985988355-763728e1935b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80",
+        title: "It’s a landmark moment in anyone’s life"
+      }, {
+        image: "https://images.unsplash.com/photo-1483985988355-763728e1935b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80",
+        title: "It’s a landmark moment in anyone’s life"
+      }]
+    };
+  }
 });
 
 /***/ }),
@@ -40885,8 +41121,14 @@ var staticRenderFns = [
         ]),
         _vm._v(" "),
         _c("h3", { staticClass: "mt-2" }, [
-          _vm._v(
-            "\n      Alicia Keys and Her Perfect Skin are Launching a Beauty Collab with\n      E.L.F\n    "
+          _c(
+            "a",
+            { staticClass: "aura-post-title", attrs: { href: "/post" } },
+            [
+              _vm._v(
+                "\n        Alicia Keys and Her Perfect Skin are Launching a Beauty Collab with\n        E.L.F\n      "
+              )
+            ]
           )
         ]),
         _vm._v(" "),
@@ -40945,8 +41187,17 @@ var staticRenderFns = [
                 ]),
                 _vm._v(" "),
                 _c("h4", { staticClass: "mt-4" }, [
-                  _vm._v(
-                    "\n            Alicia Keys and Her Perfect Skin are Launching a Beauty Collab\n            with E.L.F\n          "
+                  _c(
+                    "a",
+                    {
+                      staticClass: "aura-post-title",
+                      attrs: { href: "/post" }
+                    },
+                    [
+                      _vm._v(
+                        "\n              Alicia Keys and Her Perfect Skin are Launching a Beauty Collab\n              with E.L.F\n            "
+                      )
+                    ]
                   )
                 ]),
                 _vm._v(" "),
@@ -40999,8 +41250,17 @@ var staticRenderFns = [
                 ]),
                 _vm._v(" "),
                 _c("h4", { staticClass: "mt-4" }, [
-                  _vm._v(
-                    "\n            Alicia Keys and Her Perfect Skin are Launching a Beauty Collab\n            with E.L.F\n          "
+                  _c(
+                    "a",
+                    {
+                      staticClass: "aura-post-title",
+                      attrs: { href: "/post" }
+                    },
+                    [
+                      _vm._v(
+                        "\n              Alicia Keys and Her Perfect Skin are Launching a Beauty Collab\n              with E.L.F\n            "
+                      )
+                    ]
                   )
                 ]),
                 _vm._v(" "),
@@ -41053,8 +41313,17 @@ var staticRenderFns = [
                 ]),
                 _vm._v(" "),
                 _c("h4", { staticClass: "mt-4" }, [
-                  _vm._v(
-                    "\n            Alicia Keys and Her Perfect Skin are Launching a Beauty Collab\n            with E.L.F\n          "
+                  _c(
+                    "a",
+                    {
+                      staticClass: "aura-post-title",
+                      attrs: { href: "/post" }
+                    },
+                    [
+                      _vm._v(
+                        "\n              Alicia Keys and Her Perfect Skin are Launching a Beauty Collab\n              with E.L.F\n            "
+                      )
+                    ]
                   )
                 ]),
                 _vm._v(" "),
@@ -41107,8 +41376,17 @@ var staticRenderFns = [
                 ]),
                 _vm._v(" "),
                 _c("h4", { staticClass: "mt-4" }, [
-                  _vm._v(
-                    "\n            Alicia Keys and Her Perfect Skin are Launching a Beauty Collab\n            with E.L.F\n          "
+                  _c(
+                    "a",
+                    {
+                      staticClass: "aura-post-title",
+                      attrs: { href: "/post" }
+                    },
+                    [
+                      _vm._v(
+                        "\n              Alicia Keys and Her Perfect Skin are Launching a Beauty Collab\n              with E.L.F\n            "
+                      )
+                    ]
                   )
                 ]),
                 _vm._v(" "),
@@ -41161,8 +41439,17 @@ var staticRenderFns = [
                 ]),
                 _vm._v(" "),
                 _c("h4", { staticClass: "mt-4" }, [
-                  _vm._v(
-                    "\n            Alicia Keys and Her Perfect Skin are Launching a Beauty Collab\n            with E.L.F\n          "
+                  _c(
+                    "a",
+                    {
+                      staticClass: "aura-post-title",
+                      attrs: { href: "/post" }
+                    },
+                    [
+                      _vm._v(
+                        "\n              Alicia Keys and Her Perfect Skin are Launching a Beauty Collab\n              with E.L.F\n            "
+                      )
+                    ]
                   )
                 ]),
                 _vm._v(" "),
@@ -41215,8 +41502,17 @@ var staticRenderFns = [
                 ]),
                 _vm._v(" "),
                 _c("h4", { staticClass: "mt-4" }, [
-                  _vm._v(
-                    "\n            Alicia Keys and Her Perfect Skin are Launching a Beauty Collab\n            with E.L.F\n          "
+                  _c(
+                    "a",
+                    {
+                      staticClass: "aura-post-title",
+                      attrs: { href: "/post" }
+                    },
+                    [
+                      _vm._v(
+                        "\n              Alicia Keys and Her Perfect Skin are Launching a Beauty Collab\n              with E.L.F\n            "
+                      )
+                    ]
                   )
                 ]),
                 _vm._v(" "),
@@ -41269,8 +41565,17 @@ var staticRenderFns = [
                 ]),
                 _vm._v(" "),
                 _c("h4", { staticClass: "mt-4" }, [
-                  _vm._v(
-                    "\n            Alicia Keys and Her Perfect Skin are Launching a Beauty Collab\n            with E.L.F\n          "
+                  _c(
+                    "a",
+                    {
+                      staticClass: "aura-post-title",
+                      attrs: { href: "/post" }
+                    },
+                    [
+                      _vm._v(
+                        "\n              Alicia Keys and Her Perfect Skin are Launching a Beauty Collab\n              with E.L.F\n            "
+                      )
+                    ]
                   )
                 ]),
                 _vm._v(" "),
@@ -41323,8 +41628,80 @@ var staticRenderFns = [
                 ]),
                 _vm._v(" "),
                 _c("h4", { staticClass: "mt-4" }, [
+                  _c(
+                    "a",
+                    {
+                      staticClass: "aura-post-title",
+                      attrs: { href: "/post" }
+                    },
+                    [
+                      _vm._v(
+                        "\n              Alicia Keys and Her Perfect Skin are Launching a Beauty Collab\n              with E.L.F\n            "
+                      )
+                    ]
+                  )
+                ]),
+                _vm._v(" "),
+                _c("p", { staticClass: "mt-3" }, [
                   _vm._v(
-                    "\n            Alicia Keys and Her Perfect Skin are Launching a Beauty Collab\n            with E.L.F\n          "
+                    "\n            Lorem ipsum dolor sit, amet consectetur adipisicing elit. In,\n            recusandae hic voluptatum quia ut nostrum ex quasi. Tempora\n            voluptatum sapiente fugiat at ullam ipsam ut nihil aperiam eaque.\n            Eos, distinctio?\n          "
+                  )
+                ]),
+                _vm._v(" "),
+                _c("span", [
+                  _c("i", { staticClass: "fa fa-user" }),
+                  _vm._v(" ARIANA YAPTANGCO ")
+                ])
+              ])
+            ]
+          )
+        ])
+      ]),
+      _vm._v(" "),
+      _c("div", { staticClass: "container mt-5" }, [
+        _c("div", { staticClass: "row" }, [
+          _c(
+            "div",
+            {
+              staticClass:
+                "col-lg-6 col-md-6 col-sm-12 col-12 order-first order-lg-last"
+            },
+            [
+              _c("img", {
+                staticClass: "w-100 img-fluid",
+                attrs: {
+                  src:
+                    "https://images.unsplash.com/photo-1483985988355-763728e1935b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80",
+                  alt: "Image"
+                }
+              })
+            ]
+          ),
+          _vm._v(" "),
+          _c(
+            "div",
+            {
+              staticClass:
+                "mt-0 col-lg-6 col-md-6 col-sm-12 col-12 order-last order-lg-first"
+            },
+            [
+              _c("div", { staticClass: "border-top border-dark pt-2" }, [
+                _c("span", { staticClass: "news-date font-weight-bold" }, [
+                  _vm._v("AUG 6, 2020")
+                ]),
+                _vm._v(" "),
+                _c("h4", { staticClass: "mt-4" }, [
+                  _c(
+                    "a",
+                    {
+                      staticClass: "aura-post-title",
+                      attrs: { href: "/post" }
+                    },
+                    [
+                      _vm._v(
+                        "\n              Alicia Keys and Her Perfect Skin are Launching a Beauty Collab\n              with E.L.F\n            "
+                      )
+                    ]
                   )
                 ]),
                 _vm._v(" "),
@@ -41363,6 +41740,293 @@ var staticRenderFns = [
         ])
       ])
     ])
+  }
+]
+render._withStripped = true
+
+
+
+/***/ }),
+
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/pages/Post.vue?vue&type=template&id=1f9218ae&":
+/*!**************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/pages/Post.vue?vue&type=template&id=1f9218ae& ***!
+  \**************************************************************************************************************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "render", function() { return render; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return staticRenderFns; });
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c("div", [
+    _vm.post.isProtrait
+      ? _c("div", { staticClass: "container rounded-0" }, [
+          _c(
+            "div",
+            {
+              staticClass:
+                "row justify-content-between justify-content-sm-center align-items-center"
+            },
+            [
+              _c("div", { staticClass: "col-12 col-lg-6 col-md-6 col-sm-12" }, [
+                _c("img", {
+                  staticClass: "col-12 p-0 img-fluid",
+                  attrs: { src: _vm.post.image, alt: "Article Cover" }
+                })
+              ]),
+              _vm._v(" "),
+              _c(
+                "div",
+                {
+                  staticClass:
+                    "col-12 col-lg-6 col-md-6 col-sm-12 text-center p-lg-4 p-md-3 p-2"
+                },
+                [
+                  _c("h1", [_vm._v(_vm._s(_vm.post.title))]),
+                  _vm._v(" "),
+                  _c("hr", { staticClass: "story-card-hr" }),
+                  _vm._v(" "),
+                  _c("i", { staticClass: "mt-4 fa fa-user" }),
+                  _vm._v(" " + _vm._s(_vm.post.author.name) + "\n        "),
+                  _c("p", { staticClass: "mt-4 post-intro" }, [
+                    _vm._v(_vm._s(_vm.post.intro))
+                  ]),
+                  _vm._v(" "),
+                  _vm._m(0)
+                ]
+              )
+            ]
+          )
+        ])
+      : _c("div", { staticClass: "container-fluid p-0" }, [
+          _c("div", { staticClass: "card bg-dark text-white rounded-0" }, [
+            _c("img", {
+              staticClass: "card-img",
+              attrs: {
+                src: _vm.post.image,
+                height: "550",
+                alt: "Article Cover"
+              }
+            }),
+            _vm._v(" "),
+            _c(
+              "div",
+              {
+                staticClass: "card-img-overlay col-lg-8 col-sm-12 col-12",
+                staticStyle: { top: "45%" }
+              },
+              [
+                _c("h1", { staticClass: "card-title" }, [
+                  _vm._v(_vm._s(_vm.post.title))
+                ]),
+                _vm._v(" "),
+                _c("i", { staticClass: "mt-4 fa fa-user" }),
+                _vm._v(" " + _vm._s(_vm.post.author.name) + "\n      ")
+              ]
+            )
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "container text-center" }, [
+            _c("p", { staticClass: "mt-4 post-intro" }, [
+              _vm._v(_vm._s(_vm.post.intro))
+            ]),
+            _vm._v(" "),
+            _vm._m(1)
+          ])
+        ]),
+    _vm._v(" "),
+    _c("div", { staticClass: "container sp-mt-7" }, [
+      _c("p", { domProps: { innerHTML: _vm._s(_vm.post.body) } })
+    ]),
+    _vm._v(" "),
+    _vm._m(2),
+    _vm._v(" "),
+    _vm.post.hasImages
+      ? _c("div", { staticClass: "container sp-mt-7" }, [
+          _c(
+            "div",
+            { staticClass: "row justify-content-between" },
+            _vm._l(_vm.post.images, function(post, index) {
+              return _c(
+                "div",
+                {
+                  key: post,
+                  staticClass: "col-lg-3 col-md-5 col-sm-12 col-12 mt-4 p-3"
+                },
+                [
+                  _c("img", {
+                    staticClass: "col-12 p-0 img-fluid",
+                    attrs: { src: post, alt: "News Cover" }
+                  }),
+                  _vm._v(" "),
+                  _c("span", [
+                    _vm._v(_vm._s(++index) + "/" + _vm._s(_vm.imagesLenght))
+                  ])
+                ]
+              )
+            }),
+            0
+          )
+        ])
+      : _vm._e(),
+    _vm._v(" "),
+    _c("div", { staticClass: "container sp-mt-8" }, [
+      _vm._m(3),
+      _vm._v(" "),
+      _c(
+        "div",
+        {
+          staticClass:
+            "mt-2 row justify-content-between justify-content-md-center"
+        },
+        _vm._l(_vm.recommendations, function(r) {
+          return _c(
+            "div",
+            {
+              key: r.title,
+              staticClass: "col-lg-6 col-md-8col-sm-12 col-12 mt-4"
+            },
+            [
+              _c("div", { staticClass: "card" }, [
+                _c("div", { staticClass: "row no-gutters" }, [
+                  _c("div", { staticClass: "col-md-5 p-0" }, [
+                    _c("img", {
+                      staticClass: "card-img rounded-0",
+                      attrs: { src: r.image, alt: "Recommendation" }
+                    })
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "col-md-7" }, [
+                    _c("div", { staticClass: "card-body" }, [
+                      _c("h5", { staticClass: "card-title" }, [
+                        _vm._v(_vm._s(r.title))
+                      ])
+                    ])
+                  ])
+                ])
+              ])
+            ]
+          )
+        }),
+        0
+      )
+    ])
+  ])
+}
+var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "mt-4 row p-3 justify-content-center" }, [
+      _c(
+        "a",
+        { staticClass: "aura-post-social-icon mx-2", attrs: { href: "#" } },
+        [
+          _c("i", {
+            staticClass: "fa fa-facebook p-2",
+            attrs: { "aria-hidden": "true" }
+          })
+        ]
+      ),
+      _vm._v(" "),
+      _c(
+        "a",
+        { staticClass: "aura-post-social-icon mx-2", attrs: { href: "#" } },
+        [
+          _c("i", {
+            staticClass: "fa fa-twitter p-2",
+            attrs: { "aria-hidden": "true" }
+          })
+        ]
+      ),
+      _vm._v(" "),
+      _c(
+        "a",
+        { staticClass: "aura-post-social-icon mx-2", attrs: { href: "#" } },
+        [
+          _c("i", {
+            staticClass: "fa fa-instagram p-2",
+            attrs: { "aria-hidden": "true" }
+          })
+        ]
+      )
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "mt-4 row p-3 justify-content-center" }, [
+      _c(
+        "a",
+        { staticClass: "aura-post-social-icon mx-2", attrs: { href: "#" } },
+        [
+          _c("i", {
+            staticClass: "fa fa-facebook p-2",
+            attrs: { "aria-hidden": "true" }
+          })
+        ]
+      ),
+      _vm._v(" "),
+      _c(
+        "a",
+        { staticClass: "aura-post-social-icon mx-2", attrs: { href: "#" } },
+        [
+          _c("i", {
+            staticClass: "fa fa-twitter p-2",
+            attrs: { "aria-hidden": "true" }
+          })
+        ]
+      ),
+      _vm._v(" "),
+      _c(
+        "a",
+        { staticClass: "aura-post-social-icon mx-2", attrs: { href: "#" } },
+        [
+          _c("i", {
+            staticClass: "fa fa-instagram p-2",
+            attrs: { "aria-hidden": "true" }
+          })
+        ]
+      )
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c(
+      "div",
+      { staticClass: "home-ads-container mt-5 w-50 mx-auto h-100" },
+      [
+        _c("div", { staticClass: "container text-center" }, [
+          _c("p", [_vm._v("ADS BANNER")])
+        ])
+      ]
+    )
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c(
+      "h5",
+      { staticClass: "news headline-font font-weight-bolder ml-0" },
+      [
+        _c(
+          "span",
+          { staticClass: "text-aura", staticStyle: { "font-size": "30px" } },
+          [_vm._v("+")]
+        ),
+        _vm._v(" AURA RECOMMENDS\n    ")
+      ]
+    )
   }
 ]
 render._withStripped = true
@@ -57093,6 +57757,75 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./resources/js/pages/Post.vue":
+/*!*************************************!*\
+  !*** ./resources/js/pages/Post.vue ***!
+  \*************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _Post_vue_vue_type_template_id_1f9218ae___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Post.vue?vue&type=template&id=1f9218ae& */ "./resources/js/pages/Post.vue?vue&type=template&id=1f9218ae&");
+/* harmony import */ var _Post_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Post.vue?vue&type=script&lang=js& */ "./resources/js/pages/Post.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport *//* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
+
+
+
+
+/* normalize component */
+
+var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
+  _Post_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _Post_vue_vue_type_template_id_1f9218ae___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _Post_vue_vue_type_template_id_1f9218ae___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  false,
+  null,
+  null,
+  null
+  
+)
+
+/* hot reload */
+if (false) { var api; }
+component.options.__file = "resources/js/pages/Post.vue"
+/* harmony default export */ __webpack_exports__["default"] = (component.exports);
+
+/***/ }),
+
+/***/ "./resources/js/pages/Post.vue?vue&type=script&lang=js&":
+/*!**************************************************************!*\
+  !*** ./resources/js/pages/Post.vue?vue&type=script&lang=js& ***!
+  \**************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_Post_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/babel-loader/lib??ref--4-0!../../../node_modules/vue-loader/lib??vue-loader-options!./Post.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/pages/Post.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_Post_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+
+/***/ }),
+
+/***/ "./resources/js/pages/Post.vue?vue&type=template&id=1f9218ae&":
+/*!********************************************************************!*\
+  !*** ./resources/js/pages/Post.vue?vue&type=template&id=1f9218ae& ***!
+  \********************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Post_vue_vue_type_template_id_1f9218ae___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../node_modules/vue-loader/lib??vue-loader-options!./Post.vue?vue&type=template&id=1f9218ae& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/pages/Post.vue?vue&type=template&id=1f9218ae&");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Post_vue_vue_type_template_id_1f9218ae___WEBPACK_IMPORTED_MODULE_0__["render"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Post_vue_vue_type_template_id_1f9218ae___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
+
+
+
+/***/ }),
+
 /***/ "./resources/js/routes.js":
 /*!********************************!*\
   !*** ./resources/js/routes.js ***!
@@ -57106,7 +57839,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _pages_Home_vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./pages/Home.vue */ "./resources/js/pages/Home.vue");
 /* harmony import */ var _pages_News_vue__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./pages/News.vue */ "./resources/js/pages/News.vue");
 /* harmony import */ var _pages_Magazine_vue__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./pages/Magazine.vue */ "./resources/js/pages/Magazine.vue");
+/* harmony import */ var _pages_Post_vue__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./pages/Post.vue */ "./resources/js/pages/Post.vue");
 //Route files for  Vue App
+
 
 
 
@@ -57134,6 +57869,10 @@ var routes = [{
   name: 'arts-and-culture',
   path: '/category/arts-and-culture',
   component: _pages_News_vue__WEBPACK_IMPORTED_MODULE_1__["default"]
+}, {
+  name: 'psot',
+  path: '/post',
+  component: _pages_Post_vue__WEBPACK_IMPORTED_MODULE_3__["default"]
 }, {
   name: 'magazine',
   path: '/magazine',
