@@ -11,7 +11,7 @@ import App from './App.vue'
 import VueRouter from 'vue-router'
 import VueAxios from 'vue-axios'
 import axios from 'axios'
-import { routes } from './routes'
+import {routes} from './routes'
 import NProgress from 'nprogress'
 
 /**
@@ -24,16 +24,16 @@ import NProgress from 'nprogress'
 
 import Navbar from './components/Navbar'
 
-Vue.component('navbar', Navbar)
+Vue.component('navbar',Navbar)
 
 // const files = require.context('./', true, /\.vue$/i)
 // files.keys().map(key => Vue.component(key.split('/').pop().split('.')[0], files(key).default))
 
-NProgress.configure({ easing: 'ease', speed: 500, showSpinner: false })
+NProgress.configure({easing: 'ease',speed: 500,showSpinner: true})
 
 Vue.use(VueRouter)
 Vue.use(NProgress)
-Vue.use(VueAxios, axios)
+Vue.use(VueAxios,axios)
 
 /**
  * Next, we will create a fresh Vue application instance and attach it to
@@ -42,26 +42,34 @@ Vue.use(VueAxios, axios)
  */
 
 const router = new VueRouter({
-  mode: 'history',
-  routes: routes,
+    mode: 'history',
+    routes: routes,
+    meta: {
+        showProgressBar: true
+    }
 })
 
-router.beforeResolve((to, from, next) => {
-  // If this isn't an initial page load.
-  if (to.name) {
-    // Start the route progress bar.
-    NProgress.start()
-  }
-  next()
+router.beforeResolve((to,from,next) =>
+{
+    // If this isn't an initial page load.
+    if (to.name) {
+        // Start the route progress bar.
+        NProgress.start()
+    }
+    next()
 })
 
-router.afterEach((to, from) => {
-  // Complete the animation of the route progress bar.
-  NProgress.done()
+router.afterEach((to,from) =>
+{
+    // Complete the animation of the route progress bar.
+    if (to.name) {
+
+        NProgress.done()
+    }
 })
 
 const app = new Vue({
-  el: '#app',
-  router: router,
-  render: (h) => h(App),
+    el: '#app',
+    router: router,
+    render: (h) => h(App),
 })
