@@ -83,6 +83,34 @@
     font-size: 20px;
 }
 
+.aura-post-title {
+    text-decoration: none !important;
+    color: rgba(0, 0, 0, 0.9);
+    transition: .4s all;
+    transition-timing-function: ease-in-out;
+    transition-property: 'color';
+}
+
+.aura-post-title:hover {
+    text-decoration: none !important;
+    color: rgba(0, 0, 0, 0.6);
+}
+
+.aura-post-social-icon i {
+    border: 1px solid #000;
+    border-radius: 50%;
+    font-size: 20px;
+}
+
+.aura-post-social-icon {
+    text-decoration: none;
+    color: #000;
+}
+
+.post-intro {
+    font-size: .8em;
+}
+
 // Mag
 .bg-mag {
     background: #d8d5d5;

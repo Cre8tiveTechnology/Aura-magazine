@@ -2,6 +2,7 @@
 import Home from './pages/Home.vue'
 import News from './pages/News.vue'
 import Magazine from './pages/Magazine.vue'
+import Post from './pages/Post.vue'
 
 export const routes = [
   {
@@ -38,6 +39,12 @@ export const routes = [
     name: 'arts-and-culture',
     path: '/category/arts-and-culture',
     component: News,
+  },
+
+  {
+    name: 'psot',
+    path: '/post',
+    component: Post,
   },
 
   {
