@@ -3,12 +3,19 @@ import Home from './pages/Home.vue'
 import News from './pages/News.vue'
 import Magazine from './pages/Magazine.vue'
 import Post from './pages/Post.vue'
+import Shop from './pages/Shop.vue'
 
 export const routes = [
   {
     name: 'home',
     path: '/',
     component: Home,
+  },
+
+  {
+    name: 'shop',
+    path: '/shop',
+    component: Shop,
   },
 
   {

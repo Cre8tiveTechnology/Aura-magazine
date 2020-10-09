@@ -3139,7 +3139,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: "Post",
   computed: {
@@ -3175,6 +3174,339 @@ __webpack_require__.r(__webpack_exports__);
         image: "https://images.unsplash.com/photo-1483985988355-763728e1935b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80",
         title: "It’s a landmark moment in anyone’s life"
       }]
+    };
+  }
+});
+
+/***/ }),
+
+/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/pages/Shop.vue?vue&type=script&lang=js&":
+/*!**********************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/pages/Shop.vue?vue&type=script&lang=js& ***!
+  \**********************************************************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+/* harmony default export */ __webpack_exports__["default"] = ({
+  name: "Shop",
+  methods: {
+    addToCart: function addToCart() {
+      alert("Item Added to Cart");
+    }
+  },
+  data: function data() {
+    return {
+      products: [{
+        name: "Product Name",
+        image: "https://images.unsplash.com/photo-1483985988355-763728e1935b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80",
+        caption: "It’s a landmark moment in anyone’s life",
+        currency: "₦",
+        price: "200,000.00"
+      }, {
+        name: "Product Name",
+        image: "https://images.unsplash.com/photo-1483985988355-763728e1935b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80",
+        caption: "It’s a landmark moment in anyone’s life",
+        currency: "₦",
+        price: "200,000.00"
+      }, {
+        name: "Product Name",
+        image: "https://images.unsplash.com/photo-1483985988355-763728e1935b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80",
+        caption: "It’s a landmark moment in anyone’s life",
+        currency: "₦",
+        price: "200,000.00"
+      }, {
+        name: "Product Name",
+        image: "https://images.unsplash.com/photo-1483985988355-763728e1935b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80",
+        caption: "It’s a landmark moment in anyone’s life",
+        currency: "₦",
+        price: "200,000.00"
+      }, {
+        name: "Product Name",
+        image: "https://images.unsplash.com/photo-1483985988355-763728e1935b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80",
+        caption: "It’s a landmark moment in anyone’s life",
+        currency: "₦",
+        price: "200,000.00"
+      }, {
+        name: "Product Name",
+        image: "https://images.unsplash.com/photo-1483985988355-763728e1935b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80",
+        caption: "It’s a landmark moment in anyone’s life",
+        currency: "₦",
+        price: "200,000.00"
+      }, {
+        name: "Product Name",
+        image: "https://images.unsplash.com/photo-1483985988355-763728e1935b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80",
+        caption: "It’s a landmark moment in anyone’s life",
+        currency: "₦",
+        price: "200,000.00"
+      }, {
+        name: "Product Name",
+        image: "https://images.unsplash.com/photo-1483985988355-763728e1935b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80",
+        caption: "It’s a landmark moment in anyone’s life",
+        currency: "₦",
+        price: "200,000.00"
+      }, {
+        name: "Product Name",
+        image: "https://images.unsplash.com/photo-1483985988355-763728e1935b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80",
+        caption: "It’s a landmark moment in anyone’s life",
+        currency: "₦",
+        price: "200,000.00"
+      }, {
+        name: "Product Name",
+        image: "https://images.unsplash.com/photo-1483985988355-763728e1935b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80",
+        caption: "It’s a landmark moment in anyone’s life",
+        currency: "₦",
+        price: "200,000.00"
+      }, {
+        name: "Product Name",
+        image: "https://images.unsplash.com/photo-1483985988355-763728e1935b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80",
+        caption: "It’s a landmark moment in anyone’s life",
+        currency: "₦",
+        price: "200,000.00"
+      }, {
+        name: "Product Name",
+        image: "https://images.unsplash.com/photo-1483985988355-763728e1935b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80",
+        caption: "It’s a landmark moment in anyone’s life",
+        currency: "₦",
+        price: "200,000.00"
+      }, {
+        name: "Product Name",
+        image: "https://images.unsplash.com/photo-1483985988355-763728e1935b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80",
+        caption: "It’s a landmark moment in anyone’s life",
+        currency: "₦",
+        price: "200,000.00"
+      }, {
+        name: "Product Name",
+        image: "https://images.unsplash.com/photo-1483985988355-763728e1935b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80",
+        caption: "It’s a landmark moment in anyone’s life",
+        currency: "₦",
+        price: "200,000.00"
+      }, {
+        name: "Product Name",
+        image: "https://images.unsplash.com/photo-1483985988355-763728e1935b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80",
+        caption: "It’s a landmark moment in anyone’s life",
+        currency: "₦",
+        price: "200,000.00"
+      }, {
+        name: "Product Name",
+        image: "https://images.unsplash.com/photo-1483985988355-763728e1935b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80",
+        caption: "It’s a landmark moment in anyone’s life",
+        currency: "₦",
+        price: "200,000.00"
+      }, {
+        name: "Product Name",
+        image: "https://images.unsplash.com/photo-1483985988355-763728e1935b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80",
+        caption: "It’s a landmark moment in anyone’s life",
+        currency: "₦",
+        price: "200,000.00"
+      }, {
+        name: "Product Name",
+        image: "https://images.unsplash.com/photo-1483985988355-763728e1935b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80",
+        caption: "It’s a landmark moment in anyone’s life",
+        currency: "₦",
+        price: "200,000.00"
+      }, {
+        name: "Product Name",
+        image: "https://images.unsplash.com/photo-1483985988355-763728e1935b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80",
+        caption: "It’s a landmark moment in anyone’s life",
+        currency: "₦",
+        price: "200,000.00"
+      }, {
+        name: "Product Name",
+        image: "https://images.unsplash.com/photo-1483985988355-763728e1935b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80",
+        caption: "It’s a landmark moment in anyone’s life",
+        currency: "₦",
+        price: "200,000.00"
+      }],
+      categories: ["Bags", "Fashion", "Wears", "Beauty", "Accesories", "Electronics", "Components", "Magazine"]
     };
   }
 });
@@ -42035,6 +42367,337 @@ render._withStripped = true
 
 /***/ }),
 
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/pages/Shop.vue?vue&type=template&id=a2f9ca02&":
+/*!**************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/pages/Shop.vue?vue&type=template&id=a2f9ca02& ***!
+  \**************************************************************************************************************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "render", function() { return render; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return staticRenderFns; });
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c("div", [
+    _vm._m(0),
+    _vm._v(" "),
+    _c("div", { staticClass: "container p-0" }, [
+      _c("div", { staticClass: "row container-fluid m-0 p-0" }, [
+        _c("div", { staticClass: "col-md-3 order-last p-0" }, [
+          _c("div", { staticClass: "card rounded-0" }, [
+            _vm._m(1),
+            _vm._v(" "),
+            _c(
+              "ul",
+              { staticClass: "list-group list-group-flush category" },
+              _vm._l(_vm.categories, function(c) {
+                return _c(
+                  "li",
+                  { key: c, staticClass: "list-group-item category-list" },
+                  [_c("a", { attrs: { href: "#" } }, [_vm._v(_vm._s(c))])]
+                )
+              }),
+              0
+            )
+          ])
+        ]),
+        _vm._v(" "),
+        _vm._m(2)
+      ])
+    ]),
+    _vm._v(" "),
+    _vm._m(3),
+    _vm._v(" "),
+    _c("div", { staticClass: "container sp-mt-5" }, [
+      _c(
+        "div",
+        { staticClass: "row justify-content-between" },
+        _vm._l(_vm.products, function(p) {
+          return _c(
+            "div",
+            {
+              key: p.name,
+              staticClass: "col-lg-3 col-md-4 col-sm-12 col-12 mt-5"
+            },
+            [
+              _c("div", { staticClass: "card shadow" }, [
+                _c("img", {
+                  staticClass: "card-img-top",
+                  attrs: { src: p.image, alt: "Product Image" }
+                }),
+                _vm._v(" "),
+                _c("div", { staticClass: "card-body pl-3 py-4 p-0" }, [
+                  _c("h5", { staticClass: "card-title" }, [
+                    _vm._v(_vm._s(p.name))
+                  ]),
+                  _vm._v(" "),
+                  _c("p", { staticClass: "card-text" }, [
+                    _vm._v(_vm._s(p.caption))
+                  ]),
+                  _vm._v(" "),
+                  _c("p", { staticClass: "card-text" }, [
+                    _vm._v(_vm._s(p.currency) + " " + _vm._s(p.price))
+                  ]),
+                  _vm._v(" "),
+                  _c(
+                    "a",
+                    {
+                      staticClass: "btn btn-sm btn-outline-aura",
+                      attrs: { href: "#" },
+                      on: { click: _vm.addToCart }
+                    },
+                    [_vm._v("Add to Cart")]
+                  )
+                ])
+              ])
+            ]
+          )
+        }),
+        0
+      )
+    ])
+  ])
+}
+var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "container my-4" }, [
+      _c(
+        "div",
+        { staticClass: "row justify-content-between align-items-center" },
+        [
+          _c(
+            "div",
+            {
+              staticClass:
+                "d-md-block d-lg-block d-none col-lg-3 col-md-3 col-sm-12 col-12"
+            },
+            [_c("h2", [_vm._v("AURA SHOP")])]
+          ),
+          _vm._v(" "),
+          _c("div", { staticClass: "col-lg-6 col-md-6 col-sm-10 col-10" }, [
+            _c("div", { staticClass: "content" }, [
+              _c("div", { staticClass: "search" }, [
+                _c("input", {
+                  staticClass: "search__input",
+                  attrs: {
+                    type: "text",
+                    "aria-label": "search",
+                    placeholder: "Search for an Item"
+                  }
+                }),
+                _vm._v(" "),
+                _c(
+                  "button",
+                  {
+                    staticClass: "search__btn",
+                    attrs: { "aria-label": "submit search" }
+                  },
+                  [_c("i", { staticClass: "fa fa-search" })]
+                )
+              ])
+            ])
+          ]),
+          _vm._v(" "),
+          _c(
+            "div",
+            { staticClass: "text-right col-lg-3 col-md-3 col-sm-2 col-2" },
+            [
+              _c("a", { staticClass: "shop-cart", attrs: { href: "#" } }, [
+                _c("i", {
+                  staticClass: "fa fa-cart-plus",
+                  attrs: { "aria-hidden": "true" }
+                }),
+                _vm._v(" Cart\n        ")
+              ])
+            ]
+          )
+        ]
+      )
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "card-header" }, [
+      _c("h4", { staticClass: "aura-category" }, [_vm._v("AURA CATEGORIES")])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "col-md-9 p-0" }, [
+      _c(
+        "div",
+        {
+          staticClass: "carousel slide",
+          attrs: { id: "carouselExampleCaptions", "data-ride": "carousel" }
+        },
+        [
+          _c("ol", { staticClass: "carousel-indicators" }, [
+            _c("li", {
+              staticClass: "active",
+              attrs: {
+                "data-target": "#carouselExampleCaptions",
+                "data-slide-to": "0"
+              }
+            }),
+            _vm._v(" "),
+            _c("li", {
+              attrs: {
+                "data-target": "#carouselExampleCaptions",
+                "data-slide-to": "1"
+              }
+            }),
+            _vm._v(" "),
+            _c("li", {
+              attrs: {
+                "data-target": "#carouselExampleCaptions",
+                "data-slide-to": "2"
+              }
+            })
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "carousel-inner" }, [
+            _c("div", { staticClass: "carousel-item active" }, [
+              _c("img", {
+                staticClass: "d-block w-100",
+                attrs: {
+                  src:
+                    "https://images.unsplash.com/photo-1483985988355-763728e1935b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80",
+                  height: "450",
+                  alt: "WEARS"
+                }
+              }),
+              _vm._v(" "),
+              _c("div", { staticClass: "carousel-caption d-none d-md-block" }, [
+                _c("h5", [_vm._v("First slide label")]),
+                _vm._v(" "),
+                _c("p", [
+                  _vm._v(
+                    "\n                  Nulla vitae elit libero, a pharetra augue mollis interdum.\n                "
+                  )
+                ])
+              ])
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "carousel-item" }, [
+              _c("img", {
+                staticClass: "d-block w-100",
+                attrs: {
+                  src:
+                    "https://images.unsplash.com/photo-1483985988355-763728e1935b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80",
+                  height: "450",
+                  alt: "WEARS"
+                }
+              }),
+              _vm._v(" "),
+              _c("div", { staticClass: "carousel-caption d-none d-md-block" }, [
+                _c("h5", [_vm._v("Second slide label")]),
+                _vm._v(" "),
+                _c("p", [
+                  _vm._v(
+                    "\n                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.\n                "
+                  )
+                ])
+              ])
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "carousel-item" }, [
+              _c("img", {
+                staticClass: "d-block w-100",
+                attrs: {
+                  src:
+                    "https://images.unsplash.com/photo-1483985988355-763728e1935b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80",
+                  height: "450",
+                  alt: "WEARS"
+                }
+              }),
+              _vm._v(" "),
+              _c("div", { staticClass: "carousel-caption d-none d-md-block" }, [
+                _c("h5", [_vm._v("Third slide label")]),
+                _vm._v(" "),
+                _c("p", [
+                  _vm._v(
+                    "\n                  Praesent commodo cursus magna, vel scelerisque nisl\n                  consectetur.\n                "
+                  )
+                ])
+              ])
+            ])
+          ]),
+          _vm._v(" "),
+          _c(
+            "a",
+            {
+              staticClass: "carousel-control-prev",
+              attrs: {
+                href: "#carouselExampleCaptions",
+                role: "button",
+                "data-slide": "prev"
+              }
+            },
+            [
+              _c("span", {
+                staticClass: "carousel-control-prev-icon",
+                attrs: { "aria-hidden": "true" }
+              }),
+              _vm._v(" "),
+              _c("span", { staticClass: "sr-only" }, [_vm._v("Previous")])
+            ]
+          ),
+          _vm._v(" "),
+          _c(
+            "a",
+            {
+              staticClass: "carousel-control-next",
+              attrs: {
+                href: "#carouselExampleCaptions",
+                role: "button",
+                "data-slide": "next"
+              }
+            },
+            [
+              _c("span", {
+                staticClass: "carousel-control-next-icon",
+                attrs: { "aria-hidden": "true" }
+              }),
+              _vm._v(" "),
+              _c("span", { staticClass: "sr-only" }, [_vm._v("Next")])
+            ]
+          )
+        ]
+      )
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c(
+      "div",
+      { staticClass: "home-ads-container mt-5 w-50 mx-auto h-100" },
+      [
+        _c("div", { staticClass: "container text-center" }, [
+          _c("p", [_vm._v("ADS BANNER")])
+        ])
+      ]
+    )
+  }
+]
+render._withStripped = true
+
+
+
+/***/ }),
+
 /***/ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js":
 /*!********************************************************************!*\
   !*** ./node_modules/vue-loader/lib/runtime/componentNormalizer.js ***!
@@ -57826,6 +58489,75 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./resources/js/pages/Shop.vue":
+/*!*************************************!*\
+  !*** ./resources/js/pages/Shop.vue ***!
+  \*************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _Shop_vue_vue_type_template_id_a2f9ca02___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Shop.vue?vue&type=template&id=a2f9ca02& */ "./resources/js/pages/Shop.vue?vue&type=template&id=a2f9ca02&");
+/* harmony import */ var _Shop_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Shop.vue?vue&type=script&lang=js& */ "./resources/js/pages/Shop.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport *//* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
+
+
+
+
+/* normalize component */
+
+var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
+  _Shop_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _Shop_vue_vue_type_template_id_a2f9ca02___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _Shop_vue_vue_type_template_id_a2f9ca02___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  false,
+  null,
+  null,
+  null
+  
+)
+
+/* hot reload */
+if (false) { var api; }
+component.options.__file = "resources/js/pages/Shop.vue"
+/* harmony default export */ __webpack_exports__["default"] = (component.exports);
+
+/***/ }),
+
+/***/ "./resources/js/pages/Shop.vue?vue&type=script&lang=js&":
+/*!**************************************************************!*\
+  !*** ./resources/js/pages/Shop.vue?vue&type=script&lang=js& ***!
+  \**************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_Shop_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/babel-loader/lib??ref--4-0!../../../node_modules/vue-loader/lib??vue-loader-options!./Shop.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/pages/Shop.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_Shop_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+
+/***/ }),
+
+/***/ "./resources/js/pages/Shop.vue?vue&type=template&id=a2f9ca02&":
+/*!********************************************************************!*\
+  !*** ./resources/js/pages/Shop.vue?vue&type=template&id=a2f9ca02& ***!
+  \********************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Shop_vue_vue_type_template_id_a2f9ca02___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../node_modules/vue-loader/lib??vue-loader-options!./Shop.vue?vue&type=template&id=a2f9ca02& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/pages/Shop.vue?vue&type=template&id=a2f9ca02&");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Shop_vue_vue_type_template_id_a2f9ca02___WEBPACK_IMPORTED_MODULE_0__["render"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Shop_vue_vue_type_template_id_a2f9ca02___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
+
+
+
+/***/ }),
+
 /***/ "./resources/js/routes.js":
 /*!********************************!*\
   !*** ./resources/js/routes.js ***!
@@ -57840,7 +58572,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _pages_News_vue__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./pages/News.vue */ "./resources/js/pages/News.vue");
 /* harmony import */ var _pages_Magazine_vue__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./pages/Magazine.vue */ "./resources/js/pages/Magazine.vue");
 /* harmony import */ var _pages_Post_vue__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./pages/Post.vue */ "./resources/js/pages/Post.vue");
+/* harmony import */ var _pages_Shop_vue__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./pages/Shop.vue */ "./resources/js/pages/Shop.vue");
 //Route files for  Vue App
+
 
 
 
@@ -57849,6 +58583,10 @@ var routes = [{
   name: 'home',
   path: '/',
   component: _pages_Home_vue__WEBPACK_IMPORTED_MODULE_0__["default"]
+}, {
+  name: 'shop',
+  path: '/shop',
+  component: _pages_Shop_vue__WEBPACK_IMPORTED_MODULE_4__["default"]
 }, {
   name: 'news',
   path: '/category/news',
