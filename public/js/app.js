@@ -2485,6 +2485,628 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: "Home",
   data: function data() {
@@ -40614,7 +41236,7 @@ var staticRenderFns = [
                 _c("div", { staticClass: "carousel-item" }, [
                   _c("div", { staticClass: "card w-100 border-0" }, [
                     _c("img", {
-                      staticClass: "card-img-top rounded",
+                      staticClass: "card-img-top rounded-0",
                       attrs: {
                         src:
                           "https://images.unsplash.com/photo-1483985988355-763728e1935b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80",
@@ -40660,7 +41282,7 @@ var staticRenderFns = [
                 _c("div", { staticClass: "carousel-item" }, [
                   _c("div", { staticClass: "card w-100 border-0" }, [
                     _c("img", {
-                      staticClass: "card-img-top rounded",
+                      staticClass: "card-img-top rounded-0",
                       attrs: {
                         src:
                           "https://images.unsplash.com/photo-1483985988355-763728e1935b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80",
@@ -40710,37 +41332,38 @@ var staticRenderFns = [
       _c(
         "div",
         {
-          staticClass: "container-fluid p-5",
+          staticClass:
+            "container-fluid p-5 d-none d-md-block d-lg-block d-xl-block",
           staticStyle: { "background-color": "#676465 !important" }
         },
         [
           _c(
+            "h5",
+            {
+              staticClass: "aura-font font-weight-bold mt-4 text-white",
+              staticStyle: { "margin-left": "7.5em" }
+            },
+            [
+              _vm._v("\n      Top Stories\n      "),
+              _c("i", { staticClass: "fa fa-angle-right text-aura" })
+            ]
+          ),
+          _vm._v(" "),
+          _c(
             "div",
             {
-              staticClass:
-                "carousel slide w-75 mx-auto rounded d-none d-md-block d-lg-block d-xl-block",
+              staticClass: "carousel slide w-75 mx-auto rounded-0 border-none",
               attrs: {
-                id: "carouselExampleSlidesOnly",
+                id: "carouselExampleIndicators",
                 "data-ride": "carousel"
               }
             },
             [
-              _c(
-                "h5",
-                {
-                  staticClass: "aura-font font-weight-bold ml-0 mt-4 text-white"
-                },
-                [
-                  _vm._v("\n        Top Stories\n        "),
-                  _c("i", { staticClass: "fa fa-angle-right text-aura" })
-                ]
-              ),
-              _vm._v(" "),
-              _c("div", { staticClass: "carousel-inner" }, [
-                _c("div", { staticClass: "carousel-item active" }, [
+              _c("div", { staticClass: "carousel-inner bg-transparent" }, [
+                _c("div", { staticClass: "carousel-item active rounded" }, [
                   _c("div", { staticClass: "card w-100 border-0" }, [
                     _c("img", {
-                      staticClass: "card-img-top rounded border-0",
+                      staticClass: "card-img-top rounded-0",
                       attrs: {
                         src:
                           "https://images.unsplash.com/photo-1483985988355-763728e1935b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80",
@@ -40752,7 +41375,7 @@ var staticRenderFns = [
                       "div",
                       {
                         staticClass:
-                          "card-body text-white text-center border-0",
+                          "card-body text-white border-right-0 text-center",
                         staticStyle: {
                           "background-color": "#676465 !important"
                         }
@@ -40783,10 +41406,10 @@ var staticRenderFns = [
                   ])
                 ]),
                 _vm._v(" "),
-                _c("div", { staticClass: "carousel-item active" }, [
+                _c("div", { staticClass: "carousel-item" }, [
                   _c("div", { staticClass: "card w-100 border-0" }, [
                     _c("img", {
-                      staticClass: "card-img-top rounded border-0",
+                      staticClass: "card-img-top rounded-0",
                       attrs: {
                         src:
                           "https://images.unsplash.com/photo-1483985988355-763728e1935b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80",
@@ -40798,7 +41421,7 @@ var staticRenderFns = [
                       "div",
                       {
                         staticClass:
-                          "card-body text-white text-center border-0",
+                          "card-body border-0 text-white text-center",
                         staticStyle: {
                           "background-color": "#676465 !important"
                         }
@@ -40829,10 +41452,10 @@ var staticRenderFns = [
                   ])
                 ]),
                 _vm._v(" "),
-                _c("div", { staticClass: "carousel-item active" }, [
+                _c("div", { staticClass: "carousel-item" }, [
                   _c("div", { staticClass: "card w-100 border-0" }, [
                     _c("img", {
-                      staticClass: "card-img-top rounded border-0",
+                      staticClass: "card-img-top rounded-0",
                       attrs: {
                         src:
                           "https://images.unsplash.com/photo-1483985988355-763728e1935b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80",
@@ -40843,8 +41466,7 @@ var staticRenderFns = [
                     _c(
                       "div",
                       {
-                        staticClass:
-                          "card-body text-white text-center border-0",
+                        staticClass: "card-body text-white text-center",
                         staticStyle: {
                           "background-color": "#676465 !important"
                         }
@@ -40874,7 +41496,47 @@ var staticRenderFns = [
                     )
                   ])
                 ])
-              ])
+              ]),
+              _vm._v(" "),
+              _c(
+                "a",
+                {
+                  staticClass: "carousel-control-prev",
+                  attrs: {
+                    href: "#carouselExampleIndicators",
+                    role: "button",
+                    "data-slide": "prev"
+                  }
+                },
+                [
+                  _c("span", {
+                    staticClass: "carousel-control-prev-icon",
+                    attrs: { "aria-hidden": "true" }
+                  }),
+                  _vm._v(" "),
+                  _c("span", { staticClass: "sr-only" }, [_vm._v("Previous")])
+                ]
+              ),
+              _vm._v(" "),
+              _c(
+                "a",
+                {
+                  staticClass: "carousel-control-next",
+                  attrs: {
+                    href: "#carouselExampleIndicators",
+                    role: "button",
+                    "data-slide": "next"
+                  }
+                },
+                [
+                  _c("span", {
+                    staticClass: "carousel-control-next-icon",
+                    attrs: { "aria-hidden": "true" }
+                  }),
+                  _vm._v(" "),
+                  _c("span", { staticClass: "sr-only" }, [_vm._v("Next")])
+                ]
+              )
             ]
           )
         ]
@@ -41029,167 +41691,182 @@ var staticRenderFns = [
         ]
       ),
       _vm._v(" "),
-      _c("div", { staticClass: "container w-75 mx-auto" }, [
-        _c(
-          "h5",
-          { staticClass: "news headline-font font-weight-bolder ml-0" },
-          [
-            _c(
-              "span",
-              {
-                staticClass: "text-aura",
-                staticStyle: { "font-size": "30px" }
-              },
-              [_vm._v("+")]
-            ),
-            _vm._v(" NEWS\n    ")
-          ]
-        ),
-        _vm._v(" "),
-        _c("div", { staticClass: "row no-gutters justify-content-center" }, [
-          _c("div", { staticClass: "col-sm-7 col-md-7 col-lg-7 col-xl-7" }, [
-            _c("div", { staticClass: "card mb-3 border-0 rounded-0" }, [
-              _c("img", {
-                staticClass: "card-img-top rounded-0",
-                attrs: {
-                  src:
-                    "https://images.unsplash.com/photo-1483985988355-763728e1935b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80",
-                  alt: "Card image cap"
-                }
-              }),
-              _vm._v(" "),
-              _c("div", { staticClass: "card-body" }, [
-                _c(
-                  "h4",
-                  {
-                    staticClass: "card-title aura-font font-weight-bold",
-                    staticStyle: { "font-size": "30px" }
-                  },
-                  [
-                    _vm._v(
-                      "\n              Being Everywoman Is Katie Porter's Superpower\n            "
-                    )
-                  ]
-                ),
+      _c("div", { staticClass: "container-fluid mt-5" }, [
+        _c("div", { staticClass: "container" }, [
+          _c(
+            "h5",
+            { staticClass: "news headline-font font-weight-bolder ml-0" },
+            [
+              _c(
+                "span",
+                {
+                  staticClass: "text-aura",
+                  staticStyle: { "font-size": "30px" }
+                },
+                [_vm._v("+")]
+              ),
+              _vm._v(" NEWS\n      ")
+            ]
+          ),
+          _vm._v(" "),
+          _c("div", { staticClass: "row no-gutters justify-content-center" }, [
+            _c("div", { staticClass: "col-sm-7 col-md-7 col-lg-7 col-xl-7" }, [
+              _c("div", { staticClass: "card mb-3 border-0 rounded-0" }, [
+                _c("img", {
+                  staticClass: "card-img-top rounded-0",
+                  attrs: {
+                    src:
+                      "https://images.unsplash.com/photo-1483985988355-763728e1935b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80",
+                    alt: "Card image cap"
+                  }
+                }),
                 _vm._v(" "),
-                _c("hr", { staticClass: "card-hr" }),
-                _vm._v(" "),
-                _c("div", { staticClass: "container mt-5 mb-5 text-center" }, [
-                  _c("a", { staticClass: "see-more", attrs: { href: "#" } }, [
-                    _c(
-                      "div",
-                      {
-                        staticClass:
-                          "col-12 row justify-content-center align-items-baseline"
-                      },
-                      [
-                        _c("h5", { staticClass: "mr-2" }, [_vm._v("SEE MORE")]),
-                        _vm._v(" "),
-                        _c("i", {
-                          staticClass:
-                            "see-more-icon fa fa-chevron-circle-right"
-                        })
-                      ]
-                    )
-                  ])
+                _c("div", { staticClass: "card-body" }, [
+                  _c(
+                    "h4",
+                    {
+                      staticClass: "card-title aura-font font-weight-bold",
+                      staticStyle: { "font-size": "30px" }
+                    },
+                    [
+                      _vm._v(
+                        "\n                Being Everywoman Is Katie Porter's Superpower\n              "
+                      )
+                    ]
+                  ),
+                  _vm._v(" "),
+                  _c("hr", { staticClass: "card-hr" }),
+                  _vm._v(" "),
+                  _c(
+                    "div",
+                    { staticClass: "container mt-5 mb-5 text-center" },
+                    [
+                      _c(
+                        "a",
+                        {
+                          staticClass: "see-more",
+                          attrs: { href: "/category/news" }
+                        },
+                        [
+                          _c(
+                            "div",
+                            {
+                              staticClass:
+                                "col-12 row justify-content-center align-items-baseline"
+                            },
+                            [
+                              _c("h5", { staticClass: "mr-2" }, [
+                                _vm._v("SEE MORE")
+                              ]),
+                              _vm._v(" "),
+                              _c("i", {
+                                staticClass:
+                                  "see-more-icon fa fa-chevron-circle-right"
+                              })
+                            ]
+                          )
+                        ]
+                      )
+                    ]
+                  )
                 ])
               ])
-            ])
-          ]),
-          _vm._v(" "),
-          _c("div", { staticClass: "col-sm-5 col-md-5 col-lg-5 col-xl-5" }, [
-            _c("ul", { staticClass: "list-unstyled" }, [
-              _c("li", { staticClass: "media" }, [
-                _c("img", {
-                  staticClass: "mr-3 news-side-cards",
-                  attrs: {
-                    src:
-                      "https://images.unsplash.com/photo-1496747611176-843222e1e57c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1352&q=80",
-                    alt: "Generic placeholder image"
-                  }
-                }),
-                _vm._v(" "),
-                _c("div", { staticClass: "media-body" }, [
-                  _c("h5", { staticClass: "mt-0 mb-1 aura-font" }, [
-                    _vm._v(
-                      "\n                The Wing Still Has a Long Way To Go\n              "
-                    )
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "col-sm-5 col-md-5 col-lg-5 col-xl-5" }, [
+              _c("ul", { staticClass: "list-unstyled" }, [
+                _c("li", { staticClass: "media" }, [
+                  _c("img", {
+                    staticClass: "mr-3 news-side-cards",
+                    attrs: {
+                      src:
+                        "https://images.unsplash.com/photo-1496747611176-843222e1e57c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1352&q=80",
+                      alt: "Generic placeholder image"
+                    }
+                  }),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "media-body" }, [
+                    _c("h5", { staticClass: "mt-0 mb-1 aura-font" }, [
+                      _vm._v(
+                        "\n                  The Wing Still Has a Long Way To Go\n                "
+                      )
+                    ])
                   ])
-                ])
-              ]),
-              _vm._v(" "),
-              _c("li", { staticClass: "media my-1" }, [
-                _c("img", {
-                  staticClass: "mr-3 news-side-cards",
-                  attrs: {
-                    src:
-                      "https://images.unsplash.com/photo-1496747611176-843222e1e57c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1352&q=80",
-                    alt: "Generic placeholder image"
-                  }
-                }),
+                ]),
                 _vm._v(" "),
-                _c("div", { staticClass: "media-body" }, [
-                  _c("h5", { staticClass: "mt-0 mb-1 aura-font" }, [
-                    _vm._v(
-                      "\n                The Wing Still Has a Long Way To Go\n              "
-                    )
+                _c("li", { staticClass: "media my-1" }, [
+                  _c("img", {
+                    staticClass: "mr-3 news-side-cards",
+                    attrs: {
+                      src:
+                        "https://images.unsplash.com/photo-1496747611176-843222e1e57c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1352&q=80",
+                      alt: "Generic placeholder image"
+                    }
+                  }),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "media-body" }, [
+                    _c("h5", { staticClass: "mt-0 mb-1 aura-font" }, [
+                      _vm._v(
+                        "\n                  The Wing Still Has a Long Way To Go\n                "
+                      )
+                    ])
                   ])
-                ])
-              ]),
-              _vm._v(" "),
-              _c("li", { staticClass: "media my-1" }, [
-                _c("img", {
-                  staticClass: "mr-3 news-side-cards",
-                  attrs: {
-                    src:
-                      "https://images.unsplash.com/photo-1496747611176-843222e1e57c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1352&q=80",
-                    alt: "Generic placeholder image"
-                  }
-                }),
+                ]),
                 _vm._v(" "),
-                _c("div", { staticClass: "media-body" }, [
-                  _c("h5", { staticClass: "mt-0 mb-1 aura-font" }, [
-                    _vm._v(
-                      "\n                The Wing Still Has a Long Way To Go\n              "
-                    )
+                _c("li", { staticClass: "media my-1" }, [
+                  _c("img", {
+                    staticClass: "mr-3 news-side-cards",
+                    attrs: {
+                      src:
+                        "https://images.unsplash.com/photo-1496747611176-843222e1e57c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1352&q=80",
+                      alt: "Generic placeholder image"
+                    }
+                  }),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "media-body" }, [
+                    _c("h5", { staticClass: "mt-0 mb-1 aura-font" }, [
+                      _vm._v(
+                        "\n                  The Wing Still Has a Long Way To Go\n                "
+                      )
+                    ])
                   ])
-                ])
-              ]),
-              _vm._v(" "),
-              _c("li", { staticClass: "media my-1" }, [
-                _c("img", {
-                  staticClass: "mr-3 news-side-cards",
-                  attrs: {
-                    src:
-                      "https://images.unsplash.com/photo-1496747611176-843222e1e57c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1352&q=80",
-                    alt: "Generic placeholder image"
-                  }
-                }),
+                ]),
                 _vm._v(" "),
-                _c("div", { staticClass: "media-body" }, [
-                  _c("h5", { staticClass: "mt-0 mb-1 aura-font" }, [
-                    _vm._v(
-                      "\n                The Wing Still Has a Long Way To Go\n              "
-                    )
+                _c("li", { staticClass: "media my-1" }, [
+                  _c("img", {
+                    staticClass: "mr-3 news-side-cards",
+                    attrs: {
+                      src:
+                        "https://images.unsplash.com/photo-1496747611176-843222e1e57c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1352&q=80",
+                      alt: "Generic placeholder image"
+                    }
+                  }),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "media-body" }, [
+                    _c("h5", { staticClass: "mt-0 mb-1 aura-font" }, [
+                      _vm._v(
+                        "\n                  The Wing Still Has a Long Way To Go\n                "
+                      )
+                    ])
                   ])
-                ])
-              ]),
-              _vm._v(" "),
-              _c("li", { staticClass: "media" }, [
-                _c("img", {
-                  staticClass: "mr-3 news-side-cards",
-                  attrs: {
-                    src:
-                      "https://images.unsplash.com/photo-1496747611176-843222e1e57c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1352&q=80",
-                    alt: "Generic placeholder image"
-                  }
-                }),
+                ]),
                 _vm._v(" "),
-                _c("div", { staticClass: "media-body" }, [
-                  _c("h5", { staticClass: "mt-0 mb-1 aura-font" }, [
-                    _vm._v(
-                      "\n                The Wing Still Has a Long Way To Go\n              "
-                    )
+                _c("li", { staticClass: "media" }, [
+                  _c("img", {
+                    staticClass: "mr-3 news-side-cards",
+                    attrs: {
+                      src:
+                        "https://images.unsplash.com/photo-1496747611176-843222e1e57c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1352&q=80",
+                      alt: "Generic placeholder image"
+                    }
+                  }),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "media-body" }, [
+                    _c("h5", { staticClass: "mt-0 mb-1 aura-font" }, [
+                      _vm._v(
+                        "\n                  The Wing Still Has a Long Way To Go\n                "
+                      )
+                    ])
                   ])
                 ])
               ])
@@ -41200,7 +41877,364 @@ var staticRenderFns = [
       _vm._v(" "),
       _c(
         "div",
-        { staticClass: "home-ads-container mt-3 mb-3 w-50 mx-auto h-100" },
+        { staticClass: "container home-ads-container mt-3 mb-3 mx-auto h-100" },
+        [
+          _c("div", { staticClass: "text-center" }, [
+            _c("p", [_vm._v("ADS BANNER")])
+          ])
+        ]
+      ),
+      _vm._v(" "),
+      _c(
+        "div",
+        {
+          staticClass: "container-fluid mt-5",
+          staticStyle: { "background-color": "#d8d5d5 !important" }
+        },
+        [
+          _c("div", { staticClass: "container" }, [
+            _c("h5", { staticClass: "news headline-font font-weight-bolder" }, [
+              _c(
+                "span",
+                {
+                  staticClass: "text-aura",
+                  staticStyle: { "font-size": "30px" }
+                },
+                [_vm._v("+")]
+              ),
+              _vm._v(" FASHION\n      ")
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "card mx-auto border-0" }, [
+              _c("img", {
+                staticClass: "card-img-top rounded-0 h-50",
+                attrs: { src: "/image/home/fashion.png", alt: "Card image cap" }
+              }),
+              _vm._v(" "),
+              _c(
+                "div",
+                {
+                  staticClass: "card-body",
+                  staticStyle: { "background-color": "#d8d5d5 !important" }
+                },
+                [
+                  _c(
+                    "h4",
+                    {
+                      staticClass: "card-title aura-font font-weight-bold",
+                      staticStyle: { "font-size": "30px" }
+                    },
+                    [
+                      _vm._v(
+                        "\n            Being Everywoman Is Katie Porter's Superpower Being\n          "
+                      )
+                    ]
+                  ),
+                  _vm._v(" "),
+                  _c("hr", { staticClass: "card-hr-fashion" })
+                ]
+              )
+            ]),
+            _vm._v(" "),
+            _c(
+              "div",
+              { staticClass: "card-group mx-auto border-0 rounded-0" },
+              [
+                _c("div", { staticClass: "card rounded-0" }, [
+                  _c("img", {
+                    staticClass: "card-img-top rounded-0",
+                    attrs: {
+                      src:
+                        "https://images.unsplash.com/photo-1496747611176-843222e1e57c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1352&q=80",
+                      alt: "Card image cap"
+                    }
+                  }),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "card-body" }, [
+                    _c("h6", { staticClass: "card-title" }, [
+                      _vm._v(
+                        "\n              Fashion gist topics please readFashion gist topics please read\n            "
+                      )
+                    ]),
+                    _vm._v(" "),
+                    _c("hr", { staticClass: "card-hr-fashion" })
+                  ])
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "card rounded-0" }, [
+                  _c("img", {
+                    staticClass: "card-img-top rounded-0",
+                    attrs: {
+                      src:
+                        "https://images.unsplash.com/photo-1496747611176-843222e1e57c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1352&q=80",
+                      alt: "Card image cap"
+                    }
+                  }),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "card-body" }, [
+                    _c("h6", { staticClass: "card-title" }, [
+                      _vm._v(
+                        "\n              Fashion gist topics please readFashion gist topics please read\n            "
+                      )
+                    ]),
+                    _vm._v(" "),
+                    _c("hr", { staticClass: "card-hr-fashion" })
+                  ])
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "card rounded-0" }, [
+                  _c("img", {
+                    staticClass: "card-img-top rounded-0",
+                    attrs: {
+                      src:
+                        "https://images.unsplash.com/photo-1496747611176-843222e1e57c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1352&q=80",
+                      alt: "Card image cap"
+                    }
+                  }),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "card-body" }, [
+                    _c("h6", { staticClass: "card-title" }, [
+                      _vm._v(
+                        "\n              Fashion gist topics please read Fashion gist topics please read\n            "
+                      )
+                    ]),
+                    _vm._v(" "),
+                    _c("hr", { staticClass: "card-hr-fashion" })
+                  ])
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "card rounded-0" }, [
+                  _c("img", {
+                    staticClass: "card-img-top rounded-0",
+                    attrs: {
+                      src:
+                        "https://images.unsplash.com/photo-1496747611176-843222e1e57c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1352&q=80",
+                      alt: "Card image cap"
+                    }
+                  }),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "card-body" }, [
+                    _c("h6", { staticClass: "card-title" }, [
+                      _vm._v(
+                        "\n              Fashion gist topics please read Fashion gist topics please read\n            "
+                      )
+                    ]),
+                    _vm._v(" "),
+                    _c("hr", { staticClass: "card-hr-fashion" })
+                  ])
+                ])
+              ]
+            ),
+            _vm._v(" "),
+            _c("div", { staticClass: "container mt-5 mb-5 text-center" }, [
+              _c(
+                "a",
+                {
+                  staticClass: "see-more",
+                  attrs: { href: "/category/fashion" }
+                },
+                [
+                  _c(
+                    "div",
+                    {
+                      staticClass:
+                        "col-12 row justify-content-center align-items-baseline"
+                    },
+                    [
+                      _c("h5", { staticClass: "mr-2" }, [_vm._v("SEE MORE")]),
+                      _vm._v(" "),
+                      _c("i", {
+                        staticClass: "see-more-icon fa fa-chevron-circle-right"
+                      })
+                    ]
+                  )
+                ]
+              )
+            ])
+          ])
+        ]
+      ),
+      _vm._v(" "),
+      _c(
+        "div",
+        { staticClass: "home-ads-container mt-5 mb-5 w-50 mx-auto h-100" },
+        [
+          _c("div", { staticClass: "container text-center" }, [
+            _c("p", [_vm._v("ADS BANNER")])
+          ])
+        ]
+      ),
+      _vm._v(" "),
+      _c("div", { staticClass: "container-fluid mt-5" }, [
+        _c("div", { staticClass: "container" }, [
+          _c("h5", { staticClass: "news headline-font font-weight-bolder" }, [
+            _c(
+              "span",
+              {
+                staticClass: "text-aura",
+                staticStyle: { "font-size": "30px" }
+              },
+              [_vm._v("+")]
+            ),
+            _vm._v(" BEAUTY\n      ")
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "row mb-5" }, [
+            _c(
+              "div",
+              {
+                staticClass: "col-md-6 col-lg-6 col-xl-6 col-sm-6 col-xs-6 p-3"
+              },
+              [
+                _c("h4", { staticClass: "aura-font font-weight-bolder pr-3" }, [
+                  _vm._v(
+                    "\n            ‘I Could Have Been One of Them’: Monica Ortiz Uribe on ‘Forgotten:\n            The Women of Juarez’\n          "
+                  )
+                ]),
+                _vm._v(" "),
+                _c("hr", { staticClass: "card-hr-fashion" }),
+                _vm._v(" "),
+                _c("p", { staticClass: "aura-font mt-2" }, [
+                  _vm._v(
+                    "\n            In her new podcast, the El Paso journalist seeks justice for women\n            disappearing on the U.S.-Mexico border.\n          "
+                  )
+                ])
+              ]
+            ),
+            _vm._v(" "),
+            _c(
+              "div",
+              {
+                staticClass:
+                  "col-md-6 col-lg-6 col-xl-6 col-sm-6 col-xs-6 p-5 aura-bg-dark"
+              },
+              [
+                _c("img", {
+                  staticClass: "card-img-top rounded-0",
+                  attrs: {
+                    src:
+                      "https://images.unsplash.com/photo-1496747611176-843222e1e57c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1352&q=80",
+                    alt: "Card image cap"
+                  }
+                })
+              ]
+            )
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "card-group mx-auto border-0 rounded-0" }, [
+            _c("div", { staticClass: "card rounded-0" }, [
+              _c("img", {
+                staticClass: "card-img-top rounded-0",
+                attrs: {
+                  src:
+                    "https://images.unsplash.com/photo-1496747611176-843222e1e57c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1352&q=80",
+                  alt: "Card image cap"
+                }
+              }),
+              _vm._v(" "),
+              _c("div", { staticClass: "card-body" }, [
+                _c("h6", { staticClass: "card-title" }, [
+                  _vm._v(
+                    "\n              Fashion gist topics please readFashion gist topics please read\n            "
+                  )
+                ]),
+                _vm._v(" "),
+                _c("hr", { staticClass: "card-hr-fashion" })
+              ])
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "card rounded-0" }, [
+              _c("img", {
+                staticClass: "card-img-top rounded-0",
+                attrs: {
+                  src:
+                    "https://images.unsplash.com/photo-1496747611176-843222e1e57c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1352&q=80",
+                  alt: "Card image cap"
+                }
+              }),
+              _vm._v(" "),
+              _c("div", { staticClass: "card-body" }, [
+                _c("h6", { staticClass: "card-title" }, [
+                  _vm._v(
+                    "\n              Fashion gist topics please readFashion gist topics please read\n            "
+                  )
+                ]),
+                _vm._v(" "),
+                _c("hr", { staticClass: "card-hr-fashion" })
+              ])
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "card rounded-0" }, [
+              _c("img", {
+                staticClass: "card-img-top rounded-0",
+                attrs: {
+                  src:
+                    "https://images.unsplash.com/photo-1496747611176-843222e1e57c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1352&q=80",
+                  alt: "Card image cap"
+                }
+              }),
+              _vm._v(" "),
+              _c("div", { staticClass: "card-body" }, [
+                _c("h6", { staticClass: "card-title" }, [
+                  _vm._v(
+                    "\n              Fashion gist topics please read Fashion gist topics please read\n            "
+                  )
+                ]),
+                _vm._v(" "),
+                _c("hr", { staticClass: "card-hr-fashion" })
+              ])
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "card rounded-0" }, [
+              _c("img", {
+                staticClass: "card-img-top rounded-0",
+                attrs: {
+                  src:
+                    "https://images.unsplash.com/photo-1496747611176-843222e1e57c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1352&q=80",
+                  alt: "Card image cap"
+                }
+              }),
+              _vm._v(" "),
+              _c("div", { staticClass: "card-body" }, [
+                _c("h6", { staticClass: "card-title" }, [
+                  _vm._v(
+                    "\n              Fashion gist topics please read Fashion gist topics please read\n            "
+                  )
+                ]),
+                _vm._v(" "),
+                _c("hr", { staticClass: "card-hr-fashion" })
+              ])
+            ])
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "container mt-5 mb-5 text-center" }, [
+            _c(
+              "a",
+              { staticClass: "see-more", attrs: { href: "/category/beauty" } },
+              [
+                _c(
+                  "div",
+                  {
+                    staticClass:
+                      "col-12 row justify-content-center align-items-baseline"
+                  },
+                  [
+                    _c("h5", { staticClass: "mr-2" }, [_vm._v("SEE MORE")]),
+                    _vm._v(" "),
+                    _c("i", {
+                      staticClass: "see-more-icon fa fa-chevron-circle-right"
+                    })
+                  ]
+                )
+              ]
+            )
+          ])
+        ])
+      ]),
+      _vm._v(" "),
+      _c(
+        "div",
+        { staticClass: "home-ads-container mt-5 mb-5 w-50 mx-auto h-100" },
         [
           _c("div", { staticClass: "container text-center" }, [
             _c("p", [_vm._v("ADS BANNER")])
@@ -41210,9 +42244,628 @@ var staticRenderFns = [
       _vm._v(" "),
       _c(
         "div",
-        { staticClass: "home-ads-container mt-3 mb-3 w-50 mx-auto h-100" },
+        {
+          staticClass: "container-fluid mt-5 p-0",
+          staticStyle: { "background-color": "#d8d5d5 !important" }
+        },
         [
-          _c("div", { staticClass: "container text-center" }, [
+          _c("div", { staticClass: "container mb-3" }, [
+            _c("h5", { staticClass: "news headline-font font-weight-bolder" }, [
+              _c(
+                "span",
+                {
+                  staticClass: "text-aura",
+                  staticStyle: { "font-size": "30px" }
+                },
+                [_vm._v("+")]
+              ),
+              _vm._v(" CULTURE\n      ")
+            ]),
+            _vm._v(" "),
+            _c(
+              "div",
+              { staticClass: "card-group mx-auto border-0 rounded-0" },
+              [
+                _c("div", { staticClass: "card rounded-0" }, [
+                  _c("img", {
+                    staticClass: "card-img-top rounded-0",
+                    attrs: {
+                      src:
+                        "https://images.unsplash.com/photo-1496747611176-843222e1e57c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1352&q=80",
+                      alt: "Card image cap"
+                    }
+                  }),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "card-body" }, [
+                    _c("h6", { staticClass: "card-title" }, [
+                      _vm._v(
+                        "\n              Fashion gist topics please readFashion gist topics please read\n            "
+                      )
+                    ]),
+                    _vm._v(" "),
+                    _c("hr", { staticClass: "card-hr-fashion" })
+                  ])
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "card rounded-0" }, [
+                  _c("img", {
+                    staticClass: "card-img-top rounded-0",
+                    attrs: {
+                      src:
+                        "https://images.unsplash.com/photo-1496747611176-843222e1e57c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1352&q=80",
+                      alt: "Card image cap"
+                    }
+                  }),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "card-body" }, [
+                    _c("h6", { staticClass: "card-title" }, [
+                      _vm._v(
+                        "\n              Fashion gist topics please readFashion gist topics please read\n            "
+                      )
+                    ]),
+                    _vm._v(" "),
+                    _c("hr", { staticClass: "card-hr-fashion" })
+                  ])
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "card rounded-0" }, [
+                  _c("img", {
+                    staticClass: "card-img-top rounded-0",
+                    attrs: {
+                      src:
+                        "https://images.unsplash.com/photo-1496747611176-843222e1e57c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1352&q=80",
+                      alt: "Card image cap"
+                    }
+                  }),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "card-body" }, [
+                    _c("h6", { staticClass: "card-title" }, [
+                      _vm._v(
+                        "\n              Fashion gist topics please read Fashion gist topics please read\n            "
+                      )
+                    ]),
+                    _vm._v(" "),
+                    _c("hr", { staticClass: "card-hr-fashion" })
+                  ])
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "card rounded-0" }, [
+                  _c("img", {
+                    staticClass: "card-img-top rounded-0",
+                    attrs: {
+                      src:
+                        "https://images.unsplash.com/photo-1496747611176-843222e1e57c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1352&q=80",
+                      alt: "Card image cap"
+                    }
+                  }),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "card-body" }, [
+                    _c("h6", { staticClass: "card-title" }, [
+                      _vm._v(
+                        "\n              Fashion gist topics please read Fashion gist topics please read\n            "
+                      )
+                    ]),
+                    _vm._v(" "),
+                    _c("hr", { staticClass: "card-hr-fashion" })
+                  ])
+                ])
+              ]
+            )
+          ]),
+          _vm._v(" "),
+          _c(
+            "div",
+            {
+              staticClass:
+                "culture-mid-title aura-font text-white text-center mb-3"
+            },
+            [
+              _c("h3", { staticClass: "card-title" }, [
+                _vm._v(
+                  '\n        GFRIEND Sings "Sunrise," Maroon 5, and Avril Lavigne in a Game of Song\n        Association\n      '
+                )
+              ]),
+              _vm._v(" "),
+              _c("hr", { staticClass: "top-story-hr" }),
+              _vm._v(" "),
+              _c("p", { staticClass: "mt-5" }, [
+                _vm._v(
+                  "\n        of all the girls that have leaved, the finest have seen in yet to see\n        me\n      "
+                )
+              ])
+            ]
+          ),
+          _vm._v(" "),
+          _c("div", { staticClass: "container" }, [
+            _c(
+              "div",
+              { staticClass: "card-group mx-auto border-0 rounded-0" },
+              [
+                _c("div", { staticClass: "card rounded-0" }, [
+                  _c("img", {
+                    staticClass: "card-img-top rounded-0",
+                    attrs: {
+                      src:
+                        "https://images.unsplash.com/photo-1496747611176-843222e1e57c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1352&q=80",
+                      alt: "Card image cap"
+                    }
+                  }),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "card-body" }, [
+                    _c("h6", { staticClass: "card-title" }, [
+                      _vm._v(
+                        "\n              Fashion gist topics please readFashion gist topics please read\n            "
+                      )
+                    ]),
+                    _vm._v(" "),
+                    _c("hr", { staticClass: "card-hr-fashion" })
+                  ])
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "card rounded-0" }, [
+                  _c("img", {
+                    staticClass: "card-img-top rounded-0",
+                    attrs: {
+                      src:
+                        "https://images.unsplash.com/photo-1496747611176-843222e1e57c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1352&q=80",
+                      alt: "Card image cap"
+                    }
+                  }),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "card-body" }, [
+                    _c("h6", { staticClass: "card-title" }, [
+                      _vm._v(
+                        "\n              Fashion gist topics please readFashion gist topics please read\n            "
+                      )
+                    ]),
+                    _vm._v(" "),
+                    _c("hr", { staticClass: "card-hr-fashion" })
+                  ])
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "card rounded-0" }, [
+                  _c("img", {
+                    staticClass: "card-img-top rounded-0",
+                    attrs: {
+                      src:
+                        "https://images.unsplash.com/photo-1496747611176-843222e1e57c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1352&q=80",
+                      alt: "Card image cap"
+                    }
+                  }),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "card-body" }, [
+                    _c("h6", { staticClass: "card-title" }, [
+                      _vm._v(
+                        "\n              Fashion gist topics please read Fashion gist topics please read\n            "
+                      )
+                    ]),
+                    _vm._v(" "),
+                    _c("hr", { staticClass: "card-hr-fashion" })
+                  ])
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "card rounded-0" }, [
+                  _c("img", {
+                    staticClass: "card-img-top rounded-0",
+                    attrs: {
+                      src:
+                        "https://images.unsplash.com/photo-1496747611176-843222e1e57c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1352&q=80",
+                      alt: "Card image cap"
+                    }
+                  }),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "card-body" }, [
+                    _c("h6", { staticClass: "card-title" }, [
+                      _vm._v(
+                        "\n              Fashion gist topics please read Fashion gist topics please read\n            "
+                      )
+                    ]),
+                    _vm._v(" "),
+                    _c("hr", { staticClass: "card-hr-fashion" })
+                  ])
+                ])
+              ]
+            ),
+            _vm._v(" "),
+            _c("div", { staticClass: "container mt-5 mb-5 text-center" }, [
+              _c(
+                "a",
+                { staticClass: "see-more", attrs: { href: "/category/news" } },
+                [
+                  _c(
+                    "div",
+                    {
+                      staticClass:
+                        "col-12 row justify-content-center align-items-baseline"
+                    },
+                    [
+                      _c("h5", { staticClass: "mr-2" }, [_vm._v("SEE MORE")]),
+                      _vm._v(" "),
+                      _c("i", {
+                        staticClass: "see-more-icon fa fa-chevron-circle-right"
+                      })
+                    ]
+                  )
+                ]
+              )
+            ])
+          ])
+        ]
+      ),
+      _vm._v(" "),
+      _c(
+        "div",
+        {
+          staticClass: "container-fluid p-3",
+          staticStyle: { "background-color": "#2a2828 !important" }
+        },
+        [
+          _c("div", { staticClass: "container" }, [
+            _c(
+              "h5",
+              { staticClass: "aura-font font-weight-bold mt-4 text-white" },
+              [
+                _vm._v("\n        VIDEOS\n        "),
+                _c("i", { staticClass: "fa fa-play text-aura" })
+              ]
+            ),
+            _vm._v(" "),
+            _c("div", { staticClass: "card mx-auto border-0" }, [
+              _c(
+                "div",
+                { staticClass: "embed-responsive embed-responsive-16by9" },
+                [
+                  _c("iframe", {
+                    staticClass: "embed-responsive-item",
+                    attrs: {
+                      src: "https://www.youtube.com/embed/zpOULjyy-n8?rel=0",
+                      allowfullscreen: ""
+                    }
+                  })
+                ]
+              ),
+              _vm._v(" "),
+              _c(
+                "div",
+                {
+                  staticClass: "card-body text-center text-white",
+                  staticStyle: { "background-color": "#2a2828 !important" }
+                },
+                [
+                  _c(
+                    "h4",
+                    {
+                      staticClass: "card-title aura-font",
+                      staticStyle: { "font-size": "30px" }
+                    },
+                    [
+                      _vm._v(
+                        "\n            Ashley Graham Wants to Cancel Mom-Shaming\n          "
+                      )
+                    ]
+                  ),
+                  _vm._v(" "),
+                  _c("hr", { staticClass: "card-hr mx-auto" }),
+                  _vm._v(" "),
+                  _c(
+                    "div",
+                    { staticClass: "container mt-5 mb-5 text-center" },
+                    [
+                      _c(
+                        "a",
+                        {
+                          staticClass: "see-more",
+                          attrs: { href: "/category/videos" }
+                        },
+                        [
+                          _c(
+                            "div",
+                            {
+                              staticClass:
+                                "col-12 row justify-content-center align-items-baseline"
+                            },
+                            [
+                              _c("h5", { staticClass: "mr-2" }, [
+                                _vm._v("SEE MORE")
+                              ]),
+                              _vm._v(" "),
+                              _c("i", {
+                                staticClass:
+                                  "see-more-icon fa fa-chevron-circle-right"
+                              })
+                            ]
+                          )
+                        ]
+                      )
+                    ]
+                  )
+                ]
+              )
+            ])
+          ])
+        ]
+      ),
+      _vm._v(" "),
+      _c(
+        "div",
+        { staticClass: "container home-ads-container mt-3 mb-3 mx-auto h-100" },
+        [
+          _c("div", { staticClass: "text-center" }, [
+            _c("p", [_vm._v("ADS BANNER")])
+          ])
+        ]
+      ),
+      _vm._v(" "),
+      _c("div", { staticClass: "container-fluid mt-5" }, [
+        _c("div", { staticClass: "container mx-auto" }, [
+          _c("div", { staticClass: "row mb-5" }, [
+            _c(
+              "div",
+              {
+                staticClass:
+                  "col-md-6 col-lg-6 col-xl-6 col-sm-6 col-xs-6 p-3 aura-cards-shadow"
+              },
+              [
+                _c("img", {
+                  staticClass: "card-img-top rounded-0",
+                  attrs: {
+                    src: "/image/home/magazine.png",
+                    alt: "Card image cap"
+                  }
+                })
+              ]
+            ),
+            _vm._v(" "),
+            _c(
+              "div",
+              { staticClass: "col-md-6 col-lg-6 col-xl-6 col-sm-6 col-xs-6" },
+              [
+                _c("h5", { staticClass: "aura-font sp-mt-6" }, [
+                  _vm._v(
+                    "\n            Susan Garland Stars On The Cover Of The July Issue Of Aura\n            Magazine\n          "
+                  )
+                ]),
+                _vm._v(" "),
+                _c("hr", { staticClass: "magazine-hr" }),
+                _vm._v(" "),
+                _c("h5", { staticClass: "aura-font" }, [
+                  _vm._v("Edited by AKHIGBE IVERSON")
+                ]),
+                _vm._v(" "),
+                _c("h5", { staticClass: "aura-font" }, [
+                  _vm._v("Cover model SUSAN GARLAND")
+                ]),
+                _vm._v(" "),
+                _c("h5", { staticClass: "aura-font" }, [
+                  _vm._v("Photography by AREMU IFEOLUWA JOSHUA")
+                ]),
+                _vm._v(" "),
+                _c("hr", { staticClass: "magazine-hr" }),
+                _vm._v(" "),
+                _c(
+                  "div",
+                  {
+                    staticClass:
+                      "row justify-content-center align-content-center"
+                  },
+                  [
+                    _c(
+                      "div",
+                      {
+                        staticClass:
+                          "col-md-6 col-lg-6 col-xl-6 col-sm-6 col-xs-6"
+                      },
+                      [
+                        _c(
+                          "button",
+                          { staticClass: "btn btn-aura text-white" },
+                          [
+                            _vm._v(
+                              "\n                Order Print Copy\n              "
+                            )
+                          ]
+                        )
+                      ]
+                    ),
+                    _vm._v(" "),
+                    _c(
+                      "div",
+                      {
+                        staticClass:
+                          "col-md-6 col-lg-6 col-xl-6 col-sm-6 col-xs-6"
+                      },
+                      [
+                        _c(
+                          "button",
+                          { staticClass: "btn btn-aura text-white" },
+                          [
+                            _vm._v(
+                              "\n                Get digital edition\n              "
+                            )
+                          ]
+                        )
+                      ]
+                    )
+                  ]
+                )
+              ]
+            )
+          ])
+        ])
+      ]),
+      _vm._v(" "),
+      _c("div", { staticClass: "container-fluid mt-5" }, [
+        _c("div", { staticClass: "container" }, [
+          _c("h5", { staticClass: "news headline-font font-weight-bolder" }, [
+            _c(
+              "span",
+              {
+                staticClass: "text-aura",
+                staticStyle: { "font-size": "30px" }
+              },
+              [_vm._v("+")]
+            ),
+            _vm._v(" LIFE & LOVE\n      ")
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "row mb-5" }, [
+            _c(
+              "div",
+              {
+                staticClass: "col-md-6 col-lg-6 col-xl-6 col-sm-6 col-xs-6 p-3"
+              },
+              [
+                _c("h4", { staticClass: "aura-font font-weight-bolder pr-3" }, [
+                  _vm._v(
+                    "\n            ‘I Could Have Been One of Them’: Monica Ortiz Uribe on ‘Forgotten:\n            The Women of Juarez’\n          "
+                  )
+                ]),
+                _vm._v(" "),
+                _c("hr", { staticClass: "card-hr-fashion" }),
+                _vm._v(" "),
+                _c("p", { staticClass: "aura-font mt-2" }, [
+                  _vm._v(
+                    "\n            In her new podcast, the El Paso journalist seeks justice for women\n            disappearing on the U.S.-Mexico border.\n          "
+                  )
+                ])
+              ]
+            ),
+            _vm._v(" "),
+            _c(
+              "div",
+              {
+                staticClass:
+                  "col-md-6 col-lg-6 col-xl-6 col-sm-6 col-xs-6 p-5 aura-bg-dark"
+              },
+              [
+                _c("img", {
+                  staticClass: "card-img-top rounded-0",
+                  attrs: {
+                    src:
+                      "https://images.unsplash.com/photo-1496747611176-843222e1e57c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1352&q=80",
+                    alt: "Card image cap"
+                  }
+                })
+              ]
+            )
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "card-group mx-auto border-0 rounded-0" }, [
+            _c("div", { staticClass: "card rounded-0" }, [
+              _c("img", {
+                staticClass: "card-img-top rounded-0",
+                attrs: {
+                  src:
+                    "https://images.unsplash.com/photo-1496747611176-843222e1e57c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1352&q=80",
+                  alt: "Card image cap"
+                }
+              }),
+              _vm._v(" "),
+              _c("div", { staticClass: "card-body" }, [
+                _c("h6", { staticClass: "card-title" }, [
+                  _vm._v(
+                    "\n              Fashion gist topics please readFashion gist topics please read\n            "
+                  )
+                ]),
+                _vm._v(" "),
+                _c("hr", { staticClass: "card-hr-fashion" })
+              ])
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "card rounded-0" }, [
+              _c("img", {
+                staticClass: "card-img-top rounded-0",
+                attrs: {
+                  src:
+                    "https://images.unsplash.com/photo-1496747611176-843222e1e57c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1352&q=80",
+                  alt: "Card image cap"
+                }
+              }),
+              _vm._v(" "),
+              _c("div", { staticClass: "card-body" }, [
+                _c("h6", { staticClass: "card-title" }, [
+                  _vm._v(
+                    "\n              Fashion gist topics please readFashion gist topics please read\n            "
+                  )
+                ]),
+                _vm._v(" "),
+                _c("hr", { staticClass: "card-hr-fashion" })
+              ])
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "card rounded-0" }, [
+              _c("img", {
+                staticClass: "card-img-top rounded-0",
+                attrs: {
+                  src:
+                    "https://images.unsplash.com/photo-1496747611176-843222e1e57c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1352&q=80",
+                  alt: "Card image cap"
+                }
+              }),
+              _vm._v(" "),
+              _c("div", { staticClass: "card-body" }, [
+                _c("h6", { staticClass: "card-title" }, [
+                  _vm._v(
+                    "\n              Fashion gist topics please read Fashion gist topics please read\n            "
+                  )
+                ]),
+                _vm._v(" "),
+                _c("hr", { staticClass: "card-hr-fashion" })
+              ])
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "card rounded-0" }, [
+              _c("img", {
+                staticClass: "card-img-top rounded-0",
+                attrs: {
+                  src:
+                    "https://images.unsplash.com/photo-1496747611176-843222e1e57c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1352&q=80",
+                  alt: "Card image cap"
+                }
+              }),
+              _vm._v(" "),
+              _c("div", { staticClass: "card-body" }, [
+                _c("h6", { staticClass: "card-title" }, [
+                  _vm._v(
+                    "\n              Fashion gist topics please read Fashion gist topics please read\n            "
+                  )
+                ]),
+                _vm._v(" "),
+                _c("hr", { staticClass: "card-hr-fashion" })
+              ])
+            ])
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "container mt-5 mb-5 text-center" }, [
+            _c(
+              "a",
+              { staticClass: "see-more", attrs: { href: "/category/beauty" } },
+              [
+                _c(
+                  "div",
+                  {
+                    staticClass:
+                      "col-12 row justify-content-center align-items-baseline"
+                  },
+                  [
+                    _c("h5", { staticClass: "mr-2" }, [_vm._v("SEE MORE")]),
+                    _vm._v(" "),
+                    _c("i", {
+                      staticClass: "see-more-icon fa fa-chevron-circle-right"
+                    })
+                  ]
+                )
+              ]
+            )
+          ])
+        ])
+      ]),
+      _vm._v(" "),
+      _c(
+        "div",
+        { staticClass: "container home-ads-container mt-3 mb-3 mx-auto h-100" },
+        [
+          _c("div", { staticClass: "text-center" }, [
             _c("p", [_vm._v("ADS BANNER")])
           ])
         ]
@@ -41220,10 +42873,139 @@ var staticRenderFns = [
       _vm._v(" "),
       _c(
         "div",
-        { staticClass: "home-ads-container mt-3 mb-3 w-50 mx-auto h-100" },
+        {
+          staticClass: "container-fluid mt-5 p-0",
+          staticStyle: { "background-color": "#d8d5d5 !important" }
+        },
         [
-          _c("div", { staticClass: "container text-center" }, [
-            _c("p", [_vm._v("ADS BANNER")])
+          _c("div", { staticClass: "container mb-3" }, [
+            _c("h5", { staticClass: "news headline-font font-weight-bolder" }, [
+              _c(
+                "span",
+                {
+                  staticClass: "text-aura",
+                  staticStyle: { "font-size": "30px" }
+                },
+                [_vm._v("+")]
+              ),
+              _vm._v(" HOROSCOPE\n      ")
+            ]),
+            _vm._v(" "),
+            _c(
+              "div",
+              { staticClass: "card-group mx-auto border-0 rounded-0" },
+              [
+                _c("div", { staticClass: "card rounded-0" }, [
+                  _c("img", {
+                    staticClass: "card-img-top rounded-0",
+                    attrs: {
+                      src:
+                        "https://images.unsplash.com/photo-1496747611176-843222e1e57c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1352&q=80",
+                      alt: "Card image cap"
+                    }
+                  }),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "card-body" }, [
+                    _c("h6", { staticClass: "card-title" }, [
+                      _vm._v(
+                        "\n              Fashion gist topics please readFashion gist topics please read\n            "
+                      )
+                    ]),
+                    _vm._v(" "),
+                    _c("hr", { staticClass: "card-hr-fashion" })
+                  ])
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "card rounded-0" }, [
+                  _c("img", {
+                    staticClass: "card-img-top rounded-0",
+                    attrs: {
+                      src:
+                        "https://images.unsplash.com/photo-1496747611176-843222e1e57c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1352&q=80",
+                      alt: "Card image cap"
+                    }
+                  }),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "card-body" }, [
+                    _c("h6", { staticClass: "card-title" }, [
+                      _vm._v(
+                        "\n              Fashion gist topics please readFashion gist topics please read\n            "
+                      )
+                    ]),
+                    _vm._v(" "),
+                    _c("hr", { staticClass: "card-hr-fashion" })
+                  ])
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "card rounded-0" }, [
+                  _c("img", {
+                    staticClass: "card-img-top rounded-0",
+                    attrs: {
+                      src:
+                        "https://images.unsplash.com/photo-1496747611176-843222e1e57c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1352&q=80",
+                      alt: "Card image cap"
+                    }
+                  }),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "card-body" }, [
+                    _c("h6", { staticClass: "card-title" }, [
+                      _vm._v(
+                        "\n              Fashion gist topics please read Fashion gist topics please read\n            "
+                      )
+                    ]),
+                    _vm._v(" "),
+                    _c("hr", { staticClass: "card-hr-fashion" })
+                  ])
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "card rounded-0" }, [
+                  _c("img", {
+                    staticClass: "card-img-top rounded-0",
+                    attrs: {
+                      src:
+                        "https://images.unsplash.com/photo-1496747611176-843222e1e57c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1352&q=80",
+                      alt: "Card image cap"
+                    }
+                  }),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "card-body" }, [
+                    _c("h6", { staticClass: "card-title" }, [
+                      _vm._v(
+                        "\n              Fashion gist topics please read Fashion gist topics please read\n            "
+                      )
+                    ]),
+                    _vm._v(" "),
+                    _c("hr", { staticClass: "card-hr-fashion" })
+                  ])
+                ])
+              ]
+            ),
+            _vm._v(" "),
+            _c("div", { staticClass: "container mt-5 mb-5 text-center" }, [
+              _c(
+                "a",
+                {
+                  staticClass: "see-more",
+                  attrs: { href: "/category/videos" }
+                },
+                [
+                  _c(
+                    "div",
+                    {
+                      staticClass:
+                        "col-12 row justify-content-center align-items-baseline"
+                    },
+                    [
+                      _c("h5", { staticClass: "mr-2" }, [_vm._v("SEE MORE")]),
+                      _vm._v(" "),
+                      _c("i", {
+                        staticClass: "see-more-icon fa fa-chevron-circle-right"
+                      })
+                    ]
+                  )
+                ]
+              )
+            ])
           ])
         ]
       )
@@ -58061,7 +59843,7 @@ Vue.component('navbar', _components_Navbar__WEBPACK_IMPORTED_MODULE_6__["default
 nprogress__WEBPACK_IMPORTED_MODULE_5___default.a.configure({
   easing: 'ease',
   speed: 500,
-  showSpinner: false
+  showSpinner: true
 });
 Vue.use(vue_router__WEBPACK_IMPORTED_MODULE_1__["default"]);
 Vue.use(nprogress__WEBPACK_IMPORTED_MODULE_5___default.a);
@@ -58074,7 +59856,10 @@ Vue.use(vue_axios__WEBPACK_IMPORTED_MODULE_2___default.a, axios__WEBPACK_IMPORTE
 
 var router = new vue_router__WEBPACK_IMPORTED_MODULE_1__["default"]({
   mode: 'history',
-  routes: _routes__WEBPACK_IMPORTED_MODULE_4__["routes"]
+  routes: _routes__WEBPACK_IMPORTED_MODULE_4__["routes"],
+  meta: {
+    showProgressBar: true
+  }
 });
 router.beforeResolve(function (to, from, next) {
   // If this isn't an initial page load.
@@ -58087,7 +59872,9 @@ router.beforeResolve(function (to, from, next) {
 });
 router.afterEach(function (to, from) {
   // Complete the animation of the route progress bar.
-  nprogress__WEBPACK_IMPORTED_MODULE_5___default.a.done();
+  if (to.name) {
+    nprogress__WEBPACK_IMPORTED_MODULE_5___default.a.done();
+  }
 });
 var app = new Vue({
   el: '#app',
