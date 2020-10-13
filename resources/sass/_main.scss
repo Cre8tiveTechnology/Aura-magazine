@@ -75,6 +75,7 @@
 .see-more {
     color: #ff63b6 !important;
 }
+
 .see-more:hover {
     text-decoration: none;
 }
@@ -227,4 +228,20 @@
 .category-list:hover a {
     color: #fff;
     text-decoration: none;
+}
+
+
+// Login
+
+.login-body {
+    background: url('image/cover/news.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+}
+
+.login-inner {
+    position: absolute;
+    top: 30%;
 }

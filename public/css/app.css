@@ -1,4 +1,4 @@
-@import url(https://fonts.googleapis.com/css?family=Nunito);
+@import url(https://fonts.googleapis.com/css?family=Nunito);@charset "UTF-8";
 
 .navbar-toggler {
   border: none !important;
@@ -225,6 +225,19 @@
 .category-list:hover a {
   color: #fff;
   text-decoration: none;
+}
+
+.login-body {
+  background: url(/images/news.png?4f8bdd38415549e0c207dd33d163476f);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh;
+}
+
+.login-inner {
+  position: absolute;
+  top: 30%;
 }
 
 html {

@@ -86,7 +86,7 @@
           >
         </a>
 
-        <a href="#">
+        <a href="/login">
           <span class="badge badge-pill badge-dark py-2 px-3 shadow-sm"
             >SIGN IN</span
           >

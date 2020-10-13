@@ -4,12 +4,19 @@ import News from './pages/News.vue'
 import Magazine from './pages/Magazine.vue'
 import Post from './pages/Post.vue'
 import Shop from './pages/Shop.vue'
+import Login from './pages/auth/login.vue'
 
 export const routes = [
   {
     name: 'home',
     path: '/',
     component: Home,
+  },
+
+  {
+    name: 'login',
+    path: '/login',
+    component: Login,
   },
 
   {
