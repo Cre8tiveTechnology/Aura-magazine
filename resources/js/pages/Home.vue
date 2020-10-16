@@ -1279,8 +1279,4 @@ export default {
         };
     }
 };
-
-$(".carousel").carousel({
-    interval: 1000
-});
 </script>

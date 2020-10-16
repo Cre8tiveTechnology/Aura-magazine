@@ -16,41 +16,56 @@
                         <div class="card-body py-2">
                             <form>
                                 <div class="form-group">
+                                    <span
+                                        class="text-danger"
+                                        v-if="errors.email"
+                                        >{{ errors.email[0] }}</span
+                                    >
                                     <input
                                         type="email"
-                                        v-model="email"
+                                        v-model="form.email"
                                         class="form-control  shadow-none"
-                                        id="exampleInputEmail1"
-                                        aria-describedby="emailHelp"
+                                        id="email"
                                         placeholder="Email"
                                     />
                                 </div>
-                                <div class="input-group mb-3">
-                                    <input
-                                        v-model="password"
-                                        class="form-control  shadow-none"
-                                        placeholder="Password"
-                                        v-bind:type="[
-                                            showPassword ? 'text' : 'password'
-                                        ]"
-                                    />
-                                    <div class="input-group-append">
-                                        <span
-                                            class="input-group-text "
-                                            @click="
-                                                showPassword = !showPassword
-                                            "
-                                        >
-                                            <i
-                                                class="fa"
-                                                :class="[
-                                                    showPassword
-                                                        ? 'fa-eye'
-                                                        : 'fa-eye-slash'
-                                                ]"
-                                                aria-hidden="true"
-                                            ></i>
-                                        </span>
+                                <div class="form-group">
+                                    <span
+                                        class="text-danger"
+                                        v-if="errors.password"
+                                        >{{ errors.password[0] }}</span
+                                    >
+                                    <div class="input-group mb-3">
+                                        <input
+                                            v-model="form.password"
+                                            class="form-control  shadow-none"
+                                            placeholder="Password"
+                                            id="password"
+                                            v-bind:type="[
+                                                showPassword
+                                                    ? 'text'
+                                                    : 'password'
+                                            ]"
+                                        />
+
+                                        <div class="input-group-append">
+                                            <span
+                                                class="input-group-text "
+                                                @click="
+                                                    showPassword = !showPassword
+                                                "
+                                            >
+                                                <i
+                                                    class="fa"
+                                                    :class="[
+                                                        showPassword
+                                                            ? 'fa-eye'
+                                                            : 'fa-eye-slash'
+                                                    ]"
+                                                    aria-hidden="true"
+                                                ></i>
+                                            </span>
+                                        </div>
                                     </div>
                                 </div>
                                 <a href="" style="text-decoration:none;"
@@ -62,13 +77,14 @@
                                     <button
                                         type="button"
                                         class="btn btn-aura btn-md btn-block text-white shadow-none  aura-font"
+                                        @click.prevent="login"
                                     >
                                         Sign In
                                     </button>
                                 </div>
 
                                 <a
-                                    href="/signup"
+                                    href="/register"
                                     class="text-right form-text "
                                     style="text-decoration:none; font-size:14px;"
                                 >
@@ -138,14 +154,37 @@
 </template>
 
 <script>
+import User from "../../apis/User";
+
 export default {
     name: "Login",
     data() {
         return {
-            email: "",
-            password: "",
-            showPassword: false
+            form: {
+                email: "",
+                password: ""
+            },
+            showPassword: false,
+            errors: []
         };
+    },
+
+    methods: {
+        /* -------------------------------------------------------------------------- */
+        /*                                   Login @param- form data                   */
+        /* -------------------------------------------------------------------------- */
+        login() {
+            User.login(this.form)
+                .then(response => {
+                    localStorage.setItem("token", response.data.token);
+                    this.$router.push({ name: "dashboard" });
+                })
+                .catch(errors => {
+                    if (errors.response.status == 400) {
+                        this.errors = errors.response.data;
+                    }
+                });
+        }
     }
 };
 </script>

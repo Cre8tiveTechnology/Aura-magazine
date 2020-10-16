@@ -49,12 +49,36 @@ const router = new VueRouter({
     }
 })
 
+function isLoggedIn ()
+{
+    return localStorage.getItem("token");
+}
 router.beforeResolve((to,from,next) =>
 {
-    // If this isn't an initial page load.
     if (to.name) {
-        // Start the route progress bar.
         NProgress.start()
+
+        if (to.matched.some(record => record.meta.authOnly)) {
+
+            if (!isLoggedIn()) {
+                next({
+                    path: "/login",
+                });
+            } else {
+                next()
+
+            }
+        } else if (to.matched.some(record => record.meta.guestOnly)) {
+            if (isLoggedIn()) {
+                next({
+                    path: "/dashboard",
+                });
+            } else {
+                next()
+
+            }
+        }
+
     }
     next()
 })
