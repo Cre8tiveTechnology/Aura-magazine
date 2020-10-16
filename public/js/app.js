@@ -1920,7 +1920,8 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 /* harmony default export */ __webpack_exports__["default"] = ({
-  name: "App"
+  name: "App",
+  mounted: function mounted() {}
 });
 
 /***/ }),
@@ -2047,6 +2048,218 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 //
 //
 //
@@ -4135,9 +4348,9 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/pages/auth/login.vue?vue&type=script&lang=js&":
+/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/pages/auth/Login.vue?vue&type=script&lang=js&":
 /*!****************************************************************************************************************************************************************!*\
-  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/pages/auth/login.vue?vue&type=script&lang=js& ***!
+  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/pages/auth/Login.vue?vue&type=script&lang=js& ***!
   \****************************************************************************************************************************************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
@@ -4166,17 +4379,287 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: "Login",
   data: function data() {
     return {
-      p: {
-        name: "Product Name",
-        image: "https://images.unsplash.com/photo-1483985988355-763728e1935b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80",
-        caption: "It’s a landmark moment in anyone’s life",
-        currency: "₦",
-        price: "200,000.00"
-      }
+      email: "",
+      password: "",
+      showPassword: false
+    };
+  }
+});
+
+/***/ }),
+
+/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/pages/auth/Register.vue?vue&type=script&lang=js&":
+/*!*******************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/pages/auth/Register.vue?vue&type=script&lang=js& ***!
+  \*******************************************************************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+/* harmony default export */ __webpack_exports__["default"] = ({
+  name: "Login",
+  data: function data() {
+    return {
+      email: "",
+      password: "",
+      showPassword: false
     };
   }
 });
@@ -8615,7 +9098,7 @@ exports = module.exports = __webpack_require__(/*! ../../node_modules/css-loader
 
 
 // module
-exports.push([module.i, "\n.fade-enter-active[data-v-f348271a],\n.fade-leave-active[data-v-f348271a] {\n  transition-duration: 0.3s;\n  transition-property: opacity;\n  transition-timing-function: ease;\n}\n.fade-enter[data-v-f348271a],\n.fade-leave-active[data-v-f348271a] {\n  opacity: 0;\n}\n", ""]);
+exports.push([module.i, "\n.fade-enter-active[data-v-f348271a],\n.fade-leave-active[data-v-f348271a] {\n    transition-duration: 0.3s;\n    transition-property: opacity;\n    transition-timing-function: ease;\n}\n.fade-enter[data-v-f348271a],\n.fade-leave-active[data-v-f348271a] {\n    opacity: 0;\n}\n", ""]);
 
 // exports
 
@@ -41215,14 +41698,10 @@ var staticRenderFns = [
           staticStyle: { "background-color": "#676465 !important" }
         },
         [
-          _c(
-            "h5",
-            { staticClass: "aura-font font-weight-bold ml-0 mt-4 text-white" },
-            [
-              _vm._v("\n      Top Stories\n      "),
-              _c("i", { staticClass: "fa fa-angle-right text-aura" })
-            ]
-          ),
+          _c("h5", { staticClass: "font-weight-bold ml-0 mt-4 text-white" }, [
+            _vm._v("\n            Top Stories\n            "),
+            _c("i", { staticClass: "fa fa-angle-right text-aura" })
+          ]),
           _vm._v(" "),
           _c(
             "div",
@@ -41259,12 +41738,12 @@ var staticRenderFns = [
                         _c(
                           "h4",
                           {
-                            staticClass: "card-title aura-font",
+                            staticClass: "card-title ",
                             staticStyle: { "font-size": "30px" }
                           },
                           [
                             _vm._v(
-                              "\n                Being Everywoman Is Katie Porter's Superpower\n              "
+                              "\n                                Being Everywoman Is Katie Porter's\n                                Superpower\n                            "
                             )
                           ]
                         ),
@@ -41273,7 +41752,7 @@ var staticRenderFns = [
                         _vm._v(" "),
                         _c("p", { staticClass: "card-text mt-2" }, [
                           _vm._v(
-                            "\n                This is a wider card with supporting text below as a natural\n                lead-in to additional content. This content is a little bit\n                longer.\n              "
+                            "\n                                This is a wider card with supporting text\n                                below as a natural lead-in to additional\n                                content. This content is a little bit\n                                longer.\n                            "
                           )
                         ])
                       ]
@@ -41305,12 +41784,12 @@ var staticRenderFns = [
                         _c(
                           "h4",
                           {
-                            staticClass: "card-title aura-font",
+                            staticClass: "card-title ",
                             staticStyle: { "font-size": "30px" }
                           },
                           [
                             _vm._v(
-                              "\n                Being Everywoman Is Katie Porter's Superpower\n              "
+                              "\n                                Being Everywoman Iorter's Superpower\n                            "
                             )
                           ]
                         ),
@@ -41319,7 +41798,7 @@ var staticRenderFns = [
                         _vm._v(" "),
                         _c("p", { staticClass: "card-text mt-2" }, [
                           _vm._v(
-                            "\n                This is a wider card with supporting text below as a natural\n                lead-in to additional content. This content is a little bit\n                longer.\n              "
+                            "\n                                This is a wider card with supporting text\n                                below as a natural lead-in to additional\n                                content. This content is a little bit\n                                longer.\n                            "
                           )
                         ])
                       ]
@@ -41350,12 +41829,12 @@ var staticRenderFns = [
                         _c(
                           "h4",
                           {
-                            staticClass: "card-title aura-font",
+                            staticClass: "card-title ",
                             staticStyle: { "font-size": "30px" }
                           },
                           [
                             _vm._v(
-                              "\n                Being Everywoman Is Katie Porter's Superpower\n              "
+                              "\n                                Being Everywoman Is Katie Porter's\n                                Superpower\n                            "
                             )
                           ]
                         ),
@@ -41364,7 +41843,7 @@ var staticRenderFns = [
                         _vm._v(" "),
                         _c("p", { staticClass: "card-text mt-2" }, [
                           _vm._v(
-                            "\n                This is a wider card with supporting text below as a natural\n                lead-in to additional content. This content is a little bit\n                longer.\n              "
+                            "\n                                This is a wider card with supporting text\n                                below as a natural lead-in to additional\n                                content. This content is a little bit\n                                longer.\n                            "
                           )
                         ])
                       ]
@@ -41388,11 +41867,11 @@ var staticRenderFns = [
           _c(
             "h5",
             {
-              staticClass: "aura-font font-weight-bold mt-4 text-white",
+              staticClass: "font-weight-bold mt-4 text-white",
               staticStyle: { "margin-left": "7.5em" }
             },
             [
-              _vm._v("\n      Top Stories\n      "),
+              _vm._v("\n            Top Stories\n            "),
               _c("i", { staticClass: "fa fa-angle-right text-aura" })
             ]
           ),
@@ -41432,12 +41911,12 @@ var staticRenderFns = [
                         _c(
                           "h4",
                           {
-                            staticClass: "card-title aura-font",
+                            staticClass: "card-title ",
                             staticStyle: { "font-size": "30px" }
                           },
                           [
                             _vm._v(
-                              "\n                Being Everywoman Is Katie Porter's Superpower\n              "
+                              "\n                                Being Everywoman Is Katie Porter's\n                                Superpower\n                            "
                             )
                           ]
                         ),
@@ -41446,7 +41925,7 @@ var staticRenderFns = [
                         _vm._v(" "),
                         _c("p", { staticClass: "card-text mt-2" }, [
                           _vm._v(
-                            "\n                This is a wider card with supporting text below as a natural\n                lead-in to additional content. This content is a little bit\n                longer.\n              "
+                            "\n                                This is a wider card with supporting text\n                                below as a natural lead-in to additional\n                                content. This content is a little bit\n                                longer.\n                            "
                           )
                         ])
                       ]
@@ -41478,12 +41957,12 @@ var staticRenderFns = [
                         _c(
                           "h4",
                           {
-                            staticClass: "card-title aura-font",
+                            staticClass: "card-title ",
                             staticStyle: { "font-size": "30px" }
                           },
                           [
                             _vm._v(
-                              "\n                Being Everywoman Is Katie Porter's Superpower\n              "
+                              "\n                                Being Everywoman Is Katie Porter's\n                                Superpower\n                            "
                             )
                           ]
                         ),
@@ -41492,7 +41971,7 @@ var staticRenderFns = [
                         _vm._v(" "),
                         _c("p", { staticClass: "card-text mt-2" }, [
                           _vm._v(
-                            "\n                This is a wider card with supporting text below as a natural\n                lead-in to additional content. This content is a little bit\n                longer.\n              "
+                            "\n                                This is a wider card with supporting text\n                                below as a natural lead-in to additional\n                                content. This content is a little bit\n                                longer.\n                            "
                           )
                         ])
                       ]
@@ -41523,12 +42002,12 @@ var staticRenderFns = [
                         _c(
                           "h4",
                           {
-                            staticClass: "card-title aura-font",
+                            staticClass: "card-title ",
                             staticStyle: { "font-size": "30px" }
                           },
                           [
                             _vm._v(
-                              "\n                Being Everywoman Is Katie Porter's Superpower\n              "
+                              "\n                                Being Everywoman Is Katie Porter's\n                                Superpower\n                            "
                             )
                           ]
                         ),
@@ -41537,7 +42016,7 @@ var staticRenderFns = [
                         _vm._v(" "),
                         _c("p", { staticClass: "card-text mt-2" }, [
                           _vm._v(
-                            "\n                This is a wider card with supporting text below as a natural\n                lead-in to additional content. This content is a little bit\n                longer.\n              "
+                            "\n                                This is a wider card with supporting text\n                                below as a natural lead-in to additional\n                                content. This content is a little bit\n                                longer.\n                            "
                           )
                         ])
                       ]
@@ -41598,104 +42077,122 @@ var staticRenderFns = [
             "div",
             {
               staticClass:
-                "row justify-content-lg-between justify-content-md-around justify-content-sm-center justify-content-center"
+                "row justify-content-lg-between justify-content-md-around justify-content-sm-center justify-content-center "
             },
             [
-              _c("div", { staticClass: "col-12 col-sm-10 col-md-6 col-lg-3" }, [
-                _c("div", { staticClass: "card p-3" }, [
-                  _c("div", { staticClass: "inner" }, [
-                    _c("img", {
-                      staticClass: "card-img-top p-1",
-                      attrs: {
-                        src:
-                          "https://images.unsplash.com/photo-1483985988355-763728e1935b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80",
-                        alt: "Card Image"
-                      }
-                    })
-                  ]),
-                  _vm._v(" "),
-                  _c("div", { staticClass: "card-body px-0" }, [
-                    _c("p", { staticClass: "story-card-font-1" }, [
-                      _vm._v(
-                        "\n              Excepteur sint occaecat cupidatatnon proident, sunt in culpa qui\n              ocial deserunt mollit anim tujln.kaeei do.\n            "
-                      )
+              _c(
+                "div",
+                {
+                  staticClass:
+                    "col-12 col-sm-10 col-md-6 col-lg-3 mb-md-3 mb-sm-3"
+                },
+                [
+                  _c("div", { staticClass: "card p-3 shadow-sm" }, [
+                    _c("div", { staticClass: "inner" }, [
+                      _c("img", {
+                        staticClass: "card-img-top p-1",
+                        attrs: {
+                          src:
+                            "https://images.unsplash.com/photo-1483985988355-763728e1935b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80",
+                          alt: "Card Image"
+                        }
+                      })
                     ]),
                     _vm._v(" "),
-                    _c("hr", { staticClass: "story-card-hr" }),
-                    _vm._v(" "),
-                    _c("p", { staticClass: "story-card-font-2" }, [
-                      _vm._v(
-                        "\n              Money to many is very thig wufr ubneuid nqhfioef aeuaean qoi4ii\n              JOECAER UJCUIW\n            "
-                      )
+                    _c("div", { staticClass: "card-body px-0" }, [
+                      _c("p", { staticClass: "story-card-font-1" }, [
+                        _vm._v(
+                          "\n                            Excepteur sint occaecat cupidatatnon proident,\n                            sunt in culpa qui ocial deserunt mollit anim\n                            tujln.kaeei do.\n                        "
+                        )
+                      ]),
+                      _vm._v(" "),
+                      _c("hr", { staticClass: "story-card-hr" }),
+                      _vm._v(" "),
+                      _c("p", { staticClass: "story-card-font-2" }, [
+                        _vm._v(
+                          "\n                            Money to many is very thig wufr ubneuid nqhfioef\n                            aeuaean qoi4ii JOECAER UJCUIW\n                        "
+                        )
+                      ])
                     ])
                   ])
-                ])
-              ]),
+                ]
+              ),
               _vm._v(" "),
-              _c("div", { staticClass: "col-12 col-sm-10 col-md-6 col-lg-3" }, [
-                _c("div", { staticClass: "card p-3" }, [
-                  _c("div", { staticClass: "inner" }, [
-                    _c("img", {
-                      staticClass: "card-img-top p-1",
-                      attrs: {
-                        src:
-                          "https://images.unsplash.com/photo-1483985988355-763728e1935b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80",
-                        alt: "Card Image"
-                      }
-                    })
-                  ]),
-                  _vm._v(" "),
-                  _c("div", { staticClass: "card-body px-0" }, [
-                    _c("p", { staticClass: "story-card-font-1" }, [
-                      _vm._v(
-                        "\n              Excepteur sint occaecat cupidatatnon proident, sunt in culpa qui\n              ocial deserunt mollit anim tujln.kaeei do.\n            "
-                      )
+              _c(
+                "div",
+                {
+                  staticClass:
+                    "col-12 col-sm-10 col-md-6 col-lg-3 mb-md-3 mb-sm-5"
+                },
+                [
+                  _c("div", { staticClass: "card p-3 shadow-sm" }, [
+                    _c("div", { staticClass: "inner" }, [
+                      _c("img", {
+                        staticClass: "card-img-top p-1",
+                        attrs: {
+                          src:
+                            "https://images.unsplash.com/photo-1483985988355-763728e1935b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80",
+                          alt: "Card Image"
+                        }
+                      })
                     ]),
                     _vm._v(" "),
-                    _c("hr", { staticClass: "story-card-hr" }),
-                    _vm._v(" "),
-                    _c("p", { staticClass: "story-card-font-2" }, [
-                      _vm._v(
-                        "\n              Money to many is very thig wufr ubneuid nqhfioef aeuaean qoi4ii\n              JOECAER UJCUIW\n            "
-                      )
+                    _c("div", { staticClass: "card-body px-0" }, [
+                      _c("p", { staticClass: "story-card-font-1" }, [
+                        _vm._v(
+                          "\n                            Excepteur sint occaecat cupidatatnon proident,\n                            sunt in culpa qui ocial deserunt mollit anim\n                            tujln.kaeei do.\n                        "
+                        )
+                      ]),
+                      _vm._v(" "),
+                      _c("hr", { staticClass: "story-card-hr" }),
+                      _vm._v(" "),
+                      _c("p", { staticClass: "story-card-font-2" }, [
+                        _vm._v(
+                          "\n                            Money to many is very thig wufr ubneuid nqhfioef\n                            aeuaean qoi4ii JOECAER UJCUIW\n                        "
+                        )
+                      ])
                     ])
                   ])
-                ])
-              ]),
+                ]
+              ),
               _vm._v(" "),
-              _c("div", { staticClass: "col-12 col-sm-10 col-md-6 col-lg-3" }, [
-                _c("div", { staticClass: "card p-3" }, [
-                  _c("div", { staticClass: "inner" }, [
-                    _c("img", {
-                      staticClass: "card-img-top p-1",
-                      attrs: {
-                        src:
-                          "https://images.unsplash.com/photo-1483985988355-763728e1935b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80",
-                        alt: "Card Image"
-                      }
-                    })
-                  ]),
-                  _vm._v(" "),
-                  _c("div", { staticClass: "card-body px-0" }, [
-                    _c("p", { staticClass: "story-card-font-1" }, [
-                      _vm._v(
-                        "\n              Excepteur sint occaecat cupidatatnon proident, sunt in culpa qui\n              ocial deserunt mollit anim tujln.kaeei do.\n            "
-                      )
+              _c(
+                "div",
+                { staticClass: "col-12 col-sm-10 col-md-6 col-lg-3 mb-sm-3" },
+                [
+                  _c("div", { staticClass: "card p-3 shadow-sm" }, [
+                    _c("div", { staticClass: "inner" }, [
+                      _c("img", {
+                        staticClass: "card-img-top p-1",
+                        attrs: {
+                          src:
+                            "https://images.unsplash.com/photo-1483985988355-763728e1935b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80",
+                          alt: "Card Image"
+                        }
+                      })
                     ]),
                     _vm._v(" "),
-                    _c("hr", { staticClass: "story-card-hr" }),
-                    _vm._v(" "),
-                    _c("p", { staticClass: "story-card-font-2" }, [
-                      _vm._v(
-                        "\n              Money to many is very thig wufr ubneuid nqhfioef aeuaean qoi4ii\n              JOECAER UJCUIW\n            "
-                      )
+                    _c("div", { staticClass: "card-body px-0" }, [
+                      _c("p", { staticClass: "story-card-font-1" }, [
+                        _vm._v(
+                          "\n                            Excepteur sint occaecat cupidatatnon proident,\n                            sunt in culpa qui ocial deserunt mollit anim\n                            tujln.kaeei do.\n                        "
+                        )
+                      ]),
+                      _vm._v(" "),
+                      _c("hr", { staticClass: "story-card-hr" }),
+                      _vm._v(" "),
+                      _c("p", { staticClass: "story-card-font-2" }, [
+                        _vm._v(
+                          "\n                            Money to many is very thig wufr ubneuid nqhfioef\n                            aeuaean qoi4ii JOECAER UJCUIW\n                        "
+                        )
+                      ])
                     ])
                   ])
-                ])
-              ]),
+                ]
+              ),
               _vm._v(" "),
               _c("div", { staticClass: "col-12 col-sm-10 col-md-6 col-lg-3" }, [
-                _c("div", { staticClass: "card p-3" }, [
+                _c("div", { staticClass: "card p-3 shadow-sm" }, [
                   _c("div", { staticClass: "inner" }, [
                     _c("img", {
                       staticClass: "card-img-top p-1",
@@ -41710,7 +42207,7 @@ var staticRenderFns = [
                   _c("div", { staticClass: "card-body px-0" }, [
                     _c("p", { staticClass: "story-card-font-1" }, [
                       _vm._v(
-                        "\n              Excepteur sint occaecat cupidatatnon proident, sunt in culpa qui\n              ocial deserunt mollit anim tujln.kaeei do.\n            "
+                        "\n                            Excepteur sint occaecat cupidatatnon proident,\n                            sunt in culpa qui ocial deserunt mollit anim\n                            tujln.kaeei do.\n                        "
                       )
                     ]),
                     _vm._v(" "),
@@ -41718,7 +42215,7 @@ var staticRenderFns = [
                     _vm._v(" "),
                     _c("p", { staticClass: "story-card-font-2" }, [
                       _vm._v(
-                        "\n              Money to many is very thig wufr ubneuid nqhfioef aeuaean qoi4ii\n              JOECAER UJCUIW\n            "
+                        "\n                            Money to many is very thig wufr ubneuid nqhfioef\n                            aeuaean qoi4ii JOECAER UJCUIW\n                        "
                       )
                     ])
                   ])
@@ -41753,7 +42250,7 @@ var staticRenderFns = [
                 },
                 [_vm._v("+")]
               ),
-              _vm._v(" NEWS\n      ")
+              _vm._v("\n                NEWS\n            ")
             ]
           ),
           _vm._v(" "),
@@ -41773,12 +42270,12 @@ var staticRenderFns = [
                   _c(
                     "h4",
                     {
-                      staticClass: "card-title aura-font font-weight-bold",
+                      staticClass: "card-title font-weight-bold",
                       staticStyle: { "font-size": "30px" }
                     },
                     [
                       _vm._v(
-                        "\n                Being Everywoman Is Katie Porter's Superpower\n              "
+                        "\n                                Being Everywoman Is Katie Porter's\n                                Superpower\n                            "
                       )
                     ]
                   ),
@@ -41834,9 +42331,9 @@ var staticRenderFns = [
                   }),
                   _vm._v(" "),
                   _c("div", { staticClass: "media-body" }, [
-                    _c("h5", { staticClass: "mt-0 mb-1 aura-font" }, [
+                    _c("h5", { staticClass: "mt-0 mb-1 " }, [
                       _vm._v(
-                        "\n                  The Wing Still Has a Long Way To Go\n                "
+                        "\n                                    The Wing Still Has a Long Way To Go\n                                "
                       )
                     ])
                   ])
@@ -41853,9 +42350,9 @@ var staticRenderFns = [
                   }),
                   _vm._v(" "),
                   _c("div", { staticClass: "media-body" }, [
-                    _c("h5", { staticClass: "mt-0 mb-1 aura-font" }, [
+                    _c("h5", { staticClass: "mt-0 mb-1 " }, [
                       _vm._v(
-                        "\n                  The Wing Still Has a Long Way To Go\n                "
+                        "\n                                    The Wing Still Has a Long Way To Go\n                                "
                       )
                     ])
                   ])
@@ -41872,9 +42369,9 @@ var staticRenderFns = [
                   }),
                   _vm._v(" "),
                   _c("div", { staticClass: "media-body" }, [
-                    _c("h5", { staticClass: "mt-0 mb-1 aura-font" }, [
+                    _c("h5", { staticClass: "mt-0 mb-1 " }, [
                       _vm._v(
-                        "\n                  The Wing Still Has a Long Way To Go\n                "
+                        "\n                                    The Wing Still Has a Long Way To Go\n                                "
                       )
                     ])
                   ])
@@ -41891,9 +42388,9 @@ var staticRenderFns = [
                   }),
                   _vm._v(" "),
                   _c("div", { staticClass: "media-body" }, [
-                    _c("h5", { staticClass: "mt-0 mb-1 aura-font" }, [
+                    _c("h5", { staticClass: "mt-0 mb-1 " }, [
                       _vm._v(
-                        "\n                  The Wing Still Has a Long Way To Go\n                "
+                        "\n                                    The Wing Still Has a Long Way To Go\n                                "
                       )
                     ])
                   ])
@@ -41910,9 +42407,9 @@ var staticRenderFns = [
                   }),
                   _vm._v(" "),
                   _c("div", { staticClass: "media-body" }, [
-                    _c("h5", { staticClass: "mt-0 mb-1 aura-font" }, [
+                    _c("h5", { staticClass: "mt-0 mb-1 " }, [
                       _vm._v(
-                        "\n                  The Wing Still Has a Long Way To Go\n                "
+                        "\n                                    The Wing Still Has a Long Way To Go\n                                "
                       )
                     ])
                   ])
@@ -41950,7 +42447,7 @@ var staticRenderFns = [
                 },
                 [_vm._v("+")]
               ),
-              _vm._v(" FASHION\n      ")
+              _vm._v("\n                FASHION\n            ")
             ]),
             _vm._v(" "),
             _c("div", { staticClass: "card mx-auto border-0" }, [
@@ -41969,12 +42466,12 @@ var staticRenderFns = [
                   _c(
                     "h4",
                     {
-                      staticClass: "card-title aura-font font-weight-bold",
+                      staticClass: "card-title font-weight-bold",
                       staticStyle: { "font-size": "30px" }
                     },
                     [
                       _vm._v(
-                        "\n            Being Everywoman Is Katie Porter's Superpower Being\n          "
+                        "\n                        Being Everywoman Is Katie Porter's Superpower Being\n                    "
                       )
                     ]
                   ),
@@ -41986,91 +42483,130 @@ var staticRenderFns = [
             _vm._v(" "),
             _c(
               "div",
-              { staticClass: "card-group mx-auto border-0 rounded-0" },
+              {
+                staticClass:
+                  "row justify-content-lg-between justify-content-md-around justify-content-sm-center justify-content-center "
+              },
               [
-                _c("div", { staticClass: "card rounded-0" }, [
-                  _c("img", {
-                    staticClass: "card-img-top rounded-0",
-                    attrs: {
-                      src:
-                        "https://images.unsplash.com/photo-1496747611176-843222e1e57c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1352&q=80",
-                      alt: "Card image cap"
-                    }
-                  }),
-                  _vm._v(" "),
-                  _c("div", { staticClass: "card-body" }, [
-                    _c("h6", { staticClass: "card-title" }, [
-                      _vm._v(
-                        "\n              Fashion gist topics please readFashion gist topics please read\n            "
-                      )
-                    ]),
-                    _vm._v(" "),
-                    _c("hr", { staticClass: "card-hr-fashion" })
-                  ])
-                ]),
+                _c(
+                  "div",
+                  {
+                    staticClass:
+                      "col-12 col-sm-10 col-md-6 col-lg-3 mb-md-3 mb-sm-3"
+                  },
+                  [
+                    _c("div", { staticClass: "card p-3 shadow-sm" }, [
+                      _c("img", {
+                        staticClass: "card-img-top rounded-0",
+                        attrs: {
+                          src:
+                            "https://images.unsplash.com/photo-1496747611176-843222e1e57c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1352&q=80",
+                          alt: "Card image cap"
+                        }
+                      }),
+                      _vm._v(" "),
+                      _c("div", { staticClass: "card-body px-0" }, [
+                        _c("h6", { staticClass: "card-title " }, [
+                          _vm._v(
+                            "\n                                Fashion gist topics please readFashion gist\n                                topics please read\n                            "
+                          )
+                        ]),
+                        _vm._v(" "),
+                        _c("hr", { staticClass: "card-hr-fashion" })
+                      ])
+                    ])
+                  ]
+                ),
                 _vm._v(" "),
-                _c("div", { staticClass: "card rounded-0" }, [
-                  _c("img", {
-                    staticClass: "card-img-top rounded-0",
-                    attrs: {
-                      src:
-                        "https://images.unsplash.com/photo-1496747611176-843222e1e57c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1352&q=80",
-                      alt: "Card image cap"
-                    }
-                  }),
-                  _vm._v(" "),
-                  _c("div", { staticClass: "card-body" }, [
-                    _c("h6", { staticClass: "card-title" }, [
-                      _vm._v(
-                        "\n              Fashion gist topics please readFashion gist topics please read\n            "
-                      )
-                    ]),
-                    _vm._v(" "),
-                    _c("hr", { staticClass: "card-hr-fashion" })
-                  ])
-                ]),
+                _c(
+                  "div",
+                  {
+                    staticClass:
+                      "col-12 col-sm-10 col-md-6 col-lg-3 mb-md-3 mb-sm-3"
+                  },
+                  [
+                    _c("div", { staticClass: "card p-3 shadow-sm" }, [
+                      _c("img", {
+                        staticClass: "card-img-top rounded-0",
+                        attrs: {
+                          src:
+                            "https://images.unsplash.com/photo-1496747611176-843222e1e57c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1352&q=80",
+                          alt: "Card image cap"
+                        }
+                      }),
+                      _vm._v(" "),
+                      _c("div", { staticClass: "card-body px-0" }, [
+                        _c("h6", { staticClass: "card-title " }, [
+                          _vm._v(
+                            "\n                                Fashion gist topics please readFashion gist\n                                topics please read\n                            "
+                          )
+                        ]),
+                        _vm._v(" "),
+                        _c("hr", { staticClass: "card-hr-fashion" })
+                      ])
+                    ])
+                  ]
+                ),
                 _vm._v(" "),
-                _c("div", { staticClass: "card rounded-0" }, [
-                  _c("img", {
-                    staticClass: "card-img-top rounded-0",
-                    attrs: {
-                      src:
-                        "https://images.unsplash.com/photo-1496747611176-843222e1e57c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1352&q=80",
-                      alt: "Card image cap"
-                    }
-                  }),
-                  _vm._v(" "),
-                  _c("div", { staticClass: "card-body" }, [
-                    _c("h6", { staticClass: "card-title" }, [
-                      _vm._v(
-                        "\n              Fashion gist topics please read Fashion gist topics please read\n            "
-                      )
-                    ]),
-                    _vm._v(" "),
-                    _c("hr", { staticClass: "card-hr-fashion" })
-                  ])
-                ]),
+                _c(
+                  "div",
+                  {
+                    staticClass:
+                      "col-12 col-sm-10 col-md-6 col-lg-3 mb-md-3 mb-sm-3"
+                  },
+                  [
+                    _c("div", { staticClass: "card p-3 shadow-sm" }, [
+                      _c("img", {
+                        staticClass: "card-img-top rounded-0",
+                        attrs: {
+                          src:
+                            "https://images.unsplash.com/photo-1496747611176-843222e1e57c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1352&q=80",
+                          alt: "Card image cap"
+                        }
+                      }),
+                      _vm._v(" "),
+                      _c("div", { staticClass: "card-body px-0" }, [
+                        _c("h6", { staticClass: "card-title " }, [
+                          _vm._v(
+                            "\n                                Fashion gist topics please readFashion gist\n                                topics please read\n                            "
+                          )
+                        ]),
+                        _vm._v(" "),
+                        _c("hr", { staticClass: "card-hr-fashion" })
+                      ])
+                    ])
+                  ]
+                ),
                 _vm._v(" "),
-                _c("div", { staticClass: "card rounded-0" }, [
-                  _c("img", {
-                    staticClass: "card-img-top rounded-0",
-                    attrs: {
-                      src:
-                        "https://images.unsplash.com/photo-1496747611176-843222e1e57c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1352&q=80",
-                      alt: "Card image cap"
-                    }
-                  }),
-                  _vm._v(" "),
-                  _c("div", { staticClass: "card-body" }, [
-                    _c("h6", { staticClass: "card-title" }, [
-                      _vm._v(
-                        "\n              Fashion gist topics please read Fashion gist topics please read\n            "
-                      )
-                    ]),
-                    _vm._v(" "),
-                    _c("hr", { staticClass: "card-hr-fashion" })
-                  ])
-                ])
+                _c(
+                  "div",
+                  {
+                    staticClass:
+                      "col-12 col-sm-10 col-md-6 col-lg-3 mb-md-3 mb-sm-3"
+                  },
+                  [
+                    _c("div", { staticClass: "card p-3 shadow-sm" }, [
+                      _c("img", {
+                        staticClass: "card-img-top rounded-0",
+                        attrs: {
+                          src:
+                            "https://images.unsplash.com/photo-1496747611176-843222e1e57c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1352&q=80",
+                          alt: "Card image cap"
+                        }
+                      }),
+                      _vm._v(" "),
+                      _c("div", { staticClass: "card-body px-0" }, [
+                        _c("h6", { staticClass: "card-title " }, [
+                          _vm._v(
+                            "\n                                Fashion gist topics please readFashion gist\n                                topics please read\n                            "
+                          )
+                        ]),
+                        _vm._v(" "),
+                        _c("hr", { staticClass: "card-hr-fashion" })
+                      ])
+                    ])
+                  ]
+                )
               ]
             ),
             _vm._v(" "),
@@ -42089,7 +42625,7 @@ var staticRenderFns = [
                         "col-12 row justify-content-center align-items-baseline"
                     },
                     [
-                      _c("h5", { staticClass: "mr-2" }, [_vm._v("SEE MORE")]),
+                      _c("h5", { staticClass: "mr-2 " }, [_vm._v("SEE MORE")]),
                       _vm._v(" "),
                       _c("i", {
                         staticClass: "see-more-icon fa fa-chevron-circle-right"
@@ -42124,7 +42660,7 @@ var staticRenderFns = [
               },
               [_vm._v("+")]
             ),
-            _vm._v(" BEAUTY\n      ")
+            _vm._v("\n                BEAUTY\n            ")
           ]),
           _vm._v(" "),
           _c("div", { staticClass: "row mb-5" }, [
@@ -42134,17 +42670,17 @@ var staticRenderFns = [
                 staticClass: "col-md-6 col-lg-6 col-xl-6 col-sm-6 col-xs-6 p-3"
               },
               [
-                _c("h4", { staticClass: "aura-font font-weight-bolder pr-3" }, [
+                _c("h4", { staticClass: "font-weight-bolder pr-3" }, [
                   _vm._v(
-                    "\n            ‘I Could Have Been One of Them’: Monica Ortiz Uribe on ‘Forgotten:\n            The Women of Juarez’\n          "
+                    "\n                        ‘I Could Have Been One of Them’: Monica Ortiz Uribe\n                        on ‘Forgotten: The Women of Juarez’\n                    "
                   )
                 ]),
                 _vm._v(" "),
                 _c("hr", { staticClass: "card-hr-fashion" }),
                 _vm._v(" "),
-                _c("p", { staticClass: "aura-font mt-2" }, [
+                _c("p", { staticClass: "mt-2" }, [
                   _vm._v(
-                    "\n            In her new podcast, the El Paso journalist seeks justice for women\n            disappearing on the U.S.-Mexico border.\n          "
+                    "\n                        In her new podcast, the El Paso journalist seeks\n                        justice for women disappearing on the U.S.-Mexico\n                        border.\n                    "
                   )
                 ])
               ]
@@ -42169,91 +42705,134 @@ var staticRenderFns = [
             )
           ]),
           _vm._v(" "),
-          _c("div", { staticClass: "card-group mx-auto border-0 rounded-0" }, [
-            _c("div", { staticClass: "card rounded-0" }, [
-              _c("img", {
-                staticClass: "card-img-top rounded-0",
-                attrs: {
-                  src:
-                    "https://images.unsplash.com/photo-1496747611176-843222e1e57c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1352&q=80",
-                  alt: "Card image cap"
-                }
-              }),
+          _c(
+            "div",
+            {
+              staticClass:
+                "row justify-content-lg-between justify-content-md-around justify-content-sm-center justify-content-center "
+            },
+            [
+              _c(
+                "div",
+                {
+                  staticClass:
+                    "col-12 col-sm-10 col-md-6 col-lg-3 mb-md-3 mb-sm-3"
+                },
+                [
+                  _c("div", { staticClass: "card p-3 shadow-sm" }, [
+                    _c("img", {
+                      staticClass: "card-img-top rounded-0",
+                      attrs: {
+                        src:
+                          "https://images.unsplash.com/photo-1496747611176-843222e1e57c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1352&q=80",
+                        alt: "Card image cap"
+                      }
+                    }),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "card-body px-0" }, [
+                      _c("h6", { staticClass: "card-title " }, [
+                        _vm._v(
+                          "\n                                Fashion gist topics please readFashion gist\n                                topics please read\n                            "
+                        )
+                      ]),
+                      _vm._v(" "),
+                      _c("hr", { staticClass: "card-hr-fashion" })
+                    ])
+                  ])
+                ]
+              ),
               _vm._v(" "),
-              _c("div", { staticClass: "card-body" }, [
-                _c("h6", { staticClass: "card-title" }, [
-                  _vm._v(
-                    "\n              Fashion gist topics please readFashion gist topics please read\n            "
-                  )
-                ]),
-                _vm._v(" "),
-                _c("hr", { staticClass: "card-hr-fashion" })
-              ])
-            ]),
-            _vm._v(" "),
-            _c("div", { staticClass: "card rounded-0" }, [
-              _c("img", {
-                staticClass: "card-img-top rounded-0",
-                attrs: {
-                  src:
-                    "https://images.unsplash.com/photo-1496747611176-843222e1e57c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1352&q=80",
-                  alt: "Card image cap"
-                }
-              }),
+              _c(
+                "div",
+                {
+                  staticClass:
+                    "col-12 col-sm-10 col-md-6 col-lg-3 mb-md-3 mb-sm-3"
+                },
+                [
+                  _c("div", { staticClass: "card p-3 shadow-sm" }, [
+                    _c("img", {
+                      staticClass: "card-img-top rounded-0",
+                      attrs: {
+                        src:
+                          "https://images.unsplash.com/photo-1496747611176-843222e1e57c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1352&q=80",
+                        alt: "Card image cap"
+                      }
+                    }),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "card-body px-0" }, [
+                      _c("h6", { staticClass: "card-title " }, [
+                        _vm._v(
+                          "\n                                Fashion gist topics please readFashion gist\n                                topics please read\n                            "
+                        )
+                      ]),
+                      _vm._v(" "),
+                      _c("hr", { staticClass: "card-hr-fashion" })
+                    ])
+                  ])
+                ]
+              ),
               _vm._v(" "),
-              _c("div", { staticClass: "card-body" }, [
-                _c("h6", { staticClass: "card-title" }, [
-                  _vm._v(
-                    "\n              Fashion gist topics please readFashion gist topics please read\n            "
-                  )
-                ]),
-                _vm._v(" "),
-                _c("hr", { staticClass: "card-hr-fashion" })
-              ])
-            ]),
-            _vm._v(" "),
-            _c("div", { staticClass: "card rounded-0" }, [
-              _c("img", {
-                staticClass: "card-img-top rounded-0",
-                attrs: {
-                  src:
-                    "https://images.unsplash.com/photo-1496747611176-843222e1e57c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1352&q=80",
-                  alt: "Card image cap"
-                }
-              }),
+              _c(
+                "div",
+                {
+                  staticClass:
+                    "col-12 col-sm-10 col-md-6 col-lg-3 mb-md-3 mb-sm-3"
+                },
+                [
+                  _c("div", { staticClass: "card p-3 shadow-sm" }, [
+                    _c("img", {
+                      staticClass: "card-img-top rounded-0",
+                      attrs: {
+                        src:
+                          "https://images.unsplash.com/photo-1496747611176-843222e1e57c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1352&q=80",
+                        alt: "Card image cap"
+                      }
+                    }),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "card-body px-0" }, [
+                      _c("h6", { staticClass: "card-title" }, [
+                        _vm._v(
+                          "\n                                Fashion gist topics please readFashion gist\n                                topics please read\n                            "
+                        )
+                      ]),
+                      _vm._v(" "),
+                      _c("hr", { staticClass: "card-hr-fashion" })
+                    ])
+                  ])
+                ]
+              ),
               _vm._v(" "),
-              _c("div", { staticClass: "card-body" }, [
-                _c("h6", { staticClass: "card-title" }, [
-                  _vm._v(
-                    "\n              Fashion gist topics please read Fashion gist topics please read\n            "
-                  )
-                ]),
-                _vm._v(" "),
-                _c("hr", { staticClass: "card-hr-fashion" })
-              ])
-            ]),
-            _vm._v(" "),
-            _c("div", { staticClass: "card rounded-0" }, [
-              _c("img", {
-                staticClass: "card-img-top rounded-0",
-                attrs: {
-                  src:
-                    "https://images.unsplash.com/photo-1496747611176-843222e1e57c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1352&q=80",
-                  alt: "Card image cap"
-                }
-              }),
-              _vm._v(" "),
-              _c("div", { staticClass: "card-body" }, [
-                _c("h6", { staticClass: "card-title" }, [
-                  _vm._v(
-                    "\n              Fashion gist topics please read Fashion gist topics please read\n            "
-                  )
-                ]),
-                _vm._v(" "),
-                _c("hr", { staticClass: "card-hr-fashion" })
-              ])
-            ])
-          ]),
+              _c(
+                "div",
+                {
+                  staticClass:
+                    "col-12 col-sm-10 col-md-6 col-lg-3 mb-md-3 mb-sm-3"
+                },
+                [
+                  _c("div", { staticClass: "card p-3 shadow-sm" }, [
+                    _c("img", {
+                      staticClass: "card-img-top rounded-0",
+                      attrs: {
+                        src:
+                          "https://images.unsplash.com/photo-1496747611176-843222e1e57c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1352&q=80",
+                        alt: "Card image cap"
+                      }
+                    }),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "card-body px-0" }, [
+                      _c("h6", { staticClass: "card-title" }, [
+                        _vm._v(
+                          "\n                                Fashion gist topics please readFashion gist\n                                topics please read\n                            "
+                        )
+                      ]),
+                      _vm._v(" "),
+                      _c("hr", { staticClass: "card-hr-fashion" })
+                    ])
+                  ])
+                ]
+              )
+            ]
+          ),
           _vm._v(" "),
           _c("div", { staticClass: "container mt-5 mb-5 text-center" }, [
             _c(
@@ -42307,110 +42886,146 @@ var staticRenderFns = [
                 },
                 [_vm._v("+")]
               ),
-              _vm._v(" CULTURE\n      ")
+              _vm._v("\n                CULTURE\n            ")
             ]),
             _vm._v(" "),
             _c(
               "div",
-              { staticClass: "card-group mx-auto border-0 rounded-0" },
+              {
+                staticClass:
+                  "row justify-content-lg-between justify-content-md-around justify-content-sm-center justify-content-center "
+              },
               [
-                _c("div", { staticClass: "card rounded-0" }, [
-                  _c("img", {
-                    staticClass: "card-img-top rounded-0",
-                    attrs: {
-                      src:
-                        "https://images.unsplash.com/photo-1496747611176-843222e1e57c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1352&q=80",
-                      alt: "Card image cap"
-                    }
-                  }),
-                  _vm._v(" "),
-                  _c("div", { staticClass: "card-body" }, [
-                    _c("h6", { staticClass: "card-title" }, [
-                      _vm._v(
-                        "\n              Fashion gist topics please readFashion gist topics please read\n            "
-                      )
-                    ]),
-                    _vm._v(" "),
-                    _c("hr", { staticClass: "card-hr-fashion" })
-                  ])
-                ]),
+                _c(
+                  "div",
+                  {
+                    staticClass:
+                      "col-12 col-sm-10 col-md-6 col-lg-3 mb-md-3 mb-sm-3"
+                  },
+                  [
+                    _c("div", { staticClass: "card p-3 shadow-sm" }, [
+                      _c("img", {
+                        staticClass: "card-img-top rounded-0",
+                        attrs: {
+                          src:
+                            "https://images.unsplash.com/photo-1496747611176-843222e1e57c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1352&q=80",
+                          alt: "Card image cap"
+                        }
+                      }),
+                      _vm._v(" "),
+                      _c("div", { staticClass: "card-body px-0" }, [
+                        _c("h6", { staticClass: "card-title" }, [
+                          _vm._v(
+                            "\n                                Fashion gist topics please readFashion gist\n                                topics please read\n                            "
+                          )
+                        ]),
+                        _vm._v(" "),
+                        _c("hr", { staticClass: "card-hr-fashion" })
+                      ])
+                    ])
+                  ]
+                ),
                 _vm._v(" "),
-                _c("div", { staticClass: "card rounded-0" }, [
-                  _c("img", {
-                    staticClass: "card-img-top rounded-0",
-                    attrs: {
-                      src:
-                        "https://images.unsplash.com/photo-1496747611176-843222e1e57c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1352&q=80",
-                      alt: "Card image cap"
-                    }
-                  }),
-                  _vm._v(" "),
-                  _c("div", { staticClass: "card-body" }, [
-                    _c("h6", { staticClass: "card-title" }, [
-                      _vm._v(
-                        "\n              Fashion gist topics please readFashion gist topics please read\n            "
-                      )
-                    ]),
-                    _vm._v(" "),
-                    _c("hr", { staticClass: "card-hr-fashion" })
-                  ])
-                ]),
+                _c(
+                  "div",
+                  {
+                    staticClass:
+                      "col-12 col-sm-10 col-md-6 col-lg-3 mb-md-3 mb-sm-3"
+                  },
+                  [
+                    _c("div", { staticClass: "card p-3 shadow-sm" }, [
+                      _c("img", {
+                        staticClass: "card-img-top rounded-0",
+                        attrs: {
+                          src:
+                            "https://images.unsplash.com/photo-1496747611176-843222e1e57c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1352&q=80",
+                          alt: "Card image cap"
+                        }
+                      }),
+                      _vm._v(" "),
+                      _c("div", { staticClass: "card-body px-0" }, [
+                        _c("h6", { staticClass: "card-title" }, [
+                          _vm._v(
+                            "\n                                Fashion gist topics please readFashion gist\n                                topics please read\n                            "
+                          )
+                        ]),
+                        _vm._v(" "),
+                        _c("hr", { staticClass: "card-hr-fashion" })
+                      ])
+                    ])
+                  ]
+                ),
                 _vm._v(" "),
-                _c("div", { staticClass: "card rounded-0" }, [
-                  _c("img", {
-                    staticClass: "card-img-top rounded-0",
-                    attrs: {
-                      src:
-                        "https://images.unsplash.com/photo-1496747611176-843222e1e57c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1352&q=80",
-                      alt: "Card image cap"
-                    }
-                  }),
-                  _vm._v(" "),
-                  _c("div", { staticClass: "card-body" }, [
-                    _c("h6", { staticClass: "card-title" }, [
-                      _vm._v(
-                        "\n              Fashion gist topics please read Fashion gist topics please read\n            "
-                      )
-                    ]),
-                    _vm._v(" "),
-                    _c("hr", { staticClass: "card-hr-fashion" })
-                  ])
-                ]),
+                _c(
+                  "div",
+                  {
+                    staticClass:
+                      "col-12 col-sm-10 col-md-6 col-lg-3 mb-md-3 mb-sm-3"
+                  },
+                  [
+                    _c("div", { staticClass: "card p-3 shadow-sm" }, [
+                      _c("img", {
+                        staticClass: "card-img-top rounded-0",
+                        attrs: {
+                          src:
+                            "https://images.unsplash.com/photo-1496747611176-843222e1e57c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1352&q=80",
+                          alt: "Card image cap"
+                        }
+                      }),
+                      _vm._v(" "),
+                      _c("div", { staticClass: "card-body px-0" }, [
+                        _c("h6", { staticClass: "card-title" }, [
+                          _vm._v(
+                            "\n                                Fashion gist topics please readFashion gist\n                                topics please read\n                            "
+                          )
+                        ]),
+                        _vm._v(" "),
+                        _c("hr", { staticClass: "card-hr-fashion" })
+                      ])
+                    ])
+                  ]
+                ),
                 _vm._v(" "),
-                _c("div", { staticClass: "card rounded-0" }, [
-                  _c("img", {
-                    staticClass: "card-img-top rounded-0",
-                    attrs: {
-                      src:
-                        "https://images.unsplash.com/photo-1496747611176-843222e1e57c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1352&q=80",
-                      alt: "Card image cap"
-                    }
-                  }),
-                  _vm._v(" "),
-                  _c("div", { staticClass: "card-body" }, [
-                    _c("h6", { staticClass: "card-title" }, [
-                      _vm._v(
-                        "\n              Fashion gist topics please read Fashion gist topics please read\n            "
-                      )
-                    ]),
-                    _vm._v(" "),
-                    _c("hr", { staticClass: "card-hr-fashion" })
-                  ])
-                ])
+                _c(
+                  "div",
+                  {
+                    staticClass:
+                      "col-12 col-sm-10 col-md-6 col-lg-3 mb-md-3 mb-sm-3"
+                  },
+                  [
+                    _c("div", { staticClass: "card p-3 shadow-sm" }, [
+                      _c("img", {
+                        staticClass: "card-img-top rounded-0",
+                        attrs: {
+                          src:
+                            "https://images.unsplash.com/photo-1496747611176-843222e1e57c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1352&q=80",
+                          alt: "Card image cap"
+                        }
+                      }),
+                      _vm._v(" "),
+                      _c("div", { staticClass: "card-body px-0" }, [
+                        _c("h6", { staticClass: "card-title" }, [
+                          _vm._v(
+                            "\n                                Fashion gist topics please readFashion gist\n                                topics please read\n                            "
+                          )
+                        ]),
+                        _vm._v(" "),
+                        _c("hr", { staticClass: "card-hr-fashion" })
+                      ])
+                    ])
+                  ]
+                )
               ]
             )
           ]),
           _vm._v(" "),
           _c(
             "div",
-            {
-              staticClass:
-                "culture-mid-title aura-font text-white text-center mb-3"
-            },
+            { staticClass: "culture-mid-title text-white text-center mb-3" },
             [
               _c("h3", { staticClass: "card-title" }, [
                 _vm._v(
-                  '\n        GFRIEND Sings "Sunrise," Maroon 5, and Avril Lavigne in a Game of Song\n        Association\n      '
+                  '\n                GFRIEND Sings "Sunrise," Maroon 5, and Avril Lavigne in a\n                Game of Song Association\n            '
                 )
               ]),
               _vm._v(" "),
@@ -42418,7 +43033,7 @@ var staticRenderFns = [
               _vm._v(" "),
               _c("p", { staticClass: "mt-5" }, [
                 _vm._v(
-                  "\n        of all the girls that have leaved, the finest have seen in yet to see\n        me\n      "
+                  "\n                of all the girls that have leaved, the finest have seen in\n                yet to see me\n            "
                 )
               ])
             ]
@@ -42427,91 +43042,130 @@ var staticRenderFns = [
           _c("div", { staticClass: "container" }, [
             _c(
               "div",
-              { staticClass: "card-group mx-auto border-0 rounded-0" },
+              {
+                staticClass:
+                  "row justify-content-lg-between justify-content-md-around justify-content-sm-center justify-content-center "
+              },
               [
-                _c("div", { staticClass: "card rounded-0" }, [
-                  _c("img", {
-                    staticClass: "card-img-top rounded-0",
-                    attrs: {
-                      src:
-                        "https://images.unsplash.com/photo-1496747611176-843222e1e57c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1352&q=80",
-                      alt: "Card image cap"
-                    }
-                  }),
-                  _vm._v(" "),
-                  _c("div", { staticClass: "card-body" }, [
-                    _c("h6", { staticClass: "card-title" }, [
-                      _vm._v(
-                        "\n              Fashion gist topics please readFashion gist topics please read\n            "
-                      )
-                    ]),
-                    _vm._v(" "),
-                    _c("hr", { staticClass: "card-hr-fashion" })
-                  ])
-                ]),
+                _c(
+                  "div",
+                  {
+                    staticClass:
+                      "col-12 col-sm-10 col-md-6 col-lg-3 mb-md-3 mb-sm-3"
+                  },
+                  [
+                    _c("div", { staticClass: "card p-3 shadow-sm" }, [
+                      _c("img", {
+                        staticClass: "card-img-top rounded-0",
+                        attrs: {
+                          src:
+                            "https://images.unsplash.com/photo-1496747611176-843222e1e57c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1352&q=80",
+                          alt: "Card image cap"
+                        }
+                      }),
+                      _vm._v(" "),
+                      _c("div", { staticClass: "card-body px-0" }, [
+                        _c("h6", { staticClass: "card-title" }, [
+                          _vm._v(
+                            "\n                                Fashion gist topics please readFashion gist\n                                topics please read\n                            "
+                          )
+                        ]),
+                        _vm._v(" "),
+                        _c("hr", { staticClass: "card-hr-fashion" })
+                      ])
+                    ])
+                  ]
+                ),
                 _vm._v(" "),
-                _c("div", { staticClass: "card rounded-0" }, [
-                  _c("img", {
-                    staticClass: "card-img-top rounded-0",
-                    attrs: {
-                      src:
-                        "https://images.unsplash.com/photo-1496747611176-843222e1e57c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1352&q=80",
-                      alt: "Card image cap"
-                    }
-                  }),
-                  _vm._v(" "),
-                  _c("div", { staticClass: "card-body" }, [
-                    _c("h6", { staticClass: "card-title" }, [
-                      _vm._v(
-                        "\n              Fashion gist topics please readFashion gist topics please read\n            "
-                      )
-                    ]),
-                    _vm._v(" "),
-                    _c("hr", { staticClass: "card-hr-fashion" })
-                  ])
-                ]),
+                _c(
+                  "div",
+                  {
+                    staticClass:
+                      "col-12 col-sm-10 col-md-6 col-lg-3 mb-md-3 mb-sm-3"
+                  },
+                  [
+                    _c("div", { staticClass: "card p-3 shadow-sm" }, [
+                      _c("img", {
+                        staticClass: "card-img-top rounded-0",
+                        attrs: {
+                          src:
+                            "https://images.unsplash.com/photo-1496747611176-843222e1e57c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1352&q=80",
+                          alt: "Card image cap"
+                        }
+                      }),
+                      _vm._v(" "),
+                      _c("div", { staticClass: "card-body px-0" }, [
+                        _c("h6", { staticClass: "card-title" }, [
+                          _vm._v(
+                            "\n                                Fashion gist topics please readFashion gist\n                                topics please read\n                            "
+                          )
+                        ]),
+                        _vm._v(" "),
+                        _c("hr", { staticClass: "card-hr-fashion" })
+                      ])
+                    ])
+                  ]
+                ),
                 _vm._v(" "),
-                _c("div", { staticClass: "card rounded-0" }, [
-                  _c("img", {
-                    staticClass: "card-img-top rounded-0",
-                    attrs: {
-                      src:
-                        "https://images.unsplash.com/photo-1496747611176-843222e1e57c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1352&q=80",
-                      alt: "Card image cap"
-                    }
-                  }),
-                  _vm._v(" "),
-                  _c("div", { staticClass: "card-body" }, [
-                    _c("h6", { staticClass: "card-title" }, [
-                      _vm._v(
-                        "\n              Fashion gist topics please read Fashion gist topics please read\n            "
-                      )
-                    ]),
-                    _vm._v(" "),
-                    _c("hr", { staticClass: "card-hr-fashion" })
-                  ])
-                ]),
+                _c(
+                  "div",
+                  {
+                    staticClass:
+                      "col-12 col-sm-10 col-md-6 col-lg-3 mb-md-3 mb-sm-3"
+                  },
+                  [
+                    _c("div", { staticClass: "card p-3 shadow-sm" }, [
+                      _c("img", {
+                        staticClass: "card-img-top rounded-0",
+                        attrs: {
+                          src:
+                            "https://images.unsplash.com/photo-1496747611176-843222e1e57c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1352&q=80",
+                          alt: "Card image cap"
+                        }
+                      }),
+                      _vm._v(" "),
+                      _c("div", { staticClass: "card-body px-0" }, [
+                        _c("h6", { staticClass: "card-title" }, [
+                          _vm._v(
+                            "\n                                Fashion gist topics please readFashion gist\n                                topics please read\n                            "
+                          )
+                        ]),
+                        _vm._v(" "),
+                        _c("hr", { staticClass: "card-hr-fashion" })
+                      ])
+                    ])
+                  ]
+                ),
                 _vm._v(" "),
-                _c("div", { staticClass: "card rounded-0" }, [
-                  _c("img", {
-                    staticClass: "card-img-top rounded-0",
-                    attrs: {
-                      src:
-                        "https://images.unsplash.com/photo-1496747611176-843222e1e57c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1352&q=80",
-                      alt: "Card image cap"
-                    }
-                  }),
-                  _vm._v(" "),
-                  _c("div", { staticClass: "card-body" }, [
-                    _c("h6", { staticClass: "card-title" }, [
-                      _vm._v(
-                        "\n              Fashion gist topics please read Fashion gist topics please read\n            "
-                      )
-                    ]),
-                    _vm._v(" "),
-                    _c("hr", { staticClass: "card-hr-fashion" })
-                  ])
-                ])
+                _c(
+                  "div",
+                  {
+                    staticClass:
+                      "col-12 col-sm-10 col-md-6 col-lg-3 mb-md-3 mb-sm-3"
+                  },
+                  [
+                    _c("div", { staticClass: "card p-3 shadow-sm" }, [
+                      _c("img", {
+                        staticClass: "card-img-top rounded-0",
+                        attrs: {
+                          src:
+                            "https://images.unsplash.com/photo-1496747611176-843222e1e57c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1352&q=80",
+                          alt: "Card image cap"
+                        }
+                      }),
+                      _vm._v(" "),
+                      _c("div", { staticClass: "card-body px-0" }, [
+                        _c("h6", { staticClass: "card-title" }, [
+                          _vm._v(
+                            "\n                                Fashion gist topics please readFashion gist\n                                topics please read\n                            "
+                          )
+                        ]),
+                        _vm._v(" "),
+                        _c("hr", { staticClass: "card-hr-fashion" })
+                      ])
+                    ])
+                  ]
+                )
               ]
             ),
             _vm._v(" "),
@@ -42549,14 +43203,10 @@ var staticRenderFns = [
         },
         [
           _c("div", { staticClass: "container" }, [
-            _c(
-              "h5",
-              { staticClass: "aura-font font-weight-bold mt-4 text-white" },
-              [
-                _vm._v("\n        VIDEOS\n        "),
-                _c("i", { staticClass: "fa fa-play text-aura" })
-              ]
-            ),
+            _c("h5", { staticClass: "font-weight-bold mt-4 text-white" }, [
+              _vm._v("\n                VIDEOS\n                "),
+              _c("i", { staticClass: "fa fa-play text-aura" })
+            ]),
             _vm._v(" "),
             _c("div", { staticClass: "card mx-auto border-0" }, [
               _c(
@@ -42583,12 +43233,12 @@ var staticRenderFns = [
                   _c(
                     "h4",
                     {
-                      staticClass: "card-title aura-font",
+                      staticClass: "card-title ",
                       staticStyle: { "font-size": "30px" }
                     },
                     [
                       _vm._v(
-                        "\n            Ashley Graham Wants to Cancel Mom-Shaming\n          "
+                        "\n                        Ashley Graham Wants to Cancel Mom-Shaming\n                    "
                       )
                     ]
                   ),
@@ -42668,24 +43318,22 @@ var staticRenderFns = [
               "div",
               { staticClass: "col-md-6 col-lg-6 col-xl-6 col-sm-6 col-xs-6" },
               [
-                _c("h5", { staticClass: "aura-font sp-mt-6" }, [
+                _c("h5", { staticClass: "sp-mt-6" }, [
                   _vm._v(
-                    "\n            Susan Garland Stars On The Cover Of The July Issue Of Aura\n            Magazine\n          "
+                    "\n                        Susan Garland Stars On The Cover Of The July Issue\n                        Of Aura Magazine\n                    "
                   )
                 ]),
                 _vm._v(" "),
                 _c("hr", { staticClass: "magazine-hr" }),
                 _vm._v(" "),
-                _c("h5", { staticClass: "aura-font" }, [
-                  _vm._v("Edited by AKHIGBE IVERSON")
-                ]),
+                _c("h5", [_vm._v("Edited by AKHIGBE IVERSON")]),
                 _vm._v(" "),
-                _c("h5", { staticClass: "aura-font" }, [
-                  _vm._v("Cover model SUSAN GARLAND")
-                ]),
+                _c("h5", [_vm._v("Cover model SUSAN GARLAND")]),
                 _vm._v(" "),
-                _c("h5", { staticClass: "aura-font" }, [
-                  _vm._v("Photography by AREMU IFEOLUWA JOSHUA")
+                _c("h5", [
+                  _vm._v(
+                    "\n                        Photography by AREMU IFEOLUWA JOSHUA\n                    "
+                  )
                 ]),
                 _vm._v(" "),
                 _c("hr", { staticClass: "magazine-hr" }),
@@ -42694,14 +43342,14 @@ var staticRenderFns = [
                   "div",
                   {
                     staticClass:
-                      "row justify-content-center align-content-center"
+                      "row justify-content-lg-between justify-content-md-around justify-content-sm-center justify-content-center "
                   },
                   [
                     _c(
                       "div",
                       {
                         staticClass:
-                          "col-md-6 col-lg-6 col-xl-6 col-sm-6 col-xs-6"
+                          "col-md-6 col-lg-6 col-xl-6 col-sm-6 col-xs-6 mb-4"
                       },
                       [
                         _c(
@@ -42709,7 +43357,7 @@ var staticRenderFns = [
                           { staticClass: "btn btn-aura text-white" },
                           [
                             _vm._v(
-                              "\n                Order Print Copy\n              "
+                              "\n                                Order Print Copy\n                            "
                             )
                           ]
                         )
@@ -42728,7 +43376,7 @@ var staticRenderFns = [
                           { staticClass: "btn btn-aura text-white" },
                           [
                             _vm._v(
-                              "\n                Get digital edition\n              "
+                              "\n                                Get digital edition\n                            "
                             )
                           ]
                         )
@@ -42753,7 +43401,7 @@ var staticRenderFns = [
               },
               [_vm._v("+")]
             ),
-            _vm._v(" LIFE & LOVE\n      ")
+            _vm._v("\n                LIFE & LOVE\n            ")
           ]),
           _vm._v(" "),
           _c("div", { staticClass: "row mb-5" }, [
@@ -42763,17 +43411,17 @@ var staticRenderFns = [
                 staticClass: "col-md-6 col-lg-6 col-xl-6 col-sm-6 col-xs-6 p-3"
               },
               [
-                _c("h4", { staticClass: "aura-font font-weight-bolder pr-3" }, [
+                _c("h4", { staticClass: "font-weight-bolder pr-3" }, [
                   _vm._v(
-                    "\n            ‘I Could Have Been One of Them’: Monica Ortiz Uribe on ‘Forgotten:\n            The Women of Juarez’\n          "
+                    "\n                        ‘I Could Have Been One of Them’: Monica Ortiz Uribe\n                        on ‘Forgotten: The Women of Juarez’\n                    "
                   )
                 ]),
                 _vm._v(" "),
                 _c("hr", { staticClass: "card-hr-fashion" }),
                 _vm._v(" "),
-                _c("p", { staticClass: "aura-font mt-2" }, [
+                _c("p", { staticClass: "mt-2" }, [
                   _vm._v(
-                    "\n            In her new podcast, the El Paso journalist seeks justice for women\n            disappearing on the U.S.-Mexico border.\n          "
+                    "\n                        In her new podcast, the El Paso journalist seeks\n                        justice for women disappearing on the U.S.-Mexico\n                        border.\n                    "
                   )
                 ])
               ]
@@ -42798,91 +43446,134 @@ var staticRenderFns = [
             )
           ]),
           _vm._v(" "),
-          _c("div", { staticClass: "card-group mx-auto border-0 rounded-0" }, [
-            _c("div", { staticClass: "card rounded-0" }, [
-              _c("img", {
-                staticClass: "card-img-top rounded-0",
-                attrs: {
-                  src:
-                    "https://images.unsplash.com/photo-1496747611176-843222e1e57c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1352&q=80",
-                  alt: "Card image cap"
-                }
-              }),
+          _c(
+            "div",
+            {
+              staticClass:
+                "row justify-content-lg-between justify-content-md-around justify-content-sm-center justify-content-center "
+            },
+            [
+              _c(
+                "div",
+                {
+                  staticClass:
+                    "col-12 col-sm-10 col-md-6 col-lg-3 mb-md-3 mb-sm-3"
+                },
+                [
+                  _c("div", { staticClass: "card p-3 shadow-sm" }, [
+                    _c("img", {
+                      staticClass: "card-img-top rounded-0",
+                      attrs: {
+                        src:
+                          "https://images.unsplash.com/photo-1496747611176-843222e1e57c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1352&q=80",
+                        alt: "Card image cap"
+                      }
+                    }),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "card-body px-0" }, [
+                      _c("h6", { staticClass: "card-title " }, [
+                        _vm._v(
+                          "\n                                Fashion gist topics please readFashion gist\n                                topics please read\n                            "
+                        )
+                      ]),
+                      _vm._v(" "),
+                      _c("hr", { staticClass: "card-hr-fashion" })
+                    ])
+                  ])
+                ]
+              ),
               _vm._v(" "),
-              _c("div", { staticClass: "card-body" }, [
-                _c("h6", { staticClass: "card-title" }, [
-                  _vm._v(
-                    "\n              Fashion gist topics please readFashion gist topics please read\n            "
-                  )
-                ]),
-                _vm._v(" "),
-                _c("hr", { staticClass: "card-hr-fashion" })
-              ])
-            ]),
-            _vm._v(" "),
-            _c("div", { staticClass: "card rounded-0" }, [
-              _c("img", {
-                staticClass: "card-img-top rounded-0",
-                attrs: {
-                  src:
-                    "https://images.unsplash.com/photo-1496747611176-843222e1e57c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1352&q=80",
-                  alt: "Card image cap"
-                }
-              }),
+              _c(
+                "div",
+                {
+                  staticClass:
+                    "col-12 col-sm-10 col-md-6 col-lg-3 mb-md-3 mb-sm-3"
+                },
+                [
+                  _c("div", { staticClass: "card p-3 shadow-sm" }, [
+                    _c("img", {
+                      staticClass: "card-img-top rounded-0",
+                      attrs: {
+                        src:
+                          "https://images.unsplash.com/photo-1496747611176-843222e1e57c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1352&q=80",
+                        alt: "Card image cap"
+                      }
+                    }),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "card-body px-0" }, [
+                      _c("h6", { staticClass: "card-title " }, [
+                        _vm._v(
+                          "\n                                Fashion gist topics please readFashion gist\n                                topics please read\n                            "
+                        )
+                      ]),
+                      _vm._v(" "),
+                      _c("hr", { staticClass: "card-hr-fashion" })
+                    ])
+                  ])
+                ]
+              ),
               _vm._v(" "),
-              _c("div", { staticClass: "card-body" }, [
-                _c("h6", { staticClass: "card-title" }, [
-                  _vm._v(
-                    "\n              Fashion gist topics please readFashion gist topics please read\n            "
-                  )
-                ]),
-                _vm._v(" "),
-                _c("hr", { staticClass: "card-hr-fashion" })
-              ])
-            ]),
-            _vm._v(" "),
-            _c("div", { staticClass: "card rounded-0" }, [
-              _c("img", {
-                staticClass: "card-img-top rounded-0",
-                attrs: {
-                  src:
-                    "https://images.unsplash.com/photo-1496747611176-843222e1e57c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1352&q=80",
-                  alt: "Card image cap"
-                }
-              }),
+              _c(
+                "div",
+                {
+                  staticClass:
+                    "col-12 col-sm-10 col-md-6 col-lg-3 mb-md-3 mb-sm-3"
+                },
+                [
+                  _c("div", { staticClass: "card p-3 shadow-sm" }, [
+                    _c("img", {
+                      staticClass: "card-img-top rounded-0",
+                      attrs: {
+                        src:
+                          "https://images.unsplash.com/photo-1496747611176-843222e1e57c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1352&q=80",
+                        alt: "Card image cap"
+                      }
+                    }),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "card-body px-0" }, [
+                      _c("h6", { staticClass: "card-title" }, [
+                        _vm._v(
+                          "\n                                Fashion gist topics please readFashion gist\n                                topics please read\n                            "
+                        )
+                      ]),
+                      _vm._v(" "),
+                      _c("hr", { staticClass: "card-hr-fashion" })
+                    ])
+                  ])
+                ]
+              ),
               _vm._v(" "),
-              _c("div", { staticClass: "card-body" }, [
-                _c("h6", { staticClass: "card-title" }, [
-                  _vm._v(
-                    "\n              Fashion gist topics please read Fashion gist topics please read\n            "
-                  )
-                ]),
-                _vm._v(" "),
-                _c("hr", { staticClass: "card-hr-fashion" })
-              ])
-            ]),
-            _vm._v(" "),
-            _c("div", { staticClass: "card rounded-0" }, [
-              _c("img", {
-                staticClass: "card-img-top rounded-0",
-                attrs: {
-                  src:
-                    "https://images.unsplash.com/photo-1496747611176-843222e1e57c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1352&q=80",
-                  alt: "Card image cap"
-                }
-              }),
-              _vm._v(" "),
-              _c("div", { staticClass: "card-body" }, [
-                _c("h6", { staticClass: "card-title" }, [
-                  _vm._v(
-                    "\n              Fashion gist topics please read Fashion gist topics please read\n            "
-                  )
-                ]),
-                _vm._v(" "),
-                _c("hr", { staticClass: "card-hr-fashion" })
-              ])
-            ])
-          ]),
+              _c(
+                "div",
+                {
+                  staticClass:
+                    "col-12 col-sm-10 col-md-6 col-lg-3 mb-md-3 mb-sm-3"
+                },
+                [
+                  _c("div", { staticClass: "card p-3 shadow-sm" }, [
+                    _c("img", {
+                      staticClass: "card-img-top rounded-0",
+                      attrs: {
+                        src:
+                          "https://images.unsplash.com/photo-1496747611176-843222e1e57c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1352&q=80",
+                        alt: "Card image cap"
+                      }
+                    }),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "card-body px-0" }, [
+                      _c("h6", { staticClass: "card-title" }, [
+                        _vm._v(
+                          "\n                                Fashion gist topics please readFashion gist\n                                topics please read\n                            "
+                        )
+                      ]),
+                      _vm._v(" "),
+                      _c("hr", { staticClass: "card-hr-fashion" })
+                    ])
+                  ])
+                ]
+              )
+            ]
+          ),
           _vm._v(" "),
           _c("div", { staticClass: "container mt-5 mb-5 text-center" }, [
             _c(
@@ -42936,96 +43627,135 @@ var staticRenderFns = [
                 },
                 [_vm._v("+")]
               ),
-              _vm._v(" HOROSCOPE\n      ")
+              _vm._v("\n                HOROSCOPE\n            ")
             ]),
             _vm._v(" "),
             _c(
               "div",
-              { staticClass: "card-group mx-auto border-0 rounded-0" },
+              {
+                staticClass:
+                  "row justify-content-lg-between justify-content-md-around justify-content-sm-center justify-content-center "
+              },
               [
-                _c("div", { staticClass: "card rounded-0" }, [
-                  _c("img", {
-                    staticClass: "card-img-top rounded-0",
-                    attrs: {
-                      src:
-                        "https://images.unsplash.com/photo-1496747611176-843222e1e57c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1352&q=80",
-                      alt: "Card image cap"
-                    }
-                  }),
-                  _vm._v(" "),
-                  _c("div", { staticClass: "card-body" }, [
-                    _c("h6", { staticClass: "card-title" }, [
-                      _vm._v(
-                        "\n              Fashion gist topics please readFashion gist topics please read\n            "
-                      )
-                    ]),
-                    _vm._v(" "),
-                    _c("hr", { staticClass: "card-hr-fashion" })
-                  ])
-                ]),
+                _c(
+                  "div",
+                  {
+                    staticClass:
+                      "col-12 col-sm-10 col-md-6 col-lg-3 mb-md-3 mb-sm-3"
+                  },
+                  [
+                    _c("div", { staticClass: "card p-3 shadow-sm" }, [
+                      _c("img", {
+                        staticClass: "card-img-top rounded-0",
+                        attrs: {
+                          src:
+                            "https://images.unsplash.com/photo-1496747611176-843222e1e57c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1352&q=80",
+                          alt: "Card image cap"
+                        }
+                      }),
+                      _vm._v(" "),
+                      _c("div", { staticClass: "card-body px-0" }, [
+                        _c("h6", { staticClass: "card-title" }, [
+                          _vm._v(
+                            "\n                                Fashion gist topics please readFashion gist\n                                topics please read\n                            "
+                          )
+                        ]),
+                        _vm._v(" "),
+                        _c("hr", { staticClass: "card-hr-fashion" })
+                      ])
+                    ])
+                  ]
+                ),
                 _vm._v(" "),
-                _c("div", { staticClass: "card rounded-0" }, [
-                  _c("img", {
-                    staticClass: "card-img-top rounded-0",
-                    attrs: {
-                      src:
-                        "https://images.unsplash.com/photo-1496747611176-843222e1e57c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1352&q=80",
-                      alt: "Card image cap"
-                    }
-                  }),
-                  _vm._v(" "),
-                  _c("div", { staticClass: "card-body" }, [
-                    _c("h6", { staticClass: "card-title" }, [
-                      _vm._v(
-                        "\n              Fashion gist topics please readFashion gist topics please read\n            "
-                      )
-                    ]),
-                    _vm._v(" "),
-                    _c("hr", { staticClass: "card-hr-fashion" })
-                  ])
-                ]),
+                _c(
+                  "div",
+                  {
+                    staticClass:
+                      "col-12 col-sm-10 col-md-6 col-lg-3 mb-md-3 mb-sm-3"
+                  },
+                  [
+                    _c("div", { staticClass: "card p-3 shadow-sm" }, [
+                      _c("img", {
+                        staticClass: "card-img-top rounded-0",
+                        attrs: {
+                          src:
+                            "https://images.unsplash.com/photo-1496747611176-843222e1e57c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1352&q=80",
+                          alt: "Card image cap"
+                        }
+                      }),
+                      _vm._v(" "),
+                      _c("div", { staticClass: "card-body px-0" }, [
+                        _c("h6", { staticClass: "card-title" }, [
+                          _vm._v(
+                            "\n                                Fashion gist topics please readFashion gist\n                                topics please read\n                            "
+                          )
+                        ]),
+                        _vm._v(" "),
+                        _c("hr", { staticClass: "card-hr-fashion" })
+                      ])
+                    ])
+                  ]
+                ),
                 _vm._v(" "),
-                _c("div", { staticClass: "card rounded-0" }, [
-                  _c("img", {
-                    staticClass: "card-img-top rounded-0",
-                    attrs: {
-                      src:
-                        "https://images.unsplash.com/photo-1496747611176-843222e1e57c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1352&q=80",
-                      alt: "Card image cap"
-                    }
-                  }),
-                  _vm._v(" "),
-                  _c("div", { staticClass: "card-body" }, [
-                    _c("h6", { staticClass: "card-title" }, [
-                      _vm._v(
-                        "\n              Fashion gist topics please read Fashion gist topics please read\n            "
-                      )
-                    ]),
-                    _vm._v(" "),
-                    _c("hr", { staticClass: "card-hr-fashion" })
-                  ])
-                ]),
+                _c(
+                  "div",
+                  {
+                    staticClass:
+                      "col-12 col-sm-10 col-md-6 col-lg-3 mb-md-3 mb-sm-3"
+                  },
+                  [
+                    _c("div", { staticClass: "card p-3 shadow-sm" }, [
+                      _c("img", {
+                        staticClass: "card-img-top rounded-0",
+                        attrs: {
+                          src:
+                            "https://images.unsplash.com/photo-1496747611176-843222e1e57c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1352&q=80",
+                          alt: "Card image cap"
+                        }
+                      }),
+                      _vm._v(" "),
+                      _c("div", { staticClass: "card-body px-0" }, [
+                        _c("h6", { staticClass: "card-title" }, [
+                          _vm._v(
+                            "\n                                Fashion gist topics please readFashion gist\n                                topics please read\n                            "
+                          )
+                        ]),
+                        _vm._v(" "),
+                        _c("hr", { staticClass: "card-hr-fashion" })
+                      ])
+                    ])
+                  ]
+                ),
                 _vm._v(" "),
-                _c("div", { staticClass: "card rounded-0" }, [
-                  _c("img", {
-                    staticClass: "card-img-top rounded-0",
-                    attrs: {
-                      src:
-                        "https://images.unsplash.com/photo-1496747611176-843222e1e57c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1352&q=80",
-                      alt: "Card image cap"
-                    }
-                  }),
-                  _vm._v(" "),
-                  _c("div", { staticClass: "card-body" }, [
-                    _c("h6", { staticClass: "card-title" }, [
-                      _vm._v(
-                        "\n              Fashion gist topics please read Fashion gist topics please read\n            "
-                      )
-                    ]),
-                    _vm._v(" "),
-                    _c("hr", { staticClass: "card-hr-fashion" })
-                  ])
-                ])
+                _c(
+                  "div",
+                  {
+                    staticClass:
+                      "col-12 col-sm-10 col-md-6 col-lg-3 mb-md-3 mb-sm-3"
+                  },
+                  [
+                    _c("div", { staticClass: "card p-3 shadow-sm" }, [
+                      _c("img", {
+                        staticClass: "card-img-top rounded-0",
+                        attrs: {
+                          src:
+                            "https://images.unsplash.com/photo-1496747611176-843222e1e57c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1352&q=80",
+                          alt: "Card image cap"
+                        }
+                      }),
+                      _vm._v(" "),
+                      _c("div", { staticClass: "card-body px-0" }, [
+                        _c("h6", { staticClass: "card-title" }, [
+                          _vm._v(
+                            "\n                                Fashion gist topics please readFashion gist\n                                topics please read\n                            "
+                          )
+                        ]),
+                        _vm._v(" "),
+                        _c("hr", { staticClass: "card-hr-fashion" })
+                      ])
+                    ])
+                  ]
+                )
               ]
             ),
             _vm._v(" "),
@@ -44528,9 +45258,9 @@ render._withStripped = true
 
 /***/ }),
 
-/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/pages/auth/login.vue?vue&type=template&id=672bc96b&":
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/pages/auth/Login.vue?vue&type=template&id=42c42d6a&":
 /*!********************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/pages/auth/login.vue?vue&type=template&id=672bc96b& ***!
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/pages/auth/Login.vue?vue&type=template&id=42c42d6a& ***!
   \********************************************************************************************************************************************************************************************************/
 /*! exports provided: render, staticRenderFns */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
@@ -44547,51 +45277,677 @@ var render = function() {
     _c("div", { staticClass: "container login-inner" }, [
       _c(
         "div",
-        { staticClass: "row justify-content-lg-start justify-content-center" },
+        {
+          staticClass:
+            "row justify-content-lg-start justify-content-md-start justify-content-center"
+        },
         [
-          _c("div", { staticClass: "col-lg-5 col-md-7 col-sm-12 col-12" }, [
-            _c("div", { staticClass: "card shadow" }, [
-              _c("h2", [_vm._v("LOGIN FORM HERE")]),
-              _vm._v(" "),
-              _c("p", [
-                _vm._v("To remove these data below and put the login design")
-              ]),
-              _vm._v(" "),
-              _c("img", {
-                staticClass: "card-img-top",
-                attrs: { src: _vm.p.image, alt: "Product Image" }
-              }),
-              _vm._v(" "),
-              _c("div", { staticClass: "card-body pl-3 py-4 p-0" }, [
-                _c("h5", { staticClass: "card-title" }, [
-                  _vm._v(_vm._s(_vm.p.name))
-                ]),
-                _vm._v(" "),
-                _c("p", { staticClass: "card-text" }, [
-                  _vm._v(_vm._s(_vm.p.caption))
-                ]),
-                _vm._v(" "),
-                _c("p", { staticClass: "card-text" }, [
-                  _vm._v(_vm._s(_vm.p.currency) + " " + _vm._s(_vm.p.price))
-                ]),
+          _c(
+            "div",
+            { staticClass: "col-lg-5 col-md-7 col-sm-12 col-12 rounded" },
+            [
+              _c("div", { staticClass: "card shadow p-4 rounded" }, [
+                _c("img", {
+                  attrs: {
+                    src: "https://aura.com.ng/storage/logo/regular.svg",
+                    height: "28"
+                  }
+                }),
                 _vm._v(" "),
                 _c(
-                  "a",
-                  {
-                    staticClass: "btn btn-sm btn-outline-aura",
-                    attrs: { href: "#" }
-                  },
-                  [_vm._v("Add to Cart")]
-                )
+                  "p",
+                  { staticClass: "text-center font-weight-light mb-5 mt-4" },
+                  [
+                    _vm._v(
+                      "\n                        Sign In\n                    "
+                    )
+                  ]
+                ),
+                _vm._v(" "),
+                _c("div", { staticClass: "card-body py-2" }, [
+                  _c("form", [
+                    _c("div", { staticClass: "form-group" }, [
+                      _c("input", {
+                        directives: [
+                          {
+                            name: "model",
+                            rawName: "v-model",
+                            value: _vm.email,
+                            expression: "email"
+                          }
+                        ],
+                        staticClass: "form-control  shadow-none",
+                        attrs: {
+                          type: "email",
+                          id: "exampleInputEmail1",
+                          "aria-describedby": "emailHelp",
+                          placeholder: "Email"
+                        },
+                        domProps: { value: _vm.email },
+                        on: {
+                          input: function($event) {
+                            if ($event.target.composing) {
+                              return
+                            }
+                            _vm.email = $event.target.value
+                          }
+                        }
+                      })
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "input-group mb-3" }, [
+                      [_vm.showPassword ? "text" : "password"] === "checkbox"
+                        ? _c("input", {
+                            directives: [
+                              {
+                                name: "model",
+                                rawName: "v-model",
+                                value: _vm.password,
+                                expression: "password"
+                              }
+                            ],
+                            staticClass: "form-control  shadow-none",
+                            attrs: {
+                              placeholder: "Password",
+                              type: "checkbox"
+                            },
+                            domProps: {
+                              checked: Array.isArray(_vm.password)
+                                ? _vm._i(_vm.password, null) > -1
+                                : _vm.password
+                            },
+                            on: {
+                              change: function($event) {
+                                var $$a = _vm.password,
+                                  $$el = $event.target,
+                                  $$c = $$el.checked ? true : false
+                                if (Array.isArray($$a)) {
+                                  var $$v = null,
+                                    $$i = _vm._i($$a, $$v)
+                                  if ($$el.checked) {
+                                    $$i < 0 &&
+                                      (_vm.password = $$a.concat([$$v]))
+                                  } else {
+                                    $$i > -1 &&
+                                      (_vm.password = $$a
+                                        .slice(0, $$i)
+                                        .concat($$a.slice($$i + 1)))
+                                  }
+                                } else {
+                                  _vm.password = $$c
+                                }
+                              }
+                            }
+                          })
+                        : [_vm.showPassword ? "text" : "password"] === "radio"
+                        ? _c("input", {
+                            directives: [
+                              {
+                                name: "model",
+                                rawName: "v-model",
+                                value: _vm.password,
+                                expression: "password"
+                              }
+                            ],
+                            staticClass: "form-control  shadow-none",
+                            attrs: { placeholder: "Password", type: "radio" },
+                            domProps: { checked: _vm._q(_vm.password, null) },
+                            on: {
+                              change: function($event) {
+                                _vm.password = null
+                              }
+                            }
+                          })
+                        : _c("input", {
+                            directives: [
+                              {
+                                name: "model",
+                                rawName: "v-model",
+                                value: _vm.password,
+                                expression: "password"
+                              }
+                            ],
+                            staticClass: "form-control  shadow-none",
+                            attrs: {
+                              placeholder: "Password",
+                              type: [_vm.showPassword ? "text" : "password"]
+                            },
+                            domProps: { value: _vm.password },
+                            on: {
+                              input: function($event) {
+                                if ($event.target.composing) {
+                                  return
+                                }
+                                _vm.password = $event.target.value
+                              }
+                            }
+                          }),
+                      _vm._v(" "),
+                      _c("div", { staticClass: "input-group-append" }, [
+                        _c(
+                          "span",
+                          {
+                            staticClass: "input-group-text ",
+                            on: {
+                              click: function($event) {
+                                _vm.showPassword = !_vm.showPassword
+                              }
+                            }
+                          },
+                          [
+                            _c("i", {
+                              staticClass: "fa",
+                              class: [
+                                _vm.showPassword ? "fa-eye" : "fa-eye-slash"
+                              ],
+                              attrs: { "aria-hidden": "true" }
+                            })
+                          ]
+                        )
+                      ])
+                    ]),
+                    _vm._v(" "),
+                    _vm._m(0),
+                    _vm._v(" "),
+                    _vm._m(1),
+                    _vm._v(" "),
+                    _vm._m(2),
+                    _vm._v(" "),
+                    _vm._m(3),
+                    _vm._v(" "),
+                    _vm._m(4)
+                  ])
+                ])
               ])
-            ])
-          ])
+            ]
+          )
         ]
       )
     ])
   ])
 }
-var staticRenderFns = []
+var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c(
+      "a",
+      { staticStyle: { "text-decoration": "none" }, attrs: { href: "" } },
+      [
+        _c("small", { staticClass: "form-text mb-4  aura-font" }, [
+          _vm._v("Forgot Password?")
+        ])
+      ]
+    )
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "form-group" }, [
+      _c(
+        "button",
+        {
+          staticClass:
+            "btn btn-aura btn-md btn-block text-white shadow-none  aura-font",
+          attrs: { type: "button" }
+        },
+        [
+          _vm._v(
+            "\n                                    Sign In\n                                "
+          )
+        ]
+      )
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c(
+      "a",
+      {
+        staticClass: "text-right form-text ",
+        staticStyle: { "text-decoration": "none", "font-size": "14px" },
+        attrs: { href: "/signup" }
+      },
+      [
+        _c("span", { staticClass: "text-dark  aura-font" }, [
+          _vm._v("Don't have an account?")
+        ]),
+        _vm._v(
+          "\n                                Sign up\n                            "
+        )
+      ]
+    )
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "col-md-12 mt-4 mb-4 " }, [
+      _c("div", { staticClass: "login-or" }, [
+        _c("hr", { staticClass: "hr-or" }),
+        _vm._v(" "),
+        _c("span", { staticClass: "span-or" }, [_vm._v("or")])
+      ])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: " row d-flex justify-content-center" }, [
+      _c(
+        "div",
+        {
+          staticClass: "btn-group btn btn-lg shadow-sm btn-light  aura-font",
+          attrs: { role: "group" }
+        },
+        [
+          _c(
+            "button",
+            {
+              staticClass: "btn shadow-none",
+              attrs: { type: "button", disabled: "" }
+            },
+            [
+              _c("i", {
+                staticClass: "fa fa-google-plus-circle fa-2x",
+                staticStyle: { color: "#db3236" }
+              })
+            ]
+          ),
+          _vm._v(" "),
+          _c(
+            "button",
+            { staticClass: "btn shadow-none", attrs: { type: "button" } },
+            [
+              _vm._v(
+                "\n                                        Signin Using Google\n                                    "
+              )
+            ]
+          )
+        ]
+      ),
+      _vm._v(" "),
+      _c(
+        "div",
+        {
+          staticClass:
+            "btn-group btn btn-lg shadow-sm btn-light mt-3 aura-font",
+          attrs: { role: "group" }
+        },
+        [
+          _c(
+            "button",
+            {
+              staticClass: "btn shadow-none",
+              attrs: { type: "button", disabled: "" }
+            },
+            [
+              _c("i", {
+                staticClass: "fa fa-facebook fa-2x",
+                staticStyle: { color: "#3b5998" }
+              })
+            ]
+          ),
+          _vm._v(" "),
+          _c(
+            "button",
+            { staticClass: "btn shadow-none", attrs: { type: "button" } },
+            [
+              _vm._v(
+                "\n                                        Signin Using Facebook\n                                    "
+              )
+            ]
+          )
+        ]
+      )
+    ])
+  }
+]
+render._withStripped = true
+
+
+
+/***/ }),
+
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/pages/auth/Register.vue?vue&type=template&id=2ebeb09e&":
+/*!***********************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/pages/auth/Register.vue?vue&type=template&id=2ebeb09e& ***!
+  \***********************************************************************************************************************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "render", function() { return render; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return staticRenderFns; });
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c("div", { staticClass: "login-body" }, [
+    _c("div", { staticClass: "container login-inner" }, [
+      _c(
+        "div",
+        {
+          staticClass:
+            "row justify-content-lg-start justify-content-md-start justify-content-center"
+        },
+        [
+          _c(
+            "div",
+            { staticClass: "col-lg-5 col-md-7 col-sm-12 col-12 rounded" },
+            [
+              _c("div", { staticClass: "card shadow p-4 rounded" }, [
+                _c("img", {
+                  attrs: {
+                    src: "https://aura.com.ng/storage/logo/regular.svg",
+                    height: "28"
+                  }
+                }),
+                _vm._v(" "),
+                _c(
+                  "p",
+                  { staticClass: "text-center font-weight-light mb-5 mt-4" },
+                  [
+                    _vm._v(
+                      "\n                        Create an Account\n                    "
+                    )
+                  ]
+                ),
+                _vm._v(" "),
+                _c("div", { staticClass: "card-body py-2" }, [
+                  _c("form", [
+                    _c("div", { staticClass: "form-group" }, [
+                      _c("input", {
+                        directives: [
+                          {
+                            name: "model",
+                            rawName: "v-model",
+                            value: _vm.email,
+                            expression: "email"
+                          }
+                        ],
+                        staticClass: "form-control  shadow-none",
+                        attrs: {
+                          type: "email",
+                          id: "exampleInputEmail1",
+                          "aria-describedby": "emailHelp",
+                          placeholder: "Email"
+                        },
+                        domProps: { value: _vm.email },
+                        on: {
+                          input: function($event) {
+                            if ($event.target.composing) {
+                              return
+                            }
+                            _vm.email = $event.target.value
+                          }
+                        }
+                      })
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "input-group mb-3" }, [
+                      [_vm.showPassword ? "text" : "password"] === "checkbox"
+                        ? _c("input", {
+                            directives: [
+                              {
+                                name: "model",
+                                rawName: "v-model",
+                                value: _vm.password,
+                                expression: "password"
+                              }
+                            ],
+                            staticClass: "form-control  shadow-none",
+                            attrs: {
+                              placeholder: "Password",
+                              type: "checkbox"
+                            },
+                            domProps: {
+                              checked: Array.isArray(_vm.password)
+                                ? _vm._i(_vm.password, null) > -1
+                                : _vm.password
+                            },
+                            on: {
+                              change: function($event) {
+                                var $$a = _vm.password,
+                                  $$el = $event.target,
+                                  $$c = $$el.checked ? true : false
+                                if (Array.isArray($$a)) {
+                                  var $$v = null,
+                                    $$i = _vm._i($$a, $$v)
+                                  if ($$el.checked) {
+                                    $$i < 0 &&
+                                      (_vm.password = $$a.concat([$$v]))
+                                  } else {
+                                    $$i > -1 &&
+                                      (_vm.password = $$a
+                                        .slice(0, $$i)
+                                        .concat($$a.slice($$i + 1)))
+                                  }
+                                } else {
+                                  _vm.password = $$c
+                                }
+                              }
+                            }
+                          })
+                        : [_vm.showPassword ? "text" : "password"] === "radio"
+                        ? _c("input", {
+                            directives: [
+                              {
+                                name: "model",
+                                rawName: "v-model",
+                                value: _vm.password,
+                                expression: "password"
+                              }
+                            ],
+                            staticClass: "form-control  shadow-none",
+                            attrs: { placeholder: "Password", type: "radio" },
+                            domProps: { checked: _vm._q(_vm.password, null) },
+                            on: {
+                              change: function($event) {
+                                _vm.password = null
+                              }
+                            }
+                          })
+                        : _c("input", {
+                            directives: [
+                              {
+                                name: "model",
+                                rawName: "v-model",
+                                value: _vm.password,
+                                expression: "password"
+                              }
+                            ],
+                            staticClass: "form-control  shadow-none",
+                            attrs: {
+                              placeholder: "Password",
+                              type: [_vm.showPassword ? "text" : "password"]
+                            },
+                            domProps: { value: _vm.password },
+                            on: {
+                              input: function($event) {
+                                if ($event.target.composing) {
+                                  return
+                                }
+                                _vm.password = $event.target.value
+                              }
+                            }
+                          }),
+                      _vm._v(" "),
+                      _c("div", { staticClass: "input-group-append" }, [
+                        _c(
+                          "span",
+                          {
+                            staticClass: "input-group-text ",
+                            on: {
+                              click: function($event) {
+                                _vm.showPassword = !_vm.showPassword
+                              }
+                            }
+                          },
+                          [
+                            _c("i", {
+                              staticClass: "fa",
+                              class: [
+                                _vm.showPassword ? "fa-eye" : "fa-eye-slash"
+                              ],
+                              attrs: { "aria-hidden": "true" }
+                            })
+                          ]
+                        )
+                      ])
+                    ]),
+                    _vm._v(" "),
+                    _vm._m(0),
+                    _vm._v(" "),
+                    _vm._m(1),
+                    _vm._v(" "),
+                    _vm._m(2),
+                    _vm._v(" "),
+                    _vm._m(3)
+                  ])
+                ])
+              ])
+            ]
+          )
+        ]
+      )
+    ])
+  ])
+}
+var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "form-group" }, [
+      _c(
+        "button",
+        {
+          staticClass:
+            "btn btn-aura btn-md btn-block text-white shadow-none  aura-font",
+          attrs: { type: "button" }
+        },
+        [
+          _vm._v(
+            "\n                                    Create Account\n                                "
+          )
+        ]
+      )
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c(
+      "a",
+      {
+        staticClass: "text-right form-text ",
+        staticStyle: { "text-decoration": "none", "font-size": "14px" },
+        attrs: { href: "/login" }
+      },
+      [
+        _c("span", { staticClass: "text-dark  aura-font" }, [
+          _vm._v("Already have an account?")
+        ]),
+        _vm._v(
+          "\n                                Sign in\n                            "
+        )
+      ]
+    )
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "col-md-12 mt-4 mb-4 " }, [
+      _c("div", { staticClass: "login-or" }, [
+        _c("hr", { staticClass: "hr-or" }),
+        _vm._v(" "),
+        _c("span", { staticClass: "span-or" }, [_vm._v("or")])
+      ])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: " row d-flex justify-content-center" }, [
+      _c(
+        "div",
+        {
+          staticClass: "btn-group btn btn-lg shadow-sm btn-light  aura-font",
+          attrs: { role: "group" }
+        },
+        [
+          _c(
+            "button",
+            {
+              staticClass: "btn shadow-none",
+              attrs: { type: "button", disabled: "" }
+            },
+            [
+              _c("i", {
+                staticClass: "fa fa-google-plus-circle fa-2x",
+                staticStyle: { color: "#db3236" }
+              })
+            ]
+          ),
+          _vm._v(" "),
+          _c(
+            "button",
+            { staticClass: "btn shadow-none", attrs: { type: "button" } },
+            [
+              _vm._v(
+                "\n                                        Signup Using Google\n                                    "
+              )
+            ]
+          )
+        ]
+      ),
+      _vm._v(" "),
+      _c(
+        "div",
+        {
+          staticClass:
+            "btn-group btn btn-lg shadow-sm btn-light mt-3 aura-font",
+          attrs: { role: "group" }
+        },
+        [
+          _c(
+            "button",
+            {
+              staticClass: "btn shadow-none",
+              attrs: { type: "button", disabled: "" }
+            },
+            [
+              _c("i", {
+                staticClass: "fa fa-facebook fa-2x",
+                staticStyle: { color: "#3b5998" }
+              })
+            ]
+          ),
+          _vm._v(" "),
+          _c(
+            "button",
+            { staticClass: "btn shadow-none", attrs: { type: "button" } },
+            [
+              _vm._v(
+                "\n                                        Signup Using Facebook\n                                    "
+              )
+            ]
+          )
+        ]
+      )
+    ])
+  }
+]
 render._withStripped = true
 
 
@@ -59989,8 +61345,8 @@ router.beforeResolve(function (to, from, next) {
   next();
 });
 router.afterEach(function (to, from) {
-  // Complete the animation of the route progress bar.
   if (to.name) {
+    // Complete the animation of the route progress bar.
     nprogress__WEBPACK_IMPORTED_MODULE_5___default.a.done();
   }
 });
@@ -60463,17 +61819,17 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ "./resources/js/pages/auth/login.vue":
+/***/ "./resources/js/pages/auth/Login.vue":
 /*!*******************************************!*\
-  !*** ./resources/js/pages/auth/login.vue ***!
+  !*** ./resources/js/pages/auth/Login.vue ***!
   \*******************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _login_vue_vue_type_template_id_672bc96b___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./login.vue?vue&type=template&id=672bc96b& */ "./resources/js/pages/auth/login.vue?vue&type=template&id=672bc96b&");
-/* harmony import */ var _login_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./login.vue?vue&type=script&lang=js& */ "./resources/js/pages/auth/login.vue?vue&type=script&lang=js&");
+/* harmony import */ var _Login_vue_vue_type_template_id_42c42d6a___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Login.vue?vue&type=template&id=42c42d6a& */ "./resources/js/pages/auth/Login.vue?vue&type=template&id=42c42d6a&");
+/* harmony import */ var _Login_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Login.vue?vue&type=script&lang=js& */ "./resources/js/pages/auth/Login.vue?vue&type=script&lang=js&");
 /* empty/unused harmony star reexport *//* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
 
 
@@ -60483,9 +61839,9 @@ __webpack_require__.r(__webpack_exports__);
 /* normalize component */
 
 var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
-  _login_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
-  _login_vue_vue_type_template_id_672bc96b___WEBPACK_IMPORTED_MODULE_0__["render"],
-  _login_vue_vue_type_template_id_672bc96b___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  _Login_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _Login_vue_vue_type_template_id_42c42d6a___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _Login_vue_vue_type_template_id_42c42d6a___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
   false,
   null,
   null,
@@ -60495,38 +61851,107 @@ var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_
 
 /* hot reload */
 if (false) { var api; }
-component.options.__file = "resources/js/pages/auth/login.vue"
+component.options.__file = "resources/js/pages/auth/Login.vue"
 /* harmony default export */ __webpack_exports__["default"] = (component.exports);
 
 /***/ }),
 
-/***/ "./resources/js/pages/auth/login.vue?vue&type=script&lang=js&":
+/***/ "./resources/js/pages/auth/Login.vue?vue&type=script&lang=js&":
 /*!********************************************************************!*\
-  !*** ./resources/js/pages/auth/login.vue?vue&type=script&lang=js& ***!
+  !*** ./resources/js/pages/auth/Login.vue?vue&type=script&lang=js& ***!
   \********************************************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_login_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/babel-loader/lib??ref--4-0!../../../../node_modules/vue-loader/lib??vue-loader-options!./login.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/pages/auth/login.vue?vue&type=script&lang=js&");
-/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_login_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_Login_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/babel-loader/lib??ref--4-0!../../../../node_modules/vue-loader/lib??vue-loader-options!./Login.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/pages/auth/Login.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_Login_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
 
 /***/ }),
 
-/***/ "./resources/js/pages/auth/login.vue?vue&type=template&id=672bc96b&":
+/***/ "./resources/js/pages/auth/Login.vue?vue&type=template&id=42c42d6a&":
 /*!**************************************************************************!*\
-  !*** ./resources/js/pages/auth/login.vue?vue&type=template&id=672bc96b& ***!
+  !*** ./resources/js/pages/auth/Login.vue?vue&type=template&id=42c42d6a& ***!
   \**************************************************************************/
 /*! exports provided: render, staticRenderFns */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_login_vue_vue_type_template_id_672bc96b___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../node_modules/vue-loader/lib??vue-loader-options!./login.vue?vue&type=template&id=672bc96b& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/pages/auth/login.vue?vue&type=template&id=672bc96b&");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_login_vue_vue_type_template_id_672bc96b___WEBPACK_IMPORTED_MODULE_0__["render"]; });
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Login_vue_vue_type_template_id_42c42d6a___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../node_modules/vue-loader/lib??vue-loader-options!./Login.vue?vue&type=template&id=42c42d6a& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/pages/auth/Login.vue?vue&type=template&id=42c42d6a&");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Login_vue_vue_type_template_id_42c42d6a___WEBPACK_IMPORTED_MODULE_0__["render"]; });
 
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_login_vue_vue_type_template_id_672bc96b___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Login_vue_vue_type_template_id_42c42d6a___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
+
+
+
+/***/ }),
+
+/***/ "./resources/js/pages/auth/Register.vue":
+/*!**********************************************!*\
+  !*** ./resources/js/pages/auth/Register.vue ***!
+  \**********************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _Register_vue_vue_type_template_id_2ebeb09e___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Register.vue?vue&type=template&id=2ebeb09e& */ "./resources/js/pages/auth/Register.vue?vue&type=template&id=2ebeb09e&");
+/* harmony import */ var _Register_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Register.vue?vue&type=script&lang=js& */ "./resources/js/pages/auth/Register.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport *//* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
+
+
+
+
+/* normalize component */
+
+var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
+  _Register_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _Register_vue_vue_type_template_id_2ebeb09e___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _Register_vue_vue_type_template_id_2ebeb09e___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  false,
+  null,
+  null,
+  null
+  
+)
+
+/* hot reload */
+if (false) { var api; }
+component.options.__file = "resources/js/pages/auth/Register.vue"
+/* harmony default export */ __webpack_exports__["default"] = (component.exports);
+
+/***/ }),
+
+/***/ "./resources/js/pages/auth/Register.vue?vue&type=script&lang=js&":
+/*!***********************************************************************!*\
+  !*** ./resources/js/pages/auth/Register.vue?vue&type=script&lang=js& ***!
+  \***********************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_Register_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/babel-loader/lib??ref--4-0!../../../../node_modules/vue-loader/lib??vue-loader-options!./Register.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/pages/auth/Register.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_Register_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+
+/***/ }),
+
+/***/ "./resources/js/pages/auth/Register.vue?vue&type=template&id=2ebeb09e&":
+/*!*****************************************************************************!*\
+  !*** ./resources/js/pages/auth/Register.vue?vue&type=template&id=2ebeb09e& ***!
+  \*****************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Register_vue_vue_type_template_id_2ebeb09e___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../node_modules/vue-loader/lib??vue-loader-options!./Register.vue?vue&type=template&id=2ebeb09e& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/pages/auth/Register.vue?vue&type=template&id=2ebeb09e&");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Register_vue_vue_type_template_id_2ebeb09e___WEBPACK_IMPORTED_MODULE_0__["render"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Register_vue_vue_type_template_id_2ebeb09e___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
 
 
 
@@ -60547,8 +61972,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _pages_Magazine_vue__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./pages/Magazine.vue */ "./resources/js/pages/Magazine.vue");
 /* harmony import */ var _pages_Post_vue__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./pages/Post.vue */ "./resources/js/pages/Post.vue");
 /* harmony import */ var _pages_Shop_vue__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./pages/Shop.vue */ "./resources/js/pages/Shop.vue");
-/* harmony import */ var _pages_auth_login_vue__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./pages/auth/login.vue */ "./resources/js/pages/auth/login.vue");
+/* harmony import */ var _pages_auth_Login_vue__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./pages/auth/Login.vue */ "./resources/js/pages/auth/Login.vue");
+/* harmony import */ var _pages_auth_Register_vue__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./pages/auth/Register.vue */ "./resources/js/pages/auth/Register.vue");
 //Route files for  Vue App
+
 
 
 
@@ -60558,15 +61985,31 @@ __webpack_require__.r(__webpack_exports__);
 var routes = [{
   name: 'home',
   path: '/',
-  component: _pages_Home_vue__WEBPACK_IMPORTED_MODULE_0__["default"]
+  component: _pages_Home_vue__WEBPACK_IMPORTED_MODULE_0__["default"],
+  meta: {
+    showProgressBar: true
+  }
 }, {
   name: 'login',
   path: '/login',
-  component: _pages_auth_login_vue__WEBPACK_IMPORTED_MODULE_5__["default"]
+  component: _pages_auth_Login_vue__WEBPACK_IMPORTED_MODULE_5__["default"],
+  meta: {
+    showProgressBar: true
+  }
+}, {
+  name: 'signup',
+  path: '/signup',
+  component: _pages_auth_Register_vue__WEBPACK_IMPORTED_MODULE_6__["default"],
+  meta: {
+    showProgressBar: true
+  }
 }, {
   name: 'shop',
   path: '/shop',
-  component: _pages_Shop_vue__WEBPACK_IMPORTED_MODULE_4__["default"]
+  component: _pages_Shop_vue__WEBPACK_IMPORTED_MODULE_4__["default"],
+  meta: {
+    showProgressBar: true
+  }
 }, {
   name: 'news',
   path: '/category/news',
@@ -60617,8 +62060,8 @@ var routes = [{
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! /Users/mac/Documents/Laravel/Aura-magazine/resources/js/app.js */"./resources/js/app.js");
-module.exports = __webpack_require__(/*! /Users/mac/Documents/Laravel/Aura-magazine/resources/sass/app.scss */"./resources/sass/app.scss");
+__webpack_require__(/*! /Users/mac/Documents/Projects/Laravel/Aura/resources/js/app.js */"./resources/js/app.js");
+module.exports = __webpack_require__(/*! /Users/mac/Documents/Projects/Laravel/Aura/resources/sass/app.scss */"./resources/sass/app.scss");
 
 
 /***/ })

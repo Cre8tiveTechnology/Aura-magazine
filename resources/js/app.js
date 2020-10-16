@@ -61,10 +61,9 @@ router.beforeResolve((to,from,next) =>
 
 router.afterEach((to,from) =>
 {
-    // Complete the animation of the route progress bar.
     if (to.name) {
-
-        NProgress.done()
+        // Complete the animation of the route progress bar.
+        NProgress.done();
     }
 })
 

@@ -7,7 +7,7 @@ body {
     overflow-x: "hidden";
     width: "100vw";
     background-color: #ffffff;
-    font-family: "PT Sans", serif;
+    font-family: "PT Sans", serif !important;
 }
 
 :root {
@@ -96,10 +96,6 @@ body {
     line-height: 1.42857 !important;
 }
 
-.aura-font {
-    font-family: "PT Sans", serif;
-}
-
 .card-hr-fashion {
     background-color: var(--aura-pink) !important;
     width: 15%;
@@ -133,4 +129,9 @@ body {
     width: 90%;
     height: 3px;
     margin-left: 0;
+}
+
+.form-control.focus,
+.form-control:focus {
+    border-color: gainsboro !important;
 }

@@ -11,7 +11,7 @@
                             height="28"
                         />
                         <p class="text-center font-weight-light mb-5 mt-4">
-                            Sign In
+                            Create an Account
                         </p>
                         <div class="card-body py-2">
                             <form>
@@ -53,29 +53,25 @@
                                         </span>
                                     </div>
                                 </div>
-                                <a href="" style="text-decoration:none;"
-                                    ><small class="form-text mb-4  aura-font"
-                                        >Forgot Password?</small
-                                    ></a
-                                >
+
                                 <div class="form-group">
                                     <button
                                         type="button"
                                         class="btn btn-aura btn-md btn-block text-white shadow-none  aura-font"
                                     >
-                                        Sign In
+                                        Create Account
                                     </button>
                                 </div>
 
                                 <a
-                                    href="/signup"
+                                    href="/login"
                                     class="text-right form-text "
                                     style="text-decoration:none; font-size:14px;"
                                 >
                                     <span class="text-dark  aura-font"
-                                        >Don't have an account?</span
+                                        >Already have an account?</span
                                     >
-                                    Sign up
+                                    Sign in
                                 </a>
 
                                 <div class="col-md-12 mt-4 mb-4 ">
@@ -103,7 +99,7 @@
                                             type="button"
                                             class="btn shadow-none"
                                         >
-                                            Signin Using Google
+                                            Signup Using Google
                                         </button>
                                     </div>
                                     <div
@@ -124,7 +120,7 @@
                                             type="button"
                                             class="btn shadow-none"
                                         >
-                                            Signin Using Facebook
+                                            Signup Using Facebook
                                         </button>
                                     </div>
                                 </div>
