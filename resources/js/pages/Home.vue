@@ -370,7 +370,10 @@
                                 <hr class="card-hr" />
 
                                 <div class="container mt-5 mb-5 text-center">
-                                    <a href="/category/news" class="see-more">
+                                    <router-link
+                                        to="/category/news"
+                                        class="see-more"
+                                    >
                                         <div
                                             class="col-12 row justify-content-center align-items-baseline"
                                         >
@@ -379,7 +382,7 @@
                                                 class="see-more-icon fa fa-chevron-circle-right"
                                             ></i>
                                         </div>
-                                    </a>
+                                    </router-link>
                                 </div>
                             </div>
                         </div>
@@ -573,7 +576,7 @@
                 </div>
 
                 <div class="container mt-5 mb-5 text-center">
-                    <a href="/category/fashion" class="see-more">
+                    <router-link to="/category/fashion" class="see-more">
                         <div
                             class="col-12 row justify-content-center align-items-baseline"
                         >
@@ -582,7 +585,7 @@
                                 class="see-more-icon fa fa-chevron-circle-right"
                             ></i>
                         </div>
-                    </a>
+                    </router-link>
                 </div>
             </div>
         </div>
@@ -710,7 +713,7 @@
                 </div>
 
                 <div class="container mt-5 mb-5 text-center">
-                    <a href="/category/beauty" class="see-more">
+                    <router-link to="/category/beauty" class="see-more">
                         <div
                             class="col-12 row justify-content-center align-items-baseline"
                         >
@@ -719,7 +722,7 @@
                                 class="see-more-icon fa fa-chevron-circle-right"
                             ></i>
                         </div>
-                    </a>
+                    </router-link>
                 </div>
             </div>
         </div>
@@ -916,7 +919,7 @@
                 </div>
 
                 <div class="container mt-5 mb-5 text-center">
-                    <a href="/category/news" class="see-more">
+                    <router-link to="/category/news" class="see-more">
                         <div
                             class="col-12 row justify-content-center align-items-baseline"
                         >
@@ -925,7 +928,7 @@
                                 class="see-more-icon fa fa-chevron-circle-right"
                             ></i>
                         </div>
-                    </a>
+                    </router-link>
                 </div>
             </div>
         </div>
@@ -957,7 +960,7 @@
                         </h4>
                         <hr class="card-hr mx-auto" />
                         <div class="container mt-5 mb-5 text-center">
-                            <a href="/category/videos" class="see-more">
+                            <router-link to="/category/videos" class="see-more">
                                 <div
                                     class="col-12 row justify-content-center align-items-baseline"
                                 >
@@ -966,7 +969,7 @@
                                         class="see-more-icon fa fa-chevron-circle-right"
                                     ></i>
                                 </div>
-                            </a>
+                            </router-link>
                         </div>
                     </div>
                 </div>
@@ -1144,7 +1147,7 @@
                 </div>
 
                 <div class="container mt-5 mb-5 text-center">
-                    <a href="/category/beauty" class="see-more">
+                    <router-link to="/category/beauty" class="see-more">
                         <div
                             class="col-12 row justify-content-center align-items-baseline"
                         >
@@ -1153,7 +1156,7 @@
                                 class="see-more-icon fa fa-chevron-circle-right"
                             ></i>
                         </div>
-                    </a>
+                    </router-link>
                 </div>
             </div>
         </div>
@@ -1254,7 +1257,9 @@
                     </div>
                 </div>
                 <div class="container mt-5 mb-5 text-center">
-                    <a href="/category/videos" class="see-more">
+
+                    <router-link to="/category/videos" class="see-more">
+
                         <div
                             class="col-12 row justify-content-center align-items-baseline"
                         >
@@ -1263,7 +1268,7 @@
                                 class="see-more-icon fa fa-chevron-circle-right"
                             ></i>
                         </div>
-                    </a>
+                    </router-link>
                 </div>
             </div>
         </div>

@@ -82,17 +82,16 @@
                                         Sign In
                                     </button>
                                 </div>
-
-                                <a
-                                    href="/register"
+                                <router-link
                                     class="text-right form-text "
                                     style="text-decoration:none; font-size:14px;"
+                                    to="/register"
                                 >
                                     <span class="text-dark  aura-font"
                                         >Don't have an account?</span
                                     >
-                                    Sign up
-                                </a>
+                                    Sign up</router-link
+                                >
 
                                 <div class="col-md-12 mt-4 mb-4 ">
                                     <div class="login-or">

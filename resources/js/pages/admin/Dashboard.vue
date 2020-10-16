@@ -1,6 +1,8 @@
 <template>
     <div>
-        <a href="/logout" @click.prevent="logout" class="text-dark">logout</a>
+        <router-link @click.prevent="logout" class="nav-link" to="/logout"
+            >Logout</router-link
+        >
     </div>
 </template>
 
@@ -15,7 +17,7 @@ export default {
         };
     },
     mounted() {
-        User.auth.then(response => {
+        User.auth().then(response => {
             this.user = response.data;
         });
     },

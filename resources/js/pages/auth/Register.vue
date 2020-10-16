@@ -77,17 +77,16 @@
                                         Create Account
                                     </button>
                                 </div>
-
-                                <a
-                                    href="/login"
+                                <router-link
                                     class="text-right form-text "
                                     style="text-decoration:none; font-size:14px;"
+                                    to="/login"
                                 >
                                     <span class="text-dark  aura-font"
                                         >Already have an account?</span
                                     >
-                                    Sign in
-                                </a>
+                                    Sign in</router-link
+                                >
 
                                 <div class="col-md-12 mt-4 mb-4 ">
                                     <div class="login-or">
