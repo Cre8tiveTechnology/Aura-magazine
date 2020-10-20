@@ -14,6 +14,9 @@
                             Sign In
                         </p>
                         <div class="card-body py-2">
+                            <span class="text-danger" v-if="errors.message">{{
+                                errors.message
+                            }}</span>
                             <form>
                                 <div class="form-group">
                                     <span
@@ -179,7 +182,8 @@ export default {
                     this.$router.push({ name: "dashboard" });
                 })
                 .catch(errors => {
-                    if (errors.response.status == 400) {
+                    if (errors.response.status != 200) {
+                        console.log(errors.response.data);
                         this.errors = errors.response.data;
                     }
                 });

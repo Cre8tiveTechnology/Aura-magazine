@@ -4453,19 +4453,22 @@ __webpack_require__.r(__webpack_exports__);
   mounted: function mounted() {
     var _this = this;
 
-    _apis_User__WEBPACK_IMPORTED_MODULE_0__["default"].auth().then(function (response) {
+    var token = localStorage.getItem("token");
+    _apis_User__WEBPACK_IMPORTED_MODULE_0__["default"].auth(token).then(function (response) {
       _this.user = response.data;
+      console.log(_this.user);
     });
   },
   methods: {
     logout: function logout() {
       var _this2 = this;
 
-      _apis_User__WEBPACK_IMPORTED_MODULE_0__["default"].logout().then(function () {
+      _apis_User__WEBPACK_IMPORTED_MODULE_0__["default"].logout(this.user).then(function (response) {
+        console.log(response.data);
         localStorage.removeItem("token");
 
         _this2.$router.push({
-          name: "home"
+          name: "login"
         });
       });
     }
@@ -4484,6 +4487,9 @@ __webpack_require__.r(__webpack_exports__);
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _apis_User__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../apis/User */ "./resources/js/apis/User.js");
+//
+//
+//
 //
 //
 //
@@ -4667,7 +4673,8 @@ __webpack_require__.r(__webpack_exports__);
           name: "dashboard"
         });
       })["catch"](function (errors) {
-        if (errors.response.status == 400) {
+        if (errors.response.status != 200) {
+          console.log(errors.response.data);
           _this.errors = errors.response.data;
         }
       });
@@ -46536,26 +46543,23 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c(
-    "div",
-    [
-      _c(
-        "router-link",
-        {
-          staticClass: "nav-link",
-          attrs: { to: "/logout" },
-          on: {
-            click: function($event) {
-              $event.preventDefault()
-              return _vm.logout($event)
-            }
+  return _c("div", [
+    _c(
+      "a",
+      {
+        staticClass: "nav-link",
+        on: {
+          click: function($event) {
+            $event.preventDefault()
+            return _vm.logout($event)
           }
-        },
-        [_vm._v("Logout")]
-      )
-    ],
-    1
-  )
+        }
+      },
+      [_vm._v("Logout")]
+    ),
+    _vm._v(" "),
+    _c("h1", [_vm._v("Hello! " + _vm._s(_vm.user.email))])
+  ])
 }
 var staticRenderFns = []
 render._withStripped = true
@@ -46611,6 +46615,12 @@ var render = function() {
                 ),
                 _vm._v(" "),
                 _c("div", { staticClass: "card-body py-2" }, [
+                  _vm.errors.message
+                    ? _c("span", { staticClass: "text-danger" }, [
+                        _vm._v(_vm._s(_vm.errors.message))
+                      ])
+                    : _vm._e(),
+                  _vm._v(" "),
                   _c(
                     "form",
                     [
@@ -62803,8 +62813,12 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
   /*                            Get Authenticated User                          */
 
   /* -------------------------------------------------------------------------- */
-  auth: function auth() {
-    return _Api__WEBPACK_IMPORTED_MODULE_1__["default"].get('/user');
+  auth: function auth(token) {
+    return _Api__WEBPACK_IMPORTED_MODULE_1__["default"].get('/user', {
+      headers: {
+        Authorization: 'Bearer ' + token
+      }
+    });
   }
 });
 

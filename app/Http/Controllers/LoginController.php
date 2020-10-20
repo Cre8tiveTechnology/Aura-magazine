@@ -53,7 +53,7 @@ class LoginController extends Controller
      */
     public function logout(Request $request, User $user)
     {
-        $email = $request->email;
+        $email = $user->email;
        $logout = $user->tokens()->where('name', $email)->delete();
         if ($logout) {
             return response()->json(

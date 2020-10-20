@@ -42,8 +42,12 @@ export default {
     /* -------------------------------------------------------------------------- */
     /*                            Get Authenticated User                          */
     /* -------------------------------------------------------------------------- */
-    auth ()
+    auth (token)
     {
-        return Api.get('/user');
+        return Api.get('/user',{
+            headers: {
+                Authorization: 'Bearer ' + token
+            }
+        });
     }
 }
