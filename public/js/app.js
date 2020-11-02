@@ -4666,8 +4666,9 @@ __webpack_require__.r(__webpack_exports__);
     login: function login() {
       var _this = this;
 
+      console.log(this.form.email);
       _apis_User__WEBPACK_IMPORTED_MODULE_0__["default"].login(this.form).then(function (response) {
-        localStorage.setItem("token", response.data.token);
+        localStorage.setItem("auth", "true");
 
         _this.$router.push({
           name: "dashboard"
