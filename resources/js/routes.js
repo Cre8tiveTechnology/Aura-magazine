@@ -118,8 +118,8 @@ export const routes = [
         path: '/dashboard',
         component: Dashboard,
         meta: {
+            authOnly: true,
             showProgressBar: true,
-            authOnly: true
         }
     },
 ]

@@ -12,22 +12,19 @@ export default {
     name: "Dashboard",
     data() {
         return {
-            name: "K",
-            user: null
+            user: {}
         };
     },
     mounted() {
-        let token = localStorage.getItem("token");
-        User.auth(token).then(response => {
+        User.auth().then(response => {
             this.user = response.data;
-            console.log(this.user);
+            console.log(this.user.email);
         });
     },
     methods: {
         logout() {
-            User.logout(this.user).then(response => {
-                console.log(response.data);
-                localStorage.removeItem("token");
+            User.logout().then(response => {
+                localStorage.removeItem("auth");
                 this.$router.push({ name: "login" });
             });
         }

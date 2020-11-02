@@ -46,6 +46,7 @@
     <link href="{{ asset('css/style.css') }}" rel="stylesheet" />
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://unpkg.com/@space-css/space-css@1.0.3/space.min.css">
+
 </head>
 
 <body>

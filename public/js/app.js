@@ -3357,15 +3357,9 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: "Home",
-  data: function data() {
-    return {
-      name: "K"
-    };
-  }
+  data: function data() {}
 });
 
 /***/ }),
@@ -4446,26 +4440,23 @@ __webpack_require__.r(__webpack_exports__);
   name: "Dashboard",
   data: function data() {
     return {
-      name: "K",
-      user: null
+      user: {}
     };
   },
   mounted: function mounted() {
     var _this = this;
 
-    var token = localStorage.getItem("token");
-    _apis_User__WEBPACK_IMPORTED_MODULE_0__["default"].auth(token).then(function (response) {
+    _apis_User__WEBPACK_IMPORTED_MODULE_0__["default"].auth().then(function (response) {
       _this.user = response.data;
-      console.log(_this.user);
+      console.log(_this.user.email);
     });
   },
   methods: {
     logout: function logout() {
       var _this2 = this;
 
-      _apis_User__WEBPACK_IMPORTED_MODULE_0__["default"].logout(this.user).then(function (response) {
-        console.log(response.data);
-        localStorage.removeItem("token");
+      _apis_User__WEBPACK_IMPORTED_MODULE_0__["default"].logout().then(function (response) {
+        localStorage.removeItem("auth");
 
         _this2.$router.push({
           name: "login"
@@ -62665,9 +62656,29 @@ __webpack_require__.r(__webpack_exports__);
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
 /* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var nprogress__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! nprogress */ "./node_modules/nprogress/nprogress.js");
+/* harmony import */ var nprogress__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(nprogress__WEBPACK_IMPORTED_MODULE_1__);
+
 
 var Api = axios__WEBPACK_IMPORTED_MODULE_0___default.a.create({
   baseURL: "http://localhost:8000/api"
+}); // Add a request interceptor
+
+Api.interceptors.request.use(function (config) {
+  nprogress__WEBPACK_IMPORTED_MODULE_1___default.a.start();
+  console.log(config);
+  return config;
+}, function (error) {
+  console.error(error);
+  return Promise.reject(error);
+}); // Add a response interceptor
+
+Api.interceptors.response.use(function (response) {
+  console.log(response);
+  nprogress__WEBPACK_IMPORTED_MODULE_1___default.a.done();
+  return response;
+}, function (error) {
+  return Promise.reject(error);
 });
 Api.defaults.withCredentials = true;
 /* harmony default export */ __webpack_exports__["default"] = (Api);
@@ -62788,7 +62799,7 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
   /*                                   logout @param - user                     */
 
   /* -------------------------------------------------------------------------- */
-  logout: function logout(user) {
+  logout: function logout() {
     return _asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(function _callee3() {
       return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.wrap(function _callee3$(_context3) {
         while (1) {
@@ -62798,7 +62809,7 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
               return _apis_Csrf__WEBPACK_IMPORTED_MODULE_2__["default"].getCookie();
 
             case 2:
-              return _context3.abrupt("return", _Api__WEBPACK_IMPORTED_MODULE_1__["default"].post('/logout', user));
+              return _context3.abrupt("return", _Api__WEBPACK_IMPORTED_MODULE_1__["default"].post('/logout'));
 
             case 3:
             case "end":
@@ -62814,12 +62825,8 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
   /*                            Get Authenticated User                          */
 
   /* -------------------------------------------------------------------------- */
-  auth: function auth(token) {
-    return _Api__WEBPACK_IMPORTED_MODULE_1__["default"].get('/user', {
-      headers: {
-        Authorization: 'Bearer ' + token
-      }
-    });
+  auth: function auth() {
+    return _Api__WEBPACK_IMPORTED_MODULE_1__["default"].get('/user');
   }
 });
 
@@ -62893,7 +62900,7 @@ var router = new vue_router__WEBPACK_IMPORTED_MODULE_1__["default"]({
 });
 
 function isLoggedIn() {
-  return localStorage.getItem("token");
+  return localStorage.getItem("auth");
 }
 
 router.beforeResolve(function (to, from, next) {
@@ -62920,6 +62927,8 @@ router.beforeResolve(function (to, from, next) {
       } else {
         next();
       }
+    } else {
+      next();
     }
   }
 
@@ -63720,8 +63729,8 @@ var routes = [{
   path: '/dashboard',
   component: _pages_admin_Dashboard_vue__WEBPACK_IMPORTED_MODULE_7__["default"],
   meta: {
-    showProgressBar: true,
-    authOnly: true
+    authOnly: true,
+    showProgressBar: true
   }
 }];
 

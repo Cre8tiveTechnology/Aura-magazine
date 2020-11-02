@@ -1257,9 +1257,7 @@
                     </div>
                 </div>
                 <div class="container mt-5 mb-5 text-center">
-
                     <router-link to="/category/videos" class="see-more">
-
                         <div
                             class="col-12 row justify-content-center align-items-baseline"
                         >
@@ -1278,10 +1276,6 @@
 <script>
 export default {
     name: "Home",
-    data() {
-        return {
-            name: "K"
-        };
-    }
+    data() {}
 };
 </script>

@@ -51,8 +51,9 @@ const router = new VueRouter({
 
 function isLoggedIn ()
 {
-    return localStorage.getItem("token");
+    return localStorage.getItem("auth");
 }
+
 router.beforeResolve((to,from,next) =>
 {
     if (to.name) {
@@ -65,18 +66,21 @@ router.beforeResolve((to,from,next) =>
                     path: "/login",
                 });
             } else {
-                next()
+                next();
 
             }
+
         } else if (to.matched.some(record => record.meta.guestOnly)) {
             if (isLoggedIn()) {
                 next({
                     path: "/dashboard",
                 });
             } else {
-                next()
+                next();
 
             }
+        } else {
+            next();
         }
 
     }
@@ -86,6 +90,7 @@ router.beforeResolve((to,from,next) =>
 router.afterEach((to,from) =>
 {
     if (to.name) {
+
         // Complete the animation of the route progress bar.
         NProgress.done();
     }

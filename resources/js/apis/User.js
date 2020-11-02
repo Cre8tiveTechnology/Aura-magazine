@@ -10,8 +10,8 @@ export default {
     async register (form)
     {
         await Csrf.getCookie();
-
-        return Api.post('/register',form);
+        return Api.post('/register',form
+        );
 
     },
 
@@ -22,7 +22,6 @@ export default {
     async login (form)
     {
         await Csrf.getCookie();
-
         return Api.post('/login',form);
 
     },
@@ -30,11 +29,10 @@ export default {
     /* -------------------------------------------------------------------------- */
     /*                                   logout @param - user                     */
     /* -------------------------------------------------------------------------- */
-    async logout (user)
+    async logout ()
     {
         await Csrf.getCookie();
-
-        return Api.post('/logout',user);
+        return Api.post('/logout');
 
     },
 
@@ -42,12 +40,8 @@ export default {
     /* -------------------------------------------------------------------------- */
     /*                            Get Authenticated User                          */
     /* -------------------------------------------------------------------------- */
-    auth (token)
+    auth ()
     {
-        return Api.get('/user',{
-            headers: {
-                Authorization: 'Bearer ' + token
-            }
-        });
+        return Api.get('/user');
     }
 }

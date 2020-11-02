@@ -176,9 +176,10 @@ export default {
         /*                                   Login @param- form data                   */
         /* -------------------------------------------------------------------------- */
         login() {
+            console.log(this.form.email);
             User.login(this.form)
                 .then(response => {
-                    localStorage.setItem("token", response.data.token);
+                    localStorage.setItem("auth", "true");
                     this.$router.push({ name: "dashboard" });
                 })
                 .catch(errors => {
