@@ -6,8 +6,10 @@ import Post from './pages/Post.vue'
 import Shop from './pages/Shop.vue'
 import Login from './pages/auth/Login.vue'
 import Register from './pages/auth/Register.vue'
+import Four0Four from './pages/404.vue'
 
 //Route paths for  Admin  App
+// import Dashboard from './pages/admin/Dashboard.vue'
 import Dashboard from './pages/admin/Dashboard.vue'
 
 export const routes = [
@@ -16,8 +18,8 @@ export const routes = [
         path: '/',
         component: Home,
         meta: {
-            showProgressBar: true
-        }
+            showProgressBar: true,
+        },
     },
 
     {
@@ -26,8 +28,8 @@ export const routes = [
         component: Login,
         meta: {
             guestOnly: true,
-            showProgressBar: true
-        }
+            showProgressBar: true,
+        },
     },
     {
         name: 'register',
@@ -35,8 +37,8 @@ export const routes = [
         component: Register,
         meta: {
             guestOnly: true,
-            showProgressBar: true
-        }
+            showProgressBar: true,
+        },
     },
 
     {
@@ -44,8 +46,8 @@ export const routes = [
         path: '/shop',
         component: Shop,
         meta: {
-            showProgressBar: true
-        }
+            showProgressBar: true,
+        },
     },
 
     {
@@ -53,8 +55,8 @@ export const routes = [
         path: '/category/news',
         component: News,
         meta: {
-            showProgressBar: true
-        }
+            showProgressBar: true,
+        },
     },
 
     {
@@ -62,8 +64,8 @@ export const routes = [
         path: '/category/beauty',
         component: News,
         meta: {
-            showProgressBar: true
-        }
+            showProgressBar: true,
+        },
     },
 
     {
@@ -71,8 +73,8 @@ export const routes = [
         path: '/category/fashion',
         component: News,
         meta: {
-            showProgressBar: true
-        }
+            showProgressBar: true,
+        },
     },
 
     {
@@ -80,8 +82,8 @@ export const routes = [
         path: '/category/lifestyle',
         component: News,
         meta: {
-            showProgressBar: true
-        }
+            showProgressBar: true,
+        },
     },
 
     {
@@ -89,17 +91,17 @@ export const routes = [
         path: '/category/arts-and-culture',
         component: News,
         meta: {
-            showProgressBar: true
-        }
+            showProgressBar: true,
+        },
     },
 
     {
-        name: 'psot',
+        name: 'post',
         path: '/post',
         component: Post,
         meta: {
-            showProgressBar: true
-        }
+            showProgressBar: true,
+        },
     },
 
     {
@@ -107,19 +109,38 @@ export const routes = [
         path: '/magazine',
         component: Magazine,
         meta: {
-            showProgressBar: true
-        }
+            showProgressBar: true,
+        },
+    },
+
+    //Page 404
+
+    {
+        name: '404',
+        path: '*',
+        component: Four0Four,
+        meta: {
+            showProgressBar: true,
+        },
     },
 
     //Admin
 
+    // {
+    //     name: 'dashboard',
+    //     path: '/dashboard',
+    //     component: Dashboard,
+    //     meta: {
+    //         authOnly: true,
+    //         showProgressBar: true,
+    //     }
+    // },
     {
         name: 'dashboard',
         path: '/dashboard',
         component: Dashboard,
         meta: {
-            authOnly: true,
             showProgressBar: true,
-        }
+        },
     },
 ]

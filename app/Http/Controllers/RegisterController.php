@@ -20,6 +20,7 @@ class RegisterController extends Controller
         $validator = Validator::make($request->all(), [
             'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
             'password' => ['required', 'string', 'min:8',],
+            'name' => ['required', 'string', 'min:10',],
         ]);
 
         if ($validator->fails()) {
@@ -27,6 +28,7 @@ class RegisterController extends Controller
         }else{
 
             User::create([
+                'name' => $request->name,
                 'email' => $request->email,
                 'password' => Hash::make($request->password),
             ]);

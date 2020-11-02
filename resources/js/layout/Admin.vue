@@ -1,21 +1,33 @@
 <template>
-  <div>
-    <div class="wrapper">
-      <auth-sidenav></auth-sidenav>
+    <div>
+        <div class="wrapper">
+            <auth-sidenav></auth-sidenav>
 
-      <div class="main-panel">
-        <auth-nav></auth-nav>
+            <div class="main-panel">
+                <auth-nav :user="user"></auth-nav>
 
-        <slot name="content"></slot>
+                <slot name="content"></slot>
 
-        <auth-footer></auth-footer>
-      </div>
+                <auth-footer></auth-footer>
+            </div>
+        </div>
     </div>
-  </div>
 </template>
 
 <script>
+import User from "../apis/User";
 export default {
-  name: "Admin",
+    name: "Admin",
+    data() {
+        return {
+            user: {}
+        };
+    },
+    mounted() {
+        User.auth().then(response => {
+            this.user = response.data;
+            console.log(this.user.email);
+        });
+    }
 };
 </script>

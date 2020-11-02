@@ -1,5 +1,8 @@
 <template>
   <div>
+    <!-- NavBar -->
+    <navbar />
+    <!-- Navbar -->
     <div class="container mt-5">
       <div class="row justify-content-between align-items-center">
         <div class="col-lg-4 col-md-4 col-12 col-sm-12 text-center">

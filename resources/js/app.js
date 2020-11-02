@@ -23,8 +23,16 @@ import NProgress from 'nprogress'
  */
 
 import Navbar from './components/Navbar'
+import AuthNav from './layout/navbars/navs/Auth'
+import SideNav from './layout/navbars/Auth-Sidenav'
+import Footer from './layout/Footer'
+import Admin from './layout/Admin'
 
 Vue.component('navbar',Navbar)
+Vue.component('auth-nav',AuthNav)
+Vue.component('auth-sidenav',SideNav)
+Vue.component('auth-footer',Footer)
+Vue.component('auth-admin',Admin)
 
 // const files = require.context('./', true, /\.vue$/i)
 // files.keys().map(key => Vue.component(key.split('/').pop().split('.')[0], files(key).default))
@@ -45,8 +53,8 @@ const router = new VueRouter({
     mode: 'history',
     routes: routes,
     meta: {
-        showProgressBar: true
-    }
+        showProgressBar: true,
+    },
 })
 
 function isLoggedIn ()
@@ -67,7 +75,6 @@ router.beforeResolve((to,from,next) =>
                 });
             } else {
                 next();
-
             }
 
         } else if (to.matched.some(record => record.meta.guestOnly)) {
@@ -84,7 +91,6 @@ router.beforeResolve((to,from,next) =>
         }
 
     }
-    next()
 })
 
 router.afterEach((to,from) =>
