@@ -1,5 +1,8 @@
 <template>
     <div>
+        <!-- NavBar -->
+        <navbar />
+        <!-- Navbar -->
         <!--===================== ADS BANNER =====================-->
         <div class="home-ads-container mt-3 mb-3 w-50 mx-auto h-100">
             <div class="container text-center">

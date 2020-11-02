@@ -1,5 +1,9 @@
 <template>
   <div>
+    <!-- NavBar -->
+    <navbar />
+    <!-- Navbar -->
+
     <!-- HEADER -->
     <div class="container my-4">
       <div class="row justify-content-between align-items-center">

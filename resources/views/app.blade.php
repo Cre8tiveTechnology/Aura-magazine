@@ -44,6 +44,11 @@
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     <link href="{{ asset('css/nprogress.css') }}" rel="stylesheet" />
     <link href="{{ asset('css/style.css') }}" rel="stylesheet" />
+
+    <!-- CSS Files -->
+    <link href="{{ asset('paper') }}/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="{{ asset('paper') }}/css/paper-dashboard.css?v=2.0.0" rel="stylesheet" />
+
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://unpkg.com/@space-css/space-css@1.0.3/space.min.css">
 </head>
@@ -59,6 +64,18 @@
     </script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js">
     </script>
+
+    <!--   Core JS Files   -->
+    <script src="{{ asset('paper') }}/js/core/jquery.min.js"></script>
+    <script src="{{ asset('paper') }}/js/core/popper.min.js"></script>
+    <script src="{{ asset('paper') }}/js/core/bootstrap.min.js"></script>
+    <script src="{{ asset('paper') }}/js/plugins/perfect-scrollbar.jquery.min.js"></script>
+    <!-- Chart JS -->
+    <script src="{{ asset('paper') }}/js/plugins/chartjs.min.js"></script>
+    <!--  Notifications Plugin    -->
+    <script src="{{ asset('paper') }}/js/plugins/bootstrap-notify.js"></script>
+    <!-- Control Center for Now Ui Dashboard: parallax effects, scripts for the example pages etc -->
+    <script src="{{ asset('paper') }}/js/paper-dashboard.min.js?v=2.0.0" type="text/javascript"></script>
 
 </body>
 

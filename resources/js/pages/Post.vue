@@ -1,5 +1,8 @@
 <template>
   <div>
+    <!-- NavBar -->
+    <navbar />
+    <!-- Navbar -->
     <!-- Top -->
     <!-- Portrait -->
     <div class="container rounded-0" v-if="post.isProtrait">
