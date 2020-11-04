@@ -77,7 +77,7 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <a href="" style="text-decoration: none"
+                                    <a href="#" style="text-decoration: none"
                                         ><small class="form-text mb-4 aura-font"
                                             >Forgot Password?</small
                                         ></a
@@ -165,7 +165,7 @@
 </template>
 
 <script>
-import User from "../../apis/User";
+import User from "../../apis/admin/User";
 
 export default {
     name: "Login",

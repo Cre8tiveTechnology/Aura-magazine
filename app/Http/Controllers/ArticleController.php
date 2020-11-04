@@ -16,7 +16,12 @@ class ArticleController extends Controller
      */
     public function index()
     {
-
+        $articles = auth()->user()->articles()->paginate(10);
+        if ($articles->isEmpty()) {
+            return response()->json("There are no articles available yet!", 204);
+        } else {
+            return response()->json(["articles" => $articles], 200);
+        }
     }
 
     /**
@@ -40,9 +45,10 @@ class ArticleController extends Controller
         $validator = Validator::make($request->all(), [
             'title' => ['required', 'string', 'email', 'max:255'],
             'description' => ['required', 'string', 'min:8'],
+            'content' => ['required', 'string', 'min:100'],
             'category' => ['required', 'string', 'min:8'],
             'image' => ['required', 'string', 'min:8'],
-            'image_orientation' => ['required', 'string', 'min:8'],
+            'image_orientation' => ['required', 'string'],
         ]);
 
         if ($validator->fails()) {
@@ -52,6 +58,7 @@ class ArticleController extends Controller
         $data = [
             'title' => Str::title($request->title),
             'description' => $request->description,
+            'content' => $request->content,
             'slug' => Str::slug($request->title, '-'),
             'category' => $request->category,
             'image' => $request->image,
@@ -61,9 +68,9 @@ class ArticleController extends Controller
 
         $article = Article::create($data);
 
-        if($article->exists){
+        if ($article->exists) {
             return response()->json('Article was created successfully!', 201);
-        }else{
+        } else {
             return response()->json('There was a problem while creating article', 400);
         }
     }

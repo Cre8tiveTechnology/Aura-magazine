@@ -3,7 +3,7 @@
         <div class="wrapper">
             <auth-sidenav></auth-sidenav>
 
-            <div class="main-panel">
+            <div class="main-panel" style="background: #fff">
                 <auth-nav :user="user"></auth-nav>
 
                 <slot name="content"></slot>
@@ -15,7 +15,7 @@
 </template>
 
 <script>
-import User from "../apis/User";
+import User from "../apis/admin/User";
 export default {
     name: "Admin",
     data() {
@@ -26,7 +26,7 @@ export default {
     mounted() {
         User.auth().then(response => {
             this.user = response.data;
-            console.log(this.user.email);
+            // console.log(this.user.email);
         });
     }
 };

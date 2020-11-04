@@ -1,5 +1,5 @@
-import Api from './Api';
-import Csrf from "../apis/Csrf";
+import Api from '../Api'
+import Csrf from '../Csrf'
 
 export default {
 
@@ -43,7 +43,6 @@ export default {
     async auth ()
     {
         await Csrf.getCookie();
-
         return Api.get('/user');
     }
 }

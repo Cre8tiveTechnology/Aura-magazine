@@ -12,17 +12,15 @@ use Illuminate\Support\Facades\Route;
 | routes are loaded by the RouteServiceProvider within a group which
 | is assigned the "api" middleware group. Enjoy building your API!
 |
-*/
-
-
+ */
 
 /* -------------------------------------------------------------------------- */
 /*                                Artilces API                                */
 /* -------------------------------------------------------------------------- */
 Route::group(['name' => 'article.', 'prefix' => 'article', 'middleware' => 'auth:sanctum'], function () {
-	Route::post('/store', 'ArticleController@store')->name('store');
+    Route::get('/all', 'ArticleController@index')->name('all');
+    Route::post('/create', 'ArticleController@store')->name('store');
 });
-
 
 /* -------------------------------------------------------------------------- */
 /*                               Auth API Routes                              */

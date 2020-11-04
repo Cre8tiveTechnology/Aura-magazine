@@ -9,7 +9,8 @@ import Register from './pages/auth/Register.vue'
 import Four0Four from './pages/404.vue'
 
 //Route paths for  Admin  App
-// import Dashboard from './pages/admin/Dashboard.vue'
+import Article from './pages/admin/articles/Articles.vue'
+import CreateArticle from './pages/admin/articles/CreateArticle.vue'
 import Dashboard from './pages/admin/Dashboard.vue'
 
 export const routes = [
@@ -124,22 +125,36 @@ export const routes = [
         },
     },
 
-    //Admin
+    /* -------------------------------------------------------------------------- */
+    /*                                  Admin Routes                              */
+    /* -------------------------------------------------------------------------- */
 
-    // {
-    //     name: 'dashboard',
-    //     path: '/dashboard',
-    //     component: Dashboard,
-    //     meta: {
-    //         authOnly: true,
-    //         showProgressBar: true,
-    //     }
-    // },
     {
         name: 'dashboard',
         path: '/dashboard',
         component: Dashboard,
         meta: {
+            authOnly: true,
+            showProgressBar: true,
+        },
+    },
+
+    {
+        name: 'article',
+        path: '/article',
+        component: Article,
+        meta: {
+            authOnly: true,
+            showProgressBar: true,
+        },
+    },
+
+    {
+        name: 'createArticle',
+        path: '/article/create',
+        component: CreateArticle,
+        meta: {
+            authOnly: true,
             showProgressBar: true,
         },
     },

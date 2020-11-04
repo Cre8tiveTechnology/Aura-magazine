@@ -3,7 +3,11 @@
     <auth-admin>
       <template v-slot:content>
         <div class="content">
-          <h1>OVERVIEW</h1>
+          <h1>ARTICLES</h1>
+
+          <router-link to="/article/create"
+            >Create New <i class="fa fa-plus"></i
+          ></router-link>
         </div>
       </template>
     </auth-admin>
@@ -12,6 +16,6 @@
 
 <script>
 export default {
-  name: "Dashboard",
+  name: "Articles",
 };
 </script>

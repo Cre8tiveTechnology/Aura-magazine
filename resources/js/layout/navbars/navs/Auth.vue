@@ -14,7 +14,7 @@
                     </div>
                     <!--@@TODO = Change email to name -->
                     <a class="navbar-brand" href="#pablo"
-                        >Welcome, {{ user.name.replace(/ .*/, "") }}</a
+                        >Welcome, {{ this.user.name.replace(/ .*/, "") }}</a
                     >
                 </div>
                 <button
@@ -132,7 +132,7 @@
 </template>
 
 <script>
-import User from "../../../apis/User";
+import User from "../../../apis/admin/User";
 
 export default {
     name: "Auth",

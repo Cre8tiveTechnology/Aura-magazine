@@ -169,7 +169,7 @@
 </template>
 
 <script>
-import User from "../../apis/User";
+import User from "../../apis/admin/User";
 export default {
     name: "Register",
     data() {
