@@ -1,126 +1,107 @@
 <template>
-    <nav
-        class="navbar navbar-expand-lg navbar-light bg-transparent text-small py-4"
-    >
-        <div class="container">
-            <router-link class="navbar-brand" to="/">
-                <img
-                    src="https://aura.com.ng/storage/logo/regular.svg"
-                    height="28"
-            /></router-link>
+  <nav
+    class="navbar navbar-expand-lg navbar-light bg-transparent text-small py-4 mb-0"
+  >
+    <div class="container">
+      <router-link class="navbar-brand" to="/">
+        <img src="https://aura.com.ng/storage/logo/regular.svg" height="28"
+      /></router-link>
 
-            <button
-                class="navbar-toggler"
-                type="button"
-                data-toggle="collapse"
-                data-target="#navbarDropdown"
-                aria-controls="navbarDropdown"
-                aria-expanded="false"
-                aria-label="Toggle navigation"
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarDropdown"
+        aria-controls="navbarDropdown"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span
+          class="nav-ico fa fa-ellipsis-h mt-1"
+          style="font-size: 30px"
+        ></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarDropdown">
+        <ul class="navbar-nav mx-auto">
+          <li class="nav-item mr-1">
+            <router-link class="nav-link" to="/category/news">News</router-link>
+          </li>
+          <li class="nav-item mr-1">
+            <router-link class="nav-link" to="/category/fashion"
+              >FASHION</router-link
             >
-                <span
-                    class="nav-ico fa fa-ellipsis-h mt-1"
-                    style="font-size: 30px"
-                ></span>
-            </button>
+          </li>
+          <li class="nav-item mr-1">
+            <router-link class="nav-link" to="/category/beauty"
+              >BEAUTY</router-link
+            >
+          </li>
+          <li class="nav-item mr-1">
+            <router-link class="nav-link" to="/category/lifestyle"
+              >LIFESTYLE</router-link
+            >
+          </li>
+          <li class="nav-item mr-1">
+            <router-link class="nav-link" to="/category/arts-and-culture"
+              >ARTS & CULTURE</router-link
+            >
+          </li>
+          <li class="nav-item mr-1">
+            <router-link class="nav-link" to="/category/videos"
+              >VIDEOS</router-link
+            >
+          </li>
+          <li class="nav-item d-lg-none d-xl-block mr-1">
+            <router-link class="nav-link" to="/magazine">MAGAZINE</router-link>
+          </li>
+          <li class="nav-item dropdown mr-1">
+            <a
+              class="nav-link dropdown-toggle"
+              href="#"
+              id="moreDropdown"
+              role="button"
+              data-toggle="dropdown"
+              aria-haspopup="true"
+              aria-expanded="false"
+              >MORE</a
+            >
+            <div class="dropdown-menu" aria-labelledby="moreDropdown">
+              <router-link class="nav-link" to="/category/horoscope"
+                >HOROSCOPE</router-link
+              >
+              <div class="dropdown-divider d-none d-lg-block d-xl-none"></div>
 
-            <div class="collapse navbar-collapse" id="navbarDropdown">
-                <ul class="navbar-nav mx-auto">
-                    <li class="nav-item mr-1">
-                        <router-link class="nav-link" to="/category/news"
-                            >News</router-link
-                        >
-                    </li>
-                    <li class="nav-item mr-1">
-                        <router-link class="nav-link" to="/category/fashion"
-                            >FASHION</router-link
-                        >
-                    </li>
-                    <li class="nav-item mr-1">
-                        <router-link class="nav-link" to="/category/beauty"
-                            >BEAUTY</router-link
-                        >
-                    </li>
-                    <li class="nav-item mr-1">
-                        <router-link class="nav-link" to="/category/lifestyle"
-                            >LIFESTYLE</router-link
-                        >
-                    </li>
-                    <li class="nav-item mr-1">
-                        <router-link
-                            class="nav-link"
-                            to="/category/arts-and-culture"
-                            >ARTS & CULTURE</router-link
-                        >
-                    </li>
-                    <li class="nav-item mr-1">
-                        <router-link class="nav-link" to="/category/videos"
-                            >VIDEOS</router-link
-                        >
-                    </li>
-                    <li class="nav-item d-lg-none d-xl-block mr-1">
-                        <router-link class="nav-link" to="/magazine"
-                            >MAGAZINE</router-link
-                        >
-                    </li>
-                    <li class="nav-item dropdown mr-1">
-                        <a
-                            class="nav-link dropdown-toggle"
-                            href="#"
-                            id="moreDropdown"
-                            role="button"
-                            data-toggle="dropdown"
-                            aria-haspopup="true"
-                            aria-expanded="false"
-                            >MORE</a
-                        >
-                        <div
-                            class="dropdown-menu"
-                            aria-labelledby="moreDropdown"
-                        >
-                            <router-link
-                                class="nav-link"
-                                to="/category/horoscope"
-                                >HOROSCOPE</router-link
-                            >
-                            <div
-                                class="dropdown-divider d-none d-lg-block d-xl-none"
-                            ></div>
-
-                            <router-link
-                                class="nav-link"
-                                to="/category/sex-and-relationships"
-                                >SEX &amp; RELATIONSHIPS</router-link
-                            >
-                        </div>
-                    </li>
-                </ul>
-
-                <!-- Collapse -->
+              <router-link class="nav-link" to="/category/sex-and-relationships"
+                >SEX &amp; RELATIONSHIPS</router-link
+              >
             </div>
+          </li>
+        </ul>
 
-            <div class="d-none d-lg-block">
-                <router-link class="mr-3" to="/category/sex-and-relationships"
-                    ><span
-                        class="badge badge-pill badge-light py-2 px-3 shadow-sm"
-                        >SUBSCRIBE</span
-                    ></router-link
-                >
+        <!-- Collapse -->
+      </div>
 
-                <router-link to="/login">
-                    <span
-                        class="badge badge-pill badge-dark py-2 px-3 shadow-sm"
-                        >SIGN IN</span
-                    ></router-link
-                >
-            </div>
-        </div>
-    </nav>
+      <div class="d-none d-lg-block">
+        <router-link class="mr-3" to="/category/sex-and-relationships"
+          ><span class="badge badge-pill badge-light py-2 px-3 shadow-sm"
+            >SUBSCRIBE</span
+          ></router-link
+        >
+
+        <router-link to="/login">
+          <span class="badge badge-pill badge-dark py-2 px-3 shadow-sm"
+            >SIGN IN</span
+          ></router-link
+        >
+      </div>
+    </div>
+  </nav>
 </template>
 
 <script>
 export default {
-    name: "Navbar"
+  name: "Navbar",
 };
 </script>
 
