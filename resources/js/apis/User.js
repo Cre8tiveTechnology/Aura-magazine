@@ -42,6 +42,7 @@ export default {
     /* -------------------------------------------------------------------------- */
     auth ()
     {
+        await Csrf.getCookie();
         return Api.get('/user');
     }
 }

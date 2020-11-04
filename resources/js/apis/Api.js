@@ -6,32 +6,33 @@ let Api = axios.create({
 });
 
 // Add a request interceptor
-Api.interceptors.request.use(
-    function(config)
-    {
-        NProgress.start();
-        console.log(config);
-        return config;
-    },
-    function(error)
-    {
-        console.error(error);
-        return Promise.reject(error);
-    }
-);
+// Api.interceptors.request.use(
+//     function(config)
+//     {
+//         NProgress.start();
+//         console.log(config);
+//         return config;
+//     },
+//     function(error)
+//     {
+//         console.error(error);
+//         return Promise.reject(error);
+//     }
+// );
 
-// Add a response interceptor
-Api.interceptors.response.use(
-    function(response)
-    {
-        console.log(response);
-        NProgress.done();
-        return response;
-    },
-    function(error)
-    {
-        return Promise.reject(error);
-    }
-);
+// // Add a response interceptor
+// Api.interceptors.response.use(
+//     function(response)
+//     {
+//         console.log(response);
+//         NProgress.done();
+//         return response;
+//     },
+//     function(error)
+//     {
+//         return Promise.reject(error);
+//     }
+// );
+
 Api.defaults.withCredentials = true;
 export default Api;
