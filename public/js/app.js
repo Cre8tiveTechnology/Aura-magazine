@@ -5623,11 +5623,11 @@ __webpack_require__.r(__webpack_exports__);
     },
     selectFile: function selectFile(event) {
       // `files` is always an array because the file input may be in multiple mode
-      this.formFields.image = event.target.files[0];
+      return this.formFields.image = event.target.files[0];
     },
     imageOrientation: function imageOrientation(event) {
       // `files` is always an array because the file input may be in multiple mode
-      this.formFields.imageOrientation = event.value;
+      return this.formFields.imageOrientation = event.value;
     },
 
     /* -------------------------------------------------------------------------- */
@@ -5643,7 +5643,8 @@ __webpack_require__.r(__webpack_exports__);
       this.formData.append("category", this.formFields.category);
       this.formData.append("image", this.formFields.image);
       this.formData.append("image_orientation", this.formFields.image_orientation);
-      _apis_admin_Article__WEBPACK_IMPORTED_MODULE_2__["default"].createArticle(this.formData).then(function (response) {
+      console.log(this.formFields);
+      _apis_admin_Article__WEBPACK_IMPORTED_MODULE_2__["default"].createArticle(this.formFields).then(function (response) {
         _this.$router.push({
           name: "article"
         });

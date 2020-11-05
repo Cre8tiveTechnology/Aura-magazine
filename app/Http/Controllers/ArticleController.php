@@ -6,6 +6,7 @@ use App\Article;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Support\Str;
+use JD\Cloudder\Facades\Cloudder;
 
 class ArticleController extends Controller
 {
@@ -43,11 +44,11 @@ class ArticleController extends Controller
     public function store(Request $request)
     {
         $validator = Validator::make($request->all(), [
-            'title' => ['required', 'string', 'email', 'max:255'],
+            'title' => ['required', 'string'],
             'description' => ['required', 'string', 'min:8'],
             'content' => ['required', 'string', 'min:100'],
-            'category' => ['required', 'string', 'min:8'],
-            'image' => ['required', 'string', 'min:8'],
+            'category' => ['required', 'string'],
+            'image' => ['required', 'image', 'mimes:jpeg,png,jpg,gif,svg'],
             'image_orientation' => ['required', 'string'],
         ]);
 
@@ -55,13 +56,19 @@ class ArticleController extends Controller
             return response()->json($validator->errors(), 400);
         }
 
+        $image_name = $request->file('image')->getRealPath();
+
+        Cloudder::upload($image_name, $request->category, array("folder" => "aura/"));
+
+        $image_url = Cloudder::show(Cloudder::getPublicId());
+
         $data = [
             'title' => Str::title($request->title),
             'description' => $request->description,
             'content' => $request->content,
             'slug' => Str::slug($request->title, '-'),
             'category' => $request->category,
-            'image' => $request->image,
+            'image' => $image_url,
             'image_orientation' => $request->image_orientation,
 
         ];

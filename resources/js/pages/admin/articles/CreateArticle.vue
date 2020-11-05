@@ -252,12 +252,12 @@ export default {
 
         selectFile(event) {
             // `files` is always an array because the file input may be in multiple mode
-            this.formFields.image = event.target.files[0];
+            return (this.formFields.image = event.target.files[0]);
         },
 
         imageOrientation(event) {
             // `files` is always an array because the file input may be in multiple mode
-            this.formFields.imageOrientation = event.value;
+            return (this.formFields.imageOrientation = event.value);
         },
 
         /* -------------------------------------------------------------------------- */
@@ -272,7 +272,8 @@ export default {
                 "image_orientation",
                 this.formFields.image_orientation
             );
-            Article.createArticle(this.formData)
+            console.log(this.formFields);
+            Article.createArticle(this.formFields)
                 .then(response => {
                     this.$router.push({ name: "article" });
                 })
