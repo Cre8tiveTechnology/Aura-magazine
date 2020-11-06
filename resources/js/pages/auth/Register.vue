@@ -4,7 +4,7 @@
     <navbar />
     <!-- Navbar -->
     <div class="login-body">
-      <div class="container login-inner">
+      <div class="container login-inner mt-5">
         <div
           class="row justify-content-lg-start justify-content-md-start justify-content-center"
         >
@@ -19,6 +19,35 @@
               </p>
               <div class="card-body py-2">
                 <form>
+                  <div class="form-group">
+                    <h6>Please Enter Token</h6>
+                    <div class="input-group">
+                      <input
+                        type="text"
+                        v-model="token"
+                        class="form-control shadow-none"
+                        id="token"
+                        @change="validateToken"
+                        autocomplete="off"
+                        placeholder="Enter Token"
+                        aria-describedby="tokenCode"
+                      />
+                      <div class="input-group-append">
+                        <button
+                          class="btn btn-success m-0"
+                          @click.prevent="validateToken"
+                          type="button"
+                          id="tokenCode"
+                        >
+                          Validate
+                        </button>
+                      </div>
+                    </div>
+                    <span class="text-danger txt-small" v-if="tokenErr">
+                      {{ tokenErr }}
+                    </span>
+                  </div>
+
                   <div class="form-group">
                     <span class="text-danger" v-if="errors.email">{{
                       errors.email[0]
@@ -76,6 +105,7 @@
                   <div class="form-group">
                     <button
                       type="button"
+                      :disabled="!isAuthorized"
                       class="btn btn-aura btn-md btn-block text-white shadow-none"
                       @click.prevent="register"
                     >
@@ -151,7 +181,14 @@ export default {
       },
       showPassword: false,
       errors: [],
+      token: "",
+      tokenCode: "",
+      tokenErr: "",
+      isAuthorized: false,
     };
+  },
+  mounted() {
+    this.tokenCode = process.env.SUPER_ADMIN_TOKEN_CODE ?? "11223344??";
   },
   methods: {
     /* -------------------------------------------------------------------------- */
@@ -169,8 +206,26 @@ export default {
           }
         });
     },
+
+    validateToken() {
+      if (this.token.length === 0) {
+        return (this.tokenErr = "Please Provide a Token");
+      }
+      if (this.token === this.tokenCode) {
+        this.tokenErr = "";
+        return (this.isAuthorized = true);
+      } else {
+        this.isAuthorized = false;
+        this.tokenErr = "Invalid Token Supplied";
+        return;
+      }
+    },
   },
 };
 </script>
 
-<style></style>
+<style>
+.txt-small {
+  font-size: 0.8em;
+}
+</style>
