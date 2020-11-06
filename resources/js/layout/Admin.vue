@@ -24,10 +24,13 @@ export default {
     };
   },
   mounted() {
-    User.auth().then((response) => {
-      this.user = response.data;
-      // console.log(this.user.email);
-    });
+    User.auth()
+      .then((response) => {
+        this.user = response.data;
+      })
+      .catch((error) => {
+        this.user = "Fake User";
+      });
   },
 };
 </script>
