@@ -15,7 +15,8 @@ class CreateArticlesTable extends Migration
     {
         Schema::create('articles', function (Blueprint $table) {
             $table->id();
-            $table->string("title");
+            $table->string("title")->unique();
+            $table->integer("user_id");
             $table->text("description");
             $table->longText("content");
             $table->string("slug");
@@ -23,6 +24,7 @@ class CreateArticlesTable extends Migration
             $table->text("image");
             $table->string("image_orientation");
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 

@@ -27,6 +27,7 @@ import AuthNav from './layout/navbars/navs/Auth'
 import SideNav from './layout/navbars/Auth-Sidenav'
 import Footer from './layout/Footer'
 import Admin from './layout/Admin'
+import validationError from './components/ValidationError'
 import ToggleSwitch from 'vuejs-toggle-switch'
 import VueToast from 'vue-toast-notification'
 // Import one of available themes
@@ -38,6 +39,7 @@ Vue.component('auth-nav', AuthNav)
 Vue.component('auth-sidenav', SideNav)
 Vue.component('auth-footer', Footer)
 Vue.component('auth-admin', Admin)
+Vue.component('validation-error', validationError)
 
 // const files = require.context('./', true, /\.vue$/i)
 // files.keys().map(key => Vue.component(key.split('/').pop().split('.')[0], files(key).default))

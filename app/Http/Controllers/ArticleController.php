@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Article;
+use App\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Support\Str;
@@ -17,12 +18,12 @@ class ArticleController extends Controller
      */
     public function index()
     {
-        $articles = auth()->user()->articles()->paginate(10);
-        if ($articles->isEmpty()) {
-            return response()->json("There are no articles available yet!", 204);
-        } else {
-            return response()->json(["articles" => $articles], 200);
-        }
+        $articles = auth()
+            ->user()
+            ->articles()
+            ->paginate(10);
+
+        return response()->json(['articles' => $articles], 200);
     }
 
     /**
@@ -41,24 +42,20 @@ class ArticleController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(Request $request, User $user)
     {
-        $validator = Validator::make($request->all(), [
-            'title' => ['required', 'string'],
+        $validator = $request->validate([
+            'title' => ['required', 'string', 'unique:articles'],
             'description' => ['required', 'string', 'min:8'],
             'content' => ['required', 'string', 'min:100'],
             'category' => ['required', 'string'],
-            'image' => ['required', 'image', 'mimes:jpeg,png,jpg,gif,svg'],
+            'image' => ['required'],
             'image_orientation' => ['required', 'string'],
         ]);
 
-        if ($validator->fails()) {
-            return response()->json($validator->errors(), 400);
-        }
-
-        $image_name = $request->file('image')->getRealPath();
-
-        Cloudder::upload($image_name, $request->category, array("folder" => "aura/"));
+        Cloudder::upload($request['image'], $request->category."_".$request['title'], [
+            'folder' => 'aura/',
+        ]);
 
         $image_url = Cloudder::show(Cloudder::getPublicId());
 
@@ -70,15 +67,17 @@ class ArticleController extends Controller
             'category' => $request->category,
             'image' => $image_url,
             'image_orientation' => $request->image_orientation,
-
         ];
 
-        $article = Article::create($data);
+        $article = $user->articles()->create($data);
 
-        if ($article->exists) {
+        if ($article) {
             return response()->json('Article was created successfully!', 201);
         } else {
-            return response()->json('There was a problem while creating article', 400);
+            return response()->json(
+                'There was a problem while creating article',
+                500
+            );
         }
     }
 
