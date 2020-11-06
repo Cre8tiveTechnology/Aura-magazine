@@ -25,35 +25,61 @@
       <div class="collapse navbar-collapse" id="navbarDropdown">
         <ul class="navbar-nav mx-auto">
           <li class="nav-item mr-1">
-            <router-link class="nav-link" to="/category/news">News</router-link>
+            <router-link
+              :class="current == 'NEWS' ? 'active-link nav-link' : 'nav-link'"
+              to="/category/news"
+              >NEWS</router-link
+            >
           </li>
           <li class="nav-item mr-1">
-            <router-link class="nav-link" to="/category/fashion"
+            <router-link
+              :class="
+                current == 'FASHION' ? 'active-link nav-link' : 'nav-link'
+              "
+              to="/category/fashion"
               >FASHION</router-link
             >
           </li>
           <li class="nav-item mr-1">
-            <router-link class="nav-link" to="/category/beauty"
+            <router-link
+              :class="current == 'BEAUTY' ? 'active-link nav-link' : 'nav-link'"
+              to="/category/beauty"
               >BEAUTY</router-link
             >
           </li>
           <li class="nav-item mr-1">
-            <router-link class="nav-link" to="/category/lifestyle"
+            <router-link
+              :class="
+                current == 'LIFESTYLE' ? 'active-link nav-link' : 'nav-link'
+              "
+              to="/category/lifestyle"
               >LIFESTYLE</router-link
             >
           </li>
           <li class="nav-item mr-1">
-            <router-link class="nav-link" to="/category/arts-and-culture"
-              >ARTS & CULTURE</router-link
+            <router-link
+              :class="
+                current == 'ARTS/CULTURE' ? 'active-link nav-link' : 'nav-link'
+              "
+              to="/category/arts-and-culture"
+              >ARTS &amp; CULTURE</router-link
             >
           </li>
           <li class="nav-item mr-1">
-            <router-link class="nav-link" to="/category/videos"
+            <router-link
+              :class="current == 'VIDEOS' ? 'active-link nav-link' : 'nav-link'"
+              to="/category/videos"
               >VIDEOS</router-link
             >
           </li>
           <li class="nav-item d-lg-none d-xl-block mr-1">
-            <router-link class="nav-link" to="/magazine">MAGAZINE</router-link>
+            <router-link
+              :class="
+                current == 'MAGAZINE' ? 'active-link nav-link' : 'nav-link'
+              "
+              to="/magazine"
+              >MAGAZINE</router-link
+            >
           </li>
           <li class="nav-item dropdown mr-1">
             <a
@@ -67,12 +93,22 @@
               >MORE</a
             >
             <div class="dropdown-menu" aria-labelledby="moreDropdown">
-              <router-link class="nav-link" to="/category/horoscope"
+              <router-link
+                :class="
+                  current == 'HOROSCOPE' ? 'active-link nav-link' : 'nav-link'
+                "
+                to="/category/horoscope"
                 >HOROSCOPE</router-link
               >
               <div class="dropdown-divider d-none d-lg-block d-xl-none"></div>
 
-              <router-link class="nav-link" to="/category/sex-and-relationships"
+              <router-link
+                :class="
+                  current == 'SEX/RELATIONSHIPS'
+                    ? 'active-link nav-link'
+                    : 'nav-link'
+                "
+                to="/category/sex-and-relationships"
                 >SEX &amp; RELATIONSHIPS</router-link
               >
             </div>
@@ -102,7 +138,17 @@
 <script>
 export default {
   name: "Navbar",
+  props: ["current"],
 };
 </script>
 
-<style></style>
+<style scoped>
+.nav-link {
+  color: #000 !important;
+}
+
+.active-link {
+  border-bottom: 0.15em solid #ff63b6;
+  font-weight: bold;
+}
+</style>

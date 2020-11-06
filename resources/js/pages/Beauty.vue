@@ -1,7 +1,7 @@
 <template>
   <div>
     <!-- NavBar -->
-    <navbar :current="'NEWS'" />
+    <navbar :current="'BEAUTY'" />
     <!-- Navbar -->
     <!-- COVER IMAGE -->
     <div class="container-fluid p-0">
@@ -400,7 +400,7 @@
 
 <script>
 export default {
-  name: "News",
+  name: "Beauty",
 };
 </script>
 

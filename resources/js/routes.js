@@ -1,6 +1,10 @@
 //Route paths for  User  App
 import Home from './pages/Home.vue'
 import News from './pages/News.vue'
+import Beauty from './pages/Beauty.vue'
+import Fashion from './pages/Fashion.vue'
+import Lifestyle from './pages/Lifestyle.vue'
+import ArtsAndCulture from './pages/ArtsAndCulture.vue'
 import Magazine from './pages/Magazine.vue'
 import Post from './pages/Post.vue'
 import Shop from './pages/Shop.vue'
@@ -64,7 +68,7 @@ export const routes = [
   {
     name: 'beauty',
     path: '/category/beauty',
-    component: News,
+    component: Beauty,
     meta: {
       showProgressBar: true,
     },
@@ -73,7 +77,7 @@ export const routes = [
   {
     name: 'fashion',
     path: '/category/fashion',
-    component: News,
+    component: Fashion,
     meta: {
       showProgressBar: true,
     },
@@ -82,7 +86,7 @@ export const routes = [
   {
     name: 'lifestyle',
     path: '/category/lifestyle',
-    component: News,
+    component: Lifestyle,
     meta: {
       showProgressBar: true,
     },
@@ -91,7 +95,7 @@ export const routes = [
   {
     name: 'arts-and-culture',
     path: '/category/arts-and-culture',
-    component: News,
+    component: ArtsAndCulture,
     meta: {
       showProgressBar: true,
     },

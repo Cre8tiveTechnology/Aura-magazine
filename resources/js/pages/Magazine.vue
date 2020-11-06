@@ -1,7 +1,7 @@
 <template>
   <div>
     <!-- NavBar -->
-    <navbar />
+    <navbar :current="'MAGAZINE'" />
     <!-- Navbar -->
     <div class="container mt-5">
       <div class="row justify-content-between align-items-center">
