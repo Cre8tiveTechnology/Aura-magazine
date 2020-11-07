@@ -147,7 +147,7 @@
             <div class="container-fluid mt-5 d-flex p-0">
               <!-- Draft -->
               <div class="mr-4">
-                <button class="btn btn-md btn-aura" @click.prevent="showIt">
+                <button class="btn btn-md btn-aura" @click.prevent="saveDraft">
                   SAVE AS DRAFT <i class="fa fa-save"></i>
                 </button>
               </div>
@@ -245,6 +245,9 @@ export default {
   }),
   computed: {},
   methods: {
+    saveDraft() {
+      alert("Draft is Coming Soon!");
+    },
     resetFormFields() {
       this.formFields.title = "";
       this.formFields.description = "Please Provide an Explicit Description";

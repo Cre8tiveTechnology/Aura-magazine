@@ -22,6 +22,15 @@ Route::group(['name' => 'article.', 'prefix' => 'article', 'middleware' => 'auth
     Route::post('/create/{user}', 'ArticleController@store')->name('store');
 });
 
+
+/* -------------------------------------------------------------------------- */
+/*                                Roles API                                */
+/* -------------------------------------------------------------------------- */
+Route::group(['name' => 'role.', 'prefix' => 'role', 'middleware' => ['auth:sanctum', 'role:superadmin']], function () {
+    Route::get('/all', 'RoleController@index')->name('all');
+    Route::post('/create', 'RoleController@store')->name('store');
+});
+
 /* -------------------------------------------------------------------------- */
 /*                               Auth API Routes                              */
 /* -------------------------------------------------------------------------- */
@@ -30,4 +39,4 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 });
 Route::post('/register', 'RegisterController@register');
 Route::post('/login', 'LoginController@login');
-Route::post('/logout', 'LoginController@logout');
+Route::post('/logout', 'LoginController@logout')->name('logout');

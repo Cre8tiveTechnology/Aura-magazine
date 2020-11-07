@@ -1,77 +1,79 @@
 <template>
   <div>
-    <div class="sidebar" data-color="dark" data-active-color="danger">
+    <div class="sidebar" data-color="black" data-active-color="danger">
       <div class="logo">
-        <a href="/" class="simple-text logo-normal"> AURA </a>
+        <router-link to="/dashboard" class="simple-text logo-normal">
+          <p>AURA</p></router-link
+        >
       </div>
       <div class="sidebar-wrapper">
         <ul class="nav">
           <li class="">
-            <a href="/">
+            <router-link to="/overview">
               <i class="nc-icon nc-bank"></i>
-              <p>Overview</p>
-            </a>
+              <p>Overview</p></router-link
+            >
           </li>
 
           <li class="">
-            <router-link to="/article">
+            <router-link to="/articles">
               <i class="nc-icon nc-diamond"></i>
               <p>Articles</p></router-link
             >
           </li>
           <li class="">
-            <a href="">
+            <router-link to="/users">
               <i class="nc-icon nc-pin-3"></i>
-              <p>Users</p>
-            </a>
+              <p>Users</p></router-link
+            >
           </li>
           <li class="">
-            <a href="">
+            <router-link to="/roles">
               <i class="nc-icon nc-bell-55"></i>
-              <p>Roles</p>
-            </a>
+              <p>Roles</p></router-link
+            >
           </li>
           <li class="">
-            <a href="">
+            <router-link to="/magazine">
               <i class="nc-icon nc-tile-56"></i>
-              <p>Magazine</p>
-            </a>
+              <p>Magazine</p></router-link
+            >
           </li>
           <li class="">
-            <a href="">
+            <router-link to="/video">
               <i class="nc-icon nc-caps-small"></i>
-              <p>Video</p>
-            </a>
+              <p>Video</p></router-link
+            >
           </li>
           <li class="">
-            <a href="">
+            <router-link to="/invoice">
               <i class="nc-icon nc-caps-small"></i>
-              <p>Invoice</p>
-            </a>
+              <p>Invoice</p></router-link
+            >
           </li>
           <li class="">
-            <a href="">
+            <router-link to="/adverts">
               <i class="nc-icon nc-caps-small"></i>
-              <p>Advertisement</p>
-            </a>
+              <p>Advertisement</p></router-link
+            >
           </li>
           <li class="">
-            <a href="">
+            <router-link to="/orders">
               <i class="nc-icon nc-caps-small"></i>
-              <p>Orders</p>
-            </a>
+              <p>Orders</p></router-link
+            >
           </li>
           <li class="">
-            <a href="">
+            <router-link to="/calendar">
               <i class="nc-icon nc-caps-small"></i>
-              <p>Calendar</p>
-            </a>
+              <p>Calendar</p></router-link
+            >
           </li>
           <li class="">
-            <a href="">
+            <router-link to="/files">
               <i class="nc-icon nc-caps-small"></i>
-              <p>Files</p>
-            </a>
+              <p>Files</p></router-link
+            >
           </li>
         </ul>
       </div>

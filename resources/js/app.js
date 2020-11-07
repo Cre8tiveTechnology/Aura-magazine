@@ -72,19 +72,58 @@ function isLoggedIn() {
   return localStorage.getItem('auth')
 }
 
+function isRoleGuard(role) {
+  return localStorage.getItem(role)
+}
+
 router.beforeResolve((to, from, next) => {
   if (to.name) {
     NProgress.start()
 
     if (to.matched.some((record) => record.meta.authOnly)) {
+      // Auth
       if (!isLoggedIn()) {
         next({
           path: '/login',
         })
-      } else {
+      }
+      // Super Admin
+      else if (to.matched.some((record) => record.meta.superAdminOnly)) {
+        if (!isRoleGuard('superadmin')) {
+          next({
+            path: '/unauthorized',
+          })
+        } else {
+          next()
+        }
+      }
+      // Editor
+      else if (to.matched.some((record) => record.meta.editorOnly)) {
+        if (!isRoleGuard('editorinchief')) {
+          next({
+            path: '/unauthorized',
+          })
+        } else {
+          next()
+        }
+      }
+      // Marketer
+      else if (to.matched.some((record) => record.meta.marketerOnly)) {
+        if (!isRoleGuard('marketermain')) {
+          next({
+            path: '/unauthorized',
+          })
+        } else {
+          next()
+        }
+      }
+      // Last
+      else {
         next()
       }
-    } else if (to.matched.some((record) => record.meta.guestOnly)) {
+    }
+    //
+    else if (to.matched.some((record) => record.meta.guestOnly)) {
       if (isLoggedIn()) {
         next({
           path: '/dashboard',

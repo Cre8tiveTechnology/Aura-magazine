@@ -153,10 +153,11 @@ export default {
     /*                                   Login @param- form data                   */
     /* -------------------------------------------------------------------------- */
     login() {
-      console.log(this.form.email);
       User.login(this.form)
         .then((response) => {
+          let role = response.data.role;
           localStorage.setItem("auth", "true");
+          localStorage.setItem(role, "true");
           this.$router.push({ name: "dashboard" });
         })
         .catch((errors) => {

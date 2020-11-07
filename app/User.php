@@ -18,7 +18,7 @@ class User extends Authenticatable
      * @var array
      */
     protected $fillable = [
-        'name', 'email', 'password',
+        'name', 'email', 'password', 'role_id'
     ];
 
     /**
@@ -39,7 +39,34 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
     ];
 
+
+    public function hasRole(string $role)
+    {
+        return $this->role()->where('key', $role)->exists();
+    }
+
+    public function isSuperAdmin()
+    {
+        return $this->role()->where('name', 'Super Admin')->exists();
+    }
+
+    public function isEditor()
+    {
+        return $this->role()->where('name', 'Editor in Chief')->exists();
+    }
+
+    public function isMarketer()
+    {
+        return $this->role()->where('name', 'Marketer')->exists();
+    }
+
+
     public function articles(){
         return $this->hasMany(Article::class);
+    }
+
+    public function role()
+    {
+        return $this->belongsTo(Role::class);
     }
 }

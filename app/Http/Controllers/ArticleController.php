@@ -18,10 +18,7 @@ class ArticleController extends Controller
      */
     public function index()
     {
-        $articles = auth()
-            ->user()
-            ->articles()
-            ->paginate(10);
+        $articles = auth()->user()->articles()->withTrashed()->latest()->paginate(10);
 
         return response()->json(['articles' => $articles], 200);
     }
@@ -44,7 +41,7 @@ class ArticleController extends Controller
      */
     public function store(Request $request, User $user)
     {
-        $validator = $request->validate([
+        $request->validate([
             'title' => ['required', 'string', 'unique:articles'],
             'description' => ['required', 'string', 'min:8'],
             'content' => ['required', 'string', 'min:100'],
