@@ -30,6 +30,8 @@ Route::group(['name' => 'article.', 'prefix' => 'article', 'middleware' => 'auth
 Route::group(['name' => 'role.', 'prefix' => 'role', 'middleware' => ['auth:sanctum', 'role:superadmin']], function () {
     Route::get('/all', 'RoleController@index')->name('all');
     Route::post('/create', 'RoleController@store')->name('store');
+    Route::delete('/remove/{role}', 'RoleController@destroy')->name('remove');
+    Route::post('/restore', 'RoleController@restore')->name('restore');
 });
 
 /* -------------------------------------------------------------------------- */

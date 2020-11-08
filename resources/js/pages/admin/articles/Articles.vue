@@ -10,8 +10,10 @@
                 <h1>ARTICLES</h1>
               </div>
 
-              <div class="col-xl-4 col-lg-4 col-md-4 col-sm-4">
-                <router-link to="/article/create" class="btn btn-outline-aura"
+              <div class="col-xl-4 col-lg-4 col-md-4 col-sm-4 text-right">
+                <router-link
+                  to="/article/create"
+                  class="btn btn-outline-secondary"
                   >Create New <i class="fa fa-plus"></i
                 ></router-link>
               </div>
@@ -22,7 +24,7 @@
 
           <div class="table-responsive mt-5" v-else>
             <table class="table shadow-sm">
-              <thead class="table-aura">
+              <thead class="table-aura text-center">
                 <tr>
                   <th scope="col">Thumbnail</th>
                   <th scope="col">Title</th>
@@ -32,7 +34,7 @@
                   <th scope="col">Action</th>
                 </tr>
               </thead>
-              <tbody>
+              <tbody class="text-center">
                 <tr v-for="article in articles.data" :key="article.id">
                   <td>
                     <img
@@ -126,10 +128,9 @@ export default {
         .then((response) => {
           this.isLoading = false;
           this.articles = response.data;
-          console.table(this.articles.data);
         })
         .catch((error) => {
-          console.error(error);
+          this.isLoading = false;
           let message = error.response.data.message;
           this.alertError(message);
         });

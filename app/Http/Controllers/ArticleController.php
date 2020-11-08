@@ -16,9 +16,11 @@ class ArticleController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(string $category)
     {
+        // $articles = Article::where("category", "=", $category)->with('user')->latest()->paginate(10);
 
+        // return response()->json($articles, 200);
     }
 
     /**
@@ -31,11 +33,11 @@ class ArticleController extends Controller
 
         if (auth()->user()->isSuperAdmin()) {
 
-            $articles = Article::withTrashed()->latest()->paginate(4);
+            $articles = Article::withTrashed()->latest()->paginate(8);
 
         } elseif (auth()->user()->isEditor()) {
 
-            $articles = auth()->user()->articles()->withTrashed()->latest()->paginate(4);
+            $articles = auth()->user()->articles()->withTrashed()->latest()->paginate(8);
         }
 
         return response()->json($articles);
@@ -132,7 +134,7 @@ class ArticleController extends Controller
      */
     public function restore(Request $request)
     {
-        $article = Article::onlyTrashed()->find($request->id);
+        $article = Article::onlyTrashed()->findOrFail($request->id);
         if ($article->restore()) {
             return response()->json("Article has been restored successfully.", 200);
         }

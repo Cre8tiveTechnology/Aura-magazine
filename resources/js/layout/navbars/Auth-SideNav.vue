@@ -9,7 +9,7 @@
       <div class="sidebar-wrapper">
         <ul class="nav">
           <li class="">
-            <router-link to="/overview">
+            <router-link to="/dashboard">
               <i class="nc-icon nc-bank"></i>
               <p>Overview</p></router-link
             >
