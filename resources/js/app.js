@@ -29,6 +29,7 @@ import Footer from './layout/Footer'
 import Admin from './layout/Admin'
 import validationError from './components/ValidationError'
 import AuraLoader from './utils/AuraLoader'
+import EmptyResource from './utils/EmptyResource'
 import ToggleSwitch from 'vuejs-toggle-switch'
 import VueToast from 'vue-toast-notification'
 import 'vue-toast-notification/dist/theme-sugar.css'
@@ -41,6 +42,7 @@ Vue.component('auth-footer',Footer)
 Vue.component('auth-admin',Admin)
 Vue.component('validation-error',validationError)
 Vue.component('aura-loader',AuraLoader)
+Vue.component('empty-resource',EmptyResource)
 Vue.component('pagination',require('laravel-vue-pagination'));
 
 // const files = require.context('./', true, /\.vue$/i)

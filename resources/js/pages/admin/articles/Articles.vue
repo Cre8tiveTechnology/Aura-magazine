@@ -3,11 +3,13 @@
         <auth-admin>
             <template v-slot:content>
                 <div class="content">
+                    <aura-loader v-if="isLoading"></aura-loader>
                     <div class="container">
                         <div class="row justify-content-between">
                             <div class="col-xl-8 col-lg-8 col-md-8 col-sm-8">
                                 <h1>ARTICLES</h1>
                             </div>
+
                             <div class="col-xl-4 col-lg-4 col-md-4 col-sm-4">
                                 <router-link
                                     to="/article/create"
@@ -18,7 +20,11 @@
                         </div>
                     </div>
                     <!--============== Articles Table ================-->
-                    <div class="table-responsive mt-5">
+                    <empty-resource
+                        v-if="articles.data.length === 0"
+                    ></empty-resource>
+
+                    <div class="table-responsive mt-5" v-else>
                         <table class="table shadow-sm">
                             <thead class="table-aura">
                                 <tr>
@@ -109,7 +115,8 @@ export default {
     name: "Articles",
 
     data: () => ({
-        articles: {}
+        articles: {},
+        isLoading: false
     }),
 
     mounted() {
@@ -122,11 +129,13 @@ export default {
         /* -------------------------------------------------------------------------- */
 
         getArticles(page) {
+            this.isLoading = true;
             if (typeof page === "undefined") {
                 page = 1;
             }
             Article.listArticles(page)
                 .then(response => {
+                    this.isLoading = false;
                     this.articles = response.data;
                     console.table(this.articles.data);
                 })
