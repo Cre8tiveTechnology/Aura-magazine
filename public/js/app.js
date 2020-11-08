@@ -7790,6 +7790,43 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: "Register",
@@ -7811,6 +7848,7 @@ __webpack_require__.r(__webpack_exports__);
     var _process$env$SUPER_AD;
 
     this.tokenCode = (_process$env$SUPER_AD = process.env.SUPER_ADMIN_TOKEN_CODE) !== null && _process$env$SUPER_AD !== void 0 ? _process$env$SUPER_AD : "11223344??";
+    console.log(this.tokenCode);
   },
   methods: {
     /* -------------------------------------------------------------------------- */
@@ -12401,7 +12439,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-
 
 
 // module
-exports.push([module.i, "\n.txt-small {\n  font-size: 0.8em;\n}\n", ""]);
+exports.push([module.i, "\n.txt-small {\n    font-size: 0.8em;\n}\n", ""]);
 
 // exports
 
@@ -12420,7 +12458,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, "\n.body {\n  height: 80vh;\n  font-family: \"Nunito\", \"sans-serif\";\n  font-size: 5vw;\n}\n.bottom-container,\n.top-container {\n  width: 40vw;\n  height: 35vh;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  position: fixed;\n  top: 35vh;\n  left: 30vw;\n  padding: 1vw;\n}\n.bottom-container {\n  color: #232323;\n}\n.top-container {\n  background-color: #ff63b6;\n  color: white;\n  -webkit-clip-path: circle(13% at 85% 50%);\n          clip-path: circle(13% at 85% 50%);\n  -webkit-animation: circleMove 30s ease-in-out infinite;\n          animation: circleMove 30s ease-in-out infinite;\n}\n.txt {\n  font-family: cursive;\n  font-size: 2em;\n  font-weight: bold;\n  letter-spacing: 15px;\n}\n@-webkit-keyframes circleMove {\n0%,\n  100% {\n    -webkit-clip-path: circle(13% at 85% 50%);\n            clip-path: circle(13% at 85% 50%);\n}\n50% {\n    -webkit-clip-path: circle(13% at 15% 50%);\n            clip-path: circle(13% at 15% 50%);\n}\n}\n@keyframes circleMove {\n0%,\n  100% {\n    -webkit-clip-path: circle(13% at 85% 50%);\n            clip-path: circle(13% at 85% 50%);\n}\n50% {\n    -webkit-clip-path: circle(13% at 15% 50%);\n            clip-path: circle(13% at 15% 50%);\n}\n}\n", ""]);
+exports.push([module.i, "\n.body {\n    height: 80vh;\n    font-family: \"Nunito\", \"sans-serif\";\n    font-size: 5vw;\n}\n.bottom-container,\n.top-container {\n    width: 40vw;\n    height: 35vh;\n    display: flex;\n    justify-content: center;\n    align-items: center;\n    position: fixed;\n    top: 35vh;\n    left: 30vw;\n    padding: 1vw;\n}\n.bottom-container {\n    color: #232323;\n}\n.top-container {\n    background-color: #ff63b6;\n    color: white;\n    -webkit-clip-path: circle(13% at 85% 50%);\n            clip-path: circle(13% at 85% 50%);\n    -webkit-animation: circleMove 30s ease-in-out infinite;\n            animation: circleMove 30s ease-in-out infinite;\n}\n.txt {\n    font-family: cursive;\n    font-size: 2em;\n    font-weight: bold;\n    letter-spacing: 15px;\n}\n@-webkit-keyframes circleMove {\n0%,\n    100% {\n        -webkit-clip-path: circle(13% at 85% 50%);\n                clip-path: circle(13% at 85% 50%);\n}\n50% {\n        -webkit-clip-path: circle(13% at 15% 50%);\n                clip-path: circle(13% at 15% 50%);\n}\n}\n@keyframes circleMove {\n0%,\n    100% {\n        -webkit-clip-path: circle(13% at 85% 50%);\n                clip-path: circle(13% at 85% 50%);\n}\n50% {\n        -webkit-clip-path: circle(13% at 15% 50%);\n                clip-path: circle(13% at 15% 50%);\n}\n}\n", ""]);
 
 // exports
 
@@ -54761,7 +54799,7 @@ var render = function() {
                       },
                       [
                         _vm._v(
-                          "\n              Create an Account\n            "
+                          "\n                            Create an Account\n                        "
                         )
                       ]
                     ),
@@ -54818,7 +54856,7 @@ var render = function() {
                                   },
                                   [
                                     _vm._v(
-                                      "\n                        Validate\n                      "
+                                      "\n                                                Validate\n                                            "
                                     )
                                   ]
                                 )
@@ -54831,9 +54869,9 @@ var render = function() {
                                   { staticClass: "text-danger txt-small" },
                                   [
                                     _vm._v(
-                                      "\n                    " +
+                                      "\n                                        " +
                                         _vm._s(_vm.tokenErr) +
-                                        "\n                  "
+                                        "\n                                    "
                                     )
                                   ]
                                 )
@@ -54940,7 +54978,7 @@ var render = function() {
                                     staticClass: "form-control shadow-none",
                                     attrs: {
                                       placeholder: "Password",
-                                      autocomplete: "password",
+                                      autocomplete: "off",
                                       id: "password",
                                       type: "checkbox"
                                     },
@@ -54994,7 +55032,7 @@ var render = function() {
                                     staticClass: "form-control shadow-none",
                                     attrs: {
                                       placeholder: "Password",
-                                      autocomplete: "password",
+                                      autocomplete: "off",
                                       id: "password",
                                       type: "radio"
                                     },
@@ -55023,7 +55061,7 @@ var render = function() {
                                     staticClass: "form-control shadow-none",
                                     attrs: {
                                       placeholder: "Password",
-                                      autocomplete: "password",
+                                      autocomplete: "off",
                                       id: "password",
                                       type: [
                                         _vm.showPassword ? "text" : "password"
@@ -55090,7 +55128,7 @@ var render = function() {
                               },
                               [
                                 _vm._v(
-                                  "\n                    Create Account\n                  "
+                                  "\n                                        Create Account\n                                    "
                                 )
                               ]
                             )
@@ -55112,7 +55150,9 @@ var render = function() {
                                 { staticClass: "text-dark aura-font" },
                                 [_vm._v("Already have an account?")]
                               ),
-                              _vm._v("\n                  Sign in")
+                              _vm._v(
+                                "\n                                    Sign in"
+                              )
                             ]
                           ),
                           _vm._v(" "),
@@ -55178,7 +55218,7 @@ var staticRenderFns = [
             { staticClass: "btn shadow-none", attrs: { type: "button" } },
             [
               _vm._v(
-                "\n                      Signup Using Google\n                    "
+                "\n                                            Signup Using Google\n                                        "
               )
             ]
           )
@@ -55212,7 +55252,7 @@ var staticRenderFns = [
             { staticClass: "btn shadow-none", attrs: { type: "button" } },
             [
               _vm._v(
-                "\n                      Signup Using Facebook\n                    "
+                "\n                                            Signup Using Facebook\n                                        "
               )
             ]
           )
@@ -76438,19 +76478,19 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "routes", function() { return routes; });
 /* harmony import */ var _pages_Home_vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./pages/Home.vue */ "./resources/js/pages/Home.vue");
 /* harmony import */ var _pages_News_vue__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./pages/News.vue */ "./resources/js/pages/News.vue");
-/* harmony import */ var _pages_Beauty_vue__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./pages/Beauty.vue */ "./resources/js/pages/Beauty.vue");
-/* harmony import */ var _pages_Fashion_vue__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./pages/Fashion.vue */ "./resources/js/pages/Fashion.vue");
-/* harmony import */ var _pages_Lifestyle_vue__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./pages/Lifestyle.vue */ "./resources/js/pages/Lifestyle.vue");
-/* harmony import */ var _pages_ArtsAndCulture_vue__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ./pages/ArtsAndCulture.vue */ "./resources/js/pages/ArtsAndCulture.vue");
-/* harmony import */ var _pages_Magazine_vue__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./pages/Magazine.vue */ "./resources/js/pages/Magazine.vue");
-/* harmony import */ var _pages_Post_vue__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./pages/Post.vue */ "./resources/js/pages/Post.vue");
-/* harmony import */ var _pages_Shop_vue__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./pages/Shop.vue */ "./resources/js/pages/Shop.vue");
-/* harmony import */ var _pages_auth_Login_vue__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./pages/auth/Login.vue */ "./resources/js/pages/auth/Login.vue");
-/* harmony import */ var _pages_auth_Register_vue__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./pages/auth/Register.vue */ "./resources/js/pages/auth/Register.vue");
-/* harmony import */ var _pages_404_vue__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./pages/404.vue */ "./resources/js/pages/404.vue");
-/* harmony import */ var _pages_admin_articles_Articles_vue__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./pages/admin/articles/Articles.vue */ "./resources/js/pages/admin/articles/Articles.vue");
-/* harmony import */ var _pages_admin_articles_CreateArticle_vue__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./pages/admin/articles/CreateArticle.vue */ "./resources/js/pages/admin/articles/CreateArticle.vue");
-/* harmony import */ var _pages_admin_Dashboard_vue__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./pages/admin/Dashboard.vue */ "./resources/js/pages/admin/Dashboard.vue");
+/* harmony import */ var _pages_Beauty_vue__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./pages/Beauty.vue */ "./resources/js/pages/Beauty.vue");
+/* harmony import */ var _pages_Fashion_vue__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./pages/Fashion.vue */ "./resources/js/pages/Fashion.vue");
+/* harmony import */ var _pages_Lifestyle_vue__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./pages/Lifestyle.vue */ "./resources/js/pages/Lifestyle.vue");
+/* harmony import */ var _pages_ArtsAndCulture_vue__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./pages/ArtsAndCulture.vue */ "./resources/js/pages/ArtsAndCulture.vue");
+/* harmony import */ var _pages_Magazine_vue__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./pages/Magazine.vue */ "./resources/js/pages/Magazine.vue");
+/* harmony import */ var _pages_Post_vue__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./pages/Post.vue */ "./resources/js/pages/Post.vue");
+/* harmony import */ var _pages_Shop_vue__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./pages/Shop.vue */ "./resources/js/pages/Shop.vue");
+/* harmony import */ var _pages_auth_Login_vue__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./pages/auth/Login.vue */ "./resources/js/pages/auth/Login.vue");
+/* harmony import */ var _pages_auth_Register_vue__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./pages/auth/Register.vue */ "./resources/js/pages/auth/Register.vue");
+/* harmony import */ var _pages_404_vue__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./pages/404.vue */ "./resources/js/pages/404.vue");
+/* harmony import */ var _pages_admin_articles_Articles_vue__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./pages/admin/articles/Articles.vue */ "./resources/js/pages/admin/articles/Articles.vue");
+/* harmony import */ var _pages_admin_articles_CreateArticle_vue__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./pages/admin/articles/CreateArticle.vue */ "./resources/js/pages/admin/articles/CreateArticle.vue");
+/* harmony import */ var _pages_admin_Dashboard_vue__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./pages/admin/Dashboard.vue */ "./resources/js/pages/admin/Dashboard.vue");
 //Route paths for  User  App
 
 
@@ -76478,7 +76518,7 @@ var routes = [{
 }, {
   name: 'login',
   path: '/login',
-  component: _pages_auth_Login_vue__WEBPACK_IMPORTED_MODULE_6__["default"],
+  component: _pages_auth_Login_vue__WEBPACK_IMPORTED_MODULE_9__["default"],
   meta: {
     guestOnly: true,
     showProgressBar: true
@@ -76486,7 +76526,7 @@ var routes = [{
 }, {
   name: 'admin-register',
   path: '/admin/register',
-  component: _pages_auth_Register_vue__WEBPACK_IMPORTED_MODULE_7__["default"],
+  component: _pages_auth_Register_vue__WEBPACK_IMPORTED_MODULE_10__["default"],
   meta: {
     guestOnly: true,
     showProgressBar: true
@@ -76494,7 +76534,7 @@ var routes = [{
 }, {
   name: 'shop',
   path: '/shop',
-  component: _pages_Shop_vue__WEBPACK_IMPORTED_MODULE_5__["default"],
+  component: _pages_Shop_vue__WEBPACK_IMPORTED_MODULE_8__["default"],
   meta: {
     showProgressBar: true
   }
@@ -76508,50 +76548,55 @@ var routes = [{
 }, {
   name: 'beauty',
   path: '/category/beauty',
-  component: _pages_Beauty_vue__WEBPACK_IMPORTED_MODULE_14__["default"],
+  component: _pages_Beauty_vue__WEBPACK_IMPORTED_MODULE_2__["default"],
   meta: {
     showProgressBar: true
   }
 }, {
   name: 'fashion',
   path: '/category/fashion',
-  component: _pages_Fashion_vue__WEBPACK_IMPORTED_MODULE_12__["default"],
+  component: _pages_Fashion_vue__WEBPACK_IMPORTED_MODULE_3__["default"],
   meta: {
     showProgressBar: true
   }
 }, {
   name: 'lifestyle',
   path: '/category/lifestyle',
-  component: _pages_Lifestyle_vue__WEBPACK_IMPORTED_MODULE_13__["default"],
+  component: _pages_Lifestyle_vue__WEBPACK_IMPORTED_MODULE_4__["default"],
   meta: {
     showProgressBar: true
   }
 }, {
   name: 'arts-and-culture',
   path: '/category/arts-and-culture',
-  component: _pages_ArtsAndCulture_vue__WEBPACK_IMPORTED_MODULE_15__["default"],
+  component: _pages_ArtsAndCulture_vue__WEBPACK_IMPORTED_MODULE_5__["default"],
   meta: {
     showProgressBar: true
   }
 }, {
   name: 'post',
   path: '/post',
-  component: _pages_Post_vue__WEBPACK_IMPORTED_MODULE_4__["default"],
+  component: _pages_Post_vue__WEBPACK_IMPORTED_MODULE_7__["default"],
   meta: {
     showProgressBar: true
   }
 }, {
   name: 'magazine',
   path: '/magazine',
-  component: _pages_Magazine_vue__WEBPACK_IMPORTED_MODULE_3__["default"],
+  component: _pages_Magazine_vue__WEBPACK_IMPORTED_MODULE_6__["default"],
   meta: {
     showProgressBar: true
   }
-}, //Page 404
+},
+/* -------------------------------------------------------------------------- */
+
+/*                                  Page 404                                 */
+
+/* -------------------------------------------------------------------------- */
 {
   name: '404',
   path: '*',
-  component: _pages_404_vue__WEBPACK_IMPORTED_MODULE_8__["default"],
+  component: _pages_404_vue__WEBPACK_IMPORTED_MODULE_11__["default"],
   meta: {
     showProgressBar: true
   }
@@ -76564,7 +76609,7 @@ var routes = [{
 {
   name: 'dashboard',
   path: '/dashboard',
-  component: _pages_admin_Dashboard_vue__WEBPACK_IMPORTED_MODULE_11__["default"],
+  component: _pages_admin_Dashboard_vue__WEBPACK_IMPORTED_MODULE_14__["default"],
   meta: {
     authOnly: true,
     showProgressBar: true
@@ -76572,7 +76617,7 @@ var routes = [{
 }, {
   name: 'article',
   path: '/article',
-  component: _pages_admin_articles_Articles_vue__WEBPACK_IMPORTED_MODULE_9__["default"],
+  component: _pages_admin_articles_Articles_vue__WEBPACK_IMPORTED_MODULE_12__["default"],
   meta: {
     authOnly: true,
     editorOnly: true,
@@ -76581,7 +76626,7 @@ var routes = [{
 }, {
   name: 'createArticle',
   path: '/article/create',
-  component: _pages_admin_articles_CreateArticle_vue__WEBPACK_IMPORTED_MODULE_10__["default"],
+  component: _pages_admin_articles_CreateArticle_vue__WEBPACK_IMPORTED_MODULE_13__["default"],
   meta: {
     authOnly: true,
     showProgressBar: true
@@ -76695,8 +76740,8 @@ __webpack_require__.r(__webpack_exports__);
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! /Users/mac/Documents/Laravel/Aura-magazine/resources/js/app.js */"./resources/js/app.js");
-module.exports = __webpack_require__(/*! /Users/mac/Documents/Laravel/Aura-magazine/resources/sass/app.scss */"./resources/sass/app.scss");
+__webpack_require__(/*! /Users/mac/Documents/Projects/Laravel/Aura/resources/js/app.js */"./resources/js/app.js");
+module.exports = __webpack_require__(/*! /Users/mac/Documents/Projects/Laravel/Aura/resources/sass/app.scss */"./resources/sass/app.scss");
 
 
 /***/ })

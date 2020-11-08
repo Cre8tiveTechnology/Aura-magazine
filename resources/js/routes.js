@@ -18,150 +18,151 @@ import CreateArticle from './pages/admin/articles/CreateArticle.vue'
 import Dashboard from './pages/admin/Dashboard.vue'
 
 export const routes = [
-  {
-    name: 'home',
-    path: '/',
-    component: Home,
-    meta: {
-      showProgressBar: true,
+    {
+        name: 'home',
+        path: '/',
+        component: Home,
+        meta: {
+            showProgressBar: true,
+        },
     },
-  },
 
-  {
-    name: 'login',
-    path: '/login',
-    component: Login,
-    meta: {
-      guestOnly: true,
-      showProgressBar: true,
+    {
+        name: 'login',
+        path: '/login',
+        component: Login,
+        meta: {
+            guestOnly: true,
+            showProgressBar: true,
+        },
     },
-  },
 
-  {
-    name: 'admin-register',
-    path: '/admin/register',
-    component: AdminRegister,
-    meta: {
-      guestOnly: true,
-      showProgressBar: true,
+    {
+        name: 'admin-register',
+        path: '/admin/register',
+        component: AdminRegister,
+        meta: {
+            guestOnly: true,
+            showProgressBar: true,
+        },
     },
-  },
 
-  {
-    name: 'shop',
-    path: '/shop',
-    component: Shop,
-    meta: {
-      showProgressBar: true,
+    {
+        name: 'shop',
+        path: '/shop',
+        component: Shop,
+        meta: {
+            showProgressBar: true,
+        },
     },
-  },
 
-  {
-    name: 'news',
-    path: '/category/news',
-    component: News,
-    meta: {
-      showProgressBar: true,
+    {
+        name: 'news',
+        path: '/category/news',
+        component: News,
+        meta: {
+            showProgressBar: true,
+        },
     },
-  },
 
-  {
-    name: 'beauty',
-    path: '/category/beauty',
-    component: Beauty,
-    meta: {
-      showProgressBar: true,
+    {
+        name: 'beauty',
+        path: '/category/beauty',
+        component: Beauty,
+        meta: {
+            showProgressBar: true,
+        },
     },
-  },
 
-  {
-    name: 'fashion',
-    path: '/category/fashion',
-    component: Fashion,
-    meta: {
-      showProgressBar: true,
+    {
+        name: 'fashion',
+        path: '/category/fashion',
+        component: Fashion,
+        meta: {
+            showProgressBar: true,
+        },
     },
-  },
 
-  {
-    name: 'lifestyle',
-    path: '/category/lifestyle',
-    component: Lifestyle,
-    meta: {
-      showProgressBar: true,
+    {
+        name: 'lifestyle',
+        path: '/category/lifestyle',
+        component: Lifestyle,
+        meta: {
+            showProgressBar: true,
+        },
     },
-  },
 
-  {
-    name: 'arts-and-culture',
-    path: '/category/arts-and-culture',
-    component: ArtsAndCulture,
-    meta: {
-      showProgressBar: true,
+    {
+        name: 'arts-and-culture',
+        path: '/category/arts-and-culture',
+        component: ArtsAndCulture,
+        meta: {
+            showProgressBar: true,
+        },
     },
-  },
 
-  {
-    name: 'post',
-    path: '/post',
-    component: Post,
-    meta: {
-      showProgressBar: true,
+    {
+        name: 'post',
+        path: '/post',
+        component: Post,
+        meta: {
+            showProgressBar: true,
+        },
     },
-  },
 
-  {
-    name: 'magazine',
-    path: '/magazine',
-    component: Magazine,
-    meta: {
-      showProgressBar: true,
+    {
+        name: 'magazine',
+        path: '/magazine',
+        component: Magazine,
+        meta: {
+            showProgressBar: true,
+        },
     },
-  },
 
-  //Page 404
-
-  {
-    name: '404',
-    path: '*',
-    component: Four0Four,
-    meta: {
-      showProgressBar: true,
+    /* -------------------------------------------------------------------------- */
+    /*                                  Page 404                                 */
+    /* -------------------------------------------------------------------------- */
+    {
+        name: '404',
+        path: '*',
+        component: Four0Four,
+        meta: {
+            showProgressBar: true,
+        },
     },
-  },
 
-  /* -------------------------------------------------------------------------- */
-  /*                                  Admin Routes                              */
-  /* -------------------------------------------------------------------------- */
+    /* -------------------------------------------------------------------------- */
+    /*                                  Admin Routes                              */
+    /* -------------------------------------------------------------------------- */
 
-  {
-    name: 'dashboard',
-    path: '/dashboard',
-    component: Dashboard,
-    meta: {
-      authOnly: true,
-      showProgressBar: true,
+    {
+        name: 'dashboard',
+        path: '/dashboard',
+        component: Dashboard,
+        meta: {
+            authOnly: true,
+            showProgressBar: true,
+        },
     },
-  },
 
-  {
-    name: 'article',
-    path: '/article',
-    component: Article,
-    meta: {
-      authOnly: true,
-      editorOnly: true,
-      showProgressBar: true,
+    {
+        name: 'article',
+        path: '/article',
+        component: Article,
+        meta: {
+            authOnly: true,
+            editorOnly: true,
+            showProgressBar: true,
+        },
     },
-  },
 
-  {
-    name: 'createArticle',
-    path: '/article/create',
-    component: CreateArticle,
-    meta: {
-      authOnly: true,
-      showProgressBar: true,
+    {
+        name: 'createArticle',
+        path: '/article/create',
+        component: CreateArticle,
+        meta: {
+            authOnly: true,
+            showProgressBar: true,
+        },
     },
-  },
 ]
