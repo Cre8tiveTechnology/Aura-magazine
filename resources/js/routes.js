@@ -1,4 +1,6 @@
-//Route paths for  User  App
+/* -------------------------------------------------------------------------- */
+/*                        //Route paths for  User  App                        */
+/* -------------------------------------------------------------------------- */
 import Home from './pages/Home.vue'
 import News from './pages/News.vue'
 import Beauty from './pages/Beauty.vue'
@@ -11,10 +13,15 @@ import Shop from './pages/Shop.vue'
 import Login from './pages/auth/Login.vue'
 import AdminRegister from './pages/auth/Register.vue'
 import Four0Four from './pages/404.vue'
+import Unauthorized from './utils/Unauthorized.vue'
 
-//Route paths for  Admin  App
+/* -------------------------------------------------------------------------- */
+/*                        //Route paths for  Admin  App                       */
+/* -------------------------------------------------------------------------- */
 import Article from './pages/admin/articles/Articles.vue'
 import CreateArticle from './pages/admin/articles/CreateArticle.vue'
+import Role from './pages/admin/roles/Roles.vue'
+import CreateRole from './pages/admin/roles/CreateRole.vue'
 import Dashboard from './pages/admin/Dashboard.vue'
 
 export const routes = [
@@ -132,6 +139,19 @@ export const routes = [
     },
 
     /* -------------------------------------------------------------------------- */
+    /*                                Unauthorized                                */
+    /* -------------------------------------------------------------------------- */
+
+    {
+        name: 'Unauthorized',
+        path: '/unauthorized',
+        component: Unauthorized,
+        meta: {
+            showProgressBar: true,
+        },
+    },
+
+    /* -------------------------------------------------------------------------- */
     /*                                  Admin Routes                              */
     /* -------------------------------------------------------------------------- */
 
@@ -147,19 +167,38 @@ export const routes = [
 
     {
         name: 'article',
-        path: '/article',
+        path: '/articles',
         component: Article,
         meta: {
             authOnly: true,
-            editorOnly: true,
+            showProgressBar: true,
+        },
+    },
+    {
+        name: 'createArticle',
+        path: '/article/create',
+        component: CreateArticle,
+        meta: {
+            authOnly: true,
             showProgressBar: true,
         },
     },
 
     {
-        name: 'createArticle',
-        path: '/article/create',
-        component: CreateArticle,
+        name: 'role',
+        path: '/roles',
+        component: Role,
+        meta: {
+            authOnly: true,
+            superAdminOnly: true,
+            showProgressBar: true,
+        },
+    },
+
+    {
+        name: 'createRole',
+        path: '/role/create',
+        component: CreateRole,
         meta: {
             authOnly: true,
             showProgressBar: true,

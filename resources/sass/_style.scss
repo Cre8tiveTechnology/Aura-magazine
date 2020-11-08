@@ -135,3 +135,13 @@ body {
 .form-control:focus {
     border-color: gainsboro !important;
 }
+
+.table-aura {
+    background-color: #212120;
+    color: #ffffff;
+}
+
+.article-img:hover {
+    transform: scale(1.5);
+    transition: all 0.5s ease-in-out;
+}

@@ -14,7 +14,7 @@
                     </div>
                     <!--@@TODO = Change email to name -->
                     <a class="navbar-brand" href="#pablo"
-                        >Welcome, {{ this.user.name.replace(/ .*/, "") }}</a
+                        >Welcome, {{ user.name | splitName }}</a
                     >
                 </div>
                 <button

@@ -19,6 +19,13 @@
                             </p>
                             <div class="card-body py-2">
                                 <form>
+                                    <!-- ROLE ERROR -->
+                                    <span
+                                        class="text-danger"
+                                        v-if="errors.role_id"
+                                        >{{ errors.role_id[0] }}</span
+                                    >
+
                                     <div class="form-group">
                                         <h6>Please Enter Token</h6>
                                         <div class="input-group">
@@ -54,11 +61,6 @@
                                     </div>
 
                                     <div class="form-group">
-                                        <span
-                                            class="text-danger"
-                                            v-if="errors.email"
-                                            >{{ errors.email[0] }}</span
-                                        >
                                         <input
                                             type="email"
                                             v-model="form.email"
@@ -67,13 +69,14 @@
                                             autocomplete="off"
                                             placeholder="Email"
                                         />
-                                    </div>
-                                    <div class="form-group">
                                         <span
                                             class="text-danger"
-                                            v-if="errors.name"
-                                            >{{ errors.name[0] }}</span
+                                            v-if="errors.email"
+                                            >{{ errors.email[0] }}</span
                                         >
+                                    </div>
+
+                                    <div class="form-group">
                                         <input
                                             type="text"
                                             v-model="form.name"
@@ -82,19 +85,20 @@
                                             autocomplete="off"
                                             placeholder="Name"
                                         />
-                                    </div>
-                                    <div class="form-group">
                                         <span
                                             class="text-danger"
-                                            v-if="errors.password"
-                                            >{{ errors.password[0] }}</span
+                                            v-if="errors.name"
+                                            >{{ errors.name[0] }}</span
                                         >
+                                    </div>
+
+                                    <div class="form-group">
                                         <div class="input-group mb-3">
                                             <input
                                                 v-model="form.password"
                                                 class="form-control shadow-none"
                                                 placeholder="Password"
-                                                autocomplete="off"
+                                                autocomplete="password"
                                                 id="password"
                                                 v-bind:type="[
                                                     showPassword
@@ -122,7 +126,13 @@
                                                 </span>
                                             </div>
                                         </div>
+                                        <span
+                                            class="text-danger"
+                                            v-if="errors.password"
+                                            >{{ errors.password[0] }}</span
+                                        >
                                     </div>
+
                                     <div class="form-group">
                                         <button
                                             type="button"
@@ -214,7 +224,9 @@ export default {
         return {
             form: {
                 email: "",
-                password: ""
+                password: "",
+                name: "",
+                role_id: "1"
             },
             showPassword: false,
             errors: [],
@@ -226,9 +238,7 @@ export default {
     },
     mounted() {
         this.tokenCode = process.env.SUPER_ADMIN_TOKEN_CODE ?? "11223344??";
-        console.log(this.tokenCode);
     },
-
     methods: {
         /* -------------------------------------------------------------------------- */
         /*                        Register - @param  Form Data                        */
@@ -242,6 +252,9 @@ export default {
                 .catch(errors => {
                     if (errors.response.status == 400) {
                         this.errors = errors.response.data;
+                    } else {
+                        let message = errors.response.data.message;
+                        this.alertError(message);
                     }
                 });
         },
@@ -252,12 +265,37 @@ export default {
             }
             if (this.token === this.tokenCode) {
                 this.tokenErr = "";
+                this.alertSuccess("Validation Succesful!");
                 return (this.isAuthorized = true);
             } else {
                 this.isAuthorized = false;
                 this.tokenErr = "Invalid Token Supplied";
                 return;
             }
+        },
+
+        alertError(message) {
+            Vue.$toast.open({
+                message: message,
+                type: "error",
+                position: "top-right"
+            });
+        },
+
+        alertWarning(message) {
+            Vue.$toast.open({
+                message: message,
+                type: "warning",
+                position: "top-right"
+            });
+        },
+
+        alertSuccess(message) {
+            Vue.$toast.open({
+                message: message,
+                type: "success",
+                position: "top-right"
+            });
         }
     }
 };

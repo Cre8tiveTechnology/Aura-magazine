@@ -19,8 +19,9 @@ class RegisterController extends Controller
     {
         $validator = Validator::make($request->all(), [
             'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
-            'password' => ['required', 'string', 'min:8',],
-            'name' => ['required', 'string', 'min:10',],
+            'password' => ['required', 'string', 'min:8'],
+            'role_id' => ['required', 'exists:roles,id'],
+            'name' => ['required', 'string', 'min:10'],
         ]);
 
         if ($validator->fails()) {
@@ -30,6 +31,7 @@ class RegisterController extends Controller
             User::create([
                 'name' => $request->name,
                 'email' => $request->email,
+                'role_id' => $request->role_id,
                 'password' => Hash::make($request->password),
             ]);
 

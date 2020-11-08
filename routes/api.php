@@ -15,11 +15,21 @@ use Illuminate\Support\Facades\Route;
  */
 
 /* -------------------------------------------------------------------------- */
-/*                                Artilces API                                */
+/*                                Articles API                                */
 /* -------------------------------------------------------------------------- */
 Route::group(['name' => 'article.', 'prefix' => 'article', 'middleware' => 'auth:sanctum'], function () {
-    Route::get('/all', 'ArticleController@index')->name('all');
+    Route::get('/all', 'ArticleController@adminIndex')->name('all');
     Route::post('/create/{user}', 'ArticleController@store')->name('store');
+    Route::delete('/remove/{article}', 'ArticleController@destroy')->name('remove');
+    Route::post('/restore', 'ArticleController@restore')->name('restore');
+});
+
+/* -------------------------------------------------------------------------- */
+/*                                Roles API                                */
+/* -------------------------------------------------------------------------- */
+Route::group(['name' => 'role.', 'prefix' => 'role', 'middleware' => ['auth:sanctum', 'role:superadmin']], function () {
+    Route::get('/all', 'RoleController@index')->name('all');
+    Route::post('/create', 'RoleController@store')->name('store');
 });
 
 /* -------------------------------------------------------------------------- */
@@ -30,4 +40,4 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 });
 Route::post('/register', 'RegisterController@register');
 Route::post('/login', 'LoginController@login');
-Route::post('/logout', 'LoginController@logout');
+Route::post('/logout', 'LoginController@logout')->name('logout');
