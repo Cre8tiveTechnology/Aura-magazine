@@ -28,7 +28,35 @@ export default {
       .then((response) => {
         this.articles = response.data;
       })
-      .catch((err) => {});
+      .catch((err) => {
+        let message = err.response.data.message;
+        this.alertError(message);
+      });
+  },
+  methods: {
+    alertError(message) {
+      Vue.$toast.open({
+        message: message,
+        type: "error",
+        position: "top-right",
+      });
+    },
+
+    alertWarning(message) {
+      Vue.$toast.open({
+        message: message,
+        type: "warning",
+        position: "top-right",
+      });
+    },
+
+    alertSuccess(message) {
+      Vue.$toast.open({
+        message: message,
+        type: "success",
+        position: "top-right",
+      });
+    },
   },
 };
 </script>

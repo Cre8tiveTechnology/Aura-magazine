@@ -7070,7 +7070,34 @@ __webpack_require__.r(__webpack_exports__);
 
     _apis_admin_Article__WEBPACK_IMPORTED_MODULE_0__["default"].listArticles().then(function (response) {
       _this.articles = response.data;
-    })["catch"](function (err) {});
+    })["catch"](function (err) {
+      var message = err.response.data.message;
+
+      _this.alertError(message);
+    });
+  },
+  methods: {
+    alertError: function alertError(message) {
+      Vue.$toast.open({
+        message: message,
+        type: "error",
+        position: "top-right"
+      });
+    },
+    alertWarning: function alertWarning(message) {
+      Vue.$toast.open({
+        message: message,
+        type: "warning",
+        position: "top-right"
+      });
+    },
+    alertSuccess: function alertSuccess(message) {
+      Vue.$toast.open({
+        message: message,
+        type: "success",
+        position: "top-right"
+      });
+    }
   }
 });
 
