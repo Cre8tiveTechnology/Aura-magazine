@@ -18,9 +18,9 @@ class ArticleController extends Controller
      */
     public function index(string $category)
     {
-        // $articles = Article::where("category", "=", $category)->with('user')->latest()->paginate(10);
+        $articles = Article::where("category", "=", $category)->with('user')->latest()->paginate(10);
 
-        // return response()->json($articles, 200);
+        return response()->json($articles, 200);
     }
 
     /**
