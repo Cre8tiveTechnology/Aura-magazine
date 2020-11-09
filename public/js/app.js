@@ -2548,6 +2548,188 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/footer.vue?vue&type=script&lang=js&":
+/*!*****************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/footer.vue?vue&type=script&lang=js& ***!
+  \*****************************************************************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+/* harmony default export */ __webpack_exports__["default"] = ({
+  name: "Footer"
+});
+
+/***/ }),
+
 /***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/layout/Admin.vue?vue&type=script&lang=js&":
 /*!************************************************************************************************************************************************************!*\
   !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/layout/Admin.vue?vue&type=script&lang=js& ***!
@@ -3178,6 +3360,10 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: "ArtsAndCulture",
@@ -3226,6 +3412,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _apis_client_Article__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../apis/client/Article */ "./resources/js/apis/client/Article.js");
 //
 //
 //
@@ -3376,258 +3563,41 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
+
 /* harmony default export */ __webpack_exports__["default"] = ({
-  name: "Beauty"
+  name: "Beauty",
+  data: function data() {
+    return {
+      articles: {},
+      category: "Beauty"
+    };
+  },
+  mounted: function mounted() {
+    this.getArticles();
+  },
+  methods: {
+    /* -------------------------------------------------------------------------- */
+
+    /*                               Get Articles                                */
+
+    /* -------------------------------------------------------------------------- */
+    getArticles: function getArticles(page, category) {
+      var _this = this;
+
+      category = this.category;
+
+      if (typeof page === "undefined") {
+        page = 1;
+      }
+
+      _apis_client_Article__WEBPACK_IMPORTED_MODULE_0__["default"].fetchArticles(page, category).then(function (response) {
+        _this.articles = response.data;
+      })["catch"](function (err) {
+        var message = err.response.data.message;
+        console.log(message);
+      });
+    }
+  }
 });
 
 /***/ }),
@@ -3642,6 +3612,10 @@ __webpack_require__.r(__webpack_exports__);
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _apis_client_Article__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../apis/client/Article */ "./resources/js/apis/client/Article.js");
+//
+//
+//
+//
 //
 //
 //
@@ -4962,158 +4936,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: "Home"
 });
@@ -5130,6 +4952,10 @@ __webpack_require__.r(__webpack_exports__);
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _apis_client_Article__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../apis/client/Article */ "./resources/js/apis/client/Article.js");
+//
+//
+//
+//
 //
 //
 //
@@ -5471,6 +5297,10 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: "Lifestyle",
@@ -5519,6 +5349,10 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
+//
+//
+//
+//
 //
 //
 //
@@ -5758,6 +5592,10 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: "News",
@@ -5807,6 +5645,10 @@ __webpack_require__.r(__webpack_exports__);
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _apis_client_Article__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../apis/client/Article */ "./resources/js/apis/client/Article.js");
+//
+//
+//
+//
 //
 //
 //
@@ -6199,6 +6041,10 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: "SexAndRelationship",
@@ -6247,6 +6093,10 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
+//
+//
+//
+//
 //
 //
 //
@@ -7737,37 +7587,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: "Login",
@@ -7820,42 +7639,6 @@ __webpack_require__.r(__webpack_exports__);
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* WEBPACK VAR INJECTION */(function(process) {/* harmony import */ var _apis_admin_User__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../apis/admin/User */ "./resources/js/apis/admin/User.js");
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
 //
 //
 //
@@ -12836,6 +12619,25 @@ exports.push([module.i, "\n.nav-link[data-v-6dde423b] {\n  color: #000 !importan
 
 /***/ }),
 
+/***/ "./node_modules/css-loader/index.js?!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/footer.vue?vue&type=style&index=0&id=585a4226&scoped=true&lang=css&":
+/*!************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/css-loader??ref--6-1!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src??ref--6-2!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/footer.vue?vue&type=style&index=0&id=585a4226&scoped=true&lang=css& ***!
+  \************************************************************************************************************************************************************************************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loader/lib/css-base.js */ "./node_modules/css-loader/lib/css-base.js")(false);
+// imports
+exports.push([module.i, "@import url(https://fonts.googleapis.com/css?family=Rubik:300,400,500,700);", ""]);
+
+// module
+exports.push([module.i, "\n.body[data-v-585a4226] {\n  font-family: Rubik, sans-serif;\n  position: relative;\n  font-weight: 400;\n  font-size: 15px;\n}\nul[data-v-585a4226] {\n  padding: 0;\n  margin: 0;\n}\nli[data-v-585a4226] {\n  list-style: none;\n}\na[data-v-585a4226]:focus,\na[data-v-585a4226]:hover {\n  text-decoration: none;\n  transition: 0.3s ease;\n}\na[data-v-585a4226]:focus {\n  outline: 0;\n}\nimg[data-v-585a4226] {\n  max-width: 100%;\n}\np[data-v-585a4226] {\n  font-size: 16px;\n  line-height: 30px;\n  color: #898b96;\n  font-weight: 300;\n}\nh4[data-v-585a4226] {\n  font-family: Rubik, sans-serif;\n  margin: 0;\n  font-weight: 400;\n  padding: 0;\n  color: rgb(233, 220, 220);\n}\na[data-v-585a4226] {\n  color: #ff63b6;\n}\n.no-padding[data-v-585a4226] {\n  padding: 0 !important;\n}\n.footer-big[data-v-585a4226] {\n  padding: 105px 0 65px 0;\n}\n.footer-big .footer-widget[data-v-585a4226] {\n  margin-bottom: 40px;\n}\n.footer--light[data-v-585a4226] {\n  background: #202024;\n}\n.footer-big .footer-menu ul li a[data-v-585a4226],\n.footer-big p[data-v-585a4226],\n.footer-big ul li[data-v-585a4226] {\n  color: #898b96;\n}\n.footer-menu[data-v-585a4226] {\n  padding-left: 48px;\n}\n.footer-menu ul li a[data-v-585a4226] {\n  font-size: 15px;\n  line-height: 32px;\n  transition: 0.3s;\n}\n.footer-menu ul li a[data-v-585a4226]:hover {\n  color: #ff63b6;\n}\n.footer-menu--1[data-v-585a4226] {\n  width: 100%;\n}\n.footer-widget-title[data-v-585a4226] {\n  line-height: 42px;\n  margin-bottom: 10px;\n  font-size: 18px;\n}\n.mini-footer[data-v-585a4226] {\n  background: #000;\n  text-align: center;\n  padding: 32px 0;\n}\n.mini-footer p[data-v-585a4226] {\n  margin: 0;\n  line-height: 26px;\n  font-size: 15px;\n  color: #999;\n}\n.mini-footer p a[data-v-585a4226] {\n  color: #ff63b6;\n}\n.mini-footer p a[data-v-585a4226]:hover {\n  color: #fff;\n}\n.widget-about img[data-v-585a4226] {\n  display: block;\n  margin-bottom: 30px;\n}\n.widget-about p[data-v-585a4226] {\n  font-weight: 400;\n}\n.widget-about .contact-details[data-v-585a4226] {\n  margin: 30px 0 0 0;\n}\n.widget-about .contact-details li[data-v-585a4226] {\n  margin-bottom: 10px;\n}\n.widget-about .contact-details li[data-v-585a4226]:last-child {\n  margin-bottom: 0;\n}\n.widget-about .contact-details li span[data-v-585a4226] {\n  padding-right: 12px;\n}\n.widget-about .contact-details li a[data-v-585a4226] {\n  color: #ff63b6;\n}\n@media (max-width: 991px) {\n.footer-menu[data-v-585a4226] {\n    padding-left: 0;\n}\n}\n", ""]);
+
+// exports
+
+
+/***/ }),
+
 /***/ "./node_modules/css-loader/index.js?!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/pages/404.vue?vue&type=style&index=0&id=82158542&scoped=true&lang=css&":
 /*!****************************************************************************************************************************************************************************************************************************************************************************************!*\
   !*** ./node_modules/css-loader??ref--6-1!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src??ref--6-2!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/pages/404.vue?vue&type=style&index=0&id=82158542&scoped=true&lang=css& ***!
@@ -12905,7 +12707,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-
 
 
 // module
-exports.push([module.i, "\n.txt-small {\n    font-size: 0.8em;\n}\n", ""]);
+exports.push([module.i, "\n.txt-small {\n  font-size: 0.8em;\n}\n", ""]);
 
 // exports
 
@@ -46205,6 +46007,36 @@ if(false) {}
 
 /***/ }),
 
+/***/ "./node_modules/style-loader/index.js!./node_modules/css-loader/index.js?!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/footer.vue?vue&type=style&index=0&id=585a4226&scoped=true&lang=css&":
+/*!****************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/style-loader!./node_modules/css-loader??ref--6-1!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src??ref--6-2!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/footer.vue?vue&type=style&index=0&id=585a4226&scoped=true&lang=css& ***!
+  \****************************************************************************************************************************************************************************************************************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+
+var content = __webpack_require__(/*! !../../../node_modules/css-loader??ref--6-1!../../../node_modules/vue-loader/lib/loaders/stylePostLoader.js!../../../node_modules/postcss-loader/src??ref--6-2!../../../node_modules/vue-loader/lib??vue-loader-options!./footer.vue?vue&type=style&index=0&id=585a4226&scoped=true&lang=css& */ "./node_modules/css-loader/index.js?!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/footer.vue?vue&type=style&index=0&id=585a4226&scoped=true&lang=css&");
+
+if(typeof content === 'string') content = [[module.i, content, '']];
+
+var transform;
+var insertInto;
+
+
+
+var options = {"hmr":true}
+
+options.transform = transform
+options.insertInto = undefined;
+
+var update = __webpack_require__(/*! ../../../node_modules/style-loader/lib/addStyles.js */ "./node_modules/style-loader/lib/addStyles.js")(content, options);
+
+if(content.locals) module.exports = content.locals;
+
+if(false) {}
+
+/***/ }),
+
 /***/ "./node_modules/style-loader/index.js!./node_modules/css-loader/index.js?!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/pages/404.vue?vue&type=style&index=0&id=82158542&scoped=true&lang=css&":
 /*!********************************************************************************************************************************************************************************************************************************************************************************************************************!*\
   !*** ./node_modules/style-loader!./node_modules/css-loader??ref--6-1!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src??ref--6-2!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/pages/404.vue?vue&type=style&index=0&id=82158542&scoped=true&lang=css& ***!
@@ -47400,6 +47232,307 @@ render._withStripped = true
 
 /***/ }),
 
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/footer.vue?vue&type=template&id=585a4226&scoped=true&":
+/*!*********************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/footer.vue?vue&type=template&id=585a4226&scoped=true& ***!
+  \*********************************************************************************************************************************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "render", function() { return render; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return staticRenderFns; });
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c("div", [
+    _c(
+      "footer",
+      {
+        staticClass: "body footer-area footer--light",
+        staticStyle: { "margin-top": "10% !important" }
+      },
+      [
+        _c("div", { staticClass: "footer-big" }, [
+          _c("div", { staticClass: "container" }, [
+            _c("div", { staticClass: "row" }, [
+              _vm._m(0),
+              _vm._v(" "),
+              _c("div", { staticClass: "col-md-3 col-sm-4" }, [
+                _c("div", { staticClass: "footer-widget" }, [
+                  _c("div", { staticClass: "footer-menu footer-menu--1" }, [
+                    _c("h4", { staticClass: "footer-widget-title" }, [
+                      _vm._v("Popular Category")
+                    ]),
+                    _vm._v(" "),
+                    _c("ul", [
+                      _c(
+                        "li",
+                        [
+                          _c(
+                            "router-link",
+                            { attrs: { to: "/category/news" } },
+                            [_vm._v(" News ")]
+                          )
+                        ],
+                        1
+                      ),
+                      _vm._v(" "),
+                      _c(
+                        "li",
+                        [
+                          _c(
+                            "router-link",
+                            { attrs: { to: "/category/fashion" } },
+                            [
+                              _vm._v(
+                                "\n                      Fashion\n                    "
+                              )
+                            ]
+                          )
+                        ],
+                        1
+                      ),
+                      _vm._v(" "),
+                      _c(
+                        "li",
+                        [
+                          _c(
+                            "router-link",
+                            { attrs: { to: "/category/beauty" } },
+                            [_vm._v(" Beauty ")]
+                          )
+                        ],
+                        1
+                      ),
+                      _vm._v(" "),
+                      _c(
+                        "li",
+                        [
+                          _c(
+                            "router-link",
+                            { attrs: { to: "/category/lifestyle" } },
+                            [
+                              _vm._v(
+                                "\n                      Lifestyle\n                    "
+                              )
+                            ]
+                          )
+                        ],
+                        1
+                      ),
+                      _vm._v(" "),
+                      _c(
+                        "li",
+                        [
+                          _c(
+                            "router-link",
+                            { attrs: { to: "/category/arts-and-culture" } },
+                            [
+                              _vm._v(
+                                "\n                      Arts & Culture\n                    "
+                              )
+                            ]
+                          )
+                        ],
+                        1
+                      ),
+                      _vm._v(" "),
+                      _c(
+                        "li",
+                        [
+                          _c(
+                            "router-link",
+                            { attrs: { to: "/category/horoscope" } },
+                            [
+                              _vm._v(
+                                "\n                      Horoscope\n                    "
+                              )
+                            ]
+                          )
+                        ],
+                        1
+                      ),
+                      _vm._v(" "),
+                      _c(
+                        "li",
+                        [
+                          _c(
+                            "router-link",
+                            {
+                              attrs: { to: "/category/sex-and-relationships" }
+                            },
+                            [
+                              _vm._v(
+                                "\n                      Sex and Relationships\n                    "
+                              )
+                            ]
+                          )
+                        ],
+                        1
+                      )
+                    ])
+                  ])
+                ])
+              ]),
+              _vm._v(" "),
+              _vm._m(1),
+              _vm._v(" "),
+              _vm._m(2)
+            ])
+          ])
+        ]),
+        _vm._v(" "),
+        _vm._m(3)
+      ]
+    )
+  ])
+}
+var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "col-md-3 col-sm-12" }, [
+      _c("div", { staticClass: "footer-widget" }, [
+        _c("div", { staticClass: "widget-about" }, [
+          _c("img", {
+            staticClass: "img-fluid",
+            attrs: {
+              src: "https://aura.com.ng/storage/logo/regular.svg",
+              alt: "Logo Here"
+            }
+          }),
+          _vm._v(" "),
+          _c("p", [_vm._v("Bringing Magazine from core...")]),
+          _vm._v(" "),
+          _c("ul", { staticClass: "contact-details" }, [
+            _c("li", [
+              _c("span", { staticClass: "icon-earphones" }),
+              _vm._v(" Call Us:\n                    "),
+              _c("a", { attrs: { href: "tel:09033030100" } }, [
+                _vm._v("09033030100")
+              ])
+            ]),
+            _vm._v(" "),
+            _c("li", [
+              _c("span", { staticClass: "icon-envelope-open" }),
+              _vm._v(" "),
+              _c("a", { attrs: { href: "mailto:support@aura.com" } }, [
+                _vm._v("support@aura.com")
+              ])
+            ])
+          ])
+        ])
+      ])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "col-md-3 col-sm-4" }, [
+      _c("div", { staticClass: "footer-widget" }, [
+        _c("div", { staticClass: "footer-menu" }, [
+          _c("h4", { staticClass: "footer-widget-title" }, [
+            _vm._v("Our Company")
+          ]),
+          _vm._v(" "),
+          _c("ul", [
+            _c("li", [_c("a", { attrs: { href: "#" } }, [_vm._v("About Us")])]),
+            _vm._v(" "),
+            _c("li", [
+              _c("a", { attrs: { href: "#" } }, [_vm._v("Contact Us")])
+            ]),
+            _vm._v(" "),
+            _c("li", [_c("a", { attrs: { href: "#" } }, [_vm._v("Magazine")])]),
+            _vm._v(" "),
+            _c("li", [_c("a", { attrs: { href: "#" } }, [_vm._v("Shop")])]),
+            _vm._v(" "),
+            _c("li", [_c("a", { attrs: { href: "#" } }, [_vm._v("Videos")])]),
+            _vm._v(" "),
+            _c("li", [
+              _c("a", { attrs: { href: "#" } }, [_vm._v("Testimonials")])
+            ]),
+            _vm._v(" "),
+            _c("li", [
+              _c("a", { attrs: { href: "#" } }, [_vm._v("Plan & Pricing")])
+            ])
+          ])
+        ])
+      ])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "col-md-3 col-sm-4" }, [
+      _c("div", { staticClass: "footer-widget" }, [
+        _c("div", { staticClass: "footer-menu no-padding" }, [
+          _c("h4", { staticClass: "footer-widget-title" }, [
+            _vm._v("Help & Support")
+          ]),
+          _vm._v(" "),
+          _c("ul", [
+            _c("li", [
+              _c("a", { attrs: { href: "#" } }, [_vm._v("Terms & Conditions")])
+            ]),
+            _vm._v(" "),
+            _c("li", [
+              _c("a", { attrs: { href: "#" } }, [_vm._v("Support Policy")])
+            ]),
+            _vm._v(" "),
+            _c("li", [
+              _c("a", { attrs: { href: "#" } }, [_vm._v("Refund Policy")])
+            ]),
+            _vm._v(" "),
+            _c("li", [_c("a", { attrs: { href: "#" } }, [_vm._v("FAQs")])]),
+            _vm._v(" "),
+            _c("li", [
+              _c("a", { attrs: { href: "#" } }, [_vm._v("Buyers Faq")])
+            ]),
+            _vm._v(" "),
+            _c("li", [
+              _c("a", { attrs: { href: "#" } }, [_vm._v("Sellers Faq")])
+            ])
+          ])
+        ])
+      ])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "mini-footer" }, [
+      _c("div", { staticClass: "container" }, [
+        _c("div", { staticClass: "row" }, [
+          _c("div", { staticClass: "col-md-12" }, [
+            _c("div", { staticClass: "copyright-text" }, [
+              _c("p", [
+                _vm._v("\n                © 2020 "),
+                _c("a", { attrs: { href: "/" } }, [_vm._v("AURA")]),
+                _vm._v(". All rights reserved. Created by\n                "),
+                _c("a", { attrs: { href: "https://www.hinodegeeks.ng" } }, [
+                  _vm._v("Hinode Geeks")
+                ])
+              ])
+            ])
+          ])
+        ])
+      ])
+    ])
+  }
+]
+render._withStripped = true
+
+
+
+/***/ }),
+
 /***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/layout/Admin.vue?vue&type=template&id=559b8e88&":
 /*!****************************************************************************************************************************************************************************************************!*\
   !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/layout/Admin.vue?vue&type=template&id=559b8e88& ***!
@@ -48490,7 +48623,9 @@ var render = function() {
               )
             ],
             2
-          )
+          ),
+      _vm._v(" "),
+      _c("user-footer")
     ],
     1
   )
@@ -48506,7 +48641,7 @@ var staticRenderFns = [
         attrs: {
           src:
             "https://res.cloudinary.com/cre8tive-technologies/image/upload/v1604915936/aura/Culture_ym0tbh.jpg",
-          alt: "Fashion Cover"
+          alt: "Arts and Culture Cover"
         }
       })
     ])
@@ -48540,31 +48675,288 @@ var render = function() {
       _vm._v(" "),
       _vm._m(0),
       _vm._v(" "),
-      _vm._m(1),
+      _vm.articles.data.length === 0
+        ? _c("empty-resource")
+        : _c(
+            "div",
+            [
+              _c("div", { staticClass: "mt-1" }, [
+                _c("div", { staticClass: "container mt-5" }, [
+                  _c("div", { staticClass: "row" }, [
+                    _c(
+                      "div",
+                      {
+                        staticClass:
+                          "col-12 col-lg-8 col-md-8 col-sm-12 order-sm-last order-md-first"
+                      },
+                      [
+                        _c(
+                          "a",
+                          {
+                            attrs: {
+                              "data-fancybox": "gallery",
+                              href: _vm.articles.data[0].image
+                            }
+                          },
+                          [
+                            _c("img", {
+                              staticClass: "w-100 img-fluid",
+                              attrs: {
+                                src: _vm.articles.data[0].image,
+                                alt: _vm.articles.data[0].title
+                              }
+                            })
+                          ]
+                        )
+                      ]
+                    ),
+                    _vm._v(" "),
+                    _c(
+                      "div",
+                      {
+                        staticClass:
+                          "p-4 col-12 col-lg-4 col-md-4 col-sm-12 order-sm-first order-md-last"
+                      },
+                      [
+                        _c("div", { staticClass: "home-ads-container h-100" }, [
+                          _c("div", { staticClass: "text-center" }, [
+                            _c("p", [_vm._v("ADS BANNER")])
+                          ])
+                        ])
+                      ]
+                    )
+                  ])
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "container mt-3" }, [
+                  _c("span", { staticClass: "news-date font-weight-bold" }, [
+                    _vm._v(
+                      _vm._s(
+                        _vm._f("formatDate")(_vm.articles.data[0].created_at)
+                      )
+                    )
+                  ]),
+                  _vm._v(" "),
+                  _c(
+                    "h3",
+                    { staticClass: "mt-2" },
+                    [
+                      _c(
+                        "router-link",
+                        {
+                          staticClass: "aura-post-title",
+                          attrs: {
+                            to: {
+                              name: "post",
+                              params: {
+                                id: _vm.articles.data[0].id,
+                                title: _vm.articles.data[0].title
+                              }
+                            }
+                          }
+                        },
+                        [
+                          _vm._v(
+                            "\n            " +
+                              _vm._s(_vm.articles.data[0].title) +
+                              "\n          "
+                          )
+                        ]
+                      )
+                    ],
+                    1
+                  ),
+                  _vm._v(" "),
+                  _c("p", { staticClass: "mt-3" }, [
+                    _vm._v(
+                      "\n          " +
+                        _vm._s(
+                          _vm._f("truncate")(
+                            _vm.articles.data[0].description,
+                            100
+                          )
+                        ) +
+                        "\n        "
+                    )
+                  ]),
+                  _vm._v(" "),
+                  _c("span", [
+                    _c("i", { staticClass: "fa fa-user" }),
+                    _vm._v(
+                      " " +
+                        _vm._s(_vm.articles.data[0].user.name) +
+                        "\n        "
+                    )
+                  ])
+                ])
+              ]),
+              _vm._v(" "),
+              _c(
+                "div",
+                {
+                  staticClass: "home-ads-container mt-5 mb-5 w-50 mx-auto h-100"
+                },
+                [
+                  _c("div", { staticClass: "container text-center" }, [
+                    _c("p", [_vm._v("ADS BANNER")])
+                  ])
+                ]
+              ),
+              _vm._v(" "),
+              _vm._l(_vm.articles.data, function(article, index) {
+                return _c(
+                  "div",
+                  { key: article.id, staticClass: "container mt-5" },
+                  [
+                    index > 0
+                      ? _c("div", { staticClass: "row" }, [
+                          _c(
+                            "div",
+                            {
+                              staticClass:
+                                "col-lg-6 col-md-6 col-sm-12 col-12 order-first order-lg-last"
+                            },
+                            [
+                              _c(
+                                "a",
+                                {
+                                  attrs: {
+                                    "data-fancybox": "gallery",
+                                    href: article.image
+                                  }
+                                },
+                                [
+                                  _c("img", {
+                                    staticClass: "w-100 img-fluid",
+                                    attrs: {
+                                      src: article.image,
+                                      alt: article.title
+                                    }
+                                  })
+                                ]
+                              )
+                            ]
+                          ),
+                          _vm._v(" "),
+                          _c(
+                            "div",
+                            {
+                              staticClass:
+                                "mt-0 col-lg-6 col-md-6 col-sm-12 col-12 order-last order-lg-first"
+                            },
+                            [
+                              _c(
+                                "div",
+                                { staticClass: "border-top border-dark pt-2" },
+                                [
+                                  _c(
+                                    "span",
+                                    {
+                                      staticClass: "news-date font-weight-bold"
+                                    },
+                                    [
+                                      _vm._v(
+                                        _vm._s(
+                                          _vm._f("formatDate")(
+                                            article.created_at
+                                          )
+                                        )
+                                      )
+                                    ]
+                                  ),
+                                  _vm._v(" "),
+                                  _c(
+                                    "h4",
+                                    { staticClass: "mt-4" },
+                                    [
+                                      _c(
+                                        "router-link",
+                                        {
+                                          staticClass: "aura-post-title",
+                                          attrs: {
+                                            to: {
+                                              name: "post",
+                                              params: {
+                                                id: article.id,
+                                                title: article.title
+                                              }
+                                            }
+                                          }
+                                        },
+                                        [
+                                          _vm._v(
+                                            "\n                " +
+                                              _vm._s(article.title) +
+                                              "\n              "
+                                          )
+                                        ]
+                                      )
+                                    ],
+                                    1
+                                  ),
+                                  _vm._v(" "),
+                                  _c("p", { staticClass: "mt-3" }, [
+                                    _vm._v(
+                                      "\n              " +
+                                        _vm._s(
+                                          _vm._f("truncate")(
+                                            article.description,
+                                            100
+                                          )
+                                        ) +
+                                        "\n            "
+                                    )
+                                  ]),
+                                  _vm._v(" "),
+                                  _c("span", [
+                                    _c("i", { staticClass: "fa fa-user" }),
+                                    _vm._v(
+                                      " " + _vm._s(article.user.name) + " "
+                                    )
+                                  ])
+                                ]
+                              )
+                            ]
+                          )
+                        ])
+                      : _vm._e()
+                  ]
+                )
+              }),
+              _vm._v(" "),
+              _c(
+                "div",
+                { staticClass: "container d-flex mt-5" },
+                [
+                  _c(
+                    "pagination",
+                    {
+                      staticClass: "btn-aura",
+                      attrs: { data: _vm.articles },
+                      on: { "pagination-change-page": _vm.getArticles }
+                    },
+                    [
+                      _c(
+                        "span",
+                        { attrs: { slot: "prev-nav" }, slot: "prev-nav" },
+                        [_vm._v("Previous ")]
+                      ),
+                      _vm._v(" "),
+                      _c(
+                        "span",
+                        { attrs: { slot: "next-nav" }, slot: "next-nav" },
+                        [_vm._v("Next")]
+                      )
+                    ]
+                  )
+                ],
+                1
+              )
+            ],
+            2
+          ),
       _vm._v(" "),
-      _vm._m(2),
-      _vm._v(" "),
-      _vm._m(3),
-      _vm._v(" "),
-      _vm._m(4),
-      _vm._v(" "),
-      _vm._m(5),
-      _vm._v(" "),
-      _vm._m(6),
-      _vm._v(" "),
-      _vm._m(7),
-      _vm._v(" "),
-      _vm._m(8),
-      _vm._v(" "),
-      _vm._m(9),
-      _vm._v(" "),
-      _vm._m(10),
-      _vm._v(" "),
-      _vm._m(11),
-      _vm._v(" "),
-      _vm._m(12),
-      _vm._v(" "),
-      _vm._m(13)
+      _c("user-footer")
     ],
     1
   )
@@ -48576,690 +48968,13 @@ var staticRenderFns = [
     var _c = _vm._self._c || _h
     return _c("div", { staticClass: "container-fluid p-0" }, [
       _c("img", {
-        staticClass: "col-12 p-0 img-fluid",
-        attrs: { src: "/image/cover/news.png", alt: "News Cover" }
+        staticClass: "col-12 p-0 img-fluid rounded-0",
+        attrs: {
+          src:
+            "https://res.cloudinary.com/cre8tive-technologies/image/upload/v1604915940/aura/Beauty_ysf0jh.jpg",
+          alt: "Beauty Cover"
+        }
       })
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "container mt-5" }, [
-      _c("div", { staticClass: "row" }, [
-        _c(
-          "div",
-          {
-            staticClass:
-              "col-12 col-lg-8 col-md-8 col-sm-12 order-sm-last order-md-first"
-          },
-          [
-            _c("img", {
-              staticClass: "w-100 img-fluid",
-              attrs: {
-                src:
-                  "https://images.unsplash.com/photo-1483985988355-763728e1935b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80",
-                alt: "Image"
-              }
-            })
-          ]
-        ),
-        _vm._v(" "),
-        _c(
-          "div",
-          {
-            staticClass:
-              "p-4 col-12 col-lg-4 col-md-4 col-sm-12 order-sm-first order-md-last"
-          },
-          [
-            _c("div", { staticClass: "home-ads-container h-100" }, [
-              _c("div", { staticClass: "text-center" }, [
-                _c("p", [_vm._v("ADS BANNER")])
-              ])
-            ])
-          ]
-        )
-      ])
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "container mt-3" }, [
-      _c("span", { staticClass: "news-date font-weight-bold" }, [
-        _vm._v("AUG 6, 2020")
-      ]),
-      _vm._v(" "),
-      _c("h3", { staticClass: "mt-2" }, [
-        _c("a", { staticClass: "aura-post-title", attrs: { href: "/post" } }, [
-          _vm._v(
-            "\n        Alicia Keys and Her Perfect Skin are Launching a Beauty Collab with\n        E.L.F\n      "
-          )
-        ])
-      ]),
-      _vm._v(" "),
-      _c("p", { staticClass: "mt-3" }, [
-        _vm._v(
-          "\n      Lorem ipsum dolor sit, amet consectetur adipisicing elit. In, recusandae\n      hic voluptatum quia ut nostrum ex quasi. Tempora voluptatum sapiente\n      fugiat at ullam ipsam ut nihil aperiam eaque. Eos, distinctio?\n    "
-        )
-      ]),
-      _vm._v(" "),
-      _c("span", [
-        _c("i", { staticClass: "fa fa-user" }),
-        _vm._v(" ARIANA YAPTANGCO ")
-      ])
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c(
-      "div",
-      { staticClass: "home-ads-container mt-5 mb-5 w-50 mx-auto h-100" },
-      [
-        _c("div", { staticClass: "container text-center" }, [
-          _c("p", [_vm._v("ADS BANNER")])
-        ])
-      ]
-    )
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "container mt-5" }, [
-      _c("div", { staticClass: "row" }, [
-        _c(
-          "div",
-          {
-            staticClass:
-              "col-lg-6 col-md-6 col-sm-12 col-12 order-first order-lg-last"
-          },
-          [
-            _c("img", {
-              staticClass: "w-100 img-fluid",
-              attrs: {
-                src:
-                  "https://images.unsplash.com/photo-1483985988355-763728e1935b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80",
-                alt: "Image"
-              }
-            })
-          ]
-        ),
-        _vm._v(" "),
-        _c(
-          "div",
-          {
-            staticClass:
-              "mt-0 col-lg-6 col-md-6 col-sm-12 col-12 order-last order-lg-first"
-          },
-          [
-            _c("div", { staticClass: "border-top border-dark pt-2" }, [
-              _c("span", { staticClass: "news-date font-weight-bold" }, [
-                _vm._v("AUG 6, 2020")
-              ]),
-              _vm._v(" "),
-              _c("h4", { staticClass: "mt-4" }, [
-                _c(
-                  "a",
-                  { staticClass: "aura-post-title", attrs: { href: "/post" } },
-                  [
-                    _vm._v(
-                      "\n              Alicia Keys and Her Perfect Skin are Launching a Beauty Collab\n              with E.L.F\n            "
-                    )
-                  ]
-                )
-              ]),
-              _vm._v(" "),
-              _c("p", { staticClass: "mt-3" }, [
-                _vm._v(
-                  "\n            Lorem ipsum dolor sit, amet consectetur adipisicing elit. In,\n            recusandae hic voluptatum quia ut nostrum ex quasi. Tempora\n            voluptatum sapiente fugiat at ullam ipsam ut nihil aperiam eaque.\n            Eos, distinctio?\n          "
-                )
-              ]),
-              _vm._v(" "),
-              _c("span", [
-                _c("i", { staticClass: "fa fa-user" }),
-                _vm._v(" ARIANA YAPTANGCO ")
-              ])
-            ])
-          ]
-        )
-      ])
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "container mt-5" }, [
-      _c("div", { staticClass: "row" }, [
-        _c(
-          "div",
-          {
-            staticClass:
-              "col-lg-6 col-md-6 col-sm-12 col-12 order-first order-lg-last"
-          },
-          [
-            _c("img", {
-              staticClass: "w-100 img-fluid",
-              attrs: {
-                src:
-                  "https://images.unsplash.com/photo-1483985988355-763728e1935b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80",
-                alt: "Image"
-              }
-            })
-          ]
-        ),
-        _vm._v(" "),
-        _c(
-          "div",
-          {
-            staticClass:
-              "mt-0 col-lg-6 col-md-6 col-sm-12 col-12 order-last order-lg-first"
-          },
-          [
-            _c("div", { staticClass: "border-top border-dark pt-2" }, [
-              _c("span", { staticClass: "news-date font-weight-bold" }, [
-                _vm._v("AUG 6, 2020")
-              ]),
-              _vm._v(" "),
-              _c("h4", { staticClass: "mt-4" }, [
-                _c(
-                  "a",
-                  { staticClass: "aura-post-title", attrs: { href: "/post" } },
-                  [
-                    _vm._v(
-                      "\n              Alicia Keys and Her Perfect Skin are Launching a Beauty Collab\n              with E.L.F\n            "
-                    )
-                  ]
-                )
-              ]),
-              _vm._v(" "),
-              _c("p", { staticClass: "mt-3" }, [
-                _vm._v(
-                  "\n            Lorem ipsum dolor sit, amet consectetur adipisicing elit. In,\n            recusandae hic voluptatum quia ut nostrum ex quasi. Tempora\n            voluptatum sapiente fugiat at ullam ipsam ut nihil aperiam eaque.\n            Eos, distinctio?\n          "
-                )
-              ]),
-              _vm._v(" "),
-              _c("span", [
-                _c("i", { staticClass: "fa fa-user" }),
-                _vm._v(" ARIANA YAPTANGCO ")
-              ])
-            ])
-          ]
-        )
-      ])
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "container mt-5" }, [
-      _c("div", { staticClass: "row" }, [
-        _c(
-          "div",
-          {
-            staticClass:
-              "col-lg-6 col-md-6 col-sm-12 col-12 order-first order-lg-last"
-          },
-          [
-            _c("img", {
-              staticClass: "w-100 img-fluid",
-              attrs: {
-                src:
-                  "https://images.unsplash.com/photo-1483985988355-763728e1935b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80",
-                alt: "Image"
-              }
-            })
-          ]
-        ),
-        _vm._v(" "),
-        _c(
-          "div",
-          {
-            staticClass:
-              "mt-0 col-lg-6 col-md-6 col-sm-12 col-12 order-last order-lg-first"
-          },
-          [
-            _c("div", { staticClass: "border-top border-dark pt-2" }, [
-              _c("span", { staticClass: "news-date font-weight-bold" }, [
-                _vm._v("AUG 6, 2020")
-              ]),
-              _vm._v(" "),
-              _c("h4", { staticClass: "mt-4" }, [
-                _c(
-                  "a",
-                  { staticClass: "aura-post-title", attrs: { href: "/post" } },
-                  [
-                    _vm._v(
-                      "\n              Alicia Keys and Her Perfect Skin are Launching a Beauty Collab\n              with E.L.F\n            "
-                    )
-                  ]
-                )
-              ]),
-              _vm._v(" "),
-              _c("p", { staticClass: "mt-3" }, [
-                _vm._v(
-                  "\n            Lorem ipsum dolor sit, amet consectetur adipisicing elit. In,\n            recusandae hic voluptatum quia ut nostrum ex quasi. Tempora\n            voluptatum sapiente fugiat at ullam ipsam ut nihil aperiam eaque.\n            Eos, distinctio?\n          "
-                )
-              ]),
-              _vm._v(" "),
-              _c("span", [
-                _c("i", { staticClass: "fa fa-user" }),
-                _vm._v(" ARIANA YAPTANGCO ")
-              ])
-            ])
-          ]
-        )
-      ])
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "container mt-5" }, [
-      _c("div", { staticClass: "row" }, [
-        _c(
-          "div",
-          {
-            staticClass:
-              "col-lg-6 col-md-6 col-sm-12 col-12 order-first order-lg-last"
-          },
-          [
-            _c("img", {
-              staticClass: "w-100 img-fluid",
-              attrs: {
-                src:
-                  "https://images.unsplash.com/photo-1483985988355-763728e1935b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80",
-                alt: "Image"
-              }
-            })
-          ]
-        ),
-        _vm._v(" "),
-        _c(
-          "div",
-          {
-            staticClass:
-              "mt-0 col-lg-6 col-md-6 col-sm-12 col-12 order-last order-lg-first"
-          },
-          [
-            _c("div", { staticClass: "border-top border-dark pt-2" }, [
-              _c("span", { staticClass: "news-date font-weight-bold" }, [
-                _vm._v("AUG 6, 2020")
-              ]),
-              _vm._v(" "),
-              _c("h4", { staticClass: "mt-4" }, [
-                _c(
-                  "a",
-                  { staticClass: "aura-post-title", attrs: { href: "/post" } },
-                  [
-                    _vm._v(
-                      "\n              Alicia Keys and Her Perfect Skin are Launching a Beauty Collab\n              with E.L.F\n            "
-                    )
-                  ]
-                )
-              ]),
-              _vm._v(" "),
-              _c("p", { staticClass: "mt-3" }, [
-                _vm._v(
-                  "\n            Lorem ipsum dolor sit, amet consectetur adipisicing elit. In,\n            recusandae hic voluptatum quia ut nostrum ex quasi. Tempora\n            voluptatum sapiente fugiat at ullam ipsam ut nihil aperiam eaque.\n            Eos, distinctio?\n          "
-                )
-              ]),
-              _vm._v(" "),
-              _c("span", [
-                _c("i", { staticClass: "fa fa-user" }),
-                _vm._v(" ARIANA YAPTANGCO ")
-              ])
-            ])
-          ]
-        )
-      ])
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "container mt-5" }, [
-      _c("div", { staticClass: "row" }, [
-        _c(
-          "div",
-          {
-            staticClass:
-              "col-lg-6 col-md-6 col-sm-12 col-12 order-first order-lg-last"
-          },
-          [
-            _c("img", {
-              staticClass: "w-100 img-fluid",
-              attrs: {
-                src:
-                  "https://images.unsplash.com/photo-1483985988355-763728e1935b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80",
-                alt: "Image"
-              }
-            })
-          ]
-        ),
-        _vm._v(" "),
-        _c(
-          "div",
-          {
-            staticClass:
-              "mt-0 col-lg-6 col-md-6 col-sm-12 col-12 order-last order-lg-first"
-          },
-          [
-            _c("div", { staticClass: "border-top border-dark pt-2" }, [
-              _c("span", { staticClass: "news-date font-weight-bold" }, [
-                _vm._v("AUG 6, 2020")
-              ]),
-              _vm._v(" "),
-              _c("h4", { staticClass: "mt-4" }, [
-                _c(
-                  "a",
-                  { staticClass: "aura-post-title", attrs: { href: "/post" } },
-                  [
-                    _vm._v(
-                      "\n              Alicia Keys and Her Perfect Skin are Launching a Beauty Collab\n              with E.L.F\n            "
-                    )
-                  ]
-                )
-              ]),
-              _vm._v(" "),
-              _c("p", { staticClass: "mt-3" }, [
-                _vm._v(
-                  "\n            Lorem ipsum dolor sit, amet consectetur adipisicing elit. In,\n            recusandae hic voluptatum quia ut nostrum ex quasi. Tempora\n            voluptatum sapiente fugiat at ullam ipsam ut nihil aperiam eaque.\n            Eos, distinctio?\n          "
-                )
-              ]),
-              _vm._v(" "),
-              _c("span", [
-                _c("i", { staticClass: "fa fa-user" }),
-                _vm._v(" ARIANA YAPTANGCO ")
-              ])
-            ])
-          ]
-        )
-      ])
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "container mt-5" }, [
-      _c("div", { staticClass: "row" }, [
-        _c(
-          "div",
-          {
-            staticClass:
-              "col-lg-6 col-md-6 col-sm-12 col-12 order-first order-lg-last"
-          },
-          [
-            _c("img", {
-              staticClass: "w-100 img-fluid",
-              attrs: {
-                src:
-                  "https://images.unsplash.com/photo-1483985988355-763728e1935b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80",
-                alt: "Image"
-              }
-            })
-          ]
-        ),
-        _vm._v(" "),
-        _c(
-          "div",
-          {
-            staticClass:
-              "mt-0 col-lg-6 col-md-6 col-sm-12 col-12 order-last order-lg-first"
-          },
-          [
-            _c("div", { staticClass: "border-top border-dark pt-2" }, [
-              _c("span", { staticClass: "news-date font-weight-bold" }, [
-                _vm._v("AUG 6, 2020")
-              ]),
-              _vm._v(" "),
-              _c("h4", { staticClass: "mt-4" }, [
-                _c(
-                  "a",
-                  { staticClass: "aura-post-title", attrs: { href: "/post" } },
-                  [
-                    _vm._v(
-                      "\n              Alicia Keys and Her Perfect Skin are Launching a Beauty Collab\n              with E.L.F\n            "
-                    )
-                  ]
-                )
-              ]),
-              _vm._v(" "),
-              _c("p", { staticClass: "mt-3" }, [
-                _vm._v(
-                  "\n            Lorem ipsum dolor sit, amet consectetur adipisicing elit. In,\n            recusandae hic voluptatum quia ut nostrum ex quasi. Tempora\n            voluptatum sapiente fugiat at ullam ipsam ut nihil aperiam eaque.\n            Eos, distinctio?\n          "
-                )
-              ]),
-              _vm._v(" "),
-              _c("span", [
-                _c("i", { staticClass: "fa fa-user" }),
-                _vm._v(" ARIANA YAPTANGCO ")
-              ])
-            ])
-          ]
-        )
-      ])
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "container mt-5" }, [
-      _c("div", { staticClass: "row" }, [
-        _c(
-          "div",
-          {
-            staticClass:
-              "col-lg-6 col-md-6 col-sm-12 col-12 order-first order-lg-last"
-          },
-          [
-            _c("img", {
-              staticClass: "w-100 img-fluid",
-              attrs: {
-                src:
-                  "https://images.unsplash.com/photo-1483985988355-763728e1935b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80",
-                alt: "Image"
-              }
-            })
-          ]
-        ),
-        _vm._v(" "),
-        _c(
-          "div",
-          {
-            staticClass:
-              "mt-0 col-lg-6 col-md-6 col-sm-12 col-12 order-last order-lg-first"
-          },
-          [
-            _c("div", { staticClass: "border-top border-dark pt-2" }, [
-              _c("span", { staticClass: "news-date font-weight-bold" }, [
-                _vm._v("AUG 6, 2020")
-              ]),
-              _vm._v(" "),
-              _c("h4", { staticClass: "mt-4" }, [
-                _c(
-                  "a",
-                  { staticClass: "aura-post-title", attrs: { href: "/post" } },
-                  [
-                    _vm._v(
-                      "\n              Alicia Keys and Her Perfect Skin are Launching a Beauty Collab\n              with E.L.F\n            "
-                    )
-                  ]
-                )
-              ]),
-              _vm._v(" "),
-              _c("p", { staticClass: "mt-3" }, [
-                _vm._v(
-                  "\n            Lorem ipsum dolor sit, amet consectetur adipisicing elit. In,\n            recusandae hic voluptatum quia ut nostrum ex quasi. Tempora\n            voluptatum sapiente fugiat at ullam ipsam ut nihil aperiam eaque.\n            Eos, distinctio?\n          "
-                )
-              ]),
-              _vm._v(" "),
-              _c("span", [
-                _c("i", { staticClass: "fa fa-user" }),
-                _vm._v(" ARIANA YAPTANGCO ")
-              ])
-            ])
-          ]
-        )
-      ])
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "container mt-5" }, [
-      _c("div", { staticClass: "row" }, [
-        _c(
-          "div",
-          {
-            staticClass:
-              "col-lg-6 col-md-6 col-sm-12 col-12 order-first order-lg-last"
-          },
-          [
-            _c("img", {
-              staticClass: "w-100 img-fluid",
-              attrs: {
-                src:
-                  "https://images.unsplash.com/photo-1483985988355-763728e1935b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80",
-                alt: "Image"
-              }
-            })
-          ]
-        ),
-        _vm._v(" "),
-        _c(
-          "div",
-          {
-            staticClass:
-              "mt-0 col-lg-6 col-md-6 col-sm-12 col-12 order-last order-lg-first"
-          },
-          [
-            _c("div", { staticClass: "border-top border-dark pt-2" }, [
-              _c("span", { staticClass: "news-date font-weight-bold" }, [
-                _vm._v("AUG 6, 2020")
-              ]),
-              _vm._v(" "),
-              _c("h4", { staticClass: "mt-4" }, [
-                _c(
-                  "a",
-                  { staticClass: "aura-post-title", attrs: { href: "/post" } },
-                  [
-                    _vm._v(
-                      "\n              Alicia Keys and Her Perfect Skin are Launching a Beauty Collab\n              with E.L.F\n            "
-                    )
-                  ]
-                )
-              ]),
-              _vm._v(" "),
-              _c("p", { staticClass: "mt-3" }, [
-                _vm._v(
-                  "\n            Lorem ipsum dolor sit, amet consectetur adipisicing elit. In,\n            recusandae hic voluptatum quia ut nostrum ex quasi. Tempora\n            voluptatum sapiente fugiat at ullam ipsam ut nihil aperiam eaque.\n            Eos, distinctio?\n          "
-                )
-              ]),
-              _vm._v(" "),
-              _c("span", [
-                _c("i", { staticClass: "fa fa-user" }),
-                _vm._v(" ARIANA YAPTANGCO ")
-              ])
-            ])
-          ]
-        )
-      ])
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "container mt-5" }, [
-      _c("div", { staticClass: "row" }, [
-        _c(
-          "div",
-          {
-            staticClass:
-              "col-lg-6 col-md-6 col-sm-12 col-12 order-first order-lg-last"
-          },
-          [
-            _c("img", {
-              staticClass: "w-100 img-fluid",
-              attrs: {
-                src:
-                  "https://images.unsplash.com/photo-1483985988355-763728e1935b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80",
-                alt: "Image"
-              }
-            })
-          ]
-        ),
-        _vm._v(" "),
-        _c(
-          "div",
-          {
-            staticClass:
-              "mt-0 col-lg-6 col-md-6 col-sm-12 col-12 order-last order-lg-first"
-          },
-          [
-            _c("div", { staticClass: "border-top border-dark pt-2" }, [
-              _c("span", { staticClass: "news-date font-weight-bold" }, [
-                _vm._v("AUG 6, 2020")
-              ]),
-              _vm._v(" "),
-              _c("h4", { staticClass: "mt-4" }, [
-                _c(
-                  "a",
-                  { staticClass: "aura-post-title", attrs: { href: "/post" } },
-                  [
-                    _vm._v(
-                      "\n              Alicia Keys and Her Perfect Skin are Launching a Beauty Collab\n              with E.L.F\n            "
-                    )
-                  ]
-                )
-              ]),
-              _vm._v(" "),
-              _c("p", { staticClass: "mt-3" }, [
-                _vm._v(
-                  "\n            Lorem ipsum dolor sit, amet consectetur adipisicing elit. In,\n            recusandae hic voluptatum quia ut nostrum ex quasi. Tempora\n            voluptatum sapiente fugiat at ullam ipsam ut nihil aperiam eaque.\n            Eos, distinctio?\n          "
-                )
-              ]),
-              _vm._v(" "),
-              _c("span", [
-                _c("i", { staticClass: "fa fa-user" }),
-                _vm._v(" ARIANA YAPTANGCO ")
-              ])
-            ])
-          ]
-        )
-      ])
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "container mt-5 mb-5 text-center" }, [
-      _c("a", { staticClass: "see-more", attrs: { href: "#" } }, [
-        _c(
-          "div",
-          {
-            staticClass:
-              "col-12 row justify-content-center align-items-baseline"
-          },
-          [
-            _c("h5", { staticClass: "mr-2" }, [_vm._v("SEE MORE")]),
-            _vm._v(" "),
-            _c("i", { staticClass: "see-more-icon fa fa-chevron-circle-right" })
-          ]
-        )
-      ])
     ])
   }
 ]
@@ -49570,7 +49285,9 @@ var render = function() {
               )
             ],
             2
-          )
+          ),
+      _vm._v(" "),
+      _c("user-footer")
     ],
     1
   )
@@ -49653,7 +49370,7 @@ var render = function() {
                     },
                     [
                       _vm._v(
-                        "\n                                Being Everywoman Is Katie Porter's\n                                Superpower\n                            "
+                        "\n                Being Everywoman Is Katie Porter's Superpower\n              "
                       )
                     ]
                   ),
@@ -49736,9 +49453,7 @@ var render = function() {
                           "col-12 row justify-content-center align-items-baseline"
                       },
                       [
-                        _c("h5", { staticClass: "mr-2 " }, [
-                          _vm._v("SEE MORE")
-                        ]),
+                        _c("h5", { staticClass: "mr-2" }, [_vm._v("SEE MORE")]),
                         _vm._v(" "),
                         _c("i", {
                           staticClass:
@@ -49866,12 +49581,12 @@ var render = function() {
                   _c(
                     "h4",
                     {
-                      staticClass: "card-title ",
+                      staticClass: "card-title",
                       staticStyle: { "font-size": "30px" }
                     },
                     [
                       _vm._v(
-                        "\n                        Ashley Graham Wants to Cancel Mom-Shaming\n                    "
+                        "\n            Ashley Graham Wants to Cancel Mom-Shaming\n          "
                       )
                     ]
                   ),
@@ -50007,7 +49722,9 @@ var render = function() {
             )
           ])
         ]
-      )
+      ),
+      _vm._v(" "),
+      _c("user-footer")
     ],
     1
   )
@@ -50040,7 +49757,7 @@ var staticRenderFns = [
       },
       [
         _c("h5", { staticClass: "font-weight-bold ml-0 mt-4 text-white" }, [
-          _vm._v("\n            Top Stories\n            "),
+          _vm._v("\n      Top Stories\n      "),
           _c("i", { staticClass: "fa fa-angle-right text-aura" })
         ]),
         _vm._v(" "),
@@ -50074,12 +49791,12 @@ var staticRenderFns = [
                       _c(
                         "h4",
                         {
-                          staticClass: "card-title ",
+                          staticClass: "card-title",
                           staticStyle: { "font-size": "30px" }
                         },
                         [
                           _vm._v(
-                            "\n                                Being Everywoman Is Katie Porter's\n                                Superpower\n                            "
+                            "\n                Being Everywoman Is Katie Porter's Superpower\n              "
                           )
                         ]
                       ),
@@ -50088,7 +49805,7 @@ var staticRenderFns = [
                       _vm._v(" "),
                       _c("p", { staticClass: "card-text mt-2" }, [
                         _vm._v(
-                          "\n                                This is a wider card with supporting text\n                                below as a natural lead-in to additional\n                                content. This content is a little bit\n                                longer.\n                            "
+                          "\n                This is a wider card with supporting text below as a natural\n                lead-in to additional content. This content is a little bit\n                longer.\n              "
                         )
                       ])
                     ]
@@ -50117,12 +49834,12 @@ var staticRenderFns = [
                       _c(
                         "h4",
                         {
-                          staticClass: "card-title ",
+                          staticClass: "card-title",
                           staticStyle: { "font-size": "30px" }
                         },
                         [
                           _vm._v(
-                            "\n                                Being Everywoman Iorter's Superpower\n                            "
+                            "\n                Being Everywoman Iorter's Superpower\n              "
                           )
                         ]
                       ),
@@ -50131,7 +49848,7 @@ var staticRenderFns = [
                       _vm._v(" "),
                       _c("p", { staticClass: "card-text mt-2" }, [
                         _vm._v(
-                          "\n                                This is a wider card with supporting text\n                                below as a natural lead-in to additional\n                                content. This content is a little bit\n                                longer.\n                            "
+                          "\n                This is a wider card with supporting text below as a natural\n                lead-in to additional content. This content is a little bit\n                longer.\n              "
                         )
                       ])
                     ]
@@ -50160,12 +49877,12 @@ var staticRenderFns = [
                       _c(
                         "h4",
                         {
-                          staticClass: "card-title ",
+                          staticClass: "card-title",
                           staticStyle: { "font-size": "30px" }
                         },
                         [
                           _vm._v(
-                            "\n                                Being Everywoman Is Katie Porter's\n                                Superpower\n                            "
+                            "\n                Being Everywoman Is Katie Porter's Superpower\n              "
                           )
                         ]
                       ),
@@ -50174,7 +49891,7 @@ var staticRenderFns = [
                       _vm._v(" "),
                       _c("p", { staticClass: "card-text mt-2" }, [
                         _vm._v(
-                          "\n                                This is a wider card with supporting text\n                                below as a natural lead-in to additional\n                                content. This content is a little bit\n                                longer.\n                            "
+                          "\n                This is a wider card with supporting text below as a natural\n                lead-in to additional content. This content is a little bit\n                longer.\n              "
                         )
                       ])
                     ]
@@ -50206,7 +49923,7 @@ var staticRenderFns = [
             staticStyle: { "margin-left": "7.5em" }
           },
           [
-            _vm._v("\n            Top Stories\n            "),
+            _vm._v("\n      Top Stories\n      "),
             _c("i", { staticClass: "fa fa-angle-right text-aura" })
           ]
         ),
@@ -50241,12 +49958,12 @@ var staticRenderFns = [
                       _c(
                         "h4",
                         {
-                          staticClass: "card-title ",
+                          staticClass: "card-title",
                           staticStyle: { "font-size": "30px" }
                         },
                         [
                           _vm._v(
-                            "\n                                Being Everywoman Is Katie Porter's\n                                Superpower\n                            "
+                            "\n                Being Everywoman Is Katie Porter's Superpower\n              "
                           )
                         ]
                       ),
@@ -50255,7 +49972,7 @@ var staticRenderFns = [
                       _vm._v(" "),
                       _c("p", { staticClass: "card-text mt-2" }, [
                         _vm._v(
-                          "\n                                This is a wider card with supporting text\n                                below as a natural lead-in to additional\n                                content. This content is a little bit\n                                longer.\n                            "
+                          "\n                This is a wider card with supporting text below as a natural\n                lead-in to additional content. This content is a little bit\n                longer.\n              "
                         )
                       ])
                     ]
@@ -50284,12 +50001,12 @@ var staticRenderFns = [
                       _c(
                         "h4",
                         {
-                          staticClass: "card-title ",
+                          staticClass: "card-title",
                           staticStyle: { "font-size": "30px" }
                         },
                         [
                           _vm._v(
-                            "\n                                Being Everywoman Is Katie Porter's\n                                Superpower\n                            "
+                            "\n                Being Everywoman Is Katie Porter's Superpower\n              "
                           )
                         ]
                       ),
@@ -50298,7 +50015,7 @@ var staticRenderFns = [
                       _vm._v(" "),
                       _c("p", { staticClass: "card-text mt-2" }, [
                         _vm._v(
-                          "\n                                This is a wider card with supporting text\n                                below as a natural lead-in to additional\n                                content. This content is a little bit\n                                longer.\n                            "
+                          "\n                This is a wider card with supporting text below as a natural\n                lead-in to additional content. This content is a little bit\n                longer.\n              "
                         )
                       ])
                     ]
@@ -50327,12 +50044,12 @@ var staticRenderFns = [
                       _c(
                         "h4",
                         {
-                          staticClass: "card-title ",
+                          staticClass: "card-title",
                           staticStyle: { "font-size": "30px" }
                         },
                         [
                           _vm._v(
-                            "\n                                Being Everywoman Is Katie Porter's\n                                Superpower\n                            "
+                            "\n                Being Everywoman Is Katie Porter's Superpower\n              "
                           )
                         ]
                       ),
@@ -50341,7 +50058,7 @@ var staticRenderFns = [
                       _vm._v(" "),
                       _c("p", { staticClass: "card-text mt-2" }, [
                         _vm._v(
-                          "\n                                This is a wider card with supporting text\n                                below as a natural lead-in to additional\n                                content. This content is a little bit\n                                longer.\n                            "
+                          "\n                This is a wider card with supporting text below as a natural\n                lead-in to additional content. This content is a little bit\n                longer.\n              "
                         )
                       ])
                     ]
@@ -50406,7 +50123,7 @@ var staticRenderFns = [
           "div",
           {
             staticClass:
-              "row justify-content-lg-between justify-content-md-around justify-content-sm-center justify-content-center "
+              "row justify-content-lg-between justify-content-md-around justify-content-sm-center justify-content-center"
           },
           [
             _c(
@@ -50431,7 +50148,7 @@ var staticRenderFns = [
                   _c("div", { staticClass: "card-body px-0" }, [
                     _c("p", { staticClass: "story-card-font-1" }, [
                       _vm._v(
-                        "\n                            Excepteur sint occaecat cupidatatnon proident,\n                            sunt in culpa qui ocial deserunt mollit anim\n                            tujln.kaeei do.\n                        "
+                        "\n              Excepteur sint occaecat cupidatatnon proident, sunt in culpa qui\n              ocial deserunt mollit anim tujln.kaeei do.\n            "
                       )
                     ]),
                     _vm._v(" "),
@@ -50439,7 +50156,7 @@ var staticRenderFns = [
                     _vm._v(" "),
                     _c("p", { staticClass: "story-card-font-2" }, [
                       _vm._v(
-                        "\n                            Money to many is very thig wufr ubneuid nqhfioef\n                            aeuaean qoi4ii JOECAER UJCUIW\n                        "
+                        "\n              Money to many is very thig wufr ubneuid nqhfioef aeuaean qoi4ii\n              JOECAER UJCUIW\n            "
                       )
                     ])
                   ])
@@ -50469,7 +50186,7 @@ var staticRenderFns = [
                   _c("div", { staticClass: "card-body px-0" }, [
                     _c("p", { staticClass: "story-card-font-1" }, [
                       _vm._v(
-                        "\n                            Excepteur sint occaecat cupidatatnon proident,\n                            sunt in culpa qui ocial deserunt mollit anim\n                            tujln.kaeei do.\n                        "
+                        "\n              Excepteur sint occaecat cupidatatnon proident, sunt in culpa qui\n              ocial deserunt mollit anim tujln.kaeei do.\n            "
                       )
                     ]),
                     _vm._v(" "),
@@ -50477,7 +50194,7 @@ var staticRenderFns = [
                     _vm._v(" "),
                     _c("p", { staticClass: "story-card-font-2" }, [
                       _vm._v(
-                        "\n                            Money to many is very thig wufr ubneuid nqhfioef\n                            aeuaean qoi4ii JOECAER UJCUIW\n                        "
+                        "\n              Money to many is very thig wufr ubneuid nqhfioef aeuaean qoi4ii\n              JOECAER UJCUIW\n            "
                       )
                     ])
                   ])
@@ -50504,7 +50221,7 @@ var staticRenderFns = [
                   _c("div", { staticClass: "card-body px-0" }, [
                     _c("p", { staticClass: "story-card-font-1" }, [
                       _vm._v(
-                        "\n                            Excepteur sint occaecat cupidatatnon proident,\n                            sunt in culpa qui ocial deserunt mollit anim\n                            tujln.kaeei do.\n                        "
+                        "\n              Excepteur sint occaecat cupidatatnon proident, sunt in culpa qui\n              ocial deserunt mollit anim tujln.kaeei do.\n            "
                       )
                     ]),
                     _vm._v(" "),
@@ -50512,7 +50229,7 @@ var staticRenderFns = [
                     _vm._v(" "),
                     _c("p", { staticClass: "story-card-font-2" }, [
                       _vm._v(
-                        "\n                            Money to many is very thig wufr ubneuid nqhfioef\n                            aeuaean qoi4ii JOECAER UJCUIW\n                        "
+                        "\n              Money to many is very thig wufr ubneuid nqhfioef aeuaean qoi4ii\n              JOECAER UJCUIW\n            "
                       )
                     ])
                   ])
@@ -50536,7 +50253,7 @@ var staticRenderFns = [
                 _c("div", { staticClass: "card-body px-0" }, [
                   _c("p", { staticClass: "story-card-font-1" }, [
                     _vm._v(
-                      "\n                            Excepteur sint occaecat cupidatatnon proident,\n                            sunt in culpa qui ocial deserunt mollit anim\n                            tujln.kaeei do.\n                        "
+                      "\n              Excepteur sint occaecat cupidatatnon proident, sunt in culpa qui\n              ocial deserunt mollit anim tujln.kaeei do.\n            "
                     )
                   ]),
                   _vm._v(" "),
@@ -50544,7 +50261,7 @@ var staticRenderFns = [
                   _vm._v(" "),
                   _c("p", { staticClass: "story-card-font-2" }, [
                     _vm._v(
-                      "\n                            Money to many is very thig wufr ubneuid nqhfioef\n                            aeuaean qoi4ii JOECAER UJCUIW\n                        "
+                      "\n              Money to many is very thig wufr ubneuid nqhfioef aeuaean qoi4ii\n              JOECAER UJCUIW\n            "
                     )
                   ])
                 ])
@@ -50582,7 +50299,7 @@ var staticRenderFns = [
           { staticClass: "text-aura", staticStyle: { "font-size": "30px" } },
           [_vm._v("+")]
         ),
-        _vm._v("\n                NEWS\n            ")
+        _vm._v("\n        NEWS\n      ")
       ]
     )
   },
@@ -50603,10 +50320,8 @@ var staticRenderFns = [
           }),
           _vm._v(" "),
           _c("div", { staticClass: "media-body" }, [
-            _c("h5", { staticClass: "mt-0 mb-1 " }, [
-              _vm._v(
-                "\n                                    The Wing Still Has a Long Way To Go\n                                "
-              )
+            _c("h5", { staticClass: "mt-0 mb-1" }, [
+              _vm._v("The Wing Still Has a Long Way To Go")
             ])
           ])
         ]),
@@ -50622,10 +50337,8 @@ var staticRenderFns = [
           }),
           _vm._v(" "),
           _c("div", { staticClass: "media-body" }, [
-            _c("h5", { staticClass: "mt-0 mb-1 " }, [
-              _vm._v(
-                "\n                                    The Wing Still Has a Long Way To Go\n                                "
-              )
+            _c("h5", { staticClass: "mt-0 mb-1" }, [
+              _vm._v("The Wing Still Has a Long Way To Go")
             ])
           ])
         ]),
@@ -50641,10 +50354,8 @@ var staticRenderFns = [
           }),
           _vm._v(" "),
           _c("div", { staticClass: "media-body" }, [
-            _c("h5", { staticClass: "mt-0 mb-1 " }, [
-              _vm._v(
-                "\n                                    The Wing Still Has a Long Way To Go\n                                "
-              )
+            _c("h5", { staticClass: "mt-0 mb-1" }, [
+              _vm._v("The Wing Still Has a Long Way To Go")
             ])
           ])
         ]),
@@ -50660,10 +50371,8 @@ var staticRenderFns = [
           }),
           _vm._v(" "),
           _c("div", { staticClass: "media-body" }, [
-            _c("h5", { staticClass: "mt-0 mb-1 " }, [
-              _vm._v(
-                "\n                                    The Wing Still Has a Long Way To Go\n                                "
-              )
+            _c("h5", { staticClass: "mt-0 mb-1" }, [
+              _vm._v("The Wing Still Has a Long Way To Go")
             ])
           ])
         ]),
@@ -50679,10 +50388,8 @@ var staticRenderFns = [
           }),
           _vm._v(" "),
           _c("div", { staticClass: "media-body" }, [
-            _c("h5", { staticClass: "mt-0 mb-1 " }, [
-              _vm._v(
-                "\n                                    The Wing Still Has a Long Way To Go\n                                "
-              )
+            _c("h5", { staticClass: "mt-0 mb-1" }, [
+              _vm._v("The Wing Still Has a Long Way To Go")
             ])
           ])
         ])
@@ -50713,7 +50420,7 @@ var staticRenderFns = [
         { staticClass: "text-aura", staticStyle: { "font-size": "30px" } },
         [_vm._v("+")]
       ),
-      _vm._v("\n                FASHION\n            ")
+      _vm._v("\n        FASHION\n      ")
     ])
   },
   function() {
@@ -50741,7 +50448,7 @@ var staticRenderFns = [
             },
             [
               _vm._v(
-                "\n                        Being Everywoman Is Katie Porter's Superpower Being\n                    "
+                "\n            Being Everywoman Is Katie Porter's Superpower Being\n          "
               )
             ]
           ),
@@ -50759,7 +50466,7 @@ var staticRenderFns = [
       "div",
       {
         staticClass:
-          "row justify-content-lg-between justify-content-md-around justify-content-sm-center justify-content-center "
+          "row justify-content-lg-between justify-content-md-around justify-content-sm-center justify-content-center"
       },
       [
         _c(
@@ -50777,9 +50484,9 @@ var staticRenderFns = [
               }),
               _vm._v(" "),
               _c("div", { staticClass: "card-body px-0" }, [
-                _c("h6", { staticClass: "card-title " }, [
+                _c("h6", { staticClass: "card-title" }, [
                   _vm._v(
-                    "\n                                Fashion gist topics please readFashion gist\n                                topics please read\n                            "
+                    "\n                Fashion gist topics please readFashion gist topics please read\n              "
                   )
                 ]),
                 _vm._v(" "),
@@ -50804,9 +50511,9 @@ var staticRenderFns = [
               }),
               _vm._v(" "),
               _c("div", { staticClass: "card-body px-0" }, [
-                _c("h6", { staticClass: "card-title " }, [
+                _c("h6", { staticClass: "card-title" }, [
                   _vm._v(
-                    "\n                                Fashion gist topics please readFashion gist\n                                topics please read\n                            "
+                    "\n                Fashion gist topics please readFashion gist topics please read\n              "
                   )
                 ]),
                 _vm._v(" "),
@@ -50831,9 +50538,9 @@ var staticRenderFns = [
               }),
               _vm._v(" "),
               _c("div", { staticClass: "card-body px-0" }, [
-                _c("h6", { staticClass: "card-title " }, [
+                _c("h6", { staticClass: "card-title" }, [
                   _vm._v(
-                    "\n                                Fashion gist topics please readFashion gist\n                                topics please read\n                            "
+                    "\n                Fashion gist topics please readFashion gist topics please read\n              "
                   )
                 ]),
                 _vm._v(" "),
@@ -50858,9 +50565,9 @@ var staticRenderFns = [
               }),
               _vm._v(" "),
               _c("div", { staticClass: "card-body px-0" }, [
-                _c("h6", { staticClass: "card-title " }, [
+                _c("h6", { staticClass: "card-title" }, [
                   _vm._v(
-                    "\n                                Fashion gist topics please readFashion gist\n                                topics please read\n                            "
+                    "\n                Fashion gist topics please readFashion gist topics please read\n              "
                   )
                 ]),
                 _vm._v(" "),
@@ -50896,7 +50603,7 @@ var staticRenderFns = [
         { staticClass: "text-aura", staticStyle: { "font-size": "30px" } },
         [_vm._v("+")]
       ),
-      _vm._v("\n                BEAUTY\n            ")
+      _vm._v("\n        BEAUTY\n      ")
     ])
   },
   function() {
@@ -50910,7 +50617,7 @@ var staticRenderFns = [
         [
           _c("h4", { staticClass: "font-weight-bolder pr-3" }, [
             _vm._v(
-              "\n                        ‘I Could Have Been One of Them’: Monica Ortiz Uribe\n                        on ‘Forgotten: The Women of Juarez’\n                    "
+              "\n            ‘I Could Have Been One of Them’: Monica Ortiz Uribe on ‘Forgotten:\n            The Women of Juarez’\n          "
             )
           ]),
           _vm._v(" "),
@@ -50918,7 +50625,7 @@ var staticRenderFns = [
           _vm._v(" "),
           _c("p", { staticClass: "mt-2" }, [
             _vm._v(
-              "\n                        In her new podcast, the El Paso journalist seeks\n                        justice for women disappearing on the U.S.-Mexico\n                        border.\n                    "
+              "\n            In her new podcast, the El Paso journalist seeks justice for women\n            disappearing on the U.S.-Mexico border.\n          "
             )
           ])
         ]
@@ -50951,7 +50658,7 @@ var staticRenderFns = [
       "div",
       {
         staticClass:
-          "row justify-content-lg-between justify-content-md-around justify-content-sm-center justify-content-center "
+          "row justify-content-lg-between justify-content-md-around justify-content-sm-center justify-content-center"
       },
       [
         _c(
@@ -50969,36 +50676,9 @@ var staticRenderFns = [
               }),
               _vm._v(" "),
               _c("div", { staticClass: "card-body px-0" }, [
-                _c("h6", { staticClass: "card-title " }, [
+                _c("h6", { staticClass: "card-title" }, [
                   _vm._v(
-                    "\n                                Fashion gist topics please readFashion gist\n                                topics please read\n                            "
-                  )
-                ]),
-                _vm._v(" "),
-                _c("hr", { staticClass: "card-hr-fashion" })
-              ])
-            ])
-          ]
-        ),
-        _vm._v(" "),
-        _c(
-          "div",
-          { staticClass: "col-12 col-sm-10 col-md-6 col-lg-3 mb-md-3 mb-sm-3" },
-          [
-            _c("div", { staticClass: "card p-3 shadow-sm" }, [
-              _c("img", {
-                staticClass: "card-img-top rounded-0",
-                attrs: {
-                  src:
-                    "https://images.unsplash.com/photo-1496747611176-843222e1e57c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1352&q=80",
-                  alt: "Card image cap"
-                }
-              }),
-              _vm._v(" "),
-              _c("div", { staticClass: "card-body px-0" }, [
-                _c("h6", { staticClass: "card-title " }, [
-                  _vm._v(
-                    "\n                                Fashion gist topics please readFashion gist\n                                topics please read\n                            "
+                    "\n                Fashion gist topics please readFashion gist topics please read\n              "
                   )
                 ]),
                 _vm._v(" "),
@@ -51025,7 +50705,7 @@ var staticRenderFns = [
               _c("div", { staticClass: "card-body px-0" }, [
                 _c("h6", { staticClass: "card-title" }, [
                   _vm._v(
-                    "\n                                Fashion gist topics please readFashion gist\n                                topics please read\n                            "
+                    "\n                Fashion gist topics please readFashion gist topics please read\n              "
                   )
                 ]),
                 _vm._v(" "),
@@ -51052,7 +50732,34 @@ var staticRenderFns = [
               _c("div", { staticClass: "card-body px-0" }, [
                 _c("h6", { staticClass: "card-title" }, [
                   _vm._v(
-                    "\n                                Fashion gist topics please readFashion gist\n                                topics please read\n                            "
+                    "\n                Fashion gist topics please readFashion gist topics please read\n              "
+                  )
+                ]),
+                _vm._v(" "),
+                _c("hr", { staticClass: "card-hr-fashion" })
+              ])
+            ])
+          ]
+        ),
+        _vm._v(" "),
+        _c(
+          "div",
+          { staticClass: "col-12 col-sm-10 col-md-6 col-lg-3 mb-md-3 mb-sm-3" },
+          [
+            _c("div", { staticClass: "card p-3 shadow-sm" }, [
+              _c("img", {
+                staticClass: "card-img-top rounded-0",
+                attrs: {
+                  src:
+                    "https://images.unsplash.com/photo-1496747611176-843222e1e57c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1352&q=80",
+                  alt: "Card image cap"
+                }
+              }),
+              _vm._v(" "),
+              _c("div", { staticClass: "card-body px-0" }, [
+                _c("h6", { staticClass: "card-title" }, [
+                  _vm._v(
+                    "\n                Fashion gist topics please readFashion gist topics please read\n              "
                   )
                 ]),
                 _vm._v(" "),
@@ -51089,14 +50796,14 @@ var staticRenderFns = [
           { staticClass: "text-aura", staticStyle: { "font-size": "30px" } },
           [_vm._v("+")]
         ),
-        _vm._v("\n                CULTURE\n            ")
+        _vm._v("\n        CULTURE\n      ")
       ]),
       _vm._v(" "),
       _c(
         "div",
         {
           staticClass:
-            "row justify-content-lg-between justify-content-md-around justify-content-sm-center justify-content-center "
+            "row justify-content-lg-between justify-content-md-around justify-content-sm-center justify-content-center"
         },
         [
           _c(
@@ -51118,7 +50825,7 @@ var staticRenderFns = [
                 _c("div", { staticClass: "card-body px-0" }, [
                   _c("h6", { staticClass: "card-title" }, [
                     _vm._v(
-                      "\n                                Fashion gist topics please readFashion gist\n                                topics please read\n                            "
+                      "\n                Fashion gist topics please readFashion gist topics please read\n              "
                     )
                   ]),
                   _vm._v(" "),
@@ -51147,7 +50854,7 @@ var staticRenderFns = [
                 _c("div", { staticClass: "card-body px-0" }, [
                   _c("h6", { staticClass: "card-title" }, [
                     _vm._v(
-                      "\n                                Fashion gist topics please readFashion gist\n                                topics please read\n                            "
+                      "\n                Fashion gist topics please readFashion gist topics please read\n              "
                     )
                   ]),
                   _vm._v(" "),
@@ -51176,7 +50883,7 @@ var staticRenderFns = [
                 _c("div", { staticClass: "card-body px-0" }, [
                   _c("h6", { staticClass: "card-title" }, [
                     _vm._v(
-                      "\n                                Fashion gist topics please readFashion gist\n                                topics please read\n                            "
+                      "\n                Fashion gist topics please readFashion gist topics please read\n              "
                     )
                   ]),
                   _vm._v(" "),
@@ -51205,7 +50912,7 @@ var staticRenderFns = [
                 _c("div", { staticClass: "card-body px-0" }, [
                   _c("h6", { staticClass: "card-title" }, [
                     _vm._v(
-                      "\n                                Fashion gist topics please readFashion gist\n                                topics please read\n                            "
+                      "\n                Fashion gist topics please readFashion gist topics please read\n              "
                     )
                   ]),
                   _vm._v(" "),
@@ -51228,7 +50935,7 @@ var staticRenderFns = [
       [
         _c("h3", { staticClass: "card-title" }, [
           _vm._v(
-            '\n                GFRIEND Sings "Sunrise," Maroon 5, and Avril Lavigne in a\n                Game of Song Association\n            '
+            '\n        GFRIEND Sings "Sunrise," Maroon 5, and Avril Lavigne in a Game of Song\n        Association\n      '
           )
         ]),
         _vm._v(" "),
@@ -51236,7 +50943,7 @@ var staticRenderFns = [
         _vm._v(" "),
         _c("p", { staticClass: "mt-5" }, [
           _vm._v(
-            "\n                of all the girls that have leaved, the finest have seen in\n                yet to see me\n            "
+            "\n        of all the girls that have leaved, the finest have seen in yet to see\n        me\n      "
           )
         ])
       ]
@@ -51250,7 +50957,7 @@ var staticRenderFns = [
       "div",
       {
         staticClass:
-          "row justify-content-lg-between justify-content-md-around justify-content-sm-center justify-content-center "
+          "row justify-content-lg-between justify-content-md-around justify-content-sm-center justify-content-center"
       },
       [
         _c(
@@ -51270,7 +50977,7 @@ var staticRenderFns = [
               _c("div", { staticClass: "card-body px-0" }, [
                 _c("h6", { staticClass: "card-title" }, [
                   _vm._v(
-                    "\n                                Fashion gist topics please readFashion gist\n                                topics please read\n                            "
+                    "\n                Fashion gist topics please readFashion gist topics please read\n              "
                   )
                 ]),
                 _vm._v(" "),
@@ -51297,7 +51004,7 @@ var staticRenderFns = [
               _c("div", { staticClass: "card-body px-0" }, [
                 _c("h6", { staticClass: "card-title" }, [
                   _vm._v(
-                    "\n                                Fashion gist topics please readFashion gist\n                                topics please read\n                            "
+                    "\n                Fashion gist topics please readFashion gist topics please read\n              "
                   )
                 ]),
                 _vm._v(" "),
@@ -51324,7 +51031,7 @@ var staticRenderFns = [
               _c("div", { staticClass: "card-body px-0" }, [
                 _c("h6", { staticClass: "card-title" }, [
                   _vm._v(
-                    "\n                                Fashion gist topics please readFashion gist\n                                topics please read\n                            "
+                    "\n                Fashion gist topics please readFashion gist topics please read\n              "
                   )
                 ]),
                 _vm._v(" "),
@@ -51351,7 +51058,7 @@ var staticRenderFns = [
               _c("div", { staticClass: "card-body px-0" }, [
                 _c("h6", { staticClass: "card-title" }, [
                   _vm._v(
-                    "\n                                Fashion gist topics please readFashion gist\n                                topics please read\n                            "
+                    "\n                Fashion gist topics please readFashion gist topics please read\n              "
                   )
                 ]),
                 _vm._v(" "),
@@ -51368,7 +51075,7 @@ var staticRenderFns = [
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
     return _c("h5", { staticClass: "font-weight-bold mt-4 text-white" }, [
-      _vm._v("\n                VIDEOS\n                "),
+      _vm._v("\n        VIDEOS\n        "),
       _c("i", { staticClass: "fa fa-play text-aura" })
     ])
   },
@@ -51434,7 +51141,7 @@ var staticRenderFns = [
             [
               _c("h5", { staticClass: "sp-mt-6" }, [
                 _vm._v(
-                  "\n                        Susan Garland Stars On The Cover Of The July Issue\n                        Of Aura Magazine\n                    "
+                  "\n            Susan Garland Stars On The Cover Of The July Issue Of Aura\n            Magazine\n          "
                 )
               ]),
               _vm._v(" "),
@@ -51444,11 +51151,7 @@ var staticRenderFns = [
               _vm._v(" "),
               _c("h5", [_vm._v("Cover model SUSAN GARLAND")]),
               _vm._v(" "),
-              _c("h5", [
-                _vm._v(
-                  "\n                        Photography by AREMU IFEOLUWA JOSHUA\n                    "
-                )
-              ]),
+              _c("h5", [_vm._v("Photography by AREMU IFEOLUWA JOSHUA")]),
               _vm._v(" "),
               _c("hr", { staticClass: "magazine-hr" }),
               _vm._v(" "),
@@ -51456,7 +51159,7 @@ var staticRenderFns = [
                 "div",
                 {
                   staticClass:
-                    "row justify-content-lg-between justify-content-md-around justify-content-sm-center justify-content-center "
+                    "row justify-content-lg-between justify-content-md-around justify-content-sm-center justify-content-center"
                 },
                 [
                   _c(
@@ -51468,7 +51171,7 @@ var staticRenderFns = [
                     [
                       _c("button", { staticClass: "btn btn-aura text-white" }, [
                         _vm._v(
-                          "\n                                Order Print Copy\n                            "
+                          "\n                Order Print Copy\n              "
                         )
                       ])
                     ]
@@ -51483,7 +51186,7 @@ var staticRenderFns = [
                     [
                       _c("button", { staticClass: "btn btn-aura text-white" }, [
                         _vm._v(
-                          "\n                                Get digital edition\n                            "
+                          "\n                Get digital edition\n              "
                         )
                       ])
                     ]
@@ -51506,7 +51209,7 @@ var staticRenderFns = [
         { staticClass: "text-aura", staticStyle: { "font-size": "30px" } },
         [_vm._v("+")]
       ),
-      _vm._v("\n                LIFE & LOVE\n            ")
+      _vm._v("\n        LIFE & LOVE\n      ")
     ])
   },
   function() {
@@ -51520,7 +51223,7 @@ var staticRenderFns = [
         [
           _c("h4", { staticClass: "font-weight-bolder pr-3" }, [
             _vm._v(
-              "\n                        ‘I Could Have Been One of Them’: Monica Ortiz Uribe\n                        on ‘Forgotten: The Women of Juarez’\n                    "
+              "\n            ‘I Could Have Been One of Them’: Monica Ortiz Uribe on ‘Forgotten:\n            The Women of Juarez’\n          "
             )
           ]),
           _vm._v(" "),
@@ -51528,7 +51231,7 @@ var staticRenderFns = [
           _vm._v(" "),
           _c("p", { staticClass: "mt-2" }, [
             _vm._v(
-              "\n                        In her new podcast, the El Paso journalist seeks\n                        justice for women disappearing on the U.S.-Mexico\n                        border.\n                    "
+              "\n            In her new podcast, the El Paso journalist seeks justice for women\n            disappearing on the U.S.-Mexico border.\n          "
             )
           ])
         ]
@@ -51561,7 +51264,7 @@ var staticRenderFns = [
       "div",
       {
         staticClass:
-          "row justify-content-lg-between justify-content-md-around justify-content-sm-center justify-content-center "
+          "row justify-content-lg-between justify-content-md-around justify-content-sm-center justify-content-center"
       },
       [
         _c(
@@ -51579,36 +51282,9 @@ var staticRenderFns = [
               }),
               _vm._v(" "),
               _c("div", { staticClass: "card-body px-0" }, [
-                _c("h6", { staticClass: "card-title " }, [
+                _c("h6", { staticClass: "card-title" }, [
                   _vm._v(
-                    "\n                                Fashion gist topics please readFashion gist\n                                topics please read\n                            "
-                  )
-                ]),
-                _vm._v(" "),
-                _c("hr", { staticClass: "card-hr-fashion" })
-              ])
-            ])
-          ]
-        ),
-        _vm._v(" "),
-        _c(
-          "div",
-          { staticClass: "col-12 col-sm-10 col-md-6 col-lg-3 mb-md-3 mb-sm-3" },
-          [
-            _c("div", { staticClass: "card p-3 shadow-sm" }, [
-              _c("img", {
-                staticClass: "card-img-top rounded-0",
-                attrs: {
-                  src:
-                    "https://images.unsplash.com/photo-1496747611176-843222e1e57c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1352&q=80",
-                  alt: "Card image cap"
-                }
-              }),
-              _vm._v(" "),
-              _c("div", { staticClass: "card-body px-0" }, [
-                _c("h6", { staticClass: "card-title " }, [
-                  _vm._v(
-                    "\n                                Fashion gist topics please readFashion gist\n                                topics please read\n                            "
+                    "\n                Fashion gist topics please readFashion gist topics please read\n              "
                   )
                 ]),
                 _vm._v(" "),
@@ -51635,7 +51311,7 @@ var staticRenderFns = [
               _c("div", { staticClass: "card-body px-0" }, [
                 _c("h6", { staticClass: "card-title" }, [
                   _vm._v(
-                    "\n                                Fashion gist topics please readFashion gist\n                                topics please read\n                            "
+                    "\n                Fashion gist topics please readFashion gist topics please read\n              "
                   )
                 ]),
                 _vm._v(" "),
@@ -51662,7 +51338,34 @@ var staticRenderFns = [
               _c("div", { staticClass: "card-body px-0" }, [
                 _c("h6", { staticClass: "card-title" }, [
                   _vm._v(
-                    "\n                                Fashion gist topics please readFashion gist\n                                topics please read\n                            "
+                    "\n                Fashion gist topics please readFashion gist topics please read\n              "
+                  )
+                ]),
+                _vm._v(" "),
+                _c("hr", { staticClass: "card-hr-fashion" })
+              ])
+            ])
+          ]
+        ),
+        _vm._v(" "),
+        _c(
+          "div",
+          { staticClass: "col-12 col-sm-10 col-md-6 col-lg-3 mb-md-3 mb-sm-3" },
+          [
+            _c("div", { staticClass: "card p-3 shadow-sm" }, [
+              _c("img", {
+                staticClass: "card-img-top rounded-0",
+                attrs: {
+                  src:
+                    "https://images.unsplash.com/photo-1496747611176-843222e1e57c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1352&q=80",
+                  alt: "Card image cap"
+                }
+              }),
+              _vm._v(" "),
+              _c("div", { staticClass: "card-body px-0" }, [
+                _c("h6", { staticClass: "card-title" }, [
+                  _vm._v(
+                    "\n                Fashion gist topics please readFashion gist topics please read\n              "
                   )
                 ]),
                 _vm._v(" "),
@@ -51698,7 +51401,7 @@ var staticRenderFns = [
         { staticClass: "text-aura", staticStyle: { "font-size": "30px" } },
         [_vm._v("+")]
       ),
-      _vm._v("\n                HOROSCOPE\n            ")
+      _vm._v("\n        HOROSCOPE\n      ")
     ])
   },
   function() {
@@ -51709,7 +51412,7 @@ var staticRenderFns = [
       "div",
       {
         staticClass:
-          "row justify-content-lg-between justify-content-md-around justify-content-sm-center justify-content-center "
+          "row justify-content-lg-between justify-content-md-around justify-content-sm-center justify-content-center"
       },
       [
         _c(
@@ -51729,7 +51432,7 @@ var staticRenderFns = [
               _c("div", { staticClass: "card-body px-0" }, [
                 _c("h6", { staticClass: "card-title" }, [
                   _vm._v(
-                    "\n                                Fashion gist topics please readFashion gist\n                                topics please read\n                            "
+                    "\n                Fashion gist topics please readFashion gist topics please read\n              "
                   )
                 ]),
                 _vm._v(" "),
@@ -51756,7 +51459,7 @@ var staticRenderFns = [
               _c("div", { staticClass: "card-body px-0" }, [
                 _c("h6", { staticClass: "card-title" }, [
                   _vm._v(
-                    "\n                                Fashion gist topics please readFashion gist\n                                topics please read\n                            "
+                    "\n                Fashion gist topics please readFashion gist topics please read\n              "
                   )
                 ]),
                 _vm._v(" "),
@@ -51783,7 +51486,7 @@ var staticRenderFns = [
               _c("div", { staticClass: "card-body px-0" }, [
                 _c("h6", { staticClass: "card-title" }, [
                   _vm._v(
-                    "\n                                Fashion gist topics please readFashion gist\n                                topics please read\n                            "
+                    "\n                Fashion gist topics please readFashion gist topics please read\n              "
                   )
                 ]),
                 _vm._v(" "),
@@ -51810,7 +51513,7 @@ var staticRenderFns = [
               _c("div", { staticClass: "card-body px-0" }, [
                 _c("h6", { staticClass: "card-title" }, [
                   _vm._v(
-                    "\n                                Fashion gist topics please readFashion gist\n                                topics please read\n                            "
+                    "\n                Fashion gist topics please readFashion gist topics please read\n              "
                   )
                 ]),
                 _vm._v(" "),
@@ -52130,7 +51833,9 @@ var render = function() {
               )
             ],
             2
-          )
+          ),
+      _vm._v(" "),
+      _c("user-footer")
     ],
     1
   )
@@ -52146,7 +51851,7 @@ var staticRenderFns = [
         attrs: {
           src:
             "https://res.cloudinary.com/cre8tive-technologies/image/upload/v1604915938/aura/Horoscope_o0jpuv.jpg",
-          alt: "Fashion Cover"
+          alt: "Horoscope Cover"
         }
       })
     ])
@@ -52459,7 +52164,9 @@ var render = function() {
               )
             ],
             2
-          )
+          ),
+      _vm._v(" "),
+      _c("user-footer")
     ],
     1
   )
@@ -52475,7 +52182,7 @@ var staticRenderFns = [
         attrs: {
           src:
             "https://res.cloudinary.com/cre8tive-technologies/image/upload/v1604915938/aura/Horoscope_o0jpuv.jpg",
-          alt: "Fashion Cover"
+          alt: "Lifestyle Cover"
         }
       })
     ])
@@ -52504,7 +52211,13 @@ var render = function() {
   var _c = _vm._self._c || _h
   return _c(
     "div",
-    [_c("navbar", { attrs: { current: "MAGAZINE" } }), _vm._v(" "), _vm._m(0)],
+    [
+      _c("navbar", { attrs: { current: "MAGAZINE" } }),
+      _vm._v(" "),
+      _vm._m(0),
+      _vm._v(" "),
+      _c("user-footer")
+    ],
     1
   )
 }
@@ -52934,7 +52647,9 @@ var render = function() {
               )
             ],
             2
-          )
+          ),
+      _vm._v(" "),
+      _c("user-footer")
     ],
     1
   )
@@ -53218,7 +52933,9 @@ var render = function() {
           }),
           0
         )
-      ])
+      ]),
+      _vm._v(" "),
+      _c("user-footer")
     ],
     1
   )
@@ -53641,7 +53358,9 @@ var render = function() {
               )
             ],
             2
-          )
+          ),
+      _vm._v(" "),
+      _c("user-footer")
     ],
     1
   )
@@ -53657,7 +53376,7 @@ var staticRenderFns = [
         attrs: {
           src:
             "https://res.cloudinary.com/cre8tive-technologies/image/upload/v1604915940/aura/Life_Love_tcpfrx.jpg",
-          alt: "Fashion Cover"
+          alt: "Sex and Relationship Cover"
         }
       })
     ])
@@ -53765,7 +53484,9 @@ var render = function() {
           }),
           0
         )
-      ])
+      ]),
+      _vm._v(" "),
+      _c("user-footer")
     ],
     1
   )
@@ -55324,11 +55045,7 @@ var render = function() {
                       {
                         staticClass: "text-center font-weight-light mb-5 mt-4"
                       },
-                      [
-                        _vm._v(
-                          "\n                            Sign In\n                        "
-                        )
-                      ]
+                      [_vm._v("Sign In")]
                     ),
                     _vm._v(" "),
                     _c("div", { staticClass: "card-body py-2" }, [
@@ -55551,7 +55268,7 @@ var render = function() {
                               },
                               [
                                 _vm._v(
-                                  "\n                                        Sign In\n                                    "
+                                  "\n                    Sign In\n                  "
                                 )
                               ]
                             )
@@ -55573,9 +55290,7 @@ var render = function() {
                                 { staticClass: "text-dark aura-font" },
                                 [_vm._v("Don't have an account?")]
                               ),
-                              _vm._v(
-                                "\n                                    Sign up"
-                              )
+                              _vm._v("\n                  Sign up")
                             ]
                           ),
                           _vm._v(" "),
@@ -55592,7 +55307,9 @@ var render = function() {
             ]
           )
         ])
-      ])
+      ]),
+      _vm._v(" "),
+      _c("user-footer")
     ],
     1
   )
@@ -55655,7 +55372,7 @@ var staticRenderFns = [
             { staticClass: "btn shadow-none", attrs: { type: "button" } },
             [
               _vm._v(
-                "\n                                            Signin Using Google\n                                        "
+                "\n                      Signin Using Google\n                    "
               )
             ]
           )
@@ -55689,7 +55406,7 @@ var staticRenderFns = [
             { staticClass: "btn shadow-none", attrs: { type: "button" } },
             [
               _vm._v(
-                "\n                                            Signin Using Facebook\n                                        "
+                "\n                      Signin Using Facebook\n                    "
               )
             ]
           )
@@ -55752,7 +55469,7 @@ var render = function() {
                       },
                       [
                         _vm._v(
-                          "\n                            Create an Account\n                        "
+                          "\n              Create an Account\n            "
                         )
                       ]
                     ),
@@ -55815,7 +55532,7 @@ var render = function() {
                                   },
                                   [
                                     _vm._v(
-                                      "\n                                                Validate\n                                            "
+                                      "\n                        Validate\n                      "
                                     )
                                   ]
                                 )
@@ -55828,9 +55545,9 @@ var render = function() {
                                   { staticClass: "text-danger txt-small" },
                                   [
                                     _vm._v(
-                                      "\n                                        " +
+                                      "\n                    " +
                                         _vm._s(_vm.tokenErr) +
-                                        "\n                                    "
+                                        "\n                  "
                                     )
                                   ]
                                 )
@@ -56087,7 +55804,7 @@ var render = function() {
                               },
                               [
                                 _vm._v(
-                                  "\n                                        Create Account\n                                    "
+                                  "\n                    Create Account\n                  "
                                 )
                               ]
                             )
@@ -56109,9 +55826,7 @@ var render = function() {
                                 { staticClass: "text-dark aura-font" },
                                 [_vm._v("Already have an account?")]
                               ),
-                              _vm._v(
-                                "\n                                    Sign in"
-                              )
+                              _vm._v("\n                  Sign in")
                             ]
                           ),
                           _vm._v(" "),
@@ -56128,7 +55843,9 @@ var render = function() {
             ]
           )
         ])
-      ])
+      ]),
+      _vm._v(" "),
+      _c("user-footer")
     ],
     1
   )
@@ -56177,7 +55894,7 @@ var staticRenderFns = [
             { staticClass: "btn shadow-none", attrs: { type: "button" } },
             [
               _vm._v(
-                "\n                                            Signup Using Google\n                                        "
+                "\n                      Signup Using Google\n                    "
               )
             ]
           )
@@ -56211,7 +55928,7 @@ var staticRenderFns = [
             { staticClass: "btn shadow-none", attrs: { type: "button" } },
             [
               _vm._v(
-                "\n                                            Signup Using Facebook\n                                        "
+                "\n                      Signup Using Facebook\n                    "
               )
             ]
           )
@@ -76279,16 +75996,17 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _layout_Footer__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./layout/Footer */ "./resources/js/layout/Footer.vue");
 /* harmony import */ var _layout_Admin__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./layout/Admin */ "./resources/js/layout/Admin.vue");
 /* harmony import */ var _components_ValidationError__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./components/ValidationError */ "./resources/js/components/ValidationError.vue");
-/* harmony import */ var _utils_AuraLoader__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./utils/AuraLoader */ "./resources/js/utils/AuraLoader.vue");
-/* harmony import */ var _utils_Loader__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./utils/Loader */ "./resources/js/utils/Loader.vue");
-/* harmony import */ var _utils_EmptyResource__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./utils/EmptyResource */ "./resources/js/utils/EmptyResource.vue");
-/* harmony import */ var vuejs_toggle_switch__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! vuejs-toggle-switch */ "./node_modules/vuejs-toggle-switch/dist/ToggleSwitch.common.js");
-/* harmony import */ var vuejs_toggle_switch__WEBPACK_IMPORTED_MODULE_15___default = /*#__PURE__*/__webpack_require__.n(vuejs_toggle_switch__WEBPACK_IMPORTED_MODULE_15__);
-/* harmony import */ var vue_toast_notification__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! vue-toast-notification */ "./node_modules/vue-toast-notification/dist/index.min.js");
-/* harmony import */ var vue_toast_notification__WEBPACK_IMPORTED_MODULE_16___default = /*#__PURE__*/__webpack_require__.n(vue_toast_notification__WEBPACK_IMPORTED_MODULE_16__);
-/* harmony import */ var vue_toast_notification_dist_theme_sugar_css__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! vue-toast-notification/dist/theme-sugar.css */ "./node_modules/vue-toast-notification/dist/theme-sugar.css");
-/* harmony import */ var vue_toast_notification_dist_theme_sugar_css__WEBPACK_IMPORTED_MODULE_17___default = /*#__PURE__*/__webpack_require__.n(vue_toast_notification_dist_theme_sugar_css__WEBPACK_IMPORTED_MODULE_17__);
-/* harmony import */ var _helpers_filters__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! ./helpers/filters */ "./resources/js/helpers/filters.js");
+/* harmony import */ var _components_footer__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./components/footer */ "./resources/js/components/footer.vue");
+/* harmony import */ var _utils_AuraLoader__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./utils/AuraLoader */ "./resources/js/utils/AuraLoader.vue");
+/* harmony import */ var _utils_Loader__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./utils/Loader */ "./resources/js/utils/Loader.vue");
+/* harmony import */ var _utils_EmptyResource__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ./utils/EmptyResource */ "./resources/js/utils/EmptyResource.vue");
+/* harmony import */ var vuejs_toggle_switch__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! vuejs-toggle-switch */ "./node_modules/vuejs-toggle-switch/dist/ToggleSwitch.common.js");
+/* harmony import */ var vuejs_toggle_switch__WEBPACK_IMPORTED_MODULE_16___default = /*#__PURE__*/__webpack_require__.n(vuejs_toggle_switch__WEBPACK_IMPORTED_MODULE_16__);
+/* harmony import */ var vue_toast_notification__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! vue-toast-notification */ "./node_modules/vue-toast-notification/dist/index.min.js");
+/* harmony import */ var vue_toast_notification__WEBPACK_IMPORTED_MODULE_17___default = /*#__PURE__*/__webpack_require__.n(vue_toast_notification__WEBPACK_IMPORTED_MODULE_17__);
+/* harmony import */ var vue_toast_notification_dist_theme_sugar_css__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! vue-toast-notification/dist/theme-sugar.css */ "./node_modules/vue-toast-notification/dist/theme-sugar.css");
+/* harmony import */ var vue_toast_notification_dist_theme_sugar_css__WEBPACK_IMPORTED_MODULE_18___default = /*#__PURE__*/__webpack_require__.n(vue_toast_notification_dist_theme_sugar_css__WEBPACK_IMPORTED_MODULE_18__);
+/* harmony import */ var _helpers_filters__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! ./helpers/filters */ "./resources/js/helpers/filters.js");
 /**
  * First we will load all of this project's JavaScript dependencies which
  * includes Vue and other libraries. It is a great starting point when
@@ -76324,15 +76042,17 @@ window.Vue = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.common.
 
 
 
+
 Vue.component('navbar', _components_Navbar__WEBPACK_IMPORTED_MODULE_6__["default"]);
 Vue.component('auth-nav', _layout_navbars_navs_Auth__WEBPACK_IMPORTED_MODULE_7__["default"]);
 Vue.component('auth-sidenav', _layout_navbars_Auth_Sidenav__WEBPACK_IMPORTED_MODULE_8__["default"]);
 Vue.component('auth-footer', _layout_Footer__WEBPACK_IMPORTED_MODULE_9__["default"]);
+Vue.component('user-footer', _components_footer__WEBPACK_IMPORTED_MODULE_12__["default"]);
 Vue.component('auth-admin', _layout_Admin__WEBPACK_IMPORTED_MODULE_10__["default"]);
 Vue.component('validation-error', _components_ValidationError__WEBPACK_IMPORTED_MODULE_11__["default"]);
-Vue.component('aura-loader', _utils_AuraLoader__WEBPACK_IMPORTED_MODULE_12__["default"]);
-Vue.component('loader', _utils_Loader__WEBPACK_IMPORTED_MODULE_13__["default"]);
-Vue.component('empty-resource', _utils_EmptyResource__WEBPACK_IMPORTED_MODULE_14__["default"]);
+Vue.component('aura-loader', _utils_AuraLoader__WEBPACK_IMPORTED_MODULE_13__["default"]);
+Vue.component('loader', _utils_Loader__WEBPACK_IMPORTED_MODULE_14__["default"]);
+Vue.component('empty-resource', _utils_EmptyResource__WEBPACK_IMPORTED_MODULE_15__["default"]);
 Vue.component('pagination', __webpack_require__(/*! laravel-vue-pagination */ "./node_modules/laravel-vue-pagination/dist/laravel-vue-pagination.common.js")); // const files = require.context('./', true, /\.vue$/i)
 // files.keys().map(key => Vue.component(key.split('/').pop().split('.')[0], files(key).default))
 
@@ -76344,8 +76064,8 @@ nprogress__WEBPACK_IMPORTED_MODULE_5___default.a.configure({
 Vue.use(vue_router__WEBPACK_IMPORTED_MODULE_1__["default"]);
 Vue.use(nprogress__WEBPACK_IMPORTED_MODULE_5___default.a);
 Vue.use(vue_axios__WEBPACK_IMPORTED_MODULE_2___default.a, axios__WEBPACK_IMPORTED_MODULE_3___default.a);
-Vue.use(vuejs_toggle_switch__WEBPACK_IMPORTED_MODULE_15___default.a);
-Vue.use(vue_toast_notification__WEBPACK_IMPORTED_MODULE_16___default.a);
+Vue.use(vuejs_toggle_switch__WEBPACK_IMPORTED_MODULE_16___default.a);
+Vue.use(vue_toast_notification__WEBPACK_IMPORTED_MODULE_17___default.a);
 /**
  * Next, we will create a fresh Vue application instance and attach it to
  * the page. Then, you may begin adding components to this application
@@ -76645,6 +76365,93 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_ValidationError_vue_vue_type_template_id_7f8ae9f4___WEBPACK_IMPORTED_MODULE_0__["render"]; });
 
 /* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_ValidationError_vue_vue_type_template_id_7f8ae9f4___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
+
+
+
+/***/ }),
+
+/***/ "./resources/js/components/footer.vue":
+/*!********************************************!*\
+  !*** ./resources/js/components/footer.vue ***!
+  \********************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _footer_vue_vue_type_template_id_585a4226_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./footer.vue?vue&type=template&id=585a4226&scoped=true& */ "./resources/js/components/footer.vue?vue&type=template&id=585a4226&scoped=true&");
+/* harmony import */ var _footer_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./footer.vue?vue&type=script&lang=js& */ "./resources/js/components/footer.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport *//* harmony import */ var _footer_vue_vue_type_style_index_0_id_585a4226_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./footer.vue?vue&type=style&index=0&id=585a4226&scoped=true&lang=css& */ "./resources/js/components/footer.vue?vue&type=style&index=0&id=585a4226&scoped=true&lang=css&");
+/* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
+
+
+
+
+
+/* normalize component */
+
+var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_3__["default"])(
+  _footer_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _footer_vue_vue_type_template_id_585a4226_scoped_true___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _footer_vue_vue_type_template_id_585a4226_scoped_true___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  false,
+  null,
+  "585a4226",
+  null
+  
+)
+
+/* hot reload */
+if (false) { var api; }
+component.options.__file = "resources/js/components/footer.vue"
+/* harmony default export */ __webpack_exports__["default"] = (component.exports);
+
+/***/ }),
+
+/***/ "./resources/js/components/footer.vue?vue&type=script&lang=js&":
+/*!*********************************************************************!*\
+  !*** ./resources/js/components/footer.vue?vue&type=script&lang=js& ***!
+  \*********************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_footer_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/babel-loader/lib??ref--4-0!../../../node_modules/vue-loader/lib??vue-loader-options!./footer.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/footer.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_footer_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+
+/***/ }),
+
+/***/ "./resources/js/components/footer.vue?vue&type=style&index=0&id=585a4226&scoped=true&lang=css&":
+/*!*****************************************************************************************************!*\
+  !*** ./resources/js/components/footer.vue?vue&type=style&index=0&id=585a4226&scoped=true&lang=css& ***!
+  \*****************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_style_loader_index_js_node_modules_css_loader_index_js_ref_6_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_6_2_node_modules_vue_loader_lib_index_js_vue_loader_options_footer_vue_vue_type_style_index_0_id_585a4226_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/style-loader!../../../node_modules/css-loader??ref--6-1!../../../node_modules/vue-loader/lib/loaders/stylePostLoader.js!../../../node_modules/postcss-loader/src??ref--6-2!../../../node_modules/vue-loader/lib??vue-loader-options!./footer.vue?vue&type=style&index=0&id=585a4226&scoped=true&lang=css& */ "./node_modules/style-loader/index.js!./node_modules/css-loader/index.js?!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/footer.vue?vue&type=style&index=0&id=585a4226&scoped=true&lang=css&");
+/* harmony import */ var _node_modules_style_loader_index_js_node_modules_css_loader_index_js_ref_6_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_6_2_node_modules_vue_loader_lib_index_js_vue_loader_options_footer_vue_vue_type_style_index_0_id_585a4226_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_index_js_node_modules_css_loader_index_js_ref_6_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_6_2_node_modules_vue_loader_lib_index_js_vue_loader_options_footer_vue_vue_type_style_index_0_id_585a4226_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_0__);
+/* harmony reexport (unknown) */ for(var __WEBPACK_IMPORT_KEY__ in _node_modules_style_loader_index_js_node_modules_css_loader_index_js_ref_6_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_6_2_node_modules_vue_loader_lib_index_js_vue_loader_options_footer_vue_vue_type_style_index_0_id_585a4226_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_0__) if(["default"].indexOf(__WEBPACK_IMPORT_KEY__) < 0) (function(key) { __webpack_require__.d(__webpack_exports__, key, function() { return _node_modules_style_loader_index_js_node_modules_css_loader_index_js_ref_6_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_6_2_node_modules_vue_loader_lib_index_js_vue_loader_options_footer_vue_vue_type_style_index_0_id_585a4226_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_0__[key]; }) }(__WEBPACK_IMPORT_KEY__));
+ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_style_loader_index_js_node_modules_css_loader_index_js_ref_6_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_6_2_node_modules_vue_loader_lib_index_js_vue_loader_options_footer_vue_vue_type_style_index_0_id_585a4226_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_0___default.a); 
+
+/***/ }),
+
+/***/ "./resources/js/components/footer.vue?vue&type=template&id=585a4226&scoped=true&":
+/*!***************************************************************************************!*\
+  !*** ./resources/js/components/footer.vue?vue&type=template&id=585a4226&scoped=true& ***!
+  \***************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_footer_vue_vue_type_template_id_585a4226_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../node_modules/vue-loader/lib??vue-loader-options!./footer.vue?vue&type=template&id=585a4226&scoped=true& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/footer.vue?vue&type=template&id=585a4226&scoped=true&");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_footer_vue_vue_type_template_id_585a4226_scoped_true___WEBPACK_IMPORTED_MODULE_0__["render"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_footer_vue_vue_type_template_id_585a4226_scoped_true___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
 
 
 

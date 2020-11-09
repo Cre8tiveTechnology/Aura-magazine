@@ -9,7 +9,7 @@
       <img
         src="https://res.cloudinary.com/cre8tive-technologies/image/upload/v1604915940/aura/Life_Love_tcpfrx.jpg"
         class="col-12 p-0 img-fluid rounded-0"
-        alt="Fashion Cover"
+        alt="Sex and Relationship Cover"
       />
     </div>
     <!-- COVER IMAGE -->
@@ -141,6 +141,10 @@
       </div>
     </div>
     <!--  -->
+
+    <!-- Footer -->
+    <user-footer />
+    <!-- Footer -->
   </div>
 </template>
 

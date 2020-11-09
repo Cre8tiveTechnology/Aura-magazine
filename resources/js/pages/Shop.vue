@@ -185,6 +185,10 @@
         </div>
       </div>
     </div>
+
+    <!-- Footer -->
+    <user-footer />
+    <!-- Footer -->
   </div>
 </template>
 

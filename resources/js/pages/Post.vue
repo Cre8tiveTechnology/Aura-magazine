@@ -146,6 +146,10 @@
       </div>
     </div>
     <!-- RECOMMENDATIONS STOP -->
+
+    <!-- Footer -->
+    <user-footer />
+    <!-- Footer -->
   </div>
 </template>
 

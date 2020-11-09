@@ -9,7 +9,7 @@
       <img
         src="https://res.cloudinary.com/cre8tive-technologies/image/upload/v1604915938/aura/Horoscope_o0jpuv.jpg"
         class="col-12 p-0 img-fluid rounded-0"
-        alt="Fashion Cover"
+        alt="Lifestyle Cover"
       />
     </div>
     <!-- COVER IMAGE -->
@@ -141,6 +141,10 @@
       </div>
     </div>
     <!--  -->
+
+    <!-- Footer -->
+    <user-footer />
+    <!-- Footer -->
   </div>
 </template>
 
