@@ -49,3 +49,4 @@ Route::post('/logout', 'LoginController@logout')->name('logout');
 /*                               NonAuth-User Routes                              */
 /* -------------------------------------------------------------------------- */
 Route::get('/articles/{category}/fetch', 'ArticleController@index')->name('fetch_articles');
+Route::get('/articles/{article}/get', 'ArticleController@show')->name('get_article');
