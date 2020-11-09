@@ -76447,9 +76447,55 @@ __webpack_require__.r(__webpack_exports__);
   !*** ./resources/js/helpers/filters.js ***!
   \*****************************************/
 /*! no exports provided */
-/***/ (function(module, exports) {
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
-throw new Error("Module build failed (from ./node_modules/babel-loader/lib/index.js):\nSyntaxError: /Users/mac/Documents/Projects/Laravel/Aura/resources/js/helpers/filters.js: Unexpected token (6:0)\n\n\u001b[0m \u001b[90m 4 | \u001b[39m\u001b[90m/*                     Filters file  **use Vue.filter()                       */\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 5 | \u001b[39m\u001b[90m/* -------------------------------------------------------------------------- */\u001b[39m\u001b[0m\n\u001b[0m\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 6 | \u001b[39m\u001b[33m<<\u001b[39m\u001b[33m<<\u001b[39m\u001b[33m<<\u001b[39m\u001b[33m<\u001b[39m \u001b[33mHEAD\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m   | \u001b[39m\u001b[31m\u001b[1m^\u001b[22m\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 7 | \u001b[39m\u001b[33m===\u001b[39m\u001b[33m===\u001b[39m\u001b[33m=\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 8 | \u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 9 | \u001b[39m\u001b[33m>>>\u001b[39m\u001b[33m>>>\u001b[39m\u001b[33m>\u001b[39m dfc11d7aa9cdaae244000dd220c17935799c1aa8\u001b[0m\n    at Parser._raise (/Users/mac/Documents/Projects/Laravel/Aura/node_modules/@babel/parser/lib/index.js:766:17)\n    at Parser.raiseWithData (/Users/mac/Documents/Projects/Laravel/Aura/node_modules/@babel/parser/lib/index.js:759:17)\n    at Parser.raise (/Users/mac/Documents/Projects/Laravel/Aura/node_modules/@babel/parser/lib/index.js:753:17)\n    at Parser.unexpected (/Users/mac/Documents/Projects/Laravel/Aura/node_modules/@babel/parser/lib/index.js:8966:16)\n    at Parser.parseExprAtom (/Users/mac/Documents/Projects/Laravel/Aura/node_modules/@babel/parser/lib/index.js:10282:20)\n    at Parser.parseExprSubscripts (/Users/mac/Documents/Projects/Laravel/Aura/node_modules/@babel/parser/lib/index.js:9844:23)\n    at Parser.parseUpdate (/Users/mac/Documents/Projects/Laravel/Aura/node_modules/@babel/parser/lib/index.js:9824:21)\n    at Parser.parseMaybeUnary (/Users/mac/Documents/Projects/Laravel/Aura/node_modules/@babel/parser/lib/index.js:9813:17)\n    at Parser.parseExprOps (/Users/mac/Documents/Projects/Laravel/Aura/node_modules/@babel/parser/lib/index.js:9683:23)\n    at Parser.parseMaybeConditional (/Users/mac/Documents/Projects/Laravel/Aura/node_modules/@babel/parser/lib/index.js:9657:23)\n    at Parser.parseMaybeAssign (/Users/mac/Documents/Projects/Laravel/Aura/node_modules/@babel/parser/lib/index.js:9620:21)\n    at Parser.parseExpressionBase (/Users/mac/Documents/Projects/Laravel/Aura/node_modules/@babel/parser/lib/index.js:9564:23)\n    at /Users/mac/Documents/Projects/Laravel/Aura/node_modules/@babel/parser/lib/index.js:9558:39\n    at Parser.allowInAnd (/Users/mac/Documents/Projects/Laravel/Aura/node_modules/@babel/parser/lib/index.js:11297:16)\n    at Parser.parseExpression (/Users/mac/Documents/Projects/Laravel/Aura/node_modules/@babel/parser/lib/index.js:9558:17)\n    at Parser.parseStatementContent (/Users/mac/Documents/Projects/Laravel/Aura/node_modules/@babel/parser/lib/index.js:11562:23)\n    at Parser.parseStatement (/Users/mac/Documents/Projects/Laravel/Aura/node_modules/@babel/parser/lib/index.js:11431:17)\n    at Parser.parseBlockOrModuleBlockBody (/Users/mac/Documents/Projects/Laravel/Aura/node_modules/@babel/parser/lib/index.js:12013:25)\n    at Parser.parseBlockBody (/Users/mac/Documents/Projects/Laravel/Aura/node_modules/@babel/parser/lib/index.js:11999:10)\n    at Parser.parseTopLevel (/Users/mac/Documents/Projects/Laravel/Aura/node_modules/@babel/parser/lib/index.js:11362:10)\n    at Parser.parse (/Users/mac/Documents/Projects/Laravel/Aura/node_modules/@babel/parser/lib/index.js:13045:10)\n    at parse (/Users/mac/Documents/Projects/Laravel/Aura/node_modules/@babel/parser/lib/index.js:13098:38)\n    at parser (/Users/mac/Documents/Projects/Laravel/Aura/node_modules/@babel/core/lib/parser/index.js:54:34)\n    at parser.next (<anonymous>)\n    at normalizeFile (/Users/mac/Documents/Projects/Laravel/Aura/node_modules/@babel/core/lib/transformation/normalize-file.js:99:38)\n    at normalizeFile.next (<anonymous>)\n    at run (/Users/mac/Documents/Projects/Laravel/Aura/node_modules/@babel/core/lib/transformation/index.js:31:50)\n    at run.next (<anonymous>)\n    at Function.transform (/Users/mac/Documents/Projects/Laravel/Aura/node_modules/@babel/core/lib/transform.js:27:41)\n    at transform.next (<anonymous>)\n    at step (/Users/mac/Documents/Projects/Laravel/Aura/node_modules/gensync/index.js:254:32)\n    at /Users/mac/Documents/Projects/Laravel/Aura/node_modules/gensync/index.js:266:13\n    at async.call.result.err.err (/Users/mac/Documents/Projects/Laravel/Aura/node_modules/gensync/index.js:216:11)");
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.common.js");
+/* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(vue__WEBPACK_IMPORTED_MODULE_0__);
+
+/* -------------------------------------------------------------------------- */
+
+/*                     Filters file  **use Vue.filter()                       */
+
+/* -------------------------------------------------------------------------- */
+
+/**
+ * Format date
+ * @para - String date
+ * @return -format Sat, 7 Nov 2020
+ */
+
+vue__WEBPACK_IMPORTED_MODULE_0___default.a.filter('formatDate', function (date) {
+  var months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+  var days = ['Sun', 'Mon', 'Tue', 'Wed', 'Thur', 'Fri', 'Sat'];
+  var posted_on = new Date(date);
+  var formatted_date = days[posted_on.getDay()] + ', ' + posted_on.getDate() + ' ' + months[posted_on.getMonth()] + ' ' + posted_on.getFullYear();
+  return formatted_date;
+});
+/**
+ * Split name by space " "
+ * @param - name
+ * @return -splited name[0]
+ */
+
+vue__WEBPACK_IMPORTED_MODULE_0___default.a.filter('splitName', function (name) {
+  return name.replace(/ .*/, '');
+});
+/**
+ *  Truncates long strings if the strlen is greater than limit passed
+ * @param value - string to be truncated
+ * @param limit - preffered string lenght
+ * @return value
+ */
+
+vue__WEBPACK_IMPORTED_MODULE_0___default.a.filter('truncate', function (value, limit) {
+  if (value.length > limit) {
+    value = value.substring(0, limit - 3) + '...';
+  }
+
+  return value;
+});
 
 /***/ }),
 
