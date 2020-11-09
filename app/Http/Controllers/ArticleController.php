@@ -40,7 +40,7 @@ class ArticleController extends Controller
             $articles = auth()->user()->articles()->withTrashed()->latest()->paginate(8);
         }
 
-        return response()->json($articles);
+        return response()->json($articles, 200);
     }
     /**
      * Store a newly created resource in storage.

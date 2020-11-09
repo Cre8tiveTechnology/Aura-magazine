@@ -43,3 +43,9 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 Route::post('/register', 'RegisterController@register');
 Route::post('/login', 'LoginController@login');
 Route::post('/logout', 'LoginController@logout')->name('logout');
+
+
+/* -------------------------------------------------------------------------- */
+/*                               NonAuth-User Routes                              */
+/* -------------------------------------------------------------------------- */
+Route::get('/articles/{category}/fetch', 'ArticleController@index')->name('fetch_articles');

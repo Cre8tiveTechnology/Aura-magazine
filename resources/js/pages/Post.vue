@@ -4,6 +4,7 @@
     <navbar />
     <!-- Navbar -->
     <!-- Top -->
+    {{ article }}
     <!-- Portrait -->
     <div class="container rounded-0" v-if="post.isProtrait">
       <div
@@ -135,6 +136,9 @@
 <script>
 export default {
   name: "Post",
+  props: {
+    article: String,
+  },
   computed: {
     imagesLenght() {
       return this.post.images.length;

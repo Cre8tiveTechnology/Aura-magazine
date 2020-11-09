@@ -3861,6 +3861,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _apis_client_Article__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../apis/client/Article */ "./resources/js/apis/client/Article.js");
 //
 //
 //
@@ -4007,262 +4008,41 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
+
 /* harmony default export */ __webpack_exports__["default"] = ({
-  name: "Fashion"
+  name: "Fashion",
+  data: function data() {
+    return {
+      articles: {},
+      category: "Fashion"
+    };
+  },
+  mounted: function mounted() {
+    this.getArticles();
+  },
+  methods: {
+    /* -------------------------------------------------------------------------- */
+
+    /*                               Get Articles                                */
+
+    /* -------------------------------------------------------------------------- */
+    getArticles: function getArticles(page, category) {
+      var _this = this;
+
+      category = this.category;
+
+      if (typeof page === "undefined") {
+        page = 1;
+      }
+
+      _apis_client_Article__WEBPACK_IMPORTED_MODULE_0__["default"].fetchArticles(page, category).then(function (response) {
+        _this.articles = response.data;
+      })["catch"](function (err) {
+        var message = err.response.data.message;
+        console.log(message);
+      });
+    }
+  }
 });
 
 /***/ }),
@@ -6075,6 +5855,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _apis_client_Article__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../apis/client/Article */ "./resources/js/apis/client/Article.js");
 //
 //
 //
@@ -6222,261 +6003,41 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
+
 /* harmony default export */ __webpack_exports__["default"] = ({
-  name: "News"
+  name: "News",
+  data: function data() {
+    return {
+      articles: {},
+      category: "News"
+    };
+  },
+  mounted: function mounted() {
+    this.getArticles();
+  },
+  methods: {
+    /* -------------------------------------------------------------------------- */
+
+    /*                               Get Articles                                */
+
+    /* -------------------------------------------------------------------------- */
+    getArticles: function getArticles(page, category) {
+      var _this = this;
+
+      category = this.category;
+
+      if (typeof page === "undefined") {
+        page = 1;
+      }
+
+      _apis_client_Article__WEBPACK_IMPORTED_MODULE_0__["default"].fetchArticles(page, category).then(function (response) {
+        _this.articles = response.data;
+      })["catch"](function (err) {
+        var message = err.response.data.message;
+        console.log(message);
+      });
+    }
+  }
 });
 
 /***/ }),
@@ -6624,8 +6185,12 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: "Post",
+  props: {
+    article: String
+  },
   computed: {
     imagesLenght: function imagesLenght() {
       return this.post.images.length;
@@ -8603,6 +8168,73 @@ __webpack_require__.r(__webpack_exports__);
 //
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: "emptyresource"
+});
+
+/***/ }),
+
+/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/utils/Loader.vue?vue&type=script&lang=js&":
+/*!************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/utils/Loader.vue?vue&type=script&lang=js& ***!
+  \************************************************************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+/* harmony default export */ __webpack_exports__["default"] = ({
+  name: "Loader"
 });
 
 /***/ }),
@@ -13266,6 +12898,25 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 // module
 exports.push([module.i, "\n.body {\n    height: 80vh;\n    font-family: \"Nunito\", \"sans-serif\";\n    font-size: 5vw;\n}\n.bottom-container,\n.top-container {\n    width: 40vw;\n    height: 35vh;\n    display: flex;\n    justify-content: center;\n    align-items: center;\n    position: fixed;\n    top: 35vh;\n    left: 30vw;\n    padding: 1vw;\n}\n.bottom-container {\n    color: #232323;\n}\n.top-container {\n    background-color: #ff63b6;\n    color: white;\n    -webkit-clip-path: circle(13% at 85% 50%);\n            clip-path: circle(13% at 85% 50%);\n    -webkit-animation: circleMove 30s ease-in-out infinite;\n            animation: circleMove 30s ease-in-out infinite;\n}\n.txt {\n    font-family: cursive;\n    font-size: 2em;\n    font-weight: bold;\n    letter-spacing: 15px;\n}\n@-webkit-keyframes circleMove {\n0%,\n    100% {\n        -webkit-clip-path: circle(13% at 85% 50%);\n                clip-path: circle(13% at 85% 50%);\n}\n50% {\n        -webkit-clip-path: circle(13% at 15% 50%);\n                clip-path: circle(13% at 15% 50%);\n}\n}\n@keyframes circleMove {\n0%,\n    100% {\n        -webkit-clip-path: circle(13% at 85% 50%);\n                clip-path: circle(13% at 85% 50%);\n}\n50% {\n        -webkit-clip-path: circle(13% at 15% 50%);\n                clip-path: circle(13% at 15% 50%);\n}\n}\n", ""]);
+
+// exports
+
+
+/***/ }),
+
+/***/ "./node_modules/css-loader/index.js?!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/utils/Loader.vue?vue&type=style&index=0&id=0adf3a4f&scoped=true&lang=css&":
+/*!*******************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/css-loader??ref--6-1!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src??ref--6-2!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/utils/Loader.vue?vue&type=style&index=0&id=0adf3a4f&scoped=true&lang=css& ***!
+  \*******************************************************************************************************************************************************************************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loader/lib/css-base.js */ "./node_modules/css-loader/lib/css-base.js")(false);
+// imports
+
+
+// module
+exports.push([module.i, "\n#background[data-v-0adf3a4f] {\n  display: block;\n  position: fixed;\n  width: 100%;\n  height: 100%;\n  background-color: #ff63b6;\n  background: -ie-radial-gradient(\n    center,\n    ellipse cover,\n    #3c005b 1%,\n    #ff63b6 100%\n  );\n}\n#logocontainer[data-v-0adf3a4f] {\n  display: block;\n  position: fixed;\n  top: 50%;\n  left: 50%;\n  width: 64vh;\n  height: 34vh;\n  margin-left: -17vh;\n  margin-top: -17vh;\n  overflow: hidden;\n  transition: background-color 500ms;\n  cursor: pointer;\n}\n#pelogo[data-v-0adf3a4f] {\n  display: block;\n  position: absolute;\n  left: 2vh;\n  top: 2vh;\n  width: 30vh;\n  height: 30vh;\n  background: #34324b;\n  background: linear-gradient(135deg, #34324b 0%, #161222 100%);\n  background-size: contain;\n  font-family: Trebuchet MS, sans-serif;\n  font-size: 20vh;\n  font-weight: bold;\n  color: #3ebffa;\n  text-align: center;\n  line-height: 30vh;\n}\n.loader[data-v-0adf3a4f] {\n  display: block;\n  position: absolute;\n  background-color: #3ebffa;\n}\n\n/*Pretty complex animation, so each side needs its own @keyframes.*/\n@-webkit-keyframes slide1-data-v-0adf3a4f {\n50% {\n    width: 32vh;\n    margin-left: 0;\n}\n100% {\n    margin-left: 32vh;\n}\n}\n@keyframes slide1-data-v-0adf3a4f {\n50% {\n    width: 32vh;\n    margin-left: 0;\n}\n100% {\n    margin-left: 32vh;\n}\n}\n@-webkit-keyframes slide2-data-v-0adf3a4f {\n50% {\n    height: 32vh;\n    margin-top: 0;\n}\n100% {\n    margin-top: 32vh;\n}\n}\n@keyframes slide2-data-v-0adf3a4f {\n50% {\n    height: 32vh;\n    margin-top: 0;\n}\n100% {\n    margin-top: 32vh;\n}\n}\n@-webkit-keyframes slide3-data-v-0adf3a4f {\n50% {\n    width: 32vh;\n    margin-right: 0;\n}\n100% {\n    margin-right: 32vh;\n}\n}\n@keyframes slide3-data-v-0adf3a4f {\n50% {\n    width: 32vh;\n    margin-right: 0;\n}\n100% {\n    margin-right: 32vh;\n}\n}\n@-webkit-keyframes slide4-data-v-0adf3a4f {\n50% {\n    height: 32vh;\n    margin-bottom: 0;\n}\n100% {\n    margin-bottom: 32vh;\n}\n}\n@keyframes slide4-data-v-0adf3a4f {\n50% {\n    height: 32vh;\n    margin-bottom: 0;\n}\n100% {\n    margin-bottom: 32vh;\n}\n}\n", ""]);
 
 // exports
 
@@ -46647,6 +46298,36 @@ if(false) {}
 
 /***/ }),
 
+/***/ "./node_modules/style-loader/index.js!./node_modules/css-loader/index.js?!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/utils/Loader.vue?vue&type=style&index=0&id=0adf3a4f&scoped=true&lang=css&":
+/*!***********************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/style-loader!./node_modules/css-loader??ref--6-1!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src??ref--6-2!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/utils/Loader.vue?vue&type=style&index=0&id=0adf3a4f&scoped=true&lang=css& ***!
+  \***********************************************************************************************************************************************************************************************************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+
+var content = __webpack_require__(/*! !../../../node_modules/css-loader??ref--6-1!../../../node_modules/vue-loader/lib/loaders/stylePostLoader.js!../../../node_modules/postcss-loader/src??ref--6-2!../../../node_modules/vue-loader/lib??vue-loader-options!./Loader.vue?vue&type=style&index=0&id=0adf3a4f&scoped=true&lang=css& */ "./node_modules/css-loader/index.js?!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/utils/Loader.vue?vue&type=style&index=0&id=0adf3a4f&scoped=true&lang=css&");
+
+if(typeof content === 'string') content = [[module.i, content, '']];
+
+var transform;
+var insertInto;
+
+
+
+var options = {"hmr":true}
+
+options.transform = transform
+options.insertInto = undefined;
+
+var update = __webpack_require__(/*! ../../../node_modules/style-loader/lib/addStyles.js */ "./node_modules/style-loader/lib/addStyles.js")(content, options);
+
+if(content.locals) module.exports = content.locals;
+
+if(false) {}
+
+/***/ }),
+
 /***/ "./node_modules/style-loader/index.js!./node_modules/css-loader/index.js?!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/utils/Unauthorized.vue?vue&type=style&index=0&id=dd36c0a0&lang=css&scoped=true&":
 /*!*****************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
   !*** ./node_modules/style-loader!./node_modules/css-loader??ref--6-1!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src??ref--6-2!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/utils/Unauthorized.vue?vue&type=style&index=0&id=dd36c0a0&lang=css&scoped=true& ***!
@@ -49975,31 +49656,286 @@ var render = function() {
       _vm._v(" "),
       _vm._m(0),
       _vm._v(" "),
-      _vm._m(1),
-      _vm._v(" "),
-      _vm._m(2),
-      _vm._v(" "),
-      _vm._m(3),
-      _vm._v(" "),
-      _vm._m(4),
-      _vm._v(" "),
-      _vm._m(5),
-      _vm._v(" "),
-      _vm._m(6),
-      _vm._v(" "),
-      _vm._m(7),
-      _vm._v(" "),
-      _vm._m(8),
-      _vm._v(" "),
-      _vm._m(9),
-      _vm._v(" "),
-      _vm._m(10),
-      _vm._v(" "),
-      _vm._m(11),
-      _vm._v(" "),
-      _vm._m(12),
-      _vm._v(" "),
-      _vm._m(13)
+      _vm.articles.data.length === 0
+        ? _c("empty-resource")
+        : _c(
+            "div",
+            [
+              _c("div", { staticClass: "mt-1" }, [
+                _c("div", { staticClass: "container mt-5" }, [
+                  _c("div", { staticClass: "row" }, [
+                    _c(
+                      "div",
+                      {
+                        staticClass:
+                          "col-12 col-lg-8 col-md-8 col-sm-12 order-sm-last order-md-first"
+                      },
+                      [
+                        _c(
+                          "a",
+                          {
+                            attrs: {
+                              "data-fancybox": "gallery",
+                              href: _vm.articles.data[0].image
+                            }
+                          },
+                          [
+                            _c("img", {
+                              staticClass: "w-100 img-fluid",
+                              attrs: {
+                                src: _vm.articles.data[0].image,
+                                alt: _vm.articles.data[0].title
+                              }
+                            })
+                          ]
+                        )
+                      ]
+                    ),
+                    _vm._v(" "),
+                    _c(
+                      "div",
+                      {
+                        staticClass:
+                          "p-4 col-12 col-lg-4 col-md-4 col-sm-12 order-sm-first order-md-last"
+                      },
+                      [
+                        _c("div", { staticClass: "home-ads-container h-100" }, [
+                          _c("div", { staticClass: "text-center" }, [
+                            _c("p", [_vm._v("ADS BANNER")])
+                          ])
+                        ])
+                      ]
+                    )
+                  ])
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "container mt-3" }, [
+                  _c("span", { staticClass: "news-date font-weight-bold" }, [
+                    _vm._v(
+                      _vm._s(
+                        _vm._f("formatDate")(_vm.articles.data[0].created_at)
+                      )
+                    )
+                  ]),
+                  _vm._v(" "),
+                  _c(
+                    "h3",
+                    { staticClass: "mt-2" },
+                    [
+                      _c(
+                        "router-link",
+                        {
+                          staticClass: "aura-post-title",
+                          attrs: {
+                            to: {
+                              name: "post",
+                              params: {
+                                id: _vm.articles.data[0].id,
+                                title: _vm.articles.data[0].title
+                              }
+                            }
+                          }
+                        },
+                        [
+                          _vm._v(
+                            "\n            " +
+                              _vm._s(_vm.articles.data[0].title) +
+                              "\n          "
+                          )
+                        ]
+                      )
+                    ],
+                    1
+                  ),
+                  _vm._v(" "),
+                  _c("p", { staticClass: "mt-3" }, [
+                    _vm._v(
+                      "\n          " +
+                        _vm._s(
+                          _vm._f("truncate")(
+                            _vm.articles.data[0].description,
+                            100
+                          )
+                        ) +
+                        "\n        "
+                    )
+                  ]),
+                  _vm._v(" "),
+                  _c("span", [
+                    _c("i", { staticClass: "fa fa-user" }),
+                    _vm._v(
+                      " " +
+                        _vm._s(_vm.articles.data[0].user.name) +
+                        "\n        "
+                    )
+                  ])
+                ])
+              ]),
+              _vm._v(" "),
+              _c(
+                "div",
+                {
+                  staticClass: "home-ads-container mt-5 mb-5 w-50 mx-auto h-100"
+                },
+                [
+                  _c("div", { staticClass: "container text-center" }, [
+                    _c("p", [_vm._v("ADS BANNER")])
+                  ])
+                ]
+              ),
+              _vm._v(" "),
+              _vm._l(_vm.articles.data, function(article, index) {
+                return _c(
+                  "div",
+                  { key: article.id, staticClass: "container mt-5" },
+                  [
+                    index > 0
+                      ? _c("div", { staticClass: "row" }, [
+                          _c(
+                            "div",
+                            {
+                              staticClass:
+                                "col-lg-6 col-md-6 col-sm-12 col-12 order-first order-lg-last"
+                            },
+                            [
+                              _c(
+                                "a",
+                                {
+                                  attrs: {
+                                    "data-fancybox": "gallery",
+                                    href: article.image
+                                  }
+                                },
+                                [
+                                  _c("img", {
+                                    staticClass: "w-100 img-fluid",
+                                    attrs: {
+                                      src: article.image,
+                                      alt: article.title
+                                    }
+                                  })
+                                ]
+                              )
+                            ]
+                          ),
+                          _vm._v(" "),
+                          _c(
+                            "div",
+                            {
+                              staticClass:
+                                "mt-0 col-lg-6 col-md-6 col-sm-12 col-12 order-last order-lg-first"
+                            },
+                            [
+                              _c(
+                                "div",
+                                { staticClass: "border-top border-dark pt-2" },
+                                [
+                                  _c(
+                                    "span",
+                                    {
+                                      staticClass: "news-date font-weight-bold"
+                                    },
+                                    [
+                                      _vm._v(
+                                        _vm._s(
+                                          _vm._f("formatDate")(
+                                            article.created_at
+                                          )
+                                        )
+                                      )
+                                    ]
+                                  ),
+                                  _vm._v(" "),
+                                  _c(
+                                    "h4",
+                                    { staticClass: "mt-4" },
+                                    [
+                                      _c(
+                                        "router-link",
+                                        {
+                                          staticClass: "aura-post-title",
+                                          attrs: {
+                                            to: {
+                                              name: "post",
+                                              params: {
+                                                id: article.id,
+                                                title: article.title
+                                              }
+                                            }
+                                          }
+                                        },
+                                        [
+                                          _vm._v(
+                                            "\n                " +
+                                              _vm._s(article.title) +
+                                              "\n              "
+                                          )
+                                        ]
+                                      )
+                                    ],
+                                    1
+                                  ),
+                                  _vm._v(" "),
+                                  _c("p", { staticClass: "mt-3" }, [
+                                    _vm._v(
+                                      "\n              " +
+                                        _vm._s(
+                                          _vm._f("truncate")(
+                                            article.description,
+                                            100
+                                          )
+                                        ) +
+                                        "\n            "
+                                    )
+                                  ]),
+                                  _vm._v(" "),
+                                  _c("span", [
+                                    _c("i", { staticClass: "fa fa-user" }),
+                                    _vm._v(
+                                      " " + _vm._s(article.user.name) + " "
+                                    )
+                                  ])
+                                ]
+                              )
+                            ]
+                          )
+                        ])
+                      : _vm._e()
+                  ]
+                )
+              }),
+              _vm._v(" "),
+              _c(
+                "div",
+                { staticClass: "container d-flex mt-5" },
+                [
+                  _c(
+                    "pagination",
+                    {
+                      staticClass: "btn-aura",
+                      attrs: { data: _vm.articles },
+                      on: { "pagination-change-page": _vm.getArticles }
+                    },
+                    [
+                      _c(
+                        "span",
+                        { attrs: { slot: "prev-nav" }, slot: "prev-nav" },
+                        [_vm._v("Previous ")]
+                      ),
+                      _vm._v(" "),
+                      _c(
+                        "span",
+                        { attrs: { slot: "next-nav" }, slot: "next-nav" },
+                        [_vm._v("Next")]
+                      )
+                    ]
+                  )
+                ],
+                1
+              )
+            ],
+            2
+          )
     ],
     1
   )
@@ -50011,690 +49947,13 @@ var staticRenderFns = [
     var _c = _vm._self._c || _h
     return _c("div", { staticClass: "container-fluid p-0" }, [
       _c("img", {
-        staticClass: "col-12 p-0 img-fluid",
-        attrs: { src: "/image/cover/news.png", alt: "News Cover" }
+        staticClass: "col-12 p-0 img-fluid rounded-0",
+        attrs: {
+          src:
+            "https://res.cloudinary.com/cre8tive-technologies/image/upload/v1604915941/aura/Fashion_sge02y.jpg",
+          alt: "Fashion Cover"
+        }
       })
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "container mt-5" }, [
-      _c("div", { staticClass: "row" }, [
-        _c(
-          "div",
-          {
-            staticClass:
-              "col-12 col-lg-8 col-md-8 col-sm-12 order-sm-last order-md-first"
-          },
-          [
-            _c("img", {
-              staticClass: "w-100 img-fluid",
-              attrs: {
-                src:
-                  "https://images.unsplash.com/photo-1483985988355-763728e1935b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80",
-                alt: "Image"
-              }
-            })
-          ]
-        ),
-        _vm._v(" "),
-        _c(
-          "div",
-          {
-            staticClass:
-              "p-4 col-12 col-lg-4 col-md-4 col-sm-12 order-sm-first order-md-last"
-          },
-          [
-            _c("div", { staticClass: "home-ads-container h-100" }, [
-              _c("div", { staticClass: "text-center" }, [
-                _c("p", [_vm._v("ADS BANNER")])
-              ])
-            ])
-          ]
-        )
-      ])
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "container mt-3" }, [
-      _c("span", { staticClass: "news-date font-weight-bold" }, [
-        _vm._v("AUG 6, 2020")
-      ]),
-      _vm._v(" "),
-      _c("h3", { staticClass: "mt-2" }, [
-        _c("a", { staticClass: "aura-post-title", attrs: { href: "/post" } }, [
-          _vm._v(
-            "\n        Alicia Keys and Her Perfect Skin are Launching a Beauty Collab with\n        E.L.F\n      "
-          )
-        ])
-      ]),
-      _vm._v(" "),
-      _c("p", { staticClass: "mt-3" }, [
-        _vm._v(
-          "\n      Lorem ipsum dolor sit, amet consectetur adipisicing elit. In, recusandae\n      hic voluptatum quia ut nostrum ex quasi. Tempora voluptatum sapiente\n      fugiat at ullam ipsam ut nihil aperiam eaque. Eos, distinctio?\n    "
-        )
-      ]),
-      _vm._v(" "),
-      _c("span", [
-        _c("i", { staticClass: "fa fa-user" }),
-        _vm._v(" ARIANA YAPTANGCO ")
-      ])
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c(
-      "div",
-      { staticClass: "home-ads-container mt-5 mb-5 w-50 mx-auto h-100" },
-      [
-        _c("div", { staticClass: "container text-center" }, [
-          _c("p", [_vm._v("ADS BANNER")])
-        ])
-      ]
-    )
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "container mt-5" }, [
-      _c("div", { staticClass: "row" }, [
-        _c(
-          "div",
-          {
-            staticClass:
-              "col-lg-6 col-md-6 col-sm-12 col-12 order-first order-lg-last"
-          },
-          [
-            _c("img", {
-              staticClass: "w-100 img-fluid",
-              attrs: {
-                src:
-                  "https://images.unsplash.com/photo-1483985988355-763728e1935b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80",
-                alt: "Image"
-              }
-            })
-          ]
-        ),
-        _vm._v(" "),
-        _c(
-          "div",
-          {
-            staticClass:
-              "mt-0 col-lg-6 col-md-6 col-sm-12 col-12 order-last order-lg-first"
-          },
-          [
-            _c("div", { staticClass: "border-top border-dark pt-2" }, [
-              _c("span", { staticClass: "news-date font-weight-bold" }, [
-                _vm._v("AUG 6, 2020")
-              ]),
-              _vm._v(" "),
-              _c("h4", { staticClass: "mt-4" }, [
-                _c(
-                  "a",
-                  { staticClass: "aura-post-title", attrs: { href: "/post" } },
-                  [
-                    _vm._v(
-                      "\n              Alicia Keys and Her Perfect Skin are Launching a Beauty Collab\n              with E.L.F\n            "
-                    )
-                  ]
-                )
-              ]),
-              _vm._v(" "),
-              _c("p", { staticClass: "mt-3" }, [
-                _vm._v(
-                  "\n            Lorem ipsum dolor sit, amet consectetur adipisicing elit. In,\n            recusandae hic voluptatum quia ut nostrum ex quasi. Tempora\n            voluptatum sapiente fugiat at ullam ipsam ut nihil aperiam eaque.\n            Eos, distinctio?\n          "
-                )
-              ]),
-              _vm._v(" "),
-              _c("span", [
-                _c("i", { staticClass: "fa fa-user" }),
-                _vm._v(" ARIANA YAPTANGCO ")
-              ])
-            ])
-          ]
-        )
-      ])
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "container mt-5" }, [
-      _c("div", { staticClass: "row" }, [
-        _c(
-          "div",
-          {
-            staticClass:
-              "col-lg-6 col-md-6 col-sm-12 col-12 order-first order-lg-last"
-          },
-          [
-            _c("img", {
-              staticClass: "w-100 img-fluid",
-              attrs: {
-                src:
-                  "https://images.unsplash.com/photo-1483985988355-763728e1935b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80",
-                alt: "Image"
-              }
-            })
-          ]
-        ),
-        _vm._v(" "),
-        _c(
-          "div",
-          {
-            staticClass:
-              "mt-0 col-lg-6 col-md-6 col-sm-12 col-12 order-last order-lg-first"
-          },
-          [
-            _c("div", { staticClass: "border-top border-dark pt-2" }, [
-              _c("span", { staticClass: "news-date font-weight-bold" }, [
-                _vm._v("AUG 6, 2020")
-              ]),
-              _vm._v(" "),
-              _c("h4", { staticClass: "mt-4" }, [
-                _c(
-                  "a",
-                  { staticClass: "aura-post-title", attrs: { href: "/post" } },
-                  [
-                    _vm._v(
-                      "\n              Alicia Keys and Her Perfect Skin are Launching a Beauty Collab\n              with E.L.F\n            "
-                    )
-                  ]
-                )
-              ]),
-              _vm._v(" "),
-              _c("p", { staticClass: "mt-3" }, [
-                _vm._v(
-                  "\n            Lorem ipsum dolor sit, amet consectetur adipisicing elit. In,\n            recusandae hic voluptatum quia ut nostrum ex quasi. Tempora\n            voluptatum sapiente fugiat at ullam ipsam ut nihil aperiam eaque.\n            Eos, distinctio?\n          "
-                )
-              ]),
-              _vm._v(" "),
-              _c("span", [
-                _c("i", { staticClass: "fa fa-user" }),
-                _vm._v(" ARIANA YAPTANGCO ")
-              ])
-            ])
-          ]
-        )
-      ])
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "container mt-5" }, [
-      _c("div", { staticClass: "row" }, [
-        _c(
-          "div",
-          {
-            staticClass:
-              "col-lg-6 col-md-6 col-sm-12 col-12 order-first order-lg-last"
-          },
-          [
-            _c("img", {
-              staticClass: "w-100 img-fluid",
-              attrs: {
-                src:
-                  "https://images.unsplash.com/photo-1483985988355-763728e1935b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80",
-                alt: "Image"
-              }
-            })
-          ]
-        ),
-        _vm._v(" "),
-        _c(
-          "div",
-          {
-            staticClass:
-              "mt-0 col-lg-6 col-md-6 col-sm-12 col-12 order-last order-lg-first"
-          },
-          [
-            _c("div", { staticClass: "border-top border-dark pt-2" }, [
-              _c("span", { staticClass: "news-date font-weight-bold" }, [
-                _vm._v("AUG 6, 2020")
-              ]),
-              _vm._v(" "),
-              _c("h4", { staticClass: "mt-4" }, [
-                _c(
-                  "a",
-                  { staticClass: "aura-post-title", attrs: { href: "/post" } },
-                  [
-                    _vm._v(
-                      "\n              Alicia Keys and Her Perfect Skin are Launching a Beauty Collab\n              with E.L.F\n            "
-                    )
-                  ]
-                )
-              ]),
-              _vm._v(" "),
-              _c("p", { staticClass: "mt-3" }, [
-                _vm._v(
-                  "\n            Lorem ipsum dolor sit, amet consectetur adipisicing elit. In,\n            recusandae hic voluptatum quia ut nostrum ex quasi. Tempora\n            voluptatum sapiente fugiat at ullam ipsam ut nihil aperiam eaque.\n            Eos, distinctio?\n          "
-                )
-              ]),
-              _vm._v(" "),
-              _c("span", [
-                _c("i", { staticClass: "fa fa-user" }),
-                _vm._v(" ARIANA YAPTANGCO ")
-              ])
-            ])
-          ]
-        )
-      ])
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "container mt-5" }, [
-      _c("div", { staticClass: "row" }, [
-        _c(
-          "div",
-          {
-            staticClass:
-              "col-lg-6 col-md-6 col-sm-12 col-12 order-first order-lg-last"
-          },
-          [
-            _c("img", {
-              staticClass: "w-100 img-fluid",
-              attrs: {
-                src:
-                  "https://images.unsplash.com/photo-1483985988355-763728e1935b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80",
-                alt: "Image"
-              }
-            })
-          ]
-        ),
-        _vm._v(" "),
-        _c(
-          "div",
-          {
-            staticClass:
-              "mt-0 col-lg-6 col-md-6 col-sm-12 col-12 order-last order-lg-first"
-          },
-          [
-            _c("div", { staticClass: "border-top border-dark pt-2" }, [
-              _c("span", { staticClass: "news-date font-weight-bold" }, [
-                _vm._v("AUG 6, 2020")
-              ]),
-              _vm._v(" "),
-              _c("h4", { staticClass: "mt-4" }, [
-                _c(
-                  "a",
-                  { staticClass: "aura-post-title", attrs: { href: "/post" } },
-                  [
-                    _vm._v(
-                      "\n              Alicia Keys and Her Perfect Skin are Launching a Beauty Collab\n              with E.L.F\n            "
-                    )
-                  ]
-                )
-              ]),
-              _vm._v(" "),
-              _c("p", { staticClass: "mt-3" }, [
-                _vm._v(
-                  "\n            Lorem ipsum dolor sit, amet consectetur adipisicing elit. In,\n            recusandae hic voluptatum quia ut nostrum ex quasi. Tempora\n            voluptatum sapiente fugiat at ullam ipsam ut nihil aperiam eaque.\n            Eos, distinctio?\n          "
-                )
-              ]),
-              _vm._v(" "),
-              _c("span", [
-                _c("i", { staticClass: "fa fa-user" }),
-                _vm._v(" ARIANA YAPTANGCO ")
-              ])
-            ])
-          ]
-        )
-      ])
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "container mt-5" }, [
-      _c("div", { staticClass: "row" }, [
-        _c(
-          "div",
-          {
-            staticClass:
-              "col-lg-6 col-md-6 col-sm-12 col-12 order-first order-lg-last"
-          },
-          [
-            _c("img", {
-              staticClass: "w-100 img-fluid",
-              attrs: {
-                src:
-                  "https://images.unsplash.com/photo-1483985988355-763728e1935b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80",
-                alt: "Image"
-              }
-            })
-          ]
-        ),
-        _vm._v(" "),
-        _c(
-          "div",
-          {
-            staticClass:
-              "mt-0 col-lg-6 col-md-6 col-sm-12 col-12 order-last order-lg-first"
-          },
-          [
-            _c("div", { staticClass: "border-top border-dark pt-2" }, [
-              _c("span", { staticClass: "news-date font-weight-bold" }, [
-                _vm._v("AUG 6, 2020")
-              ]),
-              _vm._v(" "),
-              _c("h4", { staticClass: "mt-4" }, [
-                _c(
-                  "a",
-                  { staticClass: "aura-post-title", attrs: { href: "/post" } },
-                  [
-                    _vm._v(
-                      "\n              Alicia Keys and Her Perfect Skin are Launching a Beauty Collab\n              with E.L.F\n            "
-                    )
-                  ]
-                )
-              ]),
-              _vm._v(" "),
-              _c("p", { staticClass: "mt-3" }, [
-                _vm._v(
-                  "\n            Lorem ipsum dolor sit, amet consectetur adipisicing elit. In,\n            recusandae hic voluptatum quia ut nostrum ex quasi. Tempora\n            voluptatum sapiente fugiat at ullam ipsam ut nihil aperiam eaque.\n            Eos, distinctio?\n          "
-                )
-              ]),
-              _vm._v(" "),
-              _c("span", [
-                _c("i", { staticClass: "fa fa-user" }),
-                _vm._v(" ARIANA YAPTANGCO ")
-              ])
-            ])
-          ]
-        )
-      ])
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "container mt-5" }, [
-      _c("div", { staticClass: "row" }, [
-        _c(
-          "div",
-          {
-            staticClass:
-              "col-lg-6 col-md-6 col-sm-12 col-12 order-first order-lg-last"
-          },
-          [
-            _c("img", {
-              staticClass: "w-100 img-fluid",
-              attrs: {
-                src:
-                  "https://images.unsplash.com/photo-1483985988355-763728e1935b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80",
-                alt: "Image"
-              }
-            })
-          ]
-        ),
-        _vm._v(" "),
-        _c(
-          "div",
-          {
-            staticClass:
-              "mt-0 col-lg-6 col-md-6 col-sm-12 col-12 order-last order-lg-first"
-          },
-          [
-            _c("div", { staticClass: "border-top border-dark pt-2" }, [
-              _c("span", { staticClass: "news-date font-weight-bold" }, [
-                _vm._v("AUG 6, 2020")
-              ]),
-              _vm._v(" "),
-              _c("h4", { staticClass: "mt-4" }, [
-                _c(
-                  "a",
-                  { staticClass: "aura-post-title", attrs: { href: "/post" } },
-                  [
-                    _vm._v(
-                      "\n              Alicia Keys and Her Perfect Skin are Launching a Beauty Collab\n              with E.L.F\n            "
-                    )
-                  ]
-                )
-              ]),
-              _vm._v(" "),
-              _c("p", { staticClass: "mt-3" }, [
-                _vm._v(
-                  "\n            Lorem ipsum dolor sit, amet consectetur adipisicing elit. In,\n            recusandae hic voluptatum quia ut nostrum ex quasi. Tempora\n            voluptatum sapiente fugiat at ullam ipsam ut nihil aperiam eaque.\n            Eos, distinctio?\n          "
-                )
-              ]),
-              _vm._v(" "),
-              _c("span", [
-                _c("i", { staticClass: "fa fa-user" }),
-                _vm._v(" ARIANA YAPTANGCO ")
-              ])
-            ])
-          ]
-        )
-      ])
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "container mt-5" }, [
-      _c("div", { staticClass: "row" }, [
-        _c(
-          "div",
-          {
-            staticClass:
-              "col-lg-6 col-md-6 col-sm-12 col-12 order-first order-lg-last"
-          },
-          [
-            _c("img", {
-              staticClass: "w-100 img-fluid",
-              attrs: {
-                src:
-                  "https://images.unsplash.com/photo-1483985988355-763728e1935b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80",
-                alt: "Image"
-              }
-            })
-          ]
-        ),
-        _vm._v(" "),
-        _c(
-          "div",
-          {
-            staticClass:
-              "mt-0 col-lg-6 col-md-6 col-sm-12 col-12 order-last order-lg-first"
-          },
-          [
-            _c("div", { staticClass: "border-top border-dark pt-2" }, [
-              _c("span", { staticClass: "news-date font-weight-bold" }, [
-                _vm._v("AUG 6, 2020")
-              ]),
-              _vm._v(" "),
-              _c("h4", { staticClass: "mt-4" }, [
-                _c(
-                  "a",
-                  { staticClass: "aura-post-title", attrs: { href: "/post" } },
-                  [
-                    _vm._v(
-                      "\n              Alicia Keys and Her Perfect Skin are Launching a Beauty Collab\n              with E.L.F\n            "
-                    )
-                  ]
-                )
-              ]),
-              _vm._v(" "),
-              _c("p", { staticClass: "mt-3" }, [
-                _vm._v(
-                  "\n            Lorem ipsum dolor sit, amet consectetur adipisicing elit. In,\n            recusandae hic voluptatum quia ut nostrum ex quasi. Tempora\n            voluptatum sapiente fugiat at ullam ipsam ut nihil aperiam eaque.\n            Eos, distinctio?\n          "
-                )
-              ]),
-              _vm._v(" "),
-              _c("span", [
-                _c("i", { staticClass: "fa fa-user" }),
-                _vm._v(" ARIANA YAPTANGCO ")
-              ])
-            ])
-          ]
-        )
-      ])
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "container mt-5" }, [
-      _c("div", { staticClass: "row" }, [
-        _c(
-          "div",
-          {
-            staticClass:
-              "col-lg-6 col-md-6 col-sm-12 col-12 order-first order-lg-last"
-          },
-          [
-            _c("img", {
-              staticClass: "w-100 img-fluid",
-              attrs: {
-                src:
-                  "https://images.unsplash.com/photo-1483985988355-763728e1935b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80",
-                alt: "Image"
-              }
-            })
-          ]
-        ),
-        _vm._v(" "),
-        _c(
-          "div",
-          {
-            staticClass:
-              "mt-0 col-lg-6 col-md-6 col-sm-12 col-12 order-last order-lg-first"
-          },
-          [
-            _c("div", { staticClass: "border-top border-dark pt-2" }, [
-              _c("span", { staticClass: "news-date font-weight-bold" }, [
-                _vm._v("AUG 6, 2020")
-              ]),
-              _vm._v(" "),
-              _c("h4", { staticClass: "mt-4" }, [
-                _c(
-                  "a",
-                  { staticClass: "aura-post-title", attrs: { href: "/post" } },
-                  [
-                    _vm._v(
-                      "\n              Alicia Keys and Her Perfect Skin are Launching a Beauty Collab\n              with E.L.F\n            "
-                    )
-                  ]
-                )
-              ]),
-              _vm._v(" "),
-              _c("p", { staticClass: "mt-3" }, [
-                _vm._v(
-                  "\n            Lorem ipsum dolor sit, amet consectetur adipisicing elit. In,\n            recusandae hic voluptatum quia ut nostrum ex quasi. Tempora\n            voluptatum sapiente fugiat at ullam ipsam ut nihil aperiam eaque.\n            Eos, distinctio?\n          "
-                )
-              ]),
-              _vm._v(" "),
-              _c("span", [
-                _c("i", { staticClass: "fa fa-user" }),
-                _vm._v(" ARIANA YAPTANGCO ")
-              ])
-            ])
-          ]
-        )
-      ])
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "container mt-5" }, [
-      _c("div", { staticClass: "row" }, [
-        _c(
-          "div",
-          {
-            staticClass:
-              "col-lg-6 col-md-6 col-sm-12 col-12 order-first order-lg-last"
-          },
-          [
-            _c("img", {
-              staticClass: "w-100 img-fluid",
-              attrs: {
-                src:
-                  "https://images.unsplash.com/photo-1483985988355-763728e1935b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80",
-                alt: "Image"
-              }
-            })
-          ]
-        ),
-        _vm._v(" "),
-        _c(
-          "div",
-          {
-            staticClass:
-              "mt-0 col-lg-6 col-md-6 col-sm-12 col-12 order-last order-lg-first"
-          },
-          [
-            _c("div", { staticClass: "border-top border-dark pt-2" }, [
-              _c("span", { staticClass: "news-date font-weight-bold" }, [
-                _vm._v("AUG 6, 2020")
-              ]),
-              _vm._v(" "),
-              _c("h4", { staticClass: "mt-4" }, [
-                _c(
-                  "a",
-                  { staticClass: "aura-post-title", attrs: { href: "/post" } },
-                  [
-                    _vm._v(
-                      "\n              Alicia Keys and Her Perfect Skin are Launching a Beauty Collab\n              with E.L.F\n            "
-                    )
-                  ]
-                )
-              ]),
-              _vm._v(" "),
-              _c("p", { staticClass: "mt-3" }, [
-                _vm._v(
-                  "\n            Lorem ipsum dolor sit, amet consectetur adipisicing elit. In,\n            recusandae hic voluptatum quia ut nostrum ex quasi. Tempora\n            voluptatum sapiente fugiat at ullam ipsam ut nihil aperiam eaque.\n            Eos, distinctio?\n          "
-                )
-              ]),
-              _vm._v(" "),
-              _c("span", [
-                _c("i", { staticClass: "fa fa-user" }),
-                _vm._v(" ARIANA YAPTANGCO ")
-              ])
-            ])
-          ]
-        )
-      ])
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "container mt-5 mb-5 text-center" }, [
-      _c("a", { staticClass: "see-more", attrs: { href: "#" } }, [
-        _c(
-          "div",
-          {
-            staticClass:
-              "col-12 row justify-content-center align-items-baseline"
-          },
-          [
-            _c("h5", { staticClass: "mr-2" }, [_vm._v("SEE MORE")]),
-            _vm._v(" "),
-            _c("i", { staticClass: "see-more-icon fa fa-chevron-circle-right" })
-          ]
-        )
-      ])
     ])
   }
 ]
@@ -53854,31 +53113,286 @@ var render = function() {
       _vm._v(" "),
       _vm._m(0),
       _vm._v(" "),
-      _vm._m(1),
-      _vm._v(" "),
-      _vm._m(2),
-      _vm._v(" "),
-      _vm._m(3),
-      _vm._v(" "),
-      _vm._m(4),
-      _vm._v(" "),
-      _vm._m(5),
-      _vm._v(" "),
-      _vm._m(6),
-      _vm._v(" "),
-      _vm._m(7),
-      _vm._v(" "),
-      _vm._m(8),
-      _vm._v(" "),
-      _vm._m(9),
-      _vm._v(" "),
-      _vm._m(10),
-      _vm._v(" "),
-      _vm._m(11),
-      _vm._v(" "),
-      _vm._m(12),
-      _vm._v(" "),
-      _vm._m(13)
+      _vm.articles.data.length === 0
+        ? _c("empty-resource")
+        : _c(
+            "div",
+            [
+              _c("div", { staticClass: "mt-1" }, [
+                _c("div", { staticClass: "container mt-5" }, [
+                  _c("div", { staticClass: "row" }, [
+                    _c(
+                      "div",
+                      {
+                        staticClass:
+                          "col-12 col-lg-8 col-md-8 col-sm-12 order-sm-last order-md-first"
+                      },
+                      [
+                        _c(
+                          "a",
+                          {
+                            attrs: {
+                              "data-fancybox": "gallery",
+                              href: _vm.articles.data[0].image
+                            }
+                          },
+                          [
+                            _c("img", {
+                              staticClass: "w-100 img-fluid",
+                              attrs: {
+                                src: _vm.articles.data[0].image,
+                                alt: _vm.articles.data[0].title
+                              }
+                            })
+                          ]
+                        )
+                      ]
+                    ),
+                    _vm._v(" "),
+                    _c(
+                      "div",
+                      {
+                        staticClass:
+                          "p-4 col-12 col-lg-4 col-md-4 col-sm-12 order-sm-first order-md-last"
+                      },
+                      [
+                        _c("div", { staticClass: "home-ads-container h-100" }, [
+                          _c("div", { staticClass: "text-center" }, [
+                            _c("p", [_vm._v("ADS BANNER")])
+                          ])
+                        ])
+                      ]
+                    )
+                  ])
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "container mt-3" }, [
+                  _c("span", { staticClass: "news-date font-weight-bold" }, [
+                    _vm._v(
+                      _vm._s(
+                        _vm._f("formatDate")(_vm.articles.data[0].created_at)
+                      )
+                    )
+                  ]),
+                  _vm._v(" "),
+                  _c(
+                    "h3",
+                    { staticClass: "mt-2" },
+                    [
+                      _c(
+                        "router-link",
+                        {
+                          staticClass: "aura-post-title",
+                          attrs: {
+                            to: {
+                              name: "post",
+                              params: {
+                                id: _vm.articles.data[0].id,
+                                title: _vm.articles.data[0].title
+                              }
+                            }
+                          }
+                        },
+                        [
+                          _vm._v(
+                            "\n            " +
+                              _vm._s(_vm.articles.data[0].title) +
+                              "\n          "
+                          )
+                        ]
+                      )
+                    ],
+                    1
+                  ),
+                  _vm._v(" "),
+                  _c("p", { staticClass: "mt-3" }, [
+                    _vm._v(
+                      "\n          " +
+                        _vm._s(
+                          _vm._f("truncate")(
+                            _vm.articles.data[0].description,
+                            100
+                          )
+                        ) +
+                        "\n        "
+                    )
+                  ]),
+                  _vm._v(" "),
+                  _c("span", [
+                    _c("i", { staticClass: "fa fa-user" }),
+                    _vm._v(
+                      " " +
+                        _vm._s(_vm.articles.data[0].user.name) +
+                        "\n        "
+                    )
+                  ])
+                ])
+              ]),
+              _vm._v(" "),
+              _c(
+                "div",
+                {
+                  staticClass: "home-ads-container mt-5 mb-5 w-50 mx-auto h-100"
+                },
+                [
+                  _c("div", { staticClass: "container text-center" }, [
+                    _c("p", [_vm._v("ADS BANNER")])
+                  ])
+                ]
+              ),
+              _vm._v(" "),
+              _vm._l(_vm.articles.data, function(article, index) {
+                return _c(
+                  "div",
+                  { key: article.id, staticClass: "container mt-5" },
+                  [
+                    index > 0
+                      ? _c("div", { staticClass: "row" }, [
+                          _c(
+                            "div",
+                            {
+                              staticClass:
+                                "col-lg-6 col-md-6 col-sm-12 col-12 order-first order-lg-last"
+                            },
+                            [
+                              _c(
+                                "a",
+                                {
+                                  attrs: {
+                                    "data-fancybox": "gallery",
+                                    href: article.image
+                                  }
+                                },
+                                [
+                                  _c("img", {
+                                    staticClass: "w-100 img-fluid",
+                                    attrs: {
+                                      src: article.image,
+                                      alt: article.title
+                                    }
+                                  })
+                                ]
+                              )
+                            ]
+                          ),
+                          _vm._v(" "),
+                          _c(
+                            "div",
+                            {
+                              staticClass:
+                                "mt-0 col-lg-6 col-md-6 col-sm-12 col-12 order-last order-lg-first"
+                            },
+                            [
+                              _c(
+                                "div",
+                                { staticClass: "border-top border-dark pt-2" },
+                                [
+                                  _c(
+                                    "span",
+                                    {
+                                      staticClass: "news-date font-weight-bold"
+                                    },
+                                    [
+                                      _vm._v(
+                                        _vm._s(
+                                          _vm._f("formatDate")(
+                                            article.created_at
+                                          )
+                                        )
+                                      )
+                                    ]
+                                  ),
+                                  _vm._v(" "),
+                                  _c(
+                                    "h4",
+                                    { staticClass: "mt-4" },
+                                    [
+                                      _c(
+                                        "router-link",
+                                        {
+                                          staticClass: "aura-post-title",
+                                          attrs: {
+                                            to: {
+                                              name: "post",
+                                              params: {
+                                                id: article.id,
+                                                title: article.title
+                                              }
+                                            }
+                                          }
+                                        },
+                                        [
+                                          _vm._v(
+                                            "\n                " +
+                                              _vm._s(article.title) +
+                                              "\n              "
+                                          )
+                                        ]
+                                      )
+                                    ],
+                                    1
+                                  ),
+                                  _vm._v(" "),
+                                  _c("p", { staticClass: "mt-3" }, [
+                                    _vm._v(
+                                      "\n              " +
+                                        _vm._s(
+                                          _vm._f("truncate")(
+                                            article.description,
+                                            100
+                                          )
+                                        ) +
+                                        "\n            "
+                                    )
+                                  ]),
+                                  _vm._v(" "),
+                                  _c("span", [
+                                    _c("i", { staticClass: "fa fa-user" }),
+                                    _vm._v(
+                                      " " + _vm._s(article.user.name) + " "
+                                    )
+                                  ])
+                                ]
+                              )
+                            ]
+                          )
+                        ])
+                      : _vm._e()
+                  ]
+                )
+              }),
+              _vm._v(" "),
+              _c(
+                "div",
+                { staticClass: "container d-flex mt-5" },
+                [
+                  _c(
+                    "pagination",
+                    {
+                      staticClass: "btn-aura",
+                      attrs: { data: _vm.articles },
+                      on: { "pagination-change-page": _vm.getArticles }
+                    },
+                    [
+                      _c(
+                        "span",
+                        { attrs: { slot: "prev-nav" }, slot: "prev-nav" },
+                        [_vm._v("Previous ")]
+                      ),
+                      _vm._v(" "),
+                      _c(
+                        "span",
+                        { attrs: { slot: "next-nav" }, slot: "next-nav" },
+                        [_vm._v("Next")]
+                      )
+                    ]
+                  )
+                ],
+                1
+              )
+            ],
+            2
+          )
     ],
     1
   )
@@ -53890,690 +53404,13 @@ var staticRenderFns = [
     var _c = _vm._self._c || _h
     return _c("div", { staticClass: "container-fluid p-0" }, [
       _c("img", {
-        staticClass: "col-12 p-0 img-fluid",
-        attrs: { src: "/image/cover/news.png", alt: "News Cover" }
+        staticClass: "col-12 p-0 img-fluid rounded-0",
+        attrs: {
+          src:
+            "https://res.cloudinary.com/cre8tive-technologies/image/upload/v1604915940/aura/News_jksr6x.jpg",
+          alt: "News Cover"
+        }
       })
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "container mt-5" }, [
-      _c("div", { staticClass: "row" }, [
-        _c(
-          "div",
-          {
-            staticClass:
-              "col-12 col-lg-8 col-md-8 col-sm-12 order-sm-last order-md-first"
-          },
-          [
-            _c("img", {
-              staticClass: "w-100 img-fluid",
-              attrs: {
-                src:
-                  "https://images.unsplash.com/photo-1483985988355-763728e1935b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80",
-                alt: "Image"
-              }
-            })
-          ]
-        ),
-        _vm._v(" "),
-        _c(
-          "div",
-          {
-            staticClass:
-              "p-4 col-12 col-lg-4 col-md-4 col-sm-12 order-sm-first order-md-last"
-          },
-          [
-            _c("div", { staticClass: "home-ads-container h-100" }, [
-              _c("div", { staticClass: "text-center" }, [
-                _c("p", [_vm._v("ADS BANNER")])
-              ])
-            ])
-          ]
-        )
-      ])
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "container mt-3" }, [
-      _c("span", { staticClass: "news-date font-weight-bold" }, [
-        _vm._v("AUG 6, 2020")
-      ]),
-      _vm._v(" "),
-      _c("h3", { staticClass: "mt-2" }, [
-        _c("a", { staticClass: "aura-post-title", attrs: { href: "/post" } }, [
-          _vm._v(
-            "\n        Alicia Keys and Her Perfect Skin are Launching a Beauty Collab with\n        E.L.F\n      "
-          )
-        ])
-      ]),
-      _vm._v(" "),
-      _c("p", { staticClass: "mt-3" }, [
-        _vm._v(
-          "\n      Lorem ipsum dolor sit, amet consectetur adipisicing elit. In, recusandae\n      hic voluptatum quia ut nostrum ex quasi. Tempora voluptatum sapiente\n      fugiat at ullam ipsam ut nihil aperiam eaque. Eos, distinctio?\n    "
-        )
-      ]),
-      _vm._v(" "),
-      _c("span", [
-        _c("i", { staticClass: "fa fa-user" }),
-        _vm._v(" ARIANA YAPTANGCO ")
-      ])
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c(
-      "div",
-      { staticClass: "home-ads-container mt-5 mb-5 w-50 mx-auto h-100" },
-      [
-        _c("div", { staticClass: "container text-center" }, [
-          _c("p", [_vm._v("ADS BANNER")])
-        ])
-      ]
-    )
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "container mt-5" }, [
-      _c("div", { staticClass: "row" }, [
-        _c(
-          "div",
-          {
-            staticClass:
-              "col-lg-6 col-md-6 col-sm-12 col-12 order-first order-lg-last"
-          },
-          [
-            _c("img", {
-              staticClass: "w-100 img-fluid",
-              attrs: {
-                src:
-                  "https://images.unsplash.com/photo-1483985988355-763728e1935b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80",
-                alt: "Image"
-              }
-            })
-          ]
-        ),
-        _vm._v(" "),
-        _c(
-          "div",
-          {
-            staticClass:
-              "mt-0 col-lg-6 col-md-6 col-sm-12 col-12 order-last order-lg-first"
-          },
-          [
-            _c("div", { staticClass: "border-top border-dark pt-2" }, [
-              _c("span", { staticClass: "news-date font-weight-bold" }, [
-                _vm._v("AUG 6, 2020")
-              ]),
-              _vm._v(" "),
-              _c("h4", { staticClass: "mt-4" }, [
-                _c(
-                  "a",
-                  { staticClass: "aura-post-title", attrs: { href: "/post" } },
-                  [
-                    _vm._v(
-                      "\n              Alicia Keys and Her Perfect Skin are Launching a Beauty Collab\n              with E.L.F\n            "
-                    )
-                  ]
-                )
-              ]),
-              _vm._v(" "),
-              _c("p", { staticClass: "mt-3" }, [
-                _vm._v(
-                  "\n            Lorem ipsum dolor sit, amet consectetur adipisicing elit. In,\n            recusandae hic voluptatum quia ut nostrum ex quasi. Tempora\n            voluptatum sapiente fugiat at ullam ipsam ut nihil aperiam eaque.\n            Eos, distinctio?\n          "
-                )
-              ]),
-              _vm._v(" "),
-              _c("span", [
-                _c("i", { staticClass: "fa fa-user" }),
-                _vm._v(" ARIANA YAPTANGCO ")
-              ])
-            ])
-          ]
-        )
-      ])
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "container mt-5" }, [
-      _c("div", { staticClass: "row" }, [
-        _c(
-          "div",
-          {
-            staticClass:
-              "col-lg-6 col-md-6 col-sm-12 col-12 order-first order-lg-last"
-          },
-          [
-            _c("img", {
-              staticClass: "w-100 img-fluid",
-              attrs: {
-                src:
-                  "https://images.unsplash.com/photo-1483985988355-763728e1935b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80",
-                alt: "Image"
-              }
-            })
-          ]
-        ),
-        _vm._v(" "),
-        _c(
-          "div",
-          {
-            staticClass:
-              "mt-0 col-lg-6 col-md-6 col-sm-12 col-12 order-last order-lg-first"
-          },
-          [
-            _c("div", { staticClass: "border-top border-dark pt-2" }, [
-              _c("span", { staticClass: "news-date font-weight-bold" }, [
-                _vm._v("AUG 6, 2020")
-              ]),
-              _vm._v(" "),
-              _c("h4", { staticClass: "mt-4" }, [
-                _c(
-                  "a",
-                  { staticClass: "aura-post-title", attrs: { href: "/post" } },
-                  [
-                    _vm._v(
-                      "\n              Alicia Keys and Her Perfect Skin are Launching a Beauty Collab\n              with E.L.F\n            "
-                    )
-                  ]
-                )
-              ]),
-              _vm._v(" "),
-              _c("p", { staticClass: "mt-3" }, [
-                _vm._v(
-                  "\n            Lorem ipsum dolor sit, amet consectetur adipisicing elit. In,\n            recusandae hic voluptatum quia ut nostrum ex quasi. Tempora\n            voluptatum sapiente fugiat at ullam ipsam ut nihil aperiam eaque.\n            Eos, distinctio?\n          "
-                )
-              ]),
-              _vm._v(" "),
-              _c("span", [
-                _c("i", { staticClass: "fa fa-user" }),
-                _vm._v(" ARIANA YAPTANGCO ")
-              ])
-            ])
-          ]
-        )
-      ])
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "container mt-5" }, [
-      _c("div", { staticClass: "row" }, [
-        _c(
-          "div",
-          {
-            staticClass:
-              "col-lg-6 col-md-6 col-sm-12 col-12 order-first order-lg-last"
-          },
-          [
-            _c("img", {
-              staticClass: "w-100 img-fluid",
-              attrs: {
-                src:
-                  "https://images.unsplash.com/photo-1483985988355-763728e1935b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80",
-                alt: "Image"
-              }
-            })
-          ]
-        ),
-        _vm._v(" "),
-        _c(
-          "div",
-          {
-            staticClass:
-              "mt-0 col-lg-6 col-md-6 col-sm-12 col-12 order-last order-lg-first"
-          },
-          [
-            _c("div", { staticClass: "border-top border-dark pt-2" }, [
-              _c("span", { staticClass: "news-date font-weight-bold" }, [
-                _vm._v("AUG 6, 2020")
-              ]),
-              _vm._v(" "),
-              _c("h4", { staticClass: "mt-4" }, [
-                _c(
-                  "a",
-                  { staticClass: "aura-post-title", attrs: { href: "/post" } },
-                  [
-                    _vm._v(
-                      "\n              Alicia Keys and Her Perfect Skin are Launching a Beauty Collab\n              with E.L.F\n            "
-                    )
-                  ]
-                )
-              ]),
-              _vm._v(" "),
-              _c("p", { staticClass: "mt-3" }, [
-                _vm._v(
-                  "\n            Lorem ipsum dolor sit, amet consectetur adipisicing elit. In,\n            recusandae hic voluptatum quia ut nostrum ex quasi. Tempora\n            voluptatum sapiente fugiat at ullam ipsam ut nihil aperiam eaque.\n            Eos, distinctio?\n          "
-                )
-              ]),
-              _vm._v(" "),
-              _c("span", [
-                _c("i", { staticClass: "fa fa-user" }),
-                _vm._v(" ARIANA YAPTANGCO ")
-              ])
-            ])
-          ]
-        )
-      ])
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "container mt-5" }, [
-      _c("div", { staticClass: "row" }, [
-        _c(
-          "div",
-          {
-            staticClass:
-              "col-lg-6 col-md-6 col-sm-12 col-12 order-first order-lg-last"
-          },
-          [
-            _c("img", {
-              staticClass: "w-100 img-fluid",
-              attrs: {
-                src:
-                  "https://images.unsplash.com/photo-1483985988355-763728e1935b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80",
-                alt: "Image"
-              }
-            })
-          ]
-        ),
-        _vm._v(" "),
-        _c(
-          "div",
-          {
-            staticClass:
-              "mt-0 col-lg-6 col-md-6 col-sm-12 col-12 order-last order-lg-first"
-          },
-          [
-            _c("div", { staticClass: "border-top border-dark pt-2" }, [
-              _c("span", { staticClass: "news-date font-weight-bold" }, [
-                _vm._v("AUG 6, 2020")
-              ]),
-              _vm._v(" "),
-              _c("h4", { staticClass: "mt-4" }, [
-                _c(
-                  "a",
-                  { staticClass: "aura-post-title", attrs: { href: "/post" } },
-                  [
-                    _vm._v(
-                      "\n              Alicia Keys and Her Perfect Skin are Launching a Beauty Collab\n              with E.L.F\n            "
-                    )
-                  ]
-                )
-              ]),
-              _vm._v(" "),
-              _c("p", { staticClass: "mt-3" }, [
-                _vm._v(
-                  "\n            Lorem ipsum dolor sit, amet consectetur adipisicing elit. In,\n            recusandae hic voluptatum quia ut nostrum ex quasi. Tempora\n            voluptatum sapiente fugiat at ullam ipsam ut nihil aperiam eaque.\n            Eos, distinctio?\n          "
-                )
-              ]),
-              _vm._v(" "),
-              _c("span", [
-                _c("i", { staticClass: "fa fa-user" }),
-                _vm._v(" ARIANA YAPTANGCO ")
-              ])
-            ])
-          ]
-        )
-      ])
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "container mt-5" }, [
-      _c("div", { staticClass: "row" }, [
-        _c(
-          "div",
-          {
-            staticClass:
-              "col-lg-6 col-md-6 col-sm-12 col-12 order-first order-lg-last"
-          },
-          [
-            _c("img", {
-              staticClass: "w-100 img-fluid",
-              attrs: {
-                src:
-                  "https://images.unsplash.com/photo-1483985988355-763728e1935b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80",
-                alt: "Image"
-              }
-            })
-          ]
-        ),
-        _vm._v(" "),
-        _c(
-          "div",
-          {
-            staticClass:
-              "mt-0 col-lg-6 col-md-6 col-sm-12 col-12 order-last order-lg-first"
-          },
-          [
-            _c("div", { staticClass: "border-top border-dark pt-2" }, [
-              _c("span", { staticClass: "news-date font-weight-bold" }, [
-                _vm._v("AUG 6, 2020")
-              ]),
-              _vm._v(" "),
-              _c("h4", { staticClass: "mt-4" }, [
-                _c(
-                  "a",
-                  { staticClass: "aura-post-title", attrs: { href: "/post" } },
-                  [
-                    _vm._v(
-                      "\n              Alicia Keys and Her Perfect Skin are Launching a Beauty Collab\n              with E.L.F\n            "
-                    )
-                  ]
-                )
-              ]),
-              _vm._v(" "),
-              _c("p", { staticClass: "mt-3" }, [
-                _vm._v(
-                  "\n            Lorem ipsum dolor sit, amet consectetur adipisicing elit. In,\n            recusandae hic voluptatum quia ut nostrum ex quasi. Tempora\n            voluptatum sapiente fugiat at ullam ipsam ut nihil aperiam eaque.\n            Eos, distinctio?\n          "
-                )
-              ]),
-              _vm._v(" "),
-              _c("span", [
-                _c("i", { staticClass: "fa fa-user" }),
-                _vm._v(" ARIANA YAPTANGCO ")
-              ])
-            ])
-          ]
-        )
-      ])
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "container mt-5" }, [
-      _c("div", { staticClass: "row" }, [
-        _c(
-          "div",
-          {
-            staticClass:
-              "col-lg-6 col-md-6 col-sm-12 col-12 order-first order-lg-last"
-          },
-          [
-            _c("img", {
-              staticClass: "w-100 img-fluid",
-              attrs: {
-                src:
-                  "https://images.unsplash.com/photo-1483985988355-763728e1935b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80",
-                alt: "Image"
-              }
-            })
-          ]
-        ),
-        _vm._v(" "),
-        _c(
-          "div",
-          {
-            staticClass:
-              "mt-0 col-lg-6 col-md-6 col-sm-12 col-12 order-last order-lg-first"
-          },
-          [
-            _c("div", { staticClass: "border-top border-dark pt-2" }, [
-              _c("span", { staticClass: "news-date font-weight-bold" }, [
-                _vm._v("AUG 6, 2020")
-              ]),
-              _vm._v(" "),
-              _c("h4", { staticClass: "mt-4" }, [
-                _c(
-                  "a",
-                  { staticClass: "aura-post-title", attrs: { href: "/post" } },
-                  [
-                    _vm._v(
-                      "\n              Alicia Keys and Her Perfect Skin are Launching a Beauty Collab\n              with E.L.F\n            "
-                    )
-                  ]
-                )
-              ]),
-              _vm._v(" "),
-              _c("p", { staticClass: "mt-3" }, [
-                _vm._v(
-                  "\n            Lorem ipsum dolor sit, amet consectetur adipisicing elit. In,\n            recusandae hic voluptatum quia ut nostrum ex quasi. Tempora\n            voluptatum sapiente fugiat at ullam ipsam ut nihil aperiam eaque.\n            Eos, distinctio?\n          "
-                )
-              ]),
-              _vm._v(" "),
-              _c("span", [
-                _c("i", { staticClass: "fa fa-user" }),
-                _vm._v(" ARIANA YAPTANGCO ")
-              ])
-            ])
-          ]
-        )
-      ])
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "container mt-5" }, [
-      _c("div", { staticClass: "row" }, [
-        _c(
-          "div",
-          {
-            staticClass:
-              "col-lg-6 col-md-6 col-sm-12 col-12 order-first order-lg-last"
-          },
-          [
-            _c("img", {
-              staticClass: "w-100 img-fluid",
-              attrs: {
-                src:
-                  "https://images.unsplash.com/photo-1483985988355-763728e1935b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80",
-                alt: "Image"
-              }
-            })
-          ]
-        ),
-        _vm._v(" "),
-        _c(
-          "div",
-          {
-            staticClass:
-              "mt-0 col-lg-6 col-md-6 col-sm-12 col-12 order-last order-lg-first"
-          },
-          [
-            _c("div", { staticClass: "border-top border-dark pt-2" }, [
-              _c("span", { staticClass: "news-date font-weight-bold" }, [
-                _vm._v("AUG 6, 2020")
-              ]),
-              _vm._v(" "),
-              _c("h4", { staticClass: "mt-4" }, [
-                _c(
-                  "a",
-                  { staticClass: "aura-post-title", attrs: { href: "/post" } },
-                  [
-                    _vm._v(
-                      "\n              Alicia Keys and Her Perfect Skin are Launching a Beauty Collab\n              with E.L.F\n            "
-                    )
-                  ]
-                )
-              ]),
-              _vm._v(" "),
-              _c("p", { staticClass: "mt-3" }, [
-                _vm._v(
-                  "\n            Lorem ipsum dolor sit, amet consectetur adipisicing elit. In,\n            recusandae hic voluptatum quia ut nostrum ex quasi. Tempora\n            voluptatum sapiente fugiat at ullam ipsam ut nihil aperiam eaque.\n            Eos, distinctio?\n          "
-                )
-              ]),
-              _vm._v(" "),
-              _c("span", [
-                _c("i", { staticClass: "fa fa-user" }),
-                _vm._v(" ARIANA YAPTANGCO ")
-              ])
-            ])
-          ]
-        )
-      ])
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "container mt-5" }, [
-      _c("div", { staticClass: "row" }, [
-        _c(
-          "div",
-          {
-            staticClass:
-              "col-lg-6 col-md-6 col-sm-12 col-12 order-first order-lg-last"
-          },
-          [
-            _c("img", {
-              staticClass: "w-100 img-fluid",
-              attrs: {
-                src:
-                  "https://images.unsplash.com/photo-1483985988355-763728e1935b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80",
-                alt: "Image"
-              }
-            })
-          ]
-        ),
-        _vm._v(" "),
-        _c(
-          "div",
-          {
-            staticClass:
-              "mt-0 col-lg-6 col-md-6 col-sm-12 col-12 order-last order-lg-first"
-          },
-          [
-            _c("div", { staticClass: "border-top border-dark pt-2" }, [
-              _c("span", { staticClass: "news-date font-weight-bold" }, [
-                _vm._v("AUG 6, 2020")
-              ]),
-              _vm._v(" "),
-              _c("h4", { staticClass: "mt-4" }, [
-                _c(
-                  "a",
-                  { staticClass: "aura-post-title", attrs: { href: "/post" } },
-                  [
-                    _vm._v(
-                      "\n              Alicia Keys and Her Perfect Skin are Launching a Beauty Collab\n              with E.L.F\n            "
-                    )
-                  ]
-                )
-              ]),
-              _vm._v(" "),
-              _c("p", { staticClass: "mt-3" }, [
-                _vm._v(
-                  "\n            Lorem ipsum dolor sit, amet consectetur adipisicing elit. In,\n            recusandae hic voluptatum quia ut nostrum ex quasi. Tempora\n            voluptatum sapiente fugiat at ullam ipsam ut nihil aperiam eaque.\n            Eos, distinctio?\n          "
-                )
-              ]),
-              _vm._v(" "),
-              _c("span", [
-                _c("i", { staticClass: "fa fa-user" }),
-                _vm._v(" ARIANA YAPTANGCO ")
-              ])
-            ])
-          ]
-        )
-      ])
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "container mt-5" }, [
-      _c("div", { staticClass: "row" }, [
-        _c(
-          "div",
-          {
-            staticClass:
-              "col-lg-6 col-md-6 col-sm-12 col-12 order-first order-lg-last"
-          },
-          [
-            _c("img", {
-              staticClass: "w-100 img-fluid",
-              attrs: {
-                src:
-                  "https://images.unsplash.com/photo-1483985988355-763728e1935b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80",
-                alt: "Image"
-              }
-            })
-          ]
-        ),
-        _vm._v(" "),
-        _c(
-          "div",
-          {
-            staticClass:
-              "mt-0 col-lg-6 col-md-6 col-sm-12 col-12 order-last order-lg-first"
-          },
-          [
-            _c("div", { staticClass: "border-top border-dark pt-2" }, [
-              _c("span", { staticClass: "news-date font-weight-bold" }, [
-                _vm._v("AUG 6, 2020")
-              ]),
-              _vm._v(" "),
-              _c("h4", { staticClass: "mt-4" }, [
-                _c(
-                  "a",
-                  { staticClass: "aura-post-title", attrs: { href: "/post" } },
-                  [
-                    _vm._v(
-                      "\n              Alicia Keys and Her Perfect Skin are Launching a Beauty Collab\n              with E.L.F\n            "
-                    )
-                  ]
-                )
-              ]),
-              _vm._v(" "),
-              _c("p", { staticClass: "mt-3" }, [
-                _vm._v(
-                  "\n            Lorem ipsum dolor sit, amet consectetur adipisicing elit. In,\n            recusandae hic voluptatum quia ut nostrum ex quasi. Tempora\n            voluptatum sapiente fugiat at ullam ipsam ut nihil aperiam eaque.\n            Eos, distinctio?\n          "
-                )
-              ]),
-              _vm._v(" "),
-              _c("span", [
-                _c("i", { staticClass: "fa fa-user" }),
-                _vm._v(" ARIANA YAPTANGCO ")
-              ])
-            ])
-          ]
-        )
-      ])
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "container mt-5 mb-5 text-center" }, [
-      _c("a", { staticClass: "see-more", attrs: { href: "#" } }, [
-        _c(
-          "div",
-          {
-            staticClass:
-              "col-12 row justify-content-center align-items-baseline"
-          },
-          [
-            _c("h5", { staticClass: "mr-2" }, [_vm._v("SEE MORE")]),
-            _vm._v(" "),
-            _c("i", { staticClass: "see-more-icon fa fa-chevron-circle-right" })
-          ]
-        )
-      ])
     ])
   }
 ]
@@ -54602,6 +53439,8 @@ var render = function() {
     "div",
     [
       _c("navbar"),
+      _vm._v(" "),
+      _vm._v("\n  " + _vm._s(_vm.article) + "\n  "),
       _vm._v(" "),
       _vm.post.isProtrait
         ? _c("div", { staticClass: "container rounded-0" }, [
@@ -55472,7 +54311,7 @@ var render = function() {
                           _vm._v(" "),
                           _c(
                             "div",
-                            { staticClass: "d-flex justify-content-center" },
+                            { staticClass: "d-flex container mt-5" },
                             [
                               _c(
                                 "pagination",
@@ -56432,7 +55271,7 @@ var render = function() {
                             _vm._v(" "),
                             _c(
                               "div",
-                              { staticClass: "d-flex justify-content-center" },
+                              { staticClass: "d-flex container mt-5" },
                               [
                                 _c(
                                   "pagination",
@@ -57506,6 +56345,89 @@ var staticRenderFns = [
         _vm._v(" "),
         _c("h5", { staticClass: "text-aura" }, [
           _vm._v("\n            Oops! no data here yet...\n        ")
+        ])
+      ])
+    ])
+  }
+]
+render._withStripped = true
+
+
+
+/***/ }),
+
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/utils/Loader.vue?vue&type=template&id=0adf3a4f&scoped=true&":
+/*!****************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/utils/Loader.vue?vue&type=template&id=0adf3a4f&scoped=true& ***!
+  \****************************************************************************************************************************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "render", function() { return render; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return staticRenderFns; });
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _vm._m(0)
+}
+var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", [
+      _c("div", { attrs: { id: "background" } }, [
+        _c("div", { attrs: { id: "logocontainer" } }, [
+          _c("div", { attrs: { id: "pelogo" } }, [_vm._v("AURA")]),
+          _vm._v(" "),
+          _c("div", {
+            staticClass: "loader",
+            staticStyle: {
+              left: "2vh",
+              top: "0",
+              height: "2vh",
+              width: "0",
+              animation: "slide1 1s linear forwards infinite"
+            }
+          }),
+          _vm._v(" "),
+          _c("div", {
+            staticClass: "loader",
+            staticStyle: {
+              right: "0",
+              top: "2vh",
+              width: "2vh",
+              height: "0",
+              animation: "slide2 1s linear forwards infinite",
+              "animation-delay": "0.5s"
+            }
+          }),
+          _vm._v(" "),
+          _c("div", {
+            staticClass: "loader",
+            staticStyle: {
+              right: "2vh",
+              bottom: "0",
+              height: "2vh",
+              width: "0",
+              animation: "slide3 1s linear forwards infinite"
+            }
+          }),
+          _vm._v(" "),
+          _c("div", {
+            staticClass: "loader",
+            staticStyle: {
+              left: "0",
+              bottom: "2vh",
+              width: "2vh",
+              height: "0",
+              animation: "slide4 1s linear forwards infinite",
+              "animation-delay": "0.5s"
+            }
+          })
         ])
       ])
     ])
@@ -77316,6 +76238,51 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
 
 /***/ }),
 
+/***/ "./resources/js/apis/client/Article.js":
+/*!*********************************************!*\
+  !*** ./resources/js/apis/client/Article.js ***!
+  \*********************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/regenerator */ "./node_modules/@babel/runtime/regenerator/index.js");
+/* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _Api__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../Api */ "./resources/js/apis/Api.js");
+
+
+function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { Promise.resolve(value).then(_next, _throw); } }
+
+function _asyncToGenerator(fn) { return function () { var self = this, args = arguments; return new Promise(function (resolve, reject) { var gen = fn.apply(self, args); function _next(value) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value); } function _throw(err) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err); } _next(undefined); }); }; }
+
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+  /* -------------------------------------------------------------------------- */
+
+  /*                    List Articles -By page for NonAuth Users                */
+
+  /* -------------------------------------------------------------------------- */
+  fetchArticles: function fetchArticles(page, category) {
+    return _asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(function _callee() {
+      return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.wrap(function _callee$(_context) {
+        while (1) {
+          switch (_context.prev = _context.next) {
+            case 0:
+              return _context.abrupt("return", _Api__WEBPACK_IMPORTED_MODULE_1__["default"].get("/articles/".concat(category, "/fetch?page=").concat(page)));
+
+            case 1:
+            case "end":
+              return _context.stop();
+          }
+        }
+      }, _callee);
+    }))();
+  }
+});
+
+/***/ }),
+
 /***/ "./resources/js/app.js":
 /*!*****************************!*\
   !*** ./resources/js/app.js ***!
@@ -77341,14 +76308,15 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _layout_Admin__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./layout/Admin */ "./resources/js/layout/Admin.vue");
 /* harmony import */ var _components_ValidationError__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./components/ValidationError */ "./resources/js/components/ValidationError.vue");
 /* harmony import */ var _utils_AuraLoader__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./utils/AuraLoader */ "./resources/js/utils/AuraLoader.vue");
-/* harmony import */ var _utils_EmptyResource__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./utils/EmptyResource */ "./resources/js/utils/EmptyResource.vue");
-/* harmony import */ var vuejs_toggle_switch__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! vuejs-toggle-switch */ "./node_modules/vuejs-toggle-switch/dist/ToggleSwitch.common.js");
-/* harmony import */ var vuejs_toggle_switch__WEBPACK_IMPORTED_MODULE_14___default = /*#__PURE__*/__webpack_require__.n(vuejs_toggle_switch__WEBPACK_IMPORTED_MODULE_14__);
-/* harmony import */ var vue_toast_notification__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! vue-toast-notification */ "./node_modules/vue-toast-notification/dist/index.min.js");
-/* harmony import */ var vue_toast_notification__WEBPACK_IMPORTED_MODULE_15___default = /*#__PURE__*/__webpack_require__.n(vue_toast_notification__WEBPACK_IMPORTED_MODULE_15__);
-/* harmony import */ var vue_toast_notification_dist_theme_sugar_css__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! vue-toast-notification/dist/theme-sugar.css */ "./node_modules/vue-toast-notification/dist/theme-sugar.css");
-/* harmony import */ var vue_toast_notification_dist_theme_sugar_css__WEBPACK_IMPORTED_MODULE_16___default = /*#__PURE__*/__webpack_require__.n(vue_toast_notification_dist_theme_sugar_css__WEBPACK_IMPORTED_MODULE_16__);
-/* harmony import */ var _helpers_filters__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ./helpers/filters */ "./resources/js/helpers/filters.js");
+/* harmony import */ var _utils_Loader__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./utils/Loader */ "./resources/js/utils/Loader.vue");
+/* harmony import */ var _utils_EmptyResource__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./utils/EmptyResource */ "./resources/js/utils/EmptyResource.vue");
+/* harmony import */ var vuejs_toggle_switch__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! vuejs-toggle-switch */ "./node_modules/vuejs-toggle-switch/dist/ToggleSwitch.common.js");
+/* harmony import */ var vuejs_toggle_switch__WEBPACK_IMPORTED_MODULE_15___default = /*#__PURE__*/__webpack_require__.n(vuejs_toggle_switch__WEBPACK_IMPORTED_MODULE_15__);
+/* harmony import */ var vue_toast_notification__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! vue-toast-notification */ "./node_modules/vue-toast-notification/dist/index.min.js");
+/* harmony import */ var vue_toast_notification__WEBPACK_IMPORTED_MODULE_16___default = /*#__PURE__*/__webpack_require__.n(vue_toast_notification__WEBPACK_IMPORTED_MODULE_16__);
+/* harmony import */ var vue_toast_notification_dist_theme_sugar_css__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! vue-toast-notification/dist/theme-sugar.css */ "./node_modules/vue-toast-notification/dist/theme-sugar.css");
+/* harmony import */ var vue_toast_notification_dist_theme_sugar_css__WEBPACK_IMPORTED_MODULE_17___default = /*#__PURE__*/__webpack_require__.n(vue_toast_notification_dist_theme_sugar_css__WEBPACK_IMPORTED_MODULE_17__);
+/* harmony import */ var _helpers_filters__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! ./helpers/filters */ "./resources/js/helpers/filters.js");
 /**
  * First we will load all of this project's JavaScript dependencies which
  * includes Vue and other libraries. It is a great starting point when
@@ -77383,6 +76351,7 @@ window.Vue = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.common.
 
 
 
+
 Vue.component('navbar', _components_Navbar__WEBPACK_IMPORTED_MODULE_6__["default"]);
 Vue.component('auth-nav', _layout_navbars_navs_Auth__WEBPACK_IMPORTED_MODULE_7__["default"]);
 Vue.component('auth-sidenav', _layout_navbars_Auth_Sidenav__WEBPACK_IMPORTED_MODULE_8__["default"]);
@@ -77390,7 +76359,8 @@ Vue.component('auth-footer', _layout_Footer__WEBPACK_IMPORTED_MODULE_9__["defaul
 Vue.component('auth-admin', _layout_Admin__WEBPACK_IMPORTED_MODULE_10__["default"]);
 Vue.component('validation-error', _components_ValidationError__WEBPACK_IMPORTED_MODULE_11__["default"]);
 Vue.component('aura-loader', _utils_AuraLoader__WEBPACK_IMPORTED_MODULE_12__["default"]);
-Vue.component('empty-resource', _utils_EmptyResource__WEBPACK_IMPORTED_MODULE_13__["default"]);
+Vue.component('loader', _utils_Loader__WEBPACK_IMPORTED_MODULE_13__["default"]);
+Vue.component('empty-resource', _utils_EmptyResource__WEBPACK_IMPORTED_MODULE_14__["default"]);
 Vue.component('pagination', __webpack_require__(/*! laravel-vue-pagination */ "./node_modules/laravel-vue-pagination/dist/laravel-vue-pagination.common.js")); // const files = require.context('./', true, /\.vue$/i)
 // files.keys().map(key => Vue.component(key.split('/').pop().split('.')[0], files(key).default))
 
@@ -77402,8 +76372,8 @@ nprogress__WEBPACK_IMPORTED_MODULE_5___default.a.configure({
 Vue.use(vue_router__WEBPACK_IMPORTED_MODULE_1__["default"]);
 Vue.use(nprogress__WEBPACK_IMPORTED_MODULE_5___default.a);
 Vue.use(vue_axios__WEBPACK_IMPORTED_MODULE_2___default.a, axios__WEBPACK_IMPORTED_MODULE_3___default.a);
-Vue.use(vuejs_toggle_switch__WEBPACK_IMPORTED_MODULE_14___default.a);
-Vue.use(vue_toast_notification__WEBPACK_IMPORTED_MODULE_15___default.a);
+Vue.use(vuejs_toggle_switch__WEBPACK_IMPORTED_MODULE_15___default.a);
+Vue.use(vue_toast_notification__WEBPACK_IMPORTED_MODULE_16___default.a);
 /**
  * Next, we will create a fresh Vue application instance and attach it to
  * the page. Then, you may begin adding components to this application
@@ -79392,11 +78362,12 @@ var routes = [{
   }
 }, {
   name: 'post',
-  path: '/post',
+  path: '/post/:id/:title',
   component: _pages_Post_vue__WEBPACK_IMPORTED_MODULE_7__["default"],
   meta: {
     showProgressBar: true
-  }
+  },
+  props: true
 }, {
   name: 'magazine',
   path: '/magazine',
@@ -79632,6 +78603,93 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_EmptyResource_vue_vue_type_template_id_56b9a3ef___WEBPACK_IMPORTED_MODULE_0__["render"]; });
 
 /* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_EmptyResource_vue_vue_type_template_id_56b9a3ef___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
+
+
+
+/***/ }),
+
+/***/ "./resources/js/utils/Loader.vue":
+/*!***************************************!*\
+  !*** ./resources/js/utils/Loader.vue ***!
+  \***************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _Loader_vue_vue_type_template_id_0adf3a4f_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Loader.vue?vue&type=template&id=0adf3a4f&scoped=true& */ "./resources/js/utils/Loader.vue?vue&type=template&id=0adf3a4f&scoped=true&");
+/* harmony import */ var _Loader_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Loader.vue?vue&type=script&lang=js& */ "./resources/js/utils/Loader.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport *//* harmony import */ var _Loader_vue_vue_type_style_index_0_id_0adf3a4f_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./Loader.vue?vue&type=style&index=0&id=0adf3a4f&scoped=true&lang=css& */ "./resources/js/utils/Loader.vue?vue&type=style&index=0&id=0adf3a4f&scoped=true&lang=css&");
+/* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
+
+
+
+
+
+/* normalize component */
+
+var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_3__["default"])(
+  _Loader_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _Loader_vue_vue_type_template_id_0adf3a4f_scoped_true___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _Loader_vue_vue_type_template_id_0adf3a4f_scoped_true___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  false,
+  null,
+  "0adf3a4f",
+  null
+  
+)
+
+/* hot reload */
+if (false) { var api; }
+component.options.__file = "resources/js/utils/Loader.vue"
+/* harmony default export */ __webpack_exports__["default"] = (component.exports);
+
+/***/ }),
+
+/***/ "./resources/js/utils/Loader.vue?vue&type=script&lang=js&":
+/*!****************************************************************!*\
+  !*** ./resources/js/utils/Loader.vue?vue&type=script&lang=js& ***!
+  \****************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_Loader_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/babel-loader/lib??ref--4-0!../../../node_modules/vue-loader/lib??vue-loader-options!./Loader.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/utils/Loader.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_Loader_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+
+/***/ }),
+
+/***/ "./resources/js/utils/Loader.vue?vue&type=style&index=0&id=0adf3a4f&scoped=true&lang=css&":
+/*!************************************************************************************************!*\
+  !*** ./resources/js/utils/Loader.vue?vue&type=style&index=0&id=0adf3a4f&scoped=true&lang=css& ***!
+  \************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_style_loader_index_js_node_modules_css_loader_index_js_ref_6_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_6_2_node_modules_vue_loader_lib_index_js_vue_loader_options_Loader_vue_vue_type_style_index_0_id_0adf3a4f_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/style-loader!../../../node_modules/css-loader??ref--6-1!../../../node_modules/vue-loader/lib/loaders/stylePostLoader.js!../../../node_modules/postcss-loader/src??ref--6-2!../../../node_modules/vue-loader/lib??vue-loader-options!./Loader.vue?vue&type=style&index=0&id=0adf3a4f&scoped=true&lang=css& */ "./node_modules/style-loader/index.js!./node_modules/css-loader/index.js?!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/utils/Loader.vue?vue&type=style&index=0&id=0adf3a4f&scoped=true&lang=css&");
+/* harmony import */ var _node_modules_style_loader_index_js_node_modules_css_loader_index_js_ref_6_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_6_2_node_modules_vue_loader_lib_index_js_vue_loader_options_Loader_vue_vue_type_style_index_0_id_0adf3a4f_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_index_js_node_modules_css_loader_index_js_ref_6_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_6_2_node_modules_vue_loader_lib_index_js_vue_loader_options_Loader_vue_vue_type_style_index_0_id_0adf3a4f_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_0__);
+/* harmony reexport (unknown) */ for(var __WEBPACK_IMPORT_KEY__ in _node_modules_style_loader_index_js_node_modules_css_loader_index_js_ref_6_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_6_2_node_modules_vue_loader_lib_index_js_vue_loader_options_Loader_vue_vue_type_style_index_0_id_0adf3a4f_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_0__) if(["default"].indexOf(__WEBPACK_IMPORT_KEY__) < 0) (function(key) { __webpack_require__.d(__webpack_exports__, key, function() { return _node_modules_style_loader_index_js_node_modules_css_loader_index_js_ref_6_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_6_2_node_modules_vue_loader_lib_index_js_vue_loader_options_Loader_vue_vue_type_style_index_0_id_0adf3a4f_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_0__[key]; }) }(__WEBPACK_IMPORT_KEY__));
+ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_style_loader_index_js_node_modules_css_loader_index_js_ref_6_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_6_2_node_modules_vue_loader_lib_index_js_vue_loader_options_Loader_vue_vue_type_style_index_0_id_0adf3a4f_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_0___default.a); 
+
+/***/ }),
+
+/***/ "./resources/js/utils/Loader.vue?vue&type=template&id=0adf3a4f&scoped=true&":
+/*!**********************************************************************************!*\
+  !*** ./resources/js/utils/Loader.vue?vue&type=template&id=0adf3a4f&scoped=true& ***!
+  \**********************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Loader_vue_vue_type_template_id_0adf3a4f_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../node_modules/vue-loader/lib??vue-loader-options!./Loader.vue?vue&type=template&id=0adf3a4f&scoped=true& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/utils/Loader.vue?vue&type=template&id=0adf3a4f&scoped=true&");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Loader_vue_vue_type_template_id_0adf3a4f_scoped_true___WEBPACK_IMPORTED_MODULE_0__["render"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Loader_vue_vue_type_template_id_0adf3a4f_scoped_true___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
 
 
 

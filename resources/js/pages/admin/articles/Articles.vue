@@ -83,7 +83,7 @@
               </tbody>
             </table>
             <!-- ===== Pagination ====== -->
-            <div class="d-flex justify-content-center">
+            <div class="d-flex container mt-5">
               <pagination
                 class="btn-aura"
                 :data="articles"
