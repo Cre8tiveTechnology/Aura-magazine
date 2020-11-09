@@ -7,4 +7,11 @@ export default {
   async fetchArticles(page, category) {
     return Api.get(`/articles/${category}/fetch?page=${page}`)
   },
+
+  /* -------------------------------------------------------------------------- */
+  /*                    Get Single Article - NonAuth Users                */
+  /* -------------------------------------------------------------------------- */
+  async getArticle(article) {
+    return Api.get(`/articles/${article}/get`)
+  },
 }

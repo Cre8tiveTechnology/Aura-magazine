@@ -97,7 +97,12 @@ class ArticleController extends Controller
      */
     public function show(Article $article)
     {
-        //
+        $recommendations = Article::where("category", "=", $article->category)->inRandomOrder()->limit(5)->get();
+
+        return response()->json([
+            "article" => $article,
+            "recommendations" => $recommendations,
+        ], 200);
     }
 
     /**
