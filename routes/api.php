@@ -44,9 +44,9 @@ Route::post('/register', 'RegisterController@register');
 Route::post('/login', 'LoginController@login');
 Route::post('/logout', 'LoginController@logout')->name('logout');
 
-
 /* -------------------------------------------------------------------------- */
 /*                               NonAuth-User Routes                              */
 /* -------------------------------------------------------------------------- */
 Route::get('/articles/{category}/fetch', 'ArticleController@index')->name('fetch_articles');
 Route::get('/articles/{article}/get', 'ArticleController@show')->name('get_article');
+Route::post('articles/updateviews', 'ArticleController@updateViews')->name('updateviews');

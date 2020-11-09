@@ -145,4 +145,13 @@ class ArticleController extends Controller
         }
     }
 
+    public function updateViews(Request $request)
+    {
+        $article = Article::findOrFail($request->id);
+        $newCount = $article->views + 1;
+        $article->update([
+            'views' => $newCount,
+        ]);
+    }
+
 }

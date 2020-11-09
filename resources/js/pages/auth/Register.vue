@@ -213,6 +213,9 @@
                 </div>
             </div>
         </div>
+        <!-- Footer -->
+        <user-footer />
+        <!-- Footer -->
     </div>
 </template>
 
@@ -253,8 +256,7 @@ export default {
                     if (errors.response.status == 400) {
                         this.errors = errors.response.data;
                     } else {
-                        let message =
-                            "There was a problem while creating your account, please try again!";
+                        let message = errors.response.data.message;
                         this.alertError(message);
                     }
                 });

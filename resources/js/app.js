@@ -28,6 +28,7 @@ import SideNav from './layout/navbars/Auth-Sidenav'
 import Footer from './layout/Footer'
 import Admin from './layout/Admin'
 import validationError from './components/ValidationError'
+import CFooter from './components/footer'
 import AuraLoader from './utils/AuraLoader'
 import Loader from './utils/Loader'
 import EmptyResource from './utils/EmptyResource'
@@ -40,6 +41,7 @@ Vue.component('navbar', Navbar)
 Vue.component('auth-nav', AuthNav)
 Vue.component('auth-sidenav', SideNav)
 Vue.component('auth-footer', Footer)
+Vue.component('user-footer', CFooter)
 Vue.component('auth-admin', Admin)
 Vue.component('validation-error', validationError)
 Vue.component('aura-loader', AuraLoader)
