@@ -7,6 +7,8 @@ import Beauty from './pages/Beauty.vue'
 import Fashion from './pages/Fashion.vue'
 import Lifestyle from './pages/Lifestyle.vue'
 import ArtsAndCulture from './pages/ArtsAndCulture.vue'
+import Horoscope from './pages/Horoscope.vue'
+import SexAndRelationship from './pages/SexAndRelationship.vue'
 import Magazine from './pages/Magazine.vue'
 import Post from './pages/Post.vue'
 import Shop from './pages/Shop.vue'
@@ -103,6 +105,24 @@ export const routes = [
     name: 'arts-and-culture',
     path: '/category/arts-and-culture',
     component: ArtsAndCulture,
+    meta: {
+      showProgressBar: true,
+    },
+  },
+
+  {
+    name: 'horoscope',
+    path: '/category/horoscope',
+    component: Horoscope,
+    meta: {
+      showProgressBar: true,
+    },
+  },
+
+  {
+    name: 'sex-and-relationships',
+    path: '/category/sex-and-relationships',
+    component: SexAndRelationship,
     meta: {
       showProgressBar: true,
     },

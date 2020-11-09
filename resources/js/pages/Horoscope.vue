@@ -1,7 +1,7 @@
 <template>
   <div>
     <!-- NavBar -->
-    <navbar :current="'LIFESTYLE'" />
+    <navbar :current="'HOROSCOPE'" />
     <!-- Navbar -->
 
     <!-- COVER IMAGE -->
@@ -147,10 +147,10 @@
 <script>
 import Article from "../apis/client/Article";
 export default {
-  name: "Lifestyle",
+  name: "Horoscope",
   data: () => ({
     articles: {},
-    category: "Lifestyle",
+    category: "Horoscope",
   }),
   mounted() {
     this.getArticles();
