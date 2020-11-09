@@ -82,25 +82,25 @@
                   <h4 class="footer-widget-title">Our Company</h4>
                   <ul>
                     <li>
-                      <a href="#">About Us</a>
+                      <router-link to="#"> About Us </router-link>
                     </li>
                     <li>
-                      <a href="#">Contact Us</a>
+                      <router-link to="#"> Contact Us </router-link>
                     </li>
                     <li>
-                      <a href="#">Magazine</a>
+                      <router-link to="/magazine"> Magazine </router-link>
                     </li>
                     <li>
-                      <a href="#">Shop</a>
+                      <router-link to="/shop"> Shop </router-link>
                     </li>
                     <li>
-                      <a href="#">Videos</a>
+                      <router-link to="/videos"> Videos </router-link>
                     </li>
                     <li>
-                      <a href="#">Testimonials</a>
+                      <router-link to="#"> Testimonials </router-link>
                     </li>
                     <li>
-                      <a href="#">Plan &amp; Pricing</a>
+                      <router-link to="#"> Plan &amp; Pricing </router-link>
                     </li>
                   </ul>
                 </div>
@@ -116,22 +116,22 @@
                   <h4 class="footer-widget-title">Help &amp; Support</h4>
                   <ul>
                     <li>
-                      <a href="#">Terms &amp; Conditions</a>
+                      <router-link to="#"> Terms &amp; Conditions </router-link>
                     </li>
                     <li>
-                      <a href="#">Support Policy</a>
+                      <router-link to="#"> Support Policy </router-link>
                     </li>
                     <li>
-                      <a href="#">Refund Policy</a>
+                      <router-link to="#"> Refund Policy </router-link>
                     </li>
                     <li>
-                      <a href="#">FAQs</a>
+                      <router-link to="#"> FAQs </router-link>
                     </li>
                     <li>
-                      <a href="#">Buyers Faq</a>
+                      <router-link to="#"> Buyers Faq </router-link>
                     </li>
                     <li>
-                      <a href="#">Sellers Faq</a>
+                      <router-link to="#"> Sellers Faq </router-link>
                     </li>
                   </ul>
                 </div>

@@ -47378,14 +47378,164 @@ var render = function() {
                 ])
               ]),
               _vm._v(" "),
-              _vm._m(1),
+              _c("div", { staticClass: "col-md-3 col-sm-4" }, [
+                _c("div", { staticClass: "footer-widget" }, [
+                  _c("div", { staticClass: "footer-menu" }, [
+                    _c("h4", { staticClass: "footer-widget-title" }, [
+                      _vm._v("Our Company")
+                    ]),
+                    _vm._v(" "),
+                    _c("ul", [
+                      _c(
+                        "li",
+                        [
+                          _c("router-link", { attrs: { to: "#" } }, [
+                            _vm._v(" About Us ")
+                          ])
+                        ],
+                        1
+                      ),
+                      _vm._v(" "),
+                      _c(
+                        "li",
+                        [
+                          _c("router-link", { attrs: { to: "#" } }, [
+                            _vm._v(" Contact Us ")
+                          ])
+                        ],
+                        1
+                      ),
+                      _vm._v(" "),
+                      _c(
+                        "li",
+                        [
+                          _c("router-link", { attrs: { to: "/magazine" } }, [
+                            _vm._v(" Magazine ")
+                          ])
+                        ],
+                        1
+                      ),
+                      _vm._v(" "),
+                      _c(
+                        "li",
+                        [
+                          _c("router-link", { attrs: { to: "/shop" } }, [
+                            _vm._v(" Shop ")
+                          ])
+                        ],
+                        1
+                      ),
+                      _vm._v(" "),
+                      _c(
+                        "li",
+                        [
+                          _c("router-link", { attrs: { to: "/videos" } }, [
+                            _vm._v(" Videos ")
+                          ])
+                        ],
+                        1
+                      ),
+                      _vm._v(" "),
+                      _c(
+                        "li",
+                        [
+                          _c("router-link", { attrs: { to: "#" } }, [
+                            _vm._v(" Testimonials ")
+                          ])
+                        ],
+                        1
+                      ),
+                      _vm._v(" "),
+                      _c(
+                        "li",
+                        [
+                          _c("router-link", { attrs: { to: "#" } }, [
+                            _vm._v(" Plan & Pricing ")
+                          ])
+                        ],
+                        1
+                      )
+                    ])
+                  ])
+                ])
+              ]),
               _vm._v(" "),
-              _vm._m(2)
+              _c("div", { staticClass: "col-md-3 col-sm-4" }, [
+                _c("div", { staticClass: "footer-widget" }, [
+                  _c("div", { staticClass: "footer-menu no-padding" }, [
+                    _c("h4", { staticClass: "footer-widget-title" }, [
+                      _vm._v("Help & Support")
+                    ]),
+                    _vm._v(" "),
+                    _c("ul", [
+                      _c(
+                        "li",
+                        [
+                          _c("router-link", { attrs: { to: "#" } }, [
+                            _vm._v(" Terms & Conditions ")
+                          ])
+                        ],
+                        1
+                      ),
+                      _vm._v(" "),
+                      _c(
+                        "li",
+                        [
+                          _c("router-link", { attrs: { to: "#" } }, [
+                            _vm._v(" Support Policy ")
+                          ])
+                        ],
+                        1
+                      ),
+                      _vm._v(" "),
+                      _c(
+                        "li",
+                        [
+                          _c("router-link", { attrs: { to: "#" } }, [
+                            _vm._v(" Refund Policy ")
+                          ])
+                        ],
+                        1
+                      ),
+                      _vm._v(" "),
+                      _c(
+                        "li",
+                        [
+                          _c("router-link", { attrs: { to: "#" } }, [
+                            _vm._v(" FAQs ")
+                          ])
+                        ],
+                        1
+                      ),
+                      _vm._v(" "),
+                      _c(
+                        "li",
+                        [
+                          _c("router-link", { attrs: { to: "#" } }, [
+                            _vm._v(" Buyers Faq ")
+                          ])
+                        ],
+                        1
+                      ),
+                      _vm._v(" "),
+                      _c(
+                        "li",
+                        [
+                          _c("router-link", { attrs: { to: "#" } }, [
+                            _vm._v(" Sellers Faq ")
+                          ])
+                        ],
+                        1
+                      )
+                    ])
+                  ])
+                ])
+              ])
             ])
           ])
         ]),
         _vm._v(" "),
-        _vm._m(3)
+        _vm._m(1)
       ]
     )
   ])
@@ -47423,80 +47573,6 @@ var staticRenderFns = [
               _c("a", { attrs: { href: "mailto:support@aura.com" } }, [
                 _vm._v("support@aura.com")
               ])
-            ])
-          ])
-        ])
-      ])
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "col-md-3 col-sm-4" }, [
-      _c("div", { staticClass: "footer-widget" }, [
-        _c("div", { staticClass: "footer-menu" }, [
-          _c("h4", { staticClass: "footer-widget-title" }, [
-            _vm._v("Our Company")
-          ]),
-          _vm._v(" "),
-          _c("ul", [
-            _c("li", [_c("a", { attrs: { href: "#" } }, [_vm._v("About Us")])]),
-            _vm._v(" "),
-            _c("li", [
-              _c("a", { attrs: { href: "#" } }, [_vm._v("Contact Us")])
-            ]),
-            _vm._v(" "),
-            _c("li", [_c("a", { attrs: { href: "#" } }, [_vm._v("Magazine")])]),
-            _vm._v(" "),
-            _c("li", [_c("a", { attrs: { href: "#" } }, [_vm._v("Shop")])]),
-            _vm._v(" "),
-            _c("li", [_c("a", { attrs: { href: "#" } }, [_vm._v("Videos")])]),
-            _vm._v(" "),
-            _c("li", [
-              _c("a", { attrs: { href: "#" } }, [_vm._v("Testimonials")])
-            ]),
-            _vm._v(" "),
-            _c("li", [
-              _c("a", { attrs: { href: "#" } }, [_vm._v("Plan & Pricing")])
-            ])
-          ])
-        ])
-      ])
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "col-md-3 col-sm-4" }, [
-      _c("div", { staticClass: "footer-widget" }, [
-        _c("div", { staticClass: "footer-menu no-padding" }, [
-          _c("h4", { staticClass: "footer-widget-title" }, [
-            _vm._v("Help & Support")
-          ]),
-          _vm._v(" "),
-          _c("ul", [
-            _c("li", [
-              _c("a", { attrs: { href: "#" } }, [_vm._v("Terms & Conditions")])
-            ]),
-            _vm._v(" "),
-            _c("li", [
-              _c("a", { attrs: { href: "#" } }, [_vm._v("Support Policy")])
-            ]),
-            _vm._v(" "),
-            _c("li", [
-              _c("a", { attrs: { href: "#" } }, [_vm._v("Refund Policy")])
-            ]),
-            _vm._v(" "),
-            _c("li", [_c("a", { attrs: { href: "#" } }, [_vm._v("FAQs")])]),
-            _vm._v(" "),
-            _c("li", [
-              _c("a", { attrs: { href: "#" } }, [_vm._v("Buyers Faq")])
-            ]),
-            _vm._v(" "),
-            _c("li", [
-              _c("a", { attrs: { href: "#" } }, [_vm._v("Sellers Faq")])
             ])
           ])
         ])
