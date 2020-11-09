@@ -253,7 +253,8 @@ export default {
                     if (errors.response.status == 400) {
                         this.errors = errors.response.data;
                     } else {
-                        let message = errors.response.data.message;
+                        let message =
+                            "There was a problem while creating your account, please try again!";
                         this.alertError(message);
                     }
                 });

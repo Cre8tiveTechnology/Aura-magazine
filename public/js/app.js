@@ -8351,7 +8351,7 @@ __webpack_require__.r(__webpack_exports__);
         if (errors.response.status == 400) {
           _this.errors = errors.response.data;
         } else {
-          var message = errors.response.data.message;
+          var message = "There was a problem while creating your account, please try again!";
 
           _this.alertError(message);
         }
