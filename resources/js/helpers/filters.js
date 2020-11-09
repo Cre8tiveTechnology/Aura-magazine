@@ -1,54 +1,54 @@
-import Vue from "vue";
-
+import Vue from 'vue'
 
 /* -------------------------------------------------------------------------- */
 /*                     Filters file  **use Vue.filter()                       */
 /* -------------------------------------------------------------------------- */
+<<<<<<< HEAD
+=======
+
+>>>>>>> dfc11d7aa9cdaae244000dd220c17935799c1aa8
 /**
  * Format date
  * @para - String date
  * @return -format Sat, 7 Nov 2020
  */
-Vue.filter("formatDate",function(date)
-{
-    const months = [
-        "Jan",
-        "Feb",
-        "Mar",
-        "Apr",
-        "May",
-        "Jun",
-        "Jul",
-        "Aug",
-        "Sep",
-        "Oct",
-        "Nov",
-        "Dec"
-    ];
-    const days = [ "Sun","Mon","Tue","Wed","Thur","Fri","Sat" ];
-    let posted_on = new Date(date);
-    let formatted_date =
-        days[ posted_on.getDay() ] +
-        ", " +
-        posted_on.getDate() +
-        " " +
-        months[ posted_on.getMonth() ] +
-        " " +
-        posted_on.getFullYear();
+Vue.filter('formatDate', function (date) {
+  const months = [
+    'Jan',
+    'Feb',
+    'Mar',
+    'Apr',
+    'May',
+    'Jun',
+    'Jul',
+    'Aug',
+    'Sep',
+    'Oct',
+    'Nov',
+    'Dec',
+  ]
+  const days = ['Sun', 'Mon', 'Tue', 'Wed', 'Thur', 'Fri', 'Sat']
+  let posted_on = new Date(date)
+  let formatted_date =
+    days[posted_on.getDay()] +
+    ', ' +
+    posted_on.getDate() +
+    ' ' +
+    months[posted_on.getMonth()] +
+    ' ' +
+    posted_on.getFullYear()
 
-    return formatted_date;
-});
+  return formatted_date
+})
 
 /**
  * Split name by space " "
  * @param - name
  * @return -splited name[0]
  */
-Vue.filter("splitName",function(name)
-{
-    return name.replace(/ .*/,"");
-});
-
+Vue.filter('splitName', function (name) {
+  return name.replace(/ .*/, '')
+})
 
 /**
  *  Truncates long strings if the strlen is greater than limit passed
@@ -56,12 +56,10 @@ Vue.filter("splitName",function(name)
  * @param limit - preffered string lenght
  * @return value
  */
-Vue.filter('truncate',function(value,limit)
-{
+Vue.filter('truncate', function (value, limit) {
+  if (value.length > limit) {
+    value = value.substring(0, limit - 3) + '...'
+  }
 
-    if (value.length > limit) {
-        value = value.substring(0,(limit - 3)) + '...';
-    }
-
-    return value
+  return value
 })

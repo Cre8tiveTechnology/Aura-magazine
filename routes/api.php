@@ -30,6 +30,8 @@ Route::group(['name' => 'article.', 'prefix' => 'article', 'middleware' => 'auth
 Route::group(['name' => 'role.', 'prefix' => 'role', 'middleware' => ['auth:sanctum', 'role:superadmin']], function () {
     Route::get('/all', 'RoleController@index')->name('all');
     Route::post('/create', 'RoleController@store')->name('store');
+    Route::delete('/remove/{role}', 'RoleController@destroy')->name('remove');
+    Route::post('/restore', 'RoleController@restore')->name('restore');
 });
 
 /* -------------------------------------------------------------------------- */
@@ -41,3 +43,9 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 Route::post('/register', 'RegisterController@register');
 Route::post('/login', 'LoginController@login');
 Route::post('/logout', 'LoginController@logout')->name('logout');
+
+
+/* -------------------------------------------------------------------------- */
+/*                               NonAuth-User Routes                              */
+/* -------------------------------------------------------------------------- */
+Route::get('/articles/{category}/fetch', 'ArticleController@index')->name('fetch_articles');

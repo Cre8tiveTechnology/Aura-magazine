@@ -1,13 +1,13 @@
 <template>
   <div>
     <!-- NavBar -->
-    <navbar :current="'LIFESTYLE'" />
+    <navbar :current="'SEX/RELATIONSHIPS'" />
     <!-- Navbar -->
 
     <!-- COVER IMAGE -->
     <div class="container-fluid p-0">
       <img
-        src="https://res.cloudinary.com/cre8tive-technologies/image/upload/v1604915938/aura/Horoscope_o0jpuv.jpg"
+        src="https://res.cloudinary.com/cre8tive-technologies/image/upload/v1604915940/aura/Life_Love_tcpfrx.jpg"
         class="col-12 p-0 img-fluid rounded-0"
         alt="Fashion Cover"
       />
@@ -147,10 +147,10 @@
 <script>
 import Article from "../apis/client/Article";
 export default {
-  name: "Lifestyle",
+  name: "SexAndRelationship",
   data: () => ({
     articles: {},
-    category: "Lifestyle",
+    category: "Sex and Relationship",
   }),
   mounted() {
     this.getArticles();

@@ -108,6 +108,23 @@ class RoleController extends Controller
      */
     public function destroy(Role $role)
     {
-        //
+        if ($role->delete()) {
+            return response()->json("Role has been removed successfully.", 200);
+        }
     }
+
+    /**
+     * Restores the specified resource from storage.
+     *
+     * @param  \App\Role  $role
+     * @return \Illuminate\Http\Response
+     */
+    public function restore(Request $request)
+    {
+        $role = Role::onlyTrashed()->findOrFail($request->id);
+        if ($role->restore()) {
+            return response()->json("Role has been restored successfully.", 200);
+        }
+    }
+
 }
