@@ -7891,6 +7891,37 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 
 /* harmony default export */ __webpack_exports__["default"] = ({
@@ -7902,12 +7933,15 @@ __webpack_require__.r(__webpack_exports__);
         name: "",
         email: "",
         role_id: "Please select role",
-        password: ""
+        password: "",
+        photo: ""
       },
       misc: {
-        isLoading: false
+        isLoading: false,
+        thumbnail: "https://res.cloudinary.com/cre8tive-technologies/image/upload/v1604580085/aura/Preview-icon_mzat3j.png"
       },
-      roles: []
+      roles: [],
+      supportedFiles: ["image/jpeg", "image/jpg", "image/png"]
     };
   },
   mounted: function mounted() {
@@ -7915,7 +7949,7 @@ __webpack_require__.r(__webpack_exports__);
   },
   methods: {
     resetFormFields: function resetFormFields() {
-      this.name = "", this.email = "", this.role_id = "Please select role", this.password = "";
+      this.name = "", this.email = "", this.role_id = "Please select role", this.password = "", this.photo = "";
     },
     isLoadingTrue: function isLoadingTrue() {
       this.misc.isLoading = true;
@@ -7937,7 +7971,7 @@ __webpack_require__.r(__webpack_exports__);
         _this.resetFormFields();
 
         _this.$router.push({
-          name: "role"
+          name: "user"
         });
       })["catch"](function (errors) {
         _this.isLoadingFalse();
@@ -7952,6 +7986,28 @@ __webpack_require__.r(__webpack_exports__);
           _this.alertError(message ? message : "Oops! An Error was Encountered. Please Try Again.");
         }
       });
+    },
+    selectFile: function selectFile(e) {
+      var files = e.target.files || e.dataTransfer.files;
+      if (!files.length) return;
+
+      if (this.supportedFiles.includes(files[0]["type"]) && files[0]["size"] < 3e6) {
+        this.createImage(files[0]);
+      } else {
+        this.alertError("Oops! File Type not Supported OR File too Large [3MB].");
+      }
+
+      console.log(this.formFields.photo);
+    },
+    createImage: function createImage(file) {
+      var reader = new FileReader();
+      var vm = this;
+
+      reader.onload = function (e) {
+        vm.formFields.photo = e.target.result;
+      };
+
+      reader.readAsDataURL(file);
     },
     alertError: function alertError(message) {
       Vue.$toast.open({
@@ -56225,6 +56281,53 @@ var render = function() {
                                 })
                               ],
                               1
+                            ),
+                            _vm._v(" "),
+                            _c(
+                              "div",
+                              { staticClass: "container-fluid p-0 m-0" },
+                              [
+                                _c("div", { staticClass: "row" }, [
+                                  _c("div", { staticClass: "col-md-4 mt-5" }, [
+                                    _c("h5", { staticClass: "input-label" }, [
+                                      _vm._v(
+                                        "\n                                    Choose a Cover photo\n                                "
+                                      )
+                                    ]),
+                                    _vm._v(" "),
+                                    _c("input", {
+                                      staticClass:
+                                        "form-control input-control py-1",
+                                      attrs: {
+                                        type: "file",
+                                        id: "photo",
+                                        name: "photo"
+                                      },
+                                      on: { change: _vm.selectFile }
+                                    })
+                                  ]),
+                                  _vm._v(" "),
+                                  _c(
+                                    "div",
+                                    {
+                                      staticClass: "col-md-4 text-center mt-5"
+                                    },
+                                    [
+                                      _c("img", {
+                                        staticClass:
+                                          "img-responsive rounded-circle",
+                                        attrs: {
+                                          src: !_vm.formFields.photo
+                                            ? _vm.misc.thumbnail
+                                            : _vm.formFields.photo,
+                                          height: "80",
+                                          width: "90"
+                                        }
+                                      })
+                                    ]
+                                  )
+                                ])
+                              ]
                             ),
                             _vm._v(" "),
                             _c(

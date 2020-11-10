@@ -73,6 +73,37 @@
                             >
                             </v-select>
                         </div>
+
+                        <!-- Image Fields -->
+                        <div class="container-fluid p-0 m-0">
+                            <div class="row">
+                                <div class="col-md-4 mt-5">
+                                    <h5 class="input-label">
+                                        Choose a Cover photo
+                                    </h5>
+                                    <input
+                                        type="file"
+                                        @change="selectFile"
+                                        id="photo"
+                                        name="photo"
+                                        class="form-control input-control py-1"
+                                    />
+                                </div>
+
+                                <div class="col-md-4 text-center mt-5">
+                                    <img
+                                        :src="
+                                            !formFields.photo
+                                                ? misc.thumbnail
+                                                : formFields.photo
+                                        "
+                                        class="img-responsive rounded-circle"
+                                        height="80"
+                                        width="90"
+                                    />
+                                </div>
+                            </div>
+                        </div>
                         <!-- Control Buttons -->
                         <div class="container-fluid mt-5 d-flex p-0">
                             <!-- Reset -->
@@ -115,12 +146,16 @@ export default {
             name: "",
             email: "",
             role_id: "Please select role",
-            password: ""
+            password: "",
+            photo: ""
         },
         misc: {
-            isLoading: false
+            isLoading: false,
+            thumbnail:
+                "https://res.cloudinary.com/cre8tive-technologies/image/upload/v1604580085/aura/Preview-icon_mzat3j.png"
         },
-        roles: []
+        roles: [],
+        supportedFiles: ["image/jpeg", "image/jpg", "image/png"]
     }),
     mounted() {
         this.getRoles();
@@ -130,7 +165,8 @@ export default {
             (this.name = ""),
                 (this.email = ""),
                 (this.role_id = "Please select role"),
-                (this.password = "");
+                (this.password = ""),
+                (this.photo = "");
         },
 
         isLoadingTrue() {
@@ -149,7 +185,7 @@ export default {
                     let message = response.data;
                     this.alertSuccess(message);
                     this.resetFormFields();
-                    this.$router.push({ name: "role" });
+                    this.$router.push({ name: "user" });
                 })
                 .catch(errors => {
                     this.isLoadingFalse();
@@ -165,6 +201,32 @@ export default {
                         );
                     }
                 });
+        },
+
+        selectFile(e) {
+            let files = e.target.files || e.dataTransfer.files;
+            if (!files.length) return;
+            if (
+                this.supportedFiles.includes(files[0]["type"]) &&
+                files[0]["size"] < 3e6
+            ) {
+                this.createImage(files[0]);
+            } else {
+                this.alertError(
+                    "Oops! File Type not Supported OR File too Large [3MB]."
+                );
+            }
+
+            console.log(this.formFields.photo);
+        },
+
+        createImage(file) {
+            let reader = new FileReader();
+            let vm = this;
+            reader.onload = e => {
+                vm.formFields.photo = e.target.result;
+            };
+            reader.readAsDataURL(file);
         },
 
         alertError(message) {
