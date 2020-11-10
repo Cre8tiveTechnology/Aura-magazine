@@ -56,7 +56,7 @@
                                 name: 'post',
                                 params: {
                                     id: articles.data[0].id,
-                                    title: articles.data[0].title
+                                    title: articles.data[0].slug
                                 }
                             }"
                             class="aura-post-title"

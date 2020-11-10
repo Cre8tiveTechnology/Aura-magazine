@@ -29,9 +29,25 @@ export default {
                 this.user = response.data;
             })
             .catch(error => {
-                console.log(error);
-                this.user = "Fake User";
+                console.error(error.response);
+                if (error.response.status == 401) {
+                    this.alertError(
+                        "Your session has expired, please sign in!"
+                    );
+                    localStorage.clear("auth");
+
+                    this.$router.push({ name: "login" });
+                }
             });
+    },
+    methods: {
+        alertError(message) {
+            Vue.$toast.open({
+                message: message,
+                type: "error",
+                position: "top-right"
+            });
+        }
     }
 };
 </script>

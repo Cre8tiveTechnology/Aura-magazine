@@ -201,6 +201,9 @@ export default {
         }
     },
     mounted() {
+        //Google analytics
+        let articleUrl = this.$route.fullPath;
+        this.$ga.page(articleUrl);
         this.getArticle();
         //Updates the views count after 10secs
         setTimeout(this.updateViewsCount, 10000);
