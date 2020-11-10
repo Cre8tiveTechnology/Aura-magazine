@@ -20,6 +20,18 @@ class RoleController extends Controller
     }
 
     /**
+     * Display a listing of the resource - without Pagination.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function rolesIndex()
+    {
+        $roles = Role::latest()->get();
+
+        return response()->json(['roles' => $roles], 200);
+    }
+
+    /**
      * Show the form for creating a new resource.
      *
      * @return \Illuminate\Http\Response
@@ -62,7 +74,6 @@ class RoleController extends Controller
                 500
             );
         }
-
 
     }
 

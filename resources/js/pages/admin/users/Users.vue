@@ -7,14 +7,14 @@
                     <div class="container">
                         <div class="row justify-content-between">
                             <div class="col-xl-8 col-lg-8 col-md-8 col-sm-8">
-                                <h1>ROLES</h1>
+                                <h1>Users</h1>
                             </div>
 
                             <div
                                 class="col-xl-4 col-lg-4 col-md-4 col-sm-4 text-right"
                             >
                                 <router-link
-                                    to="/role/create"
+                                    to="/user/create"
                                     class="btn btn-outline-secondary"
                                     >Create New <i class="fa fa-plus"></i
                                 ></router-link>
@@ -24,52 +24,37 @@
 
                     <!--============== Roles Table ================-->
                     <empty-resource
-                        v-if="roles.data.length === 0"
+                        v-if="users.data.length === 0"
                     ></empty-resource>
 
                     <div class="table-responsive mt-5" v-else>
-                        <marquee
-                            ><span class="text-small text-danger"
-                                ><b>NB: </b>Deleting a <b>Role</b> that has
-                                <b>Users</b> assigned to it already will delete
-                                all <b>Users</b> in that <b>Role</b> and all
-                                associated <b>Data</b> to each
-                                <b>User</b>.</span
-                            ></marquee
-                        >
                         <table class="table shadow-sm">
                             <thead class="table-aura text-center">
                                 <tr>
                                     <th scope="col">Name</th>
-                                    <th scope="col">Desc</th>
-                                    <th scope="col">Key</th>
-                                    <th scope="col">Created by</th>
+                                    <th scope="col">Email</th>
+                                    <th scope="col">Role</th>
                                     <th scope="col">Created at</th>
                                     <th scope="col">Action</th>
                                     <th scope="col">Status</th>
                                 </tr>
                             </thead>
                             <tbody class="text-center">
-                                <tr v-for="role in roles.data" :key="role.id">
+                                <tr v-for="user in users.data" :key="user.id">
                                     <td>
-                                        {{ role.name }}
+                                        {{ user.name }}
+                                    </td>
+                                    <td>{{ user.email }}</td>
+                                    <td>{{ user.role.name }}</td>
+                                    <td>
+                                        {{ user.created_at | formatDate }}
                                     </td>
                                     <td>
-                                        {{ role.description | truncate(40) }}
-                                    </td>
-                                    <td>{{ role.key }}</td>
-                                    <td>{{ role.created_by | splitName }}</td>
-                                    <td>
-                                        {{ role.created_at | formatDate }}
-                                    </td>
-                                    <td>
-                                        <!-- =====Remove Role ======= -->
+                                        <!-- =====Remove user ======= -->
                                         <button
                                             class="btn btn-sm btn-aura"
-                                            data-toggle="tooltip"
-                                            data-placement="top"
-                                            v-if="role.deleted_at === null"
-                                            @click.prevent="removeRole(role.id)"
+                                            v-if="user.deleted_at === null"
+                                            @click.prevent="removeUser(user.id)"
                                         >
                                             <i class="fa fa-trash"></i>
                                         </button>
@@ -79,7 +64,7 @@
                                             class="btn btn-sm btn-aura"
                                             v-else
                                             @click.prevent="
-                                                restoreRole(role.id)
+                                                restoreUser(user.id)
                                             "
                                         >
                                             <i class="fa fa-undo"></i>
@@ -89,7 +74,7 @@
                                     <td>
                                         <span
                                             class="badge badge-pill badge-success"
-                                            v-if="role.deleted_at === null"
+                                            v-if="user.deleted_at === null"
                                             >Active</span
                                         >
                                         <span
@@ -105,8 +90,8 @@
                         <div class="d-flex container mt-5">
                             <pagination
                                 class="btn-aura"
-                                :data="roles"
-                                @pagination-change-page="getRoles"
+                                :data="users"
+                                @pagination-change-page="getUsers"
                             >
                                 <span slot="prev-nav">Previous </span>
                                 <span slot="next-nav">Next</span>
@@ -120,30 +105,29 @@
 </template>
 
 <script>
-import Role from "../../../apis/admin/Role";
+import User from "../../../apis/admin/User";
 export default {
-    name: "Roles",
+    name: "Users",
     data: () => ({
-        roles: {},
+        users: {},
         isLoading: false
     }),
     mounted() {
-        this.getRoles();
+        this.getUsers();
     },
     methods: {
         /* -------------------------------------------------------------------------- */
         /*                               Get Roles                                */
         /* -------------------------------------------------------------------------- */
-        getRoles(page) {
+        getUsers(page) {
             this.isLoading = true;
             if (typeof page === "undefined") {
                 page = 1;
             }
-            let isForRoles = true;
-            Role.listRoles(page, isForRoles)
+            User.listUsers(page)
                 .then(response => {
                     this.isLoading = false;
-                    this.roles = response.data.roles;
+                    this.users = response.data.users;
                 })
                 .catch(err => {
                     this.isLoading = false;
@@ -156,19 +140,19 @@ export default {
         /*                               Remove Role                               */
         /* -------------------------------------------------------------------------- */
 
-        removeRole(role) {
-            Role.removeRole(role)
+        removeUser(user) {
+            User.removeUser(user)
                 .then(response => {
                     if (response.status == 200) {
                         this.alertSuccess(response.data);
                     }
-                    //Fetch roles
-                    this.getRoles();
+                    //Fetch users
+                    this.getUsers();
                 })
                 .catch(error => {
                     if (error.response.status == 404) {
                         this.alertError(
-                            "The role you are trying to remove does not exist."
+                            "The user you are trying to remove does not exist."
                         );
                     }
                     console.error(error);
@@ -178,21 +162,21 @@ export default {
         /* -------------------------------------------------------------------------- */
         /*                               Restore Role                               */
         /* -------------------------------------------------------------------------- */
-        restoreRole(role) {
-            Role.restoreRole({
-                id: role
+        restoreUser(user) {
+            User.restoreUser({
+                id: user
             })
                 .then(response => {
                     if (response.status == 200) {
                         this.alertSuccess(response.data);
                     }
                     //Fetch role
-                    this.getRoles();
+                    this.getUsers();
                 })
                 .catch(error => {
                     if (error.response.status == 404) {
                         this.alertError(
-                            "The role you are trying to restore does not exist."
+                            "The user you are trying to restore does not exist."
                         );
                     }
                     console.error(error);

@@ -25,6 +25,10 @@ import CreateArticle from './pages/admin/articles/CreateArticle.vue'
 import Role from './pages/admin/roles/Roles.vue'
 import CreateRole from './pages/admin/roles/CreateRole.vue'
 import Dashboard from './pages/admin/Dashboard.vue'
+import User from './pages/admin/users/Users.vue'
+import CreateUser from './pages/admin/users/CreateUser.vue'
+
+
 
 export const routes = [
     {
@@ -220,6 +224,26 @@ export const routes = [
         name: 'createRole',
         path: '/role/create',
         component: CreateRole,
+        meta: {
+            authOnly: true,
+            showProgressBar: true,
+        },
+    },
+    {
+        name: 'user',
+        path: '/users',
+        component: User,
+        meta: {
+            authOnly: true,
+            superAdminOnly: true,
+            showProgressBar: true,
+        },
+    },
+
+    {
+        name: 'createUser',
+        path: '/user/create',
+        component: CreateUser,
         meta: {
             authOnly: true,
             showProgressBar: true,

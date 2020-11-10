@@ -4,7 +4,7 @@
             <template v-slot:content>
                 <div class="content">
                     <h5 class="input-label">
-                        Add a new Role <i class="fa fa-tasks"></i>
+                        Add a new User <i class="fa fa-user"></i>
                     </h5>
 
                     <aura-loader v-if="misc.isLoading"></aura-loader>
@@ -26,25 +26,53 @@
                                     v-model="formFields.name"
                                     id="name"
                                     autocomplete="off"
-                                    placeholder="Please Provide a Suitable Name"
+                                    placeholder="Please Provide User's Name"
                                 />
                             </div>
                         </div>
 
                         <!-- Description Field -->
                         <div class="mt-4">
-                            <h5 class="input-label">Description</h5>
+                            <h5 class="input-label">Email</h5>
                             <div class="form-group">
-                                <textarea
-                                    name="description"
-                                    v-model="formFields.description"
-                                    id="description"
-                                    autocomplete="off"
+                                <input
+                                    type="text"
                                     class="input-control form-control"
-                                ></textarea>
+                                    name="name"
+                                    v-model="formFields.email"
+                                    id="name"
+                                    autocomplete="off"
+                                    placeholder="Please Provide a Valid Email Address"
+                                />
                             </div>
                         </div>
 
+                        <!-- Password Field -->
+                        <div class="mt-4">
+                            <h5 class="input-label">Password</h5>
+                            <div class="form-group">
+                                <input
+                                    type="text"
+                                    class="input-control form-control"
+                                    name="name"
+                                    v-model="formFields.password"
+                                    id="name"
+                                    autocomplete="off"
+                                    placeholder="Please Provide a Secured Password"
+                                />
+                            </div>
+                        </div>
+                        <div class="mt-4">
+                            <h5 class="input-label">Select User Role</h5>
+                            <v-select
+                                label="name"
+                                :options="roles"
+                                :reduce="role => role.id"
+                                v-model="formFields.role_id"
+                                aria-placeholder="Please select user role"
+                            >
+                            </v-select>
+                        </div>
                         <!-- Control Buttons -->
                         <div class="container-fluid mt-5 d-flex p-0">
                             <!-- Reset -->
@@ -61,9 +89,9 @@
                             <div class="ml-4">
                                 <button
                                     class="btn btn-md btn-success"
-                                    @click.prevent="createRole"
+                                    @click.prevent="createUser"
                                 >
-                                    CREATE ROLE
+                                    SAVE
                                     <i class="fa fa-cloud-upload"></i>
                                 </button>
                             </div>
@@ -76,26 +104,33 @@
 </template>
 
 <script>
+import User from "../../../apis/admin/User";
 import Role from "../../../apis/admin/Role";
 
 export default {
-    name: "CreateRole",
+    name: "CreateUser",
     data: () => ({
         validationErrors: "",
         formFields: {
-            title: "",
-            description: "Please Provide an Explicit Description"
+            name: "",
+            email: "",
+            role_id: "Please select role",
+            password: ""
         },
         misc: {
             isLoading: false
-        }
+        },
+        roles: []
     }),
-
+    mounted() {
+        this.getRoles();
+    },
     methods: {
         resetFormFields() {
-            this.formFields.title = "";
-            this.formFields.description =
-                "Please Provide an Explicit Description";
+            (this.name = ""),
+                (this.email = ""),
+                (this.role_id = "Please select role"),
+                (this.password = "");
         },
 
         isLoadingTrue() {
@@ -106,9 +141,9 @@ export default {
             this.misc.isLoading = false;
         },
 
-        createRole() {
+        createUser() {
             this.isLoadingTrue();
-            Role.createRole(this.formFields)
+            User.register(this.formFields)
                 .then(response => {
                     this.isLoadingFalse();
                     let message = response.data;
@@ -154,9 +189,21 @@ export default {
                 type: "success",
                 position: "top-right"
             });
+        },
+        getRoles() {
+            this.isLoading = true;
+            Role.listRoles()
+                .then(response => {
+                    this.isLoading = false;
+                    this.roles = response.data.roles;
+                    console.log(this.roles);
+                })
+                .catch(err => {
+                    this.isLoading = false;
+                    let message = err.response.data.message;
+                    this.alertError(message);
+                });
         }
     }
 };
 </script>
-
-<style></style>

@@ -29,9 +29,19 @@ Route::group(['name' => 'article.', 'prefix' => 'article', 'middleware' => 'auth
 /* -------------------------------------------------------------------------- */
 Route::group(['name' => 'role.', 'prefix' => 'role', 'middleware' => ['auth:sanctum', 'role:superadmin']], function () {
     Route::get('/all', 'RoleController@index')->name('all');
+    Route::get('/rolesIndex', 'RoleController@rolesIndex')->name('rolesIndex');
     Route::post('/create', 'RoleController@store')->name('store');
     Route::delete('/remove/{role}', 'RoleController@destroy')->name('remove');
     Route::post('/restore', 'RoleController@restore')->name('restore');
+});
+
+/* -------------------------------------------------------------------------- */
+/*                                Users API                                */
+/* -------------------------------------------------------------------------- */
+Route::group(['name' => 'user.', 'prefix' => 'user', 'middleware' => ['auth:sanctum', 'role:superadmin']], function () {
+    Route::get('/all', 'UserController@index')->name('all');
+    Route::delete('/remove/{user}', 'UserController@destroy')->name('remove');
+    Route::post('/restore', 'UserController@restore')->name('restore');
 });
 
 /* -------------------------------------------------------------------------- */
