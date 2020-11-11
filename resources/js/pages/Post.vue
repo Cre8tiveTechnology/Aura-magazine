@@ -23,7 +23,19 @@
         >
           <h1>{{ article.title }}</h1>
           <hr class="story-card-hr mx-auto" />
-          <i class="mt-4 fa fa-user"></i> {{ article.user_name }}
+          <router-link
+            :to="{
+              name: 'authorArticles',
+              params: {
+                id: article.user_id,
+                name: article.user_name,
+              },
+            }"
+            class="aura-post-title"
+          >
+            <i class="mt-4 fa fa-user"></i> {{ article.user_name }}
+          </router-link>
+
           <p class="mt-4 post-intro">
             {{ article.description | truncate(150) }}
           </p>
@@ -59,7 +71,18 @@
         >
           <div style="background: rgba(0, 0, 0, 0.7)" class="p-4">
             <h1 class="card-title">{{ article.title }}</h1>
-            <i class="mt-4 fa fa-user"></i> {{ article.user_name }}
+            <router-link
+              :to="{
+                name: 'authorArticles',
+                params: {
+                  id: article.user_id,
+                  name: article.user_name,
+                },
+              }"
+              class="aura-post-title"
+            >
+              <i class="mt-4 fa fa-user"></i> {{ article.user_name }}
+            </router-link>
           </div>
         </div>
       </div>
@@ -138,9 +161,19 @@
                     {{ r.title }}
                   </h5>
                   <span class="card-title">
-                    <i class="fa fa-user"></i>
-                    {{ r.user_name }}</span
-                  >
+                    <router-link
+                      :to="{
+                        name: 'authorArticles',
+                        params: {
+                          id: r.user_id,
+                          name: r.user_name,
+                        },
+                      }"
+                      class="aura-post-title"
+                    >
+                      <i class="mt-4 fa fa-user"></i> {{ r.user_name }}
+                    </router-link>
+                  </span>
                 </div>
               </div>
             </div>

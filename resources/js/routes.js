@@ -7,6 +7,7 @@ import Beauty from './pages/Beauty.vue'
 import Fashion from './pages/Fashion.vue'
 import Culture from './pages/Culture.vue'
 import AskRuby from './pages/AskRuby.vue'
+import AuthorArticles from './pages/AuthorArticles.vue'
 import SexAndRelationship from './pages/SexAndRelationship.vue'
 import Magazine from './pages/Magazine.vue'
 import Post from './pages/Post.vue'
@@ -93,7 +94,6 @@ export const routes = [
     },
   },
 
-
   {
     name: 'culture',
     path: '/category/culture',
@@ -125,6 +125,16 @@ export const routes = [
     name: 'post',
     path: '/post/:id/:title',
     component: Post,
+    meta: {
+      showProgressBar: true,
+    },
+    props: true,
+  },
+
+  {
+    name: 'authorArticles',
+    path: '/author/:id/:name',
+    component: AuthorArticles,
     meta: {
       showProgressBar: true,
     },

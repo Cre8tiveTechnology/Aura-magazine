@@ -3394,6 +3394,29 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: "AskRuby",
@@ -3433,6 +3456,106 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/pages/AuthorArticles.vue?vue&type=script&lang=js&":
+/*!********************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/pages/AuthorArticles.vue?vue&type=script&lang=js& ***!
+  \********************************************************************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _apis_client_Article__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../apis/client/Article */ "./resources/js/apis/client/Article.js");
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+  name: "Post",
+  props: {
+    name: String,
+    id: String
+  },
+  mounted: function mounted() {
+    //Google analytics
+    var authorarticleUrl = this.$route.fullPath;
+    this.$ga.page(authorarticleUrl);
+    this.getArticle();
+  },
+  watch: {
+    $route: function $route() {
+      this.getArticle();
+    }
+  },
+  methods: {
+    scrollToTop: function scrollToTop() {
+      window.scrollTo(0, 0);
+    },
+    navigate: function navigate(r) {
+      this.$router.push({
+        name: "post",
+        params: {
+          id: r.id,
+          title: r.slug
+        }
+      });
+    },
+    getArticle: function getArticle(article) {
+      var _this = this;
+
+      article = this.id;
+      _apis_client_Article__WEBPACK_IMPORTED_MODULE_0__["default"].getArticle(article).then(function (response) {
+        _this.article = response.data.article;
+        _this.recommendations = response.data.recommendations;
+      })["catch"](function (err) {
+        var message = err.response.data.message;
+        console.log(message);
+      });
+      this.scrollToTop();
+    },
+    updateViewsCount: function updateViewsCount() {
+      var article = {
+        id: this.id
+      };
+      _apis_client_Article__WEBPACK_IMPORTED_MODULE_0__["default"].updateViewsCount(article).then(function (response) {
+        console.info(response.data);
+      })["catch"](function (error) {
+        console.error(error.data);
+      });
+    }
+  },
+  data: function data() {
+    return {
+      article: {},
+      hasImages: false,
+      post: {
+        images: ["https://images.unsplash.com/photo-1483985988355-763728e1935b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80", "https://images.unsplash.com/photo-1483985988355-763728e1935b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80", "https://images.unsplash.com/photo-1483985988355-763728e1935b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80", "https://images.unsplash.com/photo-1483985988355-763728e1935b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80"]
+      },
+      recommendations: [],
+      links: {
+        Culture: "CULTURE",
+        Beauty: "BEAUTY",
+        "Ask Ruby": "ASKRUBY",
+        Fashion: "FASHION",
+        "Sex and Relationship": "SEX/RELATIONSHIP",
+        News: "NEWS"
+      }
+    };
+  }
+});
+
+/***/ }),
+
 /***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/pages/Beauty.vue?vue&type=script&lang=js&":
 /*!************************************************************************************************************************************************************!*\
   !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/pages/Beauty.vue?vue&type=script&lang=js& ***!
@@ -3443,6 +3566,25 @@ __webpack_require__.r(__webpack_exports__);
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _apis_client_Article__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../apis/client/Article */ "./resources/js/apis/client/Article.js");
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 //
 //
 //
@@ -3803,6 +3945,28 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: "Culture",
@@ -3852,6 +4016,25 @@ __webpack_require__.r(__webpack_exports__);
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _apis_client_Article__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../apis/client/Article */ "./resources/js/apis/client/Article.js");
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 //
 //
 //
@@ -5621,6 +5804,25 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: "News",
@@ -5670,6 +5872,39 @@ __webpack_require__.r(__webpack_exports__);
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _apis_client_Article__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../apis/client/Article */ "./resources/js/apis/client/Article.js");
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 //
 //
 //
@@ -5937,6 +6172,25 @@ __webpack_require__.r(__webpack_exports__);
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _apis_client_Article__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../apis/client/Article */ "./resources/js/apis/client/Article.js");
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 //
 //
 //
@@ -7553,14 +7807,6 @@ __webpack_require__.r(__webpack_exports__);
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _apis_admin_User__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../../apis/admin/User */ "./resources/js/apis/admin/User.js");
 /* harmony import */ var _apis_admin_Role__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../apis/admin/Role */ "./resources/js/apis/admin/Role.js");
-//
-//
-//
-//
-//
-//
-//
-//
 //
 //
 //
@@ -13336,6 +13582,25 @@ exports.push([module.i, "@import url(https://fonts.googleapis.com/css?family=Fir
 
 // module
 exports.push([module.i, "\n/*Variables */\n.left-section .inner-content[data-v-82158542] {\n  position: absolute;\n  top: 50%;\n  transform: translateY(-50%);\n}\n*[data-v-82158542] {\n  box-sizing: border-box;\n}\nhtml[data-v-82158542],\nbody[data-v-82158542] {\n  margin: 0;\n  padding: 0;\n}\nbody[data-v-82158542] {\n  font-family: \"Fira Sans\", sans-serif;\n  color: #f5f6fa;\n}\n.background[data-v-82158542] {\n  position: absolute;\n  top: 0;\n  left: 0;\n  width: 100%;\n  height: 100%;\n  background: linear-gradient(#0c0e10, #446182);\n}\n.background .ground[data-v-82158542] {\n  position: absolute;\n  bottom: 0;\n  width: 100%;\n  height: 25vh;\n  background: #0c0e10;\n}\n@media (max-width: 770px) {\n.background .ground[data-v-82158542] {\n    height: 0vh;\n}\n}\n.container[data-v-82158542] {\n  position: relative;\n  margin: 0 auto;\n  width: 85%;\n  height: 100vh;\n  padding-bottom: 25vh;\n  display: flex;\n  flex-direction: row;\n  justify-content: space-around;\n}\n@media (max-width: 770px) {\n.container[data-v-82158542] {\n    flex-direction: column;\n    padding-bottom: 0vh;\n}\n}\n.left-section[data-v-82158542],\n.right-section[data-v-82158542] {\n  position: relative;\n}\n.left-section[data-v-82158542] {\n  width: 40%;\n}\n@media (max-width: 770px) {\n.left-section[data-v-82158542] {\n    width: 100%;\n    height: 40%;\n    position: absolute;\n    top: 0;\n}\n}\n@media (max-width: 770px) {\n.left-section .inner-content[data-v-82158542] {\n    position: relative;\n    padding: 1rem 0;\n}\n}\n.heading[data-v-82158542] {\n  text-align: center;\n  font-size: 9em;\n  line-height: 1.3em;\n  margin: 2rem 0 0.5rem 0;\n  padding: 0;\n  text-shadow: 0 0 1rem #fefefe;\n}\n@media (max-width: 770px) {\n.heading[data-v-82158542] {\n    font-size: 7em;\n    line-height: 1.15;\n    margin: 0;\n}\n}\n.subheading[data-v-82158542] {\n  text-align: center;\n  max-width: 480px;\n  font-size: 1.5em;\n  line-height: 1.15em;\n  padding: 0 1rem;\n  margin: 0 auto;\n}\n@media (max-width: 770px) {\n.subheading[data-v-82158542] {\n    font-size: 1.3em;\n    line-height: 1.15;\n    max-width: 100%;\n}\n}\n.right-section[data-v-82158542] {\n  width: 50%;\n}\n@media (max-width: 770px) {\n.right-section[data-v-82158542] {\n    width: 100%;\n    height: 60%;\n    position: absolute;\n    bottom: 0;\n}\n}\n.svgimg[data-v-82158542] {\n  position: absolute;\n  bottom: 0;\n  padding-top: 10vh;\n  padding-left: 1vh;\n  max-width: 100%;\n  max-height: 100%;\n}\n@media (max-width: 770px) {\n.svgimg[data-v-82158542] {\n    padding: 0;\n}\n}\n.svgimg .bench-legs[data-v-82158542] {\n  fill: #0c0e10;\n}\n.svgimg .top-bench[data-v-82158542],\n.svgimg .bottom-bench[data-v-82158542] {\n  stroke: #0c0e10;\n  stroke-width: 1px;\n  fill: #5b3e2b;\n}\n.svgimg .bottom-bench path[data-v-82158542]:nth-child(1) {\n  fill: #432d20;\n}\n.svgimg .lamp-details[data-v-82158542] {\n  fill: #202425;\n}\n.svgimg .lamp-accent[data-v-82158542] {\n  fill: #2c3133;\n}\n.svgimg .lamp-bottom[data-v-82158542] {\n  fill: linear-gradient(#202425, #0c0e10);\n}\n.svgimg .lamp-light[data-v-82158542] {\n  fill: #efefef;\n}\n@-webkit-keyframes glow-data-v-82158542 {\n0% {\n    text-shadow: 0 0 1rem #fefefe;\n}\n50% {\n    text-shadow: 0 0 1.85rem #ededed;\n}\n100% {\n    text-shadow: 0 0 1rem #fefefe;\n}\n}\n@keyframes glow-data-v-82158542 {\n0% {\n    text-shadow: 0 0 1rem #fefefe;\n}\n50% {\n    text-shadow: 0 0 1.85rem #ededed;\n}\n100% {\n    text-shadow: 0 0 1rem #fefefe;\n}\n}\n", ""]);
+
+// exports
+
+
+/***/ }),
+
+/***/ "./node_modules/css-loader/index.js?!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/pages/AuthorArticles.vue?vue&type=style&index=0&id=60337ab1&scoped=true&lang=css&":
+/*!***************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/css-loader??ref--6-1!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src??ref--6-2!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/pages/AuthorArticles.vue?vue&type=style&index=0&id=60337ab1&scoped=true&lang=css& ***!
+  \***************************************************************************************************************************************************************************************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loader/lib/css-base.js */ "./node_modules/css-loader/lib/css-base.js")(false);
+// imports
+
+
+// module
+exports.push([module.i, "\n.recom-link[data-v-60337ab1] {\n  cursor: pointer;\n  transition: 0.4s all;\n  transition-timing-function: ease-in-out;\n}\n.recom-link[data-v-60337ab1]:hover {\n  transform: scale(1.05);\n}\n", ""]);
 
 // exports
 
@@ -46752,6 +47017,36 @@ if(false) {}
 
 /***/ }),
 
+/***/ "./node_modules/style-loader/index.js!./node_modules/css-loader/index.js?!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/pages/AuthorArticles.vue?vue&type=style&index=0&id=60337ab1&scoped=true&lang=css&":
+/*!*******************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/style-loader!./node_modules/css-loader??ref--6-1!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src??ref--6-2!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/pages/AuthorArticles.vue?vue&type=style&index=0&id=60337ab1&scoped=true&lang=css& ***!
+  \*******************************************************************************************************************************************************************************************************************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+
+var content = __webpack_require__(/*! !../../../node_modules/css-loader??ref--6-1!../../../node_modules/vue-loader/lib/loaders/stylePostLoader.js!../../../node_modules/postcss-loader/src??ref--6-2!../../../node_modules/vue-loader/lib??vue-loader-options!./AuthorArticles.vue?vue&type=style&index=0&id=60337ab1&scoped=true&lang=css& */ "./node_modules/css-loader/index.js?!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/pages/AuthorArticles.vue?vue&type=style&index=0&id=60337ab1&scoped=true&lang=css&");
+
+if(typeof content === 'string') content = [[module.i, content, '']];
+
+var transform;
+var insertInto;
+
+
+
+var options = {"hmr":true}
+
+options.transform = transform
+options.insertInto = undefined;
+
+var update = __webpack_require__(/*! ../../../node_modules/style-loader/lib/addStyles.js */ "./node_modules/style-loader/lib/addStyles.js")(content, options);
+
+if(content.locals) module.exports = content.locals;
+
+if(false) {}
+
+/***/ }),
+
 /***/ "./node_modules/style-loader/index.js!./node_modules/css-loader/index.js?!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/pages/Post.vue?vue&type=style&index=0&id=1f9218ae&scoped=true&lang=css&":
 /*!*********************************************************************************************************************************************************************************************************************************************************************************************************************!*\
   !*** ./node_modules/style-loader!./node_modules/css-loader??ref--6-1!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src??ref--6-2!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/pages/Post.vue?vue&type=style&index=0&id=1f9218ae&scoped=true&lang=css& ***!
@@ -49243,14 +49538,35 @@ var render = function() {
                     )
                   ]),
                   _vm._v(" "),
-                  _c("span", [
-                    _c("i", { staticClass: "fa fa-user" }),
-                    _vm._v(
-                      "\n          " +
-                        _vm._s(_vm.articles.data[0].user.name) +
-                        "\n        "
-                    )
-                  ])
+                  _c(
+                    "span",
+                    [
+                      _c(
+                        "router-link",
+                        {
+                          staticClass: "aura-post-title",
+                          attrs: {
+                            to: {
+                              name: "authorArticles",
+                              params: {
+                                id: _vm.articles.data[0].user.id,
+                                name: _vm.articles.data[0].user.name
+                              }
+                            }
+                          }
+                        },
+                        [
+                          _c("i", { staticClass: "fa fa-user" }),
+                          _vm._v(
+                            "\n            " +
+                              _vm._s(_vm.articles.data[0].user.name) +
+                              "\n          "
+                          )
+                        ]
+                      )
+                    ],
+                    1
+                  )
                 ])
               ]),
               _vm._v(" "),
@@ -49341,7 +49657,7 @@ var render = function() {
                                               name: "post",
                                               params: {
                                                 id: article.id,
-                                                title: article.title
+                                                title: article.slug
                                               }
                                             }
                                           }
@@ -49371,14 +49687,37 @@ var render = function() {
                                     )
                                   ]),
                                   _vm._v(" "),
-                                  _c("span", [
-                                    _c("i", { staticClass: "fa fa-user" }),
-                                    _vm._v(
-                                      "\n              " +
-                                        _vm._s(article.user.name) +
-                                        "\n            "
-                                    )
-                                  ])
+                                  _c(
+                                    "span",
+                                    [
+                                      _c(
+                                        "router-link",
+                                        {
+                                          staticClass: "aura-post-title",
+                                          attrs: {
+                                            to: {
+                                              name: "authorArticles",
+                                              params: {
+                                                id: article.user.id,
+                                                name: article.user.name
+                                              }
+                                            }
+                                          }
+                                        },
+                                        [
+                                          _c("i", {
+                                            staticClass: "fa fa-user"
+                                          }),
+                                          _vm._v(
+                                            "\n                " +
+                                              _vm._s(article.user.name) +
+                                              "\n              "
+                                          )
+                                        ]
+                                      )
+                                    ],
+                                    1
+                                  )
                                 ]
                               )
                             ]
@@ -49443,6 +49782,40 @@ var staticRenderFns = [
     ])
   }
 ]
+render._withStripped = true
+
+
+
+/***/ }),
+
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/pages/AuthorArticles.vue?vue&type=template&id=60337ab1&scoped=true&":
+/*!************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/pages/AuthorArticles.vue?vue&type=template&id=60337ab1&scoped=true& ***!
+  \************************************************************************************************************************************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "render", function() { return render; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return staticRenderFns; });
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c(
+    "div",
+    [
+      _c("navbar", { attrs: { current: _vm.links[_vm.article.category] } }),
+      _vm._v(" "),
+      _vm._v("\n  " + _vm._s(_vm.name) + "\n  " + _vm._s(_vm.id) + "\n  "),
+      _vm._v(" "),
+      _c("user-footer")
+    ],
+    1
+  )
+}
+var staticRenderFns = []
 render._withStripped = true
 
 
@@ -49553,9 +49926,9 @@ var render = function() {
                         },
                         [
                           _vm._v(
-                            "\n                        " +
+                            "\n            " +
                               _vm._s(_vm.articles.data[0].title) +
-                              "\n                    "
+                              "\n          "
                           )
                         ]
                       )
@@ -49565,25 +49938,46 @@ var render = function() {
                   _vm._v(" "),
                   _c("p", { staticClass: "mt-3" }, [
                     _vm._v(
-                      "\n                    " +
+                      "\n          " +
                         _vm._s(
                           _vm._f("truncate")(
                             _vm.articles.data[0].description,
                             100
                           )
                         ) +
-                        "\n                "
+                        "\n        "
                     )
                   ]),
                   _vm._v(" "),
-                  _c("span", [
-                    _c("i", { staticClass: "fa fa-user" }),
-                    _vm._v(
-                      "\n                    " +
-                        _vm._s(_vm.articles.data[0].user.name) +
-                        "\n                "
-                    )
-                  ])
+                  _c(
+                    "span",
+                    [
+                      _c(
+                        "router-link",
+                        {
+                          staticClass: "aura-post-title",
+                          attrs: {
+                            to: {
+                              name: "authorArticles",
+                              params: {
+                                id: _vm.articles.data[0].user.id,
+                                name: _vm.articles.data[0].user.name
+                              }
+                            }
+                          }
+                        },
+                        [
+                          _c("i", { staticClass: "fa fa-user" }),
+                          _vm._v(
+                            "\n            " +
+                              _vm._s(_vm.articles.data[0].user.name) +
+                              "\n          "
+                          )
+                        ]
+                      )
+                    ],
+                    1
+                  )
                 ])
               ]),
               _vm._v(" "),
@@ -49674,16 +50068,16 @@ var render = function() {
                                               name: "post",
                                               params: {
                                                 id: article.id,
-                                                title: article.title
+                                                title: article.slug
                                               }
                                             }
                                           }
                                         },
                                         [
                                           _vm._v(
-                                            "\n                                " +
+                                            "\n                " +
                                               _vm._s(article.title) +
-                                              "\n                            "
+                                              "\n              "
                                           )
                                         ]
                                       )
@@ -49693,25 +50087,48 @@ var render = function() {
                                   _vm._v(" "),
                                   _c("p", { staticClass: "mt-3" }, [
                                     _vm._v(
-                                      "\n                            " +
+                                      "\n              " +
                                         _vm._s(
                                           _vm._f("truncate")(
                                             article.description,
                                             100
                                           )
                                         ) +
-                                        "\n                        "
+                                        "\n            "
                                     )
                                   ]),
                                   _vm._v(" "),
-                                  _c("span", [
-                                    _c("i", { staticClass: "fa fa-user" }),
-                                    _vm._v(
-                                      "\n                            " +
-                                        _vm._s(article.user.name) +
-                                        "\n                        "
-                                    )
-                                  ])
+                                  _c(
+                                    "span",
+                                    [
+                                      _c(
+                                        "router-link",
+                                        {
+                                          staticClass: "aura-post-title",
+                                          attrs: {
+                                            to: {
+                                              name: "authorArticles",
+                                              params: {
+                                                id: article.user.id,
+                                                name: article.user.name
+                                              }
+                                            }
+                                          }
+                                        },
+                                        [
+                                          _c("i", {
+                                            staticClass: "fa fa-user"
+                                          }),
+                                          _vm._v(
+                                            "\n                " +
+                                              _vm._s(article.user.name) +
+                                              "\n              "
+                                          )
+                                        ]
+                                      )
+                                    ],
+                                    1
+                                  )
                                 ]
                               )
                             ]
@@ -49909,14 +50326,35 @@ var render = function() {
                     )
                   ]),
                   _vm._v(" "),
-                  _c("span", [
-                    _c("i", { staticClass: "fa fa-user" }),
-                    _vm._v(
-                      "\n          " +
-                        _vm._s(_vm.articles.data[0].user.name) +
-                        "\n        "
-                    )
-                  ])
+                  _c(
+                    "span",
+                    [
+                      _c(
+                        "router-link",
+                        {
+                          staticClass: "aura-post-title",
+                          attrs: {
+                            to: {
+                              name: "authorArticles",
+                              params: {
+                                id: _vm.articles.data[0].user.id,
+                                name: _vm.articles.data[0].user.name
+                              }
+                            }
+                          }
+                        },
+                        [
+                          _c("i", { staticClass: "fa fa-user" }),
+                          _vm._v(
+                            "\n            " +
+                              _vm._s(_vm.articles.data[0].user.name) +
+                              "\n          "
+                          )
+                        ]
+                      )
+                    ],
+                    1
+                  )
                 ])
               ]),
               _vm._v(" "),
@@ -50037,14 +50475,37 @@ var render = function() {
                                     )
                                   ]),
                                   _vm._v(" "),
-                                  _c("span", [
-                                    _c("i", { staticClass: "fa fa-user" }),
-                                    _vm._v(
-                                      "\n              " +
-                                        _vm._s(article.user.name) +
-                                        "\n            "
-                                    )
-                                  ])
+                                  _c(
+                                    "span",
+                                    [
+                                      _c(
+                                        "router-link",
+                                        {
+                                          staticClass: "aura-post-title",
+                                          attrs: {
+                                            to: {
+                                              name: "authorArticles",
+                                              params: {
+                                                id: article.user.id,
+                                                name: article.user.name
+                                              }
+                                            }
+                                          }
+                                        },
+                                        [
+                                          _c("i", {
+                                            staticClass: "fa fa-user"
+                                          }),
+                                          _vm._v(
+                                            "\n                " +
+                                              _vm._s(article.user.name) +
+                                              "\n              "
+                                          )
+                                        ]
+                                      )
+                                    ],
+                                    1
+                                  )
                                 ]
                               )
                             ]
@@ -50219,9 +50680,9 @@ var render = function() {
                         },
                         [
                           _vm._v(
-                            "\n                        " +
+                            "\n            " +
                               _vm._s(_vm.articles.data[0].title) +
-                              "\n                    "
+                              "\n          "
                           )
                         ]
                       )
@@ -50231,25 +50692,46 @@ var render = function() {
                   _vm._v(" "),
                   _c("p", { staticClass: "mt-3" }, [
                     _vm._v(
-                      "\n                    " +
+                      "\n          " +
                         _vm._s(
                           _vm._f("truncate")(
                             _vm.articles.data[0].description,
                             100
                           )
                         ) +
-                        "\n                "
+                        "\n        "
                     )
                   ]),
                   _vm._v(" "),
-                  _c("span", [
-                    _c("i", { staticClass: "fa fa-user" }),
-                    _vm._v(
-                      "\n                    " +
-                        _vm._s(_vm.articles.data[0].user.name) +
-                        "\n                "
-                    )
-                  ])
+                  _c(
+                    "span",
+                    [
+                      _c(
+                        "router-link",
+                        {
+                          staticClass: "aura-post-title",
+                          attrs: {
+                            to: {
+                              name: "authorArticles",
+                              params: {
+                                id: _vm.articles.data[0].user.id,
+                                name: _vm.articles.data[0].user.name
+                              }
+                            }
+                          }
+                        },
+                        [
+                          _c("i", { staticClass: "fa fa-user" }),
+                          _vm._v(
+                            "\n            " +
+                              _vm._s(_vm.articles.data[0].user.name) +
+                              "\n          "
+                          )
+                        ]
+                      )
+                    ],
+                    1
+                  )
                 ])
               ]),
               _vm._v(" "),
@@ -50340,16 +50822,16 @@ var render = function() {
                                               name: "post",
                                               params: {
                                                 id: article.id,
-                                                title: article.title
+                                                title: article.slug
                                               }
                                             }
                                           }
                                         },
                                         [
                                           _vm._v(
-                                            "\n                                " +
+                                            "\n                " +
                                               _vm._s(article.title) +
-                                              "\n                            "
+                                              "\n              "
                                           )
                                         ]
                                       )
@@ -50359,25 +50841,48 @@ var render = function() {
                                   _vm._v(" "),
                                   _c("p", { staticClass: "mt-3" }, [
                                     _vm._v(
-                                      "\n                            " +
+                                      "\n              " +
                                         _vm._s(
                                           _vm._f("truncate")(
                                             article.description,
                                             100
                                           )
                                         ) +
-                                        "\n                        "
+                                        "\n            "
                                     )
                                   ]),
                                   _vm._v(" "),
-                                  _c("span", [
-                                    _c("i", { staticClass: "fa fa-user" }),
-                                    _vm._v(
-                                      "\n                            " +
-                                        _vm._s(article.user.name) +
-                                        "\n                        "
-                                    )
-                                  ])
+                                  _c(
+                                    "span",
+                                    [
+                                      _c(
+                                        "router-link",
+                                        {
+                                          staticClass: "aura-post-title",
+                                          attrs: {
+                                            to: {
+                                              name: "authorArticles",
+                                              params: {
+                                                id: article.user.id,
+                                                name: article.user.name
+                                              }
+                                            }
+                                          }
+                                        },
+                                        [
+                                          _c("i", {
+                                            staticClass: "fa fa-user"
+                                          }),
+                                          _vm._v(
+                                            "\n                " +
+                                              _vm._s(article.user.name) +
+                                              "\n              "
+                                          )
+                                        ]
+                                      )
+                                    ],
+                                    1
+                                  )
                                 ]
                               )
                             ]
@@ -52931,9 +53436,9 @@ var render = function() {
                         },
                         [
                           _vm._v(
-                            "\n                        " +
+                            "\n            " +
                               _vm._s(_vm.articles.data[0].title) +
-                              "\n                    "
+                              "\n          "
                           )
                         ]
                       )
@@ -52943,25 +53448,46 @@ var render = function() {
                   _vm._v(" "),
                   _c("p", { staticClass: "mt-3" }, [
                     _vm._v(
-                      "\n                    " +
+                      "\n          " +
                         _vm._s(
                           _vm._f("truncate")(
                             _vm.articles.data[0].description,
                             100
                           )
                         ) +
-                        "\n                "
+                        "\n        "
                     )
                   ]),
                   _vm._v(" "),
-                  _c("span", [
-                    _c("i", { staticClass: "fa fa-user" }),
-                    _vm._v(
-                      "\n                    " +
-                        _vm._s(_vm.articles.data[0].user.name) +
-                        "\n                "
-                    )
-                  ])
+                  _c(
+                    "span",
+                    [
+                      _c(
+                        "router-link",
+                        {
+                          staticClass: "aura-post-title",
+                          attrs: {
+                            to: {
+                              name: "authorArticles",
+                              params: {
+                                id: _vm.articles.data[0].user.id,
+                                name: _vm.articles.data[0].user.name
+                              }
+                            }
+                          }
+                        },
+                        [
+                          _c("i", { staticClass: "fa fa-user" }),
+                          _vm._v(
+                            "\n            " +
+                              _vm._s(_vm.articles.data[0].user.name) +
+                              "\n          "
+                          )
+                        ]
+                      )
+                    ],
+                    1
+                  )
                 ])
               ]),
               _vm._v(" "),
@@ -53059,9 +53585,9 @@ var render = function() {
                                         },
                                         [
                                           _vm._v(
-                                            "\n                                " +
+                                            "\n                " +
                                               _vm._s(article.title) +
-                                              "\n                            "
+                                              "\n              "
                                           )
                                         ]
                                       )
@@ -53071,25 +53597,48 @@ var render = function() {
                                   _vm._v(" "),
                                   _c("p", { staticClass: "mt-3" }, [
                                     _vm._v(
-                                      "\n                            " +
+                                      "\n              " +
                                         _vm._s(
                                           _vm._f("truncate")(
                                             article.description,
                                             100
                                           )
                                         ) +
-                                        "\n                        "
+                                        "\n            "
                                     )
                                   ]),
                                   _vm._v(" "),
-                                  _c("span", [
-                                    _c("i", { staticClass: "fa fa-user" }),
-                                    _vm._v(
-                                      "\n                            " +
-                                        _vm._s(article.user.name) +
-                                        "\n                        "
-                                    )
-                                  ])
+                                  _c(
+                                    "span",
+                                    [
+                                      _c(
+                                        "router-link",
+                                        {
+                                          staticClass: "aura-post-title",
+                                          attrs: {
+                                            to: {
+                                              name: "authorArticles",
+                                              params: {
+                                                id: article.user.id,
+                                                name: article.user.name
+                                              }
+                                            }
+                                          }
+                                        },
+                                        [
+                                          _c("i", {
+                                            staticClass: "fa fa-user"
+                                          }),
+                                          _vm._v(
+                                            "\n                " +
+                                              _vm._s(article.user.name) +
+                                              "\n              "
+                                          )
+                                        ]
+                                      )
+                                    ],
+                                    1
+                                  )
                                 ]
                               )
                             ]
@@ -53225,8 +53774,28 @@ var render = function() {
                     _vm._v(" "),
                     _c("hr", { staticClass: "story-card-hr mx-auto" }),
                     _vm._v(" "),
-                    _c("i", { staticClass: "mt-4 fa fa-user" }),
-                    _vm._v(" " + _vm._s(_vm.article.user_name) + "\n        "),
+                    _c(
+                      "router-link",
+                      {
+                        staticClass: "aura-post-title",
+                        attrs: {
+                          to: {
+                            name: "authorArticles",
+                            params: {
+                              id: _vm.article.user_id,
+                              name: _vm.article.user_name
+                            }
+                          }
+                        }
+                      },
+                      [
+                        _c("i", { staticClass: "mt-4 fa fa-user" }),
+                        _vm._v(
+                          " " + _vm._s(_vm.article.user_name) + "\n        "
+                        )
+                      ]
+                    ),
+                    _vm._v(" "),
                     _c("p", { staticClass: "mt-4 post-intro" }, [
                       _vm._v(
                         "\n          " +
@@ -53238,7 +53807,8 @@ var render = function() {
                     ]),
                     _vm._v(" "),
                     _vm._m(0)
-                  ]
+                  ],
+                  1
                 )
               ]
             )
@@ -53280,9 +53850,29 @@ var render = function() {
                         _vm._v(_vm._s(_vm.article.title))
                       ]),
                       _vm._v(" "),
-                      _c("i", { staticClass: "mt-4 fa fa-user" }),
-                      _vm._v(" " + _vm._s(_vm.article.user_name) + "\n        ")
-                    ]
+                      _c(
+                        "router-link",
+                        {
+                          staticClass: "aura-post-title",
+                          attrs: {
+                            to: {
+                              name: "authorArticles",
+                              params: {
+                                id: _vm.article.user_id,
+                                name: _vm.article.user_name
+                              }
+                            }
+                          }
+                        },
+                        [
+                          _c("i", { staticClass: "mt-4 fa fa-user" }),
+                          _vm._v(
+                            " " + _vm._s(_vm.article.user_name) + "\n          "
+                          )
+                        ]
+                      )
+                    ],
+                    1
                   )
                 ]
               )
@@ -53406,10 +53996,36 @@ var render = function() {
                             ]
                           ),
                           _vm._v(" "),
-                          _c("span", { staticClass: "card-title" }, [
-                            _c("i", { staticClass: "fa fa-user" }),
-                            _vm._v("\n                  " + _vm._s(r.user_name))
-                          ])
+                          _c(
+                            "span",
+                            { staticClass: "card-title" },
+                            [
+                              _c(
+                                "router-link",
+                                {
+                                  staticClass: "aura-post-title",
+                                  attrs: {
+                                    to: {
+                                      name: "authorArticles",
+                                      params: {
+                                        id: r.user_id,
+                                        name: r.user_name
+                                      }
+                                    }
+                                  }
+                                },
+                                [
+                                  _c("i", { staticClass: "mt-4 fa fa-user" }),
+                                  _vm._v(
+                                    " " +
+                                      _vm._s(r.user_name) +
+                                      "\n                  "
+                                  )
+                                ]
+                              )
+                            ],
+                            1
+                          )
                         ]
                       )
                     ])
@@ -53648,9 +54264,9 @@ var render = function() {
                         },
                         [
                           _vm._v(
-                            "\n                        " +
+                            "\n            " +
                               _vm._s(_vm.articles.data[0].title) +
-                              "\n                    "
+                              "\n          "
                           )
                         ]
                       )
@@ -53660,25 +54276,46 @@ var render = function() {
                   _vm._v(" "),
                   _c("p", { staticClass: "mt-3" }, [
                     _vm._v(
-                      "\n                    " +
+                      "\n          " +
                         _vm._s(
                           _vm._f("truncate")(
                             _vm.articles.data[0].description,
                             100
                           )
                         ) +
-                        "\n                "
+                        "\n        "
                     )
                   ]),
                   _vm._v(" "),
-                  _c("span", [
-                    _c("i", { staticClass: "fa fa-user" }),
-                    _vm._v(
-                      "\n                    " +
-                        _vm._s(_vm.articles.data[0].user.name) +
-                        "\n                "
-                    )
-                  ])
+                  _c(
+                    "span",
+                    [
+                      _c(
+                        "router-link",
+                        {
+                          staticClass: "aura-post-title",
+                          attrs: {
+                            to: {
+                              name: "authorArticles",
+                              params: {
+                                id: _vm.articles.data[0].user.id,
+                                name: _vm.articles.data[0].user.name
+                              }
+                            }
+                          }
+                        },
+                        [
+                          _c("i", { staticClass: "fa fa-user" }),
+                          _vm._v(
+                            "\n            " +
+                              _vm._s(_vm.articles.data[0].user.name) +
+                              "\n          "
+                          )
+                        ]
+                      )
+                    ],
+                    1
+                  )
                 ])
               ]),
               _vm._v(" "),
@@ -53776,9 +54413,9 @@ var render = function() {
                                         },
                                         [
                                           _vm._v(
-                                            "\n                                " +
+                                            "\n                " +
                                               _vm._s(article.title) +
-                                              "\n                            "
+                                              "\n              "
                                           )
                                         ]
                                       )
@@ -53788,25 +54425,48 @@ var render = function() {
                                   _vm._v(" "),
                                   _c("p", { staticClass: "mt-3" }, [
                                     _vm._v(
-                                      "\n                            " +
+                                      "\n              " +
                                         _vm._s(
                                           _vm._f("truncate")(
                                             article.description,
                                             100
                                           )
                                         ) +
-                                        "\n                        "
+                                        "\n            "
                                     )
                                   ]),
                                   _vm._v(" "),
-                                  _c("span", [
-                                    _c("i", { staticClass: "fa fa-user" }),
-                                    _vm._v(
-                                      "\n                            " +
-                                        _vm._s(article.user.name) +
-                                        "\n                        "
-                                    )
-                                  ])
+                                  _c(
+                                    "span",
+                                    [
+                                      _c(
+                                        "router-link",
+                                        {
+                                          staticClass: "aura-post-title",
+                                          attrs: {
+                                            to: {
+                                              name: "authorArticles",
+                                              params: {
+                                                id: article.user.id,
+                                                name: article.user.name
+                                              }
+                                            }
+                                          }
+                                        },
+                                        [
+                                          _c("i", {
+                                            staticClass: "fa fa-user"
+                                          }),
+                                          _vm._v(
+                                            "\n                " +
+                                              _vm._s(article.user.name) +
+                                              "\n              "
+                                          )
+                                        ]
+                                      )
+                                    ],
+                                    1
+                                  )
                                 ]
                               )
                             ]
@@ -55572,7 +56232,7 @@ var render = function() {
                   { staticClass: "content" },
                   [
                     _c("h5", { staticClass: "input-label" }, [
-                      _vm._v("\n                    Add a new User "),
+                      _vm._v("Add a new User "),
                       _c("i", { staticClass: "fa fa-user" })
                     ]),
                     _vm._v(" "),
@@ -55747,9 +56407,7 @@ var render = function() {
                                 _c("div", { staticClass: "row" }, [
                                   _c("div", { staticClass: "col-md-4 mt-5" }, [
                                     _c("h5", { staticClass: "input-label" }, [
-                                      _vm._v(
-                                        "\n                                    Choose a Cover photo\n                                "
-                                      )
+                                      _vm._v("Choose a Cover photo")
                                     ]),
                                     _vm._v(" "),
                                     _c("input", {
@@ -55806,9 +56464,7 @@ var render = function() {
                                       }
                                     },
                                     [
-                                      _vm._v(
-                                        "\n                                RESET "
-                                      ),
+                                      _vm._v("\n                RESET "),
                                       _c("i", { staticClass: "fa fa-undo" })
                                     ]
                                   )
@@ -55828,7 +56484,7 @@ var render = function() {
                                     },
                                     [
                                       _vm._v(
-                                        "\n                                SAVE\n                                "
+                                        "\n                SAVE\n                "
                                       ),
                                       _c("i", {
                                         staticClass: "fa fa-cloud-upload"
@@ -78183,6 +78839,93 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./resources/js/pages/AuthorArticles.vue":
+/*!***********************************************!*\
+  !*** ./resources/js/pages/AuthorArticles.vue ***!
+  \***********************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _AuthorArticles_vue_vue_type_template_id_60337ab1_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./AuthorArticles.vue?vue&type=template&id=60337ab1&scoped=true& */ "./resources/js/pages/AuthorArticles.vue?vue&type=template&id=60337ab1&scoped=true&");
+/* harmony import */ var _AuthorArticles_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./AuthorArticles.vue?vue&type=script&lang=js& */ "./resources/js/pages/AuthorArticles.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport *//* harmony import */ var _AuthorArticles_vue_vue_type_style_index_0_id_60337ab1_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./AuthorArticles.vue?vue&type=style&index=0&id=60337ab1&scoped=true&lang=css& */ "./resources/js/pages/AuthorArticles.vue?vue&type=style&index=0&id=60337ab1&scoped=true&lang=css&");
+/* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
+
+
+
+
+
+/* normalize component */
+
+var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_3__["default"])(
+  _AuthorArticles_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _AuthorArticles_vue_vue_type_template_id_60337ab1_scoped_true___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _AuthorArticles_vue_vue_type_template_id_60337ab1_scoped_true___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  false,
+  null,
+  "60337ab1",
+  null
+  
+)
+
+/* hot reload */
+if (false) { var api; }
+component.options.__file = "resources/js/pages/AuthorArticles.vue"
+/* harmony default export */ __webpack_exports__["default"] = (component.exports);
+
+/***/ }),
+
+/***/ "./resources/js/pages/AuthorArticles.vue?vue&type=script&lang=js&":
+/*!************************************************************************!*\
+  !*** ./resources/js/pages/AuthorArticles.vue?vue&type=script&lang=js& ***!
+  \************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_AuthorArticles_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/babel-loader/lib??ref--4-0!../../../node_modules/vue-loader/lib??vue-loader-options!./AuthorArticles.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/pages/AuthorArticles.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_AuthorArticles_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+
+/***/ }),
+
+/***/ "./resources/js/pages/AuthorArticles.vue?vue&type=style&index=0&id=60337ab1&scoped=true&lang=css&":
+/*!********************************************************************************************************!*\
+  !*** ./resources/js/pages/AuthorArticles.vue?vue&type=style&index=0&id=60337ab1&scoped=true&lang=css& ***!
+  \********************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_style_loader_index_js_node_modules_css_loader_index_js_ref_6_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_6_2_node_modules_vue_loader_lib_index_js_vue_loader_options_AuthorArticles_vue_vue_type_style_index_0_id_60337ab1_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/style-loader!../../../node_modules/css-loader??ref--6-1!../../../node_modules/vue-loader/lib/loaders/stylePostLoader.js!../../../node_modules/postcss-loader/src??ref--6-2!../../../node_modules/vue-loader/lib??vue-loader-options!./AuthorArticles.vue?vue&type=style&index=0&id=60337ab1&scoped=true&lang=css& */ "./node_modules/style-loader/index.js!./node_modules/css-loader/index.js?!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/pages/AuthorArticles.vue?vue&type=style&index=0&id=60337ab1&scoped=true&lang=css&");
+/* harmony import */ var _node_modules_style_loader_index_js_node_modules_css_loader_index_js_ref_6_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_6_2_node_modules_vue_loader_lib_index_js_vue_loader_options_AuthorArticles_vue_vue_type_style_index_0_id_60337ab1_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_index_js_node_modules_css_loader_index_js_ref_6_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_6_2_node_modules_vue_loader_lib_index_js_vue_loader_options_AuthorArticles_vue_vue_type_style_index_0_id_60337ab1_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_0__);
+/* harmony reexport (unknown) */ for(var __WEBPACK_IMPORT_KEY__ in _node_modules_style_loader_index_js_node_modules_css_loader_index_js_ref_6_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_6_2_node_modules_vue_loader_lib_index_js_vue_loader_options_AuthorArticles_vue_vue_type_style_index_0_id_60337ab1_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_0__) if(["default"].indexOf(__WEBPACK_IMPORT_KEY__) < 0) (function(key) { __webpack_require__.d(__webpack_exports__, key, function() { return _node_modules_style_loader_index_js_node_modules_css_loader_index_js_ref_6_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_6_2_node_modules_vue_loader_lib_index_js_vue_loader_options_AuthorArticles_vue_vue_type_style_index_0_id_60337ab1_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_0__[key]; }) }(__WEBPACK_IMPORT_KEY__));
+ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_style_loader_index_js_node_modules_css_loader_index_js_ref_6_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_6_2_node_modules_vue_loader_lib_index_js_vue_loader_options_AuthorArticles_vue_vue_type_style_index_0_id_60337ab1_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_0___default.a); 
+
+/***/ }),
+
+/***/ "./resources/js/pages/AuthorArticles.vue?vue&type=template&id=60337ab1&scoped=true&":
+/*!******************************************************************************************!*\
+  !*** ./resources/js/pages/AuthorArticles.vue?vue&type=template&id=60337ab1&scoped=true& ***!
+  \******************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_AuthorArticles_vue_vue_type_template_id_60337ab1_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../node_modules/vue-loader/lib??vue-loader-options!./AuthorArticles.vue?vue&type=template&id=60337ab1&scoped=true& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/pages/AuthorArticles.vue?vue&type=template&id=60337ab1&scoped=true&");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_AuthorArticles_vue_vue_type_template_id_60337ab1_scoped_true___WEBPACK_IMPORTED_MODULE_0__["render"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_AuthorArticles_vue_vue_type_template_id_60337ab1_scoped_true___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
+
+
+
+/***/ }),
+
 /***/ "./resources/js/pages/Beauty.vue":
 /*!***************************************!*\
   !*** ./resources/js/pages/Beauty.vue ***!
@@ -79495,26 +80238,28 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _pages_Fashion_vue__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./pages/Fashion.vue */ "./resources/js/pages/Fashion.vue");
 /* harmony import */ var _pages_Culture_vue__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./pages/Culture.vue */ "./resources/js/pages/Culture.vue");
 /* harmony import */ var _pages_AskRuby_vue__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./pages/AskRuby.vue */ "./resources/js/pages/AskRuby.vue");
-/* harmony import */ var _pages_SexAndRelationship_vue__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./pages/SexAndRelationship.vue */ "./resources/js/pages/SexAndRelationship.vue");
-/* harmony import */ var _pages_Magazine_vue__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./pages/Magazine.vue */ "./resources/js/pages/Magazine.vue");
-/* harmony import */ var _pages_Post_vue__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./pages/Post.vue */ "./resources/js/pages/Post.vue");
-/* harmony import */ var _pages_Shop_vue__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./pages/Shop.vue */ "./resources/js/pages/Shop.vue");
-/* harmony import */ var _pages_auth_Login_vue__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./pages/auth/Login.vue */ "./resources/js/pages/auth/Login.vue");
-/* harmony import */ var _pages_auth_Register_vue__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./pages/auth/Register.vue */ "./resources/js/pages/auth/Register.vue");
-/* harmony import */ var _pages_404_vue__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./pages/404.vue */ "./resources/js/pages/404.vue");
-/* harmony import */ var _utils_Unauthorized_vue__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./utils/Unauthorized.vue */ "./resources/js/utils/Unauthorized.vue");
-/* harmony import */ var _pages_admin_articles_Articles_vue__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./pages/admin/articles/Articles.vue */ "./resources/js/pages/admin/articles/Articles.vue");
-/* harmony import */ var _pages_admin_articles_CreateArticle_vue__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ./pages/admin/articles/CreateArticle.vue */ "./resources/js/pages/admin/articles/CreateArticle.vue");
-/* harmony import */ var _pages_admin_roles_Roles_vue__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ./pages/admin/roles/Roles.vue */ "./resources/js/pages/admin/roles/Roles.vue");
-/* harmony import */ var _pages_admin_roles_CreateRole_vue__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ./pages/admin/roles/CreateRole.vue */ "./resources/js/pages/admin/roles/CreateRole.vue");
-/* harmony import */ var _pages_admin_Dashboard_vue__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! ./pages/admin/Dashboard.vue */ "./resources/js/pages/admin/Dashboard.vue");
-/* harmony import */ var _pages_admin_users_Users_vue__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! ./pages/admin/users/Users.vue */ "./resources/js/pages/admin/users/Users.vue");
-/* harmony import */ var _pages_admin_users_CreateUser_vue__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(/*! ./pages/admin/users/CreateUser.vue */ "./resources/js/pages/admin/users/CreateUser.vue");
+/* harmony import */ var _pages_AuthorArticles_vue__WEBPACK_IMPORTED_MODULE_22__ = __webpack_require__(/*! ./pages/AuthorArticles.vue */ "./resources/js/pages/AuthorArticles.vue");
+/* harmony import */ var _pages_SexAndRelationship_vue__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./pages/SexAndRelationship.vue */ "./resources/js/pages/SexAndRelationship.vue");
+/* harmony import */ var _pages_Magazine_vue__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./pages/Magazine.vue */ "./resources/js/pages/Magazine.vue");
+/* harmony import */ var _pages_Post_vue__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./pages/Post.vue */ "./resources/js/pages/Post.vue");
+/* harmony import */ var _pages_Shop_vue__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./pages/Shop.vue */ "./resources/js/pages/Shop.vue");
+/* harmony import */ var _pages_auth_Login_vue__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./pages/auth/Login.vue */ "./resources/js/pages/auth/Login.vue");
+/* harmony import */ var _pages_auth_Register_vue__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./pages/auth/Register.vue */ "./resources/js/pages/auth/Register.vue");
+/* harmony import */ var _pages_404_vue__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./pages/404.vue */ "./resources/js/pages/404.vue");
+/* harmony import */ var _utils_Unauthorized_vue__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./utils/Unauthorized.vue */ "./resources/js/utils/Unauthorized.vue");
+/* harmony import */ var _pages_admin_articles_Articles_vue__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ./pages/admin/articles/Articles.vue */ "./resources/js/pages/admin/articles/Articles.vue");
+/* harmony import */ var _pages_admin_articles_CreateArticle_vue__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ./pages/admin/articles/CreateArticle.vue */ "./resources/js/pages/admin/articles/CreateArticle.vue");
+/* harmony import */ var _pages_admin_roles_Roles_vue__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ./pages/admin/roles/Roles.vue */ "./resources/js/pages/admin/roles/Roles.vue");
+/* harmony import */ var _pages_admin_roles_CreateRole_vue__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! ./pages/admin/roles/CreateRole.vue */ "./resources/js/pages/admin/roles/CreateRole.vue");
+/* harmony import */ var _pages_admin_Dashboard_vue__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! ./pages/admin/Dashboard.vue */ "./resources/js/pages/admin/Dashboard.vue");
+/* harmony import */ var _pages_admin_users_Users_vue__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(/*! ./pages/admin/users/Users.vue */ "./resources/js/pages/admin/users/Users.vue");
+/* harmony import */ var _pages_admin_users_CreateUser_vue__WEBPACK_IMPORTED_MODULE_21__ = __webpack_require__(/*! ./pages/admin/users/CreateUser.vue */ "./resources/js/pages/admin/users/CreateUser.vue");
 /* -------------------------------------------------------------------------- */
 
 /*                        //Route paths for  User  App                        */
 
 /* -------------------------------------------------------------------------- */
+
 
 
 
@@ -79552,7 +80297,7 @@ var routes = [{
 }, {
   name: 'login',
   path: '/login',
-  component: _pages_auth_Login_vue__WEBPACK_IMPORTED_MODULE_10__["default"],
+  component: _pages_auth_Login_vue__WEBPACK_IMPORTED_MODULE_11__["default"],
   meta: {
     guestOnly: true,
     showProgressBar: true
@@ -79560,7 +80305,7 @@ var routes = [{
 }, {
   name: 'admin-register',
   path: '/admin/register',
-  component: _pages_auth_Register_vue__WEBPACK_IMPORTED_MODULE_11__["default"],
+  component: _pages_auth_Register_vue__WEBPACK_IMPORTED_MODULE_12__["default"],
   meta: {
     guestOnly: true,
     showProgressBar: true
@@ -79568,7 +80313,7 @@ var routes = [{
 }, {
   name: 'shop',
   path: '/shop',
-  component: _pages_Shop_vue__WEBPACK_IMPORTED_MODULE_9__["default"],
+  component: _pages_Shop_vue__WEBPACK_IMPORTED_MODULE_10__["default"],
   meta: {
     showProgressBar: true
   }
@@ -79610,14 +80355,22 @@ var routes = [{
 }, {
   name: 'sex-and-relationships',
   path: '/category/sex-and-relationships',
-  component: _pages_SexAndRelationship_vue__WEBPACK_IMPORTED_MODULE_6__["default"],
+  component: _pages_SexAndRelationship_vue__WEBPACK_IMPORTED_MODULE_7__["default"],
   meta: {
     showProgressBar: true
   }
 }, {
   name: 'post',
   path: '/post/:id/:title',
-  component: _pages_Post_vue__WEBPACK_IMPORTED_MODULE_8__["default"],
+  component: _pages_Post_vue__WEBPACK_IMPORTED_MODULE_9__["default"],
+  meta: {
+    showProgressBar: true
+  },
+  props: true
+}, {
+  name: 'authorArticles',
+  path: '/author/:id/:name',
+  component: _pages_AuthorArticles_vue__WEBPACK_IMPORTED_MODULE_22__["default"],
   meta: {
     showProgressBar: true
   },
@@ -79625,7 +80378,7 @@ var routes = [{
 }, {
   name: 'magazine',
   path: '/magazine',
-  component: _pages_Magazine_vue__WEBPACK_IMPORTED_MODULE_7__["default"],
+  component: _pages_Magazine_vue__WEBPACK_IMPORTED_MODULE_8__["default"],
   meta: {
     showProgressBar: true
   }
@@ -79638,7 +80391,7 @@ var routes = [{
 {
   name: '404',
   path: '*',
-  component: _pages_404_vue__WEBPACK_IMPORTED_MODULE_12__["default"],
+  component: _pages_404_vue__WEBPACK_IMPORTED_MODULE_13__["default"],
   meta: {
     showProgressBar: true
   }
@@ -79651,7 +80404,7 @@ var routes = [{
 {
   name: 'Unauthorized',
   path: '/unauthorized',
-  component: _utils_Unauthorized_vue__WEBPACK_IMPORTED_MODULE_13__["default"],
+  component: _utils_Unauthorized_vue__WEBPACK_IMPORTED_MODULE_14__["default"],
   meta: {
     showProgressBar: true
   }
@@ -79664,7 +80417,7 @@ var routes = [{
 {
   name: 'dashboard',
   path: '/dashboard',
-  component: _pages_admin_Dashboard_vue__WEBPACK_IMPORTED_MODULE_18__["default"],
+  component: _pages_admin_Dashboard_vue__WEBPACK_IMPORTED_MODULE_19__["default"],
   meta: {
     authOnly: true,
     showProgressBar: true
@@ -79672,7 +80425,7 @@ var routes = [{
 }, {
   name: 'article',
   path: '/articles',
-  component: _pages_admin_articles_Articles_vue__WEBPACK_IMPORTED_MODULE_14__["default"],
+  component: _pages_admin_articles_Articles_vue__WEBPACK_IMPORTED_MODULE_15__["default"],
   meta: {
     authOnly: true,
     showProgressBar: true
@@ -79680,7 +80433,7 @@ var routes = [{
 }, {
   name: 'createArticle',
   path: '/article/create',
-  component: _pages_admin_articles_CreateArticle_vue__WEBPACK_IMPORTED_MODULE_15__["default"],
+  component: _pages_admin_articles_CreateArticle_vue__WEBPACK_IMPORTED_MODULE_16__["default"],
   meta: {
     authOnly: true,
     showProgressBar: true
@@ -79688,7 +80441,7 @@ var routes = [{
 }, {
   name: 'role',
   path: '/roles',
-  component: _pages_admin_roles_Roles_vue__WEBPACK_IMPORTED_MODULE_16__["default"],
+  component: _pages_admin_roles_Roles_vue__WEBPACK_IMPORTED_MODULE_17__["default"],
   meta: {
     authOnly: true,
     superAdminOnly: true,
@@ -79697,7 +80450,7 @@ var routes = [{
 }, {
   name: 'createRole',
   path: '/role/create',
-  component: _pages_admin_roles_CreateRole_vue__WEBPACK_IMPORTED_MODULE_17__["default"],
+  component: _pages_admin_roles_CreateRole_vue__WEBPACK_IMPORTED_MODULE_18__["default"],
   meta: {
     authOnly: true,
     showProgressBar: true
@@ -79705,7 +80458,7 @@ var routes = [{
 }, {
   name: 'user',
   path: '/users',
-  component: _pages_admin_users_Users_vue__WEBPACK_IMPORTED_MODULE_19__["default"],
+  component: _pages_admin_users_Users_vue__WEBPACK_IMPORTED_MODULE_20__["default"],
   meta: {
     authOnly: true,
     superAdminOnly: true,
@@ -79714,7 +80467,7 @@ var routes = [{
 }, {
   name: 'createUser',
   path: '/user/create',
-  component: _pages_admin_users_CreateUser_vue__WEBPACK_IMPORTED_MODULE_20__["default"],
+  component: _pages_admin_users_CreateUser_vue__WEBPACK_IMPORTED_MODULE_21__["default"],
   meta: {
     authOnly: true,
     showProgressBar: true

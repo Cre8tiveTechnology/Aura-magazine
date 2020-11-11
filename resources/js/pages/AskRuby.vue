@@ -65,8 +65,19 @@
             {{ articles.data[0].description | truncate(100) }}
           </p>
           <span>
-            <i class="fa fa-user"></i>
-            {{ articles.data[0].user.name }}
+            <router-link
+              :to="{
+                name: 'authorArticles',
+                params: {
+                  id: articles.data[0].user.id,
+                  name: articles.data[0].user.name,
+                },
+              }"
+              class="aura-post-title"
+            >
+              <i class="fa fa-user"></i>
+              {{ articles.data[0].user.name }}
+            </router-link>
           </span>
         </div>
       </div>
@@ -111,7 +122,7 @@
                     name: 'post',
                     params: {
                       id: article.id,
-                      title: article.title,
+                      title: article.slug,
                     },
                   }"
                   class="aura-post-title"
@@ -122,9 +133,21 @@
               <p class="mt-3">
                 {{ article.description | truncate(100) }}
               </p>
+
               <span>
-                <i class="fa fa-user"></i>
-                {{ article.user.name }}
+                <router-link
+                  :to="{
+                    name: 'authorArticles',
+                    params: {
+                      id: article.user.id,
+                      name: article.user.name,
+                    },
+                  }"
+                  class="aura-post-title"
+                >
+                  <i class="fa fa-user"></i>
+                  {{ article.user.name }}
+                </router-link>
               </span>
             </div>
           </div>
