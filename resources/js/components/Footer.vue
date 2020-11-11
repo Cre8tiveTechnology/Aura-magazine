@@ -48,19 +48,15 @@
                     <li>
                       <router-link to="/category/beauty"> Beauty </router-link>
                     </li>
+
                     <li>
-                      <router-link to="/category/lifestyle">
-                        Lifestyle
+                      <router-link to="/category/culture">
+                        Culture
                       </router-link>
                     </li>
                     <li>
-                      <router-link to="/category/arts-and-culture">
-                        Arts &amp; Culture
-                      </router-link>
-                    </li>
-                    <li>
-                      <router-link to="/category/horoscope">
-                        Horoscope
+                      <router-link to="/category/ask-ruby">
+                        Ask Ruby
                       </router-link>
                     </li>
                     <li>

@@ -47,24 +47,50 @@
               >BEAUTY</router-link
             >
           </li>
+
           <li class="nav-item mr-1">
             <router-link
               :class="
-                current == 'LIFESTYLE' ? 'active-link nav-link' : 'nav-link'
+                current == 'CULTURE' ? 'active-link nav-link' : 'nav-link'
               "
-              to="/category/lifestyle"
-              >LIFESTYLE</router-link
+              to="/category/culture"
+              >CULTURE</router-link
             >
           </li>
-          <li class="nav-item mr-1">
-            <router-link
-              :class="
-                current == 'ARTS/CULTURE' ? 'active-link nav-link' : 'nav-link'
-              "
-              to="/category/arts-and-culture"
-              >ARTS &amp; CULTURE</router-link
+
+          <li class="nav-item dropdown mr-1">
+            <a
+              class="nav-link dropdown-toggle"
+              href="#"
+              id="moreDropdown"
+              role="button"
+              data-toggle="dropdown"
+              aria-haspopup="true"
+              aria-expanded="false"
+              >LIFE &amp; LOVE</a
             >
+            <div class="dropdown-menu" aria-labelledby="moreDropdown">
+              <router-link
+                :class="
+                  current == 'ASKRUBY' ? 'active-link nav-link' : 'nav-link'
+                "
+                to="/category/ask-ruby"
+                >ASK RUBY</router-link
+              >
+              <div class="dropdown-divider d-none d-lg-block d-xl-none"></div>
+
+              <router-link
+                :class="
+                  current == 'SEX/RELATIONSHIPS'
+                    ? 'active-link nav-link'
+                    : 'nav-link'
+                "
+                to="/category/sex-and-relationships"
+                >SEX &amp; RELATIONSHIPS</router-link
+              >
+            </div>
           </li>
+
           <li class="nav-item mr-1">
             <router-link
               :class="current == 'VIDEOS' ? 'active-link nav-link' : 'nav-link'"
@@ -95,21 +121,19 @@
             <div class="dropdown-menu" aria-labelledby="moreDropdown">
               <router-link
                 :class="
-                  current == 'HOROSCOPE' ? 'active-link nav-link' : 'nav-link'
+                  current == 'LOOKBOOK' ? 'active-link nav-link' : 'nav-link'
                 "
-                to="/category/horoscope"
-                >HOROSCOPE</router-link
+                to="/lookbook"
+                >LOOK BOOK</router-link
               >
               <div class="dropdown-divider d-none d-lg-block d-xl-none"></div>
 
               <router-link
                 :class="
-                  current == 'SEX/RELATIONSHIPS'
-                    ? 'active-link nav-link'
-                    : 'nav-link'
+                  current == 'AURASHOP' ? 'active-link nav-link' : 'nav-link'
                 "
-                to="/category/sex-and-relationships"
-                >SEX &amp; RELATIONSHIPS</router-link
+                to="/shop"
+                >AURA SHOP <sup>TM</sup></router-link
               >
             </div>
           </li>

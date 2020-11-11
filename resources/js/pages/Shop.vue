@@ -1,7 +1,7 @@
 <template>
   <div>
     <!-- NavBar -->
-    <navbar />
+    <navbar :current="'AURASHOP'" />
     <!-- Navbar -->
 
     <!-- HEADER -->
