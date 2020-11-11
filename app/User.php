@@ -76,4 +76,11 @@ class User extends Authenticatable
             $user->articles()->delete();
         });
     }
+
+    protected $appends = ['user_role'];
+
+    public function getUserRoleAttribute()
+    {
+        return $this->role;
+    }
 }

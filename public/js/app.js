@@ -2775,7 +2775,8 @@ __webpack_require__.r(__webpack_exports__);
       if (error.response.status == 401) {
         _this.alertError("Your session has expired, please sign in!");
 
-        localStorage.clear("auth");
+        localStorage.removeItem("auth");
+        localStorage.removeItem(_this.user.user_role.key);
 
         _this.$router.push({
           name: "login"
@@ -3066,22 +3067,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: "Auth",
@@ -3092,8 +3077,10 @@ __webpack_require__.r(__webpack_exports__);
     logout: function logout() {
       var _this = this;
 
+      var key = this.user.user_role.key;
       _apis_admin_User__WEBPACK_IMPORTED_MODULE_0__["default"].logout().then(function (response) {
         localStorage.removeItem("auth");
+        localStorage.removeItem(key);
 
         _this.$router.push({
           name: "login"
@@ -80692,8 +80679,8 @@ __webpack_require__.r(__webpack_exports__);
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! /Users/mac/Documents/Projects/Laravel/Aura/resources/js/app.js */"./resources/js/app.js");
-module.exports = __webpack_require__(/*! /Users/mac/Documents/Projects/Laravel/Aura/resources/sass/app.scss */"./resources/sass/app.scss");
+__webpack_require__(/*! /Users/mac/Documents/Laravel/Aura-magazine/resources/js/app.js */"./resources/js/app.js");
+module.exports = __webpack_require__(/*! /Users/mac/Documents/Laravel/Aura-magazine/resources/sass/app.scss */"./resources/sass/app.scss");
 
 
 /***/ })
