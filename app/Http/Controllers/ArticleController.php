@@ -30,17 +30,24 @@ class ArticleController extends Controller
      */
     public function adminIndex()
     {
-
         if (auth()->user()->isSuperAdmin()) {
 
             $articles = Article::withTrashed()->latest()->paginate(8);
+            return response()->json(['articles' => $articles,
+                'user' => auth()->user()], 200);
 
         } elseif (auth()->user()->isEditor()) {
 
-            $articles = auth()->user()->articles()->withTrashed()->latest()->paginate(8);
+            $editorArticles = auth()->user()->articles()->withTrashed()->latest()->paginate(8);
+
+            return response()->json(['articles' => $editorArticles,
+                'user' => auth()->user()], 200);
+        } else {
+
+            return response()->json(['articles' => [],
+                'user' => auth()->user()], 200);
         }
 
-        return response()->json($articles, 200);
     }
     /**
      * Store a newly created resource in storage.
@@ -59,12 +66,13 @@ class ArticleController extends Controller
             'image' => ['required'],
             'image_orientation' => ['required', 'string'],
         ]);
-
-        Cloudder::upload($request['image'], $request->category . "_" . $request['title'], [
+        $imageName = Str::limit($request->title, 10);
+        Cloudder::upload($request['image'], $imageName, [
             'folder' => 'aura/',
         ]);
 
-        $image_url = Cloudder::show(Cloudder::getPublicId());
+        $image_url = Cloudder::show(Cloudder::getPublicId(),
+            ['format' => 'png']);
 
         $data = [
             'title' => Str::title($request->title),
@@ -114,7 +122,50 @@ class ArticleController extends Controller
      */
     public function update(Request $request, Article $article)
     {
-        //
+        $request->validate([
+            'title' => ['required', 'string'],
+            'description' => ['required', 'string', 'min:8'],
+            'content' => ['required', 'string', 'min:100'],
+            'category' => ['required', 'string'],
+            'image_orientation' => ['required', 'string'],
+        ]);
+
+        $use_existing_image = Str::containsAll($request->image, ['res.', 'cloudinary.']);
+
+        if (!$use_existing_image) {
+
+            $imageName = Str::limit($request->title, 10);
+            Cloudder::upload($request['image'], $imageName, [
+                'folder' => 'aura/',
+            ]);
+
+            $image_url = Cloudder::show(Cloudder::getPublicId(),
+                ['format' => 'png']);
+        } else {
+            $image_url = $request->image;
+        }
+
+        $data = [
+            'title' => Str::title($request->title),
+            'description' => $request->description,
+            'content' => $request->content,
+            'slug' => Str::slug($request->title, '-'),
+            'category' => $request->category,
+            'image' => $image_url,
+            'user_name' => auth()->user()->name,
+            'image_orientation' => $request->image_orientation,
+        ];
+
+        $updatedArticle = $article->update($data);
+
+        if ($updatedArticle) {
+            return response()->json('Article was updated successfully!', 200);
+        } else {
+            return response()->json(
+                'There was a problem while updating article',
+                500
+            );
+        }
     }
 
     /**

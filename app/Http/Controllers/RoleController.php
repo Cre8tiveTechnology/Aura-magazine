@@ -78,28 +78,6 @@ class RoleController extends Controller
     }
 
     /**
-     * Display the specified resource.
-     *
-     * @param  \App\Role  $role
-     * @return \Illuminate\Http\Response
-     */
-    public function show(Role $role)
-    {
-        //
-    }
-
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  \App\Role  $role
-     * @return \Illuminate\Http\Response
-     */
-    public function edit(Role $role)
-    {
-        //
-    }
-
-    /**
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
@@ -108,7 +86,31 @@ class RoleController extends Controller
      */
     public function update(Request $request, Role $role)
     {
-        //
+        $request->validate([
+            'name' => ['required', 'string', 'min:5'],
+            'description' => ['required', 'string', 'min:10'],
+        ]);
+
+        $key = preg_replace('/\s*/', '', $request->name);
+        $keytoLower = strtolower($key);
+
+        $data = [
+            'name' => $request->name,
+            'key' => $keytoLower,
+            'description' => $request->description,
+            'created_by' => auth()->user()->name,
+        ];
+
+        $role = $role->update($data);
+
+        if ($role) {
+            return response()->json('Role was updated successfully!', 200);
+        } else {
+            return response()->json(
+                'There was a problem while updating role',
+                500
+            );
+        }
     }
 
     /**

@@ -33,24 +33,19 @@ class RegisterController extends Controller
                 Cloudder::upload($request->photo, $request->name, [
                     'folder' => 'aura/',
                 ]);
-                $image_url = Cloudder::show(Cloudder::getPublicId());
+                $image_url = Cloudder::show(Cloudder::getPublicId(),
 
-                User::create([
-                    'name' => $request->name,
-                    'email' => $request->email,
-                    'role_id' => $request->role_id,
-                    'photo' => $image_url,
-                    'password' => Hash::make($request->password),
-                ]);
+                    ['format' => 'png']);
             } else {
-
-                User::create([
-                    'name' => $request->name,
-                    'email' => $request->email,
-                    'role_id' => $request->role_id,
-                    'password' => Hash::make($request->password),
-                ]);
+                $image_url = "";
             }
+            User::create([
+                'name' => $request->name,
+                'email' => $request->email,
+                'role_id' => $request->role_id,
+                'photo' => isset($image_url) ? $image_url : null,
+                'password' => Hash::make($request->password),
+            ]);
 
         }
 

@@ -3,47 +3,47 @@ import Csrf from '../Csrf'
 
 export default {
     /* -------------------------------------------------------------------------- */
-    /*             Create Article - @param formdata                               */
+    /*             Create Invoice - @param formdata                               */
     /* -------------------------------------------------------------------------- */
-    async createArticle (article,id)
+    async createInvoice (invoice,id)
     {
         await Csrf.getCookie()
-        return Api.post(`/article/create/${ id }`,article)
+        return Api.post(`/invoice/create/${ id }`,invoice)
     },
 
     /* -------------------------------------------------------------------------- */
-    /*                    List Articles -By page for Super Admin                  */
+    /*                    List Invoices -By page for Super Admin                  */
     /* -------------------------------------------------------------------------- */
-    async listArticles (page)
+    async listInvoices (page)
     {
         await Csrf.getCookie()
-        return Api.get(`/article/all?page=${ page }`)
+        return Api.get(`/invoice/all?page=${ page }`)
     },
 
     /* -------------------------------------------------------------------------- */
-    /*         Removes Article  Temporarily @param - article                      */
+    /*         Removes Invoice  Temporarily @param - Invoice                      */
     /* -------------------------------------------------------------------------- */
-    async removeArticle (article)
+    async removeInvoice (invoice)
     {
         await Csrf.getCookie()
-        return Api.delete(`/article/remove/${ article }`)
+        return Api.delete(`/invoice/remove/${ invoice }`)
     },
 
     /* -------------------------------------------------------------------------- */
-    /*       Restores temporarily deteled article @param - article                */
+    /*       Restores temporarily deteled Invoice @param - Invoice                */
     /* -------------------------------------------------------------------------- */
-    async restoreArticle (article)
+    async restoreInvoice (invoice)
     {
         await Csrf.getCookie()
-        return Api.post('/article/restore/',article)
+        return Api.post('/invoice/restore/',invoice)
     },
 
     /* -------------------------------------------------------------------------- */
-    /*       Edit article @param - article                                       */
+    /*       Edit Invoice @param - Invoice                                       */
     /* -------------------------------------------------------------------------- */
-    async editArticle (article,id)
+    async editInvoice (invoice,id)
     {
         await Csrf.getCookie()
-        return Api.put(`/article/update/${ id }`,article)
+        return Api.put(`/invoice/update/${ id }`,invoice)
     },
 }

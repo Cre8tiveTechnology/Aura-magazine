@@ -20,6 +20,7 @@ use Illuminate\Support\Facades\Route;
 Route::group(['name' => 'article.', 'prefix' => 'article', 'middleware' => 'auth:sanctum'], function () {
     Route::get('/all', 'ArticleController@adminIndex')->name('all');
     Route::post('/create/{user}', 'ArticleController@store')->name('store');
+    Route::put('/update/{article}', 'ArticleController@update')->name('update');
     Route::delete('/remove/{article}', 'ArticleController@destroy')->name('remove');
     Route::post('/restore', 'ArticleController@restore')->name('restore');
 });
@@ -31,6 +32,7 @@ Route::group(['name' => 'role.', 'prefix' => 'role', 'middleware' => ['auth:sanc
     Route::get('/all', 'RoleController@index')->name('all');
     Route::get('/rolesIndex', 'RoleController@rolesIndex')->name('rolesIndex');
     Route::post('/create', 'RoleController@store')->name('store');
+    Route::put('/update/{role}', 'RoleController@update')->name('update');
     Route::delete('/remove/{role}', 'RoleController@destroy')->name('remove');
     Route::post('/restore', 'RoleController@restore')->name('restore');
 });
@@ -40,8 +42,20 @@ Route::group(['name' => 'role.', 'prefix' => 'role', 'middleware' => ['auth:sanc
 /* -------------------------------------------------------------------------- */
 Route::group(['name' => 'user.', 'prefix' => 'user', 'middleware' => ['auth:sanctum', 'role:superadmin']], function () {
     Route::get('/all', 'UserController@index')->name('all');
+    Route::put('/update/{user}', 'UserController@update')->name('update');
     Route::delete('/remove/{user}', 'UserController@destroy')->name('remove');
     Route::post('/restore', 'UserController@restore')->name('restore');
+});
+
+/* -------------------------------------------------------------------------- */
+/*                                Invoices API                                */
+/* -------------------------------------------------------------------------- */
+Route::group(['name' => 'invoice.', 'prefix' => 'invoice', 'middleware' => ['auth:sanctum']], function () {
+    Route::get('/all', 'InvoiceController@index')->name('all');
+    Route::post('/create/{user}', 'InvoiceController@store')->name('store');
+    Route::put('/update/{invoice}', 'InvoiceController@update')->name('update');
+    Route::delete('/remove/{invoice}', 'InvoiceController@destroy')->name('remove');
+    Route::post('/restore', 'InvoiceController@restore')->name('restore');
 });
 
 /* -------------------------------------------------------------------------- */

@@ -4,6 +4,7 @@
             <template v-slot:content>
                 <div class="content">
                     <aura-loader v-if="isLoading"></aura-loader>
+                    <!--==============Page Title  ================-->
                     <div class="container">
                         <div class="row justify-content-between">
                             <div class="col-xl-8 col-lg-8 col-md-8 col-sm-8">
@@ -23,9 +24,7 @@
                     </div>
 
                     <!--============== Roles Table ================-->
-                    <empty-resource
-                        v-if="roles.data.length === 0"
-                    ></empty-resource>
+                    <empty-resource v-if="roles.length === 0"></empty-resource>
 
                     <div class="table-responsive mt-5" v-else>
                         <marquee
@@ -84,6 +83,13 @@
                                         >
                                             <i class="fa fa-undo"></i>
                                         </button>
+                                        <button
+                                            class="btn btn-sm btn-aura"
+                                            id="show-modal"
+                                            @click="showEditModal(role)"
+                                        >
+                                            <i class="fa fa-edit"></i>
+                                        </button>
                                     </td>
 
                                     <td>
@@ -113,6 +119,63 @@
                             </pagination>
                         </div>
                     </div>
+                    <!-- =========Edit Modal Component========= -->
+                    <modal v-if="showModal" @close="showModal = false">
+                        <h5 slot="header" class="text-dark text-center">
+                            Edit Role
+                        </h5>
+                        <div slot="body">
+                            <form class="fade-in">
+                                <validation-error
+                                    :errors="validationErrors"
+                                    v-if="validationErrors"
+                                ></validation-error>
+
+                                <!-- Name Field -->
+                                <div class="mt-5">
+                                    <h5 class="input-label">Name</h5>
+                                    <div class="form-group">
+                                        <input
+                                            type="text"
+                                            class="input-control form-control"
+                                            name="name"
+                                            v-model="formFields.name"
+                                            id="name"
+                                            autocomplete="off"
+                                            placeholder="Please Provide a Suitable Name"
+                                        />
+                                    </div>
+                                </div>
+
+                                <!-- Description Field -->
+                                <div class="mt-4">
+                                    <h5 class="input-label">Description</h5>
+                                    <div class="form-group">
+                                        <textarea
+                                            name="description"
+                                            v-model="formFields.description"
+                                            id="description"
+                                            autocomplete="off"
+                                            class="input-control form-control"
+                                        ></textarea>
+                                    </div>
+                                </div>
+
+                                <!-- Control Button -->
+                                <div class="container-fluid mt-5 d-flex p-0">
+                                    <div class="ml-4">
+                                        <button
+                                            class="btn btn-md btn-success"
+                                            @click.prevent="editRole"
+                                        >
+                                            EDIT ROLE
+                                            <i class="fa fa-edit"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </modal>
                 </div>
             </template>
         </auth-admin>
@@ -125,7 +188,14 @@ export default {
     name: "Roles",
     data: () => ({
         roles: {},
-        isLoading: false
+        isLoading: false,
+        showModal: false,
+        validationErrors: "",
+        formFields: {
+            title: "",
+            description: "Please Provide an Explicit Description",
+            id: ""
+        }
     }),
     mounted() {
         this.getRoles();
@@ -224,6 +294,42 @@ export default {
                 type: "success",
                 position: "top-right"
             });
+        },
+
+        /* -------------------------------------------------------------------------- */
+        /*                               EDIT ROLE                               */
+        /* -------------------------------------------------------------------------- */
+        editRole() {
+            console.log(this.formFields);
+            Role.editRole(this.formFields, this.formFields.id)
+                .then(response => {
+                    this.showModal = false;
+                    if (response.status == 200) {
+                        this.alertSuccess(response.data);
+                    }
+                    //Fetch article
+                    this.getRoles();
+                })
+                .catch(error => {
+                    this.showModal = false;
+                    if (error.response.status == 404) {
+                        this.alertError(
+                            "The article you are trying to update does not exist."
+                        );
+                    } else if (error.response.status == 403) {
+                        this.alertError(
+                            "You do not have permission to perform this operation"
+                        );
+                    }
+                    console.error(error);
+                });
+        },
+        /* -------------------------------------------------------------------------- */
+        /*                       SHOW MODAL AND SET FORM FIELDS                       */
+        /* -------------------------------------------------------------------------- */
+        showEditModal(role) {
+            this.showModal = true;
+            this.formFields = role;
         }
     }
 };

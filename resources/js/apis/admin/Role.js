@@ -42,4 +42,13 @@ export default {
         await Csrf.getCookie()
         return Api.post('/role/restore/',role)
     },
+    /* -------------------------------------------------------------------------- */
+    /*       Edit Role @param - role                                       */
+    /* -------------------------------------------------------------------------- */
+    async editRole (role,id)
+    {
+        await Csrf.getCookie()
+        return Api.put(`/role/update/${ id }`,role)
+    },
+
 }

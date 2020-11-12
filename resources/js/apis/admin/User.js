@@ -67,4 +67,13 @@ export default {
         await Csrf.getCookie()
         return Api.post('/user/restore/',user)
     },
+
+    /* -------------------------------------------------------------------------- */
+    /*       Edit USER @param - user                                       */
+    /* -------------------------------------------------------------------------- */
+    async editUser (user,id)
+    {
+        await Csrf.getCookie()
+        return Api.put(`/user/update/${ id }`,user)
+    },
 }

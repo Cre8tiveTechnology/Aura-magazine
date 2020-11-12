@@ -32,6 +32,7 @@ import SideNav from './layout/navbars/Auth-Sidenav'
 import Footer from './layout/Footer'
 import Admin from './layout/Admin'
 import validationError from './components/ValidationError'
+import Modal from './components/Modal'
 import CFooter from './components/footer'
 import AuraLoader from './utils/AuraLoader'
 import Loader from './utils/Loader'
@@ -51,7 +52,7 @@ Vue.component('loader',Loader)
 Vue.component('empty-resource',EmptyResource)
 Vue.component('pagination',require('laravel-vue-pagination'))
 Vue.component("v-select",vSelect);
-
+Vue.component("modal",Modal);
 // const files = require.context('./', true, /\.vue$/i)
 // files.keys().map(key => Vue.component(key.split('/').pop().split('.')[0], files(key).default))
 
