@@ -7573,6 +7573,24 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 
 
@@ -7764,6 +7782,7 @@ __webpack_require__.r(__webpack_exports__);
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _apis_admin_Invoice__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../../apis/admin/Invoice */ "./resources/js/apis/admin/Invoice.js");
 /* harmony import */ var _apis_admin_User__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../apis/admin/User */ "./resources/js/apis/admin/User.js");
+//
 //
 //
 //
@@ -15133,7 +15152,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../../node_modules/c
 
 
 // module
-exports.push([module.i, "\n.fade-in {\n  -webkit-animation: fadeinout 0.7s linear;\n          animation: fadeinout 0.7s linear;\n}\n@-webkit-keyframes fadeinout {\n0% {\n    opacity: 0;\n}\n50% {\n    opacity: 0.5;\n}\n100% {\n    opacity: 1;\n}\n}\n@keyframes fadeinout {\n0% {\n    opacity: 0;\n}\n50% {\n    opacity: 0.5;\n}\n100% {\n    opacity: 1;\n}\n}\n.input-label {\n  font-size: 1.2em;\n  font-weight: bold;\n}\n.input-control:focus {\n  border-color: burlywood !important;\n  outline: none !important;\n  outline-width: 0 !important;\n  box-shadow: none !important;\n  -moz-box-shadow: none;\n  -webkit-box-shadow: none;\n}\n", ""]);
+exports.push([module.i, "\n.fade-in {\n    -webkit-animation: fadeinout 0.7s linear;\n            animation: fadeinout 0.7s linear;\n}\n@-webkit-keyframes fadeinout {\n0% {\n        opacity: 0;\n}\n50% {\n        opacity: 0.5;\n}\n100% {\n        opacity: 1;\n}\n}\n@keyframes fadeinout {\n0% {\n        opacity: 0;\n}\n50% {\n        opacity: 0.5;\n}\n100% {\n        opacity: 1;\n}\n}\n.input-label {\n    font-size: 1.2em;\n    font-weight: bold;\n}\n.input-control:focus {\n    border-color: burlywood !important;\n    outline: none !important;\n    outline-width: 0 !important;\n    box-shadow: none !important;\n    -moz-box-shadow: none;\n    -webkit-box-shadow: none;\n}\n", ""]);
 
 // exports
 
@@ -57416,7 +57435,7 @@ var render = function() {
                   { staticClass: "content" },
                   [
                     _c("h5", { staticClass: "input-label" }, [
-                      _vm._v("\n          Add a new Article "),
+                      _vm._v("\n                    Add a new Article "),
                       _c("i", { staticClass: "fa fa-book" })
                     ]),
                     _vm._v(" "),
@@ -57539,8 +57558,8 @@ var render = function() {
                                       ],
                                       toolbar:
                                         "undo redo | codesample | formatselect | bold italic backcolor | \
-                  alignleft aligncenter alignright alignjustify | \
-                  bullist numlist outdent indent | removeformat | help"
+                alignleft aligncenter alignright alignjustify | \
+                bullist numlist outdent indent | removeformat | help"
                                     }
                                   },
                                   model: {
@@ -57562,7 +57581,9 @@ var render = function() {
                                 _c("div", { staticClass: "row" }, [
                                   _c("div", { staticClass: "col-md-4 mt-5" }, [
                                     _c("h5", { staticClass: "input-label" }, [
-                                      _vm._v("Choose a Cover photo")
+                                      _vm._v(
+                                        "\n                                    Choose a Cover photo\n                                "
+                                      )
                                     ]),
                                     _vm._v(" "),
                                     _c("input", {
@@ -57602,7 +57623,9 @@ var render = function() {
                                     { staticClass: "col-md-4 mt-5" },
                                     [
                                       _c("h5", { staticClass: "input-label" }, [
-                                        _vm._v("Choose an Image Orientation")
+                                        _vm._v(
+                                          "\n                                    Choose an Image Orientation\n                                "
+                                        )
                                       ]),
                                       _vm._v(" "),
                                       _c("toggle-switch", {
@@ -57638,7 +57661,9 @@ var render = function() {
                                 _c("div", { staticClass: "row" }, [
                                   _c("div", { staticClass: "col-md-6 mt-5" }, [
                                     _c("h5", { staticClass: "input-label" }, [
-                                      _vm._v("Select a Category")
+                                      _vm._v(
+                                        "\n                                    Select a Category\n                                "
+                                      )
                                     ]),
                                     _vm._v(" "),
                                     _c(
@@ -57728,7 +57753,7 @@ var render = function() {
                                               },
                                               [
                                                 _vm._v(
-                                                  "\n                      Sex and Relationship\n                    "
+                                                  "\n                                            Sex and Relationship\n                                        "
                                                 )
                                               ]
                                             )
@@ -57805,7 +57830,7 @@ var render = function() {
                                     },
                                     [
                                       _vm._v(
-                                        "\n                SAVE AS DRAFT "
+                                        "\n                                SAVE AS DRAFT "
                                       ),
                                       _c("i", { staticClass: "fa fa-save" })
                                     ]
@@ -57826,7 +57851,7 @@ var render = function() {
                                     },
                                     [
                                       _vm._v(
-                                        "\n                PUBLISH ARTICLE "
+                                        "\n                                PUBLISH ARTICLE "
                                       ),
                                       _c("i", { staticClass: "fa fa-upload" })
                                     ]

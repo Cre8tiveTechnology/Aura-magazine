@@ -22,7 +22,7 @@
                             </div>
                         </div>
                     </div>
-                    <!--============== Articles Table ================-->
+                    <!--============== Invoices Table ================-->
                     <empty-resource
                         v-if="invoices.data.length === 0"
                     ></empty-resource>

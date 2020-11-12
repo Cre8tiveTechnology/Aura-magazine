@@ -3,12 +3,13 @@
         <auth-admin>
             <template v-slot:content>
                 <div class="content">
+                    <!-- ========= PAGE TITLE============ -->
                     <h5 class="input-label">
                         Add a new Invoice <i class="fa fa-book"></i>
                     </h5>
 
                     <aura-loader v-if="isLoading"></aura-loader>
-
+                    <!-- ========INVOICE FORM========== -->
                     <form class="fade-in" enctype="Multipart/form-data" v-else>
                         <validation-error
                             :errors="validationErrors"
