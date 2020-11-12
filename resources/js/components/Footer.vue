@@ -12,7 +12,7 @@
               <div class="footer-widget">
                 <div class="widget-about">
                   <img
-                    src="https://aura.com.ng/storage/logo/regular.svg"
+                    src="https://res.cloudinary.com/aura-magazine/image/upload/v1605190201/backgrounds/footer/AURA_LOGO_BLACK_FOR_HEADER_zwujbp.png"
                     alt="Logo Here"
                     class="img-fluid"
                   />

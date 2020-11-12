@@ -4,10 +4,20 @@
     <navbar :current="'BEAUTY'" />
     <!-- Navbar -->
 
-    <!-- COVER IMAGE -->
-    <div class="container-fluid p-0">
+    <!-- COVER IMAGE BIG-->
+    <div class="container-fluid p-0 d-none d-sm-block">
       <img
-        src="https://res.cloudinary.com/cre8tive-technologies/image/upload/v1604915940/aura/Beauty_ysf0jh.jpg"
+        src="https://res.cloudinary.com/aura-magazine/image/upload/v1605189825/backgrounds/web/Beauty_bpdq3l.jpg"
+        class="col-12 p-0 img-fluid rounded-0"
+        alt="Beauty Cover"
+      />
+    </div>
+    <!-- COVER IMAGE -->
+
+    <!-- COVER IMAGE SMALL-->
+    <div class="container-fluid p-0 d-sm-none">
+      <img
+        src="https://res.cloudinary.com/aura-magazine/image/upload/v1605190115/backgrounds/mobile/beauty_hpi4hc.jpg"
         class="col-12 p-0 img-fluid rounded-0"
         alt="Beauty Cover"
       />

@@ -4,12 +4,22 @@
     <navbar :current="'CULTURE'" />
     <!-- Navbar -->
 
-    <!-- COVER IMAGE -->
-    <div class="container-fluid p-0">
+    <!-- COVER IMAGE BOG -->
+    <div class="container-fluid p-0 d-none d-sm-block">
       <img
-        src="https://res.cloudinary.com/cre8tive-technologies/image/upload/v1604915936/aura/Culture_ym0tbh.jpg"
+        src="https://res.cloudinary.com/aura-magazine/image/upload/v1605189797/backgrounds/web/Culture_iht7ks.jpg"
         class="col-12 p-0 img-fluid rounded-0"
-        alt="Arts and Culture Cover"
+        alt="Culture Cover"
+      />
+    </div>
+    <!-- COVER IMAGE -->
+
+    <!-- COVER IMAGE SMALL-->
+    <div class="container-fluid p-0 d-sm-none">
+      <img
+        src="https://res.cloudinary.com/aura-magazine/image/upload/v1605190118/backgrounds/mobile/culture_qbwdcm.jpg"
+        class="col-12 p-0 img-fluid rounded-0"
+        alt="Culture Cover"
       />
     </div>
     <!-- COVER IMAGE -->

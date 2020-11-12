@@ -2954,6 +2954,10 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: "Auth-SideNav"
 });
@@ -3240,6 +3244,16 @@ __webpack_require__.r(__webpack_exports__);
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _apis_client_Article__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../apis/client/Article */ "./resources/js/apis/client/Article.js");
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 //
 //
 //
@@ -3742,6 +3756,16 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: "Beauty",
@@ -3967,6 +3991,16 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: "Culture",
@@ -4016,6 +4050,16 @@ __webpack_require__.r(__webpack_exports__);
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _apis_client_Article__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../apis/client/Article */ "./resources/js/apis/client/Article.js");
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 //
 //
 //
@@ -5823,6 +5867,16 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: "News",
@@ -6172,6 +6226,16 @@ __webpack_require__.r(__webpack_exports__);
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _apis_client_Article__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../apis/client/Article */ "./resources/js/apis/client/Article.js");
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 //
 //
 //
@@ -48564,7 +48628,8 @@ var staticRenderFns = [
           _c("img", {
             staticClass: "img-fluid",
             attrs: {
-              src: "https://aura.com.ng/storage/logo/regular.svg",
+              src:
+                "https://res.cloudinary.com/aura-magazine/image/upload/v1605190201/backgrounds/footer/AURA_LOGO_BLACK_FOR_HEADER_zwujbp.png",
               alt: "Logo Here"
             }
           }),
@@ -48768,7 +48833,16 @@ var render = function() {
                 staticClass: "simple-text logo-normal",
                 attrs: { to: "/dashboard" }
               },
-              [_c("p", [_vm._v("AURA")])]
+              [
+                _c("img", {
+                  staticClass: "img-fluid p-0",
+                  attrs: {
+                    src:
+                      "https://res.cloudinary.com/aura-magazine/image/upload/c_scale,h_25,w_100/v1605190202/backgrounds/footer/AURA_LOGO_WHITE_FOR_HEADER_yamx0h.png",
+                    alt: "Logo Here"
+                  }
+                })
+              ]
             )
           ],
           1
@@ -49433,6 +49507,8 @@ var render = function() {
       _vm._v(" "),
       _vm._m(0),
       _vm._v(" "),
+      _vm._m(1),
+      _vm._v(" "),
       _vm.articles.data.length === 0
         ? _c("empty-resource")
         : _c(
@@ -49770,12 +49846,27 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "container-fluid p-0" }, [
+    return _c("div", { staticClass: "container-fluid p-0 d-none d-sm-block" }, [
       _c("img", {
         staticClass: "col-12 p-0 img-fluid rounded-0",
         attrs: {
           src:
-            "https://res.cloudinary.com/cre8tive-technologies/image/upload/v1604915938/aura/Horoscope_o0jpuv.jpg",
+            "https://res.cloudinary.com/aura-magazine/image/upload/v1605189792/backgrounds/web/Life_Love_a9ftco.jpg",
+          alt: "Ask Ruby Cover"
+        }
+      })
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "container-fluid p-0 d-sm-none" }, [
+      _c("img", {
+        staticClass: "col-12 p-0 img-fluid rounded-0",
+        attrs: {
+          src:
+            "https://res.cloudinary.com/aura-magazine/image/upload/v1605190106/backgrounds/mobile/life_love_w91rjy.jpg",
           alt: "Ask Ruby Cover"
         }
       })
@@ -49844,6 +49935,8 @@ var render = function() {
       _vm._v(" "),
       _vm._m(0),
       _vm._v(" "),
+      _vm._m(1),
+      _vm._v(" "),
       _vm.articles.data.length === 0
         ? _c("empty-resource")
         : _c(
@@ -50181,12 +50274,27 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "container-fluid p-0" }, [
+    return _c("div", { staticClass: "container-fluid p-0 d-none d-sm-block" }, [
       _c("img", {
         staticClass: "col-12 p-0 img-fluid rounded-0",
         attrs: {
           src:
-            "https://res.cloudinary.com/cre8tive-technologies/image/upload/v1604915940/aura/Beauty_ysf0jh.jpg",
+            "https://res.cloudinary.com/aura-magazine/image/upload/v1605189825/backgrounds/web/Beauty_bpdq3l.jpg",
+          alt: "Beauty Cover"
+        }
+      })
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "container-fluid p-0 d-sm-none" }, [
+      _c("img", {
+        staticClass: "col-12 p-0 img-fluid rounded-0",
+        attrs: {
+          src:
+            "https://res.cloudinary.com/aura-magazine/image/upload/v1605190115/backgrounds/mobile/beauty_hpi4hc.jpg",
           alt: "Beauty Cover"
         }
       })
@@ -50220,6 +50328,8 @@ var render = function() {
       _c("navbar", { attrs: { current: "CULTURE" } }),
       _vm._v(" "),
       _vm._m(0),
+      _vm._v(" "),
+      _vm._m(1),
       _vm._v(" "),
       _vm.articles.data.length === 0
         ? _c("empty-resource")
@@ -50558,13 +50668,28 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "container-fluid p-0" }, [
+    return _c("div", { staticClass: "container-fluid p-0 d-none d-sm-block" }, [
       _c("img", {
         staticClass: "col-12 p-0 img-fluid rounded-0",
         attrs: {
           src:
-            "https://res.cloudinary.com/cre8tive-technologies/image/upload/v1604915936/aura/Culture_ym0tbh.jpg",
-          alt: "Arts and Culture Cover"
+            "https://res.cloudinary.com/aura-magazine/image/upload/v1605189797/backgrounds/web/Culture_iht7ks.jpg",
+          alt: "Culture Cover"
+        }
+      })
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "container-fluid p-0 d-sm-none" }, [
+      _c("img", {
+        staticClass: "col-12 p-0 img-fluid rounded-0",
+        attrs: {
+          src:
+            "https://res.cloudinary.com/aura-magazine/image/upload/v1605190118/backgrounds/mobile/culture_qbwdcm.jpg",
+          alt: "Culture Cover"
         }
       })
     ])
@@ -50597,6 +50722,8 @@ var render = function() {
       _c("navbar", { attrs: { current: "FASHION" } }),
       _vm._v(" "),
       _vm._m(0),
+      _vm._v(" "),
+      _vm._m(1),
       _vm._v(" "),
       _vm.articles.data.length === 0
         ? _c("empty-resource")
@@ -50935,12 +51062,27 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "container-fluid p-0" }, [
+    return _c("div", { staticClass: "container-fluid p-0 d-none d-sm-block" }, [
       _c("img", {
         staticClass: "col-12 p-0 img-fluid rounded-0",
         attrs: {
           src:
-            "https://res.cloudinary.com/cre8tive-technologies/image/upload/v1604915941/aura/Fashion_sge02y.jpg",
+            "https://res.cloudinary.com/aura-magazine/image/upload/v1605189952/backgrounds/web/Fashion_fhrv7p.jpg",
+          alt: "Fashion Cover"
+        }
+      })
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "container-fluid p-0 d-sm-none" }, [
+      _c("img", {
+        staticClass: "col-12 p-0 img-fluid rounded-0",
+        attrs: {
+          src:
+            "https://res.cloudinary.com/aura-magazine/image/upload/v1605190200/backgrounds/mobile/fashion_r7zwfz.jpg",
           alt: "Fashion Cover"
         }
       })
@@ -53354,6 +53496,8 @@ var render = function() {
       _vm._v(" "),
       _vm._m(0),
       _vm._v(" "),
+      _vm._m(1),
+      _vm._v(" "),
       _vm.articles.data.length === 0
         ? _c("empty-resource")
         : _c(
@@ -53691,12 +53835,27 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "container-fluid p-0" }, [
+    return _c("div", { staticClass: "container-fluid p-0 d-none d-sm-block" }, [
       _c("img", {
         staticClass: "col-12 p-0 img-fluid rounded-0",
         attrs: {
           src:
-            "https://res.cloudinary.com/cre8tive-technologies/image/upload/v1604915940/aura/News_jksr6x.jpg",
+            "https://res.cloudinary.com/aura-magazine/image/upload/v1605189789/backgrounds/web/News_t7n8dd.jpg",
+          alt: "News Cover"
+        }
+      })
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "container-fluid p-0 d-sm-none" }, [
+      _c("img", {
+        staticClass: "col-12 p-0 img-fluid rounded-0",
+        attrs: {
+          src:
+            "https://res.cloudinary.com/aura-magazine/image/upload/v1605190128/backgrounds/mobile/news_ah8m8x.jpg",
           alt: "News Cover"
         }
       })
@@ -54182,6 +54341,8 @@ var render = function() {
       _vm._v(" "),
       _vm._m(0),
       _vm._v(" "),
+      _vm._m(1),
+      _vm._v(" "),
       _vm.articles.data.length === 0
         ? _c("empty-resource")
         : _c(
@@ -54519,12 +54680,27 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "container-fluid p-0" }, [
+    return _c("div", { staticClass: "container-fluid p-0 d-none d-sm-block" }, [
       _c("img", {
         staticClass: "col-12 p-0 img-fluid rounded-0",
         attrs: {
           src:
-            "https://res.cloudinary.com/cre8tive-technologies/image/upload/v1604915940/aura/Life_Love_tcpfrx.jpg",
+            "https://res.cloudinary.com/aura-magazine/image/upload/v1605189792/backgrounds/web/Life_Love_a9ftco.jpg",
+          alt: "Sex and Relationship Cover"
+        }
+      })
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "container-fluid p-0 d-sm-none" }, [
+      _c("img", {
+        staticClass: "col-12 p-0 img-fluid rounded-0",
+        attrs: {
+          src:
+            "https://res.cloudinary.com/aura-magazine/image/upload/v1605190106/backgrounds/mobile/life_love_w91rjy.jpg",
           alt: "Sex and Relationship Cover"
         }
       })
