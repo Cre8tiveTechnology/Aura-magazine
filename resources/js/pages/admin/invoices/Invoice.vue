@@ -62,7 +62,7 @@
 
                                     <!-- ====TABLE ACTIONS======= -->
                                     <td>
-                                        <!-- =====Remove Article ======= -->
+                                        <!-- =====Remove Invoice ======= -->
                                         <button
                                             class="btn btn-sm btn-aura"
                                             v-if="invoice.deleted_at === null"
@@ -73,7 +73,7 @@
                                             <i class="fa fa-trash"></i>
                                         </button>
 
-                                        <!-- =====Restore Article ======= -->
+                                        <!-- =====Restore Invoice ======= -->
                                         <button
                                             class="btn btn-sm btn-aura"
                                             v-else
@@ -83,7 +83,7 @@
                                         >
                                             <i class="fa fa-undo"></i>
                                         </button>
-                                        <!-- =====Edit Article ======= -->
+                                        <!-- =====Edit Invoice ======= -->
                                         <button
                                             class="btn btn-sm btn-aura"
                                             id="show-modal"
@@ -177,7 +177,7 @@
                                 <div class="container-fluid p-0 m-0">
                                     <div class="row">
                                         <!-- Select Invoice  File -->
-                                        <div class="col-md-4 mt-5">
+                                        <div class="col-md-6 mt-5">
                                             <h5 class="input-label">
                                                 Select Invoice * (PDF format
                                                 Only)
@@ -187,12 +187,12 @@
                                                 @change="selectFile"
                                                 id="document"
                                                 name="document"
-                                                class="form-control input-control py-1"
+                                                class="form-control input-control "
                                             />
                                         </div>
 
                                         <!-- Segment field -->
-                                        <div class="col-md-4 mt-5">
+                                        <div class="col-md-6 mt-5">
                                             <h5 class="input-label">
                                                 Select Segment
                                             </h5>
@@ -215,7 +215,7 @@
                                             class="btn btn-md btn-success"
                                             @click.prevent="editInvoice"
                                         >
-                                            SAVE INVOICE
+                                            UPDATE INVOICE
                                             <i class="fa fa-upload"></i>
                                         </button>
                                     </div>
@@ -231,7 +231,6 @@
 
 <script>
 import Invoice from "../../../apis/admin/Invoice";
-import Article from "../../../apis/admin/Invoice";
 import User from "../../../apis/admin/User";
 export default {
     name: "Invoice",
@@ -307,7 +306,7 @@ export default {
         /* -------------------------------------------------------------------------- */
         /*                               Restore Invoice                               */
         /* -------------------------------------------------------------------------- */
-        restorInvoice(invoice) {
+        restoreInvoice(invoice) {
             Invoice.restoreInvoice({
                 id: invoice
             })
@@ -316,7 +315,7 @@ export default {
                         this.alertSuccess(response.data);
                     }
                     //Fetch invoice
-                    this.getArticles();
+                    this.getInvoices();
                 })
                 .catch(error => {
                     if (error.response.status == 404) {

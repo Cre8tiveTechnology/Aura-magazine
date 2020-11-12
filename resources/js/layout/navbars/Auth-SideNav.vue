@@ -3,8 +3,12 @@
         <div class="sidebar" data-color="black" data-active-color="danger">
             <div class="logo">
                 <router-link to="/dashboard" class="simple-text logo-normal">
-                    <p>AURA</p></router-link
-                >
+                    <img
+                        src="https://res.cloudinary.com/aura-magazine/image/upload/c_scale,h_25,w_100/v1605190202/backgrounds/footer/AURA_LOGO_WHITE_FOR_HEADER_yamx0h.png"
+                        alt="Logo Here"
+                        class="img-fluid p-0"
+                    />
+                </router-link>
             </div>
             <div class="sidebar-wrapper">
                 <ul class="nav">

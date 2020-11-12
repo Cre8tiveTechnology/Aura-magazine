@@ -67,8 +67,8 @@
               data-toggle="dropdown"
               aria-haspopup="true"
               aria-expanded="false"
-              >LIFE &amp; LOVE</a
-            >
+              >LIFE &amp; LOVE
+            </a>
             <div class="dropdown-menu" aria-labelledby="moreDropdown">
               <router-link
                 :class="
@@ -116,8 +116,8 @@
               data-toggle="dropdown"
               aria-haspopup="true"
               aria-expanded="false"
-              >MORE</a
-            >
+              >MORE
+            </a>
             <div class="dropdown-menu" aria-labelledby="moreDropdown">
               <router-link
                 :class="

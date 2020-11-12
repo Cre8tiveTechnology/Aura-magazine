@@ -12,11 +12,11 @@
               <div class="footer-widget">
                 <div class="widget-about">
                   <img
-                    src="https://aura.com.ng/storage/logo/regular.svg"
+                    src="https://res.cloudinary.com/aura-magazine/image/upload/v1605190201/backgrounds/footer/AURA_LOGO_BLACK_FOR_HEADER_zwujbp.png"
                     alt="Logo Here"
                     class="img-fluid"
                   />
-                  <p>Bringing Magazine from core...</p>
+                  <p>Bringing Magazine from its core...</p>
                   <ul class="contact-details">
                     <li>
                       <span class="icon-earphones"></span> Call Us:
@@ -150,7 +150,7 @@
               <div class="copyright-text">
                 <p>
                   © 2020 <a href="/">AURA</a>. All rights reserved. Created by
-                  <a href="https://www.hinodegeeks.ng">Hinode Geeks</a>
+                  <a href="https://www.hinodegeeks.com">Hinode Geeks</a>
                 </p>
               </div>
             </div>
