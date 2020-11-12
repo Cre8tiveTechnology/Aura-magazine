@@ -33,6 +33,7 @@ class RegisterController extends Controller
                 Cloudder::upload($request->photo, $request->name, [
                     'folder' => 'aura/',
                 ]);
+
                 $image_url = Cloudder::show(Cloudder::getPublicId());
 
                 User::create([
@@ -42,6 +43,8 @@ class RegisterController extends Controller
                     'photo' => $image_url,
                     'password' => Hash::make($request->password),
                 ]);
+
+                return response()->json("User Created Successfully!");
             } else {
 
                 User::create([
@@ -50,6 +53,9 @@ class RegisterController extends Controller
                     'role_id' => $request->role_id,
                     'password' => Hash::make($request->password),
                 ]);
+
+                return response()->json("User Created Successfully!");
+
             }
 
         }
