@@ -118,11 +118,14 @@
     <!--===================== ADS BANNER =====================-->
 
     <!-- IMAGES -->
-    <div class="container sp-mt-7" v-show="hasImages">
+    <div class="container sp-mt-7" v-show="this.images.length > 0">
+      <h5 class="news headline-font font-weight-bolder ml-0 mt-4">
+        <span class="text-aura" style="font-size: 30px">+</span> MEDIA CORNER
+      </h5>
       <div class="row justify-content-between">
         <div
           class="col-lg-3 col-md-5 col-sm-12 col-12 mt-4 p-3"
-          v-for="(post, index) in post.images"
+          v-for="(post, index) in images"
           :key="post"
         >
           <img :src="post" class="col-12 p-0 img-fluid" alt="News Cover" />
@@ -200,7 +203,7 @@ export default {
   },
   computed: {
     imagesLenght() {
-      return this.post.images.length;
+      return this.images.length;
     },
 
     filteredRecommendations() {
@@ -226,6 +229,8 @@ export default {
     this.getArticle();
     //Updates the views count after 10secs
     setTimeout(this.updateViewsCount, 10000);
+    // Extract All Images from the HTML String
+    setTimeout(this.getImages, 8000);
   },
   watch: {
     $route() {
@@ -233,6 +238,13 @@ export default {
     },
   },
   methods: {
+    getImages() {
+      let imgRex = /<img.*?src="(.*?)"[^>]+>/g;
+      let img;
+      while ((img = imgRex.exec(this.article.content))) {
+        this.images.push(img[1]);
+      }
+    },
     scrollToTop() {
       window.scrollTo(0, 0);
     },
@@ -272,15 +284,8 @@ export default {
   data() {
     return {
       article: {},
+      images: [],
       hasImages: false,
-      post: {
-        images: [
-          "https://images.unsplash.com/photo-1483985988355-763728e1935b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80",
-          "https://images.unsplash.com/photo-1483985988355-763728e1935b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80",
-          "https://images.unsplash.com/photo-1483985988355-763728e1935b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80",
-          "https://images.unsplash.com/photo-1483985988355-763728e1935b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80",
-        ],
-      },
       recommendations: [],
       links: {
         Culture: "CULTURE",

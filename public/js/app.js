@@ -6202,6 +6202,9 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: "Post",
@@ -6211,7 +6214,7 @@ __webpack_require__.r(__webpack_exports__);
   },
   computed: {
     imagesLenght: function imagesLenght() {
-      return this.post.images.length;
+      return this.images.length;
     },
     filteredRecommendations: function filteredRecommendations() {
       var _this = this;
@@ -6235,7 +6238,9 @@ __webpack_require__.r(__webpack_exports__);
     this.$ga.page(articleUrl);
     this.getArticle(); //Updates the views count after 10secs
 
-    setTimeout(this.updateViewsCount, 10000);
+    setTimeout(this.updateViewsCount, 10000); // Extract All Images from the HTML String
+
+    setTimeout(this.getImages, 8000);
   },
   watch: {
     $route: function $route() {
@@ -6243,6 +6248,14 @@ __webpack_require__.r(__webpack_exports__);
     }
   },
   methods: {
+    getImages: function getImages() {
+      var imgRex = /<img.*?src="(.*?)"[^>]+>/g;
+      var img;
+
+      while (img = imgRex.exec(this.article.content)) {
+        this.images.push(img[1]);
+      }
+    },
     scrollToTop: function scrollToTop() {
       window.scrollTo(0, 0);
     },
@@ -6282,10 +6295,8 @@ __webpack_require__.r(__webpack_exports__);
   data: function data() {
     return {
       article: {},
+      images: [],
       hasImages: false,
-      post: {
-        images: ["https://images.unsplash.com/photo-1483985988355-763728e1935b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80", "https://images.unsplash.com/photo-1483985988355-763728e1935b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80", "https://images.unsplash.com/photo-1483985988355-763728e1935b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80", "https://images.unsplash.com/photo-1483985988355-763728e1935b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80"]
-      },
       recommendations: [],
       links: {
         Culture: "CULTURE",
@@ -54368,17 +54379,19 @@ var render = function() {
             {
               name: "show",
               rawName: "v-show",
-              value: _vm.hasImages,
-              expression: "hasImages"
+              value: this.images.length > 0,
+              expression: "this.images.length > 0"
             }
           ],
           staticClass: "container sp-mt-7"
         },
         [
+          _vm._m(3),
+          _vm._v(" "),
           _c(
             "div",
             { staticClass: "row justify-content-between" },
-            _vm._l(_vm.post.images, function(post, index) {
+            _vm._l(_vm.images, function(post, index) {
               return _c(
                 "div",
                 {
@@ -54403,7 +54416,7 @@ var render = function() {
       ),
       _vm._v(" "),
       _c("div", { staticClass: "container sp-mt-8" }, [
-        _vm._m(3),
+        _vm._m(4),
         _vm._v(" "),
         _c(
           "div",
@@ -54597,6 +54610,23 @@ var staticRenderFns = [
         _c("div", { staticClass: "container text-center" }, [
           _c("p", [_vm._v("ADS BANNER")])
         ])
+      ]
+    )
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c(
+      "h5",
+      { staticClass: "news headline-font font-weight-bolder ml-0 mt-4" },
+      [
+        _c(
+          "span",
+          { staticClass: "text-aura", staticStyle: { "font-size": "30px" } },
+          [_vm._v("+")]
+        ),
+        _vm._v(" MEDIA CORNER\n    ")
       ]
     )
   },
