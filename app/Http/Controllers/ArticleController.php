@@ -11,6 +11,7 @@ use JD\Cloudder\Facades\Cloudder;
 
 class ArticleController extends Controller
 {
+
     /**
      * Display a listing of the resource for the user.
      *
@@ -19,6 +20,20 @@ class ArticleController extends Controller
     public function index(string $category)
     {
         $articles = Article::where("category", "=", $category)->with('user')->latest()->paginate(10);
+
+        return response()->json($articles, 200);
+    }
+
+
+
+    /**
+     * Display a listing of the resource of a particlar author for the user.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function authorArticles(User $user)
+    {
+        $articles = $user->articles()->latest()->paginate(10);
 
         return response()->json($articles, 200);
     }
