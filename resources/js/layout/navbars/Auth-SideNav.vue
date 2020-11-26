@@ -10,7 +10,7 @@
                     />
                 </router-link>
             </div>
-            <div class="sidebar-wrapper">
+            <div class="sidebar-wrapper" v-if="role === 'superadmin'">
                 <ul class="nav">
                     <li class="">
                         <router-link to="/dashboard">
@@ -81,12 +81,63 @@
                     </li>
                 </ul>
             </div>
+
+            <div class="sidebar-wrapper" v-else-if="role === 'editorinchief'">
+                <ul class="nav">
+                    <li class="">
+                        <router-link to="/dashboard">
+                            <i class="nc-icon nc-bank"></i>
+                            <p>Overview</p></router-link
+                        >
+                    </li>
+
+                    <li class="">
+                        <router-link to="/articles">
+                            <i class="nc-icon nc-diamond"></i>
+                            <p>Articles</p></router-link
+                        >
+                    </li>
+
+                    <li class="">
+                        <router-link to="/magazine">
+                            <i class="nc-icon nc-tile-56"></i>
+                            <p>Magazine</p></router-link
+                        >
+                    </li>
+                    <li class="">
+                        <router-link to="/video">
+                            <i class="nc-icon nc-caps-small"></i>
+                            <p>Video</p></router-link
+                        >
+                    </li>
+                </ul>
+            </div>
+
+            <div class="sidebar-wrapper" v-else-if="role === 'marketermain'">
+                <ul class="nav">
+                    <li class="">
+                        <router-link to="/invoices">
+                            <i class="nc-icon nc-caps-small"></i>
+                            <p>Invoice</p></router-link
+                        >
+                    </li>
+                    <li class="">
+                        <router-link to="/adverts">
+                            <i class="nc-icon nc-caps-small"></i>
+                            <p>Advertisement</p></router-link
+                        >
+                    </li>
+                </ul>
+            </div>
         </div>
     </div>
 </template>
 
 <script>
 export default {
-    name: "Auth-SideNav"
+    name: "Auth-SideNav",
+    props: {
+        role: ""
+    }
 };
 </script>

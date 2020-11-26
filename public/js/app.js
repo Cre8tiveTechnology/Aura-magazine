@@ -2781,7 +2781,8 @@ __webpack_require__.r(__webpack_exports__);
   name: "Admin",
   data: function data() {
     return {
-      user: {}
+      user: {},
+      role: ""
     };
   },
   mounted: function mounted() {
@@ -2789,6 +2790,7 @@ __webpack_require__.r(__webpack_exports__);
 
     _apis_admin_User__WEBPACK_IMPORTED_MODULE_0__["default"].auth().then(function (response) {
       _this.user = response.data;
+      _this.role = _this.user.user_role.key;
     })["catch"](function (error) {
       console.error(error.response);
 
@@ -2958,8 +2960,59 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
-  name: "Auth-SideNav"
+  name: "Auth-SideNav",
+  props: {
+    role: ""
+  }
 });
 
 /***/ }),
@@ -15197,7 +15250,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, "\n.modal-mask {\n    position: fixed;\n    z-index: 10000;\n    top: 0;\n    left: 0;\n    width: 100%;\n    height: 100%;\n    background-color: rgba(0, 0, 0, 0.5);\n    display: table;\n    transition: opacity 0.3s ease;\n}\n.modal-wrapper {\n    display: table-cell;\n    vertical-align: middle;\n}\n.modal-container {\n    width: 80%;\n    margin: 0px auto;\n    padding: 20px;\n    background-color: #fff;\n    border-radius: 2px;\n    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.33);\n    transition: all 0.3s ease;\n    font-family: Helvetica, Arial, sans-serif;\n}\n.modal-header h5 {\n    margin-top: 0;\n    font-weight: bold;\n}\n.modal-body {\n    width: 100%;\n    margin: 20px 0;\n    max-height: 350px;\n    overflow-y: auto;\n    scroll-behavior: smooth;\n}\n.modal-default-button {\n    float: left;\n}\n.modal-enter {\n    opacity: 0;\n}\n.modal-leave-active {\n    opacity: 0;\n}\n.modal-enter .modal-container,\n.modal-leave-active .modal-container {\n    transform: scale(1.1);\n}\n", ""]);
+exports.push([module.i, "\n.modal-mask {\n    position: fixed;\n    z-index: 10000;\n    top: 0;\n    left: 0;\n    width: 100%;\n    height: 100%;\n    background-color: rgba(0, 0, 0, 0.5);\n    display: table;\n    transition: opacity 0.3s ease;\n}\n.modal-wrapper {\n    display: table-cell;\n    vertical-align: middle;\n}\n.modal-container {\n    width: 80%;\n    margin: 0px auto;\n    padding: 20px;\n    background-color: #fff;\n    border-radius: 2px;\n    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.33);\n    transition: all 0.3s ease;\n    font-family: Helvetica, Arial, sans-serif;\n}\n.modal-header h5 {\n    margin-top: 0;\n    font-weight: bold;\n}\n.modal-body {\n    width: 100%;\n    margin: 20px 0;\n    max-height: 350px;\n    overflow-y: auto;\n    scroll-behavior: smooth;\n}\n.modal-default-button {\n    float: left;\n}\n.modal-enter {\n    opacity: 0;\n}\n.modal-leave-active {\n    opacity: 0;\n}\n.modal-enter .modal-container,\n.modal-leave-active .modal-container {\n    transform: scale(1.1);\n}\n@media only screen and (max-width: 768px) {\n.modal-container {\n        width: 100%;\n        margin: 0px auto;\n        padding: 20px;\n        background-color: #fff;\n        border-radius: 2px;\n        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.33);\n        transition: all 0.3s ease;\n        font-family: Helvetica, Arial, sans-serif;\n}\n}\n", ""]);
 
 // exports
 
@@ -50401,7 +50454,7 @@ var render = function() {
       "div",
       { staticClass: "wrapper" },
       [
-        _c("auth-sidenav"),
+        _c("auth-sidenav", { attrs: { role: _vm.role } }),
         _vm._v(" "),
         _c(
           "div",
@@ -50542,152 +50595,240 @@ var render = function() {
           1
         ),
         _vm._v(" "),
-        _c("div", { staticClass: "sidebar-wrapper" }, [
-          _c("ul", { staticClass: "nav" }, [
-            _c(
-              "li",
-              {},
-              [
-                _c("router-link", { attrs: { to: "/dashboard" } }, [
-                  _c("i", { staticClass: "nc-icon nc-bank" }),
-                  _vm._v(" "),
-                  _c("p", [_vm._v("Overview")])
-                ])
-              ],
-              1
-            ),
-            _vm._v(" "),
-            _c(
-              "li",
-              {},
-              [
-                _c("router-link", { attrs: { to: "/articles" } }, [
-                  _c("i", { staticClass: "nc-icon nc-diamond" }),
-                  _vm._v(" "),
-                  _c("p", [_vm._v("Articles")])
-                ])
-              ],
-              1
-            ),
-            _vm._v(" "),
-            _c(
-              "li",
-              {},
-              [
-                _c("router-link", { attrs: { to: "/users" } }, [
-                  _c("i", { staticClass: "nc-icon nc-pin-3" }),
-                  _vm._v(" "),
-                  _c("p", [_vm._v("Users")])
-                ])
-              ],
-              1
-            ),
-            _vm._v(" "),
-            _c(
-              "li",
-              {},
-              [
-                _c("router-link", { attrs: { to: "/roles" } }, [
-                  _c("i", { staticClass: "nc-icon nc-bell-55" }),
-                  _vm._v(" "),
-                  _c("p", [_vm._v("Roles")])
-                ])
-              ],
-              1
-            ),
-            _vm._v(" "),
-            _c(
-              "li",
-              {},
-              [
-                _c("router-link", { attrs: { to: "/magazine" } }, [
-                  _c("i", { staticClass: "nc-icon nc-tile-56" }),
-                  _vm._v(" "),
-                  _c("p", [_vm._v("Magazine")])
-                ])
-              ],
-              1
-            ),
-            _vm._v(" "),
-            _c(
-              "li",
-              {},
-              [
-                _c("router-link", { attrs: { to: "/video" } }, [
-                  _c("i", { staticClass: "nc-icon nc-caps-small" }),
-                  _vm._v(" "),
-                  _c("p", [_vm._v("Video")])
-                ])
-              ],
-              1
-            ),
-            _vm._v(" "),
-            _c(
-              "li",
-              {},
-              [
-                _c("router-link", { attrs: { to: "/invoices" } }, [
-                  _c("i", { staticClass: "nc-icon nc-caps-small" }),
-                  _vm._v(" "),
-                  _c("p", [_vm._v("Invoice")])
-                ])
-              ],
-              1
-            ),
-            _vm._v(" "),
-            _c(
-              "li",
-              {},
-              [
-                _c("router-link", { attrs: { to: "/adverts" } }, [
-                  _c("i", { staticClass: "nc-icon nc-caps-small" }),
-                  _vm._v(" "),
-                  _c("p", [_vm._v("Advertisement")])
-                ])
-              ],
-              1
-            ),
-            _vm._v(" "),
-            _c(
-              "li",
-              {},
-              [
-                _c("router-link", { attrs: { to: "/orders" } }, [
-                  _c("i", { staticClass: "nc-icon nc-caps-small" }),
-                  _vm._v(" "),
-                  _c("p", [_vm._v("Orders")])
-                ])
-              ],
-              1
-            ),
-            _vm._v(" "),
-            _c(
-              "li",
-              {},
-              [
-                _c("router-link", { attrs: { to: "/calendar" } }, [
-                  _c("i", { staticClass: "nc-icon nc-caps-small" }),
-                  _vm._v(" "),
-                  _c("p", [_vm._v("Calendar")])
-                ])
-              ],
-              1
-            ),
-            _vm._v(" "),
-            _c(
-              "li",
-              {},
-              [
-                _c("router-link", { attrs: { to: "/files" } }, [
-                  _c("i", { staticClass: "nc-icon nc-caps-small" }),
-                  _vm._v(" "),
-                  _c("p", [_vm._v("Files")])
-                ])
-              ],
-              1
-            )
-          ])
-        ])
+        _vm.role === "superadmin"
+          ? _c("div", { staticClass: "sidebar-wrapper" }, [
+              _c("ul", { staticClass: "nav" }, [
+                _c(
+                  "li",
+                  {},
+                  [
+                    _c("router-link", { attrs: { to: "/dashboard" } }, [
+                      _c("i", { staticClass: "nc-icon nc-bank" }),
+                      _vm._v(" "),
+                      _c("p", [_vm._v("Overview")])
+                    ])
+                  ],
+                  1
+                ),
+                _vm._v(" "),
+                _c(
+                  "li",
+                  {},
+                  [
+                    _c("router-link", { attrs: { to: "/articles" } }, [
+                      _c("i", { staticClass: "nc-icon nc-diamond" }),
+                      _vm._v(" "),
+                      _c("p", [_vm._v("Articles")])
+                    ])
+                  ],
+                  1
+                ),
+                _vm._v(" "),
+                _c(
+                  "li",
+                  {},
+                  [
+                    _c("router-link", { attrs: { to: "/users" } }, [
+                      _c("i", { staticClass: "nc-icon nc-pin-3" }),
+                      _vm._v(" "),
+                      _c("p", [_vm._v("Users")])
+                    ])
+                  ],
+                  1
+                ),
+                _vm._v(" "),
+                _c(
+                  "li",
+                  {},
+                  [
+                    _c("router-link", { attrs: { to: "/roles" } }, [
+                      _c("i", { staticClass: "nc-icon nc-bell-55" }),
+                      _vm._v(" "),
+                      _c("p", [_vm._v("Roles")])
+                    ])
+                  ],
+                  1
+                ),
+                _vm._v(" "),
+                _c(
+                  "li",
+                  {},
+                  [
+                    _c("router-link", { attrs: { to: "/magazine" } }, [
+                      _c("i", { staticClass: "nc-icon nc-tile-56" }),
+                      _vm._v(" "),
+                      _c("p", [_vm._v("Magazine")])
+                    ])
+                  ],
+                  1
+                ),
+                _vm._v(" "),
+                _c(
+                  "li",
+                  {},
+                  [
+                    _c("router-link", { attrs: { to: "/video" } }, [
+                      _c("i", { staticClass: "nc-icon nc-caps-small" }),
+                      _vm._v(" "),
+                      _c("p", [_vm._v("Video")])
+                    ])
+                  ],
+                  1
+                ),
+                _vm._v(" "),
+                _c(
+                  "li",
+                  {},
+                  [
+                    _c("router-link", { attrs: { to: "/invoices" } }, [
+                      _c("i", { staticClass: "nc-icon nc-caps-small" }),
+                      _vm._v(" "),
+                      _c("p", [_vm._v("Invoice")])
+                    ])
+                  ],
+                  1
+                ),
+                _vm._v(" "),
+                _c(
+                  "li",
+                  {},
+                  [
+                    _c("router-link", { attrs: { to: "/adverts" } }, [
+                      _c("i", { staticClass: "nc-icon nc-caps-small" }),
+                      _vm._v(" "),
+                      _c("p", [_vm._v("Advertisement")])
+                    ])
+                  ],
+                  1
+                ),
+                _vm._v(" "),
+                _c(
+                  "li",
+                  {},
+                  [
+                    _c("router-link", { attrs: { to: "/orders" } }, [
+                      _c("i", { staticClass: "nc-icon nc-caps-small" }),
+                      _vm._v(" "),
+                      _c("p", [_vm._v("Orders")])
+                    ])
+                  ],
+                  1
+                ),
+                _vm._v(" "),
+                _c(
+                  "li",
+                  {},
+                  [
+                    _c("router-link", { attrs: { to: "/calendar" } }, [
+                      _c("i", { staticClass: "nc-icon nc-caps-small" }),
+                      _vm._v(" "),
+                      _c("p", [_vm._v("Calendar")])
+                    ])
+                  ],
+                  1
+                ),
+                _vm._v(" "),
+                _c(
+                  "li",
+                  {},
+                  [
+                    _c("router-link", { attrs: { to: "/files" } }, [
+                      _c("i", { staticClass: "nc-icon nc-caps-small" }),
+                      _vm._v(" "),
+                      _c("p", [_vm._v("Files")])
+                    ])
+                  ],
+                  1
+                )
+              ])
+            ])
+          : _vm.role === "editorinchief"
+          ? _c("div", { staticClass: "sidebar-wrapper" }, [
+              _c("ul", { staticClass: "nav" }, [
+                _c(
+                  "li",
+                  {},
+                  [
+                    _c("router-link", { attrs: { to: "/dashboard" } }, [
+                      _c("i", { staticClass: "nc-icon nc-bank" }),
+                      _vm._v(" "),
+                      _c("p", [_vm._v("Overview")])
+                    ])
+                  ],
+                  1
+                ),
+                _vm._v(" "),
+                _c(
+                  "li",
+                  {},
+                  [
+                    _c("router-link", { attrs: { to: "/articles" } }, [
+                      _c("i", { staticClass: "nc-icon nc-diamond" }),
+                      _vm._v(" "),
+                      _c("p", [_vm._v("Articles")])
+                    ])
+                  ],
+                  1
+                ),
+                _vm._v(" "),
+                _c(
+                  "li",
+                  {},
+                  [
+                    _c("router-link", { attrs: { to: "/magazine" } }, [
+                      _c("i", { staticClass: "nc-icon nc-tile-56" }),
+                      _vm._v(" "),
+                      _c("p", [_vm._v("Magazine")])
+                    ])
+                  ],
+                  1
+                ),
+                _vm._v(" "),
+                _c(
+                  "li",
+                  {},
+                  [
+                    _c("router-link", { attrs: { to: "/video" } }, [
+                      _c("i", { staticClass: "nc-icon nc-caps-small" }),
+                      _vm._v(" "),
+                      _c("p", [_vm._v("Video")])
+                    ])
+                  ],
+                  1
+                )
+              ])
+            ])
+          : _vm.role === "marketermain"
+          ? _c("div", { staticClass: "sidebar-wrapper" }, [
+              _c("ul", { staticClass: "nav" }, [
+                _c(
+                  "li",
+                  {},
+                  [
+                    _c("router-link", { attrs: { to: "/invoices" } }, [
+                      _c("i", { staticClass: "nc-icon nc-caps-small" }),
+                      _vm._v(" "),
+                      _c("p", [_vm._v("Invoice")])
+                    ])
+                  ],
+                  1
+                ),
+                _vm._v(" "),
+                _c(
+                  "li",
+                  {},
+                  [
+                    _c("router-link", { attrs: { to: "/adverts" } }, [
+                      _c("i", { staticClass: "nc-icon nc-caps-small" }),
+                      _vm._v(" "),
+                      _c("p", [_vm._v("Advertisement")])
+                    ])
+                  ],
+                  1
+                )
+              ])
+            ])
+          : _vm._e()
       ]
     )
   ])
@@ -85409,8 +85550,8 @@ __webpack_require__.r(__webpack_exports__);
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! /Users/mac/Documents/Laravel/Aura-magazine/resources/js/app.js */"./resources/js/app.js");
-module.exports = __webpack_require__(/*! /Users/mac/Documents/Laravel/Aura-magazine/resources/sass/app.scss */"./resources/sass/app.scss");
+__webpack_require__(/*! /Users/mac/Documents/Projects/Laravel/Aura/resources/js/app.js */"./resources/js/app.js");
+module.exports = __webpack_require__(/*! /Users/mac/Documents/Projects/Laravel/Aura/resources/sass/app.scss */"./resources/sass/app.scss");
 
 
 /***/ })

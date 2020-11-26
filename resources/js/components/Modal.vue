@@ -88,4 +88,17 @@
     -webkit-transform: scale(1.1);
     transform: scale(1.1);
 }
+
+@media only screen and (max-width: 768px) {
+    .modal-container {
+        width: 100%;
+        margin: 0px auto;
+        padding: 20px;
+        background-color: #fff;
+        border-radius: 2px;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.33);
+        transition: all 0.3s ease;
+        font-family: Helvetica, Arial, sans-serif;
+    }
+}
 </style>

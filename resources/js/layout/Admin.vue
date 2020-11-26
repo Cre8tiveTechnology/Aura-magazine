@@ -1,7 +1,7 @@
 <template>
     <div>
         <div class="wrapper">
-            <auth-sidenav></auth-sidenav>
+            <auth-sidenav :role="role"></auth-sidenav>
 
             <div class="main-panel" style="background: #fff">
                 <auth-nav :user="user"></auth-nav>
@@ -20,13 +20,15 @@ export default {
     name: "Admin",
     data() {
         return {
-            user: {}
+            user: {},
+            role: ""
         };
     },
     mounted() {
         User.auth()
             .then(response => {
                 this.user = response.data;
+                this.role = this.user.user_role.key;
             })
             .catch(error => {
                 console.error(error.response);
