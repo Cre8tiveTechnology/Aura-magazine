@@ -2,7 +2,7 @@
   <div>
     <footer
       class="body footer-area footer--light"
-      style="margin-top: 10% !important"
+      style="margin-top: 20% !important"
     >
       <div class="footer-big">
         <!-- start .container -->

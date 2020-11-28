@@ -4,7 +4,9 @@
   >
     <div class="container">
       <router-link class="navbar-brand" to="/">
-        <img src="https://aura.com.ng/storage/logo/regular.svg" height="28"
+        <img
+          src="https://res.cloudinary.com/aura-magazine/image/upload/v1605190201/backgrounds/footer/AURA_LOGO_BLACK_FOR_HEADER_zwujbp.png"
+          height="28"
       /></router-link>
 
       <button

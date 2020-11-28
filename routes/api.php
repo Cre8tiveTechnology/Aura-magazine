@@ -58,6 +58,17 @@ Route::group(['name' => 'invoice.', 'prefix' => 'invoice', 'middleware' => ['aut
     Route::post('/restore', 'InvoiceController@restore')->name('restore');
 });
 
+
+/* -------------------------------------------------------------------------- */
+/*                                Adverts API                                */
+/* -------------------------------------------------------------------------- */
+Route::group(['name' => 'advert.', 'prefix' => 'advert', 'middleware' => ['auth:sanctum']], function () {
+    Route::get('/all', 'AdvertsController@index')->name('all');
+    Route::post('/create/{user}', 'AdvertsController@store')->name('store');
+    Route::delete('/remove/{adverts}', 'AdvertsController@destroy')->name('remove');
+    Route::post('/restore', 'AdvertsController@restore')->name('restore');
+});
+
 /* -------------------------------------------------------------------------- */
 /*                               Auth API Routes                              */
 /* -------------------------------------------------------------------------- */
