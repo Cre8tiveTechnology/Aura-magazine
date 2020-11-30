@@ -3,7 +3,7 @@
     <footer class="footer footer-black footer-white mt-5">
       <div class="container-fluid">
         <div class="row">
-          <nav class="footer-nav">
+          <!-- <nav class="footer-nav">
             <ul>
               <li>
                 <a href="#" target="_blank">HOME</a>
@@ -15,7 +15,7 @@
                 <a href="#" target="_blank">MAGAZINE</a>
               </li>
             </ul>
-          </nav>
+          </nav> -->
           <div class="credits ml-auto">
             <span class="copyright">
               © 2020 made with
