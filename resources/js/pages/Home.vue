@@ -2,6 +2,7 @@
     <div>
         <!-- NavBar -->
         <navbar />
+
         <!-- Navbar -->
         <!--===================== ADS BANNER =====================-->
         <div class="home-ads-container mt-3 mb-3 w-50 mx-auto h-100">
@@ -107,6 +108,7 @@
                 </div>
             </div>
         </div>
+
         <!--================ Top Stories DESKTOP Slider ==================-->
         <div
             class="container-fluid p-5 d-none d-md-block d-lg-block d-xl-block"
@@ -357,18 +359,19 @@
                     <!-- <div class="col-1"></div> -->
                     <div class="col-sm-7 col-md-7 col-lg-7 col-xl-7">
                         <div class="card mb-3 border-0 rounded-0">
-                            <img
-                                class="card-img-top rounded-0"
-                                src="https://images.unsplash.com/photo-1483985988355-763728e1935b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80"
-                                alt="Card image cap"
-                            />
+                            <a data-fancybox="gallery" :href="newsFirst.image">
+                                <img
+                                    :src="newsFirst.image"
+                                    :alt="newsFirst.title"
+                                    class="card-img-top rounded-0"
+                                />
+                            </a>
                             <div class="card-body">
                                 <h4
                                     class="card-title font-weight-bold"
                                     style="font-size: 30px"
                                 >
-                                    Being Everywoman Is Katie Porter's
-                                    Superpower
+                                    {{ newsFirst.title }}
                                 </h4>
                                 <hr class="card-hr" />
 
@@ -390,67 +393,21 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-sm-5 col-md-5 col-lg-5 col-xl-5">
-                        <ul class="list-unstyled">
-                            <li class="media">
+                    <div class="col-sm-5 col-md-5 col-lg-5 col-xl-5 px-1">
+                        <ul
+                            class="list-unstyled m-0"
+                            v-for="newsVal in news"
+                            :key="newsVal.id"
+                        >
+                            <li class="media mb-2">
                                 <img
-                                    class="mr-3 news-side-cards"
-                                    src="https://images.unsplash.com/photo-1496747611176-843222e1e57c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1352&q=80"
+                                    :src="newsVal.image"
+                                    class="mr-3 news-side-cards rounded-0"
                                     alt="Generic placeholder image"
                                 />
                                 <div class="media-body">
-                                    <h5 class="mt-0 mb-1">
-                                        The Wing Still Has a Long Way To Go
-                                    </h5>
-                                </div>
-                            </li>
-                            <li class="media my-1">
-                                <img
-                                    class="mr-3 news-side-cards"
-                                    src="https://images.unsplash.com/photo-1496747611176-843222e1e57c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1352&q=80"
-                                    alt="Generic placeholder image"
-                                />
-                                <div class="media-body">
-                                    <h5 class="mt-0 mb-1">
-                                        The Wing Still Has a Long Way To Go
-                                    </h5>
-                                </div>
-                            </li>
-                            <li class="media my-1">
-                                <img
-                                    class="mr-3 news-side-cards"
-                                    src="https://images.unsplash.com/photo-1496747611176-843222e1e57c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1352&q=80"
-                                    alt="Generic placeholder image"
-                                />
-                                <div class="media-body">
-                                    <h5 class="mt-0 mb-1">
-                                        The Wing Still Has a Long Way To Go
-                                    </h5>
-                                </div>
-                            </li>
-
-                            <li class="media my-1">
-                                <img
-                                    class="mr-3 news-side-cards"
-                                    src="https://images.unsplash.com/photo-1496747611176-843222e1e57c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1352&q=80"
-                                    alt="Generic placeholder image"
-                                />
-                                <div class="media-body">
-                                    <h5 class="mt-0 mb-1">
-                                        The Wing Still Has a Long Way To Go
-                                    </h5>
-                                </div>
-                            </li>
-
-                            <li class="media">
-                                <img
-                                    class="mr-3 news-side-cards"
-                                    src="https://images.unsplash.com/photo-1496747611176-843222e1e57c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1352&q=80"
-                                    alt="Generic placeholder image"
-                                />
-                                <div class="media-body">
-                                    <h5 class="mt-0 mb-1">
-                                        The Wing Still Has a Long Way To Go
+                                    <h5>
+                                        {{ newsVal.title }}
                                     </h5>
                                 </div>
                             </li>
@@ -460,6 +417,7 @@
                 </div>
             </div>
         </div>
+
         <!--==================== ADS BANNER =====================-->
         <div class="container home-ads-container mt-3 mb-3 mx-auto h-100">
             <div class="text-center">
@@ -472,124 +430,74 @@
             class="container-fluid mt-5"
             style="background-color: #d8d5d5 !important"
         >
-            <div class="container">
-                <h5 class="news headline-font font-weight-bolder">
-                    <span class="text-aura" style="font-size: 30px">+</span>
-                    FASHION
-                </h5>
-                <!-- =====================FASHION NEWS -I =============================== -->
-                <div class="card mx-auto border-0">
+            <h5 class="news headline-font font-weight-bolder">
+                <span class="text-aura" style="font-size: 30px">+</span>
+                FASHION
+            </h5>
+            <!-- =====================FASHION NEWS -I =============================== -->
+            <div class="card mx-auto border-0">
+                <a data-fancybox="gallery " :href="fashionFirst.image">
                     <img
-                        class="card-img-top rounded-0 h-50"
-                        src="/image/home/fashion.png"
-                        alt="Card image cap"
+                        :src="fashionFirst.image"
+                        :alt="fashionFirst.title"
+                        class="card-img-top rounded-0"
+                        height="700px"
+                        width="auto"
                     />
-                    <div
-                        class="card-body"
-                        style="background-color: #d8d5d5 !important"
+                </a>
+                <div
+                    class="card-body"
+                    style="background-color: #d8d5d5 !important"
+                >
+                    <h4
+                        class="card-title font-weight-bold"
+                        style="font-size: 30px"
                     >
-                        <h4
-                            class="card-title font-weight-bold"
-                            style="font-size: 30px"
-                        >
-                            Being Everywoman Is Katie Porter's Superpower Being
-                        </h4>
-                        <hr class="card-hr-fashion" />
-                    </div>
+                        {{ fashionFirst.title }}
+                    </h4>
+                    <hr class="card-hr-fashion" />
                 </div>
-                <!-- =====================FASHION NEWS BANNERS -II =============================== -->
+            </div>
+
+            <!-- =====================FASHION NEWS BANNERS -II =============================== -->
+            <div class="container">
                 <div
                     class="row justify-content-lg-between justify-content-md-around justify-content-sm-center justify-content-center"
                 >
                     <div
                         class="col-12 col-sm-10 col-md-6 col-lg-3 mb-md-3 mb-sm-3"
+                        v-for="fashion in fashionNews"
+                        :key="fashion.id"
                     >
                         <div class="card p-3 shadow-sm">
-                            <img
-                                class="card-img-top rounded-0"
-                                src="https://images.unsplash.com/photo-1496747611176-843222e1e57c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1352&q=80"
-                                alt="Card image cap"
-                            />
-                            <div class="card-body px-0">
-                                <h6 class="card-title">
-                                    Fashion gist topics please readFashion gist
-                                    topics please read
-                                </h6>
-                                <hr class="card-hr-fashion" />
-                            </div>
-                        </div>
-                    </div>
+                            <a data-fancybox="gallery" :href="fashion.image">
+                                <img
+                                    :src="fashion.image"
+                                    :alt="fashion.title"
+                                    class="card-img-top rounded-0"
+                                    height="200"
+                                />
+                            </a>
 
-                    <div
-                        class="col-12 col-sm-10 col-md-6 col-lg-3 mb-md-3 mb-sm-3"
-                    >
-                        <div class="card p-3 shadow-sm">
-                            <img
-                                class="card-img-top rounded-0"
-                                src="https://images.unsplash.com/photo-1496747611176-843222e1e57c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1352&q=80"
-                                alt="Card image cap"
-                            />
                             <div class="card-body px-0">
-                                <h6 class="card-title">
-                                    Fashion gist topics please readFashion gist
-                                    topics please read
-                                </h6>
-                                <hr class="card-hr-fashion" />
-                            </div>
-                        </div>
-                    </div>
-
-                    <div
-                        class="col-12 col-sm-10 col-md-6 col-lg-3 mb-md-3 mb-sm-3"
-                    >
-                        <div class="card p-3 shadow-sm">
-                            <img
-                                class="card-img-top rounded-0"
-                                src="https://images.unsplash.com/photo-1496747611176-843222e1e57c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1352&q=80"
-                                alt="Card image cap"
-                            />
-                            <div class="card-body px-0">
-                                <h6 class="card-title">
-                                    Fashion gist topics please readFashion gist
-                                    topics please read
-                                </h6>
-                                <hr class="card-hr-fashion" />
-                            </div>
-                        </div>
-                    </div>
-
-                    <div
-                        class="col-12 col-sm-10 col-md-6 col-lg-3 mb-md-3 mb-sm-3"
-                    >
-                        <div class="card p-3 shadow-sm">
-                            <img
-                                class="card-img-top rounded-0"
-                                src="https://images.unsplash.com/photo-1496747611176-843222e1e57c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1352&q=80"
-                                alt="Card image cap"
-                            />
-                            <div class="card-body px-0">
-                                <h6 class="card-title">
-                                    Fashion gist topics please readFashion gist
-                                    topics please read
+                                <h6 class="card-title text-left">
+                                    {{ fashion.title | truncate(47) }}
                                 </h6>
                                 <hr class="card-hr-fashion" />
                             </div>
                         </div>
                     </div>
                 </div>
-
-                <div class="container mt-5 mb-5 text-center">
-                    <router-link to="/category/fashion" class="see-more">
-                        <div
-                            class="col-12 row justify-content-center align-items-baseline"
-                        >
-                            <h5 class="mr-2">SEE MORE</h5>
-                            <i
-                                class="see-more-icon fa fa-chevron-circle-right"
-                            ></i>
-                        </div>
-                    </router-link>
-                </div>
+            </div>
+            <div class="container mt-5 mb-5 text-center">
+                <router-link to="/category/fashion" class="see-more">
+                    <div
+                        class="col-12 row justify-content-center align-items-baseline"
+                    >
+                        <h5 class="mr-2">SEE MORE</h5>
+                        <i class="see-more-icon fa fa-chevron-circle-right"></i>
+                    </div>
+                </router-link>
             </div>
         </div>
 
@@ -602,39 +510,35 @@
 
         <!--================ +BEAUTY  BANNER =======================-->
         <div class="container-fluid mt-5">
-            <div class="container">
-                <h5 class="news headline-font font-weight-bolder">
-                    <span class="text-aura" style="font-size: 30px">+</span>
-                    BEAUTY
-                </h5>
-                <div class="row mb-5">
-                    <div
-                        class="col-md-6 col-lg-6 col-xl-6 col-sm-6 col-xs-6 p-3"
-                    >
-                        <h4 class="font-weight-bolder pr-3">
-                            ‘I Could Have Been One of Them’: Monica Ortiz Uribe
-                            on ‘Forgotten: The Women of Juarez’
-                        </h4>
-                        <hr class="card-hr-fashion" />
+            <h5 class="news headline-font font-weight-bolder">
+                <span class="text-aura" style="font-size: 30px">+</span>
+                BEAUTY
+            </h5>
+            <div class="row mb-5">
+                <div class="col-md-6 col-lg-6 col-xl-6 col-sm-6 col-xs-6 p-3">
+                    <h4 class="font-weight-bolder pr-3">
+                        {{ beautyFirst.title }}
+                    </h4>
+                    <hr class="card-hr-fashion" />
 
-                        <p class="mt-2">
-                            In her new podcast, the El Paso journalist seeks
-                            justice for women disappearing on the U.S.-Mexico
-                            border.
-                        </p>
-                    </div>
-                    <div
-                        class="col-md-6 col-lg-6 col-xl-6 col-sm-6 col-xs-6 p-5 aura-bg-dark"
-                    >
+                    <p class="mt-2">
+                        {{ beautyFirst.content | truncate(300) }}
+                    </p>
+                </div>
+                <div
+                    class="col-md-6 col-lg-6 col-xl-6 col-sm-6 col-xs-6 p-5 aura-bg-dark"
+                >
+                    <a data-fancybox="gallery" :href="beautyFirst.image">
                         <img
                             class="card-img-top rounded-0"
-                            src="https://images.unsplash.com/photo-1496747611176-843222e1e57c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1352&q=80"
-                            alt="Card image cap"
+                            :src="beautyFirst.image"
+                            :alt="beautyFirst.title"
                         />
-                    </div>
+                    </a>
                 </div>
-                <!--================ +BEAUTY  BANNERs =======================-->
-
+            </div>
+            <!--================ +BEAUTY  BANNERs =======================-->
+            <div class="container">
                 <div
                     class="row justify-content-lg-between justify-content-md-around justify-content-sm-center justify-content-center"
                 >
@@ -644,13 +548,13 @@
                         <div class="card p-3 shadow-sm">
                             <img
                                 class="card-img-top rounded-0"
-                                src="https://images.unsplash.com/photo-1496747611176-843222e1e57c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1352&q=80"
-                                alt="Card image cap"
+                                :src="beautyFirst.image"
+                                :alt="beautyFirst.title"
                             />
+
                             <div class="card-body px-0">
                                 <h6 class="card-title">
-                                    Fashion gist topics please readFashion gist
-                                    topics please read
+                                    {{ beautyFirst.title }}
                                 </h6>
                                 <hr class="card-hr-fashion" />
                             </div>
@@ -659,74 +563,34 @@
 
                     <div
                         class="col-12 col-sm-10 col-md-6 col-lg-3 mb-md-3 mb-sm-3"
+                        v-for="beauty in beautyNews"
+                        :key="beauty.id"
                     >
                         <div class="card p-3 shadow-sm">
                             <img
                                 class="card-img-top rounded-0"
-                                src="https://images.unsplash.com/photo-1496747611176-843222e1e57c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1352&q=80"
-                                alt="Card image cap"
+                                :src="beauty.image"
+                                :alt="beauty.title"
                             />
                             <div class="card-body px-0">
                                 <h6 class="card-title">
-                                    Fashion gist topics please readFashion gist
-                                    topics please read
-                                </h6>
-                                <hr class="card-hr-fashion" />
-                            </div>
-                        </div>
-                    </div>
-
-                    <div
-                        class="col-12 col-sm-10 col-md-6 col-lg-3 mb-md-3 mb-sm-3"
-                    >
-                        <div class="card p-3 shadow-sm">
-                            <img
-                                class="card-img-top rounded-0"
-                                src="https://images.unsplash.com/photo-1496747611176-843222e1e57c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1352&q=80"
-                                alt="Card image cap"
-                            />
-                            <div class="card-body px-0">
-                                <h6 class="card-title">
-                                    Fashion gist topics please readFashion gist
-                                    topics please read
-                                </h6>
-                                <hr class="card-hr-fashion" />
-                            </div>
-                        </div>
-                    </div>
-
-                    <div
-                        class="col-12 col-sm-10 col-md-6 col-lg-3 mb-md-3 mb-sm-3"
-                    >
-                        <div class="card p-3 shadow-sm">
-                            <img
-                                class="card-img-top rounded-0"
-                                src="https://images.unsplash.com/photo-1496747611176-843222e1e57c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1352&q=80"
-                                alt="Card image cap"
-                            />
-                            <div class="card-body px-0">
-                                <h6 class="card-title">
-                                    Fashion gist topics please readFashion gist
-                                    topics please read
+                                    {{ beauty.title }}
                                 </h6>
                                 <hr class="card-hr-fashion" />
                             </div>
                         </div>
                     </div>
                 </div>
-
-                <div class="container mt-5 mb-5 text-center">
-                    <router-link to="/category/beauty" class="see-more">
-                        <div
-                            class="col-12 row justify-content-center align-items-baseline"
-                        >
-                            <h5 class="mr-2">SEE MORE</h5>
-                            <i
-                                class="see-more-icon fa fa-chevron-circle-right"
-                            ></i>
-                        </div>
-                    </router-link>
-                </div>
+            </div>
+            <div class="container mt-5 mb-5 text-center">
+                <router-link to="/category/beauty" class="see-more">
+                    <div
+                        class="col-12 row justify-content-center align-items-baseline"
+                    >
+                        <h5 class="mr-2">SEE MORE</h5>
+                        <i class="see-more-icon fa fa-chevron-circle-right"></i>
+                    </div>
+                </router-link>
             </div>
         </div>
 
@@ -752,74 +616,19 @@
                 >
                     <div
                         class="col-12 col-sm-10 col-md-6 col-lg-3 mb-md-3 mb-sm-3"
+                        v-for="culturetopItem in cultureNews"
+                        :key="culturetopItem.id"
                     >
                         <div class="card p-3 shadow-sm">
                             <img
                                 class="card-img-top rounded-0"
-                                src="https://images.unsplash.com/photo-1496747611176-843222e1e57c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1352&q=80"
-                                alt="Card image cap"
+                                :src="culturetopItem.image"
+                                :alt="culturetopItem.title"
+                                height="200"
                             />
                             <div class="card-body px-0">
                                 <h6 class="card-title">
-                                    Fashion gist topics please readFashion gist
-                                    topics please read
-                                </h6>
-                                <hr class="card-hr-fashion" />
-                            </div>
-                        </div>
-                    </div>
-
-                    <div
-                        class="col-12 col-sm-10 col-md-6 col-lg-3 mb-md-3 mb-sm-3"
-                    >
-                        <div class="card p-3 shadow-sm">
-                            <img
-                                class="card-img-top rounded-0"
-                                src="https://images.unsplash.com/photo-1496747611176-843222e1e57c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1352&q=80"
-                                alt="Card image cap"
-                            />
-                            <div class="card-body px-0">
-                                <h6 class="card-title">
-                                    Fashion gist topics please readFashion gist
-                                    topics please read
-                                </h6>
-                                <hr class="card-hr-fashion" />
-                            </div>
-                        </div>
-                    </div>
-
-                    <div
-                        class="col-12 col-sm-10 col-md-6 col-lg-3 mb-md-3 mb-sm-3"
-                    >
-                        <div class="card p-3 shadow-sm">
-                            <img
-                                class="card-img-top rounded-0"
-                                src="https://images.unsplash.com/photo-1496747611176-843222e1e57c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1352&q=80"
-                                alt="Card image cap"
-                            />
-                            <div class="card-body px-0">
-                                <h6 class="card-title">
-                                    Fashion gist topics please readFashion gist
-                                    topics please read
-                                </h6>
-                                <hr class="card-hr-fashion" />
-                            </div>
-                        </div>
-                    </div>
-
-                    <div
-                        class="col-12 col-sm-10 col-md-6 col-lg-3 mb-md-3 mb-sm-3"
-                    >
-                        <div class="card p-3 shadow-sm">
-                            <img
-                                class="card-img-top rounded-0"
-                                src="https://images.unsplash.com/photo-1496747611176-843222e1e57c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1352&q=80"
-                                alt="Card image cap"
-                            />
-                            <div class="card-body px-0">
-                                <h6 class="card-title">
-                                    Fashion gist topics please readFashion gist
-                                    topics please read
+                                    {{ culturetopItem.title | truncate(47) }}
                                 </h6>
                                 <hr class="card-hr-fashion" />
                             </div>
@@ -830,13 +639,11 @@
 
             <div class="culture-mid-title text-white text-center mb-3">
                 <h3 class="card-title">
-                    GFRIEND Sings "Sunrise," Maroon 5, and Avril Lavigne in a
-                    Game of Song Association
+                    {{ cultureFirst.title }}
                 </h3>
                 <hr class="top-story-hr" />
                 <p class="mt-5">
-                    of all the girls that have leaved, the finest have seen in
-                    yet to see me
+                    {{ cultureFirst.content | truncate(300) }}
                 </p>
             </div>
 
@@ -846,74 +653,19 @@
                 >
                     <div
                         class="col-12 col-sm-10 col-md-6 col-lg-3 mb-md-3 mb-sm-3"
+                        v-for="culturebottomItem in cultureSecondObj"
+                        :key="culturebottomItem.id"
                     >
                         <div class="card p-3 shadow-sm">
                             <img
                                 class="card-img-top rounded-0"
-                                src="https://images.unsplash.com/photo-1496747611176-843222e1e57c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1352&q=80"
-                                alt="Card image cap"
+                                :src="culturebottomItem.image"
+                                :alt="culturebottomItem.title"
+                                height="200"
                             />
                             <div class="card-body px-0">
                                 <h6 class="card-title">
-                                    Fashion gist topics please readFashion gist
-                                    topics please read
-                                </h6>
-                                <hr class="card-hr-fashion" />
-                            </div>
-                        </div>
-                    </div>
-
-                    <div
-                        class="col-12 col-sm-10 col-md-6 col-lg-3 mb-md-3 mb-sm-3"
-                    >
-                        <div class="card p-3 shadow-sm">
-                            <img
-                                class="card-img-top rounded-0"
-                                src="https://images.unsplash.com/photo-1496747611176-843222e1e57c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1352&q=80"
-                                alt="Card image cap"
-                            />
-                            <div class="card-body px-0">
-                                <h6 class="card-title">
-                                    Fashion gist topics please readFashion gist
-                                    topics please read
-                                </h6>
-                                <hr class="card-hr-fashion" />
-                            </div>
-                        </div>
-                    </div>
-
-                    <div
-                        class="col-12 col-sm-10 col-md-6 col-lg-3 mb-md-3 mb-sm-3"
-                    >
-                        <div class="card p-3 shadow-sm">
-                            <img
-                                class="card-img-top rounded-0"
-                                src="https://images.unsplash.com/photo-1496747611176-843222e1e57c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1352&q=80"
-                                alt="Card image cap"
-                            />
-                            <div class="card-body px-0">
-                                <h6 class="card-title">
-                                    Fashion gist topics please readFashion gist
-                                    topics please read
-                                </h6>
-                                <hr class="card-hr-fashion" />
-                            </div>
-                        </div>
-                    </div>
-
-                    <div
-                        class="col-12 col-sm-10 col-md-6 col-lg-3 mb-md-3 mb-sm-3"
-                    >
-                        <div class="card p-3 shadow-sm">
-                            <img
-                                class="card-img-top rounded-0"
-                                src="https://images.unsplash.com/photo-1496747611176-843222e1e57c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1352&q=80"
-                                alt="Card image cap"
-                            />
-                            <div class="card-body px-0">
-                                <h6 class="card-title">
-                                    Fashion gist topics please readFashion gist
-                                    topics please read
+                                    {{ culturebottomItem.title | truncate(41) }}
                                 </h6>
                                 <hr class="card-hr-fashion" />
                             </div>
@@ -1032,6 +784,7 @@
                 </div>
             </div>
         </div>
+
         <!--================ +LIFE AND LOVE  BANNER =======================-->
         <div class="container-fluid mt-5">
             <div class="container">
@@ -1044,15 +797,12 @@
                         class="col-md-6 col-lg-6 col-xl-6 col-sm-6 col-xs-6 p-3"
                     >
                         <h4 class="font-weight-bolder pr-3">
-                            ‘I Could Have Been One of Them’: Monica Ortiz Uribe
-                            on ‘Forgotten: The Women of Juarez’
+                            {{ lifenLoveFirst.title }}
                         </h4>
                         <hr class="card-hr-fashion" />
 
                         <p class="mt-2">
-                            In her new podcast, the El Paso journalist seeks
-                            justice for women disappearing on the U.S.-Mexico
-                            border.
+                            {{ lifenLoveFirst.content | truncate(300) }}
                         </p>
                     </div>
                     <div
@@ -1060,86 +810,31 @@
                     >
                         <img
                             class="card-img-top rounded-0"
-                            src="https://images.unsplash.com/photo-1496747611176-843222e1e57c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1352&q=80"
-                            alt="Card image cap"
+                            :src="lifenLoveFirst.image"
+                            :alt="lifenLoveFirst.title"
                         />
                     </div>
                 </div>
-                <!--================ +BEAUTY  BANNERs =======================-->
+                <!--================ + Life and Love  BANNERs =======================-->
 
                 <div
                     class="row justify-content-lg-between justify-content-md-around justify-content-sm-center justify-content-center"
                 >
                     <div
                         class="col-12 col-sm-10 col-md-6 col-lg-3 mb-md-3 mb-sm-3"
+                        v-for="lifenLoveItem in lifenLoveNews"
+                        :key="lifenLoveItem.id"
                     >
                         <div class="card p-3 shadow-sm">
                             <img
                                 class="card-img-top rounded-0"
-                                src="https://images.unsplash.com/photo-1496747611176-843222e1e57c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1352&q=80"
-                                alt="Card image cap"
+                                :src="lifenLoveItem.image"
+                                :alt="lifenLoveItem.title"
+                                height="200"
                             />
                             <div class="card-body px-0">
                                 <h6 class="card-title">
-                                    Fashion gist topics please readFashion gist
-                                    topics please read
-                                </h6>
-                                <hr class="card-hr-fashion" />
-                            </div>
-                        </div>
-                    </div>
-
-                    <div
-                        class="col-12 col-sm-10 col-md-6 col-lg-3 mb-md-3 mb-sm-3"
-                    >
-                        <div class="card p-3 shadow-sm">
-                            <img
-                                class="card-img-top rounded-0"
-                                src="https://images.unsplash.com/photo-1496747611176-843222e1e57c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1352&q=80"
-                                alt="Card image cap"
-                            />
-                            <div class="card-body px-0">
-                                <h6 class="card-title">
-                                    Fashion gist topics please readFashion gist
-                                    topics please read
-                                </h6>
-                                <hr class="card-hr-fashion" />
-                            </div>
-                        </div>
-                    </div>
-
-                    <div
-                        class="col-12 col-sm-10 col-md-6 col-lg-3 mb-md-3 mb-sm-3"
-                    >
-                        <div class="card p-3 shadow-sm">
-                            <img
-                                class="card-img-top rounded-0"
-                                src="https://images.unsplash.com/photo-1496747611176-843222e1e57c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1352&q=80"
-                                alt="Card image cap"
-                            />
-                            <div class="card-body px-0">
-                                <h6 class="card-title">
-                                    Fashion gist topics please readFashion gist
-                                    topics please read
-                                </h6>
-                                <hr class="card-hr-fashion" />
-                            </div>
-                        </div>
-                    </div>
-
-                    <div
-                        class="col-12 col-sm-10 col-md-6 col-lg-3 mb-md-3 mb-sm-3"
-                    >
-                        <div class="card p-3 shadow-sm">
-                            <img
-                                class="card-img-top rounded-0"
-                                src="https://images.unsplash.com/photo-1496747611176-843222e1e57c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1352&q=80"
-                                alt="Card image cap"
-                            />
-                            <div class="card-body px-0">
-                                <h6 class="card-title">
-                                    Fashion gist topics please readFashion gist
-                                    topics please read
+                                    {{ lifenLoveItem.title }}
                                 </h6>
                                 <hr class="card-hr-fashion" />
                             </div>
@@ -1168,6 +863,7 @@
                 <p>ADS BANNER</p>
             </div>
         </div>
+
         <!--=================== +HOROSCOPE  BANNER =======================-->
         <div
             class="container-fluid mt-5 p-0"
@@ -1183,74 +879,19 @@
                 >
                     <div
                         class="col-12 col-sm-10 col-md-6 col-lg-3 mb-md-3 mb-sm-3"
+                        v-for="horoscopeItem in horoscope"
+                        :key="horoscopeItem.id"
                     >
                         <div class="card p-3 shadow-sm">
                             <img
                                 class="card-img-top rounded-0"
-                                src="https://images.unsplash.com/photo-1496747611176-843222e1e57c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1352&q=80"
-                                alt="Card image cap"
+                                :src="horoscopeItem.image"
+                                :alt="horoscopeItem.title"
+                                height="200"
                             />
                             <div class="card-body px-0">
                                 <h6 class="card-title">
-                                    Fashion gist topics please readFashion gist
-                                    topics please read
-                                </h6>
-                                <hr class="card-hr-fashion" />
-                            </div>
-                        </div>
-                    </div>
-
-                    <div
-                        class="col-12 col-sm-10 col-md-6 col-lg-3 mb-md-3 mb-sm-3"
-                    >
-                        <div class="card p-3 shadow-sm">
-                            <img
-                                class="card-img-top rounded-0"
-                                src="https://images.unsplash.com/photo-1496747611176-843222e1e57c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1352&q=80"
-                                alt="Card image cap"
-                            />
-                            <div class="card-body px-0">
-                                <h6 class="card-title">
-                                    Fashion gist topics please readFashion gist
-                                    topics please read
-                                </h6>
-                                <hr class="card-hr-fashion" />
-                            </div>
-                        </div>
-                    </div>
-
-                    <div
-                        class="col-12 col-sm-10 col-md-6 col-lg-3 mb-md-3 mb-sm-3"
-                    >
-                        <div class="card p-3 shadow-sm">
-                            <img
-                                class="card-img-top rounded-0"
-                                src="https://images.unsplash.com/photo-1496747611176-843222e1e57c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1352&q=80"
-                                alt="Card image cap"
-                            />
-                            <div class="card-body px-0">
-                                <h6 class="card-title">
-                                    Fashion gist topics please readFashion gist
-                                    topics please read
-                                </h6>
-                                <hr class="card-hr-fashion" />
-                            </div>
-                        </div>
-                    </div>
-
-                    <div
-                        class="col-12 col-sm-10 col-md-6 col-lg-3 mb-md-3 mb-sm-3"
-                    >
-                        <div class="card p-3 shadow-sm">
-                            <img
-                                class="card-img-top rounded-0"
-                                src="https://images.unsplash.com/photo-1496747611176-843222e1e57c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1352&q=80"
-                                alt="Card image cap"
-                            />
-                            <div class="card-body px-0">
-                                <h6 class="card-title">
-                                    Fashion gist topics please readFashion gist
-                                    topics please read
+                                    {{ horoscopeItem.title | truncate(47) }}
                                 </h6>
                                 <hr class="card-hr-fashion" />
                             </div>
@@ -1271,6 +912,7 @@
                 </div>
             </div>
         </div>
+
         <!-- Footer -->
         <user-footer />
         <!-- Footer -->
@@ -1278,20 +920,131 @@
 </template>
 
 <script>
+import Article from "../apis/client/Article";
+
 export default {
     name: "Home",
     data: () => ({
-        name: ""
+        articles: {},
+        news: {},
+        fashionNews: {},
+        cultureNews: {},
+        beautyNews: {},
+        horoscope: {},
+        lifenLoveNews: {},
+        //First Items
+        fashionFirst: {},
+        newsFirst: {},
+        beautyFirst: {},
+        cultureFirst: {},
+        cultureSecondObj: {},
+        lifenLoveFirst: {}
     }),
     mounted() {
-        this.$ga.page("/home");
+        this.getArticles();
     },
     methods: {
-        stopGoogleAnalytics() {
-            this.$ga.disable();
-        },
-        engageGoogleAnalytics() {
-            this.$ga.enable();
+        /* -------------------------------------------------------------------------- */
+        /*                               Get Articles                                */
+        /* -------------------------------------------------------------------------- */
+        getArticles() {
+            Article.listAllArticles()
+                .then(response => {
+                    this.articles = response.data;
+                })
+                .catch(err => {
+                    let message = err.response.data.message;
+                    console.log(message);
+                });
+        }
+    },
+
+    computed: {},
+
+    watch: {
+        articles: function(list) {
+            /* -------------------------------------------------------------------------- */
+            /*                                   //News                                   */
+            /* -------------------------------------------------------------------------- */
+            this.news = list
+                .filter(function(article) {
+                    return article.category == "News";
+                })
+                .slice(0, 8)
+                .sort();
+            //Get the first Item for News
+            this.newsFirst = this.news[0];
+            this.news.shift();
+
+            /* -------------------------------------------------------------------------- */
+            /*                                  //Fashion                                 */
+            /* -------------------------------------------------------------------------- */
+            this.fashionNews = list
+                .filter(function(article) {
+                    return article.category == "Fashion";
+                })
+                .slice(0, 5)
+                .reverse();
+
+            //Get the first Item for Fashion
+            this.fashionFirst = this.fashionNews[0];
+            this.fashionNews.shift();
+
+            /* -------------------------------------------------------------------------- */
+            /*                             //Beauty       */
+            /* -------------------------------------------------------------------------- */
+            this.beautyNews = list
+                .filter(function(article) {
+                    return article.category == "Beauty";
+                })
+                .slice(0, 5)
+                .reverse();
+
+            //Get the first Item for Fashion
+            this.beautyFirst = this.beautyNews[0];
+            this.beautyNews.shift();
+
+            /* -------------------------------------------------------------------------- */
+            /*                            //Culture                                       */
+            /* -------------------------------------------------------------------------- */
+            this.cultureNews = list
+                .filter(function(article) {
+                    return article.category == "Culture";
+                })
+                .slice(0, 5)
+                .reverse();
+            //Get the first Item for Fashion
+            this.cultureFirst = this.cultureNews[0];
+            this.cultureNews.shift();
+            this.cultureSecondObj = list
+                .filter(function(article) {
+                    return article.category == "Culture";
+                })
+                .slice(5, 9)
+                .reverse();
+
+            /* -------------------------------------------------------------------------- */
+            /*                                //Life &Love                                 */
+            /* -------------------------------------------------------------------------- */
+            this.lifenLoveNews = list
+                .filter(function(article) {
+                    return article.category == "Life and Love";
+                })
+                .slice(0, 5)
+                .reverse();
+            //Get the first Item for Fashion
+            this.lifenLoveFirst = this.lifenLoveNews[0];
+            this.lifenLoveNews.shift();
+
+            /* -------------------------------------------------------------------------- */
+            /*                                //Horoscope                                 */
+            /* -------------------------------------------------------------------------- */
+            this.horoscope = list
+                .filter(function(article) {
+                    return article.category == "Horoscope";
+                })
+                .slice(0, 4)
+                .reverse();
         }
     }
 };

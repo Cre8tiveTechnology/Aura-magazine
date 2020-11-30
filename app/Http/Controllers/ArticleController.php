@@ -24,7 +24,16 @@ class ArticleController extends Controller
         return response()->json($articles, 200);
     }
 
-
+    /**
+     * Display a listing of the resource for the user.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function homeIndex()
+    {
+        $homeArticles = Article::latest()->get();
+        return response()->json($homeArticles);
+    }
 
     /**
      * Display a listing of the resource of a particlar author for the user.
@@ -34,7 +43,6 @@ class ArticleController extends Controller
     public function authorArticles(User $user)
     {
         $articles = $user->articles()->latest()->paginate(10);
-
         return response()->json($articles, 200);
     }
 
