@@ -31,7 +31,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- Scripts -->
-    <script src="{{ asset('js/app.js') }}" defer></script>
+    <script src="{{ secure_asset('js/app.js') }}" defer></script>
 
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
@@ -41,13 +41,13 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
     <!-- Styles -->
-    <link rel="stylesheet" href="{{ asset('css/app.css') }}" >
-    <link rel="stylesheet" href="{{ asset('css/nprogress.css') }}"  />
-    <link rel="stylesheet" href="{{ asset('css/style.css') }}" />
+    <link rel="stylesheet" href="{{ secure_asset('css/app.css') }}" >
+    <link rel="stylesheet" href="{{ secure_asset('css/nprogress.css') }}"  />
+    <link rel="stylesheet" href="{{ secure_asset('css/style.css') }}" />
 
     <!-- CSS Files -->
-    {{-- <link href="{{ asset('paper') }}/css/bootstrap.min.css" rel="stylesheet" /> --}}
-    <link rel="stylesheet"  href="{{ asset('paper') }}/css/paper-dashboard.css?v=2.0.0" />
+    {{-- <link href="{{ secure_asset('paper') }}/css/bootstrap.min.css" rel="stylesheet" /> --}}
+    <link rel="stylesheet"  href="{{ secure_asset('paper') }}/css/paper-dashboard.css?v=2.0.0" />
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://unpkg.com/@space-css/space-css@1.0.3/space.min.css">
@@ -70,16 +70,16 @@
 </script>
 
     <!--   Core JS Files   -->
-    <script src="{{ asset('paper') }}/js/core/jquery.min.js"></script>
-    <script src="{{ asset('paper') }}/js/core/popper.min.js"></script>
-    <script src="{{ asset('paper') }}/js/core/bootstrap.min.js"></script>
-    <script src="{{ asset('paper') }}/js/plugins/perfect-scrollbar.jquery.min.js"></script>
+    <script src="{{ secure_asset('paper') }}/js/core/jquery.min.js"></script>
+    <script src="{{ secure_asset('paper') }}/js/core/popper.min.js"></script>
+    <script src="{{ secure_asset('paper') }}/js/core/bootstrap.min.js"></script>
+    <script src="{{ secure_asset('paper') }}/js/plugins/perfect-scrollbar.jquery.min.js"></script>
     <!-- Chart JS -->
-    <script src="{{ asset('paper') }}/js/plugins/chartjs.min.js"></script>
+    <script src="{{ secure_asset('paper') }}/js/plugins/chartjs.min.js"></script>
     <!--  Notifications Plugin    -->
-    <script src="{{ asset('paper') }}/js/plugins/bootstrap-notify.js"></script>
+    <script src="{{ secure_asset('paper') }}/js/plugins/bootstrap-notify.js"></script>
     <!-- Control Center for Now Ui Dashboard: parallax effects, scripts for the example pages etc -->
-    <script src="{{ asset('paper') }}/js/paper-dashboard.min.js?v=2.0.0" type="text/javascript"></script>
+    <script src="{{ secure_asset('paper') }}/js/paper-dashboard.min.js?v=2.0.0" type="text/javascript"></script>
     {{-- Fancy Box --}}
     <script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
 
