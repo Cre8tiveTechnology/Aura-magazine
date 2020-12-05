@@ -26,6 +26,7 @@ export default {
       })
       .catch((error) => {
         console.error(error.response);
+        return;
         if (error.response.status == 401) {
           this.alertError("Your session has expired, please sign in!");
           localStorage.clear();

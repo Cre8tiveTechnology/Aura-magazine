@@ -7249,6 +7249,7 @@ __webpack_require__.r(__webpack_exports__);
       _this.user = response.data;
     })["catch"](function (error) {
       console.error(error.response);
+      return;
 
       if (error.response.status == 401) {
         _this.alertError("Your session has expired, please sign in!");
