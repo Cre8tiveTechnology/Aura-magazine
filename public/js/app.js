@@ -2768,22 +2768,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: "Footer"
 });
@@ -16026,7 +16010,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, "\n.aura-bg-grey[data-v-585a4226] {\n    background: rgba(0, 0, 0, 0.8);\n}\na.footer-social[data-v-585a4226] {\n    text-decoration: none !important;\n    color: #fff;\n}\na.footer-social i[data-v-585a4226] {\n    font-size: 1.5em;\n}\n.footer-links-list[data-v-585a4226] {\n    list-style-type: none !important;\n}\n.footer-links-list li a[data-v-585a4226] {\n    text-decoration: none !important;\n}\n.footer-links-list li[data-v-585a4226] {\n    margin-top: 0.4em !important;\n    margin-bottom: 0.4em !important;\n}\n", ""]);
+exports.push([module.i, "\n.aura-bg-grey[data-v-585a4226] {\n  background: rgba(0, 0, 0, 0.8);\n}\na.footer-social[data-v-585a4226] {\n  text-decoration: none !important;\n  color: #fff;\n}\na.footer-social i[data-v-585a4226] {\n  font-size: 1.5em;\n}\n.footer-links-list[data-v-585a4226] {\n  list-style-type: none !important;\n}\n.footer-links-list li a[data-v-585a4226] {\n  text-decoration: none !important;\n}\n.footer-links-list li[data-v-585a4226] {\n  margin-top: 0.4em !important;\n  margin-bottom: 0.4em !important;\n}\n", ""]);
 
 // exports
 
@@ -51064,184 +51048,168 @@ var render = function() {
       _vm._v(" "),
       _c("div", { staticClass: "container py-4" }, [
         _c("div", { staticClass: "row" }, [
-          _c(
-            "div",
-            { staticClass: "col-lg-3 col-md-5 col-sm-12 col-12 mt-3" },
-            [
-              _c("ul", { staticClass: "footer-links-list px-0" }, [
-                _c(
-                  "li",
-                  [
-                    _c(
-                      "router-link",
-                      { staticClass: "text-white", attrs: { to: "#" } },
-                      [_vm._v("Newsletter")]
-                    )
-                  ],
-                  1
-                ),
-                _vm._v(" "),
-                _c(
-                  "li",
-                  [
-                    _c(
-                      "router-link",
-                      { staticClass: "text-white", attrs: { to: "#" } },
-                      [_vm._v("Contact Us")]
-                    )
-                  ],
-                  1
-                ),
-                _vm._v(" "),
-                _c(
-                  "li",
-                  [
-                    _c(
-                      "router-link",
-                      {
-                        staticClass: "text-white",
-                        attrs: { to: "/privacy-policy" }
-                      },
-                      [_vm._v("Privacy Policy")]
-                    )
-                  ],
-                  1
-                )
-              ])
-            ]
-          ),
+          _c("div", { staticClass: "col-lg-3 col-md-5 col-sm-6 col-6 mt-3" }, [
+            _c("ul", { staticClass: "footer-links-list px-0" }, [
+              _c(
+                "li",
+                [
+                  _c(
+                    "router-link",
+                    { staticClass: "text-white", attrs: { to: "#" } },
+                    [_vm._v("Newsletter")]
+                  )
+                ],
+                1
+              ),
+              _vm._v(" "),
+              _c(
+                "li",
+                [
+                  _c(
+                    "router-link",
+                    { staticClass: "text-white", attrs: { to: "#" } },
+                    [_vm._v("Contact Us")]
+                  )
+                ],
+                1
+              ),
+              _vm._v(" "),
+              _c(
+                "li",
+                [
+                  _c(
+                    "router-link",
+                    {
+                      staticClass: "text-white",
+                      attrs: { to: "/privacy-policy" }
+                    },
+                    [_vm._v("Privacy Policy")]
+                  )
+                ],
+                1
+              )
+            ])
+          ]),
           _vm._v(" "),
-          _c(
-            "div",
-            { staticClass: "col-lg-3 col-md-5 col-sm-12 col-12 mt-3" },
-            [
-              _c("ul", { staticClass: "footer-links-list px-0" }, [
-                _c(
-                  "li",
-                  [
-                    _c(
-                      "router-link",
-                      { staticClass: "text-white", attrs: { to: "#" } },
-                      [_vm._v("Press Room")]
-                    )
-                  ],
-                  1
-                ),
-                _vm._v(" "),
-                _c(
-                  "li",
-                  [
-                    _c(
-                      "router-link",
-                      { staticClass: "text-white", attrs: { to: "#" } },
-                      [_vm._v("Site Map")]
-                    )
-                  ],
-                  1
-                ),
-                _vm._v(" "),
-                _c(
-                  "li",
-                  [
-                    _c(
-                      "router-link",
-                      { staticClass: "text-white", attrs: { to: "#" } },
-                      [_vm._v("Community Guidelines")]
-                    )
-                  ],
-                  1
-                )
-              ])
-            ]
-          ),
+          _c("div", { staticClass: "col-lg-3 col-md-5 col-sm-6 col-6 mt-3" }, [
+            _c("ul", { staticClass: "footer-links-list px-0" }, [
+              _c(
+                "li",
+                [
+                  _c(
+                    "router-link",
+                    { staticClass: "text-white", attrs: { to: "#" } },
+                    [_vm._v("Press Room")]
+                  )
+                ],
+                1
+              ),
+              _vm._v(" "),
+              _c(
+                "li",
+                [
+                  _c(
+                    "router-link",
+                    { staticClass: "text-white", attrs: { to: "#" } },
+                    [_vm._v("Site Map")]
+                  )
+                ],
+                1
+              ),
+              _vm._v(" "),
+              _c(
+                "li",
+                [
+                  _c(
+                    "router-link",
+                    { staticClass: "text-white", attrs: { to: "#" } },
+                    [_vm._v("Community Guidelines")]
+                  )
+                ],
+                1
+              )
+            ])
+          ]),
           _vm._v(" "),
-          _c(
-            "div",
-            { staticClass: "col-lg-3 col-md-5 col-sm-12 col-12 mt-3" },
-            [
-              _c("ul", { staticClass: "footer-links-list px-0" }, [
-                _c(
-                  "li",
-                  [
-                    _c(
-                      "router-link",
-                      { staticClass: "text-white", attrs: { to: "#" } },
-                      [_vm._v("Advertise Online")]
-                    )
-                  ],
-                  1
-                ),
-                _vm._v(" "),
-                _c(
-                  "li",
-                  [
-                    _c(
-                      "router-link",
-                      { staticClass: "text-white", attrs: { to: "#" } },
-                      [_vm._v("Customer Service")]
-                    )
-                  ],
-                  1
-                ),
-                _vm._v(" "),
-                _c(
-                  "li",
-                  [
-                    _c(
-                      "router-link",
-                      { staticClass: "text-white", attrs: { to: "#" } },
-                      [_vm._v("Subscribe")]
-                    )
-                  ],
-                  1
-                )
-              ])
-            ]
-          ),
+          _c("div", { staticClass: "col-lg-3 col-md-5 col-sm-6 col-6 mt-3" }, [
+            _c("ul", { staticClass: "footer-links-list px-0" }, [
+              _c(
+                "li",
+                [
+                  _c(
+                    "router-link",
+                    { staticClass: "text-white", attrs: { to: "#" } },
+                    [_vm._v("Advertise Online")]
+                  )
+                ],
+                1
+              ),
+              _vm._v(" "),
+              _c(
+                "li",
+                [
+                  _c(
+                    "router-link",
+                    { staticClass: "text-white", attrs: { to: "#" } },
+                    [_vm._v("Customer Service")]
+                  )
+                ],
+                1
+              ),
+              _vm._v(" "),
+              _c(
+                "li",
+                [
+                  _c(
+                    "router-link",
+                    { staticClass: "text-white", attrs: { to: "#" } },
+                    [_vm._v("Subscribe")]
+                  )
+                ],
+                1
+              )
+            ])
+          ]),
           _vm._v(" "),
-          _c(
-            "div",
-            { staticClass: "col-lg-3 col-md-5 col-sm-12 col-12 mt-3" },
-            [
-              _c("ul", { staticClass: "footer-links-list px-0" }, [
-                _c(
-                  "li",
-                  [
-                    _c(
-                      "router-link",
-                      { staticClass: "text-white", attrs: { to: "#" } },
-                      [_vm._v("Give a Gift")]
-                    )
-                  ],
-                  1
-                ),
-                _vm._v(" "),
-                _c(
-                  "li",
-                  [
-                    _c(
-                      "router-link",
-                      { staticClass: "text-white", attrs: { to: "#" } },
-                      [_vm._v("Events & Promotions")]
-                    )
-                  ],
-                  1
-                ),
-                _vm._v(" "),
-                _c(
-                  "li",
-                  [
-                    _c(
-                      "router-link",
-                      { staticClass: "text-white", attrs: { to: "#" } },
-                      [_vm._v("Giveaways")]
-                    )
-                  ],
-                  1
-                )
-              ])
-            ]
-          )
+          _c("div", { staticClass: "col-lg-3 col-md-5 col-sm-6 col-6 mt-3" }, [
+            _c("ul", { staticClass: "footer-links-list px-0" }, [
+              _c(
+                "li",
+                [
+                  _c(
+                    "router-link",
+                    { staticClass: "text-white", attrs: { to: "#" } },
+                    [_vm._v("Give a Gift")]
+                  )
+                ],
+                1
+              ),
+              _vm._v(" "),
+              _c(
+                "li",
+                [
+                  _c(
+                    "router-link",
+                    { staticClass: "text-white", attrs: { to: "#" } },
+                    [_vm._v("Events & Promotions")]
+                  )
+                ],
+                1
+              ),
+              _vm._v(" "),
+              _c(
+                "li",
+                [
+                  _c(
+                    "router-link",
+                    { staticClass: "text-white", attrs: { to: "#" } },
+                    [_vm._v("Giveaways")]
+                  )
+                ],
+                1
+              )
+            ])
+          ])
         ])
       ])
     ])
