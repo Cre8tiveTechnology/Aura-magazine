@@ -1,21 +1,36 @@
 <template>
-    <div>
-        <div class="container text-center p-2">
-            <img
-                class="no-resource-img mx-auto"
-                src="/image/background/homepage.png"
-                alt="Card image"
-            />
-            <h5 class="text-aura">
-                Our editors are working serving on you the best article, please
-                check back...
-            </h5>
+  <div>
+    <div class="container">
+      <div class="row justify-content-center align-items-center">
+        <div class="col-lg-6 col-md-6 col-sm-12 col-12">
+          <div class="img"></div>
         </div>
+        <div class="col-lg-6 col-md-6 col-sm-12 col-12 opacity py-5 px-3">
+          <h5 class="text-white">
+            Our non-relenting editors are working to serve you with exclusive
+            contents. Please check back in a moment...
+          </h5>
+        </div>
+      </div>
     </div>
+  </div>
 </template>
 
 <script>
 export default {
-    name: "homeemptyresource"
+  name: "homeemptyresource",
 };
 </script>
+
+<style scoped>
+.img {
+  background: url("/image/background/homepage.png");
+  width: 25em;
+  height: 25em;
+}
+
+.opacity {
+  background: rgba(0, 0, 0, 0.4);
+  border-radius: 1rem;
+}
+</style>

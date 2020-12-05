@@ -541,12 +541,6 @@ body {
   transition: all 0.5s ease-in-out;
 }
 
-.no-resource-img {
-  width: 35em;
-  height: 25em;
-  margin-top: 5%;
-}
-
 /*!
  * Bootstrap v4.5.2 (https://getbootstrap.com/)
  * Copyright 2011-2020 The Bootstrap Authors
