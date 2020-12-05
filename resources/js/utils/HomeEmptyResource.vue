@@ -2,7 +2,7 @@
   <div>
     <div class="container">
       <div class="row justify-content-center align-items-center">
-        <div class="col-lg-6 col-md-6 col-sm-12 col-12">
+        <div class="col-lg-6 col-md-6 col-sm-12 col-12 p-0">
           <div class="img"></div>
         </div>
         <div class="col-lg-6 col-md-6 col-sm-12 col-12 opacity py-5 px-3">
@@ -25,7 +25,7 @@ export default {
 <style scoped>
 .img {
   background: url("/image/background/homepage.png");
-  width: 25em;
+  width: 100%;
   height: 25em;
 }
 

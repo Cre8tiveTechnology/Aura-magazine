@@ -16194,7 +16194,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, "\n.img[data-v-26bcdad0] {\n  background: url(\"/image/background/homepage.png\");\n  width: 25em;\n  height: 25em;\n}\n.opacity[data-v-26bcdad0] {\n  background: rgba(0, 0, 0, 0.4);\n  border-radius: 1rem;\n}\n", ""]);
+exports.push([module.i, "\n.img[data-v-26bcdad0] {\n  background: url(\"/image/background/homepage.png\");\n  width: 100%;\n  height: 25em;\n}\n.opacity[data-v-26bcdad0] {\n  background: rgba(0, 0, 0, 0.4);\n  border-radius: 1rem;\n}\n", ""]);
 
 // exports
 
@@ -63423,9 +63423,11 @@ var staticRenderFns = [
           "div",
           { staticClass: "row justify-content-center align-items-center" },
           [
-            _c("div", { staticClass: "col-lg-6 col-md-6 col-sm-12 col-12" }, [
-              _c("div", { staticClass: "img" })
-            ]),
+            _c(
+              "div",
+              { staticClass: "col-lg-6 col-md-6 col-sm-12 col-12 p-0" },
+              [_c("div", { staticClass: "img" })]
+            ),
             _vm._v(" "),
             _c(
               "div",
