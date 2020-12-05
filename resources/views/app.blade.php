@@ -9,6 +9,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#000000">
     <title>Aura - Fashion, Beauty, Latest News, Trends, Arts &amp; Culture</title>
     <meta name="description"
         content="Aura brings you fashion, beauty, lifestyle, arts &amp; culture from local and foreign social scenes, culture, traditions and high-societal etiquettes." />
