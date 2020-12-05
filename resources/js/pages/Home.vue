@@ -12,6 +12,7 @@
         </div>
 
         <!--================ Top Stories MOBILE Card ==================-->
+
         <div
             class="container-fluid p-2 d-md-none d-lg-none d-xl-none d-sm-block border-0"
             style="background-color: #676465 !important"
@@ -20,87 +21,41 @@
                 Top Stories
                 <i class="fa fa-angle-right text-aura"></i>
             </h5>
-
+            <home-empty-resource
+                v-if="highestViews.length === 0"
+            ></home-empty-resource>
             <!-- Mobile carousel -->
             <div
                 id="carouselExampleSlidesOnly"
                 class="carousel slide border-bottom-0"
                 data-ride="carousel"
+                v-else
             >
                 <div class="carousel-inner">
-                    <div class="carousel-item active">
+                    <div
+                        class="carousel-item "
+                        v-for="courselItem in highestViews"
+                        :key="courselItem.id"
+                    >
                         <div class="card w-100 border-0">
                             <img
                                 class="card-img-top rounded"
-                                src="https://images.unsplash.com/photo-1483985988355-763728e1935b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80"
-                                alt="Card image cap"
+                                :src="courselItem.image"
+                                :alt="carouselItem.title"
                             />
                             <div
                                 class="card-body text-white border-right-0 text-center"
                                 style="background-color: #676465 !important"
                             >
                                 <h4 class="card-title" style="font-size: 30px">
-                                    Being Everywoman Is Katie Porter's
-                                    Superpower
+                                    {{ carouselItem.title | truncate(47) }}
                                 </h4>
                                 <hr class="top-story-hr" />
 
                                 <p class="card-text mt-2">
-                                    This is a wider card with supporting text
-                                    below as a natural lead-in to additional
-                                    content. This content is a little bit
-                                    longer.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="carousel-item">
-                        <div class="card w-100 border-0">
-                            <img
-                                class="card-img-top rounded-0"
-                                src="https://images.unsplash.com/photo-1483985988355-763728e1935b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80"
-                                alt="Card image cap"
-                            />
-                            <div
-                                class="card-body border-0 text-white text-center"
-                                style="background-color: #676465 !important"
-                            >
-                                <h4 class="card-title" style="font-size: 30px">
-                                    Being Everywoman Iorter's Superpower
-                                </h4>
-                                <hr class="top-story-hr" />
-
-                                <p class="card-text mt-2">
-                                    This is a wider card with supporting text
-                                    below as a natural lead-in to additional
-                                    content. This content is a little bit
-                                    longer.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="carousel-item">
-                        <div class="card w-100 border-0">
-                            <img
-                                class="card-img-top rounded-0"
-                                src="https://images.unsplash.com/photo-1483985988355-763728e1935b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80"
-                                alt="Card image cap"
-                            />
-                            <div
-                                class="card-body text-white text-center"
-                                style="background-color: #676465 !important"
-                            >
-                                <h4 class="card-title" style="font-size: 30px">
-                                    Being Everywoman Is Katie Porter's
-                                    Superpower
-                                </h4>
-                                <hr class="top-story-hr" />
-
-                                <p class="card-text mt-2">
-                                    This is a wider card with supporting text
-                                    below as a natural lead-in to additional
-                                    content. This content is a little bit
-                                    longer.
+                                    {{
+                                        carouselItem.description | truncate(133)
+                                    }}
                                 </p>
                             </div>
                         </div>
@@ -122,86 +77,40 @@
                 <i class="fa fa-angle-right text-aura"></i>
             </h5>
             <!-- Desktop Carousel -->
+            <home-empty-resource
+                v-if="highestViews.length === 0"
+            ></home-empty-resource>
             <div
                 id="carouselExampleIndicators"
                 class="carousel slide w-75 mx-auto rounded-0 border-none"
                 data-ride="carousel"
+                v-else
             >
                 <div class="carousel-inner bg-transparent">
-                    <div class="carousel-item active rounded">
+                    <div
+                        class="carousel-item active rounded"
+                        v-for="courselItem in highestViews"
+                        :key="courselItem.id"
+                    >
                         <div class="card w-100 border-0">
                             <img
                                 class="card-img-top rounded-0"
-                                src="https://images.unsplash.com/photo-1483985988355-763728e1935b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80"
-                                alt="Card image cap"
+                                :src="courselItem.image"
+                                :alt="carouselItem.title"
                             />
                             <div
                                 class="card-body text-white border-right-0 text-center"
                                 style="background-color: #676465 !important"
                             >
                                 <h4 class="card-title" style="font-size: 30px">
-                                    Being Everywoman Is Katie Porter's
-                                    Superpower
+                                    {{ carouselItem.title | truncate(47) }}
                                 </h4>
                                 <hr class="top-story-hr" />
 
                                 <p class="card-text mt-2">
-                                    This is a wider card with supporting text
-                                    below as a natural lead-in to additional
-                                    content. This content is a little bit
-                                    longer.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="carousel-item">
-                        <div class="card w-100 border-0">
-                            <img
-                                class="card-img-top rounded-0"
-                                src="https://images.unsplash.com/photo-1483985988355-763728e1935b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80"
-                                alt="Card image cap"
-                            />
-                            <div
-                                class="card-body border-0 text-white text-center"
-                                style="background-color: #676465 !important"
-                            >
-                                <h4 class="card-title" style="font-size: 30px">
-                                    Being Everywoman Is Katie Porter's
-                                    Superpower
-                                </h4>
-                                <hr class="top-story-hr" />
-
-                                <p class="card-text mt-2">
-                                    This is a wider card with supporting text
-                                    below as a natural lead-in to additional
-                                    content. This content is a little bit
-                                    longer.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="carousel-item">
-                        <div class="card w-100 border-0">
-                            <img
-                                class="card-img-top rounded-0"
-                                src="https://images.unsplash.com/photo-1483985988355-763728e1935b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80"
-                                alt="Card image cap"
-                            />
-                            <div
-                                class="card-body text-white text-center"
-                                style="background-color: #676465 !important"
-                            >
-                                <h4 class="card-title" style="font-size: 30px">
-                                    Being Everywoman Is Katie Porter's
-                                    Superpower
-                                </h4>
-                                <hr class="top-story-hr" />
-
-                                <p class="card-text mt-2">
-                                    This is a wider card with supporting text
-                                    below as a natural lead-in to additional
-                                    content. This content is a little bit
-                                    longer.
+                                    {{
+                                        carouselItem.description | truncate(133)
+                                    }}
                                 </p>
                             </div>
                         </div>
@@ -236,104 +145,34 @@
 
         <!--======================== Story cards =================-->
         <div class="container mb-5" style="margin-top: 10%">
+            <home-empty-resource
+                v-if="stories.length === 0"
+            ></home-empty-resource>
             <div
                 class="row justify-content-lg-between justify-content-md-around justify-content-sm-center justify-content-center"
+                v-else
             >
                 <!-- Card -->
-                <div class="col-12 col-sm-10 col-md-6 col-lg-3 mb-md-3 mb-sm-3">
+                <div
+                    class="col-12 col-sm-10 col-md-6 col-lg-3 mb-md-3 mb-sm-3"
+                    v-for="story in stories"
+                    :key="story.id"
+                >
                     <div class="card p-3 shadow-sm">
                         <div class="inner">
                             <img
-                                src="https://images.unsplash.com/photo-1483985988355-763728e1935b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80"
+                                :src="story.image"
+                                :alt="story.title"
                                 class="card-img-top p-1"
-                                alt="Card Image"
                             />
                         </div>
                         <div class="card-body px-0">
                             <p class="story-card-font-1">
-                                Excepteur sint occaecat cupidatatnon proident,
-                                sunt in culpa qui ocial deserunt mollit anim
-                                tujln.kaeei do.
+                                {{ story.title | truncate(173) }}
                             </p>
                             <hr class="story-card-hr" />
                             <p class="story-card-font-2">
-                                Money to many is very thig wufr ubneuid nqhfioef
-                                aeuaean qoi4ii JOECAER UJCUIW
-                            </p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Card -->
-                <div class="col-12 col-sm-10 col-md-6 col-lg-3 mb-md-3 mb-sm-5">
-                    <div class="card p-3 shadow-sm">
-                        <div class="inner">
-                            <img
-                                src="https://images.unsplash.com/photo-1483985988355-763728e1935b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80"
-                                class="card-img-top p-1"
-                                alt="Card Image"
-                            />
-                        </div>
-                        <div class="card-body px-0">
-                            <p class="story-card-font-1">
-                                Excepteur sint occaecat cupidatatnon proident,
-                                sunt in culpa qui ocial deserunt mollit anim
-                                tujln.kaeei do.
-                            </p>
-                            <hr class="story-card-hr" />
-                            <p class="story-card-font-2">
-                                Money to many is very thig wufr ubneuid nqhfioef
-                                aeuaean qoi4ii JOECAER UJCUIW
-                            </p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Card -->
-                <div class="col-12 col-sm-10 col-md-6 col-lg-3 mb-sm-3">
-                    <div class="card p-3 shadow-sm">
-                        <div class="inner">
-                            <img
-                                src="https://images.unsplash.com/photo-1483985988355-763728e1935b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80"
-                                class="card-img-top p-1"
-                                alt="Card Image"
-                            />
-                        </div>
-                        <div class="card-body px-0">
-                            <p class="story-card-font-1">
-                                Excepteur sint occaecat cupidatatnon proident,
-                                sunt in culpa qui ocial deserunt mollit anim
-                                tujln.kaeei do.
-                            </p>
-                            <hr class="story-card-hr" />
-                            <p class="story-card-font-2">
-                                Money to many is very thig wufr ubneuid nqhfioef
-                                aeuaean qoi4ii JOECAER UJCUIW
-                            </p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Card -->
-                <div class="col-12 col-sm-10 col-md-6 col-lg-3">
-                    <div class="card p-3 shadow-sm">
-                        <div class="inner">
-                            <img
-                                src="https://images.unsplash.com/photo-1483985988355-763728e1935b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80"
-                                class="card-img-top p-1"
-                                alt="Card Image"
-                            />
-                        </div>
-                        <div class="card-body px-0">
-                            <p class="story-card-font-1">
-                                Excepteur sint occaecat cupidatatnon proident,
-                                sunt in culpa qui ocial deserunt mollit anim
-                                tujln.kaeei do.
-                            </p>
-                            <hr class="story-card-hr" />
-                            <p class="story-card-font-2">
-                                Money to many is very thig wufr ubneuid nqhfioef
-                                aeuaean qoi4ii JOECAER UJCUIW
+                                {{ story.content | truncate(143) }}
                             </p>
                         </div>
                     </div>
@@ -356,7 +195,7 @@
                     NEWS
                 </h5>
                 <home-empty-resource
-                    v-if="news.length === 0"
+                    v-if="Object.keys(news).length === 0"
                 ></home-empty-resource>
                 <div class="row no-gutters justify-content-center" v-else>
                     <div class="col-sm-7 col-md-7 col-lg-7 col-xl-7">
@@ -436,8 +275,9 @@
                 <span class="text-aura" style="font-size: 30px">+</span>
                 FASHION
             </h5>
+
             <home-empty-resource
-                v-if="fashionNews.length === 0"
+                v-if="Object.keys(fashionNews).length === 0"
             ></home-empty-resource>
             <!-- =====================FASHION NEWS -I =============================== -->
             <div class="card mx-auto border-0" v-else>
@@ -520,7 +360,7 @@
                 BEAUTY
             </h5>
             <home-empty-resource
-                v-if="beautyNews.length === 0"
+                v-if="Object.keys(beautyNews).length === 0"
             ></home-empty-resource>
 
             <div v-else>
@@ -628,7 +468,7 @@
                 </h5>
             </div>
             <home-empty-resource
-                v-if="cultureNews.length === 0"
+                v-if="Object.keys(cultureNews).length === 0"
             ></home-empty-resource>
             <div v-else>
                 <div
@@ -759,6 +599,7 @@
                 <p>ADS BANNER</p>
             </div>
         </div>
+
         <!--================ MAGAZINE BANNER =======================-->
         <div class="container-fluid mt-5">
             <div class="container mx-auto">
@@ -814,7 +655,7 @@
                     LIFE & LOVE
                 </h5>
                 <home-empty-resource
-                    v-if="lifenLoveNews.length === 0"
+                    v-if="Object.keys(lifenLoveNews).length === 0"
                 ></home-empty-resource>
                 <div v-else>
                     <div class="row mb-5">
@@ -894,7 +735,7 @@
                     HOROSCOPE
                 </h5>
                 <home-empty-resource
-                    v-if="horoscope.length === 0"
+                    v-if="Object.keys(horoscope).length === 0"
                 ></home-empty-resource>
 
                 <div v-else>
@@ -963,10 +804,13 @@ export default {
         beautyFirst: {},
         cultureFirst: {},
         cultureSecondObj: {},
-        lifenLoveFirst: {}
+        lifenLoveFirst: {},
+        stories: {},
+        highestViews: {}
     }),
     mounted() {
         this.getArticles();
+        console.log(Object.keys(this.news).length);
     },
     methods: {
         /* -------------------------------------------------------------------------- */
@@ -1067,6 +911,24 @@ export default {
             this.horoscope = list
                 .filter(function(article) {
                     return article.category == "Horoscope";
+                })
+                .slice(0, 4)
+                .reverse();
+
+            /* -------------------------------------------------------------------------- */
+            /*                               //Highest Views                              */
+            /* -------------------------------------------------------------------------- */
+
+            this.highestViews = list
+                .filter(function(article) {
+                    return article.views > 20;
+                })
+                .slice(0, 4)
+                .reverse();
+
+            this.stories = list
+                .filter(function(article) {
+                    return article.view > 100;
                 })
                 .slice(0, 4)
                 .reverse();

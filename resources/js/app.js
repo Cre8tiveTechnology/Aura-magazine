@@ -18,6 +18,7 @@ import ToggleSwitch from 'vuejs-toggle-switch'
 import VueToast from 'vue-toast-notification'
 import 'vue-toast-notification/dist/theme-sugar.css'
 import vSelect from 'vue-select'
+import VueSocialSharing from 'vue-social-sharing'
 /**
  * The following block of code may be used to automatically register your
  * Vue components. It will recursively scan this directory for the Vue
@@ -58,7 +59,7 @@ Vue.component('modal',Modal)
 // files.keys().map(key => Vue.component(key.split('/').pop().split('.')[0], files(key).default))
 
 NProgress.configure({easing: 'ease',speed: 500,showSpinner: true})
-
+Vue.use(VueSocialSharing);
 Vue.use(VueRouter)
 Vue.use(NProgress)
 Vue.use(VueAxios,axios)

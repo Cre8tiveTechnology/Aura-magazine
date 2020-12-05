@@ -5239,165 +5239,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: "Home",
@@ -5416,11 +5257,14 @@ __webpack_require__.r(__webpack_exports__);
       beautyFirst: {},
       cultureFirst: {},
       cultureSecondObj: {},
-      lifenLoveFirst: {}
+      lifenLoveFirst: {},
+      stories: {},
+      highestViews: {}
     };
   },
   mounted: function mounted() {
     this.getArticles();
+    console.log(Object.keys(this.news).length);
   },
   methods: {
     /* -------------------------------------------------------------------------- */
@@ -5512,6 +5356,18 @@ __webpack_require__.r(__webpack_exports__);
 
       this.horoscope = list.filter(function (article) {
         return article.category == "Horoscope";
+      }).slice(0, 4).reverse();
+      /* -------------------------------------------------------------------------- */
+
+      /*                               //Highest Views                              */
+
+      /* -------------------------------------------------------------------------- */
+
+      this.highestViews = list.filter(function (article) {
+        return article.views > 20;
+      }).slice(0, 4).reverse();
+      this.stories = list.filter(function (article) {
+        return article.view > 100;
       }).slice(0, 4).reverse();
     }
   }
@@ -5865,6 +5721,86 @@ __webpack_require__.r(__webpack_exports__);
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _apis_client_Article__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../apis/client/Article */ "./resources/js/apis/client/Article.js");
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 //
 //
 //
@@ -6060,8 +5996,13 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 
-/* harmony default export */ __webpack_exports__["default"] = ({
+/* harmony default export */ __webpack_exports__["default"] = (_defineProperty({
   name: "Post",
+  data: function data() {
+    return {
+      postURL: ""
+    };
+  },
   props: {
     title: String,
     id: String
@@ -6087,7 +6028,9 @@ __webpack_require__.r(__webpack_exports__);
     }
   },
   mounted: function mounted() {
-    //Google analytics
+    //Fetch article URL
+    this.postURL = window.location.href; //Google analytics
+
     var articleUrl = this.$route.fullPath;
     this.$ga.page(articleUrl);
     this.getArticle(); //Updates the views count after 10secs
@@ -6145,24 +6088,23 @@ __webpack_require__.r(__webpack_exports__);
         console.error(error.data);
       });
     }
-  },
-  data: function data() {
-    return {
-      article: {},
-      images: [],
-      hasImages: false,
-      recommendations: [],
-      links: {
-        Culture: "CULTURE",
-        Beauty: "BEAUTY",
-        "Ask Ruby": "ASKRUBY",
-        Fashion: "FASHION",
-        "Sex and Relationship": "SEX/RELATIONSHIP",
-        News: "NEWS"
-      }
-    };
   }
-});
+}, "data", function data() {
+  return {
+    article: {},
+    images: [],
+    hasImages: false,
+    recommendations: [],
+    links: {
+      Culture: "CULTURE",
+      Beauty: "BEAUTY",
+      "Ask Ruby": "ASKRUBY",
+      Fashion: "FASHION",
+      "Sex and Relationship": "SEX/RELATIONSHIP",
+      News: "NEWS"
+    }
+  };
+}));
 
 /***/ }),
 
@@ -15528,10 +15470,10 @@ exports.push([module.i, "\n/*Variables */\n.left-section .inner-content[data-v-8
 
 exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loader/lib/css-base.js */ "./node_modules/css-loader/lib/css-base.js")(false);
 // imports
-
+exports.push([module.i, "@import url(//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css);", ""]);
 
 // module
-exports.push([module.i, "\n.recom-link[data-v-1f9218ae] {\n  cursor: pointer;\n  transition: 0.4s all;\n  transition-timing-function: ease-in-out;\n}\n.recom-link[data-v-1f9218ae]:hover {\n  transform: scale(1.05);\n}\n", ""]);
+exports.push([module.i, "\n.recom-link[data-v-1f9218ae] {\n    cursor: pointer;\n    transition: 0.4s all;\n    transition-timing-function: ease-in-out;\n}\n.recom-link[data-v-1f9218ae]:hover {\n    transform: scale(1.05);\n}\n#social[data-v-1f9218ae] {\n    margin: 20px 10px;\n    text-align: center;\n}\n.smGlobalBtn[data-v-1f9218ae] {\n    /* global button class */\n    display: inline-block;\n    position: relative;\n    cursor: pointer;\n    width: 50px;\n    height: 50px;\n    box-shadow: 0 2px 2px #999;\n    padding: 0px;\n    text-decoration: none;\n    text-align: center;\n    color: #fff;\n    font-size: 25px;\n    font-weight: normal;\n    line-height: 2em;\n    border-radius: 25px;\n    -moz-border-radius: 25px;\n    -webkit-border-radius: 25px;\n}\n\n/* facebook button class*/\n.facebookBtn[data-v-1f9218ae] {\n    background: #4060a5;\n}\n.facebookBtn[data-v-1f9218ae]:before {\n    /* use :before to add the relevant icons */\n    font-family: \"FontAwesome\";\n    content: \"\\F09A\"; /* add facebook icon */\n}\n.facebookBtn[data-v-1f9218ae]:hover {\n    color: #4060a5;\n    background: #fff;\n}\n\n/* twitter button class*/\n.twitterBtn[data-v-1f9218ae] {\n    background: #00abe3;\n}\n.twitterBtn[data-v-1f9218ae]:before {\n    font-family: \"FontAwesome\";\n    content: \"\\F099\"; /* add twitter icon */\n}\n.twitterBtn[data-v-1f9218ae]:hover {\n    color: #00abe3;\n    background: #fff;\n}\n\n/* telegram button class*/\n.telegramBtn[data-v-1f9218ae] {\n    background: #0088cc;\n}\n.telegramBtn[data-v-1f9218ae]:before {\n    font-family: \"FontAwesome\";\n    content: \"\\F2C6\"; /* add telegram icon */\n}\n.telegramBtn[data-v-1f9218ae]:hover {\n    color: #0088cc;\n    background: #fff;\n}\n\n/* linkedin button class*/\n.whatSappBtn[data-v-1f9218ae] {\n    background: #31c76a;\n}\n.whatSappBtn[data-v-1f9218ae]:before {\n    font-family: \"FontAwesome\";\n    content: \"\\F232\"; /* add linkedin icon */\n}\n.whatSappBtn[data-v-1f9218ae]:hover {\n    color: #31c76a;\n    background: #fff;\n}\n", ""]);
 
 // exports
 
@@ -53418,22 +53360,314 @@ var render = function() {
       _vm._v(" "),
       _vm._m(0),
       _vm._v(" "),
-      _vm._m(1),
+      _c(
+        "div",
+        {
+          staticClass:
+            "container-fluid p-2 d-md-none d-lg-none d-xl-none d-sm-block border-0",
+          staticStyle: { "background-color": "#676465 !important" }
+        },
+        [
+          _vm._m(1),
+          _vm._v(" "),
+          _vm.highestViews.length === 0
+            ? _c("home-empty-resource")
+            : _c(
+                "div",
+                {
+                  staticClass: "carousel slide border-bottom-0",
+                  attrs: {
+                    id: "carouselExampleSlidesOnly",
+                    "data-ride": "carousel"
+                  }
+                },
+                [
+                  _c(
+                    "div",
+                    { staticClass: "carousel-inner" },
+                    _vm._l(_vm.highestViews, function(courselItem) {
+                      return _c(
+                        "div",
+                        { key: courselItem.id, staticClass: "carousel-item " },
+                        [
+                          _c("div", { staticClass: "card w-100 border-0" }, [
+                            _c("img", {
+                              staticClass: "card-img-top rounded",
+                              attrs: {
+                                src: courselItem.image,
+                                alt: _vm.carouselItem.title
+                              }
+                            }),
+                            _vm._v(" "),
+                            _c(
+                              "div",
+                              {
+                                staticClass:
+                                  "card-body text-white border-right-0 text-center",
+                                staticStyle: {
+                                  "background-color": "#676465 !important"
+                                }
+                              },
+                              [
+                                _c(
+                                  "h4",
+                                  {
+                                    staticClass: "card-title",
+                                    staticStyle: { "font-size": "30px" }
+                                  },
+                                  [
+                                    _vm._v(
+                                      "\n                                " +
+                                        _vm._s(
+                                          _vm._f("truncate")(
+                                            _vm.carouselItem.title,
+                                            47
+                                          )
+                                        ) +
+                                        "\n                            "
+                                    )
+                                  ]
+                                ),
+                                _vm._v(" "),
+                                _c("hr", { staticClass: "top-story-hr" }),
+                                _vm._v(" "),
+                                _c("p", { staticClass: "card-text mt-2" }, [
+                                  _vm._v(
+                                    "\n                                " +
+                                      _vm._s(
+                                        _vm._f("truncate")(
+                                          _vm.carouselItem.description,
+                                          133
+                                        )
+                                      ) +
+                                      "\n                            "
+                                  )
+                                ])
+                              ]
+                            )
+                          ])
+                        ]
+                      )
+                    }),
+                    0
+                  )
+                ]
+              )
+        ],
+        1
+      ),
       _vm._v(" "),
-      _vm._m(2),
+      _c(
+        "div",
+        {
+          staticClass:
+            "container-fluid p-5 d-none d-md-block d-lg-block d-xl-block",
+          staticStyle: { "background-color": "#676465 !important" }
+        },
+        [
+          _vm._m(2),
+          _vm._v(" "),
+          _vm.highestViews.length === 0
+            ? _c("home-empty-resource")
+            : _c(
+                "div",
+                {
+                  staticClass:
+                    "carousel slide w-75 mx-auto rounded-0 border-none",
+                  attrs: {
+                    id: "carouselExampleIndicators",
+                    "data-ride": "carousel"
+                  }
+                },
+                [
+                  _c(
+                    "div",
+                    { staticClass: "carousel-inner bg-transparent" },
+                    _vm._l(_vm.highestViews, function(courselItem) {
+                      return _c(
+                        "div",
+                        {
+                          key: courselItem.id,
+                          staticClass: "carousel-item active rounded"
+                        },
+                        [
+                          _c("div", { staticClass: "card w-100 border-0" }, [
+                            _c("img", {
+                              staticClass: "card-img-top rounded-0",
+                              attrs: {
+                                src: courselItem.image,
+                                alt: _vm.carouselItem.title
+                              }
+                            }),
+                            _vm._v(" "),
+                            _c(
+                              "div",
+                              {
+                                staticClass:
+                                  "card-body text-white border-right-0 text-center",
+                                staticStyle: {
+                                  "background-color": "#676465 !important"
+                                }
+                              },
+                              [
+                                _c(
+                                  "h4",
+                                  {
+                                    staticClass: "card-title",
+                                    staticStyle: { "font-size": "30px" }
+                                  },
+                                  [
+                                    _vm._v(
+                                      "\n                                " +
+                                        _vm._s(
+                                          _vm._f("truncate")(
+                                            _vm.carouselItem.title,
+                                            47
+                                          )
+                                        ) +
+                                        "\n                            "
+                                    )
+                                  ]
+                                ),
+                                _vm._v(" "),
+                                _c("hr", { staticClass: "top-story-hr" }),
+                                _vm._v(" "),
+                                _c("p", { staticClass: "card-text mt-2" }, [
+                                  _vm._v(
+                                    "\n                                " +
+                                      _vm._s(
+                                        _vm._f("truncate")(
+                                          _vm.carouselItem.description,
+                                          133
+                                        )
+                                      ) +
+                                      "\n                            "
+                                  )
+                                ])
+                              ]
+                            )
+                          ])
+                        ]
+                      )
+                    }),
+                    0
+                  ),
+                  _vm._v(" "),
+                  _c(
+                    "a",
+                    {
+                      staticClass: "carousel-control-prev",
+                      attrs: {
+                        href: "#carouselExampleIndicators",
+                        role: "button",
+                        "data-slide": "prev"
+                      }
+                    },
+                    [
+                      _c("span", {
+                        staticClass: "carousel-control-prev-icon",
+                        attrs: { "aria-hidden": "true" }
+                      }),
+                      _vm._v(" "),
+                      _c("span", { staticClass: "sr-only" }, [
+                        _vm._v("Previous")
+                      ])
+                    ]
+                  ),
+                  _vm._v(" "),
+                  _c(
+                    "a",
+                    {
+                      staticClass: "carousel-control-next",
+                      attrs: {
+                        href: "#carouselExampleIndicators",
+                        role: "button",
+                        "data-slide": "next"
+                      }
+                    },
+                    [
+                      _c("span", {
+                        staticClass: "carousel-control-next-icon",
+                        attrs: { "aria-hidden": "true" }
+                      }),
+                      _vm._v(" "),
+                      _c("span", { staticClass: "sr-only" }, [_vm._v("Next")])
+                    ]
+                  )
+                ]
+              )
+        ],
+        1
+      ),
+      _vm._v(" "),
+      _c(
+        "div",
+        { staticClass: "container mb-5", staticStyle: { "margin-top": "10%" } },
+        [
+          _vm.stories.length === 0
+            ? _c("home-empty-resource")
+            : _c(
+                "div",
+                {
+                  staticClass:
+                    "row justify-content-lg-between justify-content-md-around justify-content-sm-center justify-content-center"
+                },
+                _vm._l(_vm.stories, function(story) {
+                  return _c(
+                    "div",
+                    {
+                      key: story.id,
+                      staticClass:
+                        "col-12 col-sm-10 col-md-6 col-lg-3 mb-md-3 mb-sm-3"
+                    },
+                    [
+                      _c("div", { staticClass: "card p-3 shadow-sm" }, [
+                        _c("div", { staticClass: "inner" }, [
+                          _c("img", {
+                            staticClass: "card-img-top p-1",
+                            attrs: { src: story.image, alt: story.title }
+                          })
+                        ]),
+                        _vm._v(" "),
+                        _c("div", { staticClass: "card-body px-0" }, [
+                          _c("p", { staticClass: "story-card-font-1" }, [
+                            _vm._v(
+                              "\n                            " +
+                                _vm._s(_vm._f("truncate")(story.title, 173)) +
+                                "\n                        "
+                            )
+                          ]),
+                          _vm._v(" "),
+                          _c("hr", { staticClass: "story-card-hr" }),
+                          _vm._v(" "),
+                          _c("p", { staticClass: "story-card-font-2" }, [
+                            _vm._v(
+                              "\n                            " +
+                                _vm._s(_vm._f("truncate")(story.content, 143)) +
+                                "\n                        "
+                            )
+                          ])
+                        ])
+                      ])
+                    ]
+                  )
+                }),
+                0
+              )
+        ],
+        1
+      ),
       _vm._v(" "),
       _vm._m(3),
-      _vm._v(" "),
-      _vm._m(4),
       _vm._v(" "),
       _c("div", { staticClass: "container-fluid mt-5" }, [
         _c(
           "div",
           { staticClass: "container" },
           [
-            _vm._m(5),
+            _vm._m(4),
             _vm._v(" "),
-            _vm.news.length === 0
+            Object.keys(_vm.news).length === 0
               ? _c("home-empty-resource")
               : _c(
                   "div",
@@ -53566,7 +53800,7 @@ var render = function() {
         )
       ]),
       _vm._v(" "),
-      _vm._m(6),
+      _vm._m(5),
       _vm._v(" "),
       _c(
         "div",
@@ -53575,9 +53809,9 @@ var render = function() {
           staticStyle: { "background-color": "#d8d5d5 !important" }
         },
         [
-          _vm._m(7),
+          _vm._m(6),
           _vm._v(" "),
-          _vm.fashionNews.length === 0
+          Object.keys(_vm.fashionNews).length === 0
             ? _c("home-empty-resource")
             : _c("div", { staticClass: "card mx-auto border-0" }, [
                 _c(
@@ -53715,15 +53949,15 @@ var render = function() {
         1
       ),
       _vm._v(" "),
-      _vm._m(8),
+      _vm._m(7),
       _vm._v(" "),
       _c(
         "div",
         { staticClass: "container-fluid mt-5" },
         [
-          _vm._m(9),
+          _vm._m(8),
           _vm._v(" "),
-          _vm.beautyNews.length === 0
+          Object.keys(_vm.beautyNews).length === 0
             ? _c("home-empty-resource")
             : _c("div", [
                 _c("div", { staticClass: "row mb-5" }, [
@@ -53897,7 +54131,7 @@ var render = function() {
         1
       ),
       _vm._v(" "),
-      _vm._m(10),
+      _vm._m(9),
       _vm._v(" "),
       _c(
         "div",
@@ -53906,9 +54140,9 @@ var render = function() {
           staticStyle: { "background-color": "#d8d5d5 !important" }
         },
         [
-          _vm._m(11),
+          _vm._m(10),
           _vm._v(" "),
-          _vm.cultureNews.length === 0
+          Object.keys(_vm.cultureNews).length === 0
             ? _c("home-empty-resource")
             : _c("div", [
                 _c(
@@ -54072,18 +54306,18 @@ var render = function() {
         1
       ),
       _vm._v(" "),
-      _vm._m(12),
+      _vm._m(11),
       _vm._v(" "),
-      _vm._m(13),
+      _vm._m(12),
       _vm._v(" "),
       _c("div", { staticClass: "container-fluid mt-5" }, [
         _c(
           "div",
           { staticClass: "container" },
           [
-            _vm._m(14),
+            _vm._m(13),
             _vm._v(" "),
-            _vm.lifenLoveNews.length === 0
+            Object.keys(_vm.lifenLoveNews).length === 0
               ? _c("home-empty-resource")
               : _c("div", [
                   _c("div", { staticClass: "row mb-5" }, [
@@ -54230,9 +54464,9 @@ var render = function() {
             "div",
             { staticClass: "container mb-3" },
             [
-              _vm._m(15),
+              _vm._m(14),
               _vm._v(" "),
-              _vm.horoscope.length === 0
+              Object.keys(_vm.horoscope).length === 0
                 ? _c("home-empty-resource")
                 : _c("div", [
                     _c(
@@ -54347,527 +54581,24 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c(
-      "div",
-      {
-        staticClass:
-          "container-fluid p-2 d-md-none d-lg-none d-xl-none d-sm-block border-0",
-        staticStyle: { "background-color": "#676465 !important" }
-      },
-      [
-        _c("h5", { staticClass: "font-weight-bold ml-0 mt-4 text-white" }, [
-          _vm._v("\n            Top Stories\n            "),
-          _c("i", { staticClass: "fa fa-angle-right text-aura" })
-        ]),
-        _vm._v(" "),
-        _c(
-          "div",
-          {
-            staticClass: "carousel slide border-bottom-0",
-            attrs: { id: "carouselExampleSlidesOnly", "data-ride": "carousel" }
-          },
-          [
-            _c("div", { staticClass: "carousel-inner" }, [
-              _c("div", { staticClass: "carousel-item active" }, [
-                _c("div", { staticClass: "card w-100 border-0" }, [
-                  _c("img", {
-                    staticClass: "card-img-top rounded",
-                    attrs: {
-                      src:
-                        "https://images.unsplash.com/photo-1483985988355-763728e1935b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80",
-                      alt: "Card image cap"
-                    }
-                  }),
-                  _vm._v(" "),
-                  _c(
-                    "div",
-                    {
-                      staticClass:
-                        "card-body text-white border-right-0 text-center",
-                      staticStyle: { "background-color": "#676465 !important" }
-                    },
-                    [
-                      _c(
-                        "h4",
-                        {
-                          staticClass: "card-title",
-                          staticStyle: { "font-size": "30px" }
-                        },
-                        [
-                          _vm._v(
-                            "\n                                Being Everywoman Is Katie Porter's\n                                Superpower\n                            "
-                          )
-                        ]
-                      ),
-                      _vm._v(" "),
-                      _c("hr", { staticClass: "top-story-hr" }),
-                      _vm._v(" "),
-                      _c("p", { staticClass: "card-text mt-2" }, [
-                        _vm._v(
-                          "\n                                This is a wider card with supporting text\n                                below as a natural lead-in to additional\n                                content. This content is a little bit\n                                longer.\n                            "
-                        )
-                      ])
-                    ]
-                  )
-                ])
-              ]),
-              _vm._v(" "),
-              _c("div", { staticClass: "carousel-item" }, [
-                _c("div", { staticClass: "card w-100 border-0" }, [
-                  _c("img", {
-                    staticClass: "card-img-top rounded-0",
-                    attrs: {
-                      src:
-                        "https://images.unsplash.com/photo-1483985988355-763728e1935b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80",
-                      alt: "Card image cap"
-                    }
-                  }),
-                  _vm._v(" "),
-                  _c(
-                    "div",
-                    {
-                      staticClass: "card-body border-0 text-white text-center",
-                      staticStyle: { "background-color": "#676465 !important" }
-                    },
-                    [
-                      _c(
-                        "h4",
-                        {
-                          staticClass: "card-title",
-                          staticStyle: { "font-size": "30px" }
-                        },
-                        [
-                          _vm._v(
-                            "\n                                Being Everywoman Iorter's Superpower\n                            "
-                          )
-                        ]
-                      ),
-                      _vm._v(" "),
-                      _c("hr", { staticClass: "top-story-hr" }),
-                      _vm._v(" "),
-                      _c("p", { staticClass: "card-text mt-2" }, [
-                        _vm._v(
-                          "\n                                This is a wider card with supporting text\n                                below as a natural lead-in to additional\n                                content. This content is a little bit\n                                longer.\n                            "
-                        )
-                      ])
-                    ]
-                  )
-                ])
-              ]),
-              _vm._v(" "),
-              _c("div", { staticClass: "carousel-item" }, [
-                _c("div", { staticClass: "card w-100 border-0" }, [
-                  _c("img", {
-                    staticClass: "card-img-top rounded-0",
-                    attrs: {
-                      src:
-                        "https://images.unsplash.com/photo-1483985988355-763728e1935b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80",
-                      alt: "Card image cap"
-                    }
-                  }),
-                  _vm._v(" "),
-                  _c(
-                    "div",
-                    {
-                      staticClass: "card-body text-white text-center",
-                      staticStyle: { "background-color": "#676465 !important" }
-                    },
-                    [
-                      _c(
-                        "h4",
-                        {
-                          staticClass: "card-title",
-                          staticStyle: { "font-size": "30px" }
-                        },
-                        [
-                          _vm._v(
-                            "\n                                Being Everywoman Is Katie Porter's\n                                Superpower\n                            "
-                          )
-                        ]
-                      ),
-                      _vm._v(" "),
-                      _c("hr", { staticClass: "top-story-hr" }),
-                      _vm._v(" "),
-                      _c("p", { staticClass: "card-text mt-2" }, [
-                        _vm._v(
-                          "\n                                This is a wider card with supporting text\n                                below as a natural lead-in to additional\n                                content. This content is a little bit\n                                longer.\n                            "
-                        )
-                      ])
-                    ]
-                  )
-                ])
-              ])
-            ])
-          ]
-        )
-      ]
-    )
+    return _c("h5", { staticClass: "font-weight-bold ml-0 mt-4 text-white" }, [
+      _vm._v("\n            Top Stories\n            "),
+      _c("i", { staticClass: "fa fa-angle-right text-aura" })
+    ])
   },
   function() {
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
     return _c(
-      "div",
+      "h5",
       {
-        staticClass:
-          "container-fluid p-5 d-none d-md-block d-lg-block d-xl-block",
-        staticStyle: { "background-color": "#676465 !important" }
+        staticClass: "font-weight-bold mt-4 text-white",
+        staticStyle: { "margin-left": "7.5em" }
       },
       [
-        _c(
-          "h5",
-          {
-            staticClass: "font-weight-bold mt-4 text-white",
-            staticStyle: { "margin-left": "7.5em" }
-          },
-          [
-            _vm._v("\n            Top Stories\n            "),
-            _c("i", { staticClass: "fa fa-angle-right text-aura" })
-          ]
-        ),
-        _vm._v(" "),
-        _c(
-          "div",
-          {
-            staticClass: "carousel slide w-75 mx-auto rounded-0 border-none",
-            attrs: { id: "carouselExampleIndicators", "data-ride": "carousel" }
-          },
-          [
-            _c("div", { staticClass: "carousel-inner bg-transparent" }, [
-              _c("div", { staticClass: "carousel-item active rounded" }, [
-                _c("div", { staticClass: "card w-100 border-0" }, [
-                  _c("img", {
-                    staticClass: "card-img-top rounded-0",
-                    attrs: {
-                      src:
-                        "https://images.unsplash.com/photo-1483985988355-763728e1935b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80",
-                      alt: "Card image cap"
-                    }
-                  }),
-                  _vm._v(" "),
-                  _c(
-                    "div",
-                    {
-                      staticClass:
-                        "card-body text-white border-right-0 text-center",
-                      staticStyle: { "background-color": "#676465 !important" }
-                    },
-                    [
-                      _c(
-                        "h4",
-                        {
-                          staticClass: "card-title",
-                          staticStyle: { "font-size": "30px" }
-                        },
-                        [
-                          _vm._v(
-                            "\n                                Being Everywoman Is Katie Porter's\n                                Superpower\n                            "
-                          )
-                        ]
-                      ),
-                      _vm._v(" "),
-                      _c("hr", { staticClass: "top-story-hr" }),
-                      _vm._v(" "),
-                      _c("p", { staticClass: "card-text mt-2" }, [
-                        _vm._v(
-                          "\n                                This is a wider card with supporting text\n                                below as a natural lead-in to additional\n                                content. This content is a little bit\n                                longer.\n                            "
-                        )
-                      ])
-                    ]
-                  )
-                ])
-              ]),
-              _vm._v(" "),
-              _c("div", { staticClass: "carousel-item" }, [
-                _c("div", { staticClass: "card w-100 border-0" }, [
-                  _c("img", {
-                    staticClass: "card-img-top rounded-0",
-                    attrs: {
-                      src:
-                        "https://images.unsplash.com/photo-1483985988355-763728e1935b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80",
-                      alt: "Card image cap"
-                    }
-                  }),
-                  _vm._v(" "),
-                  _c(
-                    "div",
-                    {
-                      staticClass: "card-body border-0 text-white text-center",
-                      staticStyle: { "background-color": "#676465 !important" }
-                    },
-                    [
-                      _c(
-                        "h4",
-                        {
-                          staticClass: "card-title",
-                          staticStyle: { "font-size": "30px" }
-                        },
-                        [
-                          _vm._v(
-                            "\n                                Being Everywoman Is Katie Porter's\n                                Superpower\n                            "
-                          )
-                        ]
-                      ),
-                      _vm._v(" "),
-                      _c("hr", { staticClass: "top-story-hr" }),
-                      _vm._v(" "),
-                      _c("p", { staticClass: "card-text mt-2" }, [
-                        _vm._v(
-                          "\n                                This is a wider card with supporting text\n                                below as a natural lead-in to additional\n                                content. This content is a little bit\n                                longer.\n                            "
-                        )
-                      ])
-                    ]
-                  )
-                ])
-              ]),
-              _vm._v(" "),
-              _c("div", { staticClass: "carousel-item" }, [
-                _c("div", { staticClass: "card w-100 border-0" }, [
-                  _c("img", {
-                    staticClass: "card-img-top rounded-0",
-                    attrs: {
-                      src:
-                        "https://images.unsplash.com/photo-1483985988355-763728e1935b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80",
-                      alt: "Card image cap"
-                    }
-                  }),
-                  _vm._v(" "),
-                  _c(
-                    "div",
-                    {
-                      staticClass: "card-body text-white text-center",
-                      staticStyle: { "background-color": "#676465 !important" }
-                    },
-                    [
-                      _c(
-                        "h4",
-                        {
-                          staticClass: "card-title",
-                          staticStyle: { "font-size": "30px" }
-                        },
-                        [
-                          _vm._v(
-                            "\n                                Being Everywoman Is Katie Porter's\n                                Superpower\n                            "
-                          )
-                        ]
-                      ),
-                      _vm._v(" "),
-                      _c("hr", { staticClass: "top-story-hr" }),
-                      _vm._v(" "),
-                      _c("p", { staticClass: "card-text mt-2" }, [
-                        _vm._v(
-                          "\n                                This is a wider card with supporting text\n                                below as a natural lead-in to additional\n                                content. This content is a little bit\n                                longer.\n                            "
-                        )
-                      ])
-                    ]
-                  )
-                ])
-              ])
-            ]),
-            _vm._v(" "),
-            _c(
-              "a",
-              {
-                staticClass: "carousel-control-prev",
-                attrs: {
-                  href: "#carouselExampleIndicators",
-                  role: "button",
-                  "data-slide": "prev"
-                }
-              },
-              [
-                _c("span", {
-                  staticClass: "carousel-control-prev-icon",
-                  attrs: { "aria-hidden": "true" }
-                }),
-                _vm._v(" "),
-                _c("span", { staticClass: "sr-only" }, [_vm._v("Previous")])
-              ]
-            ),
-            _vm._v(" "),
-            _c(
-              "a",
-              {
-                staticClass: "carousel-control-next",
-                attrs: {
-                  href: "#carouselExampleIndicators",
-                  role: "button",
-                  "data-slide": "next"
-                }
-              },
-              [
-                _c("span", {
-                  staticClass: "carousel-control-next-icon",
-                  attrs: { "aria-hidden": "true" }
-                }),
-                _vm._v(" "),
-                _c("span", { staticClass: "sr-only" }, [_vm._v("Next")])
-              ]
-            )
-          ]
-        )
-      ]
-    )
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c(
-      "div",
-      { staticClass: "container mb-5", staticStyle: { "margin-top": "10%" } },
-      [
-        _c(
-          "div",
-          {
-            staticClass:
-              "row justify-content-lg-between justify-content-md-around justify-content-sm-center justify-content-center"
-          },
-          [
-            _c(
-              "div",
-              {
-                staticClass:
-                  "col-12 col-sm-10 col-md-6 col-lg-3 mb-md-3 mb-sm-3"
-              },
-              [
-                _c("div", { staticClass: "card p-3 shadow-sm" }, [
-                  _c("div", { staticClass: "inner" }, [
-                    _c("img", {
-                      staticClass: "card-img-top p-1",
-                      attrs: {
-                        src:
-                          "https://images.unsplash.com/photo-1483985988355-763728e1935b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80",
-                        alt: "Card Image"
-                      }
-                    })
-                  ]),
-                  _vm._v(" "),
-                  _c("div", { staticClass: "card-body px-0" }, [
-                    _c("p", { staticClass: "story-card-font-1" }, [
-                      _vm._v(
-                        "\n                            Excepteur sint occaecat cupidatatnon proident,\n                            sunt in culpa qui ocial deserunt mollit anim\n                            tujln.kaeei do.\n                        "
-                      )
-                    ]),
-                    _vm._v(" "),
-                    _c("hr", { staticClass: "story-card-hr" }),
-                    _vm._v(" "),
-                    _c("p", { staticClass: "story-card-font-2" }, [
-                      _vm._v(
-                        "\n                            Money to many is very thig wufr ubneuid nqhfioef\n                            aeuaean qoi4ii JOECAER UJCUIW\n                        "
-                      )
-                    ])
-                  ])
-                ])
-              ]
-            ),
-            _vm._v(" "),
-            _c(
-              "div",
-              {
-                staticClass:
-                  "col-12 col-sm-10 col-md-6 col-lg-3 mb-md-3 mb-sm-5"
-              },
-              [
-                _c("div", { staticClass: "card p-3 shadow-sm" }, [
-                  _c("div", { staticClass: "inner" }, [
-                    _c("img", {
-                      staticClass: "card-img-top p-1",
-                      attrs: {
-                        src:
-                          "https://images.unsplash.com/photo-1483985988355-763728e1935b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80",
-                        alt: "Card Image"
-                      }
-                    })
-                  ]),
-                  _vm._v(" "),
-                  _c("div", { staticClass: "card-body px-0" }, [
-                    _c("p", { staticClass: "story-card-font-1" }, [
-                      _vm._v(
-                        "\n                            Excepteur sint occaecat cupidatatnon proident,\n                            sunt in culpa qui ocial deserunt mollit anim\n                            tujln.kaeei do.\n                        "
-                      )
-                    ]),
-                    _vm._v(" "),
-                    _c("hr", { staticClass: "story-card-hr" }),
-                    _vm._v(" "),
-                    _c("p", { staticClass: "story-card-font-2" }, [
-                      _vm._v(
-                        "\n                            Money to many is very thig wufr ubneuid nqhfioef\n                            aeuaean qoi4ii JOECAER UJCUIW\n                        "
-                      )
-                    ])
-                  ])
-                ])
-              ]
-            ),
-            _vm._v(" "),
-            _c(
-              "div",
-              { staticClass: "col-12 col-sm-10 col-md-6 col-lg-3 mb-sm-3" },
-              [
-                _c("div", { staticClass: "card p-3 shadow-sm" }, [
-                  _c("div", { staticClass: "inner" }, [
-                    _c("img", {
-                      staticClass: "card-img-top p-1",
-                      attrs: {
-                        src:
-                          "https://images.unsplash.com/photo-1483985988355-763728e1935b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80",
-                        alt: "Card Image"
-                      }
-                    })
-                  ]),
-                  _vm._v(" "),
-                  _c("div", { staticClass: "card-body px-0" }, [
-                    _c("p", { staticClass: "story-card-font-1" }, [
-                      _vm._v(
-                        "\n                            Excepteur sint occaecat cupidatatnon proident,\n                            sunt in culpa qui ocial deserunt mollit anim\n                            tujln.kaeei do.\n                        "
-                      )
-                    ]),
-                    _vm._v(" "),
-                    _c("hr", { staticClass: "story-card-hr" }),
-                    _vm._v(" "),
-                    _c("p", { staticClass: "story-card-font-2" }, [
-                      _vm._v(
-                        "\n                            Money to many is very thig wufr ubneuid nqhfioef\n                            aeuaean qoi4ii JOECAER UJCUIW\n                        "
-                      )
-                    ])
-                  ])
-                ])
-              ]
-            ),
-            _vm._v(" "),
-            _c("div", { staticClass: "col-12 col-sm-10 col-md-6 col-lg-3" }, [
-              _c("div", { staticClass: "card p-3 shadow-sm" }, [
-                _c("div", { staticClass: "inner" }, [
-                  _c("img", {
-                    staticClass: "card-img-top p-1",
-                    attrs: {
-                      src:
-                        "https://images.unsplash.com/photo-1483985988355-763728e1935b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80",
-                      alt: "Card Image"
-                    }
-                  })
-                ]),
-                _vm._v(" "),
-                _c("div", { staticClass: "card-body px-0" }, [
-                  _c("p", { staticClass: "story-card-font-1" }, [
-                    _vm._v(
-                      "\n                            Excepteur sint occaecat cupidatatnon proident,\n                            sunt in culpa qui ocial deserunt mollit anim\n                            tujln.kaeei do.\n                        "
-                    )
-                  ]),
-                  _vm._v(" "),
-                  _c("hr", { staticClass: "story-card-hr" }),
-                  _vm._v(" "),
-                  _c("p", { staticClass: "story-card-font-2" }, [
-                    _vm._v(
-                      "\n                            Money to many is very thig wufr ubneuid nqhfioef\n                            aeuaean qoi4ii JOECAER UJCUIW\n                        "
-                    )
-                  ])
-                ])
-              ])
-            ])
-          ]
-        )
+        _vm._v("\n            Top Stories\n            "),
+        _c("i", { staticClass: "fa fa-angle-right text-aura" })
       ]
     )
   },
@@ -55748,22 +55479,79 @@ var render = function() {
                       [
                         _c("i", { staticClass: "mt-4 fa fa-user" }),
                         _vm._v(
-                          " " + _vm._s(_vm.article.user_name) + "\n        "
+                          " " +
+                            _vm._s(_vm.article.user_name) +
+                            "\n                "
                         )
                       ]
                     ),
                     _vm._v(" "),
                     _c("p", { staticClass: "mt-4 post-intro" }, [
                       _vm._v(
-                        "\n          " +
+                        "\n                    " +
                           _vm._s(
                             _vm._f("truncate")(_vm.article.description, 150)
                           ) +
-                          "\n        "
+                          "\n                "
                       )
                     ]),
                     _vm._v(" "),
-                    _vm._m(0)
+                    _c(
+                      "div",
+                      { staticClass: "mt-4 row p-3 justify-content-center" },
+                      [
+                        _c(
+                          "div",
+                          { attrs: { id: "social" } },
+                          [
+                            _c("ShareNetwork", {
+                              staticClass: "facebookBtn smGlobalBtn",
+                              attrs: {
+                                network: "facebook",
+                                url: _vm.postURL,
+                                title: _vm.article.title,
+                                description: _vm.article.description,
+                                hashtags: "aura-magazine,update"
+                              }
+                            }),
+                            _vm._v(" "),
+                            _c("ShareNetwork", {
+                              staticClass: "twitterBtn smGlobalBtn",
+                              attrs: {
+                                network: "twitter",
+                                url: _vm.postURL,
+                                title: _vm.article.title,
+                                description: _vm.article.description,
+                                hashtags: "aura-magazine,update"
+                              }
+                            }),
+                            _vm._v(" "),
+                            _c("ShareNetwork", {
+                              staticClass: "whatSappBtn smGlobalBtn",
+                              attrs: {
+                                network: "whatsapp",
+                                url: _vm.postURL,
+                                title: _vm.article.title,
+                                description: _vm.article.description,
+                                hashtags: "aura-magazine,update"
+                              }
+                            }),
+                            _vm._v(" "),
+                            _c("ShareNetwork", {
+                              staticClass: "telegramBtn smGlobalBtn",
+                              attrs: {
+                                network: "telegram",
+                                url: _vm.postURL,
+                                title: _vm.article.title,
+                                description: _vm.article.description,
+                                hashtags: "aura-magazine,update"
+                              }
+                            })
+                          ],
+                          1
+                        )
+                      ]
+                    )
                   ],
                   1
                 )
@@ -55824,7 +55612,9 @@ var render = function() {
                         [
                           _c("i", { staticClass: "mt-4 fa fa-user" }),
                           _vm._v(
-                            " " + _vm._s(_vm.article.user_name) + "\n          "
+                            "\n                        " +
+                              _vm._s(_vm.article.user_name) +
+                              "\n                    "
                           )
                         ]
                       )
@@ -55838,13 +55628,68 @@ var render = function() {
             _c("div", { staticClass: "container text-center" }, [
               _c("p", { staticClass: "mt-4 post-intro" }, [
                 _vm._v(
-                  "\n        " +
+                  "\n                " +
                     _vm._s(_vm._f("truncate")(_vm.article.description, 150)) +
-                    "\n      "
+                    "\n            "
                 )
               ]),
               _vm._v(" "),
-              _vm._m(1)
+              _c(
+                "div",
+                { staticClass: "mt-4 row p-3 justify-content-center" },
+                [
+                  _c(
+                    "div",
+                    { attrs: { id: "social" } },
+                    [
+                      _c("ShareNetwork", {
+                        staticClass: "facebookBtn smGlobalBtn",
+                        attrs: {
+                          network: "facebook",
+                          url: _vm.postURL,
+                          title: _vm.article.title,
+                          description: _vm.article.description,
+                          hashtags: "aura-magazine,update"
+                        }
+                      }),
+                      _vm._v(" "),
+                      _c("ShareNetwork", {
+                        staticClass: "twitterBtn smGlobalBtn",
+                        attrs: {
+                          network: "twitter",
+                          url: _vm.postURL,
+                          title: _vm.article.title,
+                          description: _vm.article.description,
+                          hashtags: "aura-magazine,update"
+                        }
+                      }),
+                      _vm._v(" "),
+                      _c("ShareNetwork", {
+                        staticClass: "whatSappBtn smGlobalBtn",
+                        attrs: {
+                          network: "whatsapp",
+                          url: _vm.postURL,
+                          title: _vm.article.title,
+                          description: _vm.article.description,
+                          hashtags: "aura-magazine,update"
+                        }
+                      }),
+                      _vm._v(" "),
+                      _c("ShareNetwork", {
+                        staticClass: "telegramBtn smGlobalBtn",
+                        attrs: {
+                          network: "telegram",
+                          url: _vm.postURL,
+                          title: _vm.article.title,
+                          description: _vm.article.description,
+                          hashtags: "aura-magazine,update"
+                        }
+                      })
+                    ],
+                    1
+                  )
+                ]
+              )
             ])
           ]),
       _vm._v(" "),
@@ -55852,7 +55697,7 @@ var render = function() {
         _c("p", { domProps: { innerHTML: _vm._s(_vm.article.content) } })
       ]),
       _vm._v(" "),
-      _vm._m(2),
+      _vm._m(0),
       _vm._v(" "),
       _c(
         "div",
@@ -55868,7 +55713,7 @@ var render = function() {
           staticClass: "container sp-mt-7"
         },
         [
-          _vm._m(3),
+          _vm._m(1),
           _vm._v(" "),
           _c(
             "div",
@@ -55898,7 +55743,7 @@ var render = function() {
       ),
       _vm._v(" "),
       _c("div", { staticClass: "container sp-mt-8" }, [
-        _vm._m(4),
+        _vm._m(2),
         _vm._v(" "),
         _c(
           "div",
@@ -55948,9 +55793,9 @@ var render = function() {
                             },
                             [
                               _vm._v(
-                                "\n                  " +
+                                "\n                                    " +
                                   _vm._s(r.title) +
-                                  "\n                "
+                                  "\n                                "
                               )
                             ]
                           ),
@@ -55976,9 +55821,9 @@ var render = function() {
                                 [
                                   _c("i", { staticClass: "mt-4 fa fa-user" }),
                                   _vm._v(
-                                    " " +
+                                    "\n                                        " +
                                       _vm._s(r.user_name) +
-                                      "\n                  "
+                                      "\n                                    "
                                   )
                                 ]
                               )
@@ -56007,84 +55852,6 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "mt-4 row p-3 justify-content-center" }, [
-      _c(
-        "a",
-        { staticClass: "aura-post-social-icon mx-2", attrs: { href: "#" } },
-        [
-          _c("i", {
-            staticClass: "fa fa-facebook p-2",
-            attrs: { "aria-hidden": "true" }
-          })
-        ]
-      ),
-      _vm._v(" "),
-      _c(
-        "a",
-        { staticClass: "aura-post-social-icon mx-2", attrs: { href: "#" } },
-        [
-          _c("i", {
-            staticClass: "fa fa-twitter p-2",
-            attrs: { "aria-hidden": "true" }
-          })
-        ]
-      ),
-      _vm._v(" "),
-      _c(
-        "a",
-        { staticClass: "aura-post-social-icon mx-2", attrs: { href: "#" } },
-        [
-          _c("i", {
-            staticClass: "fa fa-instagram p-2",
-            attrs: { "aria-hidden": "true" }
-          })
-        ]
-      )
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "mt-4 row p-3 justify-content-center" }, [
-      _c(
-        "a",
-        { staticClass: "aura-post-social-icon mx-2", attrs: { href: "#" } },
-        [
-          _c("i", {
-            staticClass: "fa fa-facebook p-2",
-            attrs: { "aria-hidden": "true" }
-          })
-        ]
-      ),
-      _vm._v(" "),
-      _c(
-        "a",
-        { staticClass: "aura-post-social-icon mx-2", attrs: { href: "#" } },
-        [
-          _c("i", {
-            staticClass: "fa fa-twitter p-2",
-            attrs: { "aria-hidden": "true" }
-          })
-        ]
-      ),
-      _vm._v(" "),
-      _c(
-        "a",
-        { staticClass: "aura-post-social-icon mx-2", attrs: { href: "#" } },
-        [
-          _c("i", {
-            staticClass: "fa fa-instagram p-2",
-            attrs: { "aria-hidden": "true" }
-          })
-        ]
-      )
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
     return _c(
       "div",
       { staticClass: "home-ads-container mt-5 w-50 mx-auto h-100" },
@@ -56108,7 +55875,7 @@ var staticRenderFns = [
           { staticClass: "text-aura", staticStyle: { "font-size": "30px" } },
           [_vm._v("+")]
         ),
-        _vm._v(" MEDIA CORNER\n    ")
+        _vm._v(" MEDIA\n            CORNER\n        ")
       ]
     )
   },
@@ -56125,7 +55892,7 @@ var staticRenderFns = [
           { staticClass: "text-aura", staticStyle: { "font-size": "30px" } },
           [_vm._v("+")]
         ),
-        _vm._v(" AURA RECOMMENDS\n    ")
+        _vm._v(" AURA\n            RECOMMENDS\n        ")
       ]
     )
   }
@@ -65661,6 +65428,17 @@ if (inBrowser && window.Vue) {
 
 !function(t,e){ true?module.exports=e():undefined}("undefined"!=typeof self?self:this,(function(){return function(t){var e={};function n(o){if(e[o])return e[o].exports;var i=e[o]={i:o,l:!1,exports:{}};return t[o].call(i.exports,i,i.exports,n),i.l=!0,i.exports}return n.m=t,n.c=e,n.d=function(t,e,o){n.o(t,e)||Object.defineProperty(t,e,{enumerable:!0,get:o})},n.r=function(t){"undefined"!=typeof Symbol&&Symbol.toStringTag&&Object.defineProperty(t,Symbol.toStringTag,{value:"Module"}),Object.defineProperty(t,"__esModule",{value:!0})},n.t=function(t,e){if(1&e&&(t=n(t)),8&e)return t;if(4&e&&"object"==typeof t&&t&&t.__esModule)return t;var o=Object.create(null);if(n.r(o),Object.defineProperty(o,"default",{enumerable:!0,value:t}),2&e&&"string"!=typeof t)for(var i in t)n.d(o,i,function(e){return t[e]}.bind(null,i));return o},n.n=function(t){var e=t&&t.__esModule?function(){return t.default}:function(){return t};return n.d(e,"a",e),e},n.o=function(t,e){return Object.prototype.hasOwnProperty.call(t,e)},n.p="/",n(n.s=8)}([function(t,e,n){var o=n(4),i=n(5),r=n(6);t.exports=function(t){return o(t)||i(t)||r()}},function(t,e){function n(e){return"function"==typeof Symbol&&"symbol"==typeof Symbol.iterator?t.exports=n=function(t){return typeof t}:t.exports=n=function(t){return t&&"function"==typeof Symbol&&t.constructor===Symbol&&t!==Symbol.prototype?"symbol":typeof t},n(e)}t.exports=n},function(t,e,n){},function(t,e){t.exports=function(t,e,n){return e in t?Object.defineProperty(t,e,{value:n,enumerable:!0,configurable:!0,writable:!0}):t[e]=n,t}},function(t,e){t.exports=function(t){if(Array.isArray(t)){for(var e=0,n=new Array(t.length);e<t.length;e++)n[e]=t[e];return n}}},function(t,e){t.exports=function(t){if(Symbol.iterator in Object(t)||"[object Arguments]"===Object.prototype.toString.call(t))return Array.from(t)}},function(t,e){t.exports=function(){throw new TypeError("Invalid attempt to spread non-iterable instance")}},function(t,e,n){"use strict";var o=n(2);n.n(o).a},function(t,e,n){"use strict";n.r(e);var o=n(0),i=n.n(o),r=n(1),s=n.n(r),a=n(3),l=n.n(a),c={props:{autoscroll:{type:Boolean,default:!0}},watch:{typeAheadPointer:function(){this.autoscroll&&this.maybeAdjustScroll()}},methods:{maybeAdjustScroll:function(){var t,e=(null===(t=this.$refs.dropdownMenu)||void 0===t?void 0:t.children[this.typeAheadPointer])||!1;if(e){var n=this.getDropdownViewport(),o=e.getBoundingClientRect(),i=o.top,r=o.bottom,s=o.height;if(i<n.top)return this.$refs.dropdownMenu.scrollTop=e.offsetTop;if(r>n.bottom)return this.$refs.dropdownMenu.scrollTop=e.offsetTop-(n.height-s)}},getDropdownViewport:function(){return this.$refs.dropdownMenu?this.$refs.dropdownMenu.getBoundingClientRect():{height:0,top:0,bottom:0}}}},u={data:function(){return{typeAheadPointer:-1}},watch:{filteredOptions:function(){for(var t=0;t<this.filteredOptions.length;t++)if(this.selectable(this.filteredOptions[t])){this.typeAheadPointer=t;break}}},methods:{typeAheadUp:function(){for(var t=this.typeAheadPointer-1;t>=0;t--)if(this.selectable(this.filteredOptions[t])){this.typeAheadPointer=t;break}},typeAheadDown:function(){for(var t=this.typeAheadPointer+1;t<this.filteredOptions.length;t++)if(this.selectable(this.filteredOptions[t])){this.typeAheadPointer=t;break}},typeAheadSelect:function(){var t=this.filteredOptions[this.typeAheadPointer];t&&this.select(t)}}},p={props:{loading:{type:Boolean,default:!1}},data:function(){return{mutableLoading:!1}},watch:{search:function(){this.$emit("search",this.search,this.toggleLoading)},loading:function(t){this.mutableLoading=t}},methods:{toggleLoading:function(){var t=arguments.length>0&&void 0!==arguments[0]?arguments[0]:null;return this.mutableLoading=null==t?!this.mutableLoading:t}}};function h(t,e,n,o,i,r,s,a){var l,c="function"==typeof t?t.options:t;if(e&&(c.render=e,c.staticRenderFns=n,c._compiled=!0),o&&(c.functional=!0),r&&(c._scopeId="data-v-"+r),s?(l=function(t){(t=t||this.$vnode&&this.$vnode.ssrContext||this.parent&&this.parent.$vnode&&this.parent.$vnode.ssrContext)||"undefined"==typeof __VUE_SSR_CONTEXT__||(t=__VUE_SSR_CONTEXT__),i&&i.call(this,t),t&&t._registeredComponents&&t._registeredComponents.add(s)},c._ssrRegister=l):i&&(l=a?function(){i.call(this,this.$root.$options.shadowRoot)}:i),l)if(c.functional){c._injectStyles=l;var u=c.render;c.render=function(t,e){return l.call(e),u(t,e)}}else{var p=c.beforeCreate;c.beforeCreate=p?[].concat(p,l):[l]}return{exports:t,options:c}}var d={Deselect:h({},(function(){var t=this.$createElement,e=this._self._c||t;return e("svg",{attrs:{xmlns:"http://www.w3.org/2000/svg",width:"10",height:"10"}},[e("path",{attrs:{d:"M6.895455 5l2.842897-2.842898c.348864-.348863.348864-.914488 0-1.263636L9.106534.261648c-.348864-.348864-.914489-.348864-1.263636 0L5 3.104545 2.157102.261648c-.348863-.348864-.914488-.348864-1.263636 0L.261648.893466c-.348864.348864-.348864.914489 0 1.263636L3.104545 5 .261648 7.842898c-.348864.348863-.348864.914488 0 1.263636l.631818.631818c.348864.348864.914773.348864 1.263636 0L5 6.895455l2.842898 2.842897c.348863.348864.914772.348864 1.263636 0l.631818-.631818c.348864-.348864.348864-.914489 0-1.263636L6.895455 5z"}})])}),[],!1,null,null,null).exports,OpenIndicator:h({},(function(){var t=this.$createElement,e=this._self._c||t;return e("svg",{attrs:{xmlns:"http://www.w3.org/2000/svg",width:"14",height:"10"}},[e("path",{attrs:{d:"M9.211364 7.59931l4.48338-4.867229c.407008-.441854.407008-1.158247 0-1.60046l-.73712-.80023c-.407008-.441854-1.066904-.441854-1.474243 0L7 5.198617 2.51662.33139c-.407008-.441853-1.066904-.441853-1.474243 0l-.737121.80023c-.407008.441854-.407008 1.158248 0 1.600461l4.48338 4.867228L7 10l2.211364-2.40069z"}})])}),[],!1,null,null,null).exports},f={inserted:function(t,e,n){var o=n.context;if(o.appendToBody){var i=o.$refs.toggle.getBoundingClientRect(),r=i.height,s=i.top,a=i.left,l=i.width,c=window.scrollX||window.pageXOffset,u=window.scrollY||window.pageYOffset;t.unbindPosition=o.calculatePosition(t,o,{width:l+"px",left:c+a+"px",top:u+s+r+"px"}),document.body.appendChild(t)}},unbind:function(t,e,n){n.context.appendToBody&&(t.unbindPosition&&"function"==typeof t.unbindPosition&&t.unbindPosition(),t.parentNode&&t.parentNode.removeChild(t))}};var y=function(t){var e={};return Object.keys(t).sort().forEach((function(n){e[n]=t[n]})),JSON.stringify(e)},b=0;var g=function(){return++b};function v(t,e){var n=Object.keys(t);if(Object.getOwnPropertySymbols){var o=Object.getOwnPropertySymbols(t);e&&(o=o.filter((function(e){return Object.getOwnPropertyDescriptor(t,e).enumerable}))),n.push.apply(n,o)}return n}function m(t){for(var e=1;e<arguments.length;e++){var n=null!=arguments[e]?arguments[e]:{};e%2?v(Object(n),!0).forEach((function(e){l()(t,e,n[e])})):Object.getOwnPropertyDescriptors?Object.defineProperties(t,Object.getOwnPropertyDescriptors(n)):v(Object(n)).forEach((function(e){Object.defineProperty(t,e,Object.getOwnPropertyDescriptor(n,e))}))}return t}var _={components:m({},d),mixins:[c,u,p],directives:{appendToBody:f},props:{value:{},components:{type:Object,default:function(){return{}}},options:{type:Array,default:function(){return[]}},disabled:{type:Boolean,default:!1},clearable:{type:Boolean,default:!0},searchable:{type:Boolean,default:!0},multiple:{type:Boolean,default:!1},placeholder:{type:String,default:""},transition:{type:String,default:"vs__fade"},clearSearchOnSelect:{type:Boolean,default:!0},closeOnSelect:{type:Boolean,default:!0},label:{type:String,default:"label"},autocomplete:{type:String,default:"off"},reduce:{type:Function,default:function(t){return t}},selectable:{type:Function,default:function(t){return!0}},getOptionLabel:{type:Function,default:function(t){return"object"===s()(t)?t.hasOwnProperty(this.label)?t[this.label]:console.warn('[vue-select warn]: Label key "option.'.concat(this.label,'" does not')+" exist in options object ".concat(JSON.stringify(t),".\n")+"https://vue-select.org/api/props.html#getoptionlabel"):t}},getOptionKey:{type:Function,default:function(t){if("object"!==s()(t))return t;try{return t.hasOwnProperty("id")?t.id:y(t)}catch(e){return console.warn("[vue-select warn]: Could not stringify this option to generate unique key. Please provide'getOptionKey' prop to return a unique key for each option.\nhttps://vue-select.org/api/props.html#getoptionkey",t,e)}}},onTab:{type:Function,default:function(){this.selectOnTab&&!this.isComposing&&this.typeAheadSelect()}},taggable:{type:Boolean,default:!1},tabindex:{type:Number,default:null},pushTags:{type:Boolean,default:!1},filterable:{type:Boolean,default:!0},filterBy:{type:Function,default:function(t,e,n){return(e||"").toLowerCase().indexOf(n.toLowerCase())>-1}},filter:{type:Function,default:function(t,e){var n=this;return t.filter((function(t){var o=n.getOptionLabel(t);return"number"==typeof o&&(o=o.toString()),n.filterBy(t,o,e)}))}},createOption:{type:Function,default:function(t){return"object"===s()(this.optionList[0])?l()({},this.label,t):t}},resetOnOptionsChange:{default:!1,validator:function(t){return["function","boolean"].includes(s()(t))}},clearSearchOnBlur:{type:Function,default:function(t){var e=t.clearSearchOnSelect,n=t.multiple;return e&&!n}},noDrop:{type:Boolean,default:!1},inputId:{type:String},dir:{type:String,default:"auto"},selectOnTab:{type:Boolean,default:!1},selectOnKeyCodes:{type:Array,default:function(){return[13]}},searchInputQuerySelector:{type:String,default:"[type=search]"},mapKeydown:{type:Function,default:function(t,e){return t}},appendToBody:{type:Boolean,default:!1},calculatePosition:{type:Function,default:function(t,e,n){var o=n.width,i=n.top,r=n.left;t.style.top=i,t.style.left=r,t.style.width=o}}},data:function(){return{uid:g(),search:"",open:!1,isComposing:!1,pushedTags:[],_value:[]}},watch:{options:function(t,e){var n=this;!this.taggable&&("function"==typeof n.resetOnOptionsChange?n.resetOnOptionsChange(t,e,n.selectedValue):n.resetOnOptionsChange)&&this.clearSelection(),this.value&&this.isTrackingValues&&this.setInternalValueFromOptions(this.value)},value:function(t){this.isTrackingValues&&this.setInternalValueFromOptions(t)},multiple:function(){this.clearSelection()},open:function(t){this.$emit(t?"open":"close")}},created:function(){this.mutableLoading=this.loading,void 0!==this.value&&this.isTrackingValues&&this.setInternalValueFromOptions(this.value),this.$on("option:created",this.pushTag)},methods:{setInternalValueFromOptions:function(t){var e=this;Array.isArray(t)?this.$data._value=t.map((function(t){return e.findOptionFromReducedValue(t)})):this.$data._value=this.findOptionFromReducedValue(t)},select:function(t){this.isOptionSelected(t)||(this.taggable&&!this.optionExists(t)&&this.$emit("option:created",t),this.multiple&&(t=this.selectedValue.concat(t)),this.updateValue(t)),this.onAfterSelect(t)},deselect:function(t){var e=this;this.updateValue(this.selectedValue.filter((function(n){return!e.optionComparator(n,t)})))},clearSelection:function(){this.updateValue(this.multiple?[]:null)},onAfterSelect:function(t){this.closeOnSelect&&(this.open=!this.open,this.searchEl.blur()),this.clearSearchOnSelect&&(this.search="")},updateValue:function(t){var e=this;void 0===this.value&&(this.$data._value=t),null!==t&&(t=Array.isArray(t)?t.map((function(t){return e.reduce(t)})):this.reduce(t)),this.$emit("input",t)},toggleDropdown:function(t){var e=t.target!==this.searchEl;e&&t.preventDefault(),[].concat(i()(this.$refs.deselectButtons||[]),i()([this.$refs.clearButton]||false)).some((function(e){return e.contains(t.target)||e===t.target}))?t.preventDefault():this.open&&e?this.searchEl.blur():this.disabled||(this.open=!0,this.searchEl.focus())},isOptionSelected:function(t){var e=this;return this.selectedValue.some((function(n){return e.optionComparator(n,t)}))},optionComparator:function(t,e){return this.getOptionKey(t)===this.getOptionKey(e)},findOptionFromReducedValue:function(t){var e=this,n=[].concat(i()(this.options),i()(this.pushedTags)).filter((function(n){return JSON.stringify(e.reduce(n))===JSON.stringify(t)}));return 1===n.length?n[0]:n.find((function(t){return e.optionComparator(t,e.$data._value)}))||t},closeSearchOptions:function(){this.open=!1,this.$emit("search:blur")},maybeDeleteValue:function(){if(!this.searchEl.value.length&&this.selectedValue&&this.selectedValue.length&&this.clearable){var t=null;this.multiple&&(t=i()(this.selectedValue.slice(0,this.selectedValue.length-1))),this.updateValue(t)}},optionExists:function(t){var e=this;return this.optionList.some((function(n){return e.optionComparator(n,t)}))},normalizeOptionForSlot:function(t){return"object"===s()(t)?t:l()({},this.label,t)},pushTag:function(t){this.pushedTags.push(t)},onEscape:function(){this.search.length?this.search="":this.searchEl.blur()},onSearchBlur:function(){if(!this.mousedown||this.searching){var t=this.clearSearchOnSelect,e=this.multiple;return this.clearSearchOnBlur({clearSearchOnSelect:t,multiple:e})&&(this.search=""),void this.closeSearchOptions()}this.mousedown=!1,0!==this.search.length||0!==this.options.length||this.closeSearchOptions()},onSearchFocus:function(){this.open=!0,this.$emit("search:focus")},onMousedown:function(){this.mousedown=!0},onMouseUp:function(){this.mousedown=!1},onSearchKeyDown:function(t){var e=this,n=function(t){return t.preventDefault(),!e.isComposing&&e.typeAheadSelect()},o={8:function(t){return e.maybeDeleteValue()},9:function(t){return e.onTab()},27:function(t){return e.onEscape()},38:function(t){return t.preventDefault(),e.typeAheadUp()},40:function(t){return t.preventDefault(),e.typeAheadDown()}};this.selectOnKeyCodes.forEach((function(t){return o[t]=n}));var i=this.mapKeydown(o,this);if("function"==typeof i[t.keyCode])return i[t.keyCode](t)}},computed:{isTrackingValues:function(){return void 0===this.value||this.$options.propsData.hasOwnProperty("reduce")},selectedValue:function(){var t=this.value;return this.isTrackingValues&&(t=this.$data._value),t?[].concat(t):[]},optionList:function(){return this.options.concat(this.pushTags?this.pushedTags:[])},searchEl:function(){return this.$scopedSlots.search?this.$refs.selectedOptions.querySelector(this.searchInputQuerySelector):this.$refs.search},scope:function(){var t=this,e={search:this.search,loading:this.loading,searching:this.searching,filteredOptions:this.filteredOptions};return{search:{attributes:m({disabled:this.disabled,placeholder:this.searchPlaceholder,tabindex:this.tabindex,readonly:!this.searchable,id:this.inputId,"aria-autocomplete":"list","aria-labelledby":"vs".concat(this.uid,"__combobox"),"aria-controls":"vs".concat(this.uid,"__listbox"),ref:"search",type:"search",autocomplete:this.autocomplete,value:this.search},this.dropdownOpen&&this.filteredOptions[this.typeAheadPointer]?{"aria-activedescendant":"vs".concat(this.uid,"__option-").concat(this.typeAheadPointer)}:{}),events:{compositionstart:function(){return t.isComposing=!0},compositionend:function(){return t.isComposing=!1},keydown:this.onSearchKeyDown,blur:this.onSearchBlur,focus:this.onSearchFocus,input:function(e){return t.search=e.target.value}}},spinner:{loading:this.mutableLoading},noOptions:{search:this.search,loading:this.loading,searching:this.searching},openIndicator:{attributes:{ref:"openIndicator",role:"presentation",class:"vs__open-indicator"}},listHeader:e,listFooter:e,header:m({},e,{deselect:this.deselect}),footer:m({},e,{deselect:this.deselect})}},childComponents:function(){return m({},d,{},this.components)},stateClasses:function(){return{"vs--open":this.dropdownOpen,"vs--single":!this.multiple,"vs--searching":this.searching&&!this.noDrop,"vs--searchable":this.searchable&&!this.noDrop,"vs--unsearchable":!this.searchable,"vs--loading":this.mutableLoading,"vs--disabled":this.disabled}},searching:function(){return!!this.search},dropdownOpen:function(){return!this.noDrop&&(this.open&&!this.mutableLoading)},searchPlaceholder:function(){if(this.isValueEmpty&&this.placeholder)return this.placeholder},filteredOptions:function(){var t=[].concat(this.optionList);if(!this.filterable&&!this.taggable)return t;var e=this.search.length?this.filter(t,this.search,this):t;if(this.taggable&&this.search.length){var n=this.createOption(this.search);this.optionExists(n)||e.unshift(n)}return e},isValueEmpty:function(){return 0===this.selectedValue.length},showClearButton:function(){return!this.multiple&&this.clearable&&!this.open&&!this.isValueEmpty}}},O=(n(7),h(_,(function(){var t=this,e=t.$createElement,n=t._self._c||e;return n("div",{staticClass:"v-select",class:t.stateClasses,attrs:{dir:t.dir}},[t._t("header",null,null,t.scope.header),t._v(" "),n("div",{ref:"toggle",staticClass:"vs__dropdown-toggle",attrs:{id:"vs"+t.uid+"__combobox",role:"combobox","aria-expanded":t.dropdownOpen.toString(),"aria-owns":"vs"+t.uid+"__listbox","aria-label":"Search for option"},on:{mousedown:function(e){return t.toggleDropdown(e)}}},[n("div",{ref:"selectedOptions",staticClass:"vs__selected-options"},[t._l(t.selectedValue,(function(e){return t._t("selected-option-container",[n("span",{key:t.getOptionKey(e),staticClass:"vs__selected"},[t._t("selected-option",[t._v("\n            "+t._s(t.getOptionLabel(e))+"\n          ")],null,t.normalizeOptionForSlot(e)),t._v(" "),t.multiple?n("button",{ref:"deselectButtons",refInFor:!0,staticClass:"vs__deselect",attrs:{disabled:t.disabled,type:"button",title:"Deselect "+t.getOptionLabel(e),"aria-label":"Deselect "+t.getOptionLabel(e)},on:{click:function(n){return t.deselect(e)}}},[n(t.childComponents.Deselect,{tag:"component"})],1):t._e()],2)],{option:t.normalizeOptionForSlot(e),deselect:t.deselect,multiple:t.multiple,disabled:t.disabled})})),t._v(" "),t._t("search",[n("input",t._g(t._b({staticClass:"vs__search"},"input",t.scope.search.attributes,!1),t.scope.search.events))],null,t.scope.search)],2),t._v(" "),n("div",{ref:"actions",staticClass:"vs__actions"},[n("button",{directives:[{name:"show",rawName:"v-show",value:t.showClearButton,expression:"showClearButton"}],ref:"clearButton",staticClass:"vs__clear",attrs:{disabled:t.disabled,type:"button",title:"Clear Selected","aria-label":"Clear Selected"},on:{click:t.clearSelection}},[n(t.childComponents.Deselect,{tag:"component"})],1),t._v(" "),t._t("open-indicator",[t.noDrop?t._e():n(t.childComponents.OpenIndicator,t._b({tag:"component"},"component",t.scope.openIndicator.attributes,!1))],null,t.scope.openIndicator),t._v(" "),t._t("spinner",[n("div",{directives:[{name:"show",rawName:"v-show",value:t.mutableLoading,expression:"mutableLoading"}],staticClass:"vs__spinner"},[t._v("Loading...")])],null,t.scope.spinner)],2)]),t._v(" "),n("transition",{attrs:{name:t.transition}},[t.dropdownOpen?n("ul",{directives:[{name:"append-to-body",rawName:"v-append-to-body"}],key:"vs"+t.uid+"__listbox",ref:"dropdownMenu",staticClass:"vs__dropdown-menu",attrs:{id:"vs"+t.uid+"__listbox",role:"listbox"},on:{mousedown:function(e){return e.preventDefault(),t.onMousedown(e)},mouseup:t.onMouseUp}},[t._t("list-header",null,null,t.scope.listHeader),t._v(" "),t._l(t.filteredOptions,(function(e,o){return n("li",{key:t.getOptionKey(e),staticClass:"vs__dropdown-option",class:{"vs__dropdown-option--selected":t.isOptionSelected(e),"vs__dropdown-option--highlight":o===t.typeAheadPointer,"vs__dropdown-option--disabled":!t.selectable(e)},attrs:{role:"option",id:"vs"+t.uid+"__option-"+o,"aria-selected":o===t.typeAheadPointer||null},on:{mouseover:function(n){t.selectable(e)&&(t.typeAheadPointer=o)},mousedown:function(n){n.preventDefault(),n.stopPropagation(),t.selectable(e)&&t.select(e)}}},[t._t("option",[t._v("\n          "+t._s(t.getOptionLabel(e))+"\n        ")],null,t.normalizeOptionForSlot(e))],2)})),t._v(" "),0===t.filteredOptions.length?n("li",{staticClass:"vs__no-options"},[t._t("no-options",[t._v("Sorry, no matching options.")],null,t.scope.noOptions)],2):t._e(),t._v(" "),t._t("list-footer",null,null,t.scope.listFooter)],2):n("ul",{staticStyle:{display:"none",visibility:"hidden"},attrs:{id:"vs"+t.uid+"__listbox",role:"listbox"}})]),t._v(" "),t._t("footer",null,null,t.scope.footer)],2)}),[],!1,null,null,null).exports),w={ajax:p,pointer:u,pointerScroll:c};n.d(e,"VueSelect",(function(){return O})),n.d(e,"mixins",(function(){return w}));e.default=O}])}));
 //# sourceMappingURL=vue-select.js.map
+
+/***/ }),
+
+/***/ "./node_modules/vue-social-sharing/dist/vue-social-sharing.js":
+/*!********************************************************************!*\
+  !*** ./node_modules/vue-social-sharing/dist/vue-social-sharing.js ***!
+  \********************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+!function(t,e){ true?module.exports=e():undefined}("undefined"!=typeof self?self:this,(function(){return function(t){var e={};function i(r){if(e[r])return e[r].exports;var o=e[r]={i:r,l:!1,exports:{}};return t[r].call(o.exports,o,o.exports,i),o.l=!0,o.exports}return i.m=t,i.c=e,i.d=function(t,e,r){i.o(t,e)||Object.defineProperty(t,e,{enumerable:!0,get:r})},i.r=function(t){"undefined"!=typeof Symbol&&Symbol.toStringTag&&Object.defineProperty(t,Symbol.toStringTag,{value:"Module"}),Object.defineProperty(t,"__esModule",{value:!0})},i.t=function(t,e){if(1&e&&(t=i(t)),8&e)return t;if(4&e&&"object"==typeof t&&t&&t.__esModule)return t;var r=Object.create(null);if(i.r(r),Object.defineProperty(r,"default",{enumerable:!0,value:t}),2&e&&"string"!=typeof t)for(var o in t)i.d(r,o,function(e){return t[e]}.bind(null,o));return r},i.n=function(t){var e=t&&t.__esModule?function(){return t.default}:function(){return t};return i.d(e,"a",e),e},i.o=function(t,e){return Object.prototype.hasOwnProperty.call(t,e)},i.p="",i(i.s=0)}([function(t,e,i){t.exports=i(1)},function(t,e,i){"use strict";i.r(e),i.d(e,"ShareNetwork",(function(){return n}));var r={baidu:"http://cang.baidu.com/do/add?iu=@u&it=@t",buffer:"https://bufferapp.com/add?text=@t&url=@u",email:"mailto:?subject=@t&body=@u%0D%0A@d",evernote:"https://www.evernote.com/clip.action?url=@u&title=@t",facebook:"https://www.facebook.com/sharer/sharer.php?u=@u&title=@t&description=@d&quote=@q&hashtag=@h",flipboard:"https://share.flipboard.com/bookmarklet/popout?v=2&url=@u&title=@t",hackernews:"https://news.ycombinator.com/submitlink?u=@u&t=@t",instapaper:"http://www.instapaper.com/edit?url=@u&title=@t&description=@d",line:"http://line.me/R/msg/text/?@t%0D%0A@u%0D%0A@d",linkedin:"https://www.linkedin.com/sharing/share-offsite/?url=@u",odnoklassniki:"https://connect.ok.ru/dk?st.cmd=WidgetSharePreview&st.shareUrl=@u&st.comments=@t",pinterest:"https://pinterest.com/pin/create/button/?url=@u&media=@m&description=@t",pocket:"https://getpocket.com/save?url=@u&title=@t",quora:"https://www.quora.com/share?url=@u&title=@t",reddit:"https://www.reddit.com/submit?url=@u&title=@t",skype:"https://web.skype.com/share?url=@t%0D%0A@u%0D%0A@d",sms:"sms:?body=@t%0D%0A@u%0D%0A@d",stumbleupon:"https://www.stumbleupon.com/submit?url=@u&title=@t",telegram:"https://t.me/share/url?url=@u&text=@t%0D%0A@d",tumblr:"https://www.tumblr.com/share/link?url=@u&name=@t&description=@d",twitter:"https://twitter.com/intent/tweet?text=@t&url=@u&hashtags=@h@tu",viber:"viber://forward?text=@t%0D%0A@u%0D%0A@d",vk:"https://vk.com/share.php?url=@u&title=@t&description=@d&image=@m&noparse=true",weibo:"http://service.weibo.com/share/share.php?url=@u&title=@t&pic=@m",whatsapp:"https://api.whatsapp.com/send?text=@t%0D%0A@u%0D%0A@d",wordpress:"https://wordpress.com/press-this.php?u=@u&t=@t&s=@d&i=@m",xing:"https://www.xing.com/social/share/spi?op=share&url=@u&title=@t",yammer:"https://www.yammer.com/messages/new?login=true&status=@t%0D%0A@u%0D%0A@d"},o="undefined"!=typeof window?window:null;var n={name:"ShareNetwork",props:{network:{type:String,required:!0},url:{type:String,required:!0},title:{type:String,required:!0},description:{type:String,default:""},quote:{type:String,default:""},hashtags:{type:String,default:""},twitterUser:{type:String,default:""},media:{type:String,default:""},tag:{type:String,default:"a"},popup:{type:Object,default:function(){return{width:626,height:436}}}},data:function(){return{popupTop:0,popupLeft:0,popupWindow:void 0,popupInterval:null}},computed:{networks:function(){return this.$SocialSharing?this.$SocialSharing.options.networks:r},key:function(){return this.network.toLowerCase()},rawLink:function(){var t=navigator.userAgent.toLowerCase();return"sms"===this.key&&(t.indexOf("iphone")>-1||t.indexOf("ipad")>-1)?this.networks[this.key].replace(":?",":&"):this.networks[this.key]},shareLink:function(){var t=this.rawLink;return"twitter"===this.key&&(this.hashtags.length||(t=t.replace("&hashtags=@h","")),this.twitterUser.length||(t=t.replace("@tu",""))),t.replace(/@tu/g,"&via="+encodeURIComponent(this.twitterUser)).replace(/@u/g,encodeURIComponent(this.url)).replace(/@t/g,encodeURIComponent(this.title)).replace(/@d/g,encodeURIComponent(this.description)).replace(/@q/g,encodeURIComponent(this.quote)).replace(/@h/g,this.encodedHashtags).replace(/@m/g,encodeURIComponent(this.media))},encodedHashtags:function(){return"facebook"===this.key&&this.hashtags.length?"%23"+this.hashtags.split(",")[0]:this.hashtags}},render:function(t){var e=this;if(!this.networks.hasOwnProperty(this.key))throw new Error("Network "+this.key+" does not exist");var i={class:"share-network-"+this.key,on:{click:function(){return e["http"===e.rawLink.substring(0,4)?"share":"touch"]()}}};return"a"===this.tag&&(i.attrs={href:"#"}),t(this.tag,i,this.$slots.default)},methods:{resizePopup:function(){var t=o.innerWidth||document.documentElement.clientWidth||o.screenX,e=o.innerHeight||document.documentElement.clientHeight||o.screenY,i=t/o.screen.availWidth;this.popupLeft=(t-this.popup.width)/2/i+(void 0!==o.screenLeft?o.screenLeft:o.screenX),this.popupTop=(e-this.popup.height)/2/i+(void 0!==o.screenTop?o.screenTop:o.screenY)},share:function(){var t=this;this.resizePopup(),this.popupWindow&&this.popupInterval&&(clearInterval(this.popupInterval),this.popupWindow.close(),this.emit("change")),this.popupWindow=o.open(this.shareLink,"sharer-"+this.key,",height="+this.popup.height+",width="+this.popup.width+",left="+this.popupLeft+",top="+this.popupTop+",screenX="+this.popupLeft+",screenY="+this.popupTop),this.popupWindow&&(this.popupWindow.focus(),this.popupInterval=setInterval((function(){t.popupWindow&&!t.popupWindow.closed||(clearInterval(t.popupInterval),t.popupWindow=null,t.emit("close"))}),500),this.emit("open"))},touch:function(){window.open(this.shareLink,"_blank"),this.emit("open")},emit:function(t){this.$root.$emit("share_network_"+t,this.key,this.url),this.$emit(t,this.key,this.url)}}};e.default={install:function(t,e){t.component(n.name,n),t.prototype.$SocialSharing={options:{networks:e&&e.hasOwnProperty("networks")?Object.assign(r,e.networks):r}}}}}])}));
 
 /***/ }),
 
@@ -81670,8 +81448,8 @@ __webpack_require__.r(__webpack_exports__);
 
 
 var Api = axios__WEBPACK_IMPORTED_MODULE_0___default.a.create({
-  // baseURL: 'http://localhost:8000/api',
-  baseURL: 'https://auramagazine.herokuapp.com/api'
+  baseURL: 'http://localhost:8000/api' //baseURL: 'https://auramagazine.herokuapp.com/api',
+
 }); // Add a request interceptor
 
 Api.interceptors.request.use(function (config) {
@@ -82713,19 +82491,21 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var vue_toast_notification_dist_theme_sugar_css__WEBPACK_IMPORTED_MODULE_9___default = /*#__PURE__*/__webpack_require__.n(vue_toast_notification_dist_theme_sugar_css__WEBPACK_IMPORTED_MODULE_9__);
 /* harmony import */ var vue_select__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! vue-select */ "./node_modules/vue-select/dist/vue-select.js");
 /* harmony import */ var vue_select__WEBPACK_IMPORTED_MODULE_10___default = /*#__PURE__*/__webpack_require__.n(vue_select__WEBPACK_IMPORTED_MODULE_10__);
-/* harmony import */ var _components_Navbar__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./components/Navbar */ "./resources/js/components/Navbar.vue");
-/* harmony import */ var _layout_navbars_navs_Auth__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./layout/navbars/navs/Auth */ "./resources/js/layout/navbars/navs/Auth.vue");
-/* harmony import */ var _layout_navbars_Auth_Sidenav__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./layout/navbars/Auth-Sidenav */ "./resources/js/layout/navbars/Auth-Sidenav.vue");
-/* harmony import */ var _layout_Footer__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./layout/Footer */ "./resources/js/layout/Footer.vue");
-/* harmony import */ var _layout_Admin__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ./layout/Admin */ "./resources/js/layout/Admin.vue");
-/* harmony import */ var _components_ValidationError__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ./components/ValidationError */ "./resources/js/components/ValidationError.vue");
-/* harmony import */ var _components_Modal__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ./components/Modal */ "./resources/js/components/Modal.vue");
-/* harmony import */ var _components_footer__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! ./components/footer */ "./resources/js/components/footer.vue");
-/* harmony import */ var _utils_AuraLoader__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! ./utils/AuraLoader */ "./resources/js/utils/AuraLoader.vue");
-/* harmony import */ var _utils_Loader__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(/*! ./utils/Loader */ "./resources/js/utils/Loader.vue");
-/* harmony import */ var _utils_EmptyResource__WEBPACK_IMPORTED_MODULE_21__ = __webpack_require__(/*! ./utils/EmptyResource */ "./resources/js/utils/EmptyResource.vue");
-/* harmony import */ var _utils_HomeEmptyResource__WEBPACK_IMPORTED_MODULE_22__ = __webpack_require__(/*! ./utils/HomeEmptyResource */ "./resources/js/utils/HomeEmptyResource.vue");
-/* harmony import */ var _helpers_filters__WEBPACK_IMPORTED_MODULE_23__ = __webpack_require__(/*! ./helpers/filters */ "./resources/js/helpers/filters.js");
+/* harmony import */ var vue_social_sharing__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! vue-social-sharing */ "./node_modules/vue-social-sharing/dist/vue-social-sharing.js");
+/* harmony import */ var vue_social_sharing__WEBPACK_IMPORTED_MODULE_11___default = /*#__PURE__*/__webpack_require__.n(vue_social_sharing__WEBPACK_IMPORTED_MODULE_11__);
+/* harmony import */ var _components_Navbar__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./components/Navbar */ "./resources/js/components/Navbar.vue");
+/* harmony import */ var _layout_navbars_navs_Auth__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./layout/navbars/navs/Auth */ "./resources/js/layout/navbars/navs/Auth.vue");
+/* harmony import */ var _layout_navbars_Auth_Sidenav__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./layout/navbars/Auth-Sidenav */ "./resources/js/layout/navbars/Auth-Sidenav.vue");
+/* harmony import */ var _layout_Footer__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ./layout/Footer */ "./resources/js/layout/Footer.vue");
+/* harmony import */ var _layout_Admin__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ./layout/Admin */ "./resources/js/layout/Admin.vue");
+/* harmony import */ var _components_ValidationError__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ./components/ValidationError */ "./resources/js/components/ValidationError.vue");
+/* harmony import */ var _components_Modal__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! ./components/Modal */ "./resources/js/components/Modal.vue");
+/* harmony import */ var _components_footer__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! ./components/footer */ "./resources/js/components/footer.vue");
+/* harmony import */ var _utils_AuraLoader__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(/*! ./utils/AuraLoader */ "./resources/js/utils/AuraLoader.vue");
+/* harmony import */ var _utils_Loader__WEBPACK_IMPORTED_MODULE_21__ = __webpack_require__(/*! ./utils/Loader */ "./resources/js/utils/Loader.vue");
+/* harmony import */ var _utils_EmptyResource__WEBPACK_IMPORTED_MODULE_22__ = __webpack_require__(/*! ./utils/EmptyResource */ "./resources/js/utils/EmptyResource.vue");
+/* harmony import */ var _utils_HomeEmptyResource__WEBPACK_IMPORTED_MODULE_23__ = __webpack_require__(/*! ./utils/HomeEmptyResource */ "./resources/js/utils/HomeEmptyResource.vue");
+/* harmony import */ var _helpers_filters__WEBPACK_IMPORTED_MODULE_24__ = __webpack_require__(/*! ./helpers/filters */ "./resources/js/helpers/filters.js");
 /**
  * First we will load all of this project's JavaScript dependencies which
  * includes Vue and other libraries. It is a great starting point when
@@ -82734,6 +82514,7 @@ __webpack_require__.r(__webpack_exports__);
 __webpack_require__(/*! ./bootstrap */ "./resources/js/bootstrap.js");
 
 window.Vue = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.common.js");
+
 
 
 
@@ -82766,20 +82547,20 @@ window.Vue = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.common.
 
 
 
-Vue.component('navbar', _components_Navbar__WEBPACK_IMPORTED_MODULE_11__["default"]);
-Vue.component('auth-nav', _layout_navbars_navs_Auth__WEBPACK_IMPORTED_MODULE_12__["default"]);
-Vue.component('auth-sidenav', _layout_navbars_Auth_Sidenav__WEBPACK_IMPORTED_MODULE_13__["default"]);
-Vue.component('auth-footer', _layout_Footer__WEBPACK_IMPORTED_MODULE_14__["default"]);
-Vue.component('user-footer', _components_footer__WEBPACK_IMPORTED_MODULE_18__["default"]);
-Vue.component('auth-admin', _layout_Admin__WEBPACK_IMPORTED_MODULE_15__["default"]);
-Vue.component('validation-error', _components_ValidationError__WEBPACK_IMPORTED_MODULE_16__["default"]);
-Vue.component('aura-loader', _utils_AuraLoader__WEBPACK_IMPORTED_MODULE_19__["default"]);
-Vue.component('loader', _utils_Loader__WEBPACK_IMPORTED_MODULE_20__["default"]);
-Vue.component('empty-resource', _utils_EmptyResource__WEBPACK_IMPORTED_MODULE_21__["default"]);
-Vue.component('home-empty-resource', _utils_HomeEmptyResource__WEBPACK_IMPORTED_MODULE_22__["default"]);
+Vue.component('navbar', _components_Navbar__WEBPACK_IMPORTED_MODULE_12__["default"]);
+Vue.component('auth-nav', _layout_navbars_navs_Auth__WEBPACK_IMPORTED_MODULE_13__["default"]);
+Vue.component('auth-sidenav', _layout_navbars_Auth_Sidenav__WEBPACK_IMPORTED_MODULE_14__["default"]);
+Vue.component('auth-footer', _layout_Footer__WEBPACK_IMPORTED_MODULE_15__["default"]);
+Vue.component('user-footer', _components_footer__WEBPACK_IMPORTED_MODULE_19__["default"]);
+Vue.component('auth-admin', _layout_Admin__WEBPACK_IMPORTED_MODULE_16__["default"]);
+Vue.component('validation-error', _components_ValidationError__WEBPACK_IMPORTED_MODULE_17__["default"]);
+Vue.component('aura-loader', _utils_AuraLoader__WEBPACK_IMPORTED_MODULE_20__["default"]);
+Vue.component('loader', _utils_Loader__WEBPACK_IMPORTED_MODULE_21__["default"]);
+Vue.component('empty-resource', _utils_EmptyResource__WEBPACK_IMPORTED_MODULE_22__["default"]);
+Vue.component('home-empty-resource', _utils_HomeEmptyResource__WEBPACK_IMPORTED_MODULE_23__["default"]);
 Vue.component('pagination', __webpack_require__(/*! laravel-vue-pagination */ "./node_modules/laravel-vue-pagination/dist/laravel-vue-pagination.common.js"));
 Vue.component('v-select', vue_select__WEBPACK_IMPORTED_MODULE_10___default.a);
-Vue.component('modal', _components_Modal__WEBPACK_IMPORTED_MODULE_17__["default"]); // const files = require.context('./', true, /\.vue$/i)
+Vue.component('modal', _components_Modal__WEBPACK_IMPORTED_MODULE_18__["default"]); // const files = require.context('./', true, /\.vue$/i)
 // files.keys().map(key => Vue.component(key.split('/').pop().split('.')[0], files(key).default))
 
 nprogress__WEBPACK_IMPORTED_MODULE_5___default.a.configure({
@@ -82787,6 +82568,7 @@ nprogress__WEBPACK_IMPORTED_MODULE_5___default.a.configure({
   speed: 500,
   showSpinner: true
 });
+Vue.use(vue_social_sharing__WEBPACK_IMPORTED_MODULE_11___default.a);
 Vue.use(vue_router__WEBPACK_IMPORTED_MODULE_1__["default"]);
 Vue.use(nprogress__WEBPACK_IMPORTED_MODULE_5___default.a);
 Vue.use(vue_axios__WEBPACK_IMPORTED_MODULE_2___default.a, axios__WEBPACK_IMPORTED_MODULE_3___default.a);
@@ -86147,8 +85929,8 @@ __webpack_require__.r(__webpack_exports__);
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! /Users/mac/Documents/Laravel/Aura-magazine/resources/js/app.js */"./resources/js/app.js");
-module.exports = __webpack_require__(/*! /Users/mac/Documents/Laravel/Aura-magazine/resources/sass/app.scss */"./resources/sass/app.scss");
+__webpack_require__(/*! /Users/mac/Documents/Projects/Laravel/Aura/resources/js/app.js */"./resources/js/app.js");
+module.exports = __webpack_require__(/*! /Users/mac/Documents/Projects/Laravel/Aura/resources/sass/app.scss */"./resources/sass/app.scss");
 
 
 /***/ })

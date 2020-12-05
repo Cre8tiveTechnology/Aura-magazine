@@ -34,12 +34,13 @@
         "vue-axios": "^2.1.5",
         "vue-router": "^3.4.3",
         "vue-select": "^3.10.8",
+        "vue-social-sharing": "^3.0.4",
         "vue-toast-notification": "^0.5.4",
         "vuejs-toggle-switch": "^1.3.2",
         "vuex": "^3.5.1"
     },
     "engines": {
-    "node": "12.x",
-    "npm": "6.x"
-}
+        "node": "12.x",
+        "npm": "6.x"
+    }
 }
