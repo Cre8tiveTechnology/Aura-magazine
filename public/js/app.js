@@ -5373,6 +5373,31 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: "Home",
@@ -10746,6 +10771,37 @@ __webpack_require__.r(__webpack_exports__);
 //
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: "emptyresource"
+});
+
+/***/ }),
+
+/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/utils/HomeEmptyResource.vue?vue&type=script&lang=js&":
+/*!***********************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/utils/HomeEmptyResource.vue?vue&type=script&lang=js& ***!
+  \***********************************************************************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+/* harmony default export */ __webpack_exports__["default"] = ({
+  name: "homeemptyresource"
 });
 
 /***/ }),
@@ -53371,120 +53427,143 @@ var render = function() {
       _vm._m(4),
       _vm._v(" "),
       _c("div", { staticClass: "container-fluid mt-5" }, [
-        _c("div", { staticClass: "container" }, [
-          _vm._m(5),
-          _vm._v(" "),
-          _c("div", { staticClass: "row no-gutters justify-content-center" }, [
-            _c("div", { staticClass: "col-sm-7 col-md-7 col-lg-7 col-xl-7" }, [
-              _c("div", { staticClass: "card mb-3 border-0 rounded-0" }, [
-                _c(
-                  "a",
-                  {
-                    attrs: {
-                      "data-fancybox": "gallery",
-                      href: _vm.newsFirst.image
-                    }
-                  },
-                  [
-                    _c("img", {
-                      staticClass: "card-img-top rounded-0",
-                      attrs: {
-                        src: _vm.newsFirst.image,
-                        alt: _vm.newsFirst.title
-                      }
-                    })
-                  ]
-                ),
-                _vm._v(" "),
-                _c("div", { staticClass: "card-body" }, [
-                  _c(
-                    "h4",
-                    {
-                      staticClass: "card-title font-weight-bold",
-                      staticStyle: { "font-size": "30px" }
-                    },
-                    [
-                      _vm._v(
-                        "\n                                " +
-                          _vm._s(_vm.newsFirst.title) +
-                          "\n                            "
-                      )
-                    ]
-                  ),
-                  _vm._v(" "),
-                  _c("hr", { staticClass: "card-hr" }),
-                  _vm._v(" "),
-                  _c(
-                    "div",
-                    { staticClass: "container mt-5 mb-5 text-center" },
-                    [
-                      _c(
-                        "router-link",
-                        {
-                          staticClass: "see-more",
-                          attrs: { to: "/category/news" }
-                        },
-                        [
-                          _c(
-                            "div",
-                            {
-                              staticClass:
-                                "col-12 row justify-content-center align-items-baseline"
-                            },
-                            [
-                              _c("h5", { staticClass: "mr-2" }, [
-                                _vm._v("SEE MORE")
-                              ]),
-                              _vm._v(" "),
-                              _c("i", {
-                                staticClass:
-                                  "see-more-icon fa fa-chevron-circle-right"
-                              })
-                            ]
-                          )
-                        ]
-                      )
-                    ],
-                    1
-                  )
-                ])
-              ])
-            ]),
+        _c(
+          "div",
+          { staticClass: "container" },
+          [
+            _vm._m(5),
             _vm._v(" "),
-            _c(
-              "div",
-              { staticClass: "col-sm-5 col-md-5 col-lg-5 col-xl-5 px-1" },
-              _vm._l(_vm.news, function(newsVal) {
-                return _c(
-                  "ul",
-                  { key: newsVal.id, staticClass: "list-unstyled m-0" },
+            _vm.news.length === 0
+              ? _c("home-empty-resource")
+              : _c(
+                  "div",
+                  { staticClass: "row no-gutters justify-content-center" },
                   [
-                    _c("li", { staticClass: "media mb-2" }, [
-                      _c("img", {
-                        staticClass: "mr-3 news-side-cards rounded-0",
-                        attrs: {
-                          src: newsVal.image,
-                          alt: "Generic placeholder image"
-                        }
+                    _c(
+                      "div",
+                      { staticClass: "col-sm-7 col-md-7 col-lg-7 col-xl-7" },
+                      [
+                        _c(
+                          "div",
+                          { staticClass: "card mb-3 border-0 rounded-0" },
+                          [
+                            _c(
+                              "a",
+                              {
+                                attrs: {
+                                  "data-fancybox": "gallery",
+                                  href: _vm.newsFirst.image
+                                }
+                              },
+                              [
+                                _c("img", {
+                                  staticClass: "card-img-top rounded-0",
+                                  attrs: {
+                                    src: _vm.newsFirst.image,
+                                    alt: _vm.newsFirst.title
+                                  }
+                                })
+                              ]
+                            ),
+                            _vm._v(" "),
+                            _c("div", { staticClass: "card-body" }, [
+                              _c(
+                                "h4",
+                                {
+                                  staticClass: "card-title font-weight-bold",
+                                  staticStyle: { "font-size": "30px" }
+                                },
+                                [
+                                  _vm._v(
+                                    "\n                                " +
+                                      _vm._s(_vm.newsFirst.title) +
+                                      "\n                            "
+                                  )
+                                ]
+                              ),
+                              _vm._v(" "),
+                              _c("hr", { staticClass: "card-hr" }),
+                              _vm._v(" "),
+                              _c(
+                                "div",
+                                {
+                                  staticClass: "container mt-5 mb-5 text-center"
+                                },
+                                [
+                                  _c(
+                                    "router-link",
+                                    {
+                                      staticClass: "see-more",
+                                      attrs: { to: "/category/news" }
+                                    },
+                                    [
+                                      _c(
+                                        "div",
+                                        {
+                                          staticClass:
+                                            "col-12 row justify-content-center align-items-baseline"
+                                        },
+                                        [
+                                          _c("h5", { staticClass: "mr-2" }, [
+                                            _vm._v("SEE MORE")
+                                          ]),
+                                          _vm._v(" "),
+                                          _c("i", {
+                                            staticClass:
+                                              "see-more-icon fa fa-chevron-circle-right"
+                                          })
+                                        ]
+                                      )
+                                    ]
+                                  )
+                                ],
+                                1
+                              )
+                            ])
+                          ]
+                        )
+                      ]
+                    ),
+                    _vm._v(" "),
+                    _c(
+                      "div",
+                      {
+                        staticClass: "col-sm-5 col-md-5 col-lg-5 col-xl-5 px-1"
+                      },
+                      _vm._l(_vm.news, function(newsVal) {
+                        return _c(
+                          "ul",
+                          { key: newsVal.id, staticClass: "list-unstyled m-0" },
+                          [
+                            _c("li", { staticClass: "media mb-2" }, [
+                              _c("img", {
+                                staticClass: "mr-3 news-side-cards rounded-0",
+                                attrs: {
+                                  src: newsVal.image,
+                                  alt: "Generic placeholder image"
+                                }
+                              }),
+                              _vm._v(" "),
+                              _c("div", { staticClass: "media-body" }, [
+                                _c("h5", [
+                                  _vm._v(
+                                    "\n                                    " +
+                                      _vm._s(newsVal.title) +
+                                      "\n                                "
+                                  )
+                                ])
+                              ])
+                            ])
+                          ]
+                        )
                       }),
-                      _vm._v(" "),
-                      _c("div", { staticClass: "media-body" }, [
-                        _c("h5", [
-                          _vm._v(
-                            "\n                                    " +
-                              _vm._s(newsVal.title) +
-                              "\n                                "
-                          )
-                        ])
-                      ])
-                    ])
+                      0
+                    )
                   ]
                 )
-              }),
-              0
-            )
-          ])
-        ])
+          ],
+          1
+        )
       ]),
       _vm._v(" "),
       _vm._m(6),
@@ -53498,54 +53577,56 @@ var render = function() {
         [
           _vm._m(7),
           _vm._v(" "),
-          _c("div", { staticClass: "card mx-auto border-0" }, [
-            _c(
-              "a",
-              {
-                attrs: {
-                  "data-fancybox": "gallery ",
-                  href: _vm.fashionFirst.image
-                }
-              },
-              [
-                _c("img", {
-                  staticClass: "card-img-top rounded-0",
-                  attrs: {
-                    src: _vm.fashionFirst.image,
-                    alt: _vm.fashionFirst.title,
-                    height: "700px",
-                    width: "auto"
-                  }
-                })
-              ]
-            ),
-            _vm._v(" "),
-            _c(
-              "div",
-              {
-                staticClass: "card-body",
-                staticStyle: { "background-color": "#d8d5d5 !important" }
-              },
-              [
+          _vm.fashionNews.length === 0
+            ? _c("home-empty-resource")
+            : _c("div", { staticClass: "card mx-auto border-0" }, [
                 _c(
-                  "h4",
+                  "a",
                   {
-                    staticClass: "card-title font-weight-bold",
-                    staticStyle: { "font-size": "30px" }
+                    attrs: {
+                      "data-fancybox": "gallery ",
+                      href: _vm.fashionFirst.image
+                    }
                   },
                   [
-                    _vm._v(
-                      "\n                    " +
-                        _vm._s(_vm.fashionFirst.title) +
-                        "\n                "
-                    )
+                    _c("img", {
+                      staticClass: "card-img-top rounded-0",
+                      attrs: {
+                        src: _vm.fashionFirst.image,
+                        alt: _vm.fashionFirst.title,
+                        height: "700px",
+                        width: "auto"
+                      }
+                    })
                   ]
                 ),
                 _vm._v(" "),
-                _c("hr", { staticClass: "card-hr-fashion" })
-              ]
-            )
-          ]),
+                _c(
+                  "div",
+                  {
+                    staticClass: "card-body",
+                    staticStyle: { "background-color": "#d8d5d5 !important" }
+                  },
+                  [
+                    _c(
+                      "h4",
+                      {
+                        staticClass: "card-title font-weight-bold",
+                        staticStyle: { "font-size": "30px" }
+                      },
+                      [
+                        _vm._v(
+                          "\n                    " +
+                            _vm._s(_vm.fashionFirst.title) +
+                            "\n                "
+                        )
+                      ]
+                    ),
+                    _vm._v(" "),
+                    _c("hr", { staticClass: "card-hr-fashion" })
+                  ]
+                )
+              ]),
           _vm._v(" "),
           _c("div", { staticClass: "container" }, [
             _c(
@@ -53630,170 +53711,191 @@ var render = function() {
             ],
             1
           )
-        ]
+        ],
+        1
       ),
       _vm._v(" "),
       _vm._m(8),
       _vm._v(" "),
-      _c("div", { staticClass: "container-fluid mt-5" }, [
-        _vm._m(9),
-        _vm._v(" "),
-        _c("div", { staticClass: "row mb-5" }, [
-          _c(
-            "div",
-            { staticClass: "col-md-6 col-lg-6 col-xl-6 col-sm-6 col-xs-6 p-3" },
-            [
-              _c("h4", { staticClass: "font-weight-bolder pr-3" }, [
-                _vm._v(
-                  "\n                    " +
-                    _vm._s(_vm.beautyFirst.title) +
-                    "\n                "
-                )
-              ]),
-              _vm._v(" "),
-              _c("hr", { staticClass: "card-hr-fashion" }),
-              _vm._v(" "),
-              _c("p", { staticClass: "mt-2" }, [
-                _vm._v(
-                  "\n                    " +
-                    _vm._s(_vm._f("truncate")(_vm.beautyFirst.content, 300)) +
-                    "\n                "
-                )
-              ])
-            ]
-          ),
+      _c(
+        "div",
+        { staticClass: "container-fluid mt-5" },
+        [
+          _vm._m(9),
           _vm._v(" "),
-          _c(
-            "div",
-            {
-              staticClass:
-                "col-md-6 col-lg-6 col-xl-6 col-sm-6 col-xs-6 p-5 aura-bg-dark"
-            },
-            [
-              _c(
-                "a",
-                {
-                  attrs: {
-                    "data-fancybox": "gallery",
-                    href: _vm.beautyFirst.image
-                  }
-                },
-                [
-                  _c("img", {
-                    staticClass: "card-img-top rounded-0",
-                    attrs: {
-                      src: _vm.beautyFirst.image,
-                      alt: _vm.beautyFirst.title
-                    }
-                  })
-                ]
-              )
-            ]
-          )
-        ]),
-        _vm._v(" "),
-        _c("div", { staticClass: "container" }, [
-          _c(
-            "div",
-            {
-              staticClass:
-                "row justify-content-lg-between justify-content-md-around justify-content-sm-center justify-content-center"
-            },
-            [
-              _c(
-                "div",
-                {
-                  staticClass:
-                    "col-12 col-sm-10 col-md-6 col-lg-3 mb-md-3 mb-sm-3"
-                },
-                [
-                  _c("div", { staticClass: "card p-3 shadow-sm" }, [
-                    _c("img", {
-                      staticClass: "card-img-top rounded-0",
-                      attrs: {
-                        src: _vm.beautyFirst.image,
-                        alt: _vm.beautyFirst.title
-                      }
-                    }),
-                    _vm._v(" "),
-                    _c("div", { staticClass: "card-body px-0" }, [
-                      _c("h6", { staticClass: "card-title" }, [
+          _vm.beautyNews.length === 0
+            ? _c("home-empty-resource")
+            : _c("div", [
+                _c("div", { staticClass: "row mb-5" }, [
+                  _c(
+                    "div",
+                    {
+                      staticClass:
+                        "col-md-6 col-lg-6 col-xl-6 col-sm-6 col-xs-6 p-3"
+                    },
+                    [
+                      _c("h4", { staticClass: "font-weight-bolder pr-3" }, [
                         _vm._v(
-                          "\n                                " +
+                          "\n                        " +
                             _vm._s(_vm.beautyFirst.title) +
-                            "\n                            "
+                            "\n                    "
                         )
                       ]),
                       _vm._v(" "),
-                      _c("hr", { staticClass: "card-hr-fashion" })
-                    ])
-                  ])
-                ]
-              ),
-              _vm._v(" "),
-              _vm._l(_vm.beautyNews, function(beauty) {
-                return _c(
-                  "div",
-                  {
-                    key: beauty.id,
-                    staticClass:
-                      "col-12 col-sm-10 col-md-6 col-lg-3 mb-md-3 mb-sm-3"
-                  },
-                  [
-                    _c("div", { staticClass: "card p-3 shadow-sm" }, [
-                      _c("img", {
-                        staticClass: "card-img-top rounded-0",
-                        attrs: { src: beauty.image, alt: beauty.title }
-                      }),
+                      _c("hr", { staticClass: "card-hr-fashion" }),
                       _vm._v(" "),
-                      _c("div", { staticClass: "card-body px-0" }, [
-                        _c("h6", { staticClass: "card-title" }, [
-                          _vm._v(
-                            "\n                                " +
-                              _vm._s(beauty.title) +
-                              "\n                            "
-                          )
-                        ]),
-                        _vm._v(" "),
-                        _c("hr", { staticClass: "card-hr-fashion" })
+                      _c("p", { staticClass: "mt-2" }, [
+                        _vm._v(
+                          "\n                        " +
+                            _vm._s(
+                              _vm._f("truncate")(_vm.beautyFirst.content, 300)
+                            ) +
+                            "\n                    "
+                        )
                       ])
-                    ])
-                  ]
-                )
-              })
-            ],
-            2
-          )
-        ]),
-        _vm._v(" "),
-        _c(
-          "div",
-          { staticClass: "container mt-5 mb-5 text-center" },
-          [
-            _c(
-              "router-link",
-              { staticClass: "see-more", attrs: { to: "/category/beauty" } },
-              [
+                    ]
+                  ),
+                  _vm._v(" "),
+                  _c(
+                    "div",
+                    {
+                      staticClass:
+                        "col-md-6 col-lg-6 col-xl-6 col-sm-6 col-xs-6 p-5 aura-bg-dark"
+                    },
+                    [
+                      _c(
+                        "a",
+                        {
+                          attrs: {
+                            "data-fancybox": "gallery",
+                            href: _vm.beautyFirst.image
+                          }
+                        },
+                        [
+                          _c("img", {
+                            staticClass: "card-img-top rounded-0",
+                            attrs: {
+                              src: _vm.beautyFirst.image,
+                              alt: _vm.beautyFirst.title
+                            }
+                          })
+                        ]
+                      )
+                    ]
+                  )
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "container" }, [
+                  _c(
+                    "div",
+                    {
+                      staticClass:
+                        "row justify-content-lg-between justify-content-md-around justify-content-sm-center justify-content-center"
+                    },
+                    [
+                      _c(
+                        "div",
+                        {
+                          staticClass:
+                            "col-12 col-sm-10 col-md-6 col-lg-3 mb-md-3 mb-sm-3"
+                        },
+                        [
+                          _c("div", { staticClass: "card p-3 shadow-sm" }, [
+                            _c("img", {
+                              staticClass: "card-img-top rounded-0",
+                              attrs: {
+                                src: _vm.beautyFirst.image,
+                                alt: _vm.beautyFirst.title
+                              }
+                            }),
+                            _vm._v(" "),
+                            _c("div", { staticClass: "card-body px-0" }, [
+                              _c("h6", { staticClass: "card-title" }, [
+                                _vm._v(
+                                  "\n                                    " +
+                                    _vm._s(_vm.beautyFirst.title) +
+                                    "\n                                "
+                                )
+                              ]),
+                              _vm._v(" "),
+                              _c("hr", { staticClass: "card-hr-fashion" })
+                            ])
+                          ])
+                        ]
+                      ),
+                      _vm._v(" "),
+                      _vm._l(_vm.beautyNews, function(beauty) {
+                        return _c(
+                          "div",
+                          {
+                            key: beauty.id,
+                            staticClass:
+                              "col-12 col-sm-10 col-md-6 col-lg-3 mb-md-3 mb-sm-3"
+                          },
+                          [
+                            _c("div", { staticClass: "card p-3 shadow-sm" }, [
+                              _c("img", {
+                                staticClass: "card-img-top rounded-0",
+                                attrs: { src: beauty.image, alt: beauty.title }
+                              }),
+                              _vm._v(" "),
+                              _c("div", { staticClass: "card-body px-0" }, [
+                                _c("h6", { staticClass: "card-title" }, [
+                                  _vm._v(
+                                    "\n                                    " +
+                                      _vm._s(beauty.title) +
+                                      "\n                                "
+                                  )
+                                ]),
+                                _vm._v(" "),
+                                _c("hr", { staticClass: "card-hr-fashion" })
+                              ])
+                            ])
+                          ]
+                        )
+                      })
+                    ],
+                    2
+                  )
+                ]),
+                _vm._v(" "),
                 _c(
                   "div",
-                  {
-                    staticClass:
-                      "col-12 row justify-content-center align-items-baseline"
-                  },
+                  { staticClass: "container mt-5 mb-5 text-center" },
                   [
-                    _c("h5", { staticClass: "mr-2" }, [_vm._v("SEE MORE")]),
-                    _vm._v(" "),
-                    _c("i", {
-                      staticClass: "see-more-icon fa fa-chevron-circle-right"
-                    })
-                  ]
+                    _c(
+                      "router-link",
+                      {
+                        staticClass: "see-more",
+                        attrs: { to: "/category/beauty" }
+                      },
+                      [
+                        _c(
+                          "div",
+                          {
+                            staticClass:
+                              "col-12 row justify-content-center align-items-baseline"
+                          },
+                          [
+                            _c("h5", { staticClass: "mr-2" }, [
+                              _vm._v("SEE MORE")
+                            ]),
+                            _vm._v(" "),
+                            _c("i", {
+                              staticClass:
+                                "see-more-icon fa fa-chevron-circle-right"
+                            })
+                          ]
+                        )
+                      ]
+                    )
+                  ],
+                  1
                 )
-              ]
-            )
-          ],
-          1
-        )
-      ]),
+              ])
+        ],
+        1
+      ),
       _vm._v(" "),
       _vm._m(10),
       _vm._v(" "),
@@ -53804,191 +53906,132 @@ var render = function() {
           staticStyle: { "background-color": "#d8d5d5 !important" }
         },
         [
-          _c("div", { staticClass: "container mb-3" }, [
-            _vm._m(11),
-            _vm._v(" "),
-            _c(
-              "div",
-              {
-                staticClass:
-                  "row justify-content-lg-between justify-content-md-around justify-content-sm-center justify-content-center"
-              },
-              _vm._l(_vm.cultureNews, function(culturetopItem) {
-                return _c(
-                  "div",
-                  {
-                    key: culturetopItem.id,
-                    staticClass:
-                      "col-12 col-sm-10 col-md-6 col-lg-3 mb-md-3 mb-sm-3"
-                  },
-                  [
-                    _c("div", { staticClass: "card p-3 shadow-sm" }, [
-                      _c("img", {
-                        staticClass: "card-img-top rounded-0",
-                        attrs: {
-                          src: culturetopItem.image,
-                          alt: culturetopItem.title,
-                          height: "200"
-                        }
-                      }),
-                      _vm._v(" "),
-                      _c("div", { staticClass: "card-body px-0" }, [
-                        _c("h6", { staticClass: "card-title" }, [
-                          _vm._v(
-                            "\n                                " +
-                              _vm._s(
-                                _vm._f("truncate")(culturetopItem.title, 47)
-                              ) +
-                              "\n                            "
-                          )
-                        ]),
-                        _vm._v(" "),
-                        _c("hr", { staticClass: "card-hr-fashion" })
-                      ])
-                    ])
-                  ]
-                )
-              }),
-              0
-            )
-          ]),
+          _vm._m(11),
           _vm._v(" "),
-          _c(
-            "div",
-            { staticClass: "culture-mid-title text-white text-center mb-3" },
-            [
-              _c("h3", { staticClass: "card-title" }, [
-                _vm._v(
-                  "\n                " +
-                    _vm._s(_vm.cultureFirst.title) +
-                    "\n            "
-                )
-              ]),
-              _vm._v(" "),
-              _c("hr", { staticClass: "top-story-hr" }),
-              _vm._v(" "),
-              _c("p", { staticClass: "mt-5" }, [
-                _vm._v(
-                  "\n                " +
-                    _vm._s(_vm._f("truncate")(_vm.cultureFirst.content, 300)) +
-                    "\n            "
-                )
-              ])
-            ]
-          ),
-          _vm._v(" "),
-          _c("div", { staticClass: "container" }, [
-            _c(
-              "div",
-              {
-                staticClass:
-                  "row justify-content-lg-between justify-content-md-around justify-content-sm-center justify-content-center"
-              },
-              _vm._l(_vm.cultureSecondObj, function(culturebottomItem) {
-                return _c(
-                  "div",
-                  {
-                    key: culturebottomItem.id,
-                    staticClass:
-                      "col-12 col-sm-10 col-md-6 col-lg-3 mb-md-3 mb-sm-3"
-                  },
-                  [
-                    _c("div", { staticClass: "card p-3 shadow-sm" }, [
-                      _c("img", {
-                        staticClass: "card-img-top rounded-0",
-                        attrs: {
-                          src: culturebottomItem.image,
-                          alt: culturebottomItem.title,
-                          height: "200"
-                        }
-                      }),
-                      _vm._v(" "),
-                      _c("div", { staticClass: "card-body px-0" }, [
-                        _c("h6", { staticClass: "card-title" }, [
-                          _vm._v(
-                            "\n                                " +
-                              _vm._s(
-                                _vm._f("truncate")(culturebottomItem.title, 41)
-                              ) +
-                              "\n                            "
-                          )
-                        ]),
-                        _vm._v(" "),
-                        _c("hr", { staticClass: "card-hr-fashion" })
-                      ])
-                    ])
-                  ]
-                )
-              }),
-              0
-            ),
-            _vm._v(" "),
-            _c(
-              "div",
-              { staticClass: "container mt-5 mb-5 text-center" },
-              [
+          _vm.cultureNews.length === 0
+            ? _c("home-empty-resource")
+            : _c("div", [
                 _c(
-                  "router-link",
-                  { staticClass: "see-more", attrs: { to: "/category/news" } },
-                  [
-                    _c(
+                  "div",
+                  {
+                    staticClass:
+                      "row justify-content-lg-between justify-content-md-around justify-content-sm-center justify-content-center"
+                  },
+                  _vm._l(_vm.cultureNews, function(culturetopItem) {
+                    return _c(
                       "div",
                       {
+                        key: culturetopItem.id,
                         staticClass:
-                          "col-12 row justify-content-center align-items-baseline"
+                          "col-12 col-sm-10 col-md-6 col-lg-3 mb-md-3 mb-sm-3"
                       },
                       [
-                        _c("h5", { staticClass: "mr-2" }, [_vm._v("SEE MORE")]),
-                        _vm._v(" "),
-                        _c("i", {
-                          staticClass:
-                            "see-more-icon fa fa-chevron-circle-right"
-                        })
+                        _c("div", { staticClass: "card p-3 shadow-sm" }, [
+                          _c("img", {
+                            staticClass: "card-img-top rounded-0",
+                            attrs: {
+                              src: culturetopItem.image,
+                              alt: culturetopItem.title,
+                              height: "200"
+                            }
+                          }),
+                          _vm._v(" "),
+                          _c("div", { staticClass: "card-body px-0" }, [
+                            _c("h6", { staticClass: "card-title" }, [
+                              _vm._v(
+                                "\n                                " +
+                                  _vm._s(
+                                    _vm._f("truncate")(culturetopItem.title, 47)
+                                  ) +
+                                  "\n                            "
+                              )
+                            ]),
+                            _vm._v(" "),
+                            _c("hr", { staticClass: "card-hr-fashion" })
+                          ])
+                        ])
                       ]
                     )
-                  ]
-                )
-              ],
-              1
-            )
-          ])
-        ]
-      ),
-      _vm._v(" "),
-      _c(
-        "div",
-        {
-          staticClass: "container-fluid p-3",
-          staticStyle: { "background-color": "#2a2828 !important" }
-        },
-        [
-          _c("div", { staticClass: "container" }, [
-            _vm._m(12),
-            _vm._v(" "),
-            _c("div", { staticClass: "card mx-auto border-0" }, [
-              _vm._m(13),
-              _vm._v(" "),
-              _c(
-                "div",
-                {
-                  staticClass: "card-body text-center text-white",
-                  staticStyle: { "background-color": "#2a2828 !important" }
-                },
-                [
-                  _c(
-                    "h4",
-                    {
-                      staticClass: "card-title",
-                      staticStyle: { "font-size": "30px" }
-                    },
-                    [
+                  }),
+                  0
+                ),
+                _vm._v(" "),
+                _c(
+                  "div",
+                  {
+                    staticClass: "culture-mid-title text-white text-center mb-3"
+                  },
+                  [
+                    _c("h3", { staticClass: "card-title" }, [
                       _vm._v(
-                        "\n                        Ashley Graham Wants to Cancel Mom-Shaming\n                    "
+                        "\n                    " +
+                          _vm._s(_vm.cultureFirst.title) +
+                          "\n                "
                       )
-                    ]
+                    ]),
+                    _vm._v(" "),
+                    _c("hr", { staticClass: "top-story-hr" }),
+                    _vm._v(" "),
+                    _c("p", { staticClass: "mt-5" }, [
+                      _vm._v(
+                        "\n                    " +
+                          _vm._s(
+                            _vm._f("truncate")(_vm.cultureFirst.content, 300)
+                          ) +
+                          "\n                "
+                      )
+                    ])
+                  ]
+                ),
+                _vm._v(" "),
+                _c("div", { staticClass: "container" }, [
+                  _c(
+                    "div",
+                    {
+                      staticClass:
+                        "row justify-content-lg-between justify-content-md-around justify-content-sm-center justify-content-center"
+                    },
+                    _vm._l(_vm.cultureSecondObj, function(culturebottomItem) {
+                      return _c(
+                        "div",
+                        {
+                          key: culturebottomItem.id,
+                          staticClass:
+                            "col-12 col-sm-10 col-md-6 col-lg-3 mb-md-3 mb-sm-3"
+                        },
+                        [
+                          _c("div", { staticClass: "card p-3 shadow-sm" }, [
+                            _c("img", {
+                              staticClass: "card-img-top rounded-0",
+                              attrs: {
+                                src: culturebottomItem.image,
+                                alt: culturebottomItem.title,
+                                height: "200"
+                              }
+                            }),
+                            _vm._v(" "),
+                            _c("div", { staticClass: "card-body px-0" }, [
+                              _c("h6", { staticClass: "card-title" }, [
+                                _vm._v(
+                                  "\n                                    " +
+                                    _vm._s(
+                                      _vm._f("truncate")(
+                                        culturebottomItem.title,
+                                        41
+                                      )
+                                    ) +
+                                    "\n                                "
+                                )
+                              ]),
+                              _vm._v(" "),
+                              _c("hr", { staticClass: "card-hr-fashion" })
+                            ])
+                          ])
+                        ]
+                      )
+                    }),
+                    0
                   ),
-                  _vm._v(" "),
-                  _c("hr", { staticClass: "card-hr mx-auto" }),
                   _vm._v(" "),
                   _c(
                     "div",
@@ -53998,7 +54041,7 @@ var render = function() {
                         "router-link",
                         {
                           staticClass: "see-more",
-                          attrs: { to: "/category/videos" }
+                          attrs: { to: "/category/news" }
                         },
                         [
                           _c(
@@ -54023,142 +54066,158 @@ var render = function() {
                     ],
                     1
                   )
-                ]
-              )
-            ])
-          ])
-        ]
+                ])
+              ])
+        ],
+        1
       ),
       _vm._v(" "),
-      _vm._m(14),
+      _vm._m(12),
       _vm._v(" "),
-      _vm._m(15),
+      _vm._m(13),
       _vm._v(" "),
       _c("div", { staticClass: "container-fluid mt-5" }, [
-        _c("div", { staticClass: "container" }, [
-          _vm._m(16),
-          _vm._v(" "),
-          _c("div", { staticClass: "row mb-5" }, [
-            _c(
-              "div",
-              {
-                staticClass: "col-md-6 col-lg-6 col-xl-6 col-sm-6 col-xs-6 p-3"
-              },
-              [
-                _c("h4", { staticClass: "font-weight-bolder pr-3" }, [
-                  _vm._v(
-                    "\n                        " +
-                      _vm._s(_vm.lifenLoveFirst.title) +
-                      "\n                    "
-                  )
-                ]),
-                _vm._v(" "),
-                _c("hr", { staticClass: "card-hr-fashion" }),
-                _vm._v(" "),
-                _c("p", { staticClass: "mt-2" }, [
-                  _vm._v(
-                    "\n                        " +
-                      _vm._s(
-                        _vm._f("truncate")(_vm.lifenLoveFirst.content, 300)
-                      ) +
-                      "\n                    "
-                  )
-                ])
-              ]
-            ),
+        _c(
+          "div",
+          { staticClass: "container" },
+          [
+            _vm._m(14),
             _vm._v(" "),
-            _c(
-              "div",
-              {
-                staticClass:
-                  "col-md-6 col-lg-6 col-xl-6 col-sm-6 col-xs-6 p-5 aura-bg-dark"
-              },
-              [
-                _c("img", {
-                  staticClass: "card-img-top rounded-0",
-                  attrs: {
-                    src: _vm.lifenLoveFirst.image,
-                    alt: _vm.lifenLoveFirst.title
-                  }
-                })
-              ]
-            )
-          ]),
-          _vm._v(" "),
-          _c(
-            "div",
-            {
-              staticClass:
-                "row justify-content-lg-between justify-content-md-around justify-content-sm-center justify-content-center"
-            },
-            _vm._l(_vm.lifenLoveNews, function(lifenLoveItem) {
-              return _c(
-                "div",
-                {
-                  key: lifenLoveItem.id,
-                  staticClass:
-                    "col-12 col-sm-10 col-md-6 col-lg-3 mb-md-3 mb-sm-3"
-                },
-                [
-                  _c("div", { staticClass: "card p-3 shadow-sm" }, [
-                    _c("img", {
-                      staticClass: "card-img-top rounded-0",
-                      attrs: {
-                        src: lifenLoveItem.image,
-                        alt: lifenLoveItem.title,
-                        height: "200"
-                      }
-                    }),
+            _vm.lifenLoveNews.length === 0
+              ? _c("home-empty-resource")
+              : _c("div", [
+                  _c("div", { staticClass: "row mb-5" }, [
+                    _c(
+                      "div",
+                      {
+                        staticClass:
+                          "col-md-6 col-lg-6 col-xl-6 col-sm-6 col-xs-6 p-3"
+                      },
+                      [
+                        _c("h4", { staticClass: "font-weight-bolder pr-3" }, [
+                          _vm._v(
+                            "\n                            " +
+                              _vm._s(_vm.lifenLoveFirst.title) +
+                              "\n                        "
+                          )
+                        ]),
+                        _vm._v(" "),
+                        _c("hr", { staticClass: "card-hr-fashion" }),
+                        _vm._v(" "),
+                        _c("p", { staticClass: "mt-2" }, [
+                          _vm._v(
+                            "\n                            " +
+                              _vm._s(
+                                _vm._f("truncate")(
+                                  _vm.lifenLoveFirst.content,
+                                  300
+                                )
+                              ) +
+                              "\n                        "
+                          )
+                        ])
+                      ]
+                    ),
                     _vm._v(" "),
-                    _c("div", { staticClass: "card-body px-0" }, [
-                      _c("h6", { staticClass: "card-title" }, [
-                        _vm._v(
-                          "\n                                " +
-                            _vm._s(lifenLoveItem.title) +
-                            "\n                            "
-                        )
-                      ]),
-                      _vm._v(" "),
-                      _c("hr", { staticClass: "card-hr-fashion" })
-                    ])
-                  ])
-                ]
-              )
-            }),
-            0
-          ),
-          _vm._v(" "),
-          _c(
-            "div",
-            { staticClass: "container mt-5 mb-5 text-center" },
-            [
-              _c(
-                "router-link",
-                { staticClass: "see-more", attrs: { to: "/category/beauty" } },
-                [
+                    _c(
+                      "div",
+                      {
+                        staticClass:
+                          "col-md-6 col-lg-6 col-xl-6 col-sm-6 col-xs-6 p-5 aura-bg-dark"
+                      },
+                      [
+                        _c("img", {
+                          staticClass: "card-img-top rounded-0",
+                          attrs: {
+                            src: _vm.lifenLoveFirst.image,
+                            alt: _vm.lifenLoveFirst.title
+                          }
+                        })
+                      ]
+                    )
+                  ]),
+                  _vm._v(" "),
                   _c(
                     "div",
                     {
                       staticClass:
-                        "col-12 row justify-content-center align-items-baseline"
+                        "row justify-content-lg-between justify-content-md-around justify-content-sm-center justify-content-center"
                     },
+                    _vm._l(_vm.lifenLoveNews, function(lifenLoveItem) {
+                      return _c(
+                        "div",
+                        {
+                          key: lifenLoveItem.id,
+                          staticClass:
+                            "col-12 col-sm-10 col-md-6 col-lg-3 mb-md-3 mb-sm-3"
+                        },
+                        [
+                          _c("div", { staticClass: "card p-3 shadow-sm" }, [
+                            _c("img", {
+                              staticClass: "card-img-top rounded-0",
+                              attrs: {
+                                src: lifenLoveItem.image,
+                                alt: lifenLoveItem.title,
+                                height: "200"
+                              }
+                            }),
+                            _vm._v(" "),
+                            _c("div", { staticClass: "card-body px-0" }, [
+                              _c("h6", { staticClass: "card-title" }, [
+                                _vm._v(
+                                  "\n                                    " +
+                                    _vm._s(lifenLoveItem.title) +
+                                    "\n                                "
+                                )
+                              ]),
+                              _vm._v(" "),
+                              _c("hr", { staticClass: "card-hr-fashion" })
+                            ])
+                          ])
+                        ]
+                      )
+                    }),
+                    0
+                  ),
+                  _vm._v(" "),
+                  _c(
+                    "div",
+                    { staticClass: "container mt-5 mb-5 text-center" },
                     [
-                      _c("h5", { staticClass: "mr-2" }, [_vm._v("SEE MORE")]),
-                      _vm._v(" "),
-                      _c("i", {
-                        staticClass: "see-more-icon fa fa-chevron-circle-right"
-                      })
-                    ]
+                      _c(
+                        "router-link",
+                        {
+                          staticClass: "see-more",
+                          attrs: { to: "/category/beauty" }
+                        },
+                        [
+                          _c(
+                            "div",
+                            {
+                              staticClass:
+                                "col-12 row justify-content-center align-items-baseline"
+                            },
+                            [
+                              _c("h5", { staticClass: "mr-2" }, [
+                                _vm._v("SEE MORE")
+                              ]),
+                              _vm._v(" "),
+                              _c("i", {
+                                staticClass:
+                                  "see-more-icon fa fa-chevron-circle-right"
+                              })
+                            ]
+                          )
+                        ]
+                      )
+                    ],
+                    1
                   )
-                ]
-              )
-            ],
-            1
-          )
-        ])
+                ])
+          ],
+          1
+        )
       ]),
-      _vm._v(" "),
-      _vm._m(17),
       _vm._v(" "),
       _c(
         "div",
@@ -54167,86 +54226,100 @@ var render = function() {
           staticStyle: { "background-color": "#d8d5d5 !important" }
         },
         [
-          _c("div", { staticClass: "container mb-3" }, [
-            _vm._m(18),
-            _vm._v(" "),
-            _c(
-              "div",
-              {
-                staticClass:
-                  "row justify-content-lg-between justify-content-md-around justify-content-sm-center justify-content-center"
-              },
-              _vm._l(_vm.horoscope, function(horoscopeItem) {
-                return _c(
-                  "div",
-                  {
-                    key: horoscopeItem.id,
-                    staticClass:
-                      "col-12 col-sm-10 col-md-6 col-lg-3 mb-md-3 mb-sm-3"
-                  },
-                  [
-                    _c("div", { staticClass: "card p-3 shadow-sm" }, [
-                      _c("img", {
-                        staticClass: "card-img-top rounded-0",
-                        attrs: {
-                          src: horoscopeItem.image,
-                          alt: horoscopeItem.title,
-                          height: "200"
-                        }
-                      }),
-                      _vm._v(" "),
-                      _c("div", { staticClass: "card-body px-0" }, [
-                        _c("h6", { staticClass: "card-title" }, [
-                          _vm._v(
-                            "\n                                " +
-                              _vm._s(
-                                _vm._f("truncate")(horoscopeItem.title, 47)
-                              ) +
-                              "\n                            "
-                          )
-                        ]),
-                        _vm._v(" "),
-                        _c("hr", { staticClass: "card-hr-fashion" })
-                      ])
-                    ])
-                  ]
-                )
-              }),
-              0
-            ),
-            _vm._v(" "),
-            _c(
-              "div",
-              { staticClass: "container mt-5 mb-5 text-center" },
-              [
-                _c(
-                  "router-link",
-                  {
-                    staticClass: "see-more",
-                    attrs: { to: "/category/videos" }
-                  },
-                  [
+          _c(
+            "div",
+            { staticClass: "container mb-3" },
+            [
+              _vm._m(15),
+              _vm._v(" "),
+              _vm.horoscope.length === 0
+                ? _c("home-empty-resource")
+                : _c("div", [
                     _c(
                       "div",
                       {
                         staticClass:
-                          "col-12 row justify-content-center align-items-baseline"
+                          "row justify-content-lg-between justify-content-md-around justify-content-sm-center justify-content-center"
                       },
+                      _vm._l(_vm.horoscope, function(horoscopeItem) {
+                        return _c(
+                          "div",
+                          {
+                            key: horoscopeItem.id,
+                            staticClass:
+                              "col-12 col-sm-10 col-md-6 col-lg-3 mb-md-3 mb-sm-3"
+                          },
+                          [
+                            _c("div", { staticClass: "card p-3 shadow-sm" }, [
+                              _c("img", {
+                                staticClass: "card-img-top rounded-0",
+                                attrs: {
+                                  src: horoscopeItem.image,
+                                  alt: horoscopeItem.title,
+                                  height: "200"
+                                }
+                              }),
+                              _vm._v(" "),
+                              _c("div", { staticClass: "card-body px-0" }, [
+                                _c("h6", { staticClass: "card-title" }, [
+                                  _vm._v(
+                                    "\n                                    " +
+                                      _vm._s(
+                                        _vm._f("truncate")(
+                                          horoscopeItem.title,
+                                          47
+                                        )
+                                      ) +
+                                      "\n                                "
+                                  )
+                                ]),
+                                _vm._v(" "),
+                                _c("hr", { staticClass: "card-hr-fashion" })
+                              ])
+                            ])
+                          ]
+                        )
+                      }),
+                      0
+                    ),
+                    _vm._v(" "),
+                    _c(
+                      "div",
+                      { staticClass: "container mt-5 mb-5 text-center" },
                       [
-                        _c("h5", { staticClass: "mr-2" }, [_vm._v("SEE MORE")]),
-                        _vm._v(" "),
-                        _c("i", {
-                          staticClass:
-                            "see-more-icon fa fa-chevron-circle-right"
-                        })
-                      ]
+                        _c(
+                          "router-link",
+                          {
+                            staticClass: "see-more",
+                            attrs: { to: "/category/videos" }
+                          },
+                          [
+                            _c(
+                              "div",
+                              {
+                                staticClass:
+                                  "col-12 row justify-content-center align-items-baseline"
+                              },
+                              [
+                                _c("h5", { staticClass: "mr-2" }, [
+                                  _vm._v("SEE MORE")
+                                ]),
+                                _vm._v(" "),
+                                _c("i", {
+                                  staticClass:
+                                    "see-more-icon fa fa-chevron-circle-right"
+                                })
+                              ]
+                            )
+                          ]
+                        )
+                      ],
+                      1
                     )
-                  ]
-                )
-              ],
-              1
-            )
-          ])
+                  ])
+            ],
+            1
+          )
         ]
       ),
       _vm._v(" "),
@@ -54835,9 +54908,9 @@ var staticRenderFns = [
     var _c = _vm._self._c || _h
     return _c(
       "div",
-      { staticClass: "container home-ads-container mt-3 mb-3 mx-auto h-100" },
+      { staticClass: "home-ads-container mt-3 mb-3 w-50 mx-auto h-100" },
       [
-        _c("div", { staticClass: "text-center" }, [
+        _c("div", { staticClass: "container text-center" }, [
           _c("p", [_vm._v("ADS BANNER")])
         ])
       ]
@@ -54901,22 +54974,15 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("h5", { staticClass: "news headline-font font-weight-bolder" }, [
-      _c(
-        "span",
-        { staticClass: "text-aura", staticStyle: { "font-size": "30px" } },
-        [_vm._v("+")]
-      ),
-      _vm._v("\n                CULTURE\n            ")
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("h5", { staticClass: "font-weight-bold mt-4 text-white" }, [
-      _vm._v("\n                VIDEOS\n                "),
-      _c("i", { staticClass: "fa fa-play text-aura" })
+    return _c("div", { staticClass: "container mb-3" }, [
+      _c("h5", { staticClass: "news headline-font font-weight-bolder" }, [
+        _c(
+          "span",
+          { staticClass: "text-aura", staticStyle: { "font-size": "30px" } },
+          [_vm._v("+")]
+        ),
+        _vm._v("\n                CULTURE\n            ")
+      ])
     ])
   },
   function() {
@@ -54925,27 +54991,9 @@ var staticRenderFns = [
     var _c = _vm._self._c || _h
     return _c(
       "div",
-      { staticClass: "embed-responsive embed-responsive-16by9" },
+      { staticClass: "home-ads-container mt-5 mb-5 w-50 mx-auto h-100" },
       [
-        _c("iframe", {
-          staticClass: "embed-responsive-item",
-          attrs: {
-            src: "https://www.youtube.com/embed/zpOULjyy-n8?rel=0",
-            allowfullscreen: ""
-          }
-        })
-      ]
-    )
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c(
-      "div",
-      { staticClass: "container home-ads-container mt-3 mb-3 mx-auto h-100" },
-      [
-        _c("div", { staticClass: "text-center" }, [
+        _c("div", { staticClass: "container text-center" }, [
           _c("p", [_vm._v("ADS BANNER")])
         ])
       ]
@@ -55051,20 +55099,6 @@ var staticRenderFns = [
       ),
       _vm._v("\n                LIFE & LOVE\n            ")
     ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c(
-      "div",
-      { staticClass: "container home-ads-container mt-3 mb-3 mx-auto h-100" },
-      [
-        _c("div", { staticClass: "text-center" }, [
-          _c("p", [_vm._v("ADS BANNER")])
-        ])
-      ]
-    )
   },
   function() {
     var _vm = this
@@ -62135,6 +62169,50 @@ var staticRenderFns = [
         _vm._v(" "),
         _c("h5", { staticClass: "text-aura" }, [
           _vm._v("\n            Oops! no data here yet...\n        ")
+        ])
+      ])
+    ])
+  }
+]
+render._withStripped = true
+
+
+
+/***/ }),
+
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/utils/HomeEmptyResource.vue?vue&type=template&id=26bcdad0&":
+/*!***************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/utils/HomeEmptyResource.vue?vue&type=template&id=26bcdad0& ***!
+  \***************************************************************************************************************************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "render", function() { return render; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return staticRenderFns; });
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _vm._m(0)
+}
+var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", [
+      _c("div", { staticClass: "container text-center p-2" }, [
+        _c("img", {
+          staticClass: "no-resource-img mx-auto",
+          attrs: { src: "/image/background/homepage.png", alt: "Card image" }
+        }),
+        _vm._v(" "),
+        _c("h5", { staticClass: "text-aura" }, [
+          _vm._v(
+            "\n            Our editors are working serving on you the best article, please\n            check back...\n        "
+          )
         ])
       ])
     ])
@@ -82645,7 +82723,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _utils_AuraLoader__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! ./utils/AuraLoader */ "./resources/js/utils/AuraLoader.vue");
 /* harmony import */ var _utils_Loader__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(/*! ./utils/Loader */ "./resources/js/utils/Loader.vue");
 /* harmony import */ var _utils_EmptyResource__WEBPACK_IMPORTED_MODULE_21__ = __webpack_require__(/*! ./utils/EmptyResource */ "./resources/js/utils/EmptyResource.vue");
-/* harmony import */ var _helpers_filters__WEBPACK_IMPORTED_MODULE_22__ = __webpack_require__(/*! ./helpers/filters */ "./resources/js/helpers/filters.js");
+/* harmony import */ var _utils_HomeEmptyResource__WEBPACK_IMPORTED_MODULE_22__ = __webpack_require__(/*! ./utils/HomeEmptyResource */ "./resources/js/utils/HomeEmptyResource.vue");
+/* harmony import */ var _helpers_filters__WEBPACK_IMPORTED_MODULE_23__ = __webpack_require__(/*! ./helpers/filters */ "./resources/js/helpers/filters.js");
 /**
  * First we will load all of this project's JavaScript dependencies which
  * includes Vue and other libraries. It is a great starting point when
@@ -82685,6 +82764,7 @@ window.Vue = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.common.
 
 
 
+
 Vue.component('navbar', _components_Navbar__WEBPACK_IMPORTED_MODULE_11__["default"]);
 Vue.component('auth-nav', _layout_navbars_navs_Auth__WEBPACK_IMPORTED_MODULE_12__["default"]);
 Vue.component('auth-sidenav', _layout_navbars_Auth_Sidenav__WEBPACK_IMPORTED_MODULE_13__["default"]);
@@ -82695,6 +82775,7 @@ Vue.component('validation-error', _components_ValidationError__WEBPACK_IMPORTED_
 Vue.component('aura-loader', _utils_AuraLoader__WEBPACK_IMPORTED_MODULE_19__["default"]);
 Vue.component('loader', _utils_Loader__WEBPACK_IMPORTED_MODULE_20__["default"]);
 Vue.component('empty-resource', _utils_EmptyResource__WEBPACK_IMPORTED_MODULE_21__["default"]);
+Vue.component('home-empty-resource', _utils_HomeEmptyResource__WEBPACK_IMPORTED_MODULE_22__["default"]);
 Vue.component('pagination', __webpack_require__(/*! laravel-vue-pagination */ "./node_modules/laravel-vue-pagination/dist/laravel-vue-pagination.common.js"));
 Vue.component('v-select', vue_select__WEBPACK_IMPORTED_MODULE_10___default.a);
 Vue.component('modal', _components_Modal__WEBPACK_IMPORTED_MODULE_17__["default"]); // const files = require.context('./', true, /\.vue$/i)
@@ -85799,6 +85880,75 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_EmptyResource_vue_vue_type_template_id_56b9a3ef___WEBPACK_IMPORTED_MODULE_0__["render"]; });
 
 /* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_EmptyResource_vue_vue_type_template_id_56b9a3ef___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
+
+
+
+/***/ }),
+
+/***/ "./resources/js/utils/HomeEmptyResource.vue":
+/*!**************************************************!*\
+  !*** ./resources/js/utils/HomeEmptyResource.vue ***!
+  \**************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _HomeEmptyResource_vue_vue_type_template_id_26bcdad0___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./HomeEmptyResource.vue?vue&type=template&id=26bcdad0& */ "./resources/js/utils/HomeEmptyResource.vue?vue&type=template&id=26bcdad0&");
+/* harmony import */ var _HomeEmptyResource_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./HomeEmptyResource.vue?vue&type=script&lang=js& */ "./resources/js/utils/HomeEmptyResource.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport *//* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
+
+
+
+
+/* normalize component */
+
+var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
+  _HomeEmptyResource_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _HomeEmptyResource_vue_vue_type_template_id_26bcdad0___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _HomeEmptyResource_vue_vue_type_template_id_26bcdad0___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  false,
+  null,
+  null,
+  null
+  
+)
+
+/* hot reload */
+if (false) { var api; }
+component.options.__file = "resources/js/utils/HomeEmptyResource.vue"
+/* harmony default export */ __webpack_exports__["default"] = (component.exports);
+
+/***/ }),
+
+/***/ "./resources/js/utils/HomeEmptyResource.vue?vue&type=script&lang=js&":
+/*!***************************************************************************!*\
+  !*** ./resources/js/utils/HomeEmptyResource.vue?vue&type=script&lang=js& ***!
+  \***************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_HomeEmptyResource_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/babel-loader/lib??ref--4-0!../../../node_modules/vue-loader/lib??vue-loader-options!./HomeEmptyResource.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/utils/HomeEmptyResource.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_HomeEmptyResource_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+
+/***/ }),
+
+/***/ "./resources/js/utils/HomeEmptyResource.vue?vue&type=template&id=26bcdad0&":
+/*!*********************************************************************************!*\
+  !*** ./resources/js/utils/HomeEmptyResource.vue?vue&type=template&id=26bcdad0& ***!
+  \*********************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_HomeEmptyResource_vue_vue_type_template_id_26bcdad0___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../node_modules/vue-loader/lib??vue-loader-options!./HomeEmptyResource.vue?vue&type=template&id=26bcdad0& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/utils/HomeEmptyResource.vue?vue&type=template&id=26bcdad0&");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_HomeEmptyResource_vue_vue_type_template_id_26bcdad0___WEBPACK_IMPORTED_MODULE_0__["render"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_HomeEmptyResource_vue_vue_type_template_id_26bcdad0___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
 
 
 

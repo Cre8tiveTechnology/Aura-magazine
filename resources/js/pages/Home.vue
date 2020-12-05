@@ -355,8 +355,10 @@
                     <span class="text-aura" style="font-size: 30px">+</span>
                     NEWS
                 </h5>
-                <div class="row no-gutters justify-content-center">
-                    <!-- <div class="col-1"></div> -->
+                <home-empty-resource
+                    v-if="news.length === 0"
+                ></home-empty-resource>
+                <div class="row no-gutters justify-content-center" v-else>
                     <div class="col-sm-7 col-md-7 col-lg-7 col-xl-7">
                         <div class="card mb-3 border-0 rounded-0">
                             <a data-fancybox="gallery" :href="newsFirst.image">
@@ -418,9 +420,9 @@
             </div>
         </div>
 
-        <!--==================== ADS BANNER =====================-->
-        <div class="container home-ads-container mt-3 mb-3 mx-auto h-100">
-            <div class="text-center">
+        <!--==================== ADS BANNER =======================-->
+        <div class="home-ads-container mt-3 mb-3 w-50 mx-auto h-100">
+            <div class="container text-center">
                 <p>ADS BANNER</p>
             </div>
         </div>
@@ -434,8 +436,11 @@
                 <span class="text-aura" style="font-size: 30px">+</span>
                 FASHION
             </h5>
+            <home-empty-resource
+                v-if="fashionNews.length === 0"
+            ></home-empty-resource>
             <!-- =====================FASHION NEWS -I =============================== -->
-            <div class="card mx-auto border-0">
+            <div class="card mx-auto border-0" v-else>
                 <a data-fancybox="gallery " :href="fashionFirst.image">
                     <img
                         :src="fashionFirst.image"
@@ -514,83 +519,93 @@
                 <span class="text-aura" style="font-size: 30px">+</span>
                 BEAUTY
             </h5>
-            <div class="row mb-5">
-                <div class="col-md-6 col-lg-6 col-xl-6 col-sm-6 col-xs-6 p-3">
-                    <h4 class="font-weight-bolder pr-3">
-                        {{ beautyFirst.title }}
-                    </h4>
-                    <hr class="card-hr-fashion" />
+            <home-empty-resource
+                v-if="beautyNews.length === 0"
+            ></home-empty-resource>
 
-                    <p class="mt-2">
-                        {{ beautyFirst.content | truncate(300) }}
-                    </p>
-                </div>
-                <div
-                    class="col-md-6 col-lg-6 col-xl-6 col-sm-6 col-xs-6 p-5 aura-bg-dark"
-                >
-                    <a data-fancybox="gallery" :href="beautyFirst.image">
-                        <img
-                            class="card-img-top rounded-0"
-                            :src="beautyFirst.image"
-                            :alt="beautyFirst.title"
-                        />
-                    </a>
-                </div>
-            </div>
-            <!--================ +BEAUTY  BANNERs =======================-->
-            <div class="container">
-                <div
-                    class="row justify-content-lg-between justify-content-md-around justify-content-sm-center justify-content-center"
-                >
+            <div v-else>
+                <div class="row mb-5">
                     <div
-                        class="col-12 col-sm-10 col-md-6 col-lg-3 mb-md-3 mb-sm-3"
+                        class="col-md-6 col-lg-6 col-xl-6 col-sm-6 col-xs-6 p-3"
                     >
-                        <div class="card p-3 shadow-sm">
+                        <h4 class="font-weight-bolder pr-3">
+                            {{ beautyFirst.title }}
+                        </h4>
+                        <hr class="card-hr-fashion" />
+
+                        <p class="mt-2">
+                            {{ beautyFirst.content | truncate(300) }}
+                        </p>
+                    </div>
+                    <div
+                        class="col-md-6 col-lg-6 col-xl-6 col-sm-6 col-xs-6 p-5 aura-bg-dark"
+                    >
+                        <a data-fancybox="gallery" :href="beautyFirst.image">
                             <img
                                 class="card-img-top rounded-0"
                                 :src="beautyFirst.image"
                                 :alt="beautyFirst.title"
                             />
+                        </a>
+                    </div>
+                </div>
+                <!--================ +BEAUTY  BANNERs =======================-->
+                <div class="container">
+                    <div
+                        class="row justify-content-lg-between justify-content-md-around justify-content-sm-center justify-content-center"
+                    >
+                        <div
+                            class="col-12 col-sm-10 col-md-6 col-lg-3 mb-md-3 mb-sm-3"
+                        >
+                            <div class="card p-3 shadow-sm">
+                                <img
+                                    class="card-img-top rounded-0"
+                                    :src="beautyFirst.image"
+                                    :alt="beautyFirst.title"
+                                />
 
-                            <div class="card-body px-0">
-                                <h6 class="card-title">
-                                    {{ beautyFirst.title }}
-                                </h6>
-                                <hr class="card-hr-fashion" />
+                                <div class="card-body px-0">
+                                    <h6 class="card-title">
+                                        {{ beautyFirst.title }}
+                                    </h6>
+                                    <hr class="card-hr-fashion" />
+                                </div>
                             </div>
                         </div>
-                    </div>
 
-                    <div
-                        class="col-12 col-sm-10 col-md-6 col-lg-3 mb-md-3 mb-sm-3"
-                        v-for="beauty in beautyNews"
-                        :key="beauty.id"
-                    >
-                        <div class="card p-3 shadow-sm">
-                            <img
-                                class="card-img-top rounded-0"
-                                :src="beauty.image"
-                                :alt="beauty.title"
-                            />
-                            <div class="card-body px-0">
-                                <h6 class="card-title">
-                                    {{ beauty.title }}
-                                </h6>
-                                <hr class="card-hr-fashion" />
+                        <div
+                            class="col-12 col-sm-10 col-md-6 col-lg-3 mb-md-3 mb-sm-3"
+                            v-for="beauty in beautyNews"
+                            :key="beauty.id"
+                        >
+                            <div class="card p-3 shadow-sm">
+                                <img
+                                    class="card-img-top rounded-0"
+                                    :src="beauty.image"
+                                    :alt="beauty.title"
+                                />
+                                <div class="card-body px-0">
+                                    <h6 class="card-title">
+                                        {{ beauty.title }}
+                                    </h6>
+                                    <hr class="card-hr-fashion" />
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="container mt-5 mb-5 text-center">
-                <router-link to="/category/beauty" class="see-more">
-                    <div
-                        class="col-12 row justify-content-center align-items-baseline"
-                    >
-                        <h5 class="mr-2">SEE MORE</h5>
-                        <i class="see-more-icon fa fa-chevron-circle-right"></i>
-                    </div>
-                </router-link>
+                <div class="container mt-5 mb-5 text-center">
+                    <router-link to="/category/beauty" class="see-more">
+                        <div
+                            class="col-12 row justify-content-center align-items-baseline"
+                        >
+                            <h5 class="mr-2">SEE MORE</h5>
+                            <i
+                                class="see-more-icon fa fa-chevron-circle-right"
+                            ></i>
+                        </div>
+                    </router-link>
+                </div>
             </div>
         </div>
 
@@ -611,6 +626,11 @@
                     <span class="text-aura" style="font-size: 30px">+</span>
                     CULTURE
                 </h5>
+            </div>
+            <home-empty-resource
+                v-if="cultureNews.length === 0"
+            ></home-empty-resource>
+            <div v-else>
                 <div
                     class="row justify-content-lg-between justify-content-md-around justify-content-sm-center justify-content-center"
                 >
@@ -635,61 +655,63 @@
                         </div>
                     </div>
                 </div>
-            </div>
+                <div class="culture-mid-title text-white text-center mb-3">
+                    <h3 class="card-title">
+                        {{ cultureFirst.title }}
+                    </h3>
+                    <hr class="top-story-hr" />
+                    <p class="mt-5">
+                        {{ cultureFirst.content | truncate(300) }}
+                    </p>
+                </div>
 
-            <div class="culture-mid-title text-white text-center mb-3">
-                <h3 class="card-title">
-                    {{ cultureFirst.title }}
-                </h3>
-                <hr class="top-story-hr" />
-                <p class="mt-5">
-                    {{ cultureFirst.content | truncate(300) }}
-                </p>
-            </div>
-
-            <div class="container">
-                <div
-                    class="row justify-content-lg-between justify-content-md-around justify-content-sm-center justify-content-center"
-                >
+                <div class="container">
                     <div
-                        class="col-12 col-sm-10 col-md-6 col-lg-3 mb-md-3 mb-sm-3"
-                        v-for="culturebottomItem in cultureSecondObj"
-                        :key="culturebottomItem.id"
+                        class="row justify-content-lg-between justify-content-md-around justify-content-sm-center justify-content-center"
                     >
-                        <div class="card p-3 shadow-sm">
-                            <img
-                                class="card-img-top rounded-0"
-                                :src="culturebottomItem.image"
-                                :alt="culturebottomItem.title"
-                                height="200"
-                            />
-                            <div class="card-body px-0">
-                                <h6 class="card-title">
-                                    {{ culturebottomItem.title | truncate(41) }}
-                                </h6>
-                                <hr class="card-hr-fashion" />
+                        <div
+                            class="col-12 col-sm-10 col-md-6 col-lg-3 mb-md-3 mb-sm-3"
+                            v-for="culturebottomItem in cultureSecondObj"
+                            :key="culturebottomItem.id"
+                        >
+                            <div class="card p-3 shadow-sm">
+                                <img
+                                    class="card-img-top rounded-0"
+                                    :src="culturebottomItem.image"
+                                    :alt="culturebottomItem.title"
+                                    height="200"
+                                />
+                                <div class="card-body px-0">
+                                    <h6 class="card-title">
+                                        {{
+                                            culturebottomItem.title
+                                                | truncate(41)
+                                        }}
+                                    </h6>
+                                    <hr class="card-hr-fashion" />
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
 
-                <div class="container mt-5 mb-5 text-center">
-                    <router-link to="/category/news" class="see-more">
-                        <div
-                            class="col-12 row justify-content-center align-items-baseline"
-                        >
-                            <h5 class="mr-2">SEE MORE</h5>
-                            <i
-                                class="see-more-icon fa fa-chevron-circle-right"
-                            ></i>
-                        </div>
-                    </router-link>
+                    <div class="container mt-5 mb-5 text-center">
+                        <router-link to="/category/news" class="see-more">
+                            <div
+                                class="col-12 row justify-content-center align-items-baseline"
+                            >
+                                <h5 class="mr-2">SEE MORE</h5>
+                                <i
+                                    class="see-more-icon fa fa-chevron-circle-right"
+                                ></i>
+                            </div>
+                        </router-link>
+                    </div>
                 </div>
             </div>
         </div>
 
         <!--====================== + VIDEOS =======================-->
-        <div
+        <!-- <div
             class="container-fluid p-3"
             style="background-color: #2a2828 !important"
         >
@@ -729,15 +751,14 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </div> -->
 
-        <!--==================== ADS BANNER =====================-->
-        <div class="container home-ads-container mt-3 mb-3 mx-auto h-100">
-            <div class="text-center">
+        <!--====================== ADS BANNER =======================-->
+        <div class="home-ads-container mt-5 mb-5 w-50 mx-auto h-100">
+            <div class="container text-center">
                 <p>ADS BANNER</p>
             </div>
         </div>
-
         <!--================ MAGAZINE BANNER =======================-->
         <div class="container-fluid mt-5">
             <div class="container mx-auto">
@@ -792,75 +813,73 @@
                     <span class="text-aura" style="font-size: 30px">+</span>
                     LIFE & LOVE
                 </h5>
-                <div class="row mb-5">
-                    <div
-                        class="col-md-6 col-lg-6 col-xl-6 col-sm-6 col-xs-6 p-3"
-                    >
-                        <h4 class="font-weight-bolder pr-3">
-                            {{ lifenLoveFirst.title }}
-                        </h4>
-                        <hr class="card-hr-fashion" />
+                <home-empty-resource
+                    v-if="lifenLoveNews.length === 0"
+                ></home-empty-resource>
+                <div v-else>
+                    <div class="row mb-5">
+                        <div
+                            class="col-md-6 col-lg-6 col-xl-6 col-sm-6 col-xs-6 p-3"
+                        >
+                            <h4 class="font-weight-bolder pr-3">
+                                {{ lifenLoveFirst.title }}
+                            </h4>
+                            <hr class="card-hr-fashion" />
 
-                        <p class="mt-2">
-                            {{ lifenLoveFirst.content | truncate(300) }}
-                        </p>
-                    </div>
-                    <div
-                        class="col-md-6 col-lg-6 col-xl-6 col-sm-6 col-xs-6 p-5 aura-bg-dark"
-                    >
-                        <img
-                            class="card-img-top rounded-0"
-                            :src="lifenLoveFirst.image"
-                            :alt="lifenLoveFirst.title"
-                        />
-                    </div>
-                </div>
-                <!--================ + Life and Love  BANNERs =======================-->
-
-                <div
-                    class="row justify-content-lg-between justify-content-md-around justify-content-sm-center justify-content-center"
-                >
-                    <div
-                        class="col-12 col-sm-10 col-md-6 col-lg-3 mb-md-3 mb-sm-3"
-                        v-for="lifenLoveItem in lifenLoveNews"
-                        :key="lifenLoveItem.id"
-                    >
-                        <div class="card p-3 shadow-sm">
+                            <p class="mt-2">
+                                {{ lifenLoveFirst.content | truncate(300) }}
+                            </p>
+                        </div>
+                        <div
+                            class="col-md-6 col-lg-6 col-xl-6 col-sm-6 col-xs-6 p-5 aura-bg-dark"
+                        >
                             <img
                                 class="card-img-top rounded-0"
-                                :src="lifenLoveItem.image"
-                                :alt="lifenLoveItem.title"
-                                height="200"
+                                :src="lifenLoveFirst.image"
+                                :alt="lifenLoveFirst.title"
                             />
-                            <div class="card-body px-0">
-                                <h6 class="card-title">
-                                    {{ lifenLoveItem.title }}
-                                </h6>
-                                <hr class="card-hr-fashion" />
+                        </div>
+                    </div>
+                    <!--================ + Life and Love  BANNERs =======================-->
+
+                    <div
+                        class="row justify-content-lg-between justify-content-md-around justify-content-sm-center justify-content-center"
+                    >
+                        <div
+                            class="col-12 col-sm-10 col-md-6 col-lg-3 mb-md-3 mb-sm-3"
+                            v-for="lifenLoveItem in lifenLoveNews"
+                            :key="lifenLoveItem.id"
+                        >
+                            <div class="card p-3 shadow-sm">
+                                <img
+                                    class="card-img-top rounded-0"
+                                    :src="lifenLoveItem.image"
+                                    :alt="lifenLoveItem.title"
+                                    height="200"
+                                />
+                                <div class="card-body px-0">
+                                    <h6 class="card-title">
+                                        {{ lifenLoveItem.title }}
+                                    </h6>
+                                    <hr class="card-hr-fashion" />
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
 
-                <div class="container mt-5 mb-5 text-center">
-                    <router-link to="/category/beauty" class="see-more">
-                        <div
-                            class="col-12 row justify-content-center align-items-baseline"
-                        >
-                            <h5 class="mr-2">SEE MORE</h5>
-                            <i
-                                class="see-more-icon fa fa-chevron-circle-right"
-                            ></i>
-                        </div>
-                    </router-link>
+                    <div class="container mt-5 mb-5 text-center">
+                        <router-link to="/category/beauty" class="see-more">
+                            <div
+                                class="col-12 row justify-content-center align-items-baseline"
+                            >
+                                <h5 class="mr-2">SEE MORE</h5>
+                                <i
+                                    class="see-more-icon fa fa-chevron-circle-right"
+                                ></i>
+                            </div>
+                        </router-link>
+                    </div>
                 </div>
-            </div>
-        </div>
-
-        <!--==================== ADS BANNER =====================-->
-        <div class="container home-ads-container mt-3 mb-3 mx-auto h-100">
-            <div class="text-center">
-                <p>ADS BANNER</p>
             </div>
         </div>
 
@@ -874,41 +893,47 @@
                     <span class="text-aura" style="font-size: 30px">+</span>
                     HOROSCOPE
                 </h5>
-                <div
-                    class="row justify-content-lg-between justify-content-md-around justify-content-sm-center justify-content-center"
-                >
+                <home-empty-resource
+                    v-if="horoscope.length === 0"
+                ></home-empty-resource>
+
+                <div v-else>
                     <div
-                        class="col-12 col-sm-10 col-md-6 col-lg-3 mb-md-3 mb-sm-3"
-                        v-for="horoscopeItem in horoscope"
-                        :key="horoscopeItem.id"
+                        class="row justify-content-lg-between justify-content-md-around justify-content-sm-center justify-content-center"
                     >
-                        <div class="card p-3 shadow-sm">
-                            <img
-                                class="card-img-top rounded-0"
-                                :src="horoscopeItem.image"
-                                :alt="horoscopeItem.title"
-                                height="200"
-                            />
-                            <div class="card-body px-0">
-                                <h6 class="card-title">
-                                    {{ horoscopeItem.title | truncate(47) }}
-                                </h6>
-                                <hr class="card-hr-fashion" />
+                        <div
+                            class="col-12 col-sm-10 col-md-6 col-lg-3 mb-md-3 mb-sm-3"
+                            v-for="horoscopeItem in horoscope"
+                            :key="horoscopeItem.id"
+                        >
+                            <div class="card p-3 shadow-sm">
+                                <img
+                                    class="card-img-top rounded-0"
+                                    :src="horoscopeItem.image"
+                                    :alt="horoscopeItem.title"
+                                    height="200"
+                                />
+                                <div class="card-body px-0">
+                                    <h6 class="card-title">
+                                        {{ horoscopeItem.title | truncate(47) }}
+                                    </h6>
+                                    <hr class="card-hr-fashion" />
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="container mt-5 mb-5 text-center">
-                    <router-link to="/category/videos" class="see-more">
-                        <div
-                            class="col-12 row justify-content-center align-items-baseline"
-                        >
-                            <h5 class="mr-2">SEE MORE</h5>
-                            <i
-                                class="see-more-icon fa fa-chevron-circle-right"
-                            ></i>
-                        </div>
-                    </router-link>
+                    <div class="container mt-5 mb-5 text-center">
+                        <router-link to="/category/videos" class="see-more">
+                            <div
+                                class="col-12 row justify-content-center align-items-baseline"
+                            >
+                                <h5 class="mr-2">SEE MORE</h5>
+                                <i
+                                    class="see-more-icon fa fa-chevron-circle-right"
+                                ></i>
+                            </div>
+                        </router-link>
+                    </div>
                 </div>
             </div>
         </div>
