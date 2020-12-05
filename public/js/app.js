@@ -82841,7 +82841,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 var Api = axios__WEBPACK_IMPORTED_MODULE_0___default.a.create({
-  // baseURL: 'http://localhost:8000/api',
+  //   baseURL: 'http://localhost:8000/api',
   baseURL: 'https://auramagazine.herokuapp.com/api'
 }); // Add a request interceptor
 

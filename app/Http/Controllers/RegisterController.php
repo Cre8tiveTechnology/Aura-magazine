@@ -21,7 +21,7 @@ class RegisterController extends Controller
         $validator = Validator::make($request->all(), [
             'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
             'password' => ['required', 'string', 'min:8'],
-            'role_id' => ['required', 'exists:App\Models\Roles,id'],
+            'role_id' => ['required', 'exists:roles,id'],
             'name' => ['required', 'string', 'min:10'],
         ]);
 
