@@ -6667,29 +6667,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: "privacy-policy"
 });
@@ -56870,71 +56847,11 @@ var render = function() {
   var _c = _vm._self._c || _h
   return _c(
     "div",
-    [
-      _c("navbar", { attrs: { current: "CULTURE" } }),
-      _vm._v(" "),
-      _vm._m(0),
-      _vm._v(" "),
-      _vm._m(1),
-      _vm._v(" "),
-      _vm._m(2)
-    ],
+    [_c("navbar", { attrs: { current: "CULTURE" } }), _vm._v(" "), _vm._m(0)],
     1
   )
 }
 var staticRenderFns = [
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c(
-      "div",
-      {
-        staticClass: "container-fluid p-0 d-none d-sm-block",
-        staticStyle: { position: "relative" }
-      },
-      [
-        _c("img", {
-          staticClass: "col-12 p-0 img-fluid rounded-0",
-          attrs: {
-            src:
-              "https://res.cloudinary.com/aura-magazine/image/upload/v1605189797/backgrounds/web/Culture_iht7ks.jpg",
-            alt: "Privacy Cover"
-          }
-        }),
-        _vm._v(" "),
-        _c("div", { staticClass: "bottom-left text-white" }, [
-          _vm._v("Privacy Policy")
-        ])
-      ]
-    )
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c(
-      "div",
-      {
-        staticClass: "container-fluid p-0 d-sm-none",
-        staticStyle: { position: "relative" }
-      },
-      [
-        _c("img", {
-          staticClass: "col-12 p-0 img-fluid rounded-0",
-          attrs: {
-            src:
-              "https://res.cloudinary.com/aura-magazine/image/upload/v1605190118/backgrounds/mobile/culture_qbwdcm.jpg",
-            alt: "Privacy Cover"
-          }
-        }),
-        _vm._v(" "),
-        _c("div", { staticClass: "bottom-left text-white" }, [
-          _vm._v("Privacy Policy")
-        ])
-      ]
-    )
-  },
   function() {
     var _vm = this
     var _h = _vm.$createElement
