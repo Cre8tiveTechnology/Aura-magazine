@@ -90,7 +90,7 @@
 
         <router-link class="navbar-brand" to="/">
           <img
-            class="ml-3 m-lg-0"
+            class="ml-2 m-lg-0"
             src="https://res.cloudinary.com/aura-magazine/image/upload/v1605190201/backgrounds/footer/AURA_LOGO_BLACK_FOR_HEADER_zwujbp.png"
             height="28"
         /></router-link>
@@ -220,7 +220,7 @@
         </div>
 
         <div class="ml-auto">
-          <router-link class="mr-3" to="#"
+          <router-link class="mr-2" to="#"
             ><span class="badge badge-pill badge-light py-2 px-3 shadow-sm"
               >SUBSCRIBE</span
             ></router-link

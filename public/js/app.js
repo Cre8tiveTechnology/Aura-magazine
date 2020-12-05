@@ -11353,6 +11353,8 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: "homeemptyresource"
 });
@@ -16198,7 +16200,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, "\n.img[data-v-26bcdad0] {\n  background: url(\"/image/background/homepage.png\");\n  width: 100%;\n  height: 25em;\n}\n.opacity[data-v-26bcdad0] {\n  background: rgba(0, 0, 0, 0.4);\n  border-radius: 1rem;\n}\n", ""]);
+exports.push([module.i, "\n.img[data-v-26bcdad0] {\n  background: url(\"/image/background/homepage.png\");\n  background-position: center;\n  width: 100%;\n  height: 25em;\n}\n.opacity[data-v-26bcdad0] {\n  background: rgba(0, 0, 0, 0.4);\n  border-radius: 1rem;\n}\n", ""]);
 
 // exports
 
@@ -50573,7 +50575,7 @@ var render = function() {
               { staticClass: "navbar-brand", attrs: { to: "/" } },
               [
                 _c("img", {
-                  staticClass: "ml-3 m-lg-0",
+                  staticClass: "ml-2 m-lg-0",
                   attrs: {
                     src:
                       "https://res.cloudinary.com/aura-magazine/image/upload/v1605190201/backgrounds/footer/AURA_LOGO_BLACK_FOR_HEADER_zwujbp.png",
@@ -50826,7 +50828,7 @@ var render = function() {
               "div",
               { staticClass: "ml-auto" },
               [
-                _c("router-link", { staticClass: "mr-3", attrs: { to: "#" } }, [
+                _c("router-link", { staticClass: "mr-2", attrs: { to: "#" } }, [
                   _c(
                     "span",
                     {
@@ -63439,7 +63441,7 @@ var staticRenderFns = [
               "div",
               {
                 staticClass:
-                  "col-lg-6 col-md-6 col-sm-12 col-12 opacity py-5 px-3"
+                  "col-lg-6 col-md-6 col-sm-12 col-12 opacity py-3 px-3 mt-lg-0 mt-md-0 mt-3"
               },
               [
                 _c("h5", { staticClass: "text-white" }, [
