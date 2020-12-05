@@ -4,30 +4,7 @@
         <navbar :current="'CULTURE'" />
         <!-- Navbar -->
 
-        <!-- COVER IMAGE BOG -->
-        <div
-            class="container-fluid p-0 d-none d-sm-block"
-            style="position: relative"
-        >
-            <img
-                src="https://res.cloudinary.com/aura-magazine/image/upload/v1605189797/backgrounds/web/Culture_iht7ks.jpg"
-                class="col-12 p-0 img-fluid rounded-0"
-                alt="Privacy Cover"
-            />
-            <div class="bottom-left text-white">Privacy Policy</div>
-        </div>
-        <!-- COVER IMAGE -->
 
-        <!-- COVER IMAGE SMALL-->
-        <div class="container-fluid p-0 d-sm-none" style="position: relative">
-            <img
-                src="https://res.cloudinary.com/aura-magazine/image/upload/v1605190118/backgrounds/mobile/culture_qbwdcm.jpg"
-                class="col-12 p-0 img-fluid rounded-0"
-                alt="Privacy Cover"
-            />
-            <div class="bottom-left text-white">Privacy Policy</div>
-        </div>
-        <!-- COVER IMAGE -->
         <div class="container sp-mt-7">
             <div class="col-12 col-lg-8 col-md-8 col-sm-12">
                 <h1 class="text-bold text-dark">Introducing</h1>

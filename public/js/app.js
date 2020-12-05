@@ -6623,29 +6623,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: "privacy-policy"
 });
@@ -56888,68 +56865,12 @@ var render = function() {
       _vm._v(" "),
       _vm._m(0),
       _vm._v(" "),
-      _vm._m(1),
-      _vm._v(" "),
-      _vm._m(2),
-      _vm._v(" "),
       _c("user-footer")
     ],
     1
   )
 }
 var staticRenderFns = [
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c(
-      "div",
-      {
-        staticClass: "container-fluid p-0 d-none d-sm-block",
-        staticStyle: { position: "relative" }
-      },
-      [
-        _c("img", {
-          staticClass: "col-12 p-0 img-fluid rounded-0",
-          attrs: {
-            src:
-              "https://res.cloudinary.com/aura-magazine/image/upload/v1605189797/backgrounds/web/Culture_iht7ks.jpg",
-            alt: "Privacy Cover"
-          }
-        }),
-        _vm._v(" "),
-        _c("div", { staticClass: "bottom-left text-white" }, [
-          _vm._v("Privacy Policy")
-        ])
-      ]
-    )
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c(
-      "div",
-      {
-        staticClass: "container-fluid p-0 d-sm-none",
-        staticStyle: { position: "relative" }
-      },
-      [
-        _c("img", {
-          staticClass: "col-12 p-0 img-fluid rounded-0",
-          attrs: {
-            src:
-              "https://res.cloudinary.com/aura-magazine/image/upload/v1605190118/backgrounds/mobile/culture_qbwdcm.jpg",
-            alt: "Privacy Cover"
-          }
-        }),
-        _vm._v(" "),
-        _c("div", { staticClass: "bottom-left text-white" }, [
-          _vm._v("Privacy Policy")
-        ])
-      ]
-    )
-  },
   function() {
     var _vm = this
     var _h = _vm.$createElement
@@ -87515,8 +87436,8 @@ __webpack_require__.r(__webpack_exports__);
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! /Users/mac/Documents/Laravel/Aura-magazine/resources/js/app.js */"./resources/js/app.js");
-module.exports = __webpack_require__(/*! /Users/mac/Documents/Laravel/Aura-magazine/resources/sass/app.scss */"./resources/sass/app.scss");
+__webpack_require__(/*! /Users/mac/Documents/Projects/Laravel/Aura/resources/js/app.js */"./resources/js/app.js");
+module.exports = __webpack_require__(/*! /Users/mac/Documents/Projects/Laravel/Aura/resources/sass/app.scss */"./resources/sass/app.scss");
 
 
 /***/ })
