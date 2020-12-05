@@ -10,6 +10,7 @@ import AskRuby from './pages/AskRuby.vue'
 import AuthorArticles from './pages/AuthorArticles.vue'
 import SexAndRelationship from './pages/SexAndRelationship.vue'
 import Magazine from './pages/Magazine.vue'
+import PrivacyPolicy from './pages/PrivacyPolicy.vue'
 import Post from './pages/Post.vue'
 import Shop from './pages/Shop.vue'
 import Login from './pages/auth/Login.vue'
@@ -33,271 +34,279 @@ import Adverts from './pages/admin/adverts/Adverts.vue'
 import CreateAdvert from './pages/admin/adverts/CreateAdvert.vue'
 
 export const routes = [
-  {
-    name: 'home',
-    path: '/',
-    component: Home,
-    meta: {
-      showProgressBar: true,
+    {
+        name: 'home',
+        path: '/',
+        component: Home,
+        meta: {
+            showProgressBar: true,
+        },
     },
-  },
 
-  {
-    name: 'login',
-    path: '/login',
-    component: Login,
-    meta: {
-      guestOnly: true,
-      showProgressBar: true,
+    {
+        name: 'login',
+        path: '/login',
+        component: Login,
+        meta: {
+            guestOnly: true,
+            showProgressBar: true,
+        },
     },
-  },
 
-  {
-    name: 'admin-register',
-    path: '/admin/register',
-    component: AdminRegister,
-    meta: {
-      guestOnly: true,
-      showProgressBar: true,
+    {
+        name: 'admin-register',
+        path: '/admin/register',
+        component: AdminRegister,
+        meta: {
+            guestOnly: true,
+            showProgressBar: true,
+        },
     },
-  },
 
-  {
-    name: 'shop',
-    path: '/shop',
-    component: Shop,
-    meta: {
-      showProgressBar: true,
+    {
+        name: 'shop',
+        path: '/shop',
+        component: Shop,
+        meta: {
+            showProgressBar: true,
+        },
     },
-  },
+    {
+        name: 'privacypolicy',
+        path: '/privacy-policy',
+        component: PrivacyPolicy,
+        meta: {
+            showProgressBar: true,
+        },
+    },
 
-  {
-    name: 'news',
-    path: '/category/news',
-    component: News,
-    meta: {
-      showProgressBar: true,
+    {
+        name: 'news',
+        path: '/category/news',
+        component: News,
+        meta: {
+            showProgressBar: true,
+        },
     },
-  },
 
-  {
-    name: 'beauty',
-    path: '/category/beauty',
-    component: Beauty,
-    meta: {
-      showProgressBar: true,
+    {
+        name: 'beauty',
+        path: '/category/beauty',
+        component: Beauty,
+        meta: {
+            showProgressBar: true,
+        },
     },
-  },
 
-  {
-    name: 'fashion',
-    path: '/category/fashion',
-    component: Fashion,
-    meta: {
-      showProgressBar: true,
+    {
+        name: 'fashion',
+        path: '/category/fashion',
+        component: Fashion,
+        meta: {
+            showProgressBar: true,
+        },
     },
-  },
 
-  {
-    name: 'culture',
-    path: '/category/culture',
-    component: Culture,
-    meta: {
-      showProgressBar: true,
+    {
+        name: 'culture',
+        path: '/category/culture',
+        component: Culture,
+        meta: {
+            showProgressBar: true,
+        },
     },
-  },
 
-  {
-    name: 'askRuby',
-    path: '/category/ask-ruby',
-    component: AskRuby,
-    meta: {
-      showProgressBar: true,
+    {
+        name: 'askRuby',
+        path: '/category/ask-ruby',
+        component: AskRuby,
+        meta: {
+            showProgressBar: true,
+        },
     },
-  },
 
-  {
-    name: 'sex-and-relationships',
-    path: '/category/sex-and-relationships',
-    component: SexAndRelationship,
-    meta: {
-      showProgressBar: true,
+    {
+        name: 'sex-and-relationships',
+        path: '/category/sex-and-relationships',
+        component: SexAndRelationship,
+        meta: {
+            showProgressBar: true,
+        },
     },
-  },
 
-  {
-    name: 'post',
-    path: '/post/:id/:title',
-    component: Post,
-    meta: {
-      showProgressBar: true,
+    {
+        name: 'post',
+        path: '/post/:id/:title',
+        component: Post,
+        meta: {
+            showProgressBar: true,
+        },
+        props: true,
     },
-    props: true,
-  },
 
-  {
-    name: 'authorArticles',
-    path: '/author/:id/:name',
-    component: AuthorArticles,
-    meta: {
-      showProgressBar: true,
+    {
+        name: 'authorArticles',
+        path: '/author/:id/:name',
+        component: AuthorArticles,
+        meta: {
+            showProgressBar: true,
+        },
+        props: true,
     },
-    props: true,
-  },
 
-  {
-    name: 'magazine',
-    path: '/magazine',
-    component: Magazine,
-    meta: {
-      showProgressBar: true,
+    {
+        name: 'magazine',
+        path: '/magazine',
+        component: Magazine,
+        meta: {
+            showProgressBar: true,
+        },
     },
-  },
 
-  /* -------------------------------------------------------------------------- */
-  /*                                  Page 404                                 */
-  /* -------------------------------------------------------------------------- */
-  {
-    name: '404',
-    path: '*',
-    component: Four0Four,
-    meta: {
-      showProgressBar: true,
+    /* -------------------------------------------------------------------------- */
+    /*                                  Page 404                                 */
+    /* -------------------------------------------------------------------------- */
+    {
+        name: '404',
+        path: '*',
+        component: Four0Four,
+        meta: {
+            showProgressBar: true,
+        },
     },
-  },
 
-  /* -------------------------------------------------------------------------- */
-  /*                                Unauthorized                                */
-  /* -------------------------------------------------------------------------- */
+    /* -------------------------------------------------------------------------- */
+    /*                                Unauthorized                                */
+    /* -------------------------------------------------------------------------- */
 
-  {
-    name: 'Unauthorized',
-    path: '/unauthorized',
-    component: Unauthorized,
-    meta: {
-      showProgressBar: true,
+    {
+        name: 'Unauthorized',
+        path: '/unauthorized',
+        component: Unauthorized,
+        meta: {
+            showProgressBar: true,
+        },
     },
-  },
 
-  /* -------------------------------------------------------------------------- */
-  /*                                  Admin Routes                              */
-  /* -------------------------------------------------------------------------- */
+    /* -------------------------------------------------------------------------- */
+    /*                                  Admin Routes                              */
+    /* -------------------------------------------------------------------------- */
 
-  {
-    name: 'dashboard',
-    path: '/dashboard',
-    component: Dashboard,
-    meta: {
-      authOnly: true,
-      showProgressBar: true,
+    {
+        name: 'dashboard',
+        path: '/dashboard',
+        component: Dashboard,
+        meta: {
+            authOnly: true,
+            showProgressBar: true,
+        },
     },
-  },
 
-  {
-    name: 'article',
-    path: '/articles',
-    component: Article,
-    meta: {
-      authOnly: true,
-      superAdminANDeditorOnly: true,
-      showProgressBar: true,
+    {
+        name: 'article',
+        path: '/articles',
+        component: Article,
+        meta: {
+            authOnly: true,
+            superAdminANDeditorOnly: true,
+            showProgressBar: true,
+        },
     },
-  },
-  {
-    name: 'createArticle',
-    path: '/article/create',
-    component: CreateArticle,
-    meta: {
-      authOnly: true,
-      superAdminANDeditorOnly: true,
-      showProgressBar: true,
+    {
+        name: 'createArticle',
+        path: '/article/create',
+        component: CreateArticle,
+        meta: {
+            authOnly: true,
+            superAdminANDeditorOnly: true,
+            showProgressBar: true,
+        },
     },
-  },
 
-  {
-    name: 'role',
-    path: '/roles',
-    component: Role,
-    meta: {
-      authOnly: true,
-      superAdminOnly: true,
-      showProgressBar: true,
+    {
+        name: 'role',
+        path: '/roles',
+        component: Role,
+        meta: {
+            authOnly: true,
+            superAdminOnly: true,
+            showProgressBar: true,
+        },
     },
-  },
 
-  {
-    name: 'createRole',
-    path: '/role/create',
-    component: CreateRole,
-    meta: {
-      authOnly: true,
-      superAdminOnly: true,
-      showProgressBar: true,
+    {
+        name: 'createRole',
+        path: '/role/create',
+        component: CreateRole,
+        meta: {
+            authOnly: true,
+            superAdminOnly: true,
+            showProgressBar: true,
+        },
     },
-  },
-  {
-    name: 'user',
-    path: '/users',
-    component: User,
-    meta: {
-      authOnly: true,
-      superAdminOnly: true,
-      showProgressBar: true,
+    {
+        name: 'user',
+        path: '/users',
+        component: User,
+        meta: {
+            authOnly: true,
+            superAdminOnly: true,
+            showProgressBar: true,
+        },
     },
-  },
 
-  {
-    name: 'createUser',
-    path: '/user/create',
-    component: CreateUser,
-    meta: {
-      authOnly: true,
-      superAdminOnly: true,
-      showProgressBar: true,
+    {
+        name: 'createUser',
+        path: '/user/create',
+        component: CreateUser,
+        meta: {
+            authOnly: true,
+            superAdminOnly: true,
+            showProgressBar: true,
+        },
     },
-  },
 
-  {
-    name: 'invoice',
-    path: '/invoices',
-    component: Invoice,
-    meta: {
-      authOnly: true,
-      superAdminANDmarketerOnly: true,
-      showProgressBar: true,
+    {
+        name: 'invoice',
+        path: '/invoices',
+        component: Invoice,
+        meta: {
+            authOnly: true,
+            superAdminANDmarketerOnly: true,
+            showProgressBar: true,
+        },
     },
-  },
 
-  {
-    name: 'createInvoice',
-    path: '/invoice/create',
-    component: CreateInvoice,
-    meta: {
-      authOnly: true,
-      superAdminANDmarketerOnly: true,
-      showProgressBar: true,
+    {
+        name: 'createInvoice',
+        path: '/invoice/create',
+        component: CreateInvoice,
+        meta: {
+            authOnly: true,
+            superAdminANDmarketerOnly: true,
+            showProgressBar: true,
+        },
     },
-  },
 
-  {
-    name: 'adverts',
-    path: '/adverts',
-    component: Adverts,
-    meta: {
-      authOnly: true,
-      superAdminANDmarketerOnly: true,
-      showProgressBar: true,
+    {
+        name: 'adverts',
+        path: '/adverts',
+        component: Adverts,
+        meta: {
+            authOnly: true,
+            superAdminANDmarketerOnly: true,
+            showProgressBar: true,
+        },
     },
-  },
 
-  {
-    name: 'createAdvert',
-    path: '/advert/create',
-    component: CreateAdvert,
-    meta: {
-      authOnly: true,
-      superAdminANDmarketerOnly: true,
-      showProgressBar: true,
+    {
+        name: 'createAdvert',
+        path: '/advert/create',
+        component: CreateAdvert,
+        meta: {
+            authOnly: true,
+            superAdminANDmarketerOnly: true,
+            showProgressBar: true,
+        },
     },
-  },
 ]

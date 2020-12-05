@@ -16,8 +16,8 @@
         <div class="col-lg-8 col-md-8 col-12 col-sm-12 text-center">
           <h3>AMAZING SUBSCRIPTION OFFERS</h3>
           <p class="text-left mt-3">
-            Get your copy of VOGUE delivered FREE to your door before it hits
-            the shops + FREE digital editions on Apple and Android devices!
+            Get your copy of AURA delivered FREE to your door before it hits the
+            shops + FREE digital editions on Apple and Android devices!
             Alternatively, choose from one of our fantastic digital-only offers.
           </p>
         </div>
@@ -41,7 +41,7 @@
             <li>Plus start with a FREE trial!</li>
             <li>Also available on Google Play and Amazon</li>
           </ul>
-          <a href="#" class="btn btn-outline-aura btn-sm mt-2"
+          <a href="#" @click="comingSoon" class="btn btn-aura btn-sm mt-2"
             >Get a digital copy for $2.00
           </a>
         </div>
@@ -60,7 +60,7 @@
             <li>Plus start with a FREE trial!</li>
             <li>Also available on Google Play and Amazon</li>
           </ul>
-          <a href="#" class="btn btn-outline-aura btn-sm mt-2"
+          <a href="#" @click="comingSoon" class="btn btn-aura btn-sm mt-2"
             >Subscribe from only $5.29 per month</a
           >
         </div>
@@ -76,6 +76,11 @@
 <script>
 export default {
   name: "Magazine",
+  methods: {
+    comingSoon() {
+      return alert("😊 Chill for a while.. Coming soon!");
+    },
+  },
   data() {
     return {
       name: "Oluwatobi",

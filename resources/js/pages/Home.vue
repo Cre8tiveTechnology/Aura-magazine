@@ -3,7 +3,7 @@
         <!-- NavBar -->
         <navbar />
 
-        <!-- Navbar -->
+  <!-- Navbar -->
         <!--===================== ADS BANNER =====================-->
         <div class="home-ads-container mt-3 mb-3 w-50 mx-auto h-100">
             <div class="container text-center">
@@ -22,7 +22,7 @@
                 <i class="fa fa-angle-right text-aura"></i>
             </h5>
             <home-empty-resource
-                v-if="highestViews.length === 0"
+                v-if="Object.keys(highestViews).length === 0"
             ></home-empty-resource>
             <!-- Mobile carousel -->
             <div
@@ -78,7 +78,7 @@
             </h5>
             <!-- Desktop Carousel -->
             <home-empty-resource
-                v-if="highestViews.length === 0"
+                v-if="Object.keys(highestViews).length === 0"
             ></home-empty-resource>
             <div
                 id="carouselExampleIndicators"
@@ -146,7 +146,7 @@
         <!--======================== Story cards =================-->
         <div class="container mb-5" style="margin-top: 10%">
             <home-empty-resource
-                v-if="stories.length === 0"
+                v-if="Object.keys(stories).length === 0"
             ></home-empty-resource>
             <div
                 class="row justify-content-lg-between justify-content-md-around justify-content-sm-center justify-content-center"

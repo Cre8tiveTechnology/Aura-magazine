@@ -174,96 +174,157 @@
 
         <!-- Body -->
         <div class="container sp-mt-7">
-            <p v-html="article.content"></p>
-        </div>
+            <div class="row">
+                <!-- Article Pane -->
+                <div class="col-12 col-lg-8 col-md-8 col-sm-12">
+                    <!-- CONTENT -->
+                    <p v-html="article.content"></p>
 
-        <!--===================== ADS BANNER =====================-->
-        <div class="home-ads-container mt-5 w-50 mx-auto h-100">
-            <div class="container text-center">
-                <p>ADS BANNER</p>
-            </div>
-        </div>
-        <!--===================== ADS BANNER =====================-->
-
-        <!-- IMAGES -->
-        <div class="container sp-mt-7" v-show="this.images.length > 0">
-            <h5 class="news headline-font font-weight-bolder ml-0 mt-4">
-                <span class="text-aura" style="font-size: 30px">+</span> MEDIA
-                CORNER
-            </h5>
-            <div class="row justify-content-between">
-                <div
-                    class="col-lg-3 col-md-5 col-sm-12 col-12 mt-4 p-3"
-                    v-for="(post, index) in images"
-                    :key="post"
-                >
-                    <img
-                        :src="post"
-                        class="col-12 p-0 img-fluid"
-                        alt="News Cover"
-                    />
-                    <span>{{ ++index }}/{{ imagesLenght }}</span>
-                </div>
-            </div>
-        </div>
-
-        <!-- RECOMMENDATIONS -->
-        <div class="container sp-mt-8">
-            <h5 class="news headline-font font-weight-bolder ml-0">
-                <span class="text-aura" style="font-size: 30px">+</span> AURA
-                RECOMMENDS
-            </h5>
-            <div
-                class="mt-2 row justify-content-lg-between justify-content-md-center justify-content-sm-center"
-            >
-                <div
-                    class="col-lg-6 col-md-8 col-sm-12 col-12 mt-4"
-                    v-for="r in filteredRecommendations"
-                    :key="r.title"
-                >
-                    <div class="card">
-                        <div class="row no-gutters">
-                            <div class="col-md-5 p-0">
-                                <a data-fancybox="gallery" :href="r.image">
-                                    <img
-                                        :src="r.image"
-                                        :alt="r.title"
-                                        class="card-img rounded-0"
-                                    />
-                                </a>
+                    <!-- IMAGES -->
+                    <div
+                        class="container-fluid p-0 mt-4"
+                        v-show="this.images.length > 0"
+                    >
+                        <h5
+                            class="news headline-font font-weight-bolder ml-0 mt-4"
+                        >
+                            <span class="text-aura" style="font-size: 30px"
+                                >+</span
+                            >
+                            MEDIA CORNER
+                        </h5>
+                        <div class="row justify-content-between">
+                            <div
+                                class="col-lg-3 col-md-5 col-sm-12 col-12 mt-4 p-3"
+                                v-for="(post, index) in images"
+                                :key="post"
+                            >
+                                <img
+                                    :src="post"
+                                    class="col-12 p-0 img-fluid"
+                                    alt="News Cover"
+                                />
+                                <span>{{ ++index }}/{{ imagesLenght }}</span>
                             </div>
-                            <div class="col-md-7">
-                                <div class="card-body justify-content-end">
-                                    <h5
-                                        class="card-title recom-link"
-                                        @click="navigate(r)"
-                                    >
-                                        {{ r.title }}
-                                    </h5>
-                                    <span class="card-title">
-                                        <router-link
-                                            :to="{
-                                                name: 'authorArticles',
-                                                params: {
-                                                    id: r.user_id,
-                                                    name: r.user_name
-                                                }
-                                            }"
-                                            class="aura-post-title"
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Advert Pane -->
+                <div class="col-12 col-lg-4 col-md-4 col-sm-12 px-3">
+                    <!--===================== ADS BANNER =====================-->
+                    <div class="home-ads-container mb-5 w-100 mx-auto h-70">
+                        <div class="container text-center">
+                            <p>ADS BANNER</p>
+                        </div>
+                    </div>
+                    <!--===================== ADS BANNER =====================-->
+
+                    <!--===================== ADS BANNER =====================-->
+                    <div class="home-ads-container mb-5 w-100 mx-auto h-70">
+                        <div class="container text-center">
+                            <p>ADS BANNER</p>
+                        </div>
+                    </div>
+                    <!--===================== ADS BANNER =====================-->
+
+                    <!--===================== ADS BANNER =====================-->
+                    <div class="home-ads-container mb-5 w-100 mx-auto h-70">
+                        <div class="container text-center">
+                            <p>ADS BANNER</p>
+                        </div>
+                    </div>
+                    <!--===================== ADS BANNER =====================-->
+                </div>
+                <!--===================== ADS BANNER =====================-->
+
+                <!-- IMAGES -->
+                <div class="container sp-mt-7" v-show="this.images.length > 0">
+                    <h5 class="news headline-font font-weight-bolder ml-0 mt-4">
+                        <span class="text-aura" style="font-size: 30px">+</span>
+                        MEDIA CORNER
+                    </h5>
+                    <div class="row justify-content-between">
+                        <div
+                            class="col-lg-3 col-md-5 col-sm-12 col-12 mt-4 p-3"
+                            v-for="(post, index) in images"
+                            :key="post"
+                        >
+                            <img
+                                :src="post"
+                                class="col-12 p-0 img-fluid"
+                                alt="News Cover"
+                            />
+                            <span>{{ ++index }}/{{ imagesLenght }}</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- RECOMMENDATIONS -->
+                <div class="container sp-mt-8">
+                    <h5 class="news headline-font font-weight-bolder ml-0">
+                        <span class="text-aura" style="font-size: 30px">+</span>
+                        AURA RECOMMENDS
+                    </h5>
+                    <div
+                        class="mt-2 row justify-content-lg-between justify-content-md-center justify-content-sm-center"
+                    >
+                        <div
+                            class="col-lg-6 col-md-8 col-sm-12 col-12 mt-4"
+                            v-for="r in filteredRecommendations"
+                            :key="r.title"
+                        >
+                            <div class="card">
+                                <div class="row no-gutters">
+                                    <div class="col-md-5 p-0">
+                                        <a
+                                            data-fancybox="gallery"
+                                            :href="r.image"
                                         >
-                                            <i class="mt-4 fa fa-user"></i>
-                                            {{ r.user_name }}
-                                        </router-link>
-                                    </span>
+                                            <img
+                                                :src="r.image"
+                                                :alt="r.title"
+                                                class="card-img rounded-0"
+                                            />
+                                        </a>
+                                    </div>
+                                    <div class="col-md-7">
+                                        <div
+                                            class="card-body justify-content-end"
+                                        >
+                                            <h5
+                                                class="card-title recom-link"
+                                                @click="navigate(r)"
+                                            >
+                                                {{ r.title }}
+                                            </h5>
+                                            <span class="card-title">
+                                                <router-link
+                                                    :to="{
+                                                        name: 'authorArticles',
+                                                        params: {
+                                                            id: r.user_id,
+                                                            name: r.user_name
+                                                        }
+                                                    }"
+                                                    class="aura-post-title"
+                                                >
+                                                    <i
+                                                        class="mt-4 fa fa-user"
+                                                    ></i>
+                                                    {{ r.user_name }}
+                                                </router-link>
+                                            </span>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
+                <!-- RECOMMENDATIONS STOP -->
             </div>
         </div>
-        <!-- RECOMMENDATIONS STOP -->
-
         <!-- Footer -->
         <user-footer />
         <!-- Footer -->
