@@ -455,10 +455,14 @@ You have rights as a customer when it comes to your data:
                 <p class="text-justify"></p>
             </div>
         </div>
+
+         <!-- Footer -->
+        <user-footer />
+        <!-- Footer -->
     </div>
 </template>
 <script>
 export default {
-    name: "privacy-policy"
+  name: "privacy-policy",
 };
 </script>
