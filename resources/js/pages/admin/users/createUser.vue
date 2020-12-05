@@ -183,7 +183,7 @@ export default {
         .catch((errors) => {
           this.isLoadingFalse();
           let message = errors.response.data.message;
-          if (errors.response.status == 422) {
+          if (errors.response.status == 400) {
             this.alertWarning(message);
             this.validationErrors = errors.response.data.errors;
           } else {

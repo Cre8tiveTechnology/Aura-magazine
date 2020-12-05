@@ -31,7 +31,7 @@ Route::group(['name' => 'article.', 'prefix' => 'article', 'middleware' => 'auth
 Route::group(['name' => 'role.', 'prefix' => 'role', 'middleware' => ['auth:sanctum', 'role:superadmin']], function () {
     Route::get('/all', 'RoleController@index')->name('all');
     Route::get('/rolesIndex', 'RoleController@rolesIndex')->name('rolesIndex');
-    Route::post('/create', 'RoleController@store')->name('store');
+    Route::post('/new/create', 'RoleController@store')->name('store');
     Route::put('/update/{role}', 'RoleController@update')->name('update');
     Route::delete('/remove/{role}', 'RoleController@destroy')->name('remove');
     Route::post('/restore', 'RoleController@restore')->name('restore');

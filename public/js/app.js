@@ -10222,7 +10222,7 @@ __webpack_require__.r(__webpack_exports__);
 
         var message = errors.response.data.message;
 
-        if (errors.response.status == 422) {
+        if (errors.response.status == 400) {
           _this.alertWarning(message);
 
           _this.validationErrors = errors.response.data.errors;
@@ -82890,7 +82890,7 @@ __webpack_require__.r(__webpack_exports__);
 
   /* -------------------------------------------------------------------------- */
   getCookie: function getCookie() {
-    var token = js_cookie__WEBPACK_IMPORTED_MODULE_1___default.a.get("XSRF-TOKEN");
+    var token = js_cookie__WEBPACK_IMPORTED_MODULE_1___default.a.get('XSRF-TOKEN');
 
     if (token) {
       return new Promise(function (resolve) {
@@ -83380,7 +83380,7 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
               return _Csrf__WEBPACK_IMPORTED_MODULE_2__["default"].getCookie();
 
             case 2:
-              return _context.abrupt("return", _Api__WEBPACK_IMPORTED_MODULE_1__["default"].post("/role/create/", role));
+              return _context.abrupt("return", _Api__WEBPACK_IMPORTED_MODULE_1__["default"].post("/role/new/create/", role));
 
             case 3:
             case "end":
