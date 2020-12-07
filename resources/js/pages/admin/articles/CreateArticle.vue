@@ -121,6 +121,7 @@
                     <option value="Beauty">Beauty</option>
                     <option value="Fashion">Fashion</option>
                     <option value="Culture">Culture</option>
+                    <option value="Horoscope">Horoscope</option>
                     <optgroup label="Life and Love">
                       <option value="Ask Ruby">Ask Ruby</option>
                       <option value="Sex and Relationship">

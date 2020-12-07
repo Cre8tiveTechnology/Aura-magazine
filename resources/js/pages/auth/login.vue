@@ -1,14 +1,12 @@
 <template>
   <div>
     <!-- NavBar -->
-    <navbar />
+    <!-- <navbar /> -->
     <!-- Navbar -->
     <div class="login-body">
       <div class="container login-inner">
-        <div
-          class="row justify-content-lg-start justify-content-md-start justify-content-center"
-        >
-          <div class="col-lg-5 col-md-7 col-sm-12 col-12 rounded">
+        <div class="row justify-content-center">
+          <div class="col-lg-7 col-md-9 col-sm-12 col-12 rounded">
             <div class="card shadow p-4 rounded">
               <img
                 src="https://res.cloudinary.com/aura-magazine/image/upload/v1605190201/backgrounds/footer/AURA_LOGO_BLACK_FOR_HEADER_zwujbp.png"
@@ -88,13 +86,13 @@
                     Sign up</router-link
                   >
 
-                  <div class="col-md-12 mt-4 mb-4">
+                  <!-- <div class="col-md-12 mt-4 mb-4">
                     <div class="login-or">
                       <hr class="hr-or" />
                       <span class="span-or">or</span>
                     </div>
-                  </div>
-                  <div class="row d-flex justify-content-center">
+                  </div> -->
+                  <!-- <div class="row d-flex justify-content-center">
                     <div
                       class="btn-group btn btn-lg shadow-sm btn-light aura-font"
                       role="group"
@@ -123,7 +121,7 @@
                         Signin Using Facebook
                       </button>
                     </div>
-                  </div>
+                  </div> -->
                 </form>
               </div>
             </div>
@@ -132,7 +130,7 @@
       </div>
     </div>
     <!-- Footer -->
-    <user-footer />
+    <user-footer style="margin-top: 0%" />
     <!-- Footer -->
   </div>
 </template>

@@ -41,7 +41,10 @@
             <li>Plus start with a FREE trial!</li>
             <li>Also available on Google Play and Amazon</li>
           </ul>
-          <a href="#" @click="comingSoon" class="btn btn-aura btn-sm mt-2"
+          <a
+            href="#"
+            @click="comingSoon"
+            class="btn btn-aura-reverse btn-sm mt-2"
             >Get a digital copy for $2.00
           </a>
         </div>
@@ -60,7 +63,10 @@
             <li>Plus start with a FREE trial!</li>
             <li>Also available on Google Play and Amazon</li>
           </ul>
-          <a href="#" @click="comingSoon" class="btn btn-aura btn-sm mt-2"
+          <a
+            href="#"
+            @click="comingSoon"
+            class="btn btn-aura-reverse btn-sm mt-2"
             >Subscribe from only $5.29 per month</a
           >
         </div>
@@ -78,7 +84,7 @@ export default {
   name: "Magazine",
   methods: {
     comingSoon() {
-      return alert("😊 Chill for a while.. Coming soon!");
+      return alert("Hi there 😊, Please Chill for a while.. Coming soon!");
     },
   },
   data() {
@@ -89,5 +95,8 @@ export default {
 };
 </script>
 
-<style>
+<style scoped>
+.btn-aura-reverse:hover {
+  background-color: #ff63b6 !important;
+}
 </style>

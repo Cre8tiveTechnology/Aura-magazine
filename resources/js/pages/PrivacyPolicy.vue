@@ -4,10 +4,11 @@
         <navbar :current="'CULTURE'" />
         <!-- Navbar -->
 
+        <h1 class="container text-bold text-dark mt-5 text-uppercase text-bold">Privacy Policy</h1>
 
-        <div class="container sp-mt-7">
+        <div class="container sp-mt-5">
             <div class="col-12 col-lg-8 col-md-8 col-sm-12">
-                <h1 class="text-bold text-dark">Introducing</h1>
+                <h3 class="text-bold text-dark">Introducing</h3>
                 <p class="tex-justify">
                     Aura Magazine is a subsidiary of the private company Célcic
                     Media Limited; Célcic is well known to be the authority for
@@ -24,9 +25,9 @@
                     we protect and promote those rights.
                 </p>
 
-                <h2 class="text-bold text-dark">
+                <h3 class="text-bold text-dark">
                     Opting in and out of communications made easy
-                </h2>
+                </h3>
                 <p class="text-justify">
                     Usually people want to read privacy notices because a
                     company is asking for their permission to contact them for
@@ -412,22 +413,19 @@
                 </p>
                 <p class="text-justify">
                     <b>10. Your privileges </b><br/>
-You have rights as a customer when it comes to your data:
-<ol><li>The right to be advised. At every point where we are collecting your data, we will inform you of why it is being collected and how it is being processed.
-</li>
-<li>The right of access. If you want to see what information we have about you, you can give us what is called a request for Subject Access. We're going to need photocopies of two identification items. Within 30 days of receipt of your submission, we will respond. When you request to see your results, there is no cost to you but please note that if you make subsequent requests, we reserve the right to charge you. The contact information below can be used for a Topic Access Request.</li>
-<li>Entitlement to rectification. By contacting us using the details below, we give the opportunity to amend your personal information.
-</li>
+                        You have rights as a customer when it comes to your data:
+                        <ol>
+                            <li>The right to be advised. At every point where we are collecting your data, we will inform you of why it is being collected and how it is being processed.</li>
+                            <li>The right of access. If you want to see what information we have about you, you can give us what is called a request for Subject Access. We're going to need photocopies of two identification items. Within 30 days of receipt of your submission, we will respond. When you request to see your results, there is no cost to you but please note that if you make subsequent requests, we reserve the right to charge you. The contact information below can be used for a Topic Access Request.</li>
+                            <li>Entitlement to rectification. By contacting us using the details below, we give the opportunity to amend your personal information.</li>
 
-<li>Entitlement of erasure. We will anonymise or de-identify your data if you want to cancel all communications with us. Contact us please, using the information below. Please ensure that you notify us of all email addresses, profiles, names, etc. that you might have used with us to delete them.
-</li>
-<li>Entitlement to limit processing. You can opt-out or prevent your data from being processed by:
-<br/>Changing the setting of your cookie in your browser
-<br/>Using our choice center to unsubscribe from postal and email correspondence Customercare@celcic.com Contacting
-<br/>Please do not hesitate to contact us if you are dissatisfied with the way we collect and use your personal data, using the contact information below or by contacting our Data Protection Officer at dpo@celcic.com
-<br/>You are entitled to appeal to a supervisory body
-</li>
-</ol>
+                            <li>Entitlement of erasure. We will anonymise or de-identify your data if you want to cancel all communications with us. Contact us please, using the information below. Please ensure that you notify us of all email addresses, profiles, names, etc. that you might have used with us to delete them.</li>
+                            <li>Entitlement to limit processing. You can opt-out or prevent your data from being processed by:
+                            <br/>Changing the setting of your cookie in your browser
+                            <br/>Using our choice center to unsubscribe from postal and email correspondence Customercare@celcic.com Contacting
+                            <br/>Please do not hesitate to contact us if you are dissatisfied with the way we collect and use your personal data, using the contact information below or by contacting our Data Protection Officer at dpo@celcic.com
+                            <br/>You are entitled to appeal to a supervisory body</li>
+                        </ol>
                 </p>
                 <p class="text-justify"></p>
             </div>

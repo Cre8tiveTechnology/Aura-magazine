@@ -56,7 +56,7 @@
 
 
     {{-- Favico Icon --}}
-    <link rel="icon" href="image/home/favicon.ico" type="image/png">
+    <link rel="icon" href="image/home/fav.ico" type="image/png">
 </head>
 
 <body>

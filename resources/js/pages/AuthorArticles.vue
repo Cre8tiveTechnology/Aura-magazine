@@ -14,13 +14,21 @@
             <div
               class="col-12 col-lg-8 col-md-8 col-sm-12 order-sm-last order-md-first"
             >
-              <a data-fancybox="gallery" :href="articles.data[0].image">
+              <router-link
+                :to="{
+                  name: 'post',
+                  params: {
+                    id: articles.data[0].id,
+                    title: articles.data[0].slug,
+                  },
+                }"
+              >
                 <img
                   :src="articles.data[0].image"
                   :alt="articles.data[0].title"
                   class="w-100 img-fluid"
                 />
-              </a>
+              </router-link>
             </div>
             <div
               class="p-4 col-12 col-lg-4 col-md-4 col-sm-12 order-sm-first order-md-last"
@@ -72,13 +80,21 @@
           <div
             class="col-lg-6 col-md-6 col-sm-12 col-12 order-first order-lg-last"
           >
-            <a data-fancybox="gallery" :href="article.image">
+            <router-link
+              :to="{
+                name: 'post',
+                params: {
+                  id: article.id,
+                  title: article.slug,
+                },
+              }"
+            >
               <img
                 :src="article.image"
                 :alt="article.title"
                 class="w-100 img-fluid"
               />
-            </a>
+            </router-link>
           </div>
           <div
             class="mt-0 col-lg-6 col-md-6 col-sm-12 col-12 order-last order-lg-first"
