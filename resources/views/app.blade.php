@@ -42,7 +42,6 @@
     <!-- Styles -->
     <link rel="stylesheet" href="{{ asset('css/app.css') }}" >
     <link rel="stylesheet" href="{{ asset('css/nprogress.css') }}"  />
-    <link rel="stylesheet" href="{{ asset('css/style.css') }}" />
 
     <!-- CSS Files -->
     {{-- <link href="{{ secure_asset('paper') }}/css/bootstrap.min.css" rel="stylesheet" /> --}}
