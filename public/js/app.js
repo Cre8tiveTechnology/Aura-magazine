@@ -5301,6 +5301,58 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: "Home",
@@ -54238,17 +54290,17 @@ var render = function() {
                   _c(
                     "div",
                     { staticClass: "carousel-inner" },
-                    _vm._l(_vm.highestViews, function(courselItem) {
+                    _vm._l(_vm.highestViews, function(carouselItem) {
                       return _c(
                         "div",
-                        { key: courselItem.id, staticClass: "carousel-item" },
+                        { key: carouselItem.id, staticClass: "carousel-item" },
                         [
                           _c("div", { staticClass: "card w-100 border-0" }, [
                             _c("img", {
                               staticClass: "card-img-top rounded",
                               attrs: {
-                                src: courselItem.image,
-                                alt: _vm.carouselItem.title
+                                src: carouselItem.image,
+                                alt: carouselItem.title
                               }
                             }),
                             _vm._v(" "),
@@ -54270,14 +54322,14 @@ var render = function() {
                                   },
                                   [
                                     _vm._v(
-                                      "\n                " +
+                                      "\n                                " +
                                         _vm._s(
                                           _vm._f("truncate")(
-                                            _vm.carouselItem.title,
+                                            carouselItem.title,
                                             47
                                           )
                                         ) +
-                                        "\n              "
+                                        "\n                            "
                                     )
                                   ]
                                 ),
@@ -54286,14 +54338,14 @@ var render = function() {
                                 _vm._v(" "),
                                 _c("p", { staticClass: "card-text mt-2" }, [
                                   _vm._v(
-                                    "\n                " +
+                                    "\n                                " +
                                       _vm._s(
                                         _vm._f("truncate")(
-                                          _vm.carouselItem.description,
+                                          carouselItem.description,
                                           133
                                         )
                                       ) +
-                                      "\n              "
+                                      "\n                            "
                                   )
                                 ])
                               ]
@@ -54336,11 +54388,11 @@ var render = function() {
                   _c(
                     "div",
                     { staticClass: "carousel-inner bg-transparent" },
-                    _vm._l(_vm.highestViews, function(courselItem) {
+                    _vm._l(_vm.highestViews, function(carouselItem) {
                       return _c(
                         "div",
                         {
-                          key: courselItem.id,
+                          key: carouselItem.id,
                           staticClass: "carousel-item active rounded"
                         },
                         [
@@ -54348,8 +54400,8 @@ var render = function() {
                             _c("img", {
                               staticClass: "card-img-top rounded-0",
                               attrs: {
-                                src: courselItem.image,
-                                alt: _vm.carouselItem.title
+                                src: carouselItem.image,
+                                alt: carouselItem.title
                               }
                             }),
                             _vm._v(" "),
@@ -54371,14 +54423,14 @@ var render = function() {
                                   },
                                   [
                                     _vm._v(
-                                      "\n                " +
+                                      "\n                                " +
                                         _vm._s(
                                           _vm._f("truncate")(
-                                            _vm.carouselItem.title,
+                                            carouselItem.title,
                                             47
                                           )
                                         ) +
-                                        "\n              "
+                                        "\n                            "
                                     )
                                   ]
                                 ),
@@ -54387,14 +54439,14 @@ var render = function() {
                                 _vm._v(" "),
                                 _c("p", { staticClass: "card-text mt-2" }, [
                                   _vm._v(
-                                    "\n                " +
+                                    "\n                                " +
                                       _vm._s(
                                         _vm._f("truncate")(
-                                          _vm.carouselItem.description,
+                                          carouselItem.description,
                                           133
                                         )
                                       ) +
-                                      "\n              "
+                                      "\n                            "
                                   )
                                 ])
                               ]
@@ -54485,9 +54537,9 @@ var render = function() {
                         _c("div", { staticClass: "card-body px-0" }, [
                           _c("p", { staticClass: "story-card-font-1" }, [
                             _vm._v(
-                              "\n              " +
+                              "\n                            " +
                                 _vm._s(_vm._f("truncate")(story.title, 173)) +
-                                "\n            "
+                                "\n                        "
                             )
                           ]),
                           _vm._v(" "),
@@ -54495,9 +54547,9 @@ var render = function() {
                           _vm._v(" "),
                           _c("p", { staticClass: "story-card-font-2" }, [
                             _vm._v(
-                              "\n              " +
+                              "\n                            " +
                                 _vm._s(_vm._f("truncate")(story.content, 143)) +
-                                "\n            "
+                                "\n                        "
                             )
                           ])
                         ])
@@ -54562,9 +54614,9 @@ var render = function() {
                                 },
                                 [
                                   _vm._v(
-                                    "\n                " +
+                                    "\n                                " +
                                       _vm._s(_vm.newsFirst.title) +
-                                      "\n              "
+                                      "\n                            "
                                   )
                                 ]
                               ),
@@ -54634,9 +54686,9 @@ var render = function() {
                               _c("div", { staticClass: "media-body" }, [
                                 _c("h5", [
                                   _vm._v(
-                                    "\n                  " +
+                                    "\n                                    " +
                                       _vm._s(newsVal.title) +
-                                      "\n                "
+                                      "\n                                "
                                   )
                                 ])
                               ])
@@ -54703,9 +54755,9 @@ var render = function() {
                       },
                       [
                         _vm._v(
-                          "\n          " +
+                          "\n                    " +
                             _vm._s(_vm.fashionFirst.title) +
-                            "\n        "
+                            "\n                "
                         )
                       ]
                     ),
@@ -54755,9 +54807,9 @@ var render = function() {
                       _c("div", { staticClass: "card-body px-0" }, [
                         _c("h6", { staticClass: "card-title text-left" }, [
                           _vm._v(
-                            "\n                " +
+                            "\n                                " +
                               _vm._s(_vm._f("truncate")(fashion.title, 47)) +
-                              "\n              "
+                              "\n                            "
                           )
                         ]),
                         _vm._v(" "),
@@ -54823,9 +54875,9 @@ var render = function() {
                     [
                       _c("h4", { staticClass: "font-weight-bolder pr-3" }, [
                         _vm._v(
-                          "\n            " +
+                          "\n                        " +
                             _vm._s(_vm.beautyFirst.title) +
-                            "\n          "
+                            "\n                    "
                         )
                       ]),
                       _vm._v(" "),
@@ -54833,11 +54885,11 @@ var render = function() {
                       _vm._v(" "),
                       _c("p", { staticClass: "mt-2" }, [
                         _vm._v(
-                          "\n            " +
+                          "\n                        " +
                             _vm._s(
                               _vm._f("truncate")(_vm.beautyFirst.content, 300)
                             ) +
-                            "\n          "
+                            "\n                    "
                         )
                       ])
                     ]
@@ -54899,9 +54951,9 @@ var render = function() {
                             _c("div", { staticClass: "card-body px-0" }, [
                               _c("h6", { staticClass: "card-title" }, [
                                 _vm._v(
-                                  "\n                  " +
+                                  "\n                                    " +
                                     _vm._s(_vm.beautyFirst.title) +
-                                    "\n                "
+                                    "\n                                "
                                 )
                               ]),
                               _vm._v(" "),
@@ -54929,9 +54981,9 @@ var render = function() {
                               _c("div", { staticClass: "card-body px-0" }, [
                                 _c("h6", { staticClass: "card-title" }, [
                                   _vm._v(
-                                    "\n                  " +
+                                    "\n                                    " +
                                       _vm._s(beauty.title) +
-                                      "\n                "
+                                      "\n                                "
                                   )
                                 ]),
                                 _vm._v(" "),
@@ -55026,11 +55078,11 @@ var render = function() {
                           _c("div", { staticClass: "card-body px-0" }, [
                             _c("h6", { staticClass: "card-title" }, [
                               _vm._v(
-                                "\n                " +
+                                "\n                                " +
                                   _vm._s(
                                     _vm._f("truncate")(culturetopItem.title, 47)
                                   ) +
-                                  "\n              "
+                                  "\n                            "
                               )
                             ]),
                             _vm._v(" "),
@@ -55051,9 +55103,9 @@ var render = function() {
                   [
                     _c("h3", { staticClass: "card-title" }, [
                       _vm._v(
-                        "\n          " +
+                        "\n                    " +
                           _vm._s(_vm.cultureFirst.title) +
-                          "\n        "
+                          "\n                "
                       )
                     ]),
                     _vm._v(" "),
@@ -55061,11 +55113,11 @@ var render = function() {
                     _vm._v(" "),
                     _c("p", { staticClass: "mt-5" }, [
                       _vm._v(
-                        "\n          " +
+                        "\n                    " +
                           _vm._s(
                             _vm._f("truncate")(_vm.cultureFirst.content, 300)
                           ) +
-                          "\n        "
+                          "\n                "
                       )
                     ])
                   ]
@@ -55100,14 +55152,14 @@ var render = function() {
                             _c("div", { staticClass: "card-body px-0" }, [
                               _c("h6", { staticClass: "card-title" }, [
                                 _vm._v(
-                                  "\n                  " +
+                                  "\n                                    " +
                                     _vm._s(
                                       _vm._f("truncate")(
                                         culturebottomItem.title,
                                         41
                                       )
                                     ) +
-                                    "\n                "
+                                    "\n                                "
                                 )
                               ]),
                               _vm._v(" "),
@@ -55183,9 +55235,9 @@ var render = function() {
                       [
                         _c("h4", { staticClass: "font-weight-bolder pr-3" }, [
                           _vm._v(
-                            "\n              " +
+                            "\n                            " +
                               _vm._s(_vm.lifenLoveFirst.title) +
-                              "\n            "
+                              "\n                        "
                           )
                         ]),
                         _vm._v(" "),
@@ -55193,14 +55245,14 @@ var render = function() {
                         _vm._v(" "),
                         _c("p", { staticClass: "mt-2" }, [
                           _vm._v(
-                            "\n              " +
+                            "\n                            " +
                               _vm._s(
                                 _vm._f("truncate")(
                                   _vm.lifenLoveFirst.content,
                                   300
                                 )
                               ) +
-                              "\n            "
+                              "\n                        "
                           )
                         ])
                       ]
@@ -55252,9 +55304,9 @@ var render = function() {
                             _c("div", { staticClass: "card-body px-0" }, [
                               _c("h6", { staticClass: "card-title" }, [
                                 _vm._v(
-                                  "\n                  " +
+                                  "\n                                    " +
                                     _vm._s(lifenLoveItem.title) +
-                                    "\n                "
+                                    "\n                                "
                                 )
                               ]),
                               _vm._v(" "),
@@ -55350,14 +55402,14 @@ var render = function() {
                               _c("div", { staticClass: "card-body px-0" }, [
                                 _c("h6", { staticClass: "card-title" }, [
                                   _vm._v(
-                                    "\n                  " +
+                                    "\n                                    " +
                                       _vm._s(
                                         _vm._f("truncate")(
                                           horoscopeItem.title,
                                           47
                                         )
                                       ) +
-                                      "\n                "
+                                      "\n                                "
                                   )
                                 ]),
                                 _vm._v(" "),
@@ -55435,7 +55487,7 @@ var staticRenderFns = [
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
     return _c("h5", { staticClass: "font-weight-bold ml-0 mt-4 text-white" }, [
-      _vm._v("\n      Top Stories\n      "),
+      _vm._v("\n            Top Stories\n            "),
       _c("i", { staticClass: "fa fa-angle-right text-aura" })
     ])
   },
@@ -55450,7 +55502,7 @@ var staticRenderFns = [
         staticStyle: { "margin-left": "7.5em" }
       },
       [
-        _vm._v("\n      Top Stories\n      "),
+        _vm._v("\n            Top Stories\n            "),
         _c("i", { staticClass: "fa fa-angle-right text-aura" })
       ]
     )
@@ -55482,7 +55534,7 @@ var staticRenderFns = [
           { staticClass: "text-aura", staticStyle: { "font-size": "30px" } },
           [_vm._v("+")]
         ),
-        _vm._v("\n        NEWS\n      ")
+        _vm._v("\n                NEWS\n            ")
       ]
     )
   },
@@ -55511,7 +55563,7 @@ var staticRenderFns = [
           { staticClass: "text-aura", staticStyle: { "font-size": "30px" } },
           [_vm._v("+")]
         ),
-        _vm._v("\n        FASHION\n      ")
+        _vm._v("\n                FASHION\n            ")
       ])
     ])
   },
@@ -55540,7 +55592,7 @@ var staticRenderFns = [
           { staticClass: "text-aura", staticStyle: { "font-size": "30px" } },
           [_vm._v("+")]
         ),
-        _vm._v("\n        BEAUTY\n      ")
+        _vm._v("\n                BEAUTY\n            ")
       ])
     ])
   },
@@ -55569,7 +55621,7 @@ var staticRenderFns = [
           { staticClass: "text-aura", staticStyle: { "font-size": "30px" } },
           [_vm._v("+")]
         ),
-        _vm._v("\n        CULTURE\n      ")
+        _vm._v("\n                CULTURE\n            ")
       ])
     ])
   },
@@ -55617,7 +55669,7 @@ var staticRenderFns = [
             [
               _c("h5", { staticClass: "sp-mt-6" }, [
                 _vm._v(
-                  "\n            Susan Garland Stars On The Cover Of The July Issue Of Aura\n            Magazine\n          "
+                  "\n                        Susan Garland Stars On The Cover Of The July Issue\n                        Of Aura Magazine\n                    "
                 )
               ]),
               _vm._v(" "),
@@ -55647,7 +55699,7 @@ var staticRenderFns = [
                     [
                       _c("button", { staticClass: "btn btn-aura text-white" }, [
                         _vm._v(
-                          "\n                Order Print Copy\n              "
+                          "\n                                Order Print Copy\n                            "
                         )
                       ])
                     ]
@@ -55662,7 +55714,7 @@ var staticRenderFns = [
                     [
                       _c("button", { staticClass: "btn btn-aura text-white" }, [
                         _vm._v(
-                          "\n                Get digital edition\n              "
+                          "\n                                Get digital edition\n                            "
                         )
                       ])
                     ]
@@ -55685,7 +55737,7 @@ var staticRenderFns = [
         { staticClass: "text-aura", staticStyle: { "font-size": "30px" } },
         [_vm._v("+")]
       ),
-      _vm._v("\n        LIFE & LOVE\n      ")
+      _vm._v("\n                LIFE & LOVE\n            ")
     ])
   },
   function() {
@@ -55698,7 +55750,7 @@ var staticRenderFns = [
         { staticClass: "text-aura", staticStyle: { "font-size": "30px" } },
         [_vm._v("+")]
       ),
-      _vm._v("\n        HOROSCOPE\n      ")
+      _vm._v("\n                HOROSCOPE\n            ")
     ])
   }
 ]
@@ -82576,8 +82628,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 var Api = axios__WEBPACK_IMPORTED_MODULE_0___default.a.create({
-  // baseURL: 'http://localhost:8000/api',
-  baseURL: 'https://auramagazine.herokuapp.com/api'
+  baseURL: 'https://aura.com.ng/api'
 }); // Add a request interceptor
 
 Api.interceptors.request.use(function (config) {
@@ -87099,8 +87150,8 @@ __webpack_require__.r(__webpack_exports__);
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! /Users/mac/Documents/Laravel/Aura-magazine/resources/js/app.js */"./resources/js/app.js");
-module.exports = __webpack_require__(/*! /Users/mac/Documents/Laravel/Aura-magazine/resources/sass/app.scss */"./resources/sass/app.scss");
+__webpack_require__(/*! /Users/mac/Documents/Projects/Laravel/Aura/resources/js/app.js */"./resources/js/app.js");
+module.exports = __webpack_require__(/*! /Users/mac/Documents/Projects/Laravel/Aura/resources/sass/app.scss */"./resources/sass/app.scss");
 
 
 /***/ })
